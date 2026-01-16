@@ -2,17 +2,13 @@ import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
-  name: 'global',
+  name: 'Figma text styles',
   tokens: [
-    './tokens/globals/color.json',
-    './tokens/globals/typography.json',
-    './tokens/globals/spacing.json',
-    './tokens/globals/effect.json',
-    './tokens/globals/radius.json',
-    './tokens/platforms/figma/color.json',
-    './tokens/platforms/figma/typography.json',
+    './tokens/commons/commons.tokens.json',
+    './tokens/platforms/figma/modes/figma-light.tokens.json',
+    './tokens/platforms/figma/modes/figma-dark.tokens.json',
+    './tokens/platforms/figma/modes/figjam.tokens.json',
     './tokens/platforms/figma/text.json',
-    './tokens/platforms/figma/icon.json',
   ],
   outDir: './src/styles/texts/',
   plugins: [
@@ -25,8 +21,8 @@ export default defineConfig({
         'shadow.*',
         'border.*',
         'grey.*',
+        'alpha.*',
         'elevation.*',
-        'icon.*',
       ],
       baseSelector: ':root[data-theme="figma"]',
     }),
