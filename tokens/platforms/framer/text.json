@@ -1,7 +1,7 @@
 {
   "text": {
     "fontFamily": {
-      "$value": "{font.stack}",
+      "$value": ["Inter", "sans-serif"],
       "$type": "fontFamily"
     },
     "color": {
@@ -51,57 +51,33 @@
       }
     },
     "small": {
-      "fontSize": {
-        "$value": "{font.size.xsmall}",
-        "$type": "dimension"
-      },
-      "fontWeight": {
-        "$value": "{font.weight.medium}",
-        "$type": "fontWeight"
-      },
-      "lineHeight": {
-        "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
-      },
-      "letterSpacing": {
-        "$value": "{font.letterSpacing.pos.xlarge}",
-        "$type": "dimension"
+      "$type": "typography",
+      "$value": {
+        "$fontFamily": "{text.fontFamily}",
+        "fontSize": "{font.size.xsmall}",
+        "fontWeight": "{font.weight.medium}",
+        "lineHeight": "{font.lineHeight.default}",
+        "letterSpacing": "{font.letterSpacing.pos.xlarge}"
       }
     },
     "large": {
-      "fontSize": {
-        "$value": "{font.size.medium}",
-        "$type": "dimension"
-      },
-      "fontWeight": {
-        "$value": "{font.weight.semi}",
-        "$type": "fontWeight"
-      },
-      "lineHeight": {
-        "$value": "{font.lineHeight.large}",
-        "$type": "dimension"
-      },
-      "letterSpacing": {
-        "$value": "{font.letterSpacing.pos.medium}",
-        "$type": "dimension"
+      "$type": "typography",
+      "$value": {
+        "$fontFamily": "{text.fontFamily}",
+        "fontSize": "{font.size.medium}",
+        "fontWeight": "{font.weight.semi}",
+        "lineHeight": "{font.lineHeight.large}",
+        "letterSpacing": "{font.letterSpacing.pos.medium}"
       }
     },
     "xlarge": {
-      "fontSize": {
-        "$value": "{font.size.large}",
-        "$type": "dimension"
-      },
-      "fontWeight": {
-        "$value": "{font.weight.bold}",
-        "$type": "fontWeight"
-      },
-      "lineHeight": {
-        "$value": "{font.lineHeight.large}",
-        "$type": "dimension"
-      },
-      "letterSpacing": {
-        "$value": "{font.letterSpacing.pos.small}",
-        "$type": "dimension"
+      "$type": "typography",
+      "$value": {
+        "$fontFamily": "{text.fontFamily}",
+        "fontSize": "{font.size.large}",
+        "fontWeight": "{font.weight.bold}",
+        "lineHeight": "{font.lineHeight.large}",
+        "letterSpacing": "{font.letterSpacing.pos.small}"
       }
     },
     "link": {
@@ -123,25 +99,17 @@
       }
     },
     "label": {
+      "$type": "typography",
+      "$value": {
+        "$fontFamily": "{text.fontFamily}",
+        "fontSize": "{font.size.xsmall}",
+        "fontWeight": "{font.weight.normal}",
+        "lineHeight": "{font.lineHeight.default}",
+        "letterSpacing": "{font.letterSpacing.pos.large}"
+      },
       "color": {
         "$value": "{framer.color.text.tertiary}",
         "$type": "color"
-      },
-      "fontSize": {
-        "$value": "{font.size.xsmall}",
-        "$type": "dimension"
-      },
-      "fontWeight": {
-        "$value": "{font.weight.normal}",
-        "$type": "fontWeight"
-      },
-      "letterSpacing": {
-        "$value": "{font.letterSpacing.pos.large}",
-        "$type": "dimension"
-      },
-      "lineHeight": {
-        "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
       },
       "height": {
         "$value": "{size.pos.medium}",

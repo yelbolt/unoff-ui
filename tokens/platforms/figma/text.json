@@ -35,6 +35,7 @@
     "default": {
       "$type": "typography",
       "$value": {
+        "$fontFamily": "{text.fontFamily}",
         "fontSize": "{font.size.small}",
         "fontWeight": "{font.weight.medium}",
         "lineHeight": "{font.lineHeight.default}",
@@ -44,6 +45,7 @@
     "small": {
       "$type": "typography",
       "$value": {
+        "$fontFamily": "{text.fontFamily}",
         "fontSize": "{font.size.small}",
         "fontWeight": "{font.weight.medium}",
         "lineHeight": "{font.lineHeight.default}",
@@ -53,6 +55,7 @@
     "large": {
       "$type": "typography",
       "$value": {
+        "$fontFamily": "{text.fontFamily}",
         "fontSize": "{font.size.medium}",
         "fontWeight": "{font.weight.medium}",
         "lineHeight": "{font.lineHeight.large}",
@@ -62,6 +65,7 @@
     "xlarge": {
       "$type": "typography",
       "$value": {
+        "$fontFamily": "{text.fontFamily}",
         "fontSize": "{font.size.large}",
         "fontWeight": "{font.weight.medium}",
         "lineHeight": "{font.lineHeight.large}",
@@ -89,6 +93,7 @@
     "label": {
       "$type": "typography",
       "$value": {
+        "$fontFamily": "{text.fontFamily}",
         "fontSize": "{font.size.xsmall}",
         "fontWeight": "{font.weight.normal}",
         "lineHeight": "{font.lineHeight.default}",
