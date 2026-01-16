@@ -9,100 +9,40 @@
       "com.figma.scopes": ["ALL_SCOPES"]
     },
     "transparent": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0, 0],
-        "alpha": 0,
-        "hex": "#00000000"
-      }
+      "$value": "#00000000"
     },
     "0": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 1, 1],
-        "alpha": 1,
-        "hex": "#FFFFFF"
-      }
+      "$value": "#FFFFFF"
     },
     "100": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.941, 0.941, 0.941],
-        "alpha": 1,
-        "hex": "#F0F0F0"
-      }
+      "$value": "#F0F0F0"
     },
     "200": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.851, 0.851, 0.851],
-        "alpha": 1,
-        "hex": "#D9D9D9"
-      }
+      "$value": "#D9D9D9"
     },
     "300": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.749, 0.749, 0.749],
-        "alpha": 1,
-        "hex": "#BFBFBF"
-      }
+      "$value": "#BFBFBF"
     },
     "400": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.651, 0.651, 0.651],
-        "alpha": 1,
-        "hex": "#A6A6A6"
-      }
+      "$value": "#A6A6A6"
     },
     "500": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.549, 0.549, 0.549],
-        "alpha": 1,
-        "hex": "#8C8C8C"
-      }
+      "$value": "#8C8C8C"
     },
     "600": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.451, 0.451, 0.451],
-        "alpha": 1,
-        "hex": "#737373"
-      }
+      "$value": "#737373"
     },
     "700": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.349, 0.349, 0.349],
-        "alpha": 1,
-        "hex": "#595959"
-      }
+      "$value": "#595959"
     },
     "800": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.251, 0.251, 0.251],
-        "alpha": 1,
-        "hex": "#404040"
-      }
+      "$value": "#404040"
     },
     "900": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.173, 0.173, 0.173],
-        "alpha": 1,
-        "hex": "#2C2C2C"
-      }
+      "$value": "#2C2C2C"
     },
     "1000": {
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.133, 0.133, 0.133],
-        "alpha": 1,
-        "hex": "#222222"
-      }
+      "$value": "#222222"
     }
   },
   "alpha": {
@@ -183,31 +123,31 @@
         "com.figma.scopes": ["CORNER_RADIUS"]
       },
       "null": {
-        "$value": { "value": 0, "unit": "px" }
+        "$value": "0px"
       },
       "xsmall": {
-        "$value": { "value": 1, "unit": "px" }
+        "$value": "1px"
       },
       "small": {
-        "$value": { "value": 2, "unit": "px" }
+        "$value": "2px"
       },
       "medium": {
-        "$value": { "value": 4, "unit": "px" }
+        "$value": "4px"
       },
       "large": {
-        "$value": { "value": 6, "unit": "px" }
+        "$value": "6px"
       },
       "xlarge": {
-        "$value": { "value": 8, "unit": "px" }
+        "$value": "8px"
       },
       "xxlarge": {
-        "$value": { "value": 12, "unit": "px" }
+        "$value": "12px"
       },
       "xxxlarge": {
-        "$value": { "value": 16, "unit": "px" }
+        "$value": "16px"
       },
       "full": {
-        "$value": { "value": 100, "unit": "px" }
+        "$value": "100px"
       }
     }
   },
@@ -225,99 +165,99 @@
     },
     "neg": {
       "xxxlarge": {
-        "$value": { "value": -80, "unit": "px" }
+        "$value": "-80px"
       },
       "xxlarge": {
-        "$value": { "value": -64, "unit": "px" }
+        "$value": "-64px"
       },
       "xlarge": {
-        "$value": { "value": -48, "unit": "px" }
+        "$value": "-48px"
       },
       "large": {
-        "$value": { "value": -40, "unit": "px" }
+        "$value": "-40px"
       },
       "xmedium": {
-        "$value": { "value": -36, "unit": "px" }
+        "$value": "-36px"
       },
       "medium": {
-        "$value": { "value": -32, "unit": "px" }
+        "$value": "-32px"
       },
       "small": {
-        "$value": { "value": -24, "unit": "px" }
+        "$value": "-24px"
       },
       "msmall": {
-        "$value": { "value": -20, "unit": "px" }
+        "$value": "-20px"
       },
       "xsmall": {
-        "$value": { "value": -16, "unit": "px" }
+        "$value": "-16px"
       },
       "xmsmall": {
-        "$value": { "value": -12, "unit": "px" }
+        "$value": "-12px"
       },
       "xxsmall": {
-        "$value": { "value": -8, "unit": "px" }
+        "$value": "-8px"
       },
       "xxxsmall": {
-        "$value": { "value": -4, "unit": "px" }
+        "$value": "-4px"
       },
       "xunit": {
-        "$value": { "value": -2, "unit": "px" }
+        "$value": "-2px"
       },
       "unit": {
-        "$value": { "value": -1, "unit": "px" }
+        "$value": "-1px"
       },
       "hunit": {
-        "$value": { "value": -0.5, "unit": "px" }
+        "$value": "-0.5px"
       }
     },
     "null": {
-      "$value": { "value": 0, "unit": "px" }
+      "$value": "0px"
     },
     "pos": {
       "hunit": {
-        "$value": { "value": 0.5, "unit": "px" }
+        "$value": "0.5px"
       },
       "unit": {
-        "$value": { "value": 1, "unit": "px" }
+        "$value": "1px"
       },
       "xunit": {
-        "$value": { "value": 2, "unit": "px" }
+        "$value": "2px"
       },
       "xxxsmall": {
-        "$value": { "value": 4, "unit": "px" }
+        "$value": "4px"
       },
       "xxsmall": {
-        "$value": { "value": 8, "unit": "px" }
+        "$value": "8px"
       },
       "xmsmall": {
-        "$value": { "value": 12, "unit": "px" }
+        "$value": "12px"
       },
       "xsmall": {
-        "$value": { "value": 16, "unit": "px" }
+        "$value": "16px"
       },
       "msmall": {
-        "$value": { "value": 20, "unit": "px" }
+        "$value": "20px"
       },
       "small": {
-        "$value": { "value": 24, "unit": "px" }
+        "$value": "24px"
       },
       "medium": {
-        "$value": { "value": 32, "unit": "px" }
+        "$value": "32px"
       },
       "xmedium": {
-        "$value": { "value": 36, "unit": "px" }
+        "$value": "36px"
       },
       "large": {
-        "$value": { "value": 40, "unit": "px" }
+        "$value": "40px"
       },
       "xlarge": {
-        "$value": { "value": 48, "unit": "px" }
+        "$value": "48px"
       },
       "xxlarge": {
-        "$value": { "value": 64, "unit": "px" }
+        "$value": "64px"
       },
       "xxxlarge": {
-        "$value": { "value": 80, "unit": "px" }
+        "$value": "80px"
       }
     }
   },
@@ -329,22 +269,22 @@
         "com.figma.scopes": ["FONT_SIZE"]
       },
       "xxxsmall": {
-        "$value": { "value": 9, "unit": "px" }
+        "$value": "9px"
       },
       "xxsmall": {
-        "$value": { "value": 10, "unit": "px" }
+        "$value": "10px"
       },
       "xsmall": {
-        "$value": { "value": 11, "unit": "px" }
+        "$value": "11px"
       },
       "small": {
-        "$value": { "value": 12, "unit": "px" }
+        "$value": "12px"
       },
       "medium": {
-        "$value": { "value": 13, "unit": "px" }
+        "$value": "13px"
       },
       "large": {
-        "$value": { "value": 14, "unit": "px" }
+        "$value": "14px"
       }
     },
     "weight": {
@@ -369,17 +309,15 @@
       }
     },
     "lineHeight": {
-      "$type": "number",
+      "$type": "dimension",
       "$extensions": {
         "com.figma.scopes": ["LINE_HEIGHT"]
       },
       "default": {
-        "$value": { "value": 16, "unit": "px" },
-        "$type": "dimension"
+        "$value": "16px"
       },
       "large": {
-        "$value": { "value": 20, "unit": "px" },
-        "$type": "dimension"
+        "$value": "20px"
       }
     },
     "letterSpacing": {
@@ -389,30 +327,30 @@
       },
       "neg": {
         "xlarge": {
-          "$value": { "value": -0.16, "unit": "px" }
+          "$value": "-0.16px"
         },
         "large": {
-          "$value": { "value": -0.08, "unit": "px" }
+          "$value": "-0.08px"
         },
         "medium": {
-          "$value": { "value": -0.025, "unit": "px" }
+          "$value": "-0.025px"
         },
         "small": {
-          "$value": { "value": -0.01, "unit": "px" }
+          "$value": "-0.01px"
         }
       },
       "pos": {
         "small": {
-          "$value": { "value": 0.01, "unit": "px" }
+          "$value": "0.01px"
         },
         "medium": {
-          "$value": { "value": 0.025, "unit": "px" }
+          "$value": "0.025px"
         },
         "large": {
-          "$value": { "value": 0.08, "unit": "px" }
+          "$value": "0.08px"
         },
         "xlarge": {
-          "$value": { "value": 0.16, "unit": "px" }
+          "$value": "0.16px"
         }
       }
     }
