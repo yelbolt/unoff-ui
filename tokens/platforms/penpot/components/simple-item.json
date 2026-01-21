@@ -1,5 +1,5 @@
 {
-  "simple-item": {
+  "simpleItem": {
     "gap": {
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"

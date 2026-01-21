@@ -1,5 +1,5 @@
 {
-  "keyboard-shortcut-item": {
+  "keyboardShortcutItem": {
     "padding": {
       "top": {
         "$value": "{size.null}",

@@ -1,5 +1,5 @@
 {
-  "members-list": {
+  "membersList": {
     "gap": {
       "$value": "{size.neg.xxxsmall}",
       "$type": "dimension"

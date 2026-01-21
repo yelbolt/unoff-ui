@@ -1,5 +1,5 @@
 {
-  "multiple-slider": {
+  "multipleSlider": {
     "margin": {
       "top": {
         "$value": "{size.pos.small}",

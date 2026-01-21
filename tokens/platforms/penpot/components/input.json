@@ -79,7 +79,7 @@
           "$type": "dimension"
         }
       },
-      "with-icon": {
+      "withIcon": {
         "top": {
           "$value": "{size.pos.small}",
           "$type": "dimension"
@@ -97,7 +97,7 @@
           "$type": "dimension"
         }
       },
-      "with-color": {
+      "withColor": {
         "top": {
           "$value": "{size.pos.small}",
           "$type": "dimension"
@@ -562,7 +562,7 @@
         }
       }
     },
-    "color-chip": {
+    "colorChip": {
       "width": {
         "$value": "{size.pos.xsmall}",
         "$type": "dimension"

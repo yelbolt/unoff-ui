@@ -1,5 +1,5 @@
 {
-  "draggable-item": {
+  "draggableItem": {
     "template": {
       "rows": {
         "$value": "{size.pos.medium}",

@@ -1,5 +1,5 @@
 {
-  "semantic-message": {
+  "semanticMessage": {
     "gap": {
       "$value": "{size.pos.xxxsmall}",
       "$type": "dimension"
