@@ -74,7 +74,7 @@
     },
     "link": {
       "color": {
-        "$value": "{figma.color.text.brand}",
+        "$value": "{figma.color.text.brand.default}",
         "$type": "color"
       },
       "decoration": {
