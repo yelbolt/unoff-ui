@@ -117,7 +117,7 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{figma.color.border.selected}",
+              "$value": "{figma.color.border.selected.default}",
               "$type": "color"
             },
             "checked": {
@@ -258,7 +258,7 @@
             }
           },
           "disabled": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         }
@@ -302,7 +302,7 @@
             "$type": "dimension"
           },
           "color": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         },
@@ -313,7 +313,7 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{figma.color.border.selected}",
+              "$value": "{figma.color.border.selected.default}",
               "$type": "color"
             },
             "checked": {
@@ -395,7 +395,7 @@
             },
             "checked": {
               "default": {
-                "$value": "{figma.color.icon.onbrand}",
+                "$value": "{figma.color.icon.onbrand.default}",
                 "$type": "color"
               },
               "disabled": {
@@ -563,7 +563,7 @@
               "$type": "dimension"
             },
             "color": {
-              "$value": "{figma.color.bg.disabled}",
+              "$value": "{figma.color.bg.disabled.default}",
               "$type": "color"
             }
           }
@@ -585,12 +585,12 @@
               "$type": "string"
             },
             "focus": {
-              "$value": "{figma.color.border.selected}",
+              "$value": "{figma.color.border.selected.default}",
               "$type": "color"
             },
             "checked": {
               "focus": {
-                "$value": "{figma.color.border.selected}",
+                "$value": "{figma.color.border.selected.default}",
                 "$type": "color"
               }
             }

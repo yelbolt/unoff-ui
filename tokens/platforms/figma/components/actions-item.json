@@ -58,7 +58,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           }
         }

@@ -174,11 +174,11 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{figma.color.bg.brand}",
+            "$value": "{figma.color.bg.brand.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.bg.brand}",
+            "$value": "{figma.color.bg.brand.default}",
             "$type": "color"
           },
           "pressed": {
@@ -186,11 +186,11 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.bg.brand}",
+            "$value": "{figma.color.bg.brand.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         }
@@ -266,19 +266,19 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{figma.color.text.onbrand}",
+            "$value": "{figma.color.text.onbrand.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.text.onbrand}",
+            "$value": "{figma.color.text.onbrand.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{figma.color.text.onbrand}",
+            "$value": "{figma.color.text.onbrand.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.text.onbrand}",
+            "$value": "{figma.color.text.onbrand.default}",
             "$type": "color"
           },
           "disabled": {
@@ -312,19 +312,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{figma.color.icon.onbrand}",
+            "$value": "{figma.color.icon.onbrand.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.icon.onbrand}",
+            "$value": "{figma.color.icon.onbrand.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{figma.color.icon.onbrand}",
+            "$value": "{figma.color.icon.onbrand.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.icon.onbrand}",
+            "$value": "{figma.color.icon.onbrand.default}",
             "$type": "color"
           },
           "disabled": {
@@ -418,7 +418,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "disabled": {
@@ -706,7 +706,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         }
@@ -870,7 +870,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         }
@@ -1236,7 +1236,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1273,19 +1273,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "disabled": {
@@ -1404,7 +1404,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1441,19 +1441,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.bg.brand}",
+              "$value": "{figma.color.bg.brand.default}",
               "$type": "color"
             },
             "disabled": {

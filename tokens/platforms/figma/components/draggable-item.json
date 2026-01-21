@@ -50,7 +50,7 @@
     },
     "ghost": {
       "color": {
-        "$value": "{figma.color.border.selected}",
+        "$value": "{figma.color.border.selected.default}",
         "$type": "color"
       },
       "height": {

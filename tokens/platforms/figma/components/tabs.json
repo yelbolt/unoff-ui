@@ -222,7 +222,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "active": {
@@ -234,7 +234,7 @@
             "$type": "string"
           },
           "alternativeFocus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           }
         },
@@ -470,7 +470,7 @@
         },
         "background": {
           "color": {
-            "$value": "{figma.color.bg.brand}",
+            "$value": "{figma.color.bg.brand.default}",
             "$type": "color"
           }
         },

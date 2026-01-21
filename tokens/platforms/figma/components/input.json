@@ -360,7 +360,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "error": {
@@ -383,7 +383,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.border.selected}",
+          "$value": "{figma.color.border.selected.default}",
           "$type": "color"
         },
         "error": {
@@ -406,11 +406,11 @@
         },
         "onselected": {
           "default": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           }
         }
@@ -600,7 +600,7 @@
               "offsetY": 0,
               "blur": 0,
               "spread": "{size.pos.unit}",
-              "color": "{figma.color.border.selected}",
+              "color": "{figma.color.border.selected.default}",
               "inset": true
             }
           ],
