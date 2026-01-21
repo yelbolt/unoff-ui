@@ -31,7 +31,7 @@
     },
     "background": {
       "color": {
-        "$value": "{framer.color.bg}",
+        "$value": "{framer.color.bg.default}",
         "$type": "color"
       }
     },
@@ -197,7 +197,7 @@
         },
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
@@ -209,7 +209,7 @@
             "$type": "color"
           },
           "selected": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "selectedHover": {
@@ -252,13 +252,13 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },
       "icon": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         }
       },
@@ -322,7 +322,7 @@
       },
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "hover": {
@@ -334,7 +334,7 @@
           "$type": "color"
         },
         "selected": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "selectedHover": {

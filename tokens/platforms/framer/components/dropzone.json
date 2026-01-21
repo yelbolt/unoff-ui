@@ -97,7 +97,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "over": {

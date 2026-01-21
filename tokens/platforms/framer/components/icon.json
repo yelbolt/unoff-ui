@@ -10,13 +10,13 @@
     },
     "picto": {
       "color": {
-        "$value": "{framer.color.text}",
+        "$value": "{framer.color.text.default}",
         "$type": "color"
       }
     },
     "letter": {
       "color": {
-        "$value": "{framer.color.text}",
+        "$value": "{framer.color.text.default}",
         "$type": "color"
       },
       "textSize": {

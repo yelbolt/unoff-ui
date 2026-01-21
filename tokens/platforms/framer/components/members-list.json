@@ -27,7 +27,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       }
@@ -54,7 +54,7 @@
     },
     "text": {
       "color": {
-        "$value": "{framer.color.text}",
+        "$value": "{framer.color.text.default}",
         "$type": "color"
       }
     }

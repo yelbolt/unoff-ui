@@ -59,15 +59,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -79,15 +79,15 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {

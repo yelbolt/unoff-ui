@@ -50,7 +50,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{framer.color.text}",
+        "$value": "{framer.color.text.default}",
         "$type": "color"
       },
       "transform": {

@@ -91,7 +91,7 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -192,20 +192,20 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         }
       },
       "text": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },
       "arrow": {
         "background": {
           "color": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           }
         },
@@ -278,7 +278,7 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },

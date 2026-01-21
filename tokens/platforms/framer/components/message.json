@@ -25,7 +25,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -37,7 +37,7 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -103,7 +103,7 @@
       "mask": {
         "background": {
           "color": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           }
         },

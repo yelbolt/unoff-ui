@@ -53,7 +53,7 @@
       },
       "text": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "font": {
@@ -89,7 +89,7 @@
       },
       "icon": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "width": {
@@ -430,19 +430,19 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -476,19 +476,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -572,23 +572,23 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           }
         }
@@ -690,7 +690,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.destructive}",
+            "$value": "{framer.color.destructive.default}",
             "$type": "color"
           },
           "hover": {
@@ -698,7 +698,7 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.destructive}",
+            "$value": "{framer.color.destructive.default}",
             "$type": "color"
           },
           "focus": {
@@ -1069,13 +1069,13 @@
       },
       "text": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         }
       },
       "icon": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "width": {
@@ -1144,7 +1144,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "hover": {
@@ -1152,7 +1152,7 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "focus": {
@@ -1160,7 +1160,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "onselected": {
@@ -1248,19 +1248,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1297,7 +1297,7 @@
         "border": {
           "color": {
             "default": {
-              "$value": "{framer.color.bg}",
+              "$value": "{framer.color.bg.default}",
               "$type": "color"
             },
             "hover": {
@@ -1305,7 +1305,7 @@
               "$type": "color"
             },
             "pressed": {
-              "$value": "{framer.color.bg}",
+              "$value": "{framer.color.bg.default}",
               "$type": "color"
             },
             "focus": {
@@ -1313,7 +1313,7 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{framer.color.bg}",
+              "$value": "{framer.color.bg.default}",
               "$type": "color"
             }
           }
@@ -1324,19 +1324,19 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1416,23 +1416,23 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           }
         }
@@ -1465,19 +1465,19 @@
         "border": {
           "color": {
             "default": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "disabled": {

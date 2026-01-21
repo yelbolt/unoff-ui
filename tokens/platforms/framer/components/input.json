@@ -365,11 +365,11 @@
           },
           "error": {
             "default": {
-              "$value": "{framer.color.destructive}",
+              "$value": "{framer.color.destructive.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{framer.color.destructive}",
+              "$value": "{framer.color.destructive.default}",
               "$type": "color"
             },
             "focus": {
@@ -388,11 +388,11 @@
         },
         "error": {
           "default": {
-            "$value": "{framer.color.destructive}",
+            "$value": "{framer.color.destructive.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.destructive}",
+            "$value": "{framer.color.destructive.default}",
             "$type": "color"
           },
           "focus": {
@@ -441,56 +441,56 @@
       },
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.text}",
+              "$value": "{framer.color.text.default}",
               "$type": "color"
             }
           }
         },
         "hover": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "error": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           }
         },
@@ -677,7 +677,7 @@
       },
       "text": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "placeholder": {
