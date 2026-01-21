@@ -24,7 +24,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border.disabled}",
+        "$value": "{figma.color.border.disabled.default}",
         "$type": "color"
       }
     },
@@ -59,7 +59,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text.secondary}",
+          "$value": "{figma.color.text.secondary.default}",
           "$type": "color"
         },
         "hover": {
@@ -79,7 +79,7 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{figma.color.icon.secondary}",
+          "$value": "{figma.color.icon.secondary.default}",
           "$type": "color"
         },
         "hover": {

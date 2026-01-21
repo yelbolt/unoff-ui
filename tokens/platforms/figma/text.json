@@ -10,7 +10,7 @@
         "$type": "color"
       },
       "secondary": {
-        "$value": "{figma.color.text.secondary}",
+        "$value": "{figma.color.text.secondary.default}",
         "$type": "color"
       },
       "tertiary": {

@@ -49,7 +49,7 @@
           "$type": "color"
         },
         "onSelected": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }
@@ -69,11 +69,11 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{figma.color.border.disabled}",
+          "$value": "{figma.color.border.disabled.default}",
           "$type": "color"
         },
         "onSelected": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       },

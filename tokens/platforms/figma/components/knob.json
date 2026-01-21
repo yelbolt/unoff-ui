@@ -50,7 +50,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.bg.selected}",
+            "$value": "{figma.color.bg.selected.default}",
             "$type": "color"
           },
           "disabled": {
@@ -70,7 +70,7 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.border.disabled}",
+            "$value": "{figma.color.border.disabled.default}",
             "$type": "color"
           }
         },
@@ -109,7 +109,7 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.bg.selected}",
+              "$value": "{figma.color.bg.selected.default}",
               "$type": "color"
             },
             "disabled": {
@@ -133,7 +133,7 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{figma.color.border.disabled}",
+              "$value": "{figma.color.border.disabled.default}",
               "$type": "color"
             }
           },

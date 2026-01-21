@@ -24,7 +24,7 @@
     },
     "border": {
       "color": {
-        "$value": "{figma.color.border.disabled}",
+        "$value": "{figma.color.border.disabled.default}",
         "$type": "color"
       },
       "width": {
@@ -75,7 +75,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }

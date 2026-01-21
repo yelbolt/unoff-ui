@@ -304,11 +304,11 @@
         },
         "color": {
           "default": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
@@ -320,11 +320,11 @@
             "$type": "color"
           },
           "alternative": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeFocus": {
@@ -404,11 +404,11 @@
         },
         "color": {
           "default": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
@@ -420,11 +420,11 @@
             "$type": "color"
           },
           "alternative": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeFocus": {

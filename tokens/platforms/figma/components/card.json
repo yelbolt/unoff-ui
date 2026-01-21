@@ -45,7 +45,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }

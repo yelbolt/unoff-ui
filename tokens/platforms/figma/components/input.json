@@ -401,7 +401,7 @@
           }
         },
         "disabled": {
-          "$value": "{figma.color.border.disabled}",
+          "$value": "{figma.color.border.disabled.default}",
           "$type": "color"
         },
         "onselected": {
@@ -502,56 +502,56 @@
       "placeholder": {
         "color": {
           "default": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "empty": {
             "default": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             },
             "error": {
               "default": {
-                "$value": "{figma.color.text.secondary}",
+                "$value": "{figma.color.text.secondary.default}",
                 "$type": "color"
               },
               "hover": {
-                "$value": "{figma.color.text.secondary}",
+                "$value": "{figma.color.text.secondary.default}",
                 "$type": "color"
               },
               "focus": {
-                "$value": "{figma.color.text.secondary}",
+                "$value": "{figma.color.text.secondary.default}",
                 "$type": "color"
               }
             }
           },
           "hover": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.text.secondary}",
+              "$value": "{figma.color.text.secondary.default}",
               "$type": "color"
             }
           },
@@ -682,7 +682,7 @@
         },
         "placeholder": {
           "color": {
-            "$value": "{figma.color.text.secondary}",
+            "$value": "{figma.color.text.secondary.default}",
             "$type": "color"
           }
         }

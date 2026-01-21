@@ -26,7 +26,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border.disabled}",
+        "$value": "{figma.color.border.disabled.default}",
         "$type": "color"
       }
     },

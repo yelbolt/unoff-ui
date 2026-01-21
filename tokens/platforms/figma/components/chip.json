@@ -101,7 +101,7 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         },
         "onBackground": {
