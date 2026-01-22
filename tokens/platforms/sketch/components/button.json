@@ -71,7 +71,7 @@
           }
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.xlarge}",
+          "$value": "{font.letterSpacing.pos.small}",
           "$type": "dimension"
         },
         "lineHeight": {
