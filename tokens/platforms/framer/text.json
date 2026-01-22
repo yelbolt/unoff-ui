@@ -130,6 +130,56 @@
           "$value": "{font.letterSpacing.pos.small}",
           "$type": "dimension"
         }
+      },
+      "link": {
+        "color": {
+          "$value": "{framer.color.tint.dark}",
+          "$type": "color"
+        },
+        "decoration": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "borderFocus": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "decorationFocus": {
+          "$value": "underline",
+          "$type": "string"
+        }
+      },
+      "label": {
+        "color": {
+          "$value": "{framer.color.text.tertiary}",
+          "$type": "color"
+        },
+        "height": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "padding": {
+          "top": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.pos.xxxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          }
+        },
+        "gap": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "small": {
@@ -163,28 +213,13 @@
       }
     },
     "link": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{text.styles.small.fontFamily}",
         "fontSize": "{text.styles.small.fontSize}",
         "fontWeight": "{text.styles.small.fontWeight}",
         "lineHeight": "{text.styles.small.lineHeight}",
         "letterSpacing": "{text.styles.small.letterSpacing}"
-      },
-      "color": {
-        "$value": "{framer.color.tint.dark}",
-        "$type": "color"
-      },
-      "decoration": {
-        "$value": "none",
-        "$type": "string"
-      },
-      "borderFocus": {
-        "$value": "none",
-        "$type": "string"
-      },
-      "decorationFocus": {
-        "$value": "underline",
-        "$type": "string"
       }
     },
     "label": {
@@ -195,36 +230,6 @@
         "fontWeight": "{text.styles.default.fontWeight}",
         "lineHeight": "{text.styles.default.lineHeight}",
         "letterSpacing": "{text.styles.default.letterSpacing}"
-      },
-      "color": {
-        "$value": "{framer.color.text.tertiary}",
-        "$type": "color"
-      },
-      "height": {
-        "$value": "{size.pos.medium}",
-        "$type": "dimension"
-      },
-      "padding": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.pos.xxxsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
-      "gap": {
-        "$value": "{size.pos.xxxsmall}",
-        "$type": "dimension"
       }
     }
   }

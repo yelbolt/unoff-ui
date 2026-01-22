@@ -130,6 +130,56 @@
           "$value": "{font.letterSpacing.pos.small}",
           "$type": "dimension"
         }
+      },
+      "link": {
+        "color": {
+          "$value": "{figma.color.text.brand.default}",
+          "$type": "color"
+        },
+        "decoration": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "borderFocus": {
+          "$value": "none",
+          "$type": "string"
+        },
+        "decorationFocus": {
+          "$value": "underline",
+          "$type": "string"
+        }
+      },
+      "label": {
+        "color": {
+          "$value": "{figma.color.text.tertiary.default}",
+          "$type": "color"
+        },
+        "height": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "padding": {
+          "top": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.pos.xxxsmall}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          }
+        },
+        "gap": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
       }
     },
     "small": {
@@ -163,6 +213,7 @@
       }
     },
     "link": {
+      "$type": "typography",
       "$value": {
         "fontFamily": "{text.styles.small.fontFamily}",
         "fontSize": "{font.size.small}",
@@ -170,22 +221,6 @@
         "lineHeight": "{font.lineHeight.default}",
         "letterSpacing": "{font.letterSpacing.pos.large}",
         "textDecoration": "underline"
-      },
-      "color": {
-        "$value": "{figma.color.text.brand.default}",
-        "$type": "color"
-      },
-      "decoration": {
-        "$value": "none",
-        "$type": "string"
-      },
-      "borderFocus": {
-        "$value": "none",
-        "$type": "string"
-      },
-      "decorationFocus": {
-        "$value": "underline",
-        "$type": "string"
       }
     },
     "label": {
@@ -196,36 +231,6 @@
         "fontWeight": "{text.styles.default.fontWeight}",
         "lineHeight": "{text.styles.default.lineHeight}",
         "letterSpacing": "{text.styles.default.letterSpacing}"
-      },
-      "color": {
-        "$value": "{figma.color.text.tertiary.default}",
-        "$type": "color"
-      },
-      "height": {
-        "$value": "{size.pos.medium}",
-        "$type": "dimension"
-      },
-      "padding": {
-        "top": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "right": {
-          "$value": "{size.pos.xxxsmall}",
-          "$type": "dimension"
-        },
-        "bottom": {
-          "$value": "{size.null}",
-          "$type": "dimension"
-        },
-        "left": {
-          "$value": "{size.pos.xxsmall}",
-          "$type": "dimension"
-        }
-      },
-      "gap": {
-        "$value": "{size.pos.xxxsmall}",
-        "$type": "dimension"
       }
     }
   }
