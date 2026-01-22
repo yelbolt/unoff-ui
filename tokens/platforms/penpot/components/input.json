@@ -603,11 +603,11 @@
       },
       "opacity": {
         "default": {
-          "$value": 1,
+          "$value": "{alpha.1000}",
           "$type": "number"
         },
         "disabled": {
-          "$value": 0.5,
+          "$value": "{alpha.500}",
           "$type": "number"
         }
       }
