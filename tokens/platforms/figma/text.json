@@ -35,8 +35,8 @@
     "styles": {
       "default": {
         "fontFamily": {
-          "$value": "Inter",
-          "$type": "string"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamily"
         },
         "fontSize": {
           "$value": "{font.size.xsmall}",
@@ -57,8 +57,8 @@
       },
       "small": {
         "fontFamily": {
-          "$value": "Inter",
-          "$type": "string"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamily"
         },
         "fontSize": {
           "$value": "{font.size.small}",
@@ -79,8 +79,8 @@
       },
       "large": {
         "fontFamily": {
-          "$value": "Inter",
-          "$type": "string"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamily"
         },
         "fontSize": {
           "$value": "{font.size.medium}",
@@ -101,8 +101,8 @@
       },
       "xlarge": {
         "fontFamily": {
-          "$value": "Inter",
-          "$type": "string"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamily"
         },
         "fontSize": {
           "$value": "{font.size.large}",
