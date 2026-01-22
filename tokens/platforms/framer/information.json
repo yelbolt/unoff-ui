@@ -1,6 +1,6 @@
 {
   "information": {
-    "$type": "Framer",
-    "$value": "string"
+    "$type": "string",
+    "$value": "Framer"
   }
 }

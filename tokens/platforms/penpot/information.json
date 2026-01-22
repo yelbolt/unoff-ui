@@ -1,6 +1,6 @@
 {
   "information": {
-    "$type": "Penpot",
-    "$value": "string"
+    "$type": "string",
+    "$value": "Penpot"
   }
 }

@@ -1,6 +1,6 @@
 {
   "information": {
-    "$type": "Figma",
-    "$value": "string"
+    "$type": "string",
+    "$value": "Figma"
   }
 }
