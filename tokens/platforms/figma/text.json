@@ -1,7 +1,7 @@
 {
   "text": {
     "fontFamily": {
-      "$value": ["Inter", "sans-serif"],
+      "$value": "Inter",
       "$type": "fontFamily"
     },
     "color": {

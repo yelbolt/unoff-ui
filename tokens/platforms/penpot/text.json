@@ -1,7 +1,7 @@
 {
   "text": {
     "fontFamily": {
-      "$value": ["Work Sans", "sans-serif"],
+      "$value": "Work Sans",
       "$type": "fontFamily"
     },
     "color": {
