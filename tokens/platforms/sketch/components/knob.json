@@ -102,19 +102,19 @@
           "color": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "hover": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "disabled": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           }
         },
@@ -122,19 +122,19 @@
           "color": {
             "default": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "hover": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "focus": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             },
             "disabled": {
               "$value": "{grey.transparent}",
-              "$type": "string"
+              "$type": "color"
             }
           },
           "width": {
