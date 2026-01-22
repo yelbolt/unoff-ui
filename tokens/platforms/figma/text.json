@@ -39,7 +39,7 @@
           "$type": "string"
         },
         "fontSize": {
-          "$value": "{font.size.small}",
+          "$value": "{font.size.xsmall}",
           "$type": "dimension"
         },
         "fontWeight": {
@@ -51,7 +51,7 @@
           "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.large}",
+          "$value": "{font.letterSpacing.pos.xlarge}",
           "$type": "dimension"
         }
       },
@@ -215,18 +215,18 @@
     "link": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{text.styles.small.fontFamily}",
-        "fontSize": "{font.size.small}",
-        "fontWeight": "{font.weight.normal}",
-        "lineHeight": "{font.lineHeight.default}",
-        "letterSpacing": "{font.letterSpacing.pos.large}",
+        "fontFamily": "{text.styles.default.fontFamily}",
+        "fontSize": "{text.styles.default.fontSize}",
+        "fontWeight": "{text.styles.default.fontWeight}",
+        "lineHeight": "{text.styles.default.lineHeight}",
+        "letterSpacing": "{text.styles.default.letterSpacing}",
         "textDecoration": "underline"
       }
     },
     "label": {
       "$type": "typography",
       "$value": {
-        "fontFamily": "{text.fontFamily}",
+        "fontFamily": "{text.styles.default.fontFamily}",
         "fontSize": "{text.styles.default.fontSize}",
         "fontWeight": "{text.styles.default.fontWeight}",
         "lineHeight": "{text.styles.default.lineHeight}",
