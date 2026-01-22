@@ -58,7 +58,7 @@
       "small": {
         "fontFamily": {
           "$value": "{text.fontFamily}",
-          "$type": "fontFamily"
+          "$type": "fontFamilies"
         },
         "fontSize": {
           "$value": "{font.size.small}",
@@ -80,7 +80,7 @@
       "large": {
         "fontFamily": {
           "$value": "{text.fontFamily}",
-          "$type": "fontFamily"
+          "$type": "fontFamilies"
         },
         "fontSize": {
           "$value": "{font.size.medium}",
@@ -102,7 +102,7 @@
       "xlarge": {
         "fontFamily": {
           "$value": "{text.fontFamily}",
-          "$type": "fontFamily"
+          "$type": "fontFamilies"
         },
         "fontSize": {
           "$value": "{font.size.large}",
