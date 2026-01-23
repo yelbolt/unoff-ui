@@ -7,6 +7,10 @@
     "isCapitalized": {
       "$type": "boolean",
       "$value": true
+    },
+    "isNotCapitalized": {
+      "$type": "boolean",
+      "$value": false
     }
   }
 }
