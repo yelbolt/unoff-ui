@@ -68,50 +68,26 @@
         "$type": "dimension"
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{figma.color.border.default}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{figma.color.border.selected.strong}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg.selected.default}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{figma.color.bg.selected.default}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{figma.color.border.disabled.default}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -126,8 +102,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -142,8 +138,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -264,50 +262,26 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{figma.color.border.default}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{figma.color.bg.selected.strong}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg.brand.secondary}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{figma.color.bg.brand.secondary}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -322,8 +296,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -338,8 +332,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -523,50 +519,26 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{figma.color.icon.default}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{figma.color.icon.default}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{figma.color.bg.disabled.default}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{figma.color.bg.disabled.default}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{figma.color.icon.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -581,8 +553,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -597,8 +589,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"

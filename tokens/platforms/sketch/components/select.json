@@ -68,50 +68,26 @@
         "$type": "dimension"
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -126,8 +102,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -142,8 +138,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -264,50 +262,26 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -322,8 +296,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -338,8 +332,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -518,50 +514,26 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
               "$value": "{grey.transparent}",
               "$type": "string"
@@ -576,8 +548,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -592,8 +584,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
