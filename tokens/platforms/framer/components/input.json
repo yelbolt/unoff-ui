@@ -688,7 +688,7 @@
           "$value": "{size.pos.medium}",
           "$type": "dimension"
         },
-        "long-text": {
+        "longText": {
           "$value": "{size.pos.medium}",
           "$type": "dimension"
         }

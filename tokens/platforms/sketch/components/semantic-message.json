@@ -63,7 +63,7 @@
           "$type": "dimension"
         }
       },
-      "anchored-vertical": {
+      "anchoredVertical": {
         "top": {
           "$value": "{size.pos.xsmall}",
           "$type": "dimension"

@@ -15,11 +15,11 @@
           "$type": "dimension"
         }
       },
-      "line-height": {
+      "lineHeight": {
         "$value": "{font.lineHeight.default}",
         "$type": "dimension"
       },
-      "letter-spacing": {
+      "letterSpacing": {
         "$value": "{font.letterSpacing.pos.medium}",
         "$type": "dimension"
       },
