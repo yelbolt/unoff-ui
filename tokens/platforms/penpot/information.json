@@ -11,6 +11,10 @@
     "isNotCapitalized": {
       "$type": "boolean",
       "$value": false
+    },
+    "backgroundColor": {
+      "$type": "color",
+      "$value": "{penpot.color.background.primary}"
     }
   }
 }

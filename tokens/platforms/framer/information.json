@@ -11,6 +11,10 @@
     "isNotCapitalized": {
       "$type": "boolean",
       "$value": true
+    },
+    "backgroundColor": {
+      "$type": "color",
+      "$value": "{framer.color.bg.default}"
     }
   }
 }
