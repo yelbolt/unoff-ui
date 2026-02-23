@@ -17,6 +17,18 @@
         "$value": "{framer.color.text.tertiary}",
         "$type": "color"
       },
+      "success": {
+        "$value": "{framer.color.success.default}",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "{framer.color.warning.default}",
+        "$type": "color"
+      },
+      "alert": {
+        "$value": "{framer.color.destructive.default}",
+        "$type": "color"
+      },
       "inverse": {
         "$value": "{framer.color.bg.default}",
         "$type": "color"

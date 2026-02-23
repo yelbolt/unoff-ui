@@ -17,6 +17,18 @@
         "$value": "{penpot.color.foreground.disabled}",
         "$type": "color"
       },
+      "success": {
+        "$value": "{penpot.color.accent.success}",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "{penpot.color.accent.warning}",
+        "$type": "color"
+      },
+      "alert": {
+        "$value": "{penpot.color.accent.error}",
+        "$type": "color"
+      },
       "inverse": {
         "$value": "{penpot.color.background.primary}",
         "$type": "color"

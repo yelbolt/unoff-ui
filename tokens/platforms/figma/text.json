@@ -17,6 +17,18 @@
         "$value": "{figma.color.text.tertiary.default}",
         "$type": "color"
       },
+      "success": {
+        "$value": "{figma.color.text.success.default}",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "{figma.color.text.warning.default}",
+        "$type": "color"
+      },
+      "alert": {
+        "$value": "{figma.color.text.danger.default}",
+        "$type": "color"
+      },
       "inverse": {
         "$value": "{figma.color.text.oninverse}",
         "$type": "color"

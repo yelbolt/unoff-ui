@@ -17,6 +17,18 @@
         "$value": "{sketch.color.foreground.tertiary}",
         "$type": "color"
       },
+      "success": {
+        "$value": "{sketch.color.accent.success}",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "{sketch.color.accent.warning}",
+        "$type": "color"
+      },
+      "alert": {
+        "$value": "{sketch.color.accent.error}",
+        "$type": "color"
+      },
       "inverse": {
         "$value": "{sketch.color.background.primary}",
         "$type": "color"
