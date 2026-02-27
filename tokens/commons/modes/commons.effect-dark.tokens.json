@@ -5,7 +5,7 @@
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "hud": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -34,7 +34,7 @@
       ]
     },
     "floatingWindow": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": {
         "offsetX": "{size.null}",
         "offsetY": "{size.pos.xunit}",
@@ -55,7 +55,7 @@
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "100Shapes": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -110,7 +110,7 @@
       ]
     },
     "200Canvas": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -165,7 +165,7 @@
       ]
     },
     "300Tooltip": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -220,7 +220,7 @@
       ]
     },
     "400MenuPanel": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -275,7 +275,7 @@
       ]
     },
     "500ModalWindow": {
-      "$type": "BoxShadow",
+      "$type": "boxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
