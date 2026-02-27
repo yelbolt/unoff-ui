@@ -1,11 +1,11 @@
 {
   "shadow": {
-    "$type": "shadow",
     "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
     "$extensions": {
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "hud": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -34,7 +34,7 @@
       ]
     },
     "floatingWindow": {
-      "$type": "shadow",
+      "$type": "BoxShadow",
       "$value": {
         "offsetX": "{size.null}",
         "offsetY": "{size.pos.xunit}",
@@ -50,12 +50,12 @@
     }
   },
   "elevation": {
-    "$type": "shadow",
     "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
     "$extensions": {
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "100Shapes": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -84,6 +84,7 @@
       ]
     },
     "200Canvas": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -124,6 +125,7 @@
       ]
     },
     "300Tooltip": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -164,6 +166,7 @@
       ]
     },
     "400MenuPanel": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
@@ -204,6 +207,7 @@
       ]
     },
     "500ModalWindow": {
+      "$type": "BoxShadow",
       "$value": [
         {
           "offsetX": "{size.null}",
