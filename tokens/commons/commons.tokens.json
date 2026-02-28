@@ -360,5 +360,106 @@
         }
       }
     }
+  },
+  "shadow": {
+    "$description": "Color tokens used in shadow and elevation effects. Declared once here and referenced as aliases in mode-specific effect files.",
+    "color": {
+      "$type": "color",
+      "black": {
+        "alpha100": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.100}"
+          }
+        },
+        "alpha150": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.150}"
+          }
+        },
+        "alpha200": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.200}"
+          }
+        },
+        "alpha300": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.300}"
+          }
+        },
+        "alpha350": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.350}"
+          }
+        },
+        "alpha400": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.400}"
+          }
+        },
+        "alpha450": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.450}"
+          }
+        },
+        "alpha500": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.500}"
+          }
+        },
+        "alpha800": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [0, 0, 0],
+            "alpha": "{alpha.800}"
+          }
+        }
+      },
+      "white": {
+        "alpha100": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.100}"
+          }
+        },
+        "alpha200": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.200}"
+          }
+        },
+        "alpha300": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.300}"
+          }
+        },
+        "alpha350": {
+          "$value": {
+            "colorSpace": "srgb",
+            "components": [1, 1, 1],
+            "alpha": "{alpha.350}"
+          }
+        }
+      }
+    }
   }
 }

@@ -1,331 +1,211 @@
 {
   "shadow": {
+    "$type": "boxShadow",
     "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
     "$extensions": {
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "hud": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxxsmall}",
           "blur": "{size.xsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.200}"
-          }
+          "color": "{shadow.color.black.alpha200}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.xunit}",
           "blur": "{size.xxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.150}"
-          }
+          "color": "{shadow.color.black.alpha150}"
         }
       ]
     },
     "floatingWindow": {
-      "$type": "boxShadow",
       "$value": {
-        "offsetX": "{size.null}",
-        "offsetY": "{size.pos.xunit}",
+        "x": "{size.null}",
+        "y": "{size.pos.xunit}",
         "blur": "14px",
         "spread": "{size.null}",
-        "color": {
-          "$type": "color",
-          "colorSpace": "srgb",
-          "components": [0, 0, 0],
-          "alpha": "{alpha.150}"
-        }
+        "color": "{shadow.color.black.alpha150}"
       }
     }
   },
   "elevation": {
+    "$type": "boxShadow",
     "$description": "A comprehensive set of shadow values to ensure consistent shadow effects across all supported platforms. These values can be used for box-shadow, text-shadow, and other shadow needs.",
     "$extensions": {
       "com.figma.scopes": ["EFFECT_FLOAT", "OPACITY"]
     },
     "100Shapes": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.hunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.hunit}",
           "blur": "{size.null}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.100}"
-          },
+          "color": "{shadow.color.white.alpha100}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.300}"
-          },
+          "color": "{shadow.color.white.alpha300}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.500}"
-          }
+          "color": "{shadow.color.black.alpha500}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.unit}",
+          "x": "{size.null}",
+          "y": "{size.pos.unit}",
           "blur": "{size.pos.xxxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.400}"
-          }
+          "color": "{shadow.color.black.alpha400}"
         }
       ]
     },
     "200Canvas": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.hunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.hunit}",
           "blur": "{size.null}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.100}"
-          },
+          "color": "{shadow.color.white.alpha100}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.200}"
-          },
+          "color": "{shadow.color.white.alpha200}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxxsmall}",
           "blur": "{size.pos.xxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.500}"
-          }
+          "color": "{shadow.color.black.alpha500}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.unit}",
+          "x": "{size.null}",
+          "y": "{size.pos.unit}",
           "blur": "{size.pos.xxxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.500}"
-          }
+          "color": "{shadow.color.black.alpha500}"
         }
       ]
     },
     "300Tooltip": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.hunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.hunit}",
           "blur": "{size.null}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.100}"
-          },
+          "color": "{shadow.color.white.alpha100}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.300}"
-          },
+          "color": "{shadow.color.white.alpha300}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxxsmall}",
           "blur": "{size.pos.xmsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.350}"
-          }
+          "color": "{shadow.color.black.alpha350}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.unit}",
+          "x": "{size.null}",
+          "y": "{size.pos.unit}",
           "blur": "{size.pos.xxxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.500}"
-          }
+          "color": "{shadow.color.black.alpha500}"
         }
       ]
     },
     "400MenuPanel": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.hunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.hunit}",
           "blur": "{size.null}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.100}"
-          },
+          "color": "{shadow.color.white.alpha100}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.350}"
-          },
+          "color": "{shadow.color.white.alpha350}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxsmall}",
           "blur": "{size.pos.xsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.350}"
-          }
+          "color": "{shadow.color.black.alpha350}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.xunit}",
           "blur": "{size.pos.xxxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.350}"
-          }
+          "color": "{shadow.color.black.alpha350}"
         }
       ]
     },
     "500ModalWindow": {
-      "$type": "boxShadow",
       "$value": [
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.hunit}",
+          "x": "{size.null}",
+          "y": "{size.pos.hunit}",
           "blur": "{size.null}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.100}"
-          },
+          "color": "{shadow.color.white.alpha100}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.null}",
+          "x": "{size.null}",
+          "y": "{size.null}",
           "blur": "{size.pos.hunit}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [1, 1, 1],
-            "alpha": "{alpha.350}"
-          },
+          "color": "{shadow.color.white.alpha350}",
           "inset": true
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxsmall}",
           "blur": "{size.pos.small}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.450}"
-          }
+          "color": "{shadow.color.black.alpha450}"
         },
         {
-          "offsetX": "{size.null}",
-          "offsetY": "{size.pos.xxxsmall}",
+          "x": "{size.null}",
+          "y": "{size.pos.xxxsmall}",
           "blur": "{size.pos.xxxsmall}",
           "spread": "{size.null}",
-          "color": {
-            "$type": "color",
-            "colorSpace": "srgb",
-            "components": [0, 0, 0],
-            "alpha": "{alpha.350}"
-          }
+          "color": "{shadow.color.black.alpha350}"
         }
       ]
     }
