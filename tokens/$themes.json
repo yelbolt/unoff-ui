@@ -104,7 +104,20 @@
       "size.neg.huge": "555f41982979d2d5f645e0c2788dba28f1ead8bb",
       "size.neg.hunit": "2b60db5aee3cadf9eb2277536789edc07085f71c",
       "size.pos.hunit": "7b510a852e0c97c9b0697b57d55619508e29e67f",
-      "size.pos.huge": "9d090dc90073f69bd7ce788f2ef72ce838392cbf"
+      "size.pos.huge": "9d090dc90073f69bd7ce788f2ef72ce838392cbf",
+      "shadow.color.black.alpha100": "4bfd57dd1b0bd10c15d3718edffd7334a6a5d1ce",
+      "shadow.color.black.alpha150": "c6928f1af85d45a7ae44694f0db4d33d978dba4c",
+      "shadow.color.black.alpha200": "bec8697ede62654eaf5365b5110e224cb1d5b4b7",
+      "shadow.color.black.alpha300": "f2616e4e30afce2496d13af5a6a877ccb0c6711d",
+      "shadow.color.black.alpha350": "ab24fb7c56750ce1cb4a2a17b2dc8cfd8597f44a",
+      "shadow.color.black.alpha400": "16ea4c81812080adb94017ed47ef90d4f26681f6",
+      "shadow.color.black.alpha450": "7a70a7f11b02a1e8a16567612d0000700348f732",
+      "shadow.color.black.alpha500": "5ba1bf57e3682285a664453037f22eebffaefbf1",
+      "shadow.color.black.alpha800": "3a72825eaab7bb6f2e58a9f28841c3f306831648",
+      "shadow.color.white.alpha100": "240f2304a0f076b6bbb0d8aadd851b9a0d846e73",
+      "shadow.color.white.alpha200": "e182a377df1aac7edb6a9a0a46a765ac8b0d605d",
+      "shadow.color.white.alpha300": "bb037a10ab71bbd3deee9053d06c6e252bb91e0e",
+      "shadow.color.white.alpha350": "b8ed7a8219f45bd4972f13d5428a3f40d3406fd6"
     },
     "group": "Commons"
   },
@@ -6195,7 +6208,8 @@
     "name": "Figma Light",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/figma/modes/figma-light.tokens": "enabled"
+      "platforms/figma/modes/figma-light.tokens": "enabled",
+      "commons/modes/commons.effect-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2093",
     "$figmaModeId": "3018:18",
@@ -6380,7 +6394,8 @@
     "name": "Figma Dark",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/figma/modes/figma-dark.tokens": "enabled"
+      "platforms/figma/modes/figma-dark.tokens": "enabled",
+      "commons/modes/commons.effect-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2093",
     "$figmaModeId": "3018:19",
@@ -6565,7 +6580,8 @@
     "name": "FigJam",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/figma/modes/figjam.tokens": "enabled"
+      "platforms/figma/modes/figjam.tokens": "enabled",
+      "commons/modes/commons.effect-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2093",
     "$figmaModeId": "3018:20",
@@ -6750,7 +6766,8 @@
     "name": "Light",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/penpot/modes/penpot-light.tokens.": "enabled"
+      "platforms/penpot/modes/penpot-light.tokens.": "enabled",
+      "commons/modes/commons.effect-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2094",
     "$figmaModeId": "3018:21",
@@ -6797,7 +6814,8 @@
     "name": "Dark",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/penpot/modes/penpot-dark.tokens": "enabled"
+      "platforms/penpot/modes/penpot-dark.tokens": "enabled",
+      "commons/modes/commons.effect-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2094",
     "$figmaModeId": "3018:22",
@@ -6844,7 +6862,8 @@
     "name": "Light",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/sketch/modes/sketck-light.tokens": "enabled"
+      "platforms/sketch/modes/sketck-light.tokens": "enabled",
+      "commons/modes/commons.effect-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2095",
     "$figmaModeId": "3018:23",
@@ -6895,7 +6914,8 @@
     "name": "Dark",
     "$figmaStyleReferences": {},
     "selectedTokenSets": {
-      "platforms/sketch/modes/sketch-dark.tokens": "enabled"
+      "platforms/sketch/modes/sketch-dark.tokens": "enabled",
+      "commons/modes/commons.effect-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2095",
     "$figmaModeId": "3018:24",
@@ -6944,9 +6964,18 @@
   {
     "id": "3adca87ce73346e156b971244fbb267475518c37",
     "name": "Light",
-    "$figmaStyleReferences": {},
+    "$figmaStyleReferences": {
+      "shadow.hud": "S:7002ef5f12786b4faacea0dee1ef58d86b127d88,",
+      "shadow.floatingWindow": "S:3246b5f1638e6bb820ec1387f01e9dc93bd2835a,",
+      "elevation.100Shapes": "S:9fc97ab737d6de4c5ba2ed0c0fd8134cdbca6f1b,",
+      "elevation.200Canvas": "S:e9b6841ebb84fb0706f9bacc427dfd0f4e5bee72,",
+      "elevation.300Tooltip": "S:96faf1727b535b9be48f0d20318dc4adfddf0fa1,",
+      "elevation.400MenuPanel": "S:48b146ba59a3a27b9afe7d3b340a6198b53d05be,",
+      "elevation.500ModalWindow": "S:f4a0134811fda0e5e96b39ec779d573363c04674,"
+    },
     "selectedTokenSets": {
-      "platforms/framer/modes/framer-light.tokens": "enabled"
+      "platforms/framer/modes/framer-light.tokens": "enabled",
+      "commons/modes/commons.effect-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2096",
     "$figmaModeId": "3018:25",
@@ -6981,9 +7010,18 @@
   {
     "id": "b2fc6a84f95ffa1e2bb4be0797db968ec15b95ea",
     "name": "Dark",
-    "$figmaStyleReferences": {},
+    "$figmaStyleReferences": {
+      "shadow.hud": "S:7002ef5f12786b4faacea0dee1ef58d86b127d88,",
+      "shadow.floatingWindow": "S:3246b5f1638e6bb820ec1387f01e9dc93bd2835a,",
+      "elevation.100Shapes": "S:9fc97ab737d6de4c5ba2ed0c0fd8134cdbca6f1b,",
+      "elevation.200Canvas": "S:e9b6841ebb84fb0706f9bacc427dfd0f4e5bee72,",
+      "elevation.300Tooltip": "S:96faf1727b535b9be48f0d20318dc4adfddf0fa1,",
+      "elevation.400MenuPanel": "S:48b146ba59a3a27b9afe7d3b340a6198b53d05be,",
+      "elevation.500ModalWindow": "S:f4a0134811fda0e5e96b39ec779d573363c04674,"
+    },
     "selectedTokenSets": {
-      "platforms/framer/modes/framer-dark.tokens": "enabled"
+      "platforms/framer/modes/framer-dark.tokens": "enabled",
+      "commons/modes/commons.effect-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:3018:2096",
     "$figmaModeId": "3018:26",
