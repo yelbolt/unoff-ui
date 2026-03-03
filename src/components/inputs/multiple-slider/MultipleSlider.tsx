@@ -459,7 +459,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
     )
 
     this.setState({
-      isTooltipDisplay: this.state.isTooltipDisplay.fill(true),
+      isTooltipDisplay: Array(stops.length).fill(true),
     })
 
     onChange('UPDATING', {
