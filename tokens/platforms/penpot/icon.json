@@ -423,6 +423,22 @@
     "target": {
       "$type": "link",
       "$value": "/src/icons/penpot/target.svg"
+    },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/code.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/copy.svg"
+    },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/redo.svg"
+    },
+    "undo": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/undo.svg"
     }
   }
 }

@@ -423,6 +423,22 @@
     "target": {
       "$type": "link",
       "$value": "/src/icons/sketch/target.svg"
+    },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/code.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/copy.svg"
+    },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/redo.svg"
+    },
+    "undo": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/undo.svg"
     }
   }
 }

@@ -84,9 +84,17 @@
       "$type": "link",
       "$value": "/src/icons/figma/close.svg"
     },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/figma/code.svg"
+    },
     "component": {
       "$type": "link",
       "$value": "/src/icons/figma/component.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/figma/copy.svg"
     },
     "cornerRadius": {
       "$type": "link",
@@ -419,6 +427,14 @@
     "user": {
       "$type": "link",
       "$value": "/src/icons/figma/user.svg"
+    },
+    "undo": {
+      "$type": "link",
+      "$value": "/src/icons/figma/undo.svg"
+    },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/figma/redo.svg"
     },
     "target": {
       "$type": "link",
