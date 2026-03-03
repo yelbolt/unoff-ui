@@ -69,6 +69,7 @@ export { default as ColorChip } from '@components/tags/color-chip/ColorChip'
 export { default as IconChip } from '@components/tags/icon-chip/IconChip'
 
 // Types
+export { iconList } from '@tps/icon.types'
 export type { IconList } from '@tps/icon.types'
 export type { ConsentConfiguration } from '@tps/consent.types'
 export type { DropdownOption } from '@tps/list.types'
