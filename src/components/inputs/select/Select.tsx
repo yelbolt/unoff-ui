@@ -99,12 +99,12 @@ export interface SelectProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface SelectStates {
+export interface SelectState {
   isTooltipVisible: boolean
   documentWidth: number
 }
 
-export default class Select extends React.Component<SelectProps, SelectStates> {
+export default class Select extends React.Component<SelectProps, SelectState> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {

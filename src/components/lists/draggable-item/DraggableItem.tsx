@@ -105,14 +105,14 @@ export interface DraggableItemProps {
     React.KeyboardEventHandler<Element>
 }
 
-export interface DraggableItemStates {
+export interface DraggableItemState {
   isDragged: boolean
   hasMoreOptions: boolean
 }
 
 export default class DraggableItem extends React.Component<
   DraggableItemProps,
-  DraggableItemStates
+  DraggableItemState
 > {
   private moreButtonRef: React.RefObject<Button>
 

@@ -101,12 +101,12 @@ interface SliderProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-interface SliderStates {
+interface SliderState {
   isTooltipDisplay: Array<boolean>
   activeKnobId: string | null
 }
 
-export default class Slider extends React.Component<SliderProps, SliderStates> {
+export default class Slider extends React.Component<SliderProps, SliderState> {
   static defaultProps = {
     scale: {},
     stops: {

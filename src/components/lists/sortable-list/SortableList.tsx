@@ -87,15 +87,16 @@ export interface SortableListProps<T = DefaultData> {
   onRefoldOptions: () => void
 }
 
-export interface SortableListStates {
+export interface SortableListState {
   selectedElement: SelectedColor
   hoveredElement: HoveredColor
   hasTopBorder: boolean
 }
 
-export default class SortableList<
-  T extends DefaultData,
-> extends React.Component<SortableListProps<T>, SortableListStates> {
+export default class SortableList<T extends DefaultData> extends React.Component<
+  SortableListProps<T>,
+  SortableListState
+> {
   private listRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<SortableListProps> = {

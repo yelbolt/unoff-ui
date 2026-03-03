@@ -102,7 +102,7 @@ export interface DropdownProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface DropdownStates {
+export interface DropdownState {
   isMenuOpen: boolean
   isMenuVisible: boolean
   listShouldScroll: boolean
@@ -110,10 +110,7 @@ export interface DropdownStates {
   documentWidth: number
 }
 
-export default class Dropdown extends React.Component<
-  DropdownProps,
-  DropdownStates
-> {
+export default class Dropdown extends React.Component<DropdownProps, DropdownState> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>

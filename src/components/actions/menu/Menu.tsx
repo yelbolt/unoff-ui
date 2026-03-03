@@ -85,13 +85,13 @@ export interface MenuProps {
   isNew?: boolean
 }
 
-export interface MenuStates {
+export interface MenuState {
   isMenuOpen: boolean
   isMenuVisible: boolean
   alignment: 'TOP_RIGHT' | 'TOP_LEFT' | 'BOTTOM_RIGHT' | 'BOTTOM_LEFT'
 }
 
-export default class Menu extends React.Component<MenuProps, MenuStates> {
+export default class Menu extends React.Component<MenuProps, MenuState> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   buttonRef: React.RefObject<Button>
   private listRef: React.RefObject<HTMLDivElement>

@@ -141,12 +141,12 @@ export interface ButtonProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-interface ButtonStates {
+interface ButtonState {
   isTooltipVisible: boolean
   documentWidth: number
 }
 
-export default class Button extends React.Component<ButtonProps, ButtonStates> {
+export default class Button extends React.Component<ButtonProps, ButtonState> {
   buttonRef: React.RefObject<HTMLButtonElement> = React.createRef()
 
   static defaultProps: Partial<ButtonProps> = {

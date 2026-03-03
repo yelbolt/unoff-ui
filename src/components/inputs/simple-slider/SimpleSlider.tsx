@@ -80,13 +80,13 @@ export interface SimpleSliderProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface SimpleSliderStates {
+export interface SimpleSliderState {
   isTooltipDisplay: boolean
 }
 
 export default class SimpleSlider extends React.Component<
   SimpleSliderProps,
-  SimpleSliderStates
+  SimpleSliderState
 > {
   private value: number
 
