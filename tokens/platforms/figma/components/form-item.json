@@ -4,6 +4,10 @@
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
     },
+    "minHeight": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
     "padding": {
       "top": {
         "$value": "{size.pos.xunit}",

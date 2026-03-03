@@ -44,6 +44,12 @@
       "$value": "{border.radius.large}",
       "$type": "dimension"
     },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg.secondary}",
+        "$type": "color"
+      }
+    },
     "border": {
       "color": {
         "$value": "{framer.color.divider}",
@@ -52,6 +58,12 @@
       "width": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{framer.color.tint.default}",
+        "$type": "color"
       }
     },
     "status": {

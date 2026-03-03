@@ -46,7 +46,7 @@
     },
     "background": {
       "color": {
-        "$value": "{sketch.color.background.primary}",
+        "$value": "{sketch.color.background.secondary}",
         "$type": "color"
       }
     },
@@ -58,6 +58,12 @@
       "width": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{sketch.color.accent.primary}",
+        "$type": "color"
       }
     },
     "status": {

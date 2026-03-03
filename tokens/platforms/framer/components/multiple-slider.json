@@ -46,7 +46,7 @@
     },
     "background": {
       "color": {
-        "$value": "{framer.color.bg.default}",
+        "$value": "{framer.color.bg.secondary}",
         "$type": "color"
       }
     },
@@ -58,6 +58,12 @@
       "width": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{framer.color.tint.default}",
+        "$type": "color"
       }
     },
     "status": {
