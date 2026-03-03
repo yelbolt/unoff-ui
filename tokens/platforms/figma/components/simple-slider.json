@@ -62,7 +62,7 @@
     },
     "progress": {
       "color": {
-        "$value": "{figma.color.bg.brand}",
+        "$value": "{figma.color.bg.brand.default}",
         "$type": "color"
       }
     },
