@@ -1,8 +1,8 @@
 {
   "activity": {},
   "announcedBuild": {
-    "id": "69a06502ddcc6fac3a17643f",
-    "number": 536,
+    "id": "69a70aed1bd8666f2b34f81f",
+    "number": 540,
     "status": "PUBLISHED",
     "autoAcceptChanges": false,
     "features": {
@@ -14,11 +14,11 @@
       "id": "663a220bcc5dda79791c430e",
       "turboSnapAvailability": "UNUSED"
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-iqwooncyyi.chromatic.com/"
+    "storybookUrl": "https://663a220bcc5dda79791c430e-cdpbvdpdzl.chromatic.com/"
   },
   "build": {
-    "id": "69a06502ddcc6fac3a17643f",
-    "number": 536,
+    "id": "69a70aed1bd8666f2b34f81f",
+    "number": 540,
     "status": "PENDING",
     "autoAcceptChanges": false,
     "features": {
@@ -38,17 +38,17 @@
         "provider": "github"
       }
     },
-    "storybookUrl": "https://663a220bcc5dda79791c430e-iqwooncyyi.chromatic.com/",
-    "specCount": 101,
+    "storybookUrl": "https://663a220bcc5dda79791c430e-cdpbvdpdzl.chromatic.com/",
+    "specCount": 102,
     "componentCount": 38,
-    "testCount": 101,
-    "changeCount": 23,
+    "testCount": 102,
+    "changeCount": 6,
     "errorCount": 0,
-    "actualTestCount": 101,
-    "actualCaptureCount": 202,
+    "actualTestCount": 102,
+    "actualCaptureCount": 204,
     "inheritedCaptureCount": 0,
     "interactionTestFailuresCount": 0,
-    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=536",
+    "webUrl": "https://www.chromatic.com/build?appId=663a220bcc5dda79791c430e&number=540",
     "browsers": [
       {
         "browser": "chrome"
@@ -732,6 +732,22 @@
       {
         "spec": {
           "name": "Editing Values",
+          "component": {
+            "name": "Components/Inputs/Multiple Slider",
+            "displayName": "Multiple Slider"
+          }
+        },
+        "parameters": {
+          "viewport": 1200,
+          "viewportIsDefault": true
+        },
+        "mode": {
+          "name": "1200px"
+        }
+      },
+      {
+        "spec": {
+          "name": "Progressive",
           "component": {
             "name": "Components/Inputs/Multiple Slider",
             "displayName": "Multiple Slider"
@@ -1675,10 +1691,10 @@
       }
     ],
     "inProgressCount": 0,
-    "completedAt": 1772119412003
+    "completedAt": 1772555108594
   },
-  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--24130-1NFwYGMP4l8Q",
-  "buildLogFile": "/Users/a_ng_d/DEV/figmug-ui/build-storybook.log",
+  "buildCommand": "npm run build-storybook -- --output-dir=/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--64255-I3cctuWSew7f",
+  "buildLogFile": "/Users/a_ng_d/DEV/unoff-ui/build-storybook.log",
   "configuration": {
     "configFile": "chromatic.config.json",
     "projectId": "Project:663a220bcc5dda79791c430e",
@@ -1722,9 +1738,14 @@
         "knownAs": "assets/Accordion-AYcb-rjB.css"
       },
       {
-        "pathname": "assets/Accordion.stories-pF1SrvQF.js",
-        "contentLength": 3832,
-        "knownAs": "assets/Accordion.stories-pF1SrvQF.js"
+        "pathname": "assets/Accordion.stories-D8Tp4sGm.js",
+        "contentLength": 3833,
+        "knownAs": "assets/Accordion.stories-D8Tp4sGm.js"
+      },
+      {
+        "pathname": "assets/ActionsItem-B9ogEEx8.js",
+        "contentLength": 1442,
+        "knownAs": "assets/ActionsItem-B9ogEEx8.js"
       },
       {
         "pathname": "assets/ActionsItem-BJ3ei-5M.css",
@@ -1732,14 +1753,9 @@
         "knownAs": "assets/ActionsItem-BJ3ei-5M.css"
       },
       {
-        "pathname": "assets/ActionsItem-D8_wk2gg.js",
-        "contentLength": 1446,
-        "knownAs": "assets/ActionsItem-D8_wk2gg.js"
-      },
-      {
-        "pathname": "assets/ActionsItem.stories-Dhxo5VON.js",
-        "contentLength": 9083,
-        "knownAs": "assets/ActionsItem.stories-Dhxo5VON.js"
+        "pathname": "assets/ActionsItem.stories-B9cI9Wko.js",
+        "contentLength": 9084,
+        "knownAs": "assets/ActionsItem.stories-B9cI9Wko.js"
       },
       {
         "pathname": "assets/ActionsList-BBZBZfYz.css",
@@ -1747,14 +1763,19 @@
         "knownAs": "assets/ActionsList-BBZBZfYz.css"
       },
       {
-        "pathname": "assets/ActionsList-gLW4HQrT.js",
-        "contentLength": 7889,
-        "knownAs": "assets/ActionsList-gLW4HQrT.js"
+        "pathname": "assets/ActionsList-CrdIgi8I.js",
+        "contentLength": 7890,
+        "knownAs": "assets/ActionsList-CrdIgi8I.js"
       },
       {
-        "pathname": "assets/ActionsList.stories-DjnEvrf0.js",
-        "contentLength": 10495,
-        "knownAs": "assets/ActionsList.stories-DjnEvrf0.js"
+        "pathname": "assets/ActionsList.stories-KwsniLMq.js",
+        "contentLength": 10496,
+        "knownAs": "assets/ActionsList.stories-KwsniLMq.js"
+      },
+      {
+        "pathname": "assets/Avatar-BZAbY4WU.js",
+        "contentLength": 626,
+        "knownAs": "assets/Avatar-BZAbY4WU.js"
       },
       {
         "pathname": "assets/Avatar-DwjGxSH7.css",
@@ -1762,14 +1783,9 @@
         "knownAs": "assets/Avatar-DwjGxSH7.css"
       },
       {
-        "pathname": "assets/Avatar-OALDABgW.js",
-        "contentLength": 630,
-        "knownAs": "assets/Avatar-OALDABgW.js"
-      },
-      {
-        "pathname": "assets/Avatar.stories-DtY-y34Z.js",
-        "contentLength": 2134,
-        "knownAs": "assets/Avatar.stories-DtY-y34Z.js"
+        "pathname": "assets/Avatar.stories-CsoaMvPK.js",
+        "contentLength": 2135,
+        "knownAs": "assets/Avatar.stories-CsoaMvPK.js"
       },
       {
         "pathname": "assets/Bar-CHY3oyYe.css",
@@ -1777,14 +1793,14 @@
         "knownAs": "assets/Bar-CHY3oyYe.css"
       },
       {
-        "pathname": "assets/Bar-CnCa7MDg.js",
-        "contentLength": 1311,
-        "knownAs": "assets/Bar-CnCa7MDg.js"
+        "pathname": "assets/Bar-CnCtT9id.js",
+        "contentLength": 1312,
+        "knownAs": "assets/Bar-CnCtT9id.js"
       },
       {
-        "pathname": "assets/Bar.stories-BjSu3tm-.js",
-        "contentLength": 4075,
-        "knownAs": "assets/Bar.stories-BjSu3tm-.js"
+        "pathname": "assets/Bar.stories-Bz3nJ1CT.js",
+        "contentLength": 4066,
+        "knownAs": "assets/Bar.stories-Bz3nJ1CT.js"
       },
       {
         "pathname": "assets/Button-BKkz9B6W.css",
@@ -1792,14 +1808,14 @@
         "knownAs": "assets/Button-BKkz9B6W.css"
       },
       {
-        "pathname": "assets/Button-DhMyLmk0.js",
-        "contentLength": 4791,
-        "knownAs": "assets/Button-DhMyLmk0.js"
+        "pathname": "assets/Button-epw_80ji.js",
+        "contentLength": 4792,
+        "knownAs": "assets/Button-epw_80ji.js"
       },
       {
-        "pathname": "assets/Button.stories-CuGy2i2x.js",
-        "contentLength": 12494,
-        "knownAs": "assets/Button.stories-CuGy2i2x.js"
+        "pathname": "assets/Button.stories-B7b-uvp6.js",
+        "contentLength": 11287,
+        "knownAs": "assets/Button.stories-B7b-uvp6.js"
       },
       {
         "pathname": "assets/Card-CXZA7acI.css",
@@ -1807,9 +1823,9 @@
         "knownAs": "assets/Card-CXZA7acI.css"
       },
       {
-        "pathname": "assets/Card.stories-Dnob-rkE.js",
-        "contentLength": 9270,
-        "knownAs": "assets/Card.stories-Dnob-rkE.js"
+        "pathname": "assets/Card.stories-ClfQoAiY.js",
+        "contentLength": 9271,
+        "knownAs": "assets/Card.stories-ClfQoAiY.js"
       },
       {
         "pathname": "assets/Chip-BXye3nRh.css",
@@ -1817,14 +1833,14 @@
         "knownAs": "assets/Chip-BXye3nRh.css"
       },
       {
-        "pathname": "assets/Chip-MTGCIMej.js",
-        "contentLength": 1261,
-        "knownAs": "assets/Chip-MTGCIMej.js"
+        "pathname": "assets/Chip-CnGZDAnY.js",
+        "contentLength": 1262,
+        "knownAs": "assets/Chip-CnGZDAnY.js"
       },
       {
-        "pathname": "assets/Chip.stories-UjzkxU6y.js",
-        "contentLength": 3055,
-        "knownAs": "assets/Chip.stories-UjzkxU6y.js"
+        "pathname": "assets/Chip.stories-CX9oSPZk.js",
+        "contentLength": 3056,
+        "knownAs": "assets/Chip.stories-CX9oSPZk.js"
       },
       {
         "pathname": "assets/ColorChip-Bj4drYDE.css",
@@ -1832,9 +1848,9 @@
         "knownAs": "assets/ColorChip-Bj4drYDE.css"
       },
       {
-        "pathname": "assets/ColorChip-DPQMcnBC.js",
-        "contentLength": 686,
-        "knownAs": "assets/ColorChip-DPQMcnBC.js"
+        "pathname": "assets/ColorChip-C890V2zM.js",
+        "contentLength": 682,
+        "knownAs": "assets/ColorChip-C890V2zM.js"
       },
       {
         "pathname": "assets/ColorItem-DoTVlW3G.css",
@@ -1842,9 +1858,9 @@
         "knownAs": "assets/ColorItem-DoTVlW3G.css"
       },
       {
-        "pathname": "assets/ColorItem.stories-AiYtq1oL.js",
-        "contentLength": 2476,
-        "knownAs": "assets/ColorItem.stories-AiYtq1oL.js"
+        "pathname": "assets/ColorItem.stories-BWHzaug4.js",
+        "contentLength": 2477,
+        "knownAs": "assets/ColorItem.stories-BWHzaug4.js"
       },
       {
         "pathname": "assets/Consent-D5LwIwgW.css",
@@ -1852,9 +1868,9 @@
         "knownAs": "assets/Consent-D5LwIwgW.css"
       },
       {
-        "pathname": "assets/Consent.stories-DcKpDYwo.js",
-        "contentLength": 11687,
-        "knownAs": "assets/Consent.stories-DcKpDYwo.js"
+        "pathname": "assets/Consent.stories-DbX4h_q5.js",
+        "contentLength": 11688,
+        "knownAs": "assets/Consent.stories-DbX4h_q5.js"
       },
       {
         "pathname": "assets/Dialog-mDMtF950.css",
@@ -1862,14 +1878,9 @@
         "knownAs": "assets/Dialog-mDMtF950.css"
       },
       {
-        "pathname": "assets/Dialog.stories-BsR5jV2v.js",
-        "contentLength": 10920,
-        "knownAs": "assets/Dialog.stories-BsR5jV2v.js"
-      },
-      {
-        "pathname": "assets/DraggableItem-D6SI7aZ_.js",
-        "contentLength": 4235,
-        "knownAs": "assets/DraggableItem-D6SI7aZ_.js"
+        "pathname": "assets/Dialog.stories-l23S0K1x.js",
+        "contentLength": 10921,
+        "knownAs": "assets/Dialog.stories-l23S0K1x.js"
       },
       {
         "pathname": "assets/DraggableItem-DtVt6JcH.css",
@@ -1877,9 +1888,14 @@
         "knownAs": "assets/DraggableItem-DtVt6JcH.css"
       },
       {
-        "pathname": "assets/DraggableItem.stories-zDBj4X3A.js",
-        "contentLength": 4983,
-        "knownAs": "assets/DraggableItem.stories-zDBj4X3A.js"
+        "pathname": "assets/DraggableItem-kbY4O2DO.js",
+        "contentLength": 4236,
+        "knownAs": "assets/DraggableItem-kbY4O2DO.js"
+      },
+      {
+        "pathname": "assets/DraggableItem.stories-DqAHMTWp.js",
+        "contentLength": 4984,
+        "knownAs": "assets/DraggableItem.stories-DqAHMTWp.js"
       },
       {
         "pathname": "assets/Drawer-Bx7F9kX-.css",
@@ -1887,14 +1903,14 @@
         "knownAs": "assets/Drawer-Bx7F9kX-.css"
       },
       {
-        "pathname": "assets/Drawer-DcK3VNnh.js",
-        "contentLength": 3137,
-        "knownAs": "assets/Drawer-DcK3VNnh.js"
+        "pathname": "assets/Drawer-DbV6nfJg.js",
+        "contentLength": 3138,
+        "knownAs": "assets/Drawer-DbV6nfJg.js"
       },
       {
-        "pathname": "assets/Drawer.stories-nQJxAflA.js",
-        "contentLength": 2870,
-        "knownAs": "assets/Drawer.stories-nQJxAflA.js"
+        "pathname": "assets/Drawer.stories-BBbDA93A.js",
+        "contentLength": 2871,
+        "knownAs": "assets/Drawer.stories-BBbDA93A.js"
       },
       {
         "pathname": "assets/Dropdown-H5dMy_gn.css",
@@ -1902,9 +1918,9 @@
         "knownAs": "assets/Dropdown-H5dMy_gn.css"
       },
       {
-        "pathname": "assets/Dropdown.stories-CzPhLrSZ.js",
-        "contentLength": 19586,
-        "knownAs": "assets/Dropdown.stories-CzPhLrSZ.js"
+        "pathname": "assets/Dropdown.stories-DLOT-_xD.js",
+        "contentLength": 19587,
+        "knownAs": "assets/Dropdown.stories-DLOT-_xD.js"
       },
       {
         "pathname": "assets/Dropzone-GnY-SYf2.css",
@@ -1912,44 +1928,44 @@
         "knownAs": "assets/Dropzone-GnY-SYf2.css"
       },
       {
-        "pathname": "assets/Dropzone.stories-BZ46aT-p.js",
-        "contentLength": 5092,
-        "knownAs": "assets/Dropzone.stories-BZ46aT-p.js"
+        "pathname": "assets/Dropzone.stories-CHsIDEs-.js",
+        "contentLength": 5093,
+        "knownAs": "assets/Dropzone.stories-CHsIDEs-.js"
       },
       {
-        "pathname": "assets/FormItem-DYKbz0Lg.js",
-        "contentLength": 1078,
-        "knownAs": "assets/FormItem-DYKbz0Lg.js"
+        "pathname": "assets/FormItem-DHHk_fGP.css",
+        "contentLength": 8890,
+        "knownAs": "assets/FormItem-DHHk_fGP.css"
       },
       {
-        "pathname": "assets/FormItem-Dm5GtQ7f.css",
-        "contentLength": 8670,
-        "knownAs": "assets/FormItem-Dm5GtQ7f.css"
+        "pathname": "assets/FormItem-Ds1QIf_R.js",
+        "contentLength": 1079,
+        "knownAs": "assets/FormItem-Ds1QIf_R.js"
       },
       {
-        "pathname": "assets/Formitem.stories-BDj8bqjr.js",
-        "contentLength": 2225,
-        "knownAs": "assets/Formitem.stories-BDj8bqjr.js"
+        "pathname": "assets/Formitem.stories-BihVJRG9.js",
+        "contentLength": 2226,
+        "knownAs": "assets/Formitem.stories-BihVJRG9.js"
       },
       {
-        "pathname": "assets/Icon-B1Jmj-Do.css",
-        "contentLength": 325933,
-        "knownAs": "assets/Icon-B1Jmj-Do.css"
+        "pathname": "assets/Icon-ZlNnlL4s.js",
+        "contentLength": 5974,
+        "knownAs": "assets/Icon-ZlNnlL4s.js"
       },
       {
-        "pathname": "assets/Icon-BK2_OX0N.js",
-        "contentLength": 5825,
-        "knownAs": "assets/Icon-BK2_OX0N.js"
+        "pathname": "assets/Icon-fb5hqjFL.css",
+        "contentLength": 336693,
+        "knownAs": "assets/Icon-fb5hqjFL.css"
       },
       {
-        "pathname": "assets/Icon.stories-12i09sMe.js",
-        "contentLength": 4109,
-        "knownAs": "assets/Icon.stories-12i09sMe.js"
+        "pathname": "assets/Icon.stories-oT5n6MOq.js",
+        "contentLength": 2734,
+        "knownAs": "assets/Icon.stories-oT5n6MOq.js"
       },
       {
-        "pathname": "assets/IconChip-CE77ZoZd.js",
-        "contentLength": 734,
-        "knownAs": "assets/IconChip-CE77ZoZd.js"
+        "pathname": "assets/IconChip-C9y4qNz6.js",
+        "contentLength": 735,
+        "knownAs": "assets/IconChip-C9y4qNz6.js"
       },
       {
         "pathname": "assets/IconChip-DACI21Dl.css",
@@ -1962,14 +1978,14 @@
         "knownAs": "assets/Input-7KJ158j3.css"
       },
       {
-        "pathname": "assets/Input-BYh09FEv.js",
-        "contentLength": 13824,
-        "knownAs": "assets/Input-BYh09FEv.js"
+        "pathname": "assets/Input-Dfw6W4vO.js",
+        "contentLength": 13825,
+        "knownAs": "assets/Input-Dfw6W4vO.js"
       },
       {
-        "pathname": "assets/Input.stories-B3_jYNuo.js",
-        "contentLength": 13253,
-        "knownAs": "assets/Input.stories-B3_jYNuo.js"
+        "pathname": "assets/Input.stories-CCAFlOqw.js",
+        "contentLength": 13254,
+        "knownAs": "assets/Input.stories-CCAFlOqw.js"
       },
       {
         "pathname": "assets/InputsBar-IFL0LG0t.css",
@@ -1977,9 +1993,9 @@
         "knownAs": "assets/InputsBar-IFL0LG0t.css"
       },
       {
-        "pathname": "assets/InputsBar.stories-DtWq4jkt.js",
-        "contentLength": 1908,
-        "knownAs": "assets/InputsBar.stories-DtWq4jkt.js"
+        "pathname": "assets/InputsBar.stories-Z3fCCQbl.js",
+        "contentLength": 1909,
+        "knownAs": "assets/InputsBar.stories-Z3fCCQbl.js"
       },
       {
         "pathname": "assets/KeyboardShortcutItem-DL9h1wjr.css",
@@ -1987,14 +2003,14 @@
         "knownAs": "assets/KeyboardShortcutItem-DL9h1wjr.css"
       },
       {
-        "pathname": "assets/KeyboardShortcutItem.stories-DTBXGkIf.js",
-        "contentLength": 4660,
-        "knownAs": "assets/KeyboardShortcutItem.stories-DTBXGkIf.js"
+        "pathname": "assets/KeyboardShortcutItem.stories-7ZiZE17Q.js",
+        "contentLength": 4661,
+        "knownAs": "assets/KeyboardShortcutItem.stories-7ZiZE17Q.js"
       },
       {
-        "pathname": "assets/Knob-CCUEXmna.js",
-        "contentLength": 2958,
-        "knownAs": "assets/Knob-CCUEXmna.js"
+        "pathname": "assets/Knob-CK1M-lq8.js",
+        "contentLength": 2959,
+        "knownAs": "assets/Knob-CK1M-lq8.js"
       },
       {
         "pathname": "assets/Knob-_vqamK4s.css",
@@ -2007,9 +2023,9 @@
         "knownAs": "assets/Layout-CuX0xO5t.css"
       },
       {
-        "pathname": "assets/Layout.stories-Cm3Jqc-H.js",
-        "contentLength": 5448,
-        "knownAs": "assets/Layout.stories-Cm3Jqc-H.js"
+        "pathname": "assets/Layout.stories-CFYJRJdN.js",
+        "contentLength": 5449,
+        "knownAs": "assets/Layout.stories-CFYJRJdN.js"
       },
       {
         "pathname": "assets/List-BgEPiq5j.css",
@@ -2017,9 +2033,9 @@
         "knownAs": "assets/List-BgEPiq5j.css"
       },
       {
-        "pathname": "assets/List.stories-Cx0eTLLC.js",
-        "contentLength": 5360,
-        "knownAs": "assets/List.stories-Cx0eTLLC.js"
+        "pathname": "assets/List.stories-BOPa7HM4.js",
+        "contentLength": 5361,
+        "knownAs": "assets/List.stories-BOPa7HM4.js"
       },
       {
         "pathname": "assets/MembersList-Bs4mSYh1.css",
@@ -2027,9 +2043,9 @@
         "knownAs": "assets/MembersList-Bs4mSYh1.css"
       },
       {
-        "pathname": "assets/MembersList.stories-CqszUwU8.js",
-        "contentLength": 3368,
-        "knownAs": "assets/MembersList.stories-CqszUwU8.js"
+        "pathname": "assets/MembersList.stories-BGqvzl5M.js",
+        "contentLength": 3369,
+        "knownAs": "assets/MembersList.stories-BGqvzl5M.js"
       },
       {
         "pathname": "assets/Menu-Cjpqn47M.css",
@@ -2037,14 +2053,14 @@
         "knownAs": "assets/Menu-Cjpqn47M.css"
       },
       {
-        "pathname": "assets/Menu-aySk7Bim.js",
-        "contentLength": 4687,
-        "knownAs": "assets/Menu-aySk7Bim.js"
+        "pathname": "assets/Menu-DTdD3ADl.js",
+        "contentLength": 4688,
+        "knownAs": "assets/Menu-DTdD3ADl.js"
       },
       {
-        "pathname": "assets/Menu.stories-BgdOJA6M.js",
-        "contentLength": 8081,
-        "knownAs": "assets/Menu.stories-BgdOJA6M.js"
+        "pathname": "assets/Menu.stories-DXn9I1ad.js",
+        "contentLength": 8082,
+        "knownAs": "assets/Menu.stories-DXn9I1ad.js"
       },
       {
         "pathname": "assets/Message-B1i5pBlJ.css",
@@ -2052,24 +2068,24 @@
         "knownAs": "assets/Message-B1i5pBlJ.css"
       },
       {
-        "pathname": "assets/Message-Dk9HGOiE.js",
-        "contentLength": 1781,
-        "knownAs": "assets/Message-Dk9HGOiE.js"
+        "pathname": "assets/Message-CnFDFug8.js",
+        "contentLength": 1777,
+        "knownAs": "assets/Message-CnFDFug8.js"
       },
       {
-        "pathname": "assets/Message.stories-CYsA0bH2.js",
-        "contentLength": 3912,
-        "knownAs": "assets/Message.stories-CYsA0bH2.js"
+        "pathname": "assets/Message.stories-Cl1oynZn.js",
+        "contentLength": 3913,
+        "knownAs": "assets/Message.stories-Cl1oynZn.js"
       },
       {
-        "pathname": "assets/MultipleSlider-DDvzT4in.css",
-        "contentLength": 5125,
-        "knownAs": "assets/MultipleSlider-DDvzT4in.css"
+        "pathname": "assets/MultipleSlider-C2inO94D.css",
+        "contentLength": 5953,
+        "knownAs": "assets/MultipleSlider-C2inO94D.css"
       },
       {
-        "pathname": "assets/MultipleSlider.stories-Bh7SkQnm.js",
-        "contentLength": 14720,
-        "knownAs": "assets/MultipleSlider.stories-Bh7SkQnm.js"
+        "pathname": "assets/MultipleSlider.stories-DU4Te2zZ.js",
+        "contentLength": 17785,
+        "knownAs": "assets/MultipleSlider.stories-DU4Te2zZ.js"
       },
       {
         "pathname": "assets/Notification-BNJ1dd50.css",
@@ -2077,14 +2093,14 @@
         "knownAs": "assets/Notification-BNJ1dd50.css"
       },
       {
-        "pathname": "assets/Notification.stories-BHkyGKWM.js",
-        "contentLength": 2433,
-        "knownAs": "assets/Notification.stories-BHkyGKWM.js"
+        "pathname": "assets/Notification.stories-BisnD85e.js",
+        "contentLength": 2434,
+        "knownAs": "assets/Notification.stories-BisnD85e.js"
       },
       {
-        "pathname": "assets/Section-D3ISjMww.js",
-        "contentLength": 830,
-        "knownAs": "assets/Section-D3ISjMww.js"
+        "pathname": "assets/Section-CqZfLzDT.js",
+        "contentLength": 831,
+        "knownAs": "assets/Section-CqZfLzDT.js"
       },
       {
         "pathname": "assets/Section-DH3q7A95.css",
@@ -2092,14 +2108,14 @@
         "knownAs": "assets/Section-DH3q7A95.css"
       },
       {
-        "pathname": "assets/Section.stories-1yavtR7H.js",
-        "contentLength": 1817,
-        "knownAs": "assets/Section.stories-1yavtR7H.js"
+        "pathname": "assets/Section.stories-KLXD5F_x.js",
+        "contentLength": 1818,
+        "knownAs": "assets/Section.stories-KLXD5F_x.js"
       },
       {
-        "pathname": "assets/SectionTitle-B3F7BWdr.js",
-        "contentLength": 554,
-        "knownAs": "assets/SectionTitle-B3F7BWdr.js"
+        "pathname": "assets/SectionTitle-CP35siV2.js",
+        "contentLength": 555,
+        "knownAs": "assets/SectionTitle-CP35siV2.js"
       },
       {
         "pathname": "assets/SectionTitle-j0N_CKly.css",
@@ -2107,9 +2123,14 @@
         "knownAs": "assets/SectionTitle-j0N_CKly.css"
       },
       {
-        "pathname": "assets/SectionTitle.stories-B_sYG702.js",
-        "contentLength": 1584,
-        "knownAs": "assets/SectionTitle.stories-B_sYG702.js"
+        "pathname": "assets/SectionTitle.stories-CaXd2R3D.js",
+        "contentLength": 1585,
+        "knownAs": "assets/SectionTitle.stories-CaXd2R3D.js"
+      },
+      {
+        "pathname": "assets/Select-Czk8qL11.js",
+        "contentLength": 4904,
+        "knownAs": "assets/Select-Czk8qL11.js"
       },
       {
         "pathname": "assets/Select-DZEEE1HH.css",
@@ -2117,14 +2138,14 @@
         "knownAs": "assets/Select-DZEEE1HH.css"
       },
       {
-        "pathname": "assets/Select-Df5sXAEh.js",
-        "contentLength": 4903,
-        "knownAs": "assets/Select-Df5sXAEh.js"
+        "pathname": "assets/Select.stories-DO3lkWxt.js",
+        "contentLength": 14049,
+        "knownAs": "assets/Select.stories-DO3lkWxt.js"
       },
       {
-        "pathname": "assets/Select.stories-BitW1k2G.js",
-        "contentLength": 14048,
-        "knownAs": "assets/Select.stories-BitW1k2G.js"
+        "pathname": "assets/SemanticMessage-BmVvlrcy.js",
+        "contentLength": 1333,
+        "knownAs": "assets/SemanticMessage-BmVvlrcy.js"
       },
       {
         "pathname": "assets/SemanticMessage-DRcdpJ3V.css",
@@ -2132,14 +2153,9 @@
         "knownAs": "assets/SemanticMessage-DRcdpJ3V.css"
       },
       {
-        "pathname": "assets/SemanticMessage-oab9q4rW.js",
-        "contentLength": 1332,
-        "knownAs": "assets/SemanticMessage-oab9q4rW.js"
-      },
-      {
-        "pathname": "assets/SemanticMessage.stories-CnDbuF4r.js",
-        "contentLength": 2287,
-        "knownAs": "assets/SemanticMessage.stories-CnDbuF4r.js"
+        "pathname": "assets/SemanticMessage.stories-B9DluLBm.js",
+        "contentLength": 2288,
+        "knownAs": "assets/SemanticMessage.stories-B9DluLBm.js"
       },
       {
         "pathname": "assets/SimpleItem-Bs9s_UY_.css",
@@ -2147,24 +2163,24 @@
         "knownAs": "assets/SimpleItem-Bs9s_UY_.css"
       },
       {
-        "pathname": "assets/SimpleItem-OhFhuGoj.js",
-        "contentLength": 1372,
-        "knownAs": "assets/SimpleItem-OhFhuGoj.js"
+        "pathname": "assets/SimpleItem-D1vIc-hc.js",
+        "contentLength": 1373,
+        "knownAs": "assets/SimpleItem-D1vIc-hc.js"
       },
       {
-        "pathname": "assets/SimpleItem.stories-C2R-fd7I.js",
-        "contentLength": 1352,
-        "knownAs": "assets/SimpleItem.stories-C2R-fd7I.js"
+        "pathname": "assets/SimpleItem.stories-EPCRXsTs.js",
+        "contentLength": 1353,
+        "knownAs": "assets/SimpleItem.stories-EPCRXsTs.js"
       },
       {
-        "pathname": "assets/SimpleSlider-lrcjXDkY.css",
-        "contentLength": 4770,
-        "knownAs": "assets/SimpleSlider-lrcjXDkY.css"
+        "pathname": "assets/SimpleSlider-DFDX1qim.css",
+        "contentLength": 5579,
+        "knownAs": "assets/SimpleSlider-DFDX1qim.css"
       },
       {
-        "pathname": "assets/SimpleSlider.stories-CdgzSVET.js",
-        "contentLength": 6217,
-        "knownAs": "assets/SimpleSlider.stories-CdgzSVET.js"
+        "pathname": "assets/SimpleSlider.stories-D7TmZE0O.js",
+        "contentLength": 6414,
+        "knownAs": "assets/SimpleSlider.stories-D7TmZE0O.js"
       },
       {
         "pathname": "assets/SortableList-BAKWXzvp.css",
@@ -2172,9 +2188,14 @@
         "knownAs": "assets/SortableList-BAKWXzvp.css"
       },
       {
-        "pathname": "assets/SortableList.stories-DM9BgTXu.js",
-        "contentLength": 8258,
-        "knownAs": "assets/SortableList.stories-DM9BgTXu.js"
+        "pathname": "assets/SortableList.stories-DiAMyDnw.js",
+        "contentLength": 8259,
+        "knownAs": "assets/SortableList.stories-DiAMyDnw.js"
+      },
+      {
+        "pathname": "assets/Tabs-BnA2HN9o.js",
+        "contentLength": 2650,
+        "knownAs": "assets/Tabs-BnA2HN9o.js"
       },
       {
         "pathname": "assets/Tabs-CJt8CqDh.css",
@@ -2182,14 +2203,9 @@
         "knownAs": "assets/Tabs-CJt8CqDh.css"
       },
       {
-        "pathname": "assets/Tabs-DGfRgrpG.js",
-        "contentLength": 2649,
-        "knownAs": "assets/Tabs-DGfRgrpG.js"
-      },
-      {
-        "pathname": "assets/Tabs.stories-CEzRXUSJ.js",
-        "contentLength": 5860,
-        "knownAs": "assets/Tabs.stories-CEzRXUSJ.js"
+        "pathname": "assets/Tabs.stories-DbQS9c_1.js",
+        "contentLength": 5861,
+        "knownAs": "assets/Tabs.stories-DbQS9c_1.js"
       },
       {
         "pathname": "assets/Text-BMiWk0nE.css",
@@ -2197,9 +2213,9 @@
         "knownAs": "assets/Text-BMiWk0nE.css"
       },
       {
-        "pathname": "assets/Text.stories-BxDVzWPj.js",
-        "contentLength": 5643,
-        "knownAs": "assets/Text.stories-BxDVzWPj.js"
+        "pathname": "assets/Text.stories-49MWyqRK.js",
+        "contentLength": 5644,
+        "knownAs": "assets/Text.stories-49MWyqRK.js"
       },
       {
         "pathname": "assets/Thumbnail-BQodlImw.css",
@@ -2207,14 +2223,14 @@
         "knownAs": "assets/Thumbnail-BQodlImw.css"
       },
       {
-        "pathname": "assets/Thumbnail-DUTb2BMQ.js",
+        "pathname": "assets/Thumbnail-CmBpuElH.js",
         "contentLength": 778,
-        "knownAs": "assets/Thumbnail-DUTb2BMQ.js"
+        "knownAs": "assets/Thumbnail-CmBpuElH.js"
       },
       {
-        "pathname": "assets/Thumbnail.stories-SdpkvPvG.js",
-        "contentLength": 1234,
-        "knownAs": "assets/Thumbnail.stories-SdpkvPvG.js"
+        "pathname": "assets/Thumbnail.stories-BgLfTXVb.js",
+        "contentLength": 1235,
+        "knownAs": "assets/Thumbnail.stories-BgLfTXVb.js"
       },
       {
         "pathname": "assets/Tooltip-B6keRl9g.css",
@@ -2222,19 +2238,29 @@
         "knownAs": "assets/Tooltip-B6keRl9g.css"
       },
       {
-        "pathname": "assets/Tooltip-FFDFRtN_.js",
-        "contentLength": 1064,
-        "knownAs": "assets/Tooltip-FFDFRtN_.js"
+        "pathname": "assets/Tooltip-DL6UfwtZ.js",
+        "contentLength": 1065,
+        "knownAs": "assets/Tooltip-DL6UfwtZ.js"
       },
       {
-        "pathname": "assets/Tooltip.stories-BUbx1-yI.js",
-        "contentLength": 17650,
-        "knownAs": "assets/Tooltip.stories-BUbx1-yI.js"
+        "pathname": "assets/Tooltip.stories-DSXE3fx4.js",
+        "contentLength": 17651,
+        "knownAs": "assets/Tooltip.stories-DSXE3fx4.js"
       },
       {
-        "pathname": "assets/axe-DN3l9McJ.js",
+        "pathname": "assets/axe-C-Nh5YcF.js",
         "contentLength": 572117,
-        "knownAs": "assets/axe-DN3l9McJ.js"
+        "knownAs": "assets/axe-C-Nh5YcF.js"
+      },
+      {
+        "pathname": "assets/do-classnames-BrVdgFv_.js",
+        "contentLength": 623,
+        "knownAs": "assets/do-classnames-BrVdgFv_.js"
+      },
+      {
+        "pathname": "assets/do-classnames-Y9kqXGoY.css",
+        "contentLength": 10867,
+        "knownAs": "assets/do-classnames-Y9kqXGoY.css"
       },
       {
         "pathname": "assets/do-map-LnAUJFLK.js",
@@ -2242,19 +2268,24 @@
         "knownAs": "assets/do-map-LnAUJFLK.js"
       },
       {
+        "pathname": "assets/icon.types-QBzso6zL.js",
+        "contentLength": 1475,
+        "knownAs": "assets/icon.types-QBzso6zL.js"
+      },
+      {
+        "pathname": "assets/iframe-Bu0y92Ma.js",
+        "contentLength": 1135523,
+        "knownAs": "assets/iframe-Bu0y92Ma.js"
+      },
+      {
         "pathname": "assets/iframe-D3JM0jFn.css",
         "contentLength": 46383,
         "knownAs": "assets/iframe-D3JM0jFn.css"
       },
       {
-        "pathname": "assets/iframe-DGdss8Ji.js",
-        "contentLength": 1091424,
-        "knownAs": "assets/iframe-DGdss8Ji.js"
-      },
-      {
-        "pathname": "assets/index_react-BLgPGd1j.js",
+        "pathname": "assets/index_react-BYCDagKC.js",
         "contentLength": 531614,
-        "knownAs": "assets/index_react-BLgPGd1j.js"
+        "knownAs": "assets/index_react-BYCDagKC.js"
       },
       {
         "pathname": "assets/layouts-PHdxqOZX.css",
@@ -2267,9 +2298,9 @@
         "knownAs": "assets/layouts.module-B2nHI-bP.js"
       },
       {
-        "pathname": "assets/matchers-DMFSMG2O-HJu_DfWo.js",
+        "pathname": "assets/matchers-5TDFFDYO-HJu_DfWo.js",
         "contentLength": 29226,
-        "knownAs": "assets/matchers-DMFSMG2O-HJu_DfWo.js"
+        "knownAs": "assets/matchers-5TDFFDYO-HJu_DfWo.js"
       },
       {
         "pathname": "assets/preload-helper-PPVm8Dsz.js",
@@ -2277,38 +2308,28 @@
         "knownAs": "assets/preload-helper-PPVm8Dsz.js"
       },
       {
-        "pathname": "assets/react-18-BWzjCEM6.js",
+        "pathname": "assets/react-18-NHIFFqac.js",
         "contentLength": 134951,
-        "knownAs": "assets/react-18-BWzjCEM6.js"
-      },
-      {
-        "pathname": "assets/texts-Y9kqXGoY.css",
-        "contentLength": 10867,
-        "knownAs": "assets/texts-Y9kqXGoY.css"
-      },
-      {
-        "pathname": "assets/texts.module-C_1yOI-H.js",
-        "contentLength": 623,
-        "knownAs": "assets/texts.module-C_1yOI-H.js"
+        "knownAs": "assets/react-18-NHIFFqac.js"
       },
       {
         "pathname": "components/actions/accordion/Accordion.d.ts",
-        "contentLength": 1551,
+        "contentLength": 1550,
         "knownAs": "components/actions/accordion/Accordion.d.ts"
       },
       {
         "pathname": "components/actions/accordion/Accordion.d.ts.map",
-        "contentLength": 1064,
+        "contentLength": 1067,
         "knownAs": "components/actions/accordion/Accordion.d.ts.map"
       },
       {
         "pathname": "components/actions/button/Button.d.ts",
-        "contentLength": 3895,
+        "contentLength": 3892,
         "knownAs": "components/actions/button/Button.d.ts"
       },
       {
         "pathname": "components/actions/button/Button.d.ts.map",
-        "contentLength": 2363,
+        "contentLength": 2362,
         "knownAs": "components/actions/button/Button.d.ts.map"
       },
       {
@@ -2318,57 +2339,57 @@
       },
       {
         "pathname": "components/actions/button/Button.figma.d.ts.map",
-        "contentLength": 196,
+        "contentLength": 195,
         "knownAs": "components/actions/button/Button.figma.d.ts.map"
       },
       {
         "pathname": "components/actions/card/Card.d.ts",
-        "contentLength": 883,
+        "contentLength": 882,
         "knownAs": "components/actions/card/Card.d.ts"
       },
       {
         "pathname": "components/actions/card/Card.d.ts.map",
-        "contentLength": 717,
+        "contentLength": 720,
         "knownAs": "components/actions/card/Card.d.ts.map"
       },
       {
         "pathname": "components/actions/knob/Knob.d.ts",
-        "contentLength": 2403,
+        "contentLength": 2400,
         "knownAs": "components/actions/knob/Knob.d.ts"
       },
       {
         "pathname": "components/actions/knob/Knob.d.ts.map",
-        "contentLength": 1701,
+        "contentLength": 1736,
         "knownAs": "components/actions/knob/Knob.d.ts.map"
       },
       {
         "pathname": "components/actions/menu/Menu.d.ts",
-        "contentLength": 2781,
+        "contentLength": 2778,
         "knownAs": "components/actions/menu/Menu.d.ts"
       },
       {
         "pathname": "components/actions/menu/Menu.d.ts.map",
-        "contentLength": 1990,
+        "contentLength": 2015,
         "knownAs": "components/actions/menu/Menu.d.ts.map"
       },
       {
         "pathname": "components/assets/avatar/Avatar.d.ts",
-        "contentLength": 722,
+        "contentLength": 721,
         "knownAs": "components/assets/avatar/Avatar.d.ts"
       },
       {
         "pathname": "components/assets/avatar/Avatar.d.ts.map",
-        "contentLength": 518,
+        "contentLength": 521,
         "knownAs": "components/assets/avatar/Avatar.d.ts.map"
       },
       {
         "pathname": "components/assets/icon/Icon.d.ts",
-        "contentLength": 666,
+        "contentLength": 665,
         "knownAs": "components/assets/icon/Icon.d.ts"
       },
       {
         "pathname": "components/assets/icon/Icon.d.ts.map",
-        "contentLength": 554,
+        "contentLength": 558,
         "knownAs": "components/assets/icon/Icon.d.ts.map"
       },
       {
@@ -2378,97 +2399,97 @@
       },
       {
         "pathname": "components/assets/icon/Icon.figma.d.ts.map",
-        "contentLength": 189,
+        "contentLength": 188,
         "knownAs": "components/assets/icon/Icon.figma.d.ts.map"
       },
       {
         "pathname": "components/assets/section-title/SectionTitle.d.ts",
-        "contentLength": 576,
+        "contentLength": 575,
         "knownAs": "components/assets/section-title/SectionTitle.d.ts"
       },
       {
         "pathname": "components/assets/section-title/SectionTitle.d.ts.map",
-        "contentLength": 519,
+        "contentLength": 522,
         "knownAs": "components/assets/section-title/SectionTitle.d.ts.map"
       },
       {
         "pathname": "components/assets/text/Text.d.ts",
-        "contentLength": 747,
+        "contentLength": 746,
         "knownAs": "components/assets/text/Text.d.ts"
       },
       {
         "pathname": "components/assets/text/Text.d.ts.map",
-        "contentLength": 704,
+        "contentLength": 707,
         "knownAs": "components/assets/text/Text.d.ts.map"
       },
       {
         "pathname": "components/assets/thumbnail/Thumbnail.d.ts",
-        "contentLength": 541,
+        "contentLength": 540,
         "knownAs": "components/assets/thumbnail/Thumbnail.d.ts"
       },
       {
         "pathname": "components/assets/thumbnail/Thumbnail.d.ts.map",
-        "contentLength": 465,
+        "contentLength": 469,
         "knownAs": "components/assets/thumbnail/Thumbnail.d.ts.map"
       },
       {
         "pathname": "components/dialogs/consent/Consent.d.ts",
-        "contentLength": 2434,
+        "contentLength": 2431,
         "knownAs": "components/dialogs/consent/Consent.d.ts"
       },
       {
         "pathname": "components/dialogs/consent/Consent.d.ts.map",
-        "contentLength": 1617,
+        "contentLength": 1621,
         "knownAs": "components/dialogs/consent/Consent.d.ts.map"
       },
       {
         "pathname": "components/dialogs/dialog/Dialog.d.ts",
-        "contentLength": 2046,
+        "contentLength": 2045,
         "knownAs": "components/dialogs/dialog/Dialog.d.ts"
       },
       {
         "pathname": "components/dialogs/dialog/Dialog.d.ts.map",
-        "contentLength": 1611,
+        "contentLength": 1614,
         "knownAs": "components/dialogs/dialog/Dialog.d.ts.map"
       },
       {
         "pathname": "components/dialogs/message/Message.d.ts",
-        "contentLength": 742,
+        "contentLength": 741,
         "knownAs": "components/dialogs/message/Message.d.ts"
       },
       {
         "pathname": "components/dialogs/message/Message.d.ts.map",
-        "contentLength": 613,
+        "contentLength": 612,
         "knownAs": "components/dialogs/message/Message.d.ts.map"
       },
       {
         "pathname": "components/dialogs/notification/Notification.d.ts",
-        "contentLength": 604,
+        "contentLength": 603,
         "knownAs": "components/dialogs/notification/Notification.d.ts"
       },
       {
         "pathname": "components/dialogs/notification/Notification.d.ts.map",
-        "contentLength": 521,
+        "contentLength": 524,
         "knownAs": "components/dialogs/notification/Notification.d.ts.map"
       },
       {
         "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts",
-        "contentLength": 1199,
+        "contentLength": 1196,
         "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts"
       },
       {
         "pathname": "components/dialogs/semantic-message/SemanticMessage.d.ts.map",
-        "contentLength": 914,
+        "contentLength": 918,
         "knownAs": "components/dialogs/semantic-message/SemanticMessage.d.ts.map"
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts",
-        "contentLength": 3437,
+        "contentLength": 3434,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts"
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.d.ts.map",
-        "contentLength": 2287,
+        "contentLength": 2301,
         "knownAs": "components/inputs/dropdown/Dropdown.d.ts.map"
       },
       {
@@ -2478,27 +2499,27 @@
       },
       {
         "pathname": "components/inputs/dropdown/Dropdown.figma.d.ts.map",
-        "contentLength": 201,
+        "contentLength": 200,
         "knownAs": "components/inputs/dropdown/Dropdown.figma.d.ts.map"
       },
       {
         "pathname": "components/inputs/dropzone/Dropzone.d.ts",
-        "contentLength": 2195,
+        "contentLength": 2192,
         "knownAs": "components/inputs/dropzone/Dropzone.d.ts"
       },
       {
         "pathname": "components/inputs/dropzone/Dropzone.d.ts.map",
-        "contentLength": 1468,
+        "contentLength": 1553,
         "knownAs": "components/inputs/dropzone/Dropzone.d.ts.map"
       },
       {
         "pathname": "components/inputs/input/Input.d.ts",
-        "contentLength": 5958,
+        "contentLength": 5955,
         "knownAs": "components/inputs/input/Input.d.ts"
       },
       {
         "pathname": "components/inputs/input/Input.d.ts.map",
-        "contentLength": 3942,
+        "contentLength": 4070,
         "knownAs": "components/inputs/input/Input.d.ts.map"
       },
       {
@@ -2508,27 +2529,27 @@
       },
       {
         "pathname": "components/inputs/input/Input.figma.d.ts.map",
-        "contentLength": 192,
+        "contentLength": 191,
         "knownAs": "components/inputs/input/Input.figma.d.ts.map"
       },
       {
         "pathname": "components/inputs/inputs-bar/InputsBar.d.ts",
-        "contentLength": 434,
+        "contentLength": 433,
         "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts"
       },
       {
         "pathname": "components/inputs/inputs-bar/InputsBar.d.ts.map",
-        "contentLength": 434,
+        "contentLength": 437,
         "knownAs": "components/inputs/inputs-bar/InputsBar.d.ts.map"
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts",
-        "contentLength": 3737,
+        "contentLength": 4008,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/multiple-slider/MultipleSlider.d.ts.map",
-        "contentLength": 2596,
+        "contentLength": 2893,
         "knownAs": "components/inputs/multiple-slider/MultipleSlider.d.ts.map"
       },
       {
@@ -2538,7 +2559,7 @@
       },
       {
         "pathname": "components/inputs/multiple-slider/actions/addStop.d.ts.map",
-        "contentLength": 320,
+        "contentLength": 345,
         "knownAs": "components/inputs/multiple-slider/actions/addStop.d.ts.map"
       },
       {
@@ -2548,7 +2569,7 @@
       },
       {
         "pathname": "components/inputs/multiple-slider/actions/deleteStop.d.ts.map",
-        "contentLength": 306,
+        "contentLength": 320,
         "knownAs": "components/inputs/multiple-slider/actions/deleteStop.d.ts.map"
       },
       {
@@ -2558,7 +2579,7 @@
       },
       {
         "pathname": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map",
-        "contentLength": 349,
+        "contentLength": 421,
         "knownAs": "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map"
       },
       {
@@ -2568,107 +2589,107 @@
       },
       {
         "pathname": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map",
-        "contentLength": 351,
+        "contentLength": 423,
         "knownAs": "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map"
       },
       {
         "pathname": "components/inputs/select/Select.d.ts",
-        "contentLength": 2901,
+        "contentLength": 2898,
         "knownAs": "components/inputs/select/Select.d.ts"
       },
       {
         "pathname": "components/inputs/select/Select.d.ts.map",
-        "contentLength": 1903,
+        "contentLength": 1907,
         "knownAs": "components/inputs/select/Select.d.ts.map"
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts",
-        "contentLength": 2477,
+        "contentLength": 2791,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts"
       },
       {
         "pathname": "components/inputs/simple-slider/SimpleSlider.d.ts.map",
-        "contentLength": 1752,
+        "contentLength": 1947,
         "knownAs": "components/inputs/simple-slider/SimpleSlider.d.ts.map"
       },
       {
         "pathname": "components/lists/actions-item/ActionsItem.d.ts",
-        "contentLength": 1414,
+        "contentLength": 1413,
         "knownAs": "components/lists/actions-item/ActionsItem.d.ts"
       },
       {
         "pathname": "components/lists/actions-item/ActionsItem.d.ts.map",
-        "contentLength": 1107,
+        "contentLength": 1106,
         "knownAs": "components/lists/actions-item/ActionsItem.d.ts.map"
       },
       {
         "pathname": "components/lists/actions-list/ActionsList.d.ts",
-        "contentLength": 2651,
+        "contentLength": 2647,
         "knownAs": "components/lists/actions-list/ActionsList.d.ts"
       },
       {
         "pathname": "components/lists/actions-list/ActionsList.d.ts.map",
-        "contentLength": 1804,
+        "contentLength": 1876,
         "knownAs": "components/lists/actions-list/ActionsList.d.ts.map"
       },
       {
         "pathname": "components/lists/color-item/ColorItem.d.ts",
-        "contentLength": 580,
+        "contentLength": 579,
         "knownAs": "components/lists/color-item/ColorItem.d.ts"
       },
       {
         "pathname": "components/lists/color-item/ColorItem.d.ts.map",
-        "contentLength": 524,
+        "contentLength": 527,
         "knownAs": "components/lists/color-item/ColorItem.d.ts.map"
       },
       {
         "pathname": "components/lists/draggable-item/DraggableItem.d.ts",
-        "contentLength": 2895,
+        "contentLength": 2892,
         "knownAs": "components/lists/draggable-item/DraggableItem.d.ts"
       },
       {
         "pathname": "components/lists/draggable-item/DraggableItem.d.ts.map",
-        "contentLength": 2044,
+        "contentLength": 2103,
         "knownAs": "components/lists/draggable-item/DraggableItem.d.ts.map"
       },
       {
         "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts",
-        "contentLength": 521,
+        "contentLength": 520,
         "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts"
       },
       {
         "pathname": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map",
-        "contentLength": 501,
+        "contentLength": 505,
         "knownAs": "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map"
       },
       {
         "pathname": "components/lists/members-list/MembersList.d.ts",
-        "contentLength": 887,
+        "contentLength": 886,
         "knownAs": "components/lists/members-list/MembersList.d.ts"
       },
       {
         "pathname": "components/lists/members-list/MembersList.d.ts.map",
-        "contentLength": 758,
+        "contentLength": 757,
         "knownAs": "components/lists/members-list/MembersList.d.ts.map"
       },
       {
         "pathname": "components/lists/sortable-list/SortableList.d.ts",
-        "contentLength": 2978,
+        "contentLength": 2975,
         "knownAs": "components/lists/sortable-list/SortableList.d.ts"
       },
       {
         "pathname": "components/lists/sortable-list/SortableList.d.ts.map",
-        "contentLength": 2228,
+        "contentLength": 2304,
         "knownAs": "components/lists/sortable-list/SortableList.d.ts.map"
       },
       {
         "pathname": "components/lists/tabs/Tabs.d.ts",
-        "contentLength": 1184,
+        "contentLength": 1183,
         "knownAs": "components/lists/tabs/Tabs.d.ts"
       },
       {
         "pathname": "components/lists/tabs/Tabs.d.ts.map",
-        "contentLength": 889,
+        "contentLength": 892,
         "knownAs": "components/lists/tabs/Tabs.d.ts.map"
       },
       {
@@ -2678,107 +2699,107 @@
       },
       {
         "pathname": "components/lists/tabs/Tabs.figma.d.ts.map",
-        "contentLength": 188,
+        "contentLength": 187,
         "knownAs": "components/lists/tabs/Tabs.figma.d.ts.map"
       },
       {
         "pathname": "components/slots/bar/Bar.d.ts",
-        "contentLength": 1599,
+        "contentLength": 1598,
         "knownAs": "components/slots/bar/Bar.d.ts"
       },
       {
         "pathname": "components/slots/bar/Bar.d.ts.map",
-        "contentLength": 1109,
+        "contentLength": 1117,
         "knownAs": "components/slots/bar/Bar.d.ts.map"
       },
       {
         "pathname": "components/slots/draggable-window/DraggableWindow.d.ts",
-        "contentLength": 655,
+        "contentLength": 654,
         "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts"
       },
       {
         "pathname": "components/slots/draggable-window/DraggableWindow.d.ts.map",
-        "contentLength": 583,
+        "contentLength": 587,
         "knownAs": "components/slots/draggable-window/DraggableWindow.d.ts.map"
       },
       {
         "pathname": "components/slots/drawer/Drawer.d.ts",
-        "contentLength": 1974,
+        "contentLength": 1973,
         "knownAs": "components/slots/drawer/Drawer.d.ts"
       },
       {
         "pathname": "components/slots/drawer/Drawer.d.ts.map",
-        "contentLength": 1563,
+        "contentLength": 1616,
         "knownAs": "components/slots/drawer/Drawer.d.ts.map"
       },
       {
         "pathname": "components/slots/form-item/FormItem.d.ts",
-        "contentLength": 1101,
+        "contentLength": 1100,
         "knownAs": "components/slots/form-item/FormItem.d.ts"
       },
       {
         "pathname": "components/slots/form-item/FormItem.d.ts.map",
-        "contentLength": 773,
+        "contentLength": 776,
         "knownAs": "components/slots/form-item/FormItem.d.ts.map"
       },
       {
         "pathname": "components/slots/layout/Layout.d.ts",
-        "contentLength": 924,
+        "contentLength": 923,
         "knownAs": "components/slots/layout/Layout.d.ts"
       },
       {
         "pathname": "components/slots/layout/Layout.d.ts.map",
-        "contentLength": 758,
+        "contentLength": 761,
         "knownAs": "components/slots/layout/Layout.d.ts.map"
       },
       {
         "pathname": "components/slots/list/List.d.ts",
-        "contentLength": 1044,
+        "contentLength": 1043,
         "knownAs": "components/slots/list/List.d.ts"
       },
       {
         "pathname": "components/slots/list/List.d.ts.map",
-        "contentLength": 712,
+        "contentLength": 716,
         "knownAs": "components/slots/list/List.d.ts.map"
       },
       {
         "pathname": "components/slots/popin/Popin.d.ts",
-        "contentLength": 2145,
+        "contentLength": 2144,
         "knownAs": "components/slots/popin/Popin.d.ts"
       },
       {
         "pathname": "components/slots/popin/Popin.d.ts.map",
-        "contentLength": 1673,
+        "contentLength": 1676,
         "knownAs": "components/slots/popin/Popin.d.ts.map"
       },
       {
         "pathname": "components/slots/section/Section.d.ts",
-        "contentLength": 859,
+        "contentLength": 858,
         "knownAs": "components/slots/section/Section.d.ts"
       },
       {
         "pathname": "components/slots/section/Section.d.ts.map",
-        "contentLength": 773,
+        "contentLength": 781,
         "knownAs": "components/slots/section/Section.d.ts.map"
       },
       {
         "pathname": "components/slots/simple-item/SimpleItem.d.ts",
-        "contentLength": 1143,
+        "contentLength": 1142,
         "knownAs": "components/slots/simple-item/SimpleItem.d.ts"
       },
       {
         "pathname": "components/slots/simple-item/SimpleItem.d.ts.map",
-        "contentLength": 866,
+        "contentLength": 865,
         "knownAs": "components/slots/simple-item/SimpleItem.d.ts.map"
       },
       {
         "pathname": "components/tags/chip/Chip.d.ts",
-        "contentLength": 1048,
+        "contentLength": 1047,
         "knownAs": "components/tags/chip/Chip.d.ts"
       },
       {
         "pathname": "components/tags/chip/Chip.d.ts.map",
-        "contentLength": 830,
+        "contentLength": 833,
         "knownAs": "components/tags/chip/Chip.d.ts.map"
       },
       {
@@ -2788,37 +2809,37 @@
       },
       {
         "pathname": "components/tags/chip/Chip.figma.d.ts.map",
-        "contentLength": 187,
+        "contentLength": 186,
         "knownAs": "components/tags/chip/Chip.figma.d.ts.map"
       },
       {
         "pathname": "components/tags/color-chip/ColorChip.d.ts",
-        "contentLength": 825,
+        "contentLength": 822,
         "knownAs": "components/tags/color-chip/ColorChip.d.ts"
       },
       {
         "pathname": "components/tags/color-chip/ColorChip.d.ts.map",
-        "contentLength": 704,
+        "contentLength": 702,
         "knownAs": "components/tags/color-chip/ColorChip.d.ts.map"
       },
       {
         "pathname": "components/tags/icon-chip/IconChip.d.ts",
-        "contentLength": 1031,
+        "contentLength": 1028,
         "knownAs": "components/tags/icon-chip/IconChip.d.ts"
       },
       {
         "pathname": "components/tags/icon-chip/IconChip.d.ts.map",
-        "contentLength": 824,
+        "contentLength": 823,
         "knownAs": "components/tags/icon-chip/IconChip.d.ts.map"
       },
       {
         "pathname": "components/tags/tooltip/Tooltip.d.ts",
-        "contentLength": 606,
+        "contentLength": 605,
         "knownAs": "components/tags/tooltip/Tooltip.d.ts"
       },
       {
         "pathname": "components/tags/tooltip/Tooltip.d.ts.map",
-        "contentLength": 531,
+        "contentLength": 535,
         "knownAs": "components/tags/tooltip/Tooltip.d.ts.map"
       },
       {
@@ -2833,52 +2854,52 @@
       },
       {
         "pathname": "icons/icons.module.scss",
-        "contentLength": 12184,
+        "contentLength": 12556,
         "knownAs": "icons/icons.module.scss"
       },
       {
         "pathname": "icons/styles/figma.scss",
-        "contentLength": 6749,
+        "contentLength": 6945,
         "knownAs": "icons/styles/figma.scss"
       },
       {
         "pathname": "icons/styles/framer.scss",
-        "contentLength": 6856,
+        "contentLength": 7056,
         "knownAs": "icons/styles/framer.scss"
       },
       {
         "pathname": "icons/styles/penpot.scss",
-        "contentLength": 6856,
+        "contentLength": 7056,
         "knownAs": "icons/styles/penpot.scss"
       },
       {
         "pathname": "icons/styles/sketch.scss",
-        "contentLength": 6856,
+        "contentLength": 7056,
         "knownAs": "icons/styles/sketch.scss"
       },
       {
         "pathname": "iframe.html",
-        "contentLength": 18048,
+        "contentLength": 18488,
         "knownAs": "iframe.html"
       },
       {
         "pathname": "index.d.ts",
-        "contentLength": 4726,
+        "contentLength": 4772,
         "knownAs": "index.d.ts"
       },
       {
         "pathname": "index.d.ts.map",
-        "contentLength": 3093,
+        "contentLength": 3135,
         "knownAs": "index.d.ts.map"
       },
       {
         "pathname": "index.html",
-        "contentLength": 3423,
+        "contentLength": 3461,
         "knownAs": "index.html"
       },
       {
         "pathname": "index.json",
-        "contentLength": 37433,
+        "contentLength": 50233,
         "knownAs": "index.json"
       },
       {
@@ -2908,17 +2929,17 @@
       },
       {
         "pathname": "project.json",
-        "contentLength": 1356,
+        "contentLength": 1403,
         "knownAs": "project.json"
       },
       {
         "pathname": "sb-addons/a11y-3/manager-bundle.js",
-        "contentLength": 64837,
+        "contentLength": 66102,
         "knownAs": "sb-addons/a11y-3/manager-bundle.js"
       },
       {
         "pathname": "sb-addons/chromatic-com-storybook-2/manager-bundle.js",
-        "contentLength": 564400,
+        "contentLength": 564407,
         "knownAs": "sb-addons/chromatic-com-storybook-2/manager-bundle.js"
       },
       {
@@ -2928,17 +2949,17 @@
       },
       {
         "pathname": "sb-addons/links-1/manager-bundle.js",
-        "contentLength": 1356,
+        "contentLength": 1363,
         "knownAs": "sb-addons/links-1/manager-bundle.js"
       },
       {
         "pathname": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js",
-        "contentLength": 429283,
+        "contentLength": 431137,
         "knownAs": "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js"
       },
       {
         "pathname": "sb-addons/vitest-4/manager-bundle.js",
-        "contentLength": 25884,
+        "contentLength": 25892,
         "knownAs": "sb-addons/vitest-4/manager-bundle.js"
       },
       {
@@ -2973,7 +2994,7 @@
       },
       {
         "pathname": "sb-manager/globals-runtime.js",
-        "contentLength": 3152157,
+        "contentLength": 3248470,
         "knownAs": "sb-manager/globals-runtime.js"
       },
       {
@@ -2988,17 +3009,17 @@
       },
       {
         "pathname": "sb-manager/runtime.js",
-        "contentLength": 892011,
+        "contentLength": 926338,
         "knownAs": "sb-manager/runtime.js"
       },
       {
         "pathname": "tests/setup.d.ts",
-        "contentLength": 36,
+        "contentLength": 35,
         "knownAs": "tests/setup.d.ts"
       },
       {
         "pathname": "tests/setup.d.ts.map",
-        "contentLength": 176,
+        "contentLength": 175,
         "knownAs": "tests/setup.d.ts.map"
       },
       {
@@ -3123,37 +3144,37 @@
       },
       {
         "pathname": "types/consent.types.d.ts",
-        "contentLength": 287,
+        "contentLength": 255,
         "knownAs": "types/consent.types.d.ts"
       },
       {
         "pathname": "types/consent.types.d.ts.map",
-        "contentLength": 391,
+        "contentLength": 389,
         "knownAs": "types/consent.types.d.ts.map"
       },
       {
         "pathname": "types/icon.types.d.ts",
-        "contentLength": 1855,
+        "contentLength": 1850,
         "knownAs": "types/icon.types.d.ts"
       },
       {
         "pathname": "types/icon.types.d.ts.map",
-        "contentLength": 1581,
+        "contentLength": 513,
         "knownAs": "types/icon.types.d.ts.map"
       },
       {
         "pathname": "types/list.types.d.ts",
-        "contentLength": 460,
+        "contentLength": 459,
         "knownAs": "types/list.types.d.ts"
       },
       {
         "pathname": "types/list.types.d.ts.map",
-        "contentLength": 643,
+        "contentLength": 642,
         "knownAs": "types/list.types.d.ts.map"
       },
       {
         "pathname": "vite-inject-mocker-entry.js",
-        "contentLength": 28301,
+        "contentLength": 28109,
         "knownAs": "vite-inject-mocker-entry.js"
       }
     ],
@@ -3161,120 +3182,121 @@
       ".DS_Store",
       "addon-visual-tests-assets/visual-test-illustration.mp4",
       "assets/Accordion-AYcb-rjB.css",
-      "assets/Accordion.stories-pF1SrvQF.js",
+      "assets/Accordion.stories-D8Tp4sGm.js",
+      "assets/ActionsItem-B9ogEEx8.js",
       "assets/ActionsItem-BJ3ei-5M.css",
-      "assets/ActionsItem-D8_wk2gg.js",
-      "assets/ActionsItem.stories-Dhxo5VON.js",
+      "assets/ActionsItem.stories-B9cI9Wko.js",
       "assets/ActionsList-BBZBZfYz.css",
-      "assets/ActionsList-gLW4HQrT.js",
-      "assets/ActionsList.stories-DjnEvrf0.js",
+      "assets/ActionsList-CrdIgi8I.js",
+      "assets/ActionsList.stories-KwsniLMq.js",
+      "assets/Avatar-BZAbY4WU.js",
       "assets/Avatar-DwjGxSH7.css",
-      "assets/Avatar-OALDABgW.js",
-      "assets/Avatar.stories-DtY-y34Z.js",
+      "assets/Avatar.stories-CsoaMvPK.js",
       "assets/Bar-CHY3oyYe.css",
-      "assets/Bar-CnCa7MDg.js",
-      "assets/Bar.stories-BjSu3tm-.js",
+      "assets/Bar-CnCtT9id.js",
+      "assets/Bar.stories-Bz3nJ1CT.js",
       "assets/Button-BKkz9B6W.css",
-      "assets/Button-DhMyLmk0.js",
-      "assets/Button.stories-CuGy2i2x.js",
+      "assets/Button-epw_80ji.js",
+      "assets/Button.stories-B7b-uvp6.js",
       "assets/Card-CXZA7acI.css",
-      "assets/Card.stories-Dnob-rkE.js",
+      "assets/Card.stories-ClfQoAiY.js",
       "assets/Chip-BXye3nRh.css",
-      "assets/Chip-MTGCIMej.js",
-      "assets/Chip.stories-UjzkxU6y.js",
+      "assets/Chip-CnGZDAnY.js",
+      "assets/Chip.stories-CX9oSPZk.js",
       "assets/ColorChip-Bj4drYDE.css",
-      "assets/ColorChip-DPQMcnBC.js",
+      "assets/ColorChip-C890V2zM.js",
       "assets/ColorItem-DoTVlW3G.css",
-      "assets/ColorItem.stories-AiYtq1oL.js",
+      "assets/ColorItem.stories-BWHzaug4.js",
       "assets/Consent-D5LwIwgW.css",
-      "assets/Consent.stories-DcKpDYwo.js",
+      "assets/Consent.stories-DbX4h_q5.js",
       "assets/Dialog-mDMtF950.css",
-      "assets/Dialog.stories-BsR5jV2v.js",
-      "assets/DraggableItem-D6SI7aZ_.js",
+      "assets/Dialog.stories-l23S0K1x.js",
       "assets/DraggableItem-DtVt6JcH.css",
-      "assets/DraggableItem.stories-zDBj4X3A.js",
+      "assets/DraggableItem-kbY4O2DO.js",
+      "assets/DraggableItem.stories-DqAHMTWp.js",
       "assets/Drawer-Bx7F9kX-.css",
-      "assets/Drawer-DcK3VNnh.js",
-      "assets/Drawer.stories-nQJxAflA.js",
+      "assets/Drawer-DbV6nfJg.js",
+      "assets/Drawer.stories-BBbDA93A.js",
       "assets/Dropdown-H5dMy_gn.css",
-      "assets/Dropdown.stories-CzPhLrSZ.js",
+      "assets/Dropdown.stories-DLOT-_xD.js",
       "assets/Dropzone-GnY-SYf2.css",
-      "assets/Dropzone.stories-BZ46aT-p.js",
-      "assets/FormItem-DYKbz0Lg.js",
-      "assets/FormItem-Dm5GtQ7f.css",
-      "assets/Formitem.stories-BDj8bqjr.js",
-      "assets/Icon-B1Jmj-Do.css",
-      "assets/Icon-BK2_OX0N.js",
-      "assets/Icon.stories-12i09sMe.js",
-      "assets/IconChip-CE77ZoZd.js",
+      "assets/Dropzone.stories-CHsIDEs-.js",
+      "assets/FormItem-DHHk_fGP.css",
+      "assets/FormItem-Ds1QIf_R.js",
+      "assets/Formitem.stories-BihVJRG9.js",
+      "assets/Icon-ZlNnlL4s.js",
+      "assets/Icon-fb5hqjFL.css",
+      "assets/Icon.stories-oT5n6MOq.js",
+      "assets/IconChip-C9y4qNz6.js",
       "assets/IconChip-DACI21Dl.css",
       "assets/Input-7KJ158j3.css",
-      "assets/Input-BYh09FEv.js",
-      "assets/Input.stories-B3_jYNuo.js",
+      "assets/Input-Dfw6W4vO.js",
+      "assets/Input.stories-CCAFlOqw.js",
       "assets/InputsBar-IFL0LG0t.css",
-      "assets/InputsBar.stories-DtWq4jkt.js",
+      "assets/InputsBar.stories-Z3fCCQbl.js",
       "assets/KeyboardShortcutItem-DL9h1wjr.css",
-      "assets/KeyboardShortcutItem.stories-DTBXGkIf.js",
-      "assets/Knob-CCUEXmna.js",
+      "assets/KeyboardShortcutItem.stories-7ZiZE17Q.js",
+      "assets/Knob-CK1M-lq8.js",
       "assets/Knob-_vqamK4s.css",
       "assets/Layout-CuX0xO5t.css",
-      "assets/Layout.stories-Cm3Jqc-H.js",
+      "assets/Layout.stories-CFYJRJdN.js",
       "assets/List-BgEPiq5j.css",
-      "assets/List.stories-Cx0eTLLC.js",
+      "assets/List.stories-BOPa7HM4.js",
       "assets/MembersList-Bs4mSYh1.css",
-      "assets/MembersList.stories-CqszUwU8.js",
+      "assets/MembersList.stories-BGqvzl5M.js",
       "assets/Menu-Cjpqn47M.css",
-      "assets/Menu-aySk7Bim.js",
-      "assets/Menu.stories-BgdOJA6M.js",
+      "assets/Menu-DTdD3ADl.js",
+      "assets/Menu.stories-DXn9I1ad.js",
       "assets/Message-B1i5pBlJ.css",
-      "assets/Message-Dk9HGOiE.js",
-      "assets/Message.stories-CYsA0bH2.js",
-      "assets/MultipleSlider-DDvzT4in.css",
-      "assets/MultipleSlider.stories-Bh7SkQnm.js",
+      "assets/Message-CnFDFug8.js",
+      "assets/Message.stories-Cl1oynZn.js",
+      "assets/MultipleSlider-C2inO94D.css",
+      "assets/MultipleSlider.stories-DU4Te2zZ.js",
       "assets/Notification-BNJ1dd50.css",
-      "assets/Notification.stories-BHkyGKWM.js",
-      "assets/Section-D3ISjMww.js",
+      "assets/Notification.stories-BisnD85e.js",
+      "assets/Section-CqZfLzDT.js",
       "assets/Section-DH3q7A95.css",
-      "assets/Section.stories-1yavtR7H.js",
-      "assets/SectionTitle-B3F7BWdr.js",
+      "assets/Section.stories-KLXD5F_x.js",
+      "assets/SectionTitle-CP35siV2.js",
       "assets/SectionTitle-j0N_CKly.css",
-      "assets/SectionTitle.stories-B_sYG702.js",
+      "assets/SectionTitle.stories-CaXd2R3D.js",
+      "assets/Select-Czk8qL11.js",
       "assets/Select-DZEEE1HH.css",
-      "assets/Select-Df5sXAEh.js",
-      "assets/Select.stories-BitW1k2G.js",
+      "assets/Select.stories-DO3lkWxt.js",
+      "assets/SemanticMessage-BmVvlrcy.js",
       "assets/SemanticMessage-DRcdpJ3V.css",
-      "assets/SemanticMessage-oab9q4rW.js",
-      "assets/SemanticMessage.stories-CnDbuF4r.js",
+      "assets/SemanticMessage.stories-B9DluLBm.js",
       "assets/SimpleItem-Bs9s_UY_.css",
-      "assets/SimpleItem-OhFhuGoj.js",
-      "assets/SimpleItem.stories-C2R-fd7I.js",
-      "assets/SimpleSlider-lrcjXDkY.css",
-      "assets/SimpleSlider.stories-CdgzSVET.js",
+      "assets/SimpleItem-D1vIc-hc.js",
+      "assets/SimpleItem.stories-EPCRXsTs.js",
+      "assets/SimpleSlider-DFDX1qim.css",
+      "assets/SimpleSlider.stories-D7TmZE0O.js",
       "assets/SortableList-BAKWXzvp.css",
-      "assets/SortableList.stories-DM9BgTXu.js",
+      "assets/SortableList.stories-DiAMyDnw.js",
+      "assets/Tabs-BnA2HN9o.js",
       "assets/Tabs-CJt8CqDh.css",
-      "assets/Tabs-DGfRgrpG.js",
-      "assets/Tabs.stories-CEzRXUSJ.js",
+      "assets/Tabs.stories-DbQS9c_1.js",
       "assets/Text-BMiWk0nE.css",
-      "assets/Text.stories-BxDVzWPj.js",
+      "assets/Text.stories-49MWyqRK.js",
       "assets/Thumbnail-BQodlImw.css",
-      "assets/Thumbnail-DUTb2BMQ.js",
-      "assets/Thumbnail.stories-SdpkvPvG.js",
+      "assets/Thumbnail-CmBpuElH.js",
+      "assets/Thumbnail.stories-BgLfTXVb.js",
       "assets/Tooltip-B6keRl9g.css",
-      "assets/Tooltip-FFDFRtN_.js",
-      "assets/Tooltip.stories-BUbx1-yI.js",
-      "assets/axe-DN3l9McJ.js",
+      "assets/Tooltip-DL6UfwtZ.js",
+      "assets/Tooltip.stories-DSXE3fx4.js",
+      "assets/axe-C-Nh5YcF.js",
+      "assets/do-classnames-BrVdgFv_.js",
+      "assets/do-classnames-Y9kqXGoY.css",
       "assets/do-map-LnAUJFLK.js",
+      "assets/icon.types-QBzso6zL.js",
+      "assets/iframe-Bu0y92Ma.js",
       "assets/iframe-D3JM0jFn.css",
-      "assets/iframe-DGdss8Ji.js",
-      "assets/index_react-BLgPGd1j.js",
+      "assets/index_react-BYCDagKC.js",
       "assets/layouts-PHdxqOZX.css",
       "assets/layouts.module-B2nHI-bP.js",
-      "assets/matchers-DMFSMG2O-HJu_DfWo.js",
+      "assets/matchers-5TDFFDYO-HJu_DfWo.js",
       "assets/preload-helper-PPVm8Dsz.js",
-      "assets/react-18-BWzjCEM6.js",
-      "assets/texts-Y9kqXGoY.css",
-      "assets/texts.module-C_1yOI-H.js",
+      "assets/react-18-NHIFFqac.js",
       "components/actions/accordion/Accordion.d.ts",
       "components/actions/accordion/Accordion.d.ts.map",
       "components/actions/button/Button.d.ts",
@@ -3450,267 +3472,268 @@
       "vite-inject-mocker-entry.js"
     ],
     "statsPath": "",
-    "total": 9516058,
+    "total": 9723980,
     "hashes": {
       ".DS_Store": "f1c2f230e2d12b72",
       "addon-visual-tests-assets/visual-test-illustration.mp4": "94d2af4dd76f0574",
       "assets/Accordion-AYcb-rjB.css": "2e3cb08f118f920c",
-      "assets/Accordion.stories-pF1SrvQF.js": "6fa4e940eccacde0",
+      "assets/Accordion.stories-D8Tp4sGm.js": "516617734f166cbf",
+      "assets/ActionsItem-B9ogEEx8.js": "556dd6b92a198d68",
       "assets/ActionsItem-BJ3ei-5M.css": "347463b49bfbe9b6",
-      "assets/ActionsItem-D8_wk2gg.js": "0c723e8a525fc30b",
-      "assets/ActionsItem.stories-Dhxo5VON.js": "91d5a7a4b2edf559",
+      "assets/ActionsItem.stories-B9cI9Wko.js": "c0c450b305b38709",
       "assets/ActionsList-BBZBZfYz.css": "30d69e2c88b4246d",
-      "assets/ActionsList-gLW4HQrT.js": "d515e13356f89284",
-      "assets/ActionsList.stories-DjnEvrf0.js": "dffdb33a594e21dd",
+      "assets/ActionsList-CrdIgi8I.js": "19831f637b7e2fa5",
+      "assets/ActionsList.stories-KwsniLMq.js": "71b42b9cbd47d531",
+      "assets/Avatar-BZAbY4WU.js": "98f7cc84b5a23f7b",
       "assets/Avatar-DwjGxSH7.css": "9d17acc4e0aed27e",
-      "assets/Avatar-OALDABgW.js": "bd25c1c85235e4ba",
-      "assets/Avatar.stories-DtY-y34Z.js": "28ee0a7c778182aa",
+      "assets/Avatar.stories-CsoaMvPK.js": "20f36c59b0bd59dc",
       "assets/Bar-CHY3oyYe.css": "d96b6283c600767b",
-      "assets/Bar-CnCa7MDg.js": "67693affb42cf688",
-      "assets/Bar.stories-BjSu3tm-.js": "2c8c020ffcb29c94",
+      "assets/Bar-CnCtT9id.js": "4c812af986401882",
+      "assets/Bar.stories-Bz3nJ1CT.js": "52fff8ed7abfa602",
       "assets/Button-BKkz9B6W.css": "5dcb9d1c516091c7",
-      "assets/Button-DhMyLmk0.js": "0fb02b1447c32929",
-      "assets/Button.stories-CuGy2i2x.js": "0f743d86cfb6ff07",
+      "assets/Button-epw_80ji.js": "d27b4d0ba1adc9c1",
+      "assets/Button.stories-B7b-uvp6.js": "6eaba82fb615bccd",
       "assets/Card-CXZA7acI.css": "6c5affc1524aa5e1",
-      "assets/Card.stories-Dnob-rkE.js": "4def87f9589a0ee2",
+      "assets/Card.stories-ClfQoAiY.js": "cf78e06d09a06ebf",
       "assets/Chip-BXye3nRh.css": "dd962362e2ce4989",
-      "assets/Chip-MTGCIMej.js": "b63284ef7f63b4ba",
-      "assets/Chip.stories-UjzkxU6y.js": "dc28d3407d0f5e60",
+      "assets/Chip-CnGZDAnY.js": "f314edcfdfdc652e",
+      "assets/Chip.stories-CX9oSPZk.js": "f2a8778079ffd181",
       "assets/ColorChip-Bj4drYDE.css": "fad6fdd2a17fc160",
-      "assets/ColorChip-DPQMcnBC.js": "d443d60004ba2a9f",
+      "assets/ColorChip-C890V2zM.js": "12142296405cf46f",
       "assets/ColorItem-DoTVlW3G.css": "4352c83127b9ed67",
-      "assets/ColorItem.stories-AiYtq1oL.js": "c171cdbacc83a8de",
+      "assets/ColorItem.stories-BWHzaug4.js": "b96a1b7d8e3acc78",
       "assets/Consent-D5LwIwgW.css": "dd92c2a456aa8be3",
-      "assets/Consent.stories-DcKpDYwo.js": "1e6b00ee3e7b583e",
+      "assets/Consent.stories-DbX4h_q5.js": "7311e0dea4251c9a",
       "assets/Dialog-mDMtF950.css": "42cc411d6965a5ac",
-      "assets/Dialog.stories-BsR5jV2v.js": "bff296b00dcce832",
-      "assets/DraggableItem-D6SI7aZ_.js": "a592615273b46832",
+      "assets/Dialog.stories-l23S0K1x.js": "709b1157283ed06e",
       "assets/DraggableItem-DtVt6JcH.css": "294a847a8cd0ca74",
-      "assets/DraggableItem.stories-zDBj4X3A.js": "325950c4496f9ee5",
+      "assets/DraggableItem-kbY4O2DO.js": "13321c75bd95c50a",
+      "assets/DraggableItem.stories-DqAHMTWp.js": "f4ee0ee372a4492e",
       "assets/Drawer-Bx7F9kX-.css": "3460e563778718f2",
-      "assets/Drawer-DcK3VNnh.js": "70c354887be80c45",
-      "assets/Drawer.stories-nQJxAflA.js": "2ad574adc6016688",
+      "assets/Drawer-DbV6nfJg.js": "5e6c7abcf959e28e",
+      "assets/Drawer.stories-BBbDA93A.js": "5d1668e8004ac4a3",
       "assets/Dropdown-H5dMy_gn.css": "5491d46b0c01a9db",
-      "assets/Dropdown.stories-CzPhLrSZ.js": "5784a04c0bd6f643",
+      "assets/Dropdown.stories-DLOT-_xD.js": "25ebaa50fdd30120",
       "assets/Dropzone-GnY-SYf2.css": "cf2c315b64d764d5",
-      "assets/Dropzone.stories-BZ46aT-p.js": "37e7842e88080db3",
-      "assets/FormItem-DYKbz0Lg.js": "a3d237c650cb7da9",
-      "assets/FormItem-Dm5GtQ7f.css": "f6beb8832bf8ec31",
-      "assets/Formitem.stories-BDj8bqjr.js": "c7756ea4c2498aea",
-      "assets/Icon-B1Jmj-Do.css": "49d525a2f4682438",
-      "assets/Icon-BK2_OX0N.js": "54c84e9cfbe85f27",
-      "assets/Icon.stories-12i09sMe.js": "4f34200fc3002a46",
-      "assets/IconChip-CE77ZoZd.js": "5054ddf2b242f6ea",
+      "assets/Dropzone.stories-CHsIDEs-.js": "6c33f3479f5e979b",
+      "assets/FormItem-DHHk_fGP.css": "1441e9fab97b99cb",
+      "assets/FormItem-Ds1QIf_R.js": "5d9bfb6225966a2a",
+      "assets/Formitem.stories-BihVJRG9.js": "dad92cdde15480fc",
+      "assets/Icon-ZlNnlL4s.js": "aba7527add84cf5e",
+      "assets/Icon-fb5hqjFL.css": "fbd575d367719495",
+      "assets/Icon.stories-oT5n6MOq.js": "0100d77ac898cee7",
+      "assets/IconChip-C9y4qNz6.js": "b225520be773636a",
       "assets/IconChip-DACI21Dl.css": "289c7a75c3c31475",
       "assets/Input-7KJ158j3.css": "75792262a222b46f",
-      "assets/Input-BYh09FEv.js": "3b7bf4029fb8a5c0",
-      "assets/Input.stories-B3_jYNuo.js": "a8e471baac15fb38",
+      "assets/Input-Dfw6W4vO.js": "7ce8322d953edc67",
+      "assets/Input.stories-CCAFlOqw.js": "693a803bb57e5056",
       "assets/InputsBar-IFL0LG0t.css": "fbc73a5c0fd5ac8c",
-      "assets/InputsBar.stories-DtWq4jkt.js": "53f04f4f53229b2a",
+      "assets/InputsBar.stories-Z3fCCQbl.js": "ad9f57901ff605de",
       "assets/KeyboardShortcutItem-DL9h1wjr.css": "1bc9dd2ee037326e",
-      "assets/KeyboardShortcutItem.stories-DTBXGkIf.js": "bd1c2c11b5256449",
-      "assets/Knob-CCUEXmna.js": "99e71cf53ca5a972",
+      "assets/KeyboardShortcutItem.stories-7ZiZE17Q.js": "fc0be10d7f420f16",
+      "assets/Knob-CK1M-lq8.js": "fea02e927dcd5d0e",
       "assets/Knob-_vqamK4s.css": "b7e2c26a5944b98e",
       "assets/Layout-CuX0xO5t.css": "143fe54c6e79e49c",
-      "assets/Layout.stories-Cm3Jqc-H.js": "524d34982930ddd1",
+      "assets/Layout.stories-CFYJRJdN.js": "fd39ceb9183f48bf",
       "assets/List-BgEPiq5j.css": "107cab0f95f879ec",
-      "assets/List.stories-Cx0eTLLC.js": "4763cec011b423fa",
+      "assets/List.stories-BOPa7HM4.js": "6a9fdae10bec4d8d",
       "assets/MembersList-Bs4mSYh1.css": "aa28b904cbb16969",
-      "assets/MembersList.stories-CqszUwU8.js": "c0f98909ab8bec5d",
+      "assets/MembersList.stories-BGqvzl5M.js": "b8958521456831b7",
       "assets/Menu-Cjpqn47M.css": "0a04618377789bc2",
-      "assets/Menu-aySk7Bim.js": "a3edf50a7b9b74e1",
-      "assets/Menu.stories-BgdOJA6M.js": "c537063661478879",
+      "assets/Menu-DTdD3ADl.js": "90b7f813c95d52f3",
+      "assets/Menu.stories-DXn9I1ad.js": "12e2d60a12c92f50",
       "assets/Message-B1i5pBlJ.css": "6c56ae29ddddf568",
-      "assets/Message-Dk9HGOiE.js": "ba39700129ad480a",
-      "assets/Message.stories-CYsA0bH2.js": "427fd76cda32d088",
-      "assets/MultipleSlider-DDvzT4in.css": "185b4c8e0c3995b6",
-      "assets/MultipleSlider.stories-Bh7SkQnm.js": "afcfbcc615f47b7f",
+      "assets/Message-CnFDFug8.js": "f3c2df3e409e6237",
+      "assets/Message.stories-Cl1oynZn.js": "cbceccab45ed2273",
+      "assets/MultipleSlider-C2inO94D.css": "380b5366e863522c",
+      "assets/MultipleSlider.stories-DU4Te2zZ.js": "c4494226e77d1ab8",
       "assets/Notification-BNJ1dd50.css": "48178effd0f79087",
-      "assets/Notification.stories-BHkyGKWM.js": "961ba462c290f58f",
-      "assets/Section-D3ISjMww.js": "631d3ab81b6ebc6e",
+      "assets/Notification.stories-BisnD85e.js": "ba7a63916f260395",
+      "assets/Section-CqZfLzDT.js": "5902526ee7b6587c",
       "assets/Section-DH3q7A95.css": "bbd166481fd1baec",
-      "assets/Section.stories-1yavtR7H.js": "fffc6346d03b61aa",
-      "assets/SectionTitle-B3F7BWdr.js": "9f5f5e1fdf25ca4f",
+      "assets/Section.stories-KLXD5F_x.js": "81bc3faf5b2a1cde",
+      "assets/SectionTitle-CP35siV2.js": "6576af98aa49f608",
       "assets/SectionTitle-j0N_CKly.css": "861229afae85c498",
-      "assets/SectionTitle.stories-B_sYG702.js": "8f62d88d52d46188",
+      "assets/SectionTitle.stories-CaXd2R3D.js": "51d35ff972a36b13",
+      "assets/Select-Czk8qL11.js": "0383dca31f8f689a",
       "assets/Select-DZEEE1HH.css": "d765aae66b06173c",
-      "assets/Select-Df5sXAEh.js": "59ff08a86706cfde",
-      "assets/Select.stories-BitW1k2G.js": "bd79ea95ba182b71",
+      "assets/Select.stories-DO3lkWxt.js": "841d252eeeb032b9",
+      "assets/SemanticMessage-BmVvlrcy.js": "fabd4f11f9ea62e5",
       "assets/SemanticMessage-DRcdpJ3V.css": "3648c65179fc52c2",
-      "assets/SemanticMessage-oab9q4rW.js": "486efa5ee288d585",
-      "assets/SemanticMessage.stories-CnDbuF4r.js": "a78052212b279a89",
+      "assets/SemanticMessage.stories-B9DluLBm.js": "102774b760e15b55",
       "assets/SimpleItem-Bs9s_UY_.css": "ad0938d8852b15d7",
-      "assets/SimpleItem-OhFhuGoj.js": "ee67f3fc9963a831",
-      "assets/SimpleItem.stories-C2R-fd7I.js": "d4b2fa52fc887962",
-      "assets/SimpleSlider-lrcjXDkY.css": "1d9a48ca0d7bcfef",
-      "assets/SimpleSlider.stories-CdgzSVET.js": "2bfefa05f80ed2e1",
+      "assets/SimpleItem-D1vIc-hc.js": "568d30473fd5239e",
+      "assets/SimpleItem.stories-EPCRXsTs.js": "ab08cb118f6e897d",
+      "assets/SimpleSlider-DFDX1qim.css": "31965b4fd000f458",
+      "assets/SimpleSlider.stories-D7TmZE0O.js": "d18ecf4d9f18bf9b",
       "assets/SortableList-BAKWXzvp.css": "0cb0a91864468b52",
-      "assets/SortableList.stories-DM9BgTXu.js": "c70002bc3bb18ffa",
+      "assets/SortableList.stories-DiAMyDnw.js": "f583a00d8346d8aa",
+      "assets/Tabs-BnA2HN9o.js": "88f521e7d695ddbc",
       "assets/Tabs-CJt8CqDh.css": "53e322fbc518efc5",
-      "assets/Tabs-DGfRgrpG.js": "9477e33d6a11dd40",
-      "assets/Tabs.stories-CEzRXUSJ.js": "2248cad58c49e621",
+      "assets/Tabs.stories-DbQS9c_1.js": "8d4ed1e86e6a99af",
       "assets/Text-BMiWk0nE.css": "5a2fa418ba895f32",
-      "assets/Text.stories-BxDVzWPj.js": "b555d21263f68d9f",
+      "assets/Text.stories-49MWyqRK.js": "4b6ef9a62bc5ff34",
       "assets/Thumbnail-BQodlImw.css": "7ccca4987f27f9cd",
-      "assets/Thumbnail-DUTb2BMQ.js": "72363c52ba981305",
-      "assets/Thumbnail.stories-SdpkvPvG.js": "62446b09134077b6",
+      "assets/Thumbnail-CmBpuElH.js": "01b659b7ac828632",
+      "assets/Thumbnail.stories-BgLfTXVb.js": "2955b2dad90dbde5",
       "assets/Tooltip-B6keRl9g.css": "2eb4899896de7819",
-      "assets/Tooltip-FFDFRtN_.js": "0743dbd84f7062f6",
-      "assets/Tooltip.stories-BUbx1-yI.js": "ff4bc44b15b753b5",
-      "assets/axe-DN3l9McJ.js": "5f0c08921fadb685",
+      "assets/Tooltip-DL6UfwtZ.js": "7783a05e4db19d46",
+      "assets/Tooltip.stories-DSXE3fx4.js": "239ab3442a99982c",
+      "assets/axe-C-Nh5YcF.js": "ab19a7f92b48daf1",
+      "assets/do-classnames-BrVdgFv_.js": "be1201582aa6e7f1",
+      "assets/do-classnames-Y9kqXGoY.css": "25b3a9bf16cee854",
       "assets/do-map-LnAUJFLK.js": "a1d857a09bd1088d",
+      "assets/icon.types-QBzso6zL.js": "13df18c705c34164",
+      "assets/iframe-Bu0y92Ma.js": "9beb5d71a1d4c4e4",
       "assets/iframe-D3JM0jFn.css": "b5bce0fac91bcec2",
-      "assets/iframe-DGdss8Ji.js": "e96f631e58e69eea",
-      "assets/index_react-BLgPGd1j.js": "0f4d7c9a75a00738",
+      "assets/index_react-BYCDagKC.js": "65abb0bc39b6c44f",
       "assets/layouts-PHdxqOZX.css": "842d4cf3c84b752c",
       "assets/layouts.module-B2nHI-bP.js": "3534cc975563fcf9",
-      "assets/matchers-DMFSMG2O-HJu_DfWo.js": "f6665742fb01c7ec",
+      "assets/matchers-5TDFFDYO-HJu_DfWo.js": "f6665742fb01c7ec",
       "assets/preload-helper-PPVm8Dsz.js": "acaa6a8202ad5fed",
-      "assets/react-18-BWzjCEM6.js": "49d10b374ad136ef",
-      "assets/texts-Y9kqXGoY.css": "25b3a9bf16cee854",
-      "assets/texts.module-C_1yOI-H.js": "26448f05a75d9f57",
-      "components/actions/accordion/Accordion.d.ts": "e96631afbd3466cf",
-      "components/actions/accordion/Accordion.d.ts.map": "37575a250d5c3d1e",
-      "components/actions/button/Button.d.ts": "50b13bd6ac9b53a0",
-      "components/actions/button/Button.d.ts.map": "51e1200c4a862ae1",
+      "assets/react-18-NHIFFqac.js": "806409d72d0cc5be",
+      "components/actions/accordion/Accordion.d.ts": "eac23394b41e7e04",
+      "components/actions/accordion/Accordion.d.ts.map": "f4e0b8460c377d6f",
+      "components/actions/button/Button.d.ts": "7a26ae1619872ede",
+      "components/actions/button/Button.d.ts.map": "cc975e7f087b5544",
       "components/actions/button/Button.figma.d.ts": "ed6ee41b8d7d3db3",
-      "components/actions/button/Button.figma.d.ts.map": "9cf8ed948f12f9d2",
-      "components/actions/card/Card.d.ts": "8e247bc7444f36d2",
-      "components/actions/card/Card.d.ts.map": "d737b1c1822d28bc",
-      "components/actions/knob/Knob.d.ts": "02581cb23c82fa28",
-      "components/actions/knob/Knob.d.ts.map": "130f435d130a121c",
-      "components/actions/menu/Menu.d.ts": "fedb214c870f619c",
-      "components/actions/menu/Menu.d.ts.map": "84b711c15d59e659",
-      "components/assets/avatar/Avatar.d.ts": "7e03277121140351",
-      "components/assets/avatar/Avatar.d.ts.map": "6c3aaab025db9090",
-      "components/assets/icon/Icon.d.ts": "91afe26a7c6f21bb",
-      "components/assets/icon/Icon.d.ts.map": "54b685535b3d9064",
+      "components/actions/button/Button.figma.d.ts.map": "62ffd8915f2c1d14",
+      "components/actions/card/Card.d.ts": "29b8417857d256b7",
+      "components/actions/card/Card.d.ts.map": "8314b1ec5fc96ba9",
+      "components/actions/knob/Knob.d.ts": "1634d2268dccb6b0",
+      "components/actions/knob/Knob.d.ts.map": "1c44eb05aeee7837",
+      "components/actions/menu/Menu.d.ts": "3514fb3136cb6a6d",
+      "components/actions/menu/Menu.d.ts.map": "45ed44f8abaf00e1",
+      "components/assets/avatar/Avatar.d.ts": "cb4277c0b8a09666",
+      "components/assets/avatar/Avatar.d.ts.map": "732904b6baa93538",
+      "components/assets/icon/Icon.d.ts": "37c54762890847c0",
+      "components/assets/icon/Icon.d.ts.map": "f14bd4f4f62a974d",
       "components/assets/icon/Icon.figma.d.ts": "d61e309e1e83e7e6",
-      "components/assets/icon/Icon.figma.d.ts.map": "9b1db295cf3da83c",
-      "components/assets/section-title/SectionTitle.d.ts": "c495c3f8145cacb0",
-      "components/assets/section-title/SectionTitle.d.ts.map": "254bd810aec17160",
-      "components/assets/text/Text.d.ts": "b8132f9bdcf6b8aa",
-      "components/assets/text/Text.d.ts.map": "5be4f8b6da30d391",
-      "components/assets/thumbnail/Thumbnail.d.ts": "13d8da2fc98efdc5",
-      "components/assets/thumbnail/Thumbnail.d.ts.map": "157e0559930ff71b",
-      "components/dialogs/consent/Consent.d.ts": "2384aab7ce2af890",
-      "components/dialogs/consent/Consent.d.ts.map": "ad09f4d2f5935306",
-      "components/dialogs/dialog/Dialog.d.ts": "1e24d66a9aaa8eed",
-      "components/dialogs/dialog/Dialog.d.ts.map": "794d1c75bc544268",
-      "components/dialogs/message/Message.d.ts": "60ce4b3f5e55e186",
-      "components/dialogs/message/Message.d.ts.map": "79716b0a80cb766a",
-      "components/dialogs/notification/Notification.d.ts": "7d4cad5a61e8d8a8",
-      "components/dialogs/notification/Notification.d.ts.map": "06005626dfb2bb39",
-      "components/dialogs/semantic-message/SemanticMessage.d.ts": "d633ad9323dcc6e1",
-      "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "1f4fc2599d5ac12f",
-      "components/inputs/dropdown/Dropdown.d.ts": "f64862f694e7b869",
-      "components/inputs/dropdown/Dropdown.d.ts.map": "d28ea28a46649a19",
+      "components/assets/icon/Icon.figma.d.ts.map": "0bdbd14b3165d62e",
+      "components/assets/section-title/SectionTitle.d.ts": "92d5040d1e86bda9",
+      "components/assets/section-title/SectionTitle.d.ts.map": "6ff650474db2f0c0",
+      "components/assets/text/Text.d.ts": "e7f9e75433a25049",
+      "components/assets/text/Text.d.ts.map": "ec0a40f055eadcd7",
+      "components/assets/thumbnail/Thumbnail.d.ts": "c56719912d628377",
+      "components/assets/thumbnail/Thumbnail.d.ts.map": "a2f4777c31d3de78",
+      "components/dialogs/consent/Consent.d.ts": "6befa05c83b7d88d",
+      "components/dialogs/consent/Consent.d.ts.map": "3a4f51d2b4722a59",
+      "components/dialogs/dialog/Dialog.d.ts": "faea18c3201fca5a",
+      "components/dialogs/dialog/Dialog.d.ts.map": "d7dbd1348630fbf8",
+      "components/dialogs/message/Message.d.ts": "01b7f42739461f09",
+      "components/dialogs/message/Message.d.ts.map": "ad83c2fbf0cdf9c9",
+      "components/dialogs/notification/Notification.d.ts": "0a4bc921cce8ca64",
+      "components/dialogs/notification/Notification.d.ts.map": "344a9687a519ee93",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts": "ee1700e4150115bb",
+      "components/dialogs/semantic-message/SemanticMessage.d.ts.map": "9b633e51489769d3",
+      "components/inputs/dropdown/Dropdown.d.ts": "d9e879a8bb6ac297",
+      "components/inputs/dropdown/Dropdown.d.ts.map": "44114371558b1b91",
       "components/inputs/dropdown/Dropdown.figma.d.ts": "1dfbdfaef4ac10b1",
-      "components/inputs/dropdown/Dropdown.figma.d.ts.map": "bc5d83aa0ef497eb",
-      "components/inputs/dropzone/Dropzone.d.ts": "8e635adec5b4718e",
-      "components/inputs/dropzone/Dropzone.d.ts.map": "44d7df2d6a891708",
-      "components/inputs/input/Input.d.ts": "de36e2beb5a5fa43",
-      "components/inputs/input/Input.d.ts.map": "eea670a9db108d9d",
+      "components/inputs/dropdown/Dropdown.figma.d.ts.map": "75fe608ae5f27ffa",
+      "components/inputs/dropzone/Dropzone.d.ts": "5c63bd9110231b98",
+      "components/inputs/dropzone/Dropzone.d.ts.map": "a1daee78fac62f58",
+      "components/inputs/input/Input.d.ts": "dfc9abdd9e079d02",
+      "components/inputs/input/Input.d.ts.map": "2cd8418606814157",
       "components/inputs/input/Input.figma.d.ts": "13ef9ad75b5aea22",
-      "components/inputs/input/Input.figma.d.ts.map": "3132b2e64a380972",
-      "components/inputs/inputs-bar/InputsBar.d.ts": "ffc09afae80c4d9d",
-      "components/inputs/inputs-bar/InputsBar.d.ts.map": "e5a4fee2e37de71b",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts": "2c1919e1e732ff0d",
-      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "5872d0f5e9d2840b",
+      "components/inputs/input/Input.figma.d.ts.map": "0c3c51f356fbefca",
+      "components/inputs/inputs-bar/InputsBar.d.ts": "0bcb345bf31ffae2",
+      "components/inputs/inputs-bar/InputsBar.d.ts.map": "463a7844007f7678",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts": "bbe99e091472af93",
+      "components/inputs/multiple-slider/MultipleSlider.d.ts.map": "53b5bcd44948884d",
       "components/inputs/multiple-slider/actions/addStop.d.ts": "089ad74cc00f12ab",
-      "components/inputs/multiple-slider/actions/addStop.d.ts.map": "784d594b1d90b9ea",
+      "components/inputs/multiple-slider/actions/addStop.d.ts.map": "3a0dc29cd63ce091",
       "components/inputs/multiple-slider/actions/deleteStop.d.ts": "d2e69ffc3ae70e65",
-      "components/inputs/multiple-slider/actions/deleteStop.d.ts.map": "bd73f039035b983f",
+      "components/inputs/multiple-slider/actions/deleteStop.d.ts.map": "5ba2767cdc35d41c",
       "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts": "fa5e1c3add55a4fd",
-      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map": "f9e86c590e366dbb",
+      "components/inputs/multiple-slider/actions/shiftLeftStop.d.ts.map": "92361037f3cb764c",
       "components/inputs/multiple-slider/actions/shiftRightStop.d.ts": "f33b1ae8624e7478",
-      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map": "3027700910f72118",
-      "components/inputs/select/Select.d.ts": "be76766a64d6037a",
-      "components/inputs/select/Select.d.ts.map": "879bb640171b3a4c",
-      "components/inputs/simple-slider/SimpleSlider.d.ts": "1b4c5404c86df968",
-      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "a1fa592a020b3192",
-      "components/lists/actions-item/ActionsItem.d.ts": "469e08be7f5b85aa",
-      "components/lists/actions-item/ActionsItem.d.ts.map": "574e783059c17358",
-      "components/lists/actions-list/ActionsList.d.ts": "9667aadc83fa6faf",
-      "components/lists/actions-list/ActionsList.d.ts.map": "6f5e56a5d7157708",
-      "components/lists/color-item/ColorItem.d.ts": "12bdd5176c4e2f00",
-      "components/lists/color-item/ColorItem.d.ts.map": "6520ac48f6c326ba",
-      "components/lists/draggable-item/DraggableItem.d.ts": "7773d21222005606",
-      "components/lists/draggable-item/DraggableItem.d.ts.map": "8a8533c56ade283f",
-      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts": "82d408678f29de41",
-      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map": "e81f419699a5801c",
-      "components/lists/members-list/MembersList.d.ts": "69daf44aca72919e",
-      "components/lists/members-list/MembersList.d.ts.map": "6aaf4be31a56aaeb",
-      "components/lists/sortable-list/SortableList.d.ts": "2e41c01672e28779",
-      "components/lists/sortable-list/SortableList.d.ts.map": "502b46430b5a8424",
-      "components/lists/tabs/Tabs.d.ts": "e779ff72d8d98b1d",
-      "components/lists/tabs/Tabs.d.ts.map": "fef00866d4dd8fa1",
+      "components/inputs/multiple-slider/actions/shiftRightStop.d.ts.map": "93a56f360c3cf81e",
+      "components/inputs/select/Select.d.ts": "5861ef51657774f5",
+      "components/inputs/select/Select.d.ts.map": "16829996a7f78f12",
+      "components/inputs/simple-slider/SimpleSlider.d.ts": "f6f4950f0c5116f3",
+      "components/inputs/simple-slider/SimpleSlider.d.ts.map": "b58c9b7b792375d6",
+      "components/lists/actions-item/ActionsItem.d.ts": "26c89548c9212869",
+      "components/lists/actions-item/ActionsItem.d.ts.map": "2beef4ca2e4c5f21",
+      "components/lists/actions-list/ActionsList.d.ts": "1fe68272adfc7bea",
+      "components/lists/actions-list/ActionsList.d.ts.map": "936ea39026c0275b",
+      "components/lists/color-item/ColorItem.d.ts": "d2aa606474eeeb10",
+      "components/lists/color-item/ColorItem.d.ts.map": "645a97bdd9fcee11",
+      "components/lists/draggable-item/DraggableItem.d.ts": "bb1b79442382ade2",
+      "components/lists/draggable-item/DraggableItem.d.ts.map": "495692ea2fe6c99e",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts": "e66ef7a2c1e0acd2",
+      "components/lists/keyboard-shortcut-item/KeyboardShortcutItem.d.ts.map": "1d2477a8c2b98b3a",
+      "components/lists/members-list/MembersList.d.ts": "8cb34070498e7b02",
+      "components/lists/members-list/MembersList.d.ts.map": "129015aa949d2a05",
+      "components/lists/sortable-list/SortableList.d.ts": "90241b83a58bda66",
+      "components/lists/sortable-list/SortableList.d.ts.map": "d7cdf444b2fc9ef6",
+      "components/lists/tabs/Tabs.d.ts": "28a3d2fd2d514273",
+      "components/lists/tabs/Tabs.d.ts.map": "a390f75fb5769d21",
       "components/lists/tabs/Tabs.figma.d.ts": "9a86970e87e9cfde",
-      "components/lists/tabs/Tabs.figma.d.ts.map": "e041188c4fff1bd8",
-      "components/slots/bar/Bar.d.ts": "25cd5b34247e720b",
-      "components/slots/bar/Bar.d.ts.map": "56e4acfc73934332",
-      "components/slots/draggable-window/DraggableWindow.d.ts": "1aa86f18bf997f34",
-      "components/slots/draggable-window/DraggableWindow.d.ts.map": "53bc20e3135b0884",
-      "components/slots/drawer/Drawer.d.ts": "7a22d68c1919f8f6",
-      "components/slots/drawer/Drawer.d.ts.map": "aed5ed083c5990a7",
-      "components/slots/form-item/FormItem.d.ts": "a47f1190bbde1809",
-      "components/slots/form-item/FormItem.d.ts.map": "5c5fa688eb6fdef4",
-      "components/slots/layout/Layout.d.ts": "508d0b3df474f051",
-      "components/slots/layout/Layout.d.ts.map": "76528afe3461d354",
-      "components/slots/list/List.d.ts": "88c08f293a5bab3d",
-      "components/slots/list/List.d.ts.map": "4b0756429c4ba293",
-      "components/slots/popin/Popin.d.ts": "e7df59611f7a5f5a",
-      "components/slots/popin/Popin.d.ts.map": "55ba754bbc13841d",
-      "components/slots/section/Section.d.ts": "4df23bfe63003078",
-      "components/slots/section/Section.d.ts.map": "a2152b57913c8c60",
-      "components/slots/simple-item/SimpleItem.d.ts": "23226ae6520b22e7",
-      "components/slots/simple-item/SimpleItem.d.ts.map": "75e50917d582a76c",
-      "components/tags/chip/Chip.d.ts": "03b249ef3b7759eb",
-      "components/tags/chip/Chip.d.ts.map": "55f561befb1da606",
+      "components/lists/tabs/Tabs.figma.d.ts.map": "35113995c4308a40",
+      "components/slots/bar/Bar.d.ts": "c67281cb40f94dc3",
+      "components/slots/bar/Bar.d.ts.map": "b81aa4af3c375e4a",
+      "components/slots/draggable-window/DraggableWindow.d.ts": "18c9d033ff5c56ea",
+      "components/slots/draggable-window/DraggableWindow.d.ts.map": "bd35cf433e9f3c6c",
+      "components/slots/drawer/Drawer.d.ts": "0a9115ece9c4bf4f",
+      "components/slots/drawer/Drawer.d.ts.map": "442c4abbd143414c",
+      "components/slots/form-item/FormItem.d.ts": "e70a1a61ecb08e06",
+      "components/slots/form-item/FormItem.d.ts.map": "9820d9535956b126",
+      "components/slots/layout/Layout.d.ts": "1563eb446bec91cd",
+      "components/slots/layout/Layout.d.ts.map": "b6d581807a95cc3f",
+      "components/slots/list/List.d.ts": "86fa33a76430f6c0",
+      "components/slots/list/List.d.ts.map": "87b645bdbfbd6e24",
+      "components/slots/popin/Popin.d.ts": "0f302ede18dcd717",
+      "components/slots/popin/Popin.d.ts.map": "eb9cfa56b893d67d",
+      "components/slots/section/Section.d.ts": "68e4952ee900f537",
+      "components/slots/section/Section.d.ts.map": "35395cb3f381985a",
+      "components/slots/simple-item/SimpleItem.d.ts": "e2e629a77aeab13c",
+      "components/slots/simple-item/SimpleItem.d.ts.map": "119d37ad857de82b",
+      "components/tags/chip/Chip.d.ts": "da596f5ec5faf94b",
+      "components/tags/chip/Chip.d.ts.map": "ccc83963c2278c53",
       "components/tags/chip/Chip.figma.d.ts": "8180462674194129",
-      "components/tags/chip/Chip.figma.d.ts.map": "176074bd3680f8d7",
-      "components/tags/color-chip/ColorChip.d.ts": "a2853990468566d0",
-      "components/tags/color-chip/ColorChip.d.ts.map": "4b729167e4b3e7e2",
-      "components/tags/icon-chip/IconChip.d.ts": "d56d2de8f257efeb",
-      "components/tags/icon-chip/IconChip.d.ts.map": "fcb26ebf2ae4fff4",
-      "components/tags/tooltip/Tooltip.d.ts": "ba8dca99fb2184bf",
-      "components/tags/tooltip/Tooltip.d.ts.map": "43068e99c2bf362c",
+      "components/tags/chip/Chip.figma.d.ts.map": "63de65d18aad7090",
+      "components/tags/color-chip/ColorChip.d.ts": "e921a5cb9a0bc728",
+      "components/tags/color-chip/ColorChip.d.ts.map": "b1863236fd5c86ea",
+      "components/tags/icon-chip/IconChip.d.ts": "5af208289871127e",
+      "components/tags/icon-chip/IconChip.d.ts.map": "b4d06299ee385456",
+      "components/tags/tooltip/Tooltip.d.ts": "65aaa25758546ca9",
+      "components/tags/tooltip/Tooltip.d.ts.map": "93b73c110e52ab50",
       "favicon-wrapper.svg": "ac2f5da4f59a4ab7",
       "favicon.svg": "d3380c3fb63a8430",
-      "icons/icons.module.scss": "951e7a02753b5235",
-      "icons/styles/figma.scss": "b2f506aeeb9a12b9",
-      "icons/styles/framer.scss": "8f3de6f94183e149",
-      "icons/styles/penpot.scss": "dbbe4d6840ea10b4",
-      "icons/styles/sketch.scss": "92877a7221a3c6c7",
-      "iframe.html": "4276f3cb9ae09815",
-      "index.d.ts": "a7fbc0479f61e9b2",
-      "index.d.ts.map": "76ce194d507fbb2d",
-      "index.html": "c64303927ebbd6b1",
-      "index.json": "3d0cc5909f4314fc",
+      "icons/icons.module.scss": "d57f140513263295",
+      "icons/styles/figma.scss": "84d1c0f43e79c548",
+      "icons/styles/framer.scss": "6eac92b73c4d2bbd",
+      "icons/styles/penpot.scss": "3534d2a6ea22d326",
+      "icons/styles/sketch.scss": "0eedce93fe4f5123",
+      "iframe.html": "c0f74b80d9c6a6f8",
+      "index.d.ts": "4f68c10b6db10be1",
+      "index.d.ts.map": "a1cb9e54282692df",
+      "index.html": "016c9d3f33a71087",
+      "index.json": "ce12ca5034dbb628",
       "layouts.module.scss": "277be35ff9ea7c43",
       "nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
       "nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "project.json": "ff3e6d6b0a8925de",
-      "sb-addons/a11y-3/manager-bundle.js": "531b496368f66082",
-      "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "0ce72dd5fe4bc1bc",
+      "project.json": "37f70078e04b1417",
+      "sb-addons/a11y-3/manager-bundle.js": "fb574023b050442c",
+      "sb-addons/chromatic-com-storybook-2/manager-bundle.js": "38cd701d38ec30a5",
       "sb-addons/chromatic-com-storybook-2/manager-bundle.js.LEGAL.txt": "285dd9e1dc6c7408",
-      "sb-addons/links-1/manager-bundle.js": "866868ddf5055821",
-      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js": "26f731d4fb2d0df7",
-      "sb-addons/vitest-4/manager-bundle.js": "1cb8bdc02401ec1f",
+      "sb-addons/links-1/manager-bundle.js": "84f72b1c36de4127",
+      "sb-addons/storybook-core-server-presets-0/common-manager-bundle.js": "7aacf8739144f7e0",
+      "sb-addons/vitest-4/manager-bundle.js": "c0aeeda4c3a24c21",
       "sb-common-assets/favicon-wrapper.svg": "ac2f5da4f59a4ab7",
       "sb-common-assets/favicon.svg": "d3380c3fb63a8430",
       "sb-common-assets/nunito-sans-bold-italic.woff2": "d64464b3594b3fb9",
       "sb-common-assets/nunito-sans-bold.woff2": "0bd5b61b7fb7f7d5",
       "sb-common-assets/nunito-sans-italic.woff2": "b7807d9de055e9a0",
       "sb-common-assets/nunito-sans-regular.woff2": "6687b7be04c2debe",
-      "sb-manager/globals-runtime.js": "16a74988ebbc713f",
+      "sb-manager/globals-runtime.js": "38bd398da6bbe05d",
       "sb-manager/globals.js": "2c4cf7380e550517",
       "sb-manager/manager-stores.js": "9201ef0cd1069e23",
-      "sb-manager/runtime.js": "66b9cebf715eeadc",
-      "tests/setup.d.ts": "adf36bcc5e336aa6",
-      "tests/setup.d.ts.map": "2491cf3170b2bc52",
+      "sb-manager/runtime.js": "558a46d725588163",
+      "tests/setup.d.ts": "c9c34214f69b90da",
+      "tests/setup.d.ts.map": "32756ac540ea1468",
       "texts/styles/figma.scss": "0a6138dd3e13c3e3",
       "texts/styles/framer.scss": "dc6177c2e9c99479",
       "texts/styles/penpot.scss": "e8ef7716861800af",
@@ -3735,13 +3758,13 @@
       "tokens/penpot-types.scss": "f2cfc566fafe3f97",
       "tokens/sketch-colors.scss": "bb0e1aef1847e10f",
       "tokens/sketch-types.scss": "a78c20992c3d13f5",
-      "types/consent.types.d.ts": "25c3e3855e9e6034",
-      "types/consent.types.d.ts.map": "44fc69c5cf994a88",
-      "types/icon.types.d.ts": "8107b66d288e7778",
-      "types/icon.types.d.ts.map": "d190a16abbcefa25",
-      "types/list.types.d.ts": "7e3c4c96ef04b024",
-      "types/list.types.d.ts.map": "6f725a26331fb7b7",
-      "vite-inject-mocker-entry.js": "9bffd195e1d4472e"
+      "types/consent.types.d.ts": "af2ec95e3e4fc772",
+      "types/consent.types.d.ts.map": "356cddb2d0c8bea7",
+      "types/icon.types.d.ts": "67f01be85f18ffbe",
+      "types/icon.types.d.ts.map": "c2a6c1fc94b9c83a",
+      "types/list.types.d.ts": "ab6b30813d3ff393",
+      "types/list.types.d.ts.map": "d092aa05dad9061c",
+      "vite-inject-mocker-entry.js": "9c5f497799855358"
     }
   },
   "flags": {
@@ -3750,17 +3773,17 @@
   "git": {
     "version": "2.51.0",
     "gitUserEmail": "a.grimaud@involt.io",
-    "uncommittedHash": "0fcc65983856e57411593ab8e23af507aedb0948",
-    "rootPath": "/Users/a_ng_d/DEV/figmug-ui",
-    "commit": "ada55f65b1f6f705f275f0a49b2c9f4d2918fee8",
-    "committedAt": 1772119200000,
+    "uncommittedHash": "",
+    "rootPath": "/Users/a_ng_d/DEV/unoff-ui",
+    "commit": "8762f8407193e379a46de45d42962c370d6c3db4",
+    "committedAt": 1772554198000,
     "committerEmail": "a.grimaud@involt.io",
-    "committerName": "@a-ng-d",
-    "branch": "feat/rename-figmug-with-unoff",
+    "committerName": "Aurélien Grimaud",
+    "branch": "main",
     "slug": "a-ng-d/figmug-ui",
     "fromCI": false,
     "parentCommits": [
-      "df2163698ede3fa27fa62ab44d413573fb408677"
+      "514f8e369ae850ea52701186a4fc0b843f30fdd7"
     ]
   },
   "input": [],
@@ -3795,7 +3818,7 @@
   },
   "packageJson": {
     "name": "@unoff/ui",
-    "version": "1.20.6",
+    "version": "1.21.2",
     "type": "module",
     "description": "Unoff UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
     "repository": {
@@ -3815,7 +3838,10 @@
     "homepage": "https://github.com/a-ng-d/unoff-ui#readme",
     "overrides": {
       "storybook": "$storybook",
-      "vite": "$vite"
+      "vite": "$vite",
+      "@microsoft/api-extractor": {
+        "minimatch": "^10.2.3"
+      }
     },
     "files": [
       "dist"
@@ -3846,7 +3872,7 @@
       "figma:parse": "figma connect parse"
     },
     "dependencies": {
-      "@unoff/utils": "^0.8.0"
+      "@unoff/utils": "^0.8.1"
     },
     "peerDependencies": {
       "react": "^18.2.0",
@@ -3855,13 +3881,13 @@
     "devDependencies": {
       "@chromatic-com/storybook": "^5.0.0",
       "@figma/code-connect": "^1.3.12",
-      "@storybook/addon-a11y": "^10.1.11",
-      "@storybook/addon-docs": "^10.1.11",
-      "@storybook/addon-links": "^10.1.11",
+      "@storybook/addon-a11y": "^10.2.14",
+      "@storybook/addon-docs": "^10.2.14",
+      "@storybook/addon-links": "^10.2.14",
       "@storybook/addon-mcp": "^0.1.8",
-      "@storybook/addon-onboarding": "^10.1.11",
-      "@storybook/addon-vitest": "^10.1.11",
-      "@storybook/react-vite": "^10.1.11",
+      "@storybook/addon-onboarding": "^10.2.14",
+      "@storybook/addon-vitest": "^10.2.14",
+      "@storybook/react-vite": "^10.2.14",
       "@terrazzo/cli": "^0.10.3",
       "@terrazzo/plugin-css": "^0.10.3",
       "@terrazzo/token-tools": "^0.10.3",
@@ -3883,30 +3909,30 @@
       "eslint-plugin-import": "^2.31.0",
       "eslint-plugin-react-hooks": "^4.6.0",
       "eslint-plugin-react-refresh": "^0.4.6",
-      "eslint-plugin-storybook": "^10.1.11",
+      "eslint-plugin-storybook": "^10.2.14",
       "glob": "^10.3.12",
       "jsdom": "^24.0.0",
       "playwright": "^1.57.0",
       "prettier": "^3.2.5",
       "prettier-plugin-css-order": "^2.1.2",
       "sass": "^1.77.0",
-      "storybook": "^10.1.11",
+      "storybook": "^10.2.14",
       "stylelint": "^16.24.0",
       "stylelint-config-standard": "^39.0.0",
       "typescript": "^5.4.3",
       "vite": "^7.3.1",
-      "vite-plugin-dts": "^3.9.1",
+      "vite-plugin-dts": "^4.5.4",
       "vite-plugin-lib-inject-css": "^2.0.1",
       "vite-tsconfig-paths": "^4.3.2",
       "vitest": "^4.0.17"
     }
   },
-  "packagePath": "/Users/a_ng_d/DEV/figmug-ui/package.json",
+  "packagePath": "/Users/a_ng_d/DEV/unoff-ui/package.json",
   "projectMetadata": {
     "hasRouter": false,
     "creationDate": {},
     "storybookCreationDate": {},
-    "numberOfCommitters": 4,
+    "numberOfCommitters": 5,
     "numberOfAppFiles": 0
   },
   "runtimeMetadata": {
@@ -3916,23 +3942,23 @@
     "packageManagerVersion": "10.8.2"
   },
   "sentinelUrls": [
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-iqwooncyyi/.chromatic/files-copied.3329295363.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260226%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260226T152149Z&X-Amz-Expires=1800&X-Amz-Signature=eed26b849d7bb5ed7c54f221eae2f3c9356edff9d2e7c4647a719e8c25a28920&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-iqwooncyyi/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260226%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260226T152149Z&X-Amz-Expires=1980&X-Amz-Signature=0596e5c522449b02d1a11252155b7690d324b3a47cf181b74cc63951a9c4aa63&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-cdpbvdpdzl/.chromatic/files-copied.3337864276.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260303%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260303T162322Z&X-Amz-Expires=1800&X-Amz-Signature=aed69d3fdda6cad4be83831f81aca7e3422155604c4444f15e575762cec80763&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+    "https://chromatic-builds.s3.us-west-2.amazonaws.com/663a220bcc5dda79791c430e-cdpbvdpdzl/.chromatic/zip-unpacked.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAJVVEQEOBEEPXSNNQ%2F20260303%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260303T162322Z&X-Amz-Expires=1980&X-Amz-Signature=4430b0e903ed135d43cb0b5b1dacd92b0c9f86d0bb88ae5e6db2ee3f5b579412&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
   ],
-  "sessionId": "776d9fde-b730-42cf-9867-7fbce055de75",
-  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--24130-1NFwYGMP4l8Q",
-  "startedAt": 1772119319422,
+  "sessionId": "9367318f-5de6-4be0-878d-ca62d04c7fa3",
+  "sourceDir": "/var/folders/ms/nrsl7c7s41z8knlbq4h1j_2m0000gn/T/chromatic--64255-I3cctuWSew7f",
+  "startedAt": 1772555014985,
   "storybook": {
-    "version": "10.1.11",
+    "version": "10.2.14",
     "builder": {
       "name": "@storybook/react-vite",
-      "packageVersion": "10.1.11"
+      "packageVersion": "10.2.14"
     },
     "baseDir": "."
   },
-  "storybookUrl": "https://663a220bcc5dda79791c430e-iqwooncyyi.chromatic.com/",
+  "storybookUrl": "https://663a220bcc5dda79791c430e-cdpbvdpdzl.chromatic.com/",
   "task": "snapshot",
-  "uploadedBytes": 802035,
-  "uploadedFiles": 81,
+  "uploadedBytes": 922318,
+  "uploadedFiles": 157,
   "userError": false
 }
