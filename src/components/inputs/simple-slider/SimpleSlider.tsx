@@ -1,5 +1,5 @@
 import React from 'react'
-import { doMap } from '@unoff/utils'
+import { doClassnames, doMap } from '@unoff/utils'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import Knob from '@components/actions/knob/Knob'
@@ -45,6 +45,11 @@ export interface SimpleSliderProps {
    * @default false
    */
   hasProgressBar?: boolean
+  /**
+   * Whether to apply horizontal padding
+   * @default true
+   */
+  hasPadding?: boolean
   /**
    * Warning tooltip configuration
    */
@@ -97,6 +102,7 @@ export default class SimpleSlider extends React.Component<
 
   static defaultProps: Partial<SimpleSliderProps> = {
     hasProgressBar: false,
+    hasPadding: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
@@ -282,6 +288,7 @@ export default class SimpleSlider extends React.Component<
       max,
       colors,
       feature,
+      hasPadding,
       isBlocked,
       isDisabled,
       onChange,
@@ -290,7 +297,10 @@ export default class SimpleSlider extends React.Component<
 
     return (
       <div
-        className="simple-slider"
+        className={doClassnames([
+          'simple-slider',
+          !hasPadding && 'simple-slider--no-padding',
+        ])}
         role="group"
         aria-label={label}
       >

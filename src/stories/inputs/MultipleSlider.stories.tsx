@@ -48,6 +48,7 @@ export const TripleValues: Story = {
       min: '#FF0000',
       max: '#0000FF',
     },
+    hasPadding: true,
     tips: {
       minMax: 'Shift: distribute\nCmd/Ctrl: link',
     },

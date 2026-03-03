@@ -35,6 +35,7 @@ export const AgeSelect: Story = {
     max: 90,
     step: 1,
     hasProgressBar: true,
+    hasPadding: true,
     feature: 'PICK_AGE',
     isBlocked: false,
     isDisabled: false,

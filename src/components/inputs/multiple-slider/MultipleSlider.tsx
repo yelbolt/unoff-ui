@@ -61,6 +61,11 @@ interface SliderProps {
    */
   hasProgressBar?: boolean
   /**
+   * Whether to apply horizontal padding
+   * @default true
+   */
+  hasPadding?: boolean
+  /**
    * Tooltip configuration
    */
   tips: {
@@ -119,6 +124,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
       max: 100,
     },
     hasProgressBar: false,
+    hasPadding: true,
     isBlocked: false,
     isNew: false,
   }
@@ -666,10 +672,15 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
 
   // Render
   render() {
-    const { type } = this.props
+    const { type, hasPadding } = this.props
 
     return (
-      <div className="multiple-slider">
+      <div
+        className={doClassnames([
+          'multiple-slider',
+          !hasPadding && 'multiple-slider--no-padding',
+        ])}
+      >
         {type === 'EDIT' && <this.Edit />}
         {type === 'FULLY_EDIT' && <this.FullyEdit />}
         {this.Status()}
