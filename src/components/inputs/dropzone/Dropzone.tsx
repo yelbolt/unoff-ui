@@ -62,17 +62,14 @@ export interface DropzoneProps {
   onImportFiles: (files: Array<FileContent>) => void
 }
 
-export interface DropzoneStates {
+export interface DropzoneState {
   status: 'READY' | 'WAITING' | 'WARNING' | 'ERROR'
   isLoading: boolean
   isDraggedOver: boolean
   blackList: Array<string>
 }
 
-export default class Dropzone extends React.Component<
-  DropzoneProps,
-  DropzoneStates
-> {
+export default class Dropzone extends React.Component<DropzoneProps, DropzoneState> {
   stopLoading: NodeJS.Timeout | undefined
 
   static defaultProps: Partial<DropzoneProps> = {

@@ -56,7 +56,7 @@ The following components have been connected with Code Connect:
 ### Tags
 
 - **Chip** (`src/components/tags/chip/Chip.figma.tsx`)
-  - States: ACTIVE, INACTIVE, ON_BACKGROUND
+  - State: ACTIVE, INACTIVE, ON_BACKGROUND
 
 ## Publishing to Figma
 

@@ -169,7 +169,7 @@ export interface InputProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface InputStates {
+export interface InputState {
   inputValue: string
   lastValidValue: string
   lastValidColorValue: string
@@ -177,7 +177,7 @@ export interface InputStates {
   isTooltipVisible: boolean
 }
 
-export default class Input extends React.Component<InputProps, InputStates> {
+export default class Input extends React.Component<InputProps, InputState> {
   inputRef: React.RefObject<HTMLInputElement>
   textareaRef: React.RefObject<HTMLTextAreaElement>
 

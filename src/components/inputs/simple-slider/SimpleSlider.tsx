@@ -1,5 +1,5 @@
 import React from 'react'
-import { doMap } from '@unoff/utils'
+import { doClassnames, doMap } from '@unoff/utils'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
 import Knob from '@components/actions/knob/Knob'
@@ -34,12 +34,22 @@ export interface SimpleSliderProps {
   /**
    * Colors for gradient display
    */
-  colors: {
+  colors?: {
     /** Start color */
     min: string
     /** End color */
     max: string
   }
+  /**
+   * Whether to show a progress bar from the start to the current value
+   * @default false
+   */
+  hasProgressBar?: boolean
+  /**
+   * Whether to apply horizontal padding
+   * @default true
+   */
+  hasPadding?: boolean
   /**
    * Warning tooltip configuration
    */
@@ -80,17 +90,19 @@ export interface SimpleSliderProps {
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
-export interface SimpleSliderStates {
+export interface SimpleSliderState {
   isTooltipDisplay: boolean
 }
 
 export default class SimpleSlider extends React.Component<
   SimpleSliderProps,
-  SimpleSliderStates
+  SimpleSliderState
 > {
   private value: number
 
   static defaultProps: Partial<SimpleSliderProps> = {
+    hasProgressBar: false,
+    hasPadding: true,
     isBlocked: false,
     isDisabled: false,
     isNew: false,
@@ -226,6 +238,19 @@ export default class SimpleSlider extends React.Component<
   }
 
   // Templates
+  Progress = () => {
+    const { value, min, max, hasProgressBar } = this.props
+
+    if (!hasProgressBar) return null
+
+    return (
+      <div
+        className="simple-slider__progress"
+        style={{ width: `${doMap(value, min, max, 0, 100)}%` }}
+      />
+    )
+  }
+
   Status = () => {
     const { warning, isBlocked, isNew, onUnblock } = this.props
 
@@ -263,6 +288,7 @@ export default class SimpleSlider extends React.Component<
       max,
       colors,
       feature,
+      hasPadding,
       isBlocked,
       isDisabled,
       onChange,
@@ -271,7 +297,10 @@ export default class SimpleSlider extends React.Component<
 
     return (
       <div
-        className="simple-slider"
+        className={doClassnames([
+          'simple-slider',
+          !hasPadding && 'simple-slider--no-padding',
+        ])}
         role="group"
         aria-label={label}
       >
@@ -279,9 +308,13 @@ export default class SimpleSlider extends React.Component<
           className="simple-slider__range"
           role="presentation"
           style={{
-            background: `linear-gradient(90deg, ${colors.min}, ${colors.max})`,
+            background:
+              colors !== undefined
+                ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
+                : undefined,
           }}
         >
+          <this.Progress />
           <Knob
             id={id}
             shortId={label}

@@ -13,9 +13,14 @@
     var(--multiple-slider-padding-right) var(--multiple-slider-padding-bottom)
     var(--multiple-slider-padding-left);
 
+  &--no-padding {
+    padding: 0;
+  }
+
   &__range {
     position: relative;
     flex: 1 1 auto;
+    background-color: var(--multiple-slider-background-color);
     box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
       var(--multiple-slider-border-color);
     border-radius: var(--multiple-slider-radius);
@@ -33,6 +38,15 @@
       cursor: not-allowed;
       pointer-events: none;
     }
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: var(--multiple-slider-radius);
+    background-color: var(--multiple-slider-progress-color);
+    pointer-events: none;
   }
 
   &__status {

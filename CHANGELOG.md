@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.21.2] - 2026-03-03
+
+### Added
+
+- **New Icons**: Added `code`, `copy`, `redo`, and `undo` icons across all design systems
+  - SVG icons available for Figma, Framer, Penpot, and Sketch
+  - Updated icon SCSS files and type definitions to include the new icons
+  - Simplified icon usage in stories
+
+- **Slider Progress Bar**: Added progress bar support to SimpleSlider and MultipleSlider components
+  - New `hasProgressBar` prop to toggle the visual progress fill
+  - Available on both standard and gradient slider variants
+
+- **Slider Padding Control**: Added padding control to slider components
+  - New `hasPadding` prop for SimpleSlider and MultipleSlider
+  - Propagated to gradient slider variants via `hasProgressBar` and `hasPadding` props
+
+### Enhanced
+
+- **Form Item Min-Width**: Added `--form-item-min-width` CSS variable for better layout control in constrained containers
+
+### Fixed
+
+- **Tooltip Display Logic**: Updated display condition to use dynamic array length instead of a hardcoded value
+- **Chip Documentation**: Corrected state terminology in Chip component documentation
+
+### Changed
+
+- **State Interface Naming**: Unified state interface naming across components for consistency
+
+### Technical Details
+
+- Updated Storybook dependencies to version 10.2.14
+- Added `minimatch` dependency and upgraded `vite-plugin-dts` in `package.json`
+- Scoped `minimatch` dependency under `@microsoft/api-extractor`
+
 ## [1.21.1] - 2026-02-26
 
 ### Changed

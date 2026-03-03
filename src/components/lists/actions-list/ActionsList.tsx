@@ -55,7 +55,7 @@ export interface ActionsListProps {
   subMenuRef?: React.RefObject<HTMLUListElement>
 }
 
-export interface ActionsListStates {
+export interface ActionsListState {
   openedGroup: string
   listScrollOffset: number
   listScrollAmount: number
@@ -64,10 +64,7 @@ export interface ActionsListStates {
   isVisible: boolean
 }
 
-export default class ActionsList extends React.Component<
-  ActionsListProps,
-  ActionsListStates
-> {
+export default class ActionsList extends React.Component<ActionsListProps, ActionsListState> {
   private scrollInterval: number | null
   private subMenuContainerRef: React.RefObject<HTMLDivElement>
 
@@ -93,7 +90,7 @@ export default class ActionsList extends React.Component<
 
   componentDidUpdate(
     prevProps: Readonly<ActionsListProps>,
-    prevState: Readonly<ActionsListStates>
+    prevState: Readonly<ActionsListState>
   ) {
     const { shouldScroll } = this.props
     const { openedGroup } = this.state

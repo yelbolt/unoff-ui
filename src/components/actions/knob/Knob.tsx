@@ -88,13 +88,13 @@ export interface KnobProps {
   ) => void
 }
 
-export interface KnobStates {
+export interface KnobState {
   isStopInputOpen: boolean
   isTooltipOpen: boolean
   stopInputValue: string | number
 }
 
-export default class Knob extends React.Component<KnobProps, KnobStates> {
+export default class Knob extends React.Component<KnobProps, KnobState> {
   static defaultProps: Partial<KnobProps> = {
     isBlocked: false,
     isDisabled: false,

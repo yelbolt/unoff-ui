@@ -34,10 +34,8 @@ export const AgeSelect: Story = {
     min: 10,
     max: 90,
     step: 1,
-    colors: {
-      min: 'var(--figma-color-bg-tertiary)',
-      max: 'var(--figma-color-bg-tertiary)',
-    },
+    hasProgressBar: true,
+    hasPadding: true,
     feature: 'PICK_AGE',
     isBlocked: false,
     isDisabled: false,

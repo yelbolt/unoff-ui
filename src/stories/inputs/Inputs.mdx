@@ -121,6 +121,8 @@ A gradient slider supporting multiple draggable stop points with adjustable valu
 - `distributionEasing` applies an easing function when distributing stops with `Shift`.
 - `colors.min` / `colors.max` define the gradient ends.
 - `range` constrains valid values; `stops.min` / `stops.max` restricts stop positions.
+- `hasProgressBar` shows a colored bar between the first and last stop, using the theme accent color.
+- `hasPadding={false}` removes horizontal padding — use when embedding the slider flush inside a container.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">
@@ -171,6 +173,8 @@ A single-handle gradient slider for selecting a value within a range. Used for o
 - `min` / `max` / `step` constrain the value range.
 - `colors.min` / `colors.max` define the gradient track — always relate them to the controlled property (e.g. transparent → opaque for opacity).
 - The knob supports direct value typing on double-click or `Enter`.
+- `hasProgressBar` fills the track from the start up to the current value, using the theme accent color.
+- `hasPadding={false}` removes horizontal padding — use when embedding the slider flush inside a container.
 - `isBlocked` locks the slider and shows a Pro badge; `isDisabled` disables it silently.
 
 </Tab>

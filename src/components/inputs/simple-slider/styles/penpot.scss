@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="penpot"] {
+  --simple-slider-background-color: var(--penpot-color-background-secondary);
   --simple-slider-border-color: var(--penpot-color-background-quaternary);
   --simple-slider-border-width: var(--size-pos-unit);
   --simple-slider-height: var(--size-pos-xmsmall);
@@ -14,6 +15,7 @@
   --simple-slider-padding-left: var(--size-pos-medium);
   --simple-slider-padding-right: var(--size-pos-medium);
   --simple-slider-padding-top: var(--size-null);
+  --simple-slider-progress-color: var(--penpot-color-accent-primary);
   --simple-slider-radius: var(--border-radius-large);
   --simple-slider-status-gap: var(--size-pos-xxsmall);
   --simple-slider-status-height: var(--size-pos-xmsmall);

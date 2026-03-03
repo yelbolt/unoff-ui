@@ -116,9 +116,19 @@
     -webkit-mask-image: var(--icon-close);
   }
 
+  &--code {
+    mask-image: var(--icon-code);
+    -webkit-mask-image: var(--icon-code);
+  }
+
   &--component {
     mask-image: var(--icon-component);
     -webkit-mask-image: var(--icon-component);
+  }
+
+  &--copy {
+    mask-image: var(--icon-copy);
+    -webkit-mask-image: var(--icon-copy);
   }
 
   &--corner-radius {
@@ -336,6 +346,11 @@
     -webkit-mask-image: var(--icon-recent);
   }
 
+  &--redo {
+    mask-image: var(--icon-redo);
+    -webkit-mask-image: var(--icon-redo);
+  }
+
   &--refresh {
     mask-image: var(--icon-refresh);
     -webkit-mask-image: var(--icon-refresh);
@@ -529,6 +544,11 @@
   &--upward {
     mask-image: var(--icon-upward);
     -webkit-mask-image: var(--icon-upward);
+  }
+
+  &--undo {
+    mask-image: var(--icon-undo);
+    -webkit-mask-image: var(--icon-undo);
   }
 
   &--user {

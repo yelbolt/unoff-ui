@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
+  --multiple-slider-background-color: var(--sketch-color-background-secondary);
   --multiple-slider-border-color: var(--sketch-color-border-primary);
   --multiple-slider-border-width: var(--size-pos-unit);
   --multiple-slider-height: var(--size-pos-xmsmall);
@@ -14,6 +15,7 @@
   --multiple-slider-padding-left: var(--size-pos-medium);
   --multiple-slider-padding-right: var(--size-pos-medium);
   --multiple-slider-padding-top: var(--size-null);
+  --multiple-slider-progress-color: var(--sketch-color-accent-default);
   --multiple-slider-radius: var(--border-radius-large);
   --multiple-slider-status-gap: var(--size-pos-xxsmall);
   --multiple-slider-status-height: var(--size-pos-xmsmall);

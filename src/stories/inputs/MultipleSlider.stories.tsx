@@ -48,6 +48,7 @@ export const TripleValues: Story = {
       min: '#FF0000',
       max: '#0000FF',
     },
+    hasPadding: true,
     tips: {
       minMax: 'Shift: distribute\nCmd/Ctrl: link',
     },
@@ -178,4 +179,80 @@ export const EditingValues: Story = {
     ...TripleValues.argTypes,
   },
   render: TripleValues.render,
+  play: TripleValues.play,
+}
+
+export const Progressive: Story = {
+  args: {
+    ...TripleValues.args,
+    type: 'FULLY_EDIT',
+    hasProgressBar: true,
+    scale: {
+      '10': 25,
+      '20': 50,
+      '30': 75,
+    },
+    stops: {
+      list: [0, 1, 2],
+      min: 2,
+      max: 8,
+    },
+    colors: undefined,
+  },
+  argTypes: {
+    ...TripleValues.argTypes,
+  },
+  render: TripleValues.render,
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const sliders = canvas.getAllByRole('slider')
+    await expect(sliders.length).toBeGreaterThan(0)
+
+    const firstKnob = sliders[0]
+    await expect(firstKnob).toBeInTheDocument()
+    await expect(firstKnob).toHaveAttribute('aria-valuenow', '25')
+
+    const knobRect = firstKnob.getBoundingClientRect()
+    const startX = knobRect.left + knobRect.width / 2
+    const startY = knobRect.top + knobRect.height / 2
+
+    fireEvent.mouseDown(firstKnob, {
+      clientX: startX,
+      clientY: startY,
+      bubbles: true,
+    })
+
+    await new Promise((resolve) => setTimeout(resolve, 50))
+
+    fireEvent(
+      document,
+      new MouseEvent('mousemove', {
+        clientX: startX + 50,
+        clientY: startY,
+        shiftKey: true,
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    fireEvent(
+      document,
+      new MouseEvent('mouseup', {
+        clientX: startX + 50,
+        clientY: startY,
+        bubbles: true,
+        cancelable: true,
+      })
+    )
+
+    await waitFor(
+      () => {
+        expect(args.onChange).toHaveBeenCalled()
+      },
+      { timeout: 2000 }
+    )
+  },
 }

@@ -30,13 +30,13 @@ export interface SemanticMessageProps {
   actionsSlot?: React.ReactNode
 }
 
-export interface SemanticMessageStates {
+export interface SemanticMessageState {
   documentWidth: number
 }
 
 export default class SemanticMessage extends React.Component<
   SemanticMessageProps,
-  SemanticMessageStates
+  SemanticMessageState
 > {
   static defaultProps: Partial<SemanticMessageProps> = {
     orientation: 'HORIZONTAL',
