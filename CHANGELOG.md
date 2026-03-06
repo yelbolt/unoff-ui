@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.21.3] - 2026-03-06
+
+### Changed
+
+- Updated repository references from `a-ng-d` to `yelbolt` in `package.json`, `README.md`, and `CHANGELOG.md`
+
 ## [1.21.2] - 2026-03-03
 
 ### Added
@@ -1140,3 +1146,5 @@ This version introduces a major architectural change in how styling is handled:
 - **Figma**: Full token support with Figma UI theme compatibility
 - **Penpot**: Complete theme implementation for Penpot design system
 - **Sketch**: Theme support matching Sketch's design language
+
+[1.21.3]: https://github.com/yelbolt/unoff-utils/compare/v1.23.2...v1.23.3

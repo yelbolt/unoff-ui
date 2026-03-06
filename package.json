@@ -1,11 +1,11 @@
 {
   "name": "@unoff/ui",
-  "version": "1.21.2",
+  "version": "1.21.3",
   "type": "module",
   "description": "Unoff UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/a-ng-d/unoff-ui.git"
+    "url": "git+https://github.com/yelbolt/unoff-ui.git"
   },
   "keywords": [
     "library",
@@ -15,9 +15,9 @@
   "author": "Aurélien Grimaud",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/a-ng-d/unoff-ui/issues"
+    "url": "https://github.com/yelbolt/unoff-ui/issues"
   },
-  "homepage": "https://github.com/a-ng-d/unoff-ui#readme",
+  "homepage": "https://github.com/yelbolt/unoff-ui#readme",
   "overrides": {
     "storybook": "$storybook",
     "vite": "$vite",
