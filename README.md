@@ -1,5 +1,5 @@
-![GitHub package.json version](https://img.shields.io/github/package-json/v/a-ng-d/unoff-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/a-ng-d/unoff-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/a-ng-d/unoff-ui/deploy.yml?label=Deployment)
-![GitHub](https://img.shields.io/github/license/a-ng-d/unoff-ui?color=informational)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/yelbolt/unoff-ui?color=informational) ![GitHub last commit](https://img.shields.io/github/last-commit/yelbolt/unoff-ui?color=informational) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yelbolt/unoff-ui/npm.yml?label=npm) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yelbolt/unoff-ui/chromatic.yml?label=Chromatic) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/yelbolt/unoff-ui/deploy.yml?label=Deployment)
+![GitHub](https://img.shields.io/github/license/yelbolt/unoff-ui?color=informational)
 
 # Unoff UI
 
