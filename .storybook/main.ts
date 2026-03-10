@@ -18,7 +18,15 @@ const config: StorybookConfig = {
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-vitest',
-    '@storybook/addon-mcp',
+    {
+      name: '@storybook/addon-mcp',
+      options: {
+        toolsets: {
+          dev: true,
+          docs: true,
+        },
+      },
+    },
   ],
   staticDirs: ['../src/styles', './'],
 
