@@ -20,7 +20,8 @@ const config: StorybookConfig = {
     '@storybook/addon-vitest',
     '@storybook/addon-mcp',
   ],
-  staticDirs: ['../src/styles'],
+  staticDirs: ['../src/styles', './'],
+
   framework: {
     name: '@storybook/react-vite',
     options: {},

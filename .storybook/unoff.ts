@@ -5,7 +5,7 @@ export default create({
 
   brandTitle: 'Unoff UI',
   brandUrl: 'https://unoff.dev',
-  brandImage: '.storybook/unoff_logotype.webp',
+  brandImage: 'unoff_logotype.webp',
   brandTarget: '_blank',
 
   colorPrimary: '#D76B8C',
