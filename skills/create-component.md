@@ -98,6 +98,150 @@ The SCSS file **must**:
    ```
 4. Do **not** hardcode any color, spacing, radius, or typography value. All values must come from CSS variables defined in the token system.
 
+### 2c — Component token set (JSON)
+
+Create the design token file for **each of the four platform themes**:
+
+```
+tokens/platforms/{figma|penpot|sketch|framer}/components/{component-name}.json
+```
+
+The file must mirror the same values across all themes (start by copying one and adapting the semantic references per theme). Token structure follows DTCG format with nested objects mapping to the CSS variable naming convention:
+
+```json
+{
+  "{camelCaseName}": {
+    "base": {
+      "height":     { "$value": "{size.pos.small}",   "$type": "dimension" },
+      "gap":        { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
+      "radius":     { "$value": "{border.radius.medium}", "$type": "dimension" },
+      "padding": {
+        "top":    { "$value": "{size.null}", "$type": "dimension" },
+        "right":  { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
+        "bottom": { "$value": "{size.null}", "$type": "dimension" },
+        "left":   { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
+      },
+      "background": {
+        "color": { "$value": "transparent", "$type": "string" }
+      },
+      "border": {
+        "color": { "$value": "transparent", "$type": "string" },
+        "width": { "$value": "{size.null}", "$type": "dimension" },
+        "offset": { "$value": "{size.null}", "$type": "dimension" }
+      },
+      "text": {
+        "color": { "$value": "{figma.color.text}", "$type": "color" }
+      },
+      "icon": {
+        "color": { "$value": "{figma.color.icon}", "$type": "color" }
+      }
+    },
+    "{variantName}": {
+      "background": {
+        "color": {
+          "default":  { "$value": "{figma.color.bg.brand}",         "$type": "color" },
+          "hover":    { "$value": "{figma.color.bg.brand}",         "$type": "color" },
+          "pressed":  { "$value": "{figma.color.bg.brand.pressed}", "$type": "color" },
+          "focus":    { "$value": "{figma.color.bg.brand}",         "$type": "color" },
+          "disabled": { "$value": "{figma.color.bg.disabled}",      "$type": "color" }
+        }
+      },
+      "border": {
+        "width": {
+          "default":  { "$value": "{size.null}",     "$type": "dimension" },
+          "hover":    { "$value": "{size.null}",     "$type": "dimension" },
+          "pressed":  { "$value": "{size.null}",     "$type": "dimension" },
+          "focus":    { "$value": "{size.pos.unit}", "$type": "dimension" },
+          "disabled": { "$value": "{size.null}",     "$type": "dimension" }
+        },
+        "color": {
+          "default":  { "$value": "transparent",                        "$type": "string" },
+          "focus":    { "$value": "{figma.color.border.onbrand.strong}", "$type": "color" },
+          "disabled": { "$value": "none",                               "$type": "string" }
+        }
+      },
+      "text": {
+        "color": {
+          "default":  { "$value": "{figma.color.text.onbrand}",    "$type": "color" },
+          "disabled": { "$value": "{figma.color.text.ondisabled}", "$type": "color" }
+        }
+      },
+      "icon": {
+        "color": {
+          "default":  { "$value": "{figma.color.icon.onbrand}",    "$type": "color" },
+          "disabled": { "$value": "{figma.color.icon.ondisabled}", "$type": "color" }
+        }
+      }
+    }
+  }
+}
+```
+
+Rules:
+- The root key uses **camelCase** (e.g. `myComp`, `iconButton`).
+- Nesting depth maps directly to the CSS variable name segments: `{root}.{variant}.{property}.{subproperty}.{state}` → `--root-variant-property-subproperty-state`.
+- Use semantic token references from the platform namespace (e.g. `{figma.color.bg.brand}`) — never raw hex values.
+- All five interaction states must be present for every color property: `default`, `hover`, `pressed`, `focus`, `disabled`.
+- Non-colour properties (dimensions, strings) only need a single value unless they change per state.
+- Reference files: `tokens/platforms/figma/components/button.json`, `tokens/platforms/figma/components/chip.json`
+
+### 2d — Terrazzo configuration
+
+Create one Terrazzo config per platform theme in:
+
+```
+terrazzo/{figma|penpot|sketch|framer}/components/terrazzo.{component-name}.js
+```
+
+Each file follows exactly the same structure — only the theme name and component path change:
+
+```js
+import css from '@terrazzo/plugin-css'
+import { defineConfig } from '@terrazzo/cli'
+
+export default defineConfig({
+  name: 'global',
+  tokens: [
+    './tokens/globals/color.json',
+    './tokens/globals/typography.json',
+    './tokens/globals/spacing.json',
+    './tokens/globals/effect.json',
+    './tokens/globals/radius.json',
+    './tokens/platforms/{theme}/color.json',
+    './tokens/platforms/{theme}/typography.json',
+    './tokens/platforms/{theme}/icon.json',
+    './tokens/platforms/{theme}/components/{component-name}.json',
+  ],
+  outDir: './src/components/{category}/{kebab-name}/',
+  plugins: [
+    css({
+      filename: 'styles/{theme}.scss',
+      exclude: [
+        '{theme}.color.*',
+        'font.*',
+        'size.*',
+        'shadow.*',
+        'border.*',
+        'grey.*',
+        'elevation.*',
+        'icon.*',
+      ],
+      baseSelector: ':root[data-theme="{theme}"]',
+    }),
+  ],
+  lint: {
+    rules: {},
+  },
+})
+```
+
+Rules:
+- Create **four files** (figma, penpot, sketch, framer) — one per theme.
+- `outDir` points to the component's source folder (where Terrazzo writes the generated `styles/{theme}.scss`).
+- `filename` in the CSS plugin is always `styles/{theme}.scss` — this is what the component's SCSS imports with `@import 'styles/{theme}'`.
+- The `exclude` list always contains `'{theme}.color.*'` (using the actual theme name), plus the standard global namespaces.
+- Reference files: `terrazzo/figma/components/terrazzo.button.js`, `terrazzo/figma/components/terrazzo.chip.js`
+
 ---
 
 ## Step 3 — Add to the main export
@@ -204,6 +348,8 @@ Before finishing, verify:
 
 - [ ] `{ComponentName}.tsx` exports a `default` class and a named `{ComponentName}Props` interface
 - [ ] `{component-name}.scss` uses only CSS variables for themeable values and imports all four platform theme files
+- [ ] Token JSON created in `tokens/platforms/{figma|penpot|sketch|framer}/components/{component-name}.json` for all four themes
+- [ ] Terrazzo config created in `terrazzo/{figma|penpot|sketch|framer}/components/terrazzo.{component-name}.js` for all four themes
 - [ ] `src/index.ts` has the new export in the right category block
 - [ ] Story file exists with at least one `play` test per exported story
 - [ ] MDX documentation section added to the category doc
@@ -214,6 +360,8 @@ Before finishing, verify:
 
 - Component example: `src/components/actions/button/Button.tsx`
 - SCSS token pattern: `src/components/actions/button/button.scss`
+- Component token JSON example: `tokens/platforms/figma/components/button.json`
+- Terrazzo config example: `terrazzo/figma/components/terrazzo.button.js`
 - Story example: `src/stories/actions/Button.stories.ts`
 - MDX doc example: `src/stories/actions/Actions.mdx`
 - Main export: `src/index.ts`
