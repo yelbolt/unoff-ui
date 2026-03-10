@@ -66,7 +66,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -129,7 +129,7 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "disabled": {

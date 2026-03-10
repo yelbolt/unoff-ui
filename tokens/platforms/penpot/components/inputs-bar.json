@@ -56,7 +56,7 @@
     },
     "border": {
       "color": {
-        "$value": "{penpot.color.accent.primary}",
+        "$value": "{penpot.color.accent.primary.default}",
         "$type": "color"
       },
       "width": {

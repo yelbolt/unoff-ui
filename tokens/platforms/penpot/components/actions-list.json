@@ -209,15 +209,15 @@
             "$type": "color"
           },
           "selected": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -334,15 +334,15 @@
           "$type": "color"
         },
         "selected": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "disabled": {
@@ -374,15 +374,15 @@
           "$type": "color"
         },
         "selected": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "disabled": {

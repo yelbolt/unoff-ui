@@ -13,12 +13,14 @@
           }
         },
         "primary": {
-          "$type": "color",
-          "$value": "#6911d4",
-          "$extensions": {
-            "mode": {
-              "penpot-light": "#6911d4",
-              "penpot-dark": "#7efff5"
+          "default": {
+            "$type": "color",
+            "$value": "#6911d4",
+            "$extensions": {
+              "mode": {
+                "penpot-light": "#6911d4",
+                "penpot-dark": "#7efff5"
+              }
             }
           },
           "muted": {

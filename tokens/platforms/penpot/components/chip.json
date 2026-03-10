@@ -51,7 +51,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "inactive": {

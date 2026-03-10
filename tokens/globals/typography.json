@@ -28,13 +28,13 @@
       }
     },
     "weight": {
+      "light": {
+        "$type": "fontWeight",
+        "$value": 300
+      },
       "normal": {
         "$type": "fontWeight",
         "$value": 400
-      },
-      "accent": {
-        "$type": "fontWeight",
-        "$value": 450
       },
       "medium": {
         "$type": "fontWeight",
@@ -42,11 +42,11 @@
       },
       "semi": {
         "$type": "fontWeight",
-        "$value": 550
+        "$value": 600
       },
       "bold": {
         "$type": "fontWeight",
-        "$value": 600
+        "$value": 700
       }
     },
     "lineHeight": {
@@ -63,37 +63,37 @@
       "neg": {
         "xlarge": {
           "$type": "dimension",
-          "$value": "-0.01em"
+          "$value": "-0.12px"
         },
         "large": {
           "$type": "dimension",
-          "$value": "-0.005em"
+          "$value": "-0.06px"
         },
         "medium": {
           "$type": "dimension",
-          "$value": "-0.0025em"
+          "$value": "-0.03px"
         },
         "small": {
           "$type": "dimension",
-          "$value": "-0.001em"
+          "$value": "-0.012px"
         }
       },
       "pos": {
         "small": {
           "$type": "dimension",
-          "$value": "0.001em"
+          "$value": "0.012px"
         },
         "medium": {
           "$type": "dimension",
-          "$value": "0.0025em"
+          "$value": "0.03px"
         },
         "large": {
           "$type": "dimension",
-          "$value": "0.005em"
+          "$value": "0.06px"
         },
         "xlarge": {
           "$type": "dimension",
-          "$value": "0.01em"
+          "$value": "0.12px"
         }
       }
     }

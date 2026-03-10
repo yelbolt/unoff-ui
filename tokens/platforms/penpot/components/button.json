@@ -174,7 +174,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
@@ -254,7 +254,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -274,7 +274,7 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
@@ -320,7 +320,7 @@
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
@@ -418,7 +418,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -434,11 +434,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
@@ -480,11 +480,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
@@ -508,19 +508,19 @@
         },
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -664,19 +664,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -946,7 +946,7 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
@@ -992,7 +992,7 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
@@ -1236,7 +1236,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1252,11 +1252,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
@@ -1273,19 +1273,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "disabled": {
@@ -1404,7 +1404,7 @@
             "$type": "string"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1416,19 +1416,19 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "pressed": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "disabled": {
@@ -1441,19 +1441,19 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{penpot.color.accent.primary}",
+              "$value": "{penpot.color.accent.primary.default}",
               "$type": "color"
             },
             "disabled": {

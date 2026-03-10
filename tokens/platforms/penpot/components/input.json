@@ -360,7 +360,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "error": {
@@ -383,7 +383,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "error": {
@@ -406,11 +406,11 @@
         },
         "onselected": {
           "default": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           }
         }
@@ -600,7 +600,7 @@
               "offsetY": 0,
               "blur": 0,
               "spread": "{size.pos.xunit}",
-              "color": "{penpot.color.accent.primary}",
+              "color": "{penpot.color.accent.primary.default}",
               "inset": true
             }
           ],
