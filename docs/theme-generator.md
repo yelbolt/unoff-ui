@@ -21,7 +21,7 @@ The theme generator offers the following features:
 To create a new theme, run the following command at the project root:
 
 ```bash
-node scripts/create-theme.js
+npm run create:theme
 ```
 
 The script will guide you through the process with the following steps:
