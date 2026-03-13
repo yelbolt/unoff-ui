@@ -5,7 +5,7 @@
     "**/penpot.scss",
     "**/sketch.scss",
     "**/framer.scss",
-    "**/globals.scss",
+    "**/commons.scss",
     "**/*-colors.scss",
     "**/*-types.scss",
     "coverage/**",

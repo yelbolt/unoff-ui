@@ -1,0 +1,27 @@
+{
+  "name": "Commons",
+  "version": "2025.10",
+  "description": "Common design tokens shared across all platforms (typography, spacing, border-radius, shadows with light/dark modes)",
+  "resolutionOrder": [
+    { "$ref": "#/sets/base" },
+    { "$ref": "#/modifiers/mode" }
+  ],
+  "sets": {
+    "base": {
+      "description": "Base common tokens (typography, spacing, border-radius, grey scale, shadow colors)",
+      "sources": [{ "$ref": "./commons/commons.tokens.json" }]
+    }
+  },
+  "modifiers": {
+    "mode": {
+      "description": "Light and dark shadow/elevation variants",
+      "contexts": {
+        "light": [
+          { "$ref": "./commons/modes/commons.effect-light.tokens.json" }
+        ],
+        "dark": [{ "$ref": "./commons/modes/commons.effect-dark.tokens.json" }]
+      },
+      "default": "light"
+    }
+  }
+}

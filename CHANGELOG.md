@@ -494,7 +494,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `image?: string` prop to Tooltip component interface
 - Implemented `tooltip__snack` CSS class with flexbox layout and gap styling
 - Enhanced Tooltip component to conditionally render image element when `image` prop is provided
-- Updated `.prettierignore` to include `globals.scss` for better build consistency
+- Updated `.prettierignore` to include `commons.scss` for better build consistency
 - Improved Tooltip layout structure with nested presentation wrappers for better styling control
 
 ## [1.19.36] - 2025-12-02

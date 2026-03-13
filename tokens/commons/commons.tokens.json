@@ -367,132 +367,132 @@
       "$type": "color",
       "black": {
         "alpha0": {
-          "$value": "rgba(0, 0, 0, {alpha.0})"
+          "$value": "rgba(0, 0, 0, 0)"
         },
         "alpha50": {
-          "$value": "rgba(0, 0, 0, {alpha.50})"
+          "$value": "rgba(0, 0, 0, 0.05)"
         },
         "alpha100": {
-          "$value": "rgba(0, 0, 0, {alpha.100})"
+          "$value": "rgba(0, 0, 0, 0.1)"
         },
         "alpha150": {
-          "$value": "rgba(0, 0, 0, {alpha.150})"
+          "$value": "rgba(0, 0, 0, 0.15)"
         },
         "alpha200": {
-          "$value": "rgba(0, 0, 0, {alpha.200})"
+          "$value": "rgba(0, 0, 0, 0.2)"
         },
         "alpha250": {
-          "$value": "rgba(0, 0, 0, {alpha.250})"
+          "$value": "rgba(0, 0, 0, 0.25)"
         },
         "alpha300": {
-          "$value": "rgba(0, 0, 0, {alpha.300})"
+          "$value": "rgba(0, 0, 0, 0.3)"
         },
         "alpha350": {
-          "$value": "rgba(0, 0, 0, {alpha.350})"
+          "$value": "rgba(0, 0, 0, 0.35)"
         },
         "alpha400": {
-          "$value": "rgba(0, 0, 0, {alpha.400})"
+          "$value": "rgba(0, 0, 0, 0.4)"
         },
         "alpha450": {
-          "$value": "rgba(0, 0, 0, {alpha.450})"
+          "$value": "rgba(0, 0, 0, 0.45)"
         },
         "alpha500": {
-          "$value": "rgba(0, 0, 0, {alpha.500})"
+          "$value": "rgba(0, 0, 0, 0.5)"
         },
         "alpha550": {
-          "$value": "rgba(0, 0, 0, {alpha.550})"
+          "$value": "rgba(0, 0, 0, 0.55)"
         },
         "alpha600": {
-          "$value": "rgba(0, 0, 0, {alpha.600})"
+          "$value": "rgba(0, 0, 0, 0.6)"
         },
         "alpha650": {
-          "$value": "rgba(0, 0, 0, {alpha.650})"
+          "$value": "rgba(0, 0, 0, 0.65)"
         },
         "alpha700": {
-          "$value": "rgba(0, 0, 0, {alpha.700})"
+          "$value": "rgba(0, 0, 0, 0.7)"
         },
         "alpha750": {
-          "$value": "rgba(0, 0, 0, {alpha.750})"
+          "$value": "rgba(0, 0, 0, 0.75)"
         },
         "alpha800": {
-          "$value": "rgba(0, 0, 0, {alpha.800})"
+          "$value": "rgba(0, 0, 0, 0.8)"
         },
         "alpha850": {
-          "$value": "rgba(0, 0, 0, {alpha.850})"
+          "$value": "rgba(0, 0, 0, 0.85)"
         },
         "alpha900": {
-          "$value": "rgba(0, 0, 0, {alpha.900})"
+          "$value": "rgba(0, 0, 0, 0.9)"
         },
         "alpha950": {
-          "$value": "rgba(0, 0, 0, {alpha.950})"
+          "$value": "rgba(0, 0, 0, 0.95)"
         },
         "alpha1000": {
-          "$value": "rgba(0, 0, 0, {alpha.1000})"
+          "$value": "rgba(0, 0, 0, 1)"
         }
       },
       "white": {
         "alpha0": {
-          "$value": "rgba(255, 255, 255, {alpha.0})"
+          "$value": "rgba(255, 255, 255, 0)"
         },
         "alpha50": {
-          "$value": "rgba(255, 255, 255, {alpha.50})"
+          "$value": "rgba(255, 255, 255, 0.05)"
         },
         "alpha100": {
-          "$value": "rgba(255, 255, 255, {alpha.100})"
+          "$value": "rgba(255, 255, 255, 0.1)"
         },
         "alpha150": {
-          "$value": "rgba(255, 255, 255, {alpha.150})"
+          "$value": "rgba(255, 255, 255, 0.15)"
         },
         "alpha200": {
-          "$value": "rgba(255, 255, 255, {alpha.200})"
+          "$value": "rgba(255, 255, 255, 0.2)"
         },
         "alpha250": {
-          "$value": "rgba(255, 255, 255, {alpha.250})"
+          "$value": "rgba(255, 255, 255, 0.25)"
         },
         "alpha300": {
-          "$value": "rgba(255, 255, 255, {alpha.300})"
+          "$value": "rgba(255, 255, 255, 0.3)"
         },
         "alpha350": {
-          "$value": "rgba(255, 255, 255, {alpha.350})"
+          "$value": "rgba(255, 255, 255, 0.35)"
         },
         "alpha400": {
-          "$value": "rgba(255, 255, 255, {alpha.400})"
+          "$value": "rgba(255, 255, 255, 0.4)"
         },
         "alpha450": {
-          "$value": "rgba(255, 255, 255, {alpha.450})"
+          "$value": "rgba(255, 255, 255, 0.45)"
         },
         "alpha500": {
-          "$value": "rgba(255, 255, 255, {alpha.500})"
+          "$value": "rgba(255, 255, 255, 0.5)"
         },
         "alpha550": {
-          "$value": "rgba(255, 255, 255, {alpha.550})"
+          "$value": "rgba(255, 255, 255, 0.55)"
         },
         "alpha600": {
-          "$value": "rgba(255, 255, 255, {alpha.600})"
+          "$value": "rgba(255, 255, 255, 0.6)"
         },
         "alpha650": {
-          "$value": "rgba(255, 255, 255, {alpha.650})"
+          "$value": "rgba(255, 255, 255, 0.65)"
         },
         "alpha700": {
-          "$value": "rgba(255, 255, 255, {alpha.700})"
+          "$value": "rgba(255, 255, 255, 0.7)"
         },
         "alpha750": {
-          "$value": "rgba(255, 255, 255, {alpha.750})"
+          "$value": "rgba(255, 255, 255, 0.75)"
         },
         "alpha800": {
-          "$value": "rgba(255, 255, 255, {alpha.800})"
+          "$value": "rgba(255, 255, 255, 0.8)"
         },
         "alpha850": {
-          "$value": "rgba(255, 255, 255, {alpha.850})"
+          "$value": "rgba(255, 255, 255, 0.85)"
         },
         "alpha900": {
-          "$value": "rgba(255, 255, 255, {alpha.900})"
+          "$value": "rgba(255, 255, 255, 0.9)"
         },
         "alpha950": {
-          "$value": "rgba(255, 255, 255, {alpha.950})"
+          "$value": "rgba(255, 255, 255, 0.95)"
         },
         "alpha1000": {
-          "$value": "rgba(255, 255, 255, {alpha.1000})"
+          "$value": "rgba(255, 255, 255, 1)"
         }
       }
     }
