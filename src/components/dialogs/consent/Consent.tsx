@@ -82,7 +82,10 @@ export interface ConsentState {
   vendorsConsent: Array<ConsentConfiguration>
 }
 
-export default class Consent extends React.Component<ConsentProps, ConsentState> {
+export default class Consent extends React.Component<
+  ConsentProps,
+  ConsentState
+> {
   constructor(props: ConsentProps) {
     super(props)
     this.state = {

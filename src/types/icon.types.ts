@@ -111,7 +111,7 @@ export const iconList = [
 ] as const
 
 export type IconList =
-  | typeof iconList[number]
+  | (typeof iconList)[number]
   | 'A'
   | 'B'
   | 'C'

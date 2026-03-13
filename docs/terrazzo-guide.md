@@ -73,11 +73,11 @@ Configs for text styles and component tokens list raw JSON paths and run them th
 
 All Terrazzo configs import from `terrazzo/plugins/tokens-studio-compat.js`. It provides three exports:
 
-| Export | Usage | Purpose |
-|---|---|---|
-| `default` (`tokensStudioCompat()`) | `plugins: [tokensStudioCompat(), …]` | Terrazzo plugin (enforce: `"pre"`) — remaps remaining legacy `$type` values at transform stage |
-| `preprocessTokens(paths)` | `tokens: preprocessTokens(tokenPaths)` | Preprocesses token files to `.terrazzo-tmp/` before Terrazzo parses them — required when token files contain Tokens Studio-style `$type` names |
-| `cssTransform` | `css({ transform: cssTransform })` | Custom CSS transform — handles dimension string values (`"4px"`) and resolves shadow aliases to `var()` references |
+| Export                             | Usage                                  | Purpose                                                                                                                                        |
+| ---------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `default` (`tokensStudioCompat()`) | `plugins: [tokensStudioCompat(), …]`   | Terrazzo plugin (enforce: `"pre"`) — remaps remaining legacy `$type` values at transform stage                                                 |
+| `preprocessTokens(paths)`          | `tokens: preprocessTokens(tokenPaths)` | Preprocesses token files to `.terrazzo-tmp/` before Terrazzo parses them — required when token files contain Tokens Studio-style `$type` names |
+| `cssTransform`                     | `css({ transform: cssTransform })`     | Custom CSS transform — handles dimension string values (`"4px"`) and resolves shadow aliases to `var()` references                             |
 
 `cssTransform` must always be passed to the `css()` plugin. Without it, dimension tokens output `undefinedundefined` and shadow tokens that alias commons elevation tokens get incorrectly inlined.
 

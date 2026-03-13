@@ -79,11 +79,11 @@ Focus first on the **color palette** (`color.json`) as it has the most visual im
 
 ### Common brand customizations
 
-| File | What to change |
-|------|----------------|
-| `color.json` | Brand primary, secondary, neutral, semantic (error, warning, success) palettes |
-| `text.json` | Font family (update Google Fonts URL in SCSS module after changing) |
-| `radius.json` | Border radii (e.g. a rounder brand might use `8px` base instead of `4px`) |
+| File          | What to change                                                                 |
+| ------------- | ------------------------------------------------------------------------------ |
+| `color.json`  | Brand primary, secondary, neutral, semantic (error, warning, success) palettes |
+| `text.json`   | Font family (update Google Fonts URL in SCSS module after changing)            |
+| `radius.json` | Border radii (e.g. a rounder brand might use `8px` base instead of `4px`)      |
 
 ---
 
@@ -124,6 +124,7 @@ npm run storybook
 ```
 
 The theme selector in the toolbar should show the new theme name. Verify:
+
 - Light and dark modes work correctly
 - Component colors and typography match the brand
 
@@ -144,6 +145,7 @@ Common semantic roles: `brand`, `neutral`, `error`, `warning`, `success`, `accen
 Scale steps: `50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800`, `900`
 
 When adapting for a brand:
+
 - Map the brand's primary color to `color.brand.500`
 - Derive lighter steps (`100`–`400`) by reducing saturation/increasing lightness
 - Derive darker steps (`600`–`900`) by increasing darkness/saturation
@@ -156,8 +158,12 @@ text.{family|size|weight|lineHeight}.{scale}
 ```
 
 If the brand has a system font, use:
+
 ```json
-{ "$value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", "$type": "fontFamily" }
+{
+  "$value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+  "$type": "fontFamily"
+}
 ```
 
 ---

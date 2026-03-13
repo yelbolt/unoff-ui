@@ -10,6 +10,7 @@ You are helping write a **Figma component description** for a component in the *
 The description must be clear, concise, and structured so it is useful to both designers using the Figma component and developers consuming the code.
 
 > **Figma formatting:** always pass the description via the `descriptionMarkdown` parameter of `figma_set_description` — this enables rich text rendering. Supported formatting:
+>
 > - `#` for H1 section titles
 > - `---` for horizontal separators between sections
 > - `1.` numbered lists for all enumerated items (variants, props, states)
@@ -96,16 +97,19 @@ Produce a rich-text document using the format below. **Adapt the content** to th
 ### Rules for each section
 
 **Summary line**
+
 - One sentence only. State the purpose and the most important capabilities (variants, sizes, states).
 - Do not start with "The {ComponentName} component is…" — start with the function directly.
 
 **Behaviour sections**
+
 - Each notable prop or compound feature gets its own `#` section.
 - Name the section after what the feature does, not the prop name.
 - Mention prop names inline with backticks.
 - Keep to 1–3 sentences. Use a numbered list when enumerating values (e.g. states, badge types).
 
 **Props (code)**
+
 - List every prop from the `{ComponentName}Props` interface as a numbered list.
 - Format each item as: `` `propName: type` — description ``
 - Include the default only when non-obvious.
@@ -114,6 +118,7 @@ Produce a rich-text document using the format below. **Adapt the content** to th
 - Order: required props first, then optional props alphabetically.
 
 **Variants (Figma)**
+
 - Preferred source: data from `figma_get_component` / `figma_execute` — use exact property names and values from Figma.
 - Fallback: `.figma.tsx` mapping file → Storybook argTypes → MDX notes.
 - List as numbered list. Wrap both prop name and each value in backticks.

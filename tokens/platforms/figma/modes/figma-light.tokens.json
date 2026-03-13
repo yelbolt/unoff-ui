@@ -2,9 +2,7 @@
   "figma": {
     "$type": "color",
     "$extensions": {
-      "com.figma.scopes": [
-        "ALL_SCOPES"
-      ]
+      "com.figma.scopes": ["ALL_SCOPES"]
     },
     "color": {
       "bg": {

@@ -57,6 +57,7 @@ export default class {ComponentName} extends React.Component<{ComponentName}Prop
 ```
 
 Rules:
+
 - Always use `@unoff/utils` `doClassnames` helper for conditional class names.
 - Use `@components/...`, `@styles/...`, `@tps/...` path aliases — never relative paths across directories.
 - Import the component's own SCSS file directly: `import './{component-name}.scss'`
@@ -66,6 +67,7 @@ Rules:
 ### 2b — SCSS file
 
 The SCSS file **must**:
+
 1. Import all platform theme files at the top:
    ```scss
    @import 'styles/penpot';
@@ -82,20 +84,26 @@ The SCSS file **must**:
    - `--my-comp-primary-background-color-hover`
    - `--my-comp-base-border-radius`
 3. Override base variables per variant and per state using the pattern from `button.scss`:
+
    ```scss
    .my-comp {
      background-color: var(--my-comp-base-background-color);
 
      &--primary {
-       --my-comp-base-background-color: var(--my-comp-primary-background-color-default);
+       --my-comp-base-background-color: var(
+         --my-comp-primary-background-color-default
+       );
 
        &:enabled:hover {
-         --my-comp-base-background-color: var(--my-comp-primary-background-color-hover);
+         --my-comp-base-background-color: var(
+           --my-comp-primary-background-color-hover
+         );
        }
        // focus, active, disabled...
      }
    }
    ```
+
 4. Do **not** hardcode any color, spacing, radius, or typography value. All values must come from CSS variables defined in the token system.
 
 ### 2c — Component token set (JSON)
@@ -112,14 +120,14 @@ The file must mirror the same values across all themes (start by copying one and
 {
   "{camelCaseName}": {
     "base": {
-      "height":     { "$value": "{size.pos.small}",   "$type": "dimension" },
-      "gap":        { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
-      "radius":     { "$value": "{border.radius.medium}", "$type": "dimension" },
+      "height": { "$value": "{size.pos.small}", "$type": "dimension" },
+      "gap": { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
+      "radius": { "$value": "{border.radius.medium}", "$type": "dimension" },
       "padding": {
-        "top":    { "$value": "{size.null}", "$type": "dimension" },
-        "right":  { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
+        "top": { "$value": "{size.null}", "$type": "dimension" },
+        "right": { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
         "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left":   { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
+        "left": { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
       },
       "background": {
         "color": { "$value": "transparent", "$type": "string" }
@@ -139,37 +147,58 @@ The file must mirror the same values across all themes (start by copying one and
     "{variantName}": {
       "background": {
         "color": {
-          "default":  { "$value": "{figma.color.bg.brand}",         "$type": "color" },
-          "hover":    { "$value": "{figma.color.bg.brand}",         "$type": "color" },
-          "pressed":  { "$value": "{figma.color.bg.brand.pressed}", "$type": "color" },
-          "focus":    { "$value": "{figma.color.bg.brand}",         "$type": "color" },
-          "disabled": { "$value": "{figma.color.bg.disabled}",      "$type": "color" }
+          "default": { "$value": "{figma.color.bg.brand}", "$type": "color" },
+          "hover": { "$value": "{figma.color.bg.brand}", "$type": "color" },
+          "pressed": {
+            "$value": "{figma.color.bg.brand.pressed}",
+            "$type": "color"
+          },
+          "focus": { "$value": "{figma.color.bg.brand}", "$type": "color" },
+          "disabled": {
+            "$value": "{figma.color.bg.disabled}",
+            "$type": "color"
+          }
         }
       },
       "border": {
         "width": {
-          "default":  { "$value": "{size.null}",     "$type": "dimension" },
-          "hover":    { "$value": "{size.null}",     "$type": "dimension" },
-          "pressed":  { "$value": "{size.null}",     "$type": "dimension" },
-          "focus":    { "$value": "{size.pos.unit}", "$type": "dimension" },
-          "disabled": { "$value": "{size.null}",     "$type": "dimension" }
+          "default": { "$value": "{size.null}", "$type": "dimension" },
+          "hover": { "$value": "{size.null}", "$type": "dimension" },
+          "pressed": { "$value": "{size.null}", "$type": "dimension" },
+          "focus": { "$value": "{size.pos.unit}", "$type": "dimension" },
+          "disabled": { "$value": "{size.null}", "$type": "dimension" }
         },
         "color": {
-          "default":  { "$value": "transparent",                        "$type": "string" },
-          "focus":    { "$value": "{figma.color.border.onbrand.strong}", "$type": "color" },
-          "disabled": { "$value": "none",                               "$type": "string" }
+          "default": { "$value": "transparent", "$type": "string" },
+          "focus": {
+            "$value": "{figma.color.border.onbrand.strong}",
+            "$type": "color"
+          },
+          "disabled": { "$value": "none", "$type": "string" }
         }
       },
       "text": {
         "color": {
-          "default":  { "$value": "{figma.color.text.onbrand}",    "$type": "color" },
-          "disabled": { "$value": "{figma.color.text.ondisabled}", "$type": "color" }
+          "default": {
+            "$value": "{figma.color.text.onbrand}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{figma.color.text.ondisabled}",
+            "$type": "color"
+          }
         }
       },
       "icon": {
         "color": {
-          "default":  { "$value": "{figma.color.icon.onbrand}",    "$type": "color" },
-          "disabled": { "$value": "{figma.color.icon.ondisabled}", "$type": "color" }
+          "default": {
+            "$value": "{figma.color.icon.onbrand}",
+            "$type": "color"
+          },
+          "disabled": {
+            "$value": "{figma.color.icon.ondisabled}",
+            "$type": "color"
+          }
         }
       }
     }
@@ -178,6 +207,7 @@ The file must mirror the same values across all themes (start by copying one and
 ```
 
 Rules:
+
 - The root key uses **camelCase** (e.g. `myComp`, `iconButton`).
 - Nesting depth maps directly to the CSS variable name segments: `{root}.{variant}.{property}.{subproperty}.{state}` → `--root-variant-property-subproperty-state`.
 - Use semantic token references from the platform namespace (e.g. `{figma.color.bg.brand}`) — never raw hex values.
@@ -236,6 +266,7 @@ export default defineConfig({
 ```
 
 Rules:
+
 - Create **four files** (figma, penpot, sketch, framer) — one per theme.
 - `outDir` points to the component's source folder (where Terrazzo writes the generated `styles/{theme}.scss`).
 - `filename` in the CSS plugin is always `styles/{theme}.scss` — this is what the component's SCSS imports with `@import 'styles/{theme}'`.
@@ -305,6 +336,7 @@ export const Default: Story = {
 Add one exported story per meaningful variant (matching the component's `type` or primary prop values).
 
 Each `play` function must:
+
 - Verify the element is in the DOM
 - Test at least the primary interaction (click, hover, keyboard)
 - Assert on `args.action` call count where applicable

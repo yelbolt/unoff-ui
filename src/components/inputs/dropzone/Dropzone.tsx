@@ -69,7 +69,10 @@ export interface DropzoneState {
   blackList: Array<string>
 }
 
-export default class Dropzone extends React.Component<DropzoneProps, DropzoneState> {
+export default class Dropzone extends React.Component<
+  DropzoneProps,
+  DropzoneState
+> {
   stopLoading: number | undefined
 
   static defaultProps: Partial<DropzoneProps> = {
