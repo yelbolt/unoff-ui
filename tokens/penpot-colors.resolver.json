@@ -1,0 +1,20 @@
+{
+  "name": "Penpot Colors",
+  "version": "2025.10",
+  "description": "Color tokens for Penpot platform, including light/dark modes",
+  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "modifiers": {
+    "mode": {
+      "description": "Penpot light/dark modes",
+      "contexts": {
+        "penpotLight": [
+          { "$ref": "./platforms/penpot/modes/penpot-light.tokens.json" }
+        ],
+        "penpotDark": [
+          { "$ref": "./platforms/penpot/modes/penpot-dark.tokens.json" }
+        ]
+      },
+      "default": "penpotLight"
+    }
+  }
+}

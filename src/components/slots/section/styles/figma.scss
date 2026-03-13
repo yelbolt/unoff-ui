@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --section-background-color: var(--figma-color-bg);
-  --section-border-color: var(--figma-color-border);
+  --section-background-color: var(--figma-color-bg-default);
+  --section-border-color: var(--figma-color-border-default);
   --section-border-width: var(--size-pos-unit);
   --section-child-padding-default-bottom: var(--size-null);
   --section-child-padding-default-left: var(--size-pos-xsmall);
@@ -25,4 +25,3 @@
   --section-padding-right: var(--size-null);
   --section-padding-top: var(--size-pos-xxsmall);
 }
-

@@ -3,10 +3,9 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --drawer-background-color: var(--figma-color-bg);
-  --drawer-border-color: var(--figma-color-border);
+  --drawer-background-color: var(--figma-color-bg-default);
+  --drawer-border-color: var(--figma-color-border-default);
   --drawer-border-width: var(--size-pos-unit);
   --drawer-knob-position: var(--size-neg-xxxsmall);
   --drawer-knob-size: var(--size-pos-xxsmall);
 }
-

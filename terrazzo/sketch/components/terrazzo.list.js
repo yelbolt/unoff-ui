@@ -1,37 +1,44 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import tokensStudioCompat, {
+  cssTransform,
+  preprocessTokens,
+} from '../../plugins/tokens-studio-compat.js'
+
+const tokenPaths = [
+  './tokens/commons/commons.tokens.json',
+  './tokens/commons/modes/commons.effect-dark.tokens.json',
+  './tokens/commons/modes/commons.effect-light.tokens.json',
+  './tokens/platforms/sketch/modes/sketch-light.tokens.json',
+  './tokens/platforms/sketch/modes/sketch-dark.tokens.json',
+  './tokens/platforms/sketch/text.json',
+  './tokens/platforms/sketch/components/list.json',
+]
 
 export default defineConfig({
-  name: 'global',
-  tokens: [
-    './tokens/globals/color.json',
-    './tokens/globals/typography.json',
-    './tokens/globals/spacing.json',
-    './tokens/globals/effect.json',
-    './tokens/globals/radius.json',
-    './tokens/platforms/sketch/color.json',
-    './tokens/platforms/sketch/typography.json',
-    './tokens/platforms/sketch/components/list.json',
-  ],
+  name: 'Sketch List',
+  tokens: preprocessTokens(tokenPaths),
   outDir: './src/components/slots/list/',
   plugins: [
+    tokensStudioCompat(),
     css({
       filename: 'styles/sketch.scss',
+      transform: cssTransform,
       exclude: [
-        'sketch.color.*',
-        'font.*',
-        'size.*',
-        'shadow.*',
-        'border.*',
-        'grey.*',
-        'elevation.*',
+        'sketch.color.**',
+        'font.**',
+        'size.**',
+        'shadow.**',
+        'border.**',
+        'grey.**',
+        'alpha.**',
+        'elevation.**',
+        'text.**',
       ],
       baseSelector: ':root[data-theme="sketch"]',
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })

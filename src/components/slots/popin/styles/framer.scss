@@ -4,8 +4,8 @@
 
 :root[data-theme="framer"] {
   --popin-actions-gap: var(--size-pos-xxsmall);
-  --popin-background-color: var(--framer-color-bg);
-  --popin-border-color: transparent;
+  --popin-background-color: var(--framer-color-bg-default);
+  --popin-border-color: var(--grey-transparent);
   --popin-border-offset: var(--size-null);
   --popin-border-width: var(--size-null);
   --popin-breakpoint: 460px;
@@ -13,7 +13,7 @@
   --popin-content-padding-empty-left: var(--size-pos-small);
   --popin-content-padding-empty-right: var(--size-pos-small);
   --popin-content-padding-empty-top: var(--size-pos-small);
-  --popin-footer-border-color: transparent;
+  --popin-footer-border-color: var(--grey-transparent);
   --popin-footer-border-width: var(--size-null);
   --popin-footer-gap: var(--size-pos-xxsmall);
   --popin-footer-padding-bottom: var(--size-pos-msmall);
@@ -35,7 +35,6 @@
   --popin-radius: var(--border-radius-xxlarge);
   --popin-shadow-default: var(--elevation-500-modal-window);
   --popin-shadow-panel: var(--elevation-400-menu-panel);
-  --popin-text-color: var(--framer-color-text);
+  --popin-text-color: var(--framer-color-text-default);
   --popin-width-panel: 400px;
 }
-

@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --inputs-bar-border-color: var(--figma-color-border-selected);
+  --inputs-bar-border-color: var(--figma-color-border-selected-default);
   --inputs-bar-border-width: var(--size-pos-unit);
   --inputs-bar-gap-default: var(--size-pos-xxsmall);
   --inputs-bar-gap-inner: var(--size-null);
@@ -19,4 +19,3 @@
   --inputs-bar-radius: var(--border-radius-medium);
   --inputs-bar-width: var(--size-pos-xlarge);
 }
-

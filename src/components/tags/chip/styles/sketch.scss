@@ -6,11 +6,11 @@
   --chip-background-color-default: var(--sketch-color-accent-primary);
   --chip-background-color-hover: var(--sketch-color-accent-secondary);
   --chip-background-color-inactive: var(--sketch-color-background-tertiary);
-  --chip-background-color-on-background: color(srgb 1 1 1 / 0.4);
-  --chip-border-color-default: transparent;
-  --chip-border-color-hover: transparent;
-  --chip-border-color-inactive: transparent;
-  --chip-border-color-on-background: transparent;
+  --chip-background-color-on-background: rgb(100% 100% 100% / 0.4);
+  --chip-border-color-default: var(--grey-transparent);
+  --chip-border-color-hover: var(--grey-transparent);
+  --chip-border-color-inactive: var(--grey-transparent);
+  --chip-border-color-on-background: var(--grey-transparent);
   --chip-border-offset-default: var(--size-null);
   --chip-border-offset-hover: var(--size-null);
   --chip-border-offset-inactive: var(--size-null);
@@ -40,4 +40,3 @@
   --chip-text-weight-default: var(--font-weight-medium);
   --chip-text-weight-on-background: var(--font-weight-normal);
 }
-

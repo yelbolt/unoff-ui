@@ -3,10 +3,10 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --keyboard-shortcut-item-background-color: var(--framer-color-bg);
+  --keyboard-shortcut-item-background-color: var(--framer-color-bg-default);
   --keyboard-shortcut-item-gap: var(--size-pos-xxsmall);
   --keyboard-shortcut-item-key-background-color: var(--framer-color-bg-tertiary);
-  --keyboard-shortcut-item-key-border-color: transparent;
+  --keyboard-shortcut-item-key-border-color: var(--grey-transparent);
   --keyboard-shortcut-item-key-border-offset: var(--size-null);
   --keyboard-shortcut-item-key-border-width: var(--size-null);
   --keyboard-shortcut-item-key-gap: var(--size-pos-xunit);
@@ -27,4 +27,3 @@
   --keyboard-shortcut-item-separator-padding-right: var(--size-pos-xxxsmall);
   --keyboard-shortcut-item-separator-padding-top: var(--size-null);
 }
-

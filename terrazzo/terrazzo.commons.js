@@ -5,7 +5,7 @@ import tokensStudioCompat, {
 } from './plugins/tokens-studio-compat.js'
 
 export default defineConfig({
-  name: 'commons',
+  name: 'Commons Tokens',
   tokens: ['./tokens/commons.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [

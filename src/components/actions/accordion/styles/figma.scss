@@ -3,12 +3,12 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --accordion-border-color: var(--figma-color-border-disabled);
+  --accordion-border-color: var(--figma-color-border-disabled-default);
   --accordion-border-width: var(--size-pos-unit);
-  --accordion-icon-color-default: var(--figma-color-icon-secondary);
+  --accordion-icon-color-default: var(--figma-color-icon-secondary-default);
   --accordion-icon-color-disabled: var(--figma-color-icon-disabled);
-  --accordion-icon-color-expanded: var(--figma-color-icon);
-  --accordion-icon-color-hover: var(--figma-color-icon);
+  --accordion-icon-color-expanded: var(--figma-color-icon-default);
+  --accordion-icon-color-hover: var(--figma-color-icon-default);
   --accordion-padding-bottom: var(--size-pos-xxxsmall);
   --accordion-padding-left: var(--size-null);
   --accordion-padding-right: var(--size-null);
@@ -19,9 +19,8 @@
   --accordion-row-padding-left: var(--size-pos-xsmall);
   --accordion-row-padding-right: var(--size-pos-xsmall);
   --accordion-row-padding-top: var(--size-null);
-  --accordion-text-color-default: var(--figma-color-text-secondary);
+  --accordion-text-color-default: var(--figma-color-text-secondary-default);
   --accordion-text-color-disabled: var(--figma-color-text-disabled);
-  --accordion-text-color-expanded: var(--figma-color-text);
-  --accordion-text-color-hover: var(--figma-color-text);
+  --accordion-text-color-expanded: var(--figma-color-text-default);
+  --accordion-text-color-hover: var(--figma-color-text-default);
 }
-

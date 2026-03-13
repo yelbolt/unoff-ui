@@ -3,9 +3,9 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --consent-background-color: color(srgb 0 0 0 / 0.5);
-  --consent-banner-background-color: var(--figma-color-bg);
-  --consent-banner-border-color: var(--figma-color-border);
+  --consent-background-color: rgb(0% 0% 0% / 0.5);
+  --consent-banner-background-color: var(--figma-color-bg-default);
+  --consent-banner-border-color: var(--figma-color-border-default);
   --consent-banner-border-width: var(--size-pos-unit);
   --consent-banner-gap: var(--size-pos-xxsmall);
   --consent-banner-max-width: 400px;
@@ -19,4 +19,3 @@
   --consent-list-padding-right: var(--size-null);
   --consent-list-padding-top: var(--size-null);
 }
-

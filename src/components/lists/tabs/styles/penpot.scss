@@ -25,19 +25,25 @@
   --tabs-tab-background-color-default: var(--penpot-color-background-secondary);
   --tabs-tab-background-color-focus: var(--penpot-color-background-tertiary);
   --tabs-tab-background-color-hover: var(--penpot-color-background-secondary);
-  --tabs-tab-border-color-active: transparent;
-  --tabs-tab-border-color-alternative-focus: var(--penpot-color-accent-primary);
-  --tabs-tab-border-color-alternative-hover: transparent;
-  --tabs-tab-border-color-default: transparent;
-  --tabs-tab-border-color-focus: var(--penpot-color-accent-primary);
-  --tabs-tab-border-color-hover: transparent;
+  --tabs-tab-border-color-active: var(--grey-transparent);
+  --tabs-tab-border-color-alternative: var(--grey-transparent);
+  --tabs-tab-border-color-alternative-active: var(--grey-transparent);
+  --tabs-tab-border-color-alternative-focus: var(--penpot-color-accent-primary-default);
+  --tabs-tab-border-color-alternative-hover: var(--grey-transparent);
+  --tabs-tab-border-color-default: var(--grey-transparent);
+  --tabs-tab-border-color-focus: var(--penpot-color-accent-primary-default);
+  --tabs-tab-border-color-hover: var(--grey-transparent);
   --tabs-tab-border-offset-active: var(--size-null);
+  --tabs-tab-border-offset-alternative: var(--size-null);
+  --tabs-tab-border-offset-alternative-active: var(--size-null);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-alternative-hover: var(--size-null);
   --tabs-tab-border-offset-default: var(--size-null);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-hover: var(--size-null);
   --tabs-tab-border-width-active: var(--size-null);
+  --tabs-tab-border-width-alternative: var(--size-null);
+  --tabs-tab-border-width-alternative-active: var(--size-null);
   --tabs-tab-border-width-alternative-focus: var(--size-pos-unit);
   --tabs-tab-border-width-alternative-hover: var(--size-null);
   --tabs-tab-border-width-default: var(--size-null);
@@ -47,9 +53,9 @@
   --tabs-tab-gap-default: var(--size-pos-xxsmall);
   --tabs-tab-height-alternative: var(--size-pos-medium);
   --tabs-tab-height-default: var(--size-pos-medium);
-  --tabs-tab-icon-color-active: var(--penpot-color-accent-primary);
+  --tabs-tab-icon-color-active: var(--penpot-color-accent-primary-default);
   --tabs-tab-icon-color-alternative: var(--penpot-color-foreground-secondary);
-  --tabs-tab-icon-color-alternative-active: var(--penpot-color-accent-primary);
+  --tabs-tab-icon-color-alternative-active: var(--penpot-color-accent-primary-default);
   --tabs-tab-icon-color-alternative-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-icon-color-alternative-hover: var(--penpot-color-foreground-primary);
   --tabs-tab-icon-color-default: var(--penpot-color-foreground-secondary);
@@ -59,7 +65,7 @@
   --tabs-tab-icon-height-default: var(--size-pos-xsmall);
   --tabs-tab-icon-width-alternative: var(--size-pos-xsmall);
   --tabs-tab-icon-width-default: var(--size-pos-xsmall);
-  --tabs-tab-notification-background-color: var(--penpot-color-accent-primary);
+  --tabs-tab-notification-background-color: var(--penpot-color-accent-primary-default);
   --tabs-tab-notification-border-color-active: var(--penpot-color-background-quaternary);
   --tabs-tab-notification-border-color-alternative-active: var(--penpot-color-background-quaternary);
   --tabs-tab-notification-border-color-alternative-focus: var(--penpot-color-background-secondary);
@@ -94,9 +100,9 @@
   --tabs-tab-padding-with-icon-top: var(--size-null);
   --tabs-tab-radius-alternative: var(--size-null);
   --tabs-tab-radius-default: var(--border-radius-xlarge);
-  --tabs-tab-text-color-active: var(--penpot-color-accent-primary);
+  --tabs-tab-text-color-active: var(--penpot-color-accent-primary-default);
   --tabs-tab-text-color-alternative: var(--penpot-color-foreground-secondary);
-  --tabs-tab-text-color-alternative-active: var(--penpot-color-accent-primary);
+  --tabs-tab-text-color-alternative-active: var(--penpot-color-accent-primary-default);
   --tabs-tab-text-color-alternative-focus: var(--penpot-color-foreground-primary);
   --tabs-tab-text-color-alternative-hover: var(--penpot-color-foreground-primary);
   --tabs-tab-text-color-default: var(--penpot-color-foreground-secondary);
@@ -115,4 +121,3 @@
   --tabs-tab-text-weight-focus: var(--font-weight-medium);
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
 }
-

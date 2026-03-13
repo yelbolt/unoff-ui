@@ -18,21 +18,21 @@
   --input-background-color-hover: var(--penpot-color-background-quaternary);
   --input-background-color-onselected-default: var(--penpot-color-background-tertiary);
   --input-background-color-onselected-hover: var(--penpot-color-background-tertiary);
-  --input-border-color-default: transparent;
+  --input-border-color-default: var(--grey-transparent);
   --input-border-color-disabled: var(--penpot-color-background-quaternary);
-  --input-border-color-empty-default: transparent;
+  --input-border-color-empty-default: var(--grey-transparent);
   --input-border-color-empty-error-default: var(--penpot-color-accent-error);
   --input-border-color-empty-error-focus: var(--penpot-color-foreground-error);
   --input-border-color-empty-error-hover: var(--penpot-color-accent-error);
-  --input-border-color-empty-focus: var(--penpot-color-accent-primary);
-  --input-border-color-empty-hover: color(srgb 0 0 0 / 0);
+  --input-border-color-empty-focus: var(--penpot-color-accent-primary-default);
+  --input-border-color-empty-hover: var(--grey-transparent);
   --input-border-color-error-default: var(--penpot-color-accent-error);
   --input-border-color-error-focus: var(--penpot-color-foreground-error);
   --input-border-color-error-hover: var(--penpot-color-accent-error);
-  --input-border-color-focus: var(--penpot-color-accent-primary);
-  --input-border-color-hover: color(srgb 0 0 0 / 0);
-  --input-border-color-onselected-default: var(--penpot-color-accent-primary);
-  --input-border-color-onselected-hover: var(--penpot-color-accent-primary);
+  --input-border-color-focus: var(--penpot-color-accent-primary-default);
+  --input-border-color-hover: var(--grey-transparent);
+  --input-border-color-onselected-default: var(--penpot-color-accent-primary-default);
+  --input-border-color-onselected-hover: var(--penpot-color-accent-primary-default);
   --input-border-offset-default: var(--size-null);
   --input-border-offset-disabled: var(--size-pos-unit);
   --input-border-offset-empty-default: var(--size-null);
@@ -65,15 +65,15 @@
   --input-border-width-onselected-hover: var(--size-pos-unit);
   --input-clearable-right: 6px;
   --input-clearable-top: 6px;
-  --input-color-chip-border-default: inset 0 0 0 var(--size-pos-unit) color(srgb 0 0 0 / 0.1);
-  --input-color-chip-border-focus: inset 0 0 0 var(--size-pos-xunit) var(--penpot-color-accent-primary);
+  --input-color-width: 108px;
+  --input-color-chip-border-default: inset 0px 0px 0px 1px color(srgb 0 0 0 / 0.1);
+  --input-color-chip-border-focus: inset 0px 0px 0px 2px color(srgb 0.49411764705882355 1 0.9607843137254902 / 1);
   --input-color-chip-height: var(--size-pos-xsmall);
   --input-color-chip-left: var(--size-pos-xxsmall);
-  --input-color-chip-opacity-default: 1;
-  --input-color-chip-opacity-disabled: 0.5;
+  --input-color-chip-opacity-default: var(--alpha-1000);
+  --input-color-chip-opacity-disabled: var(--alpha-500);
   --input-color-chip-radius: var(--border-radius-medium);
   --input-color-chip-width: var(--size-pos-xsmall);
-  --input-color-width: 108px;
   --input-gap: var(--size-pos-xxsmall);
   --input-height: var(--size-pos-medium);
   --input-icon-color: var(--penpot-color-icon-default);
@@ -117,7 +117,7 @@
   --input-text-color-error-hover: var(--penpot-color-foreground-primary);
   --input-text-color-focus: var(--penpot-color-foreground-primary);
   --input-text-color-hover: var(--penpot-color-foreground-primary);
-  --input-text-font-family: var(--font-stack);
+  --input-text-font-family: var(--text-font-family);
   --input-text-font-size: var(--font-size-small);
   --input-text-font-weight: var(--font-weight-normal);
   --input-text-letter-spacing: var(--font-letter-spacing-pos-large);
@@ -136,7 +136,7 @@
   --input-text-placeholder-color-focus: var(--penpot-color-foreground-secondary);
   --input-text-placeholder-color-hover: var(--penpot-color-foreground-secondary);
   --input-textarea-background-color: var(--penpot-color-background-tertiary);
-  --input-textarea-border-color: color(srgb 0 0 0 / 0);
+  --input-textarea-border-color: var(--grey-transparent);
   --input-textarea-border-offset: var(--size-null);
   --input-textarea-border-width: var(--size-null);
   --input-textarea-min-height: var(--size-pos-xxlarge);
@@ -147,4 +147,3 @@
   --input-textarea-text-color: var(--penpot-color-foreground-primary);
   --input-textarea-text-placeholder-color: var(--penpot-color-foreground-secondary);
 }
-

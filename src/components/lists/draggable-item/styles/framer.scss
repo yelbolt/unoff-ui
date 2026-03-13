@@ -3,11 +3,11 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --draggable-item-background-color-default: var(--framer-color-bg);
+  --draggable-item-background-color-default: var(--framer-color-bg-default);
   --draggable-item-background-color-pressed: var(--framer-color-bg-secondary);
   --draggable-item-background-color-selected: var(--framer-color-tint-dimmed);
   --draggable-item-gap: var(--size-pos-xxsmall);
-  --draggable-item-ghost-color: var(--framer-color-tint);
+  --draggable-item-ghost-color: var(--framer-color-tint-default);
   --draggable-item-ghost-height: var(--size-pos-xunit);
   --draggable-item-ghost-inset: var(--size-neg-unit);
   --draggable-item-padding-bottom: var(--size-pos-xunit);
@@ -19,4 +19,3 @@
   --draggable-item-template-columns: repeat(76, 1fr);
   --draggable-item-template-rows: var(--size-pos-medium);
 }
-

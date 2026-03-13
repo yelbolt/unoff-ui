@@ -4,7 +4,7 @@
 
 :root[data-theme="sketch"] {
   --actions-list-background-color: var(--sketch-color-background-primary);
-  --actions-list-border-color: transparent;
+  --actions-list-border-color: var(--grey-transparent);
   --actions-list-border-offset: var(--size-null);
   --actions-list-border-width: var(--size-null);
   --actions-list-caret-color-default: var(--sketch-color-foreground-primary);
@@ -22,7 +22,7 @@
   --actions-list-divider-margin-left: var(--size-null);
   --actions-list-divider-margin-right: var(--size-null);
   --actions-list-divider-margin-top: 11px;
-  --actions-list-item-background-color-default: transparent;
+  --actions-list-item-background-color-default: var(--grey-transparent);
   --actions-list-item-background-color-disabled: var(--sketch-color-background-primary);
   --actions-list-item-background-color-focus: var(--sketch-color-background-secondary);
   --actions-list-item-background-color-hover: var(--sketch-color-background-secondary);
@@ -36,6 +36,9 @@
   --actions-list-item-padding-default-right: var(--size-pos-xxsmall);
   --actions-list-item-padding-default-top: var(--size-null);
   --actions-list-item-padding-selected-bottom: var(--size-null);
+  --actions-list-item-padding-selected-left: var(--size-pos-xxsmall);
+  --actions-list-item-padding-selected-right: var(--size-pos-xxsmall);
+  --actions-list-item-padding-selected-top: var(--size-null);
   --actions-list-item-padding-selected-focus-bottom: var(--size-null);
   --actions-list-item-padding-selected-focus-left: var(--size-pos-xxsmall);
   --actions-list-item-padding-selected-focus-right: var(--size-pos-xxsmall);
@@ -44,9 +47,6 @@
   --actions-list-item-padding-selected-hover-left: var(--size-pos-xxsmall);
   --actions-list-item-padding-selected-hover-right: var(--size-pos-xxsmall);
   --actions-list-item-padding-selected-hover-top: var(--size-null);
-  --actions-list-item-padding-selected-left: var(--size-pos-xxsmall);
-  --actions-list-item-padding-selected-right: var(--size-pos-xxsmall);
-  --actions-list-item-padding-selected-top: var(--size-null);
   --actions-list-item-radius: var(--border-radius-large);
   --actions-list-item-text-color-default: var(--sketch-color-foreground-primary);
   --actions-list-item-text-color-disabled: var(--sketch-color-foreground-disabled);
@@ -55,7 +55,7 @@
   --actions-list-item-text-color-selected: var(--sketch-color-accent-primary);
   --actions-list-item-text-color-selected-focus: var(--sketch-color-accent-primary);
   --actions-list-item-text-color-selected-hover: var(--sketch-color-accent-primary);
-  --actions-list-item-text-font-family: var(--font-stack);
+  --actions-list-item-text-font-family: var(--text-font-family);
   --actions-list-item-text-font-size: var(--font-size-medium);
   --actions-list-item-text-font-weight: var(--font-weight-medium);
   --actions-list-item-text-letter-spacing: var(--font-letter-spacing-pos-medium);
@@ -71,7 +71,7 @@
   --actions-list-radius: var(--border-radius-xxlarge);
   --actions-list-shadow: var(--elevation-300-tooltip);
   --actions-list-spot-background-color: var(--sketch-color-background-primary);
-  --actions-list-spot-border-color: transparent;
+  --actions-list-spot-border-color: var(--grey-transparent);
   --actions-list-spot-border-width: var(--size-null);
   --actions-list-spot-height: var(--size-pos-xsmall);
   --actions-list-spot-icon-color: var(--sketch-color-foreground-primary);
@@ -103,4 +103,3 @@
   --actions-list-tick-width: var(--size-pos-xsmall);
   --actions-list-title-text-transform: uppercase;
 }
-

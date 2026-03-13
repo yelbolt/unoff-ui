@@ -25,7 +25,7 @@
   --knob-label-arrow-background-color-hover: var(--penpot-color-background-tertiary);
   --knob-label-arrow-border-color-default: var(--penpot-color-background-quaternary);
   --knob-label-arrow-border-color-disabled: var(--penpot-color-background-quaternary);
-  --knob-label-arrow-border-color-focus: var(--penpot-color-accent-primary);
+  --knob-label-arrow-border-color-focus: var(--penpot-color-accent-primary-default);
   --knob-label-arrow-border-color-hover: var(--penpot-color-background-quaternary);
   --knob-label-arrow-border-width: var(--size-pos-unit);
   --knob-label-arrow-height: var(--size-pos-xxsmall);
@@ -37,7 +37,8 @@
   --knob-label-background-color-hover: var(--penpot-color-background-tertiary);
   --knob-label-border-color-default: var(--penpot-color-background-quaternary);
   --knob-label-border-color-disabled: var(--penpot-color-background-quaternary);
-  --knob-label-border-color-focus: var(--penpot-color-accent-primary);
+  --knob-label-border-color-focus: var(--penpot-color-accent-primary-default);
+  --knob-label-border-color-hover: var(--penpot-color-background-quaternary);
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
   --knob-label-height: var(--size-pos-msmall);
@@ -48,9 +49,11 @@
   --knob-label-radius: var(--border-radius-large);
   --knob-label-text-color-default: var(--penpot-color-foreground-primary);
   --knob-label-text-color-disabled: var(--penpot-color-foreground-secondary);
+  --knob-label-text-color-focus: var(--penpot-color-foreground-primary);
+  --knob-label-text-color-hover: var(--penpot-color-foreground-primary);
   --knob-min-width: var(--size-pos-medium);
   --knob-tooltip-arrow-background-color: var(--penpot-color-foreground-primary);
-  --knob-tooltip-arrow-border-color: transparent;
+  --knob-tooltip-arrow-border-color: var(--grey-transparent);
   --knob-tooltip-arrow-border-width: var(--size-null);
   --knob-tooltip-arrow-height: var(--size-pos-xxxsmall);
   --knob-tooltip-arrow-radius: var(--border-radius-null);
@@ -66,4 +69,3 @@
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-top: var(--size-neg-xxxsmall);
 }
-

@@ -10,7 +10,7 @@
   --actions-item-background-color-focus: var(--sketch-color-accent-disabled);
   --actions-item-background-color-hover: var(--sketch-color-background-secondary);
   --actions-item-border-color: var(--sketch-color-border-primary);
-  --actions-item-border-secondary-color-default: transparent;
+  --actions-item-border-secondary-color-default: var(--grey-transparent);
   --actions-item-border-secondary-color-focus: var(--sketch-color-accent-primary);
   --actions-item-border-secondary-offset-default: var(--size-null);
   --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
@@ -24,4 +24,3 @@
   --actions-item-padding-right: var(--size-pos-xsmall);
   --actions-item-padding-top: var(--size-pos-xsmall);
 }
-

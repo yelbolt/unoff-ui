@@ -6,11 +6,11 @@
   --chip-background-color-default: var(--penpot-color-accent-primary-muted);
   --chip-background-color-hover: var(--penpot-color-accent-tertiary);
   --chip-background-color-inactive: var(--penpot-color-background-tertiary);
-  --chip-background-color-on-background: color(srgb 1 1 1 / 0.4);
-  --chip-border-color-default: transparent;
+  --chip-background-color-on-background: rgb(100% 100% 100% / 0.4);
+  --chip-border-color-default: var(--grey-transparent);
   --chip-border-color-hover: var(--penpot-color-accent-tertiary);
-  --chip-border-color-inactive: transparent;
-  --chip-border-color-on-background: transparent;
+  --chip-border-color-inactive: var(--grey-transparent);
+  --chip-border-color-on-background: var(--grey-transparent);
   --chip-border-offset-default: var(--size-null);
   --chip-border-offset-hover: var(--size-neg-unit);
   --chip-border-offset-inactive: var(--size-null);
@@ -30,7 +30,7 @@
   --chip-padding-right: var(--size-pos-xxxsmall);
   --chip-padding-top: var(--size-null);
   --chip-radius: var(--border-radius-large);
-  --chip-text-color-default: var(--penpot-color-accent-primary);
+  --chip-text-color-default: var(--penpot-color-accent-primary-default);
   --chip-text-color-hover: var(--penpot-color-foreground-primary);
   --chip-text-color-inactive: var(--penpot-color-foreground-secondary);
   --chip-text-color-on-background: var(--grey-1000);
@@ -40,4 +40,3 @@
   --chip-text-weight-default: var(--font-weight-accent);
   --chip-text-weight-on-background: var(--font-weight-normal);
 }
-

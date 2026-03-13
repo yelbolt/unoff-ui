@@ -2,7 +2,7 @@ import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
-  name: 'global',
+  name: 'Framer Icons',
   tokens: ['./tokens/platforms/framer/icon.json'],
   outDir: './src/styles/icons/',
   plugins: [
@@ -12,8 +12,6 @@ export default defineConfig({
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })

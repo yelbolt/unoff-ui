@@ -3,11 +3,10 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --sortable-list-border-color: var(--figma-color-border);
+  --sortable-list-border-color: var(--figma-color-border-default);
   --sortable-list-border-width: var(--size-pos-unit);
   --sortable-list-padding-bottom: var(--size-pos-unit);
   --sortable-list-padding-left: var(--size-null);
   --sortable-list-padding-right: var(--size-null);
   --sortable-list-padding-top: var(--size-pos-unit);
 }
-

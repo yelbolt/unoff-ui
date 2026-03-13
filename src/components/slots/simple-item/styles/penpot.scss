@@ -6,8 +6,8 @@
   --simple-item-background-color-default: var(--penpot-color-background-primary);
   --simple-item-background-color-focus: var(--penpot-color-accent-primary-muted);
   --simple-item-background-color-hover: var(--penpot-color-background-tertiary);
-  --simple-item-border-color-default: transparent;
-  --simple-item-border-color-focus: var(--penpot-color-accent-primary);
+  --simple-item-border-color-default: var(--grey-transparent);
+  --simple-item-border-color-focus: var(--penpot-color-accent-primary-default);
   --simple-item-border-offset-default: var(--size-null);
   --simple-item-border-offset-focus: var(--size-neg-unit);
   --simple-item-border-radius: var(--border-radius-small);
@@ -24,4 +24,3 @@
   --simple-item-square-min-width: var(--size-pos-medium);
   --simple-item-square-width: var(--size-pos-medium);
 }
-

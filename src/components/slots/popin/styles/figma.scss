@@ -4,8 +4,8 @@
 
 :root[data-theme="figma"] {
   --popin-actions-gap: var(--size-pos-xxsmall);
-  --popin-background-color: var(--figma-color-bg);
-  --popin-border-color: transparent;
+  --popin-background-color: var(--figma-color-bg-default);
+  --popin-border-color: var(--grey-transparent);
   --popin-border-offset: var(--size-null);
   --popin-border-width: var(--size-null);
   --popin-breakpoint: 460px;
@@ -13,14 +13,14 @@
   --popin-content-padding-empty-left: var(--size-pos-small);
   --popin-content-padding-empty-right: var(--size-pos-small);
   --popin-content-padding-empty-top: var(--size-pos-small);
-  --popin-footer-border-color: transparent;
+  --popin-footer-border-color: var(--grey-transparent);
   --popin-footer-border-width: var(--size-null);
   --popin-footer-gap: var(--size-pos-xxsmall);
   --popin-footer-padding-bottom: var(--size-pos-xxsmall);
   --popin-footer-padding-left: var(--size-pos-xsmall);
   --popin-footer-padding-right: var(--size-pos-xsmall);
   --popin-footer-padding-top: var(--size-pos-xxsmall);
-  --popin-header-border-color: var(--figma-color-border);
+  --popin-header-border-color: var(--figma-color-border-default);
   --popin-header-border-width: var(--size-pos-unit);
   --popin-header-gap: var(--size-pos-xxsmall);
   --popin-header-height: var(--size-pos-large);
@@ -35,7 +35,6 @@
   --popin-radius: var(--border-radius-xxlarge);
   --popin-shadow-default: var(--elevation-500-modal-window);
   --popin-shadow-panel: var(--elevation-400-menu-panel);
-  --popin-text-color: var(--figma-color-text);
+  --popin-text-color: var(--figma-color-text-default);
   --popin-width-panel: 400px;
 }
-

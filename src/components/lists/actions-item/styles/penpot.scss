@@ -10,8 +10,8 @@
   --actions-item-background-color-focus: var(--penpot-color-accent-primary-muted);
   --actions-item-background-color-hover: var(--penpot-color-background-quaternary);
   --actions-item-border-color: var(--penpot-color-background-quaternary);
-  --actions-item-border-secondary-color-default: transparent;
-  --actions-item-border-secondary-color-focus: var(--penpot-color-accent-primary);
+  --actions-item-border-secondary-color-default: var(--grey-transparent);
+  --actions-item-border-secondary-color-focus: var(--penpot-color-accent-primary-default);
   --actions-item-border-secondary-offset-default: var(--size-null);
   --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
   --actions-item-border-secondary-width-default: var(--size-null);
@@ -24,4 +24,3 @@
   --actions-item-padding-right: var(--size-pos-xsmall);
   --actions-item-padding-top: var(--size-pos-xsmall);
 }
-

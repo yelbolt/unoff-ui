@@ -6,12 +6,12 @@
   --actions-item-actions-gap: var(--size-pos-xxsmall);
   --actions-item-asset-height: var(--size-pos-xxxlarge);
   --actions-item-asset-min-width: var(--size-pos-xxxlarge);
-  --actions-item-background-color-default: var(--figma-color-bg);
-  --actions-item-background-color-focus: var(--figma-color-bg-selected);
+  --actions-item-background-color-default: var(--figma-color-bg-default);
+  --actions-item-background-color-focus: var(--figma-color-bg-selected-default);
   --actions-item-background-color-hover: var(--figma-color-bg-hover);
-  --actions-item-border-color: var(--figma-color-border-disabled);
-  --actions-item-border-secondary-color-default: transparent;
-  --actions-item-border-secondary-color-focus: var(--figma-color-border-selected);
+  --actions-item-border-color: var(--figma-color-border-disabled-default);
+  --actions-item-border-secondary-color-default: var(--grey-transparent);
+  --actions-item-border-secondary-color-focus: var(--figma-color-border-selected-default);
   --actions-item-border-secondary-offset-default: var(--size-null);
   --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
   --actions-item-border-secondary-width-default: var(--size-null);
@@ -24,4 +24,3 @@
   --actions-item-padding-right: var(--size-pos-xsmall);
   --actions-item-padding-top: var(--size-pos-xsmall);
 }
-

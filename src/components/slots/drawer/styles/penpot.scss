@@ -4,10 +4,9 @@
 
 :root[data-theme="penpot"] {
   --drawer-background-color: var(--penpot-color-background-primary);
-  --drawer-border-color: transparent;
+  --drawer-border-color: var(--grey-transparent);
   --drawer-border-style: solid;
   --drawer-border-width: var(--size-null);
   --drawer-knob-position: var(--size-neg-xxxsmall);
   --drawer-knob-size: var(--size-pos-xxsmall);
 }
-

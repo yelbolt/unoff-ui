@@ -181,7 +181,7 @@
           },
           "weight": {
             "$value": "{font.weight.medium}",
-            "$type": "dimension"
+            "$type": "fontWeights"
           }
         },
         "letterSpacing": {
@@ -190,7 +190,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.default}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "color": {
           "default": {

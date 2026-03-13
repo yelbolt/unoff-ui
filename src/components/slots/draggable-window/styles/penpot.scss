@@ -12,10 +12,9 @@
   --draggable-window-content-padding-left: var(--size-pos-xxsmall);
   --draggable-window-content-padding-right: var(--size-pos-xxsmall);
   --draggable-window-content-padding-top: var(--size-pos-xxsmall);
-  --draggable-window-header-border-color: transparent;
+  --draggable-window-header-border-color: var(--grey-transparent);
   --draggable-window-header-border-width: var(--size-null);
   --draggable-window-radius: var(--border-radius-xxlarge);
   --draggable-window-shadow: none;
   --draggable-window-width: 320px;
 }
-

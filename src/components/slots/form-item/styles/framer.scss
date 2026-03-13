@@ -25,13 +25,12 @@
   --form-item-label-margin-multiline-left: var(--size-null);
   --form-item-label-margin-multiline-right: var(--size-null);
   --form-item-label-margin-multiline-top: var(--size-pos-xxsmall);
-  --form-item-label-width: 96px;
-  --form-item-min-width: var(--size-pos-medium);
+  --form-item-label-width: var(--size-pos-huge);
+  --form-item-min-height: var(--size-pos-medium);
   --form-item-padding-bottom: var(--size-pos-xunit);
   --form-item-padding-left: var(--size-pos-xxsmall);
   --form-item-padding-right: var(--size-null);
   --form-item-padding-top: var(--size-pos-xunit);
-  --form-item-text-color-default: var(--framer-color-text);
+  --form-item-text-color-default: var(--framer-color-text-default);
   --form-item-text-color-disabled: var(--framer-color-text-tertiary);
 }
-

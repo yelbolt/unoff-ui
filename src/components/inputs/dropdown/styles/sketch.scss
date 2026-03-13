@@ -7,10 +7,12 @@
   --dropdown-background-color-disabled: var(--sketch-color-background-secondary);
   --dropdown-background-color-focus: var(--sketch-color-background-tertiary);
   --dropdown-background-color-hover: var(--sketch-color-background-secondary);
-  --dropdown-border-color-default: transparent;
-  --dropdown-border-color-disabled: transparent;
+  --dropdown-background-color-on-selected: var(--sketch-color-accent-tertiary);
+  --dropdown-border-color-default: var(--grey-transparent);
+  --dropdown-border-color-disabled: var(--grey-transparent);
   --dropdown-border-color-focus: var(--sketch-color-accent-primary);
-  --dropdown-border-color-hover: transparent;
+  --dropdown-border-color-hover: var(--grey-transparent);
+  --dropdown-border-color-on-selected: var(--sketch-color-accent-primary);
   --dropdown-border-offset-default: var(--size-null);
   --dropdown-border-offset-disabled: var(--size-null);
   --dropdown-border-offset-focus: var(--size-neg-unit);
@@ -43,4 +45,3 @@
   --dropdown-text-color-focus: var(--sketch-color-foreground-primary);
   --dropdown-text-color-hover: var(--sketch-color-foreground-primary);
 }
-

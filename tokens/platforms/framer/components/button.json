@@ -67,7 +67,7 @@
           },
           "weight": {
             "$value": "{font.weight.bold}",
-            "$type": "dimension"
+            "$type": "fontWeights"
           }
         },
         "letterSpacing": {
@@ -76,7 +76,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.default}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "decoration": {
           "$value": "none",

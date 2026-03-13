@@ -3,9 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="penpot"] {
-  --color-chip-border-color: color(srgb 0 0 0 / 0.1);
+  --color-chip-border-color: rgb(0% 0% 0% / 0.1);
   --color-chip-border-offset: var(--size-neg-unit);
   --color-chip-border-width: var(--size-pos-unit);
   --color-chip-radius: var(--border-radius-small);
 }
-

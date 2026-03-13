@@ -294,7 +294,7 @@
       }
     },
     "weight": {
-      "$type": "number",
+      "$type": "fontWeights",
       "$extensions": {
         "com.figma.scopes": ["FONT_STYLE"]
       },
@@ -315,7 +315,7 @@
       }
     },
     "lineHeight": {
-      "$type": "dimension",
+      "$type": "number",
       "$extensions": {
         "com.figma.scopes": ["LINE_HEIGHT"]
       },

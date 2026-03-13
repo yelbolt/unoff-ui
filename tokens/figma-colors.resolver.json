@@ -1,0 +1,21 @@
+{
+  "name": "Figma Colors",
+  "version": "2025.10",
+  "description": "Color tokens for Figma platform, including light/dark/figjam modes",
+  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "modifiers": {
+    "mode": {
+      "description": "Figma light/dark/figjam modes",
+      "contexts": {
+        "figmaLight": [
+          { "$ref": "./platforms/figma/modes/figma-light.tokens.json" }
+        ],
+        "figmaDark": [
+          { "$ref": "./platforms/figma/modes/figma-dark.tokens.json" }
+        ],
+        "figjam": [{ "$ref": "./platforms/figma/modes/figjam.tokens.json" }]
+      },
+      "default": "figmaLight"
+    }
+  }
+}

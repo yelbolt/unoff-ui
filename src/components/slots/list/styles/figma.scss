@@ -4,8 +4,8 @@
 
 :root[data-theme="figma"] {
   --list-background-color-alternate: var(--figma-color-bg-secondary);
-  --list-background-color-default: var(--figma-color-bg);
-  --list-border-color: var(--figma-color-border);
+  --list-background-color-default: var(--figma-color-bg-default);
+  --list-border-color: var(--figma-color-border-default);
   --list-border-width: var(--size-pos-unit);
   --list-message-padding-bottom: var(--size-pos-xsmall);
   --list-message-padding-left: var(--size-pos-xsmall);
@@ -16,4 +16,3 @@
   --list-padding-right: var(--size-null);
   --list-padding-top: var(--size-pos-unit);
 }
-

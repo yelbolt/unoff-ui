@@ -1,0 +1,20 @@
+{
+  "name": "Sketch Colors",
+  "version": "2025.10",
+  "description": "Color tokens for Sketch platform, including light/dark modes",
+  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "modifiers": {
+    "mode": {
+      "description": "Sketch light/dark modes",
+      "contexts": {
+        "sketchLight": [
+          { "$ref": "./platforms/sketch/modes/sketch-light.tokens.json" }
+        ],
+        "sketchDark": [
+          { "$ref": "./platforms/sketch/modes/sketch-dark.tokens.json" }
+        ]
+      },
+      "default": "sketchLight"
+    }
+  }
+}

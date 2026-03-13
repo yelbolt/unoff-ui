@@ -8,12 +8,12 @@
   --card-actions-padding-left: var(--size-pos-xxsmall);
   --card-actions-padding-right: var(--size-pos-xxsmall);
   --card-actions-padding-top: var(--size-pos-xxsmall);
-  --card-background-color-default: var(--figma-color-bg);
-  --card-background-color-focus: var(--figma-color-bg-selected);
+  --card-background-color-default: var(--figma-color-bg-default);
+  --card-background-color-focus: var(--figma-color-bg-selected-default);
   --card-background-color-hover: var(--figma-color-bg-hover);
-  --card-border-color-default: transparent;
-  --card-border-color-focus: var(--figma-color-border-selected);
-  --card-border-color-hover: transparent;
+  --card-border-color-default: var(--grey-transparent);
+  --card-border-color-focus: var(--figma-color-border-selected-default);
+  --card-border-color-hover: var(--grey-transparent);
   --card-border-offset-default: var(--size-null);
   --card-border-offset-focus: var(--size-neg-unit);
   --card-border-offset-hover: var(--size-null);
@@ -30,4 +30,3 @@
   --card-ratio: 2 / 1;
   --card-width: 200px;
 }
-

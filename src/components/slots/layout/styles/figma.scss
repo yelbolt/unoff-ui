@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --layout-background-color: var(--figma-color-bg);
-  --layout-block-border-color: var(--figma-color-border);
+  --layout-background-color: var(--figma-color-bg-default);
+  --layout-block-border-color: var(--figma-color-border-default);
   --layout-block-border-width: var(--size-pos-unit);
   --layout-block-padding-bottom: var(--size-pos-xxsmall);
   --layout-block-padding-left: var(--size-null);
@@ -14,10 +14,9 @@
   --layout-centered-padding-left: var(--size-pos-small);
   --layout-centered-padding-right: var(--size-pos-small);
   --layout-centered-padding-top: var(--size-pos-small);
-  --layout-distributed-gap: var(--size-pos-xxsmall);
+  --layout-distributed-gap: var(--size-pos-small);
   --layout-list-padding-bottom: var(--size-null);
   --layout-list-padding-left: var(--size-null);
   --layout-list-padding-right: var(--size-null);
   --layout-list-padding-top: var(--size-pos-xxsmall);
 }
-

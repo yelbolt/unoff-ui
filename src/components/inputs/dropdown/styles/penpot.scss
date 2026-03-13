@@ -8,11 +8,11 @@
   --dropdown-background-color-focus: var(--penpot-color-background-tertiary);
   --dropdown-background-color-hover: var(--penpot-color-background-quaternary);
   --dropdown-background-color-on-selected: var(--penpot-color-background-quaternary);
-  --dropdown-border-color-default: color(srgb 0 0 0 / 0);
+  --dropdown-border-color-default: var(--grey-transparent);
   --dropdown-border-color-disabled: var(--penpot-color-background-quaternary);
-  --dropdown-border-color-focus: var(--penpot-color-accent-primary);
-  --dropdown-border-color-hover: color(srgb 0 0 0 / 0);
-  --dropdown-border-color-on-selected: var(--penpot-color-accent-primary);
+  --dropdown-border-color-focus: var(--penpot-color-accent-primary-default);
+  --dropdown-border-color-hover: var(--grey-transparent);
+  --dropdown-border-color-on-selected: var(--penpot-color-accent-primary-default);
   --dropdown-border-offset-default: var(--size-null);
   --dropdown-border-offset-disabled: var(--size-pos-unit);
   --dropdown-border-offset-focus: var(--size-pos-unit);
@@ -45,4 +45,3 @@
   --dropdown-text-color-focus: var(--penpot-color-foreground-primary);
   --dropdown-text-color-hover: var(--penpot-color-foreground-primary);
 }
-

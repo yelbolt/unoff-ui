@@ -32,6 +32,7 @@
 
   &:hover {
     --knob-label-background-color: var(--knob-label-background-color-hover);
+    --knob-label-text-color: var(--knob-label-text-color-hover);
     --knob-label-arrow-background-color: var(
       --knob-label-arrow-background-color-hover
     );
@@ -44,6 +45,7 @@
     --knob-label-background-color: var(--knob-label-background-color-focus);
     --knob-label-border-color: var(--knob-label-border-color-focus);
     --knob-label-border-width: var(--knob-label-border-width-focus);
+    --knob-label-text-color: var(--knob-label-text-color-focus);
     --knob-label-arrow-background-color: var(
       --knob-label-arrow-background-color-focus
     );

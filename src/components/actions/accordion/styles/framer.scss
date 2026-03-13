@@ -5,10 +5,10 @@
 :root[data-theme="framer"] {
   --accordion-border-color: var(--framer-color-divider);
   --accordion-border-width: var(--size-pos-unit);
-  --accordion-icon-color-default: var(--framer-color-text);
+  --accordion-icon-color-default: var(--framer-color-text-default);
   --accordion-icon-color-disabled: var(--framer-color-text-tertiary);
-  --accordion-icon-color-expanded: var(--framer-color-text);
-  --accordion-icon-color-hover: var(--framer-color-text);
+  --accordion-icon-color-expanded: var(--framer-color-text-default);
+  --accordion-icon-color-hover: var(--framer-color-text-default);
   --accordion-padding-bottom: var(--size-pos-xxxsmall);
   --accordion-padding-left: var(--size-null);
   --accordion-padding-right: var(--size-null);
@@ -19,9 +19,8 @@
   --accordion-row-padding-left: var(--size-pos-xsmall);
   --accordion-row-padding-right: var(--size-pos-xsmall);
   --accordion-row-padding-top: var(--size-null);
-  --accordion-text-color-default: var(--framer-color-text);
+  --accordion-text-color-default: var(--framer-color-text-default);
   --accordion-text-color-disabled: var(--framer-color-text-tertiary);
-  --accordion-text-color-expanded: var(--framer-color-text);
-  --accordion-text-color-hover: var(--framer-color-text);
+  --accordion-text-color-expanded: var(--framer-color-text-default);
+  --accordion-text-color-hover: var(--framer-color-text-default);
 }
-

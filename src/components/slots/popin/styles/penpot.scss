@@ -13,14 +13,14 @@
   --popin-content-padding-empty-left: var(--size-pos-medium);
   --popin-content-padding-empty-right: var(--size-pos-medium);
   --popin-content-padding-empty-top: var(--size-pos-medium);
-  --popin-footer-border-color: transparent;
+  --popin-footer-border-color: var(--grey-transparent);
   --popin-footer-border-width: var(--size-null);
   --popin-footer-gap: var(--size-pos-xxsmall);
   --popin-footer-padding-bottom: var(--size-pos-medium);
   --popin-footer-padding-left: var(--size-pos-medium);
   --popin-footer-padding-right: var(--size-pos-medium);
   --popin-footer-padding-top: var(--size-pos-xxsmall);
-  --popin-header-border-color: transparent;
+  --popin-header-border-color: var(--grey-transparent);
   --popin-header-border-width: var(--size-null);
   --popin-header-gap: var(--size-pos-xxsmall);
   --popin-header-height: var(--size-pos-large);
@@ -38,4 +38,3 @@
   --popin-text-color: var(--penpot-color-foreground-primary);
   --popin-width-panel: 460px;
 }
-

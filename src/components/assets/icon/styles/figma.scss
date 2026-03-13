@@ -4,9 +4,8 @@
 
 :root[data-theme="figma"] {
   --icon-height: var(--size-pos-small);
-  --icon-letter-color: var(--figma-color-text);
+  --icon-letter-color: var(--figma-color-text-default);
   --icon-letter-text-size: var(--font-size-xsmall);
-  --icon-picto-color: var(--figma-color-icon);
+  --icon-picto-color: var(--figma-color-icon-default);
   --icon-width: var(--size-pos-small);
 }
-

@@ -5,7 +5,7 @@
 :root[data-theme="sketch"] {
   --popin-actions-gap: var(--size-pos-xxsmall);
   --popin-background-color: var(--sketch-color-background-primary);
-  --popin-border-color: transparent;
+  --popin-border-color: var(--grey-transparent);
   --popin-border-offset: var(--size-null);
   --popin-border-width: var(--size-null);
   --popin-breakpoint: 460px;
@@ -38,4 +38,3 @@
   --popin-text-color: var(--sketch-color-foreground-primary);
   --popin-width-panel: 460px;
 }
-

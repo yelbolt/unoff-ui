@@ -1,32 +1,35 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import tokensStudioCompat, {
+  cssTransform,
+} from '../plugins/tokens-studio-compat.js'
 
 export default defineConfig({
-  tokens: ['./tokens/platforms/figma/color.json'],
+  name: 'Figma Colors',
+  tokens: ['./tokens/figma-colors.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
+    tokensStudioCompat(),
     css({
       filename: 'figma-colors.scss',
-      legacyHex: true,
-      modeSelectors: [
+      transform: cssTransform,
+      permutations: [
         {
-          mode: 'figma-light',
-          selectors: ['[data-mode="figma-light"]'],
+          input: { mode: 'figmaLight' },
+          prepare: (css) => `[data-mode="figma-light"] {\n  ${css}\n}`,
         },
         {
-          mode: 'figma-dark',
-          selectors: ['[data-mode="figma-dark"]'],
+          input: { mode: 'figmaDark' },
+          prepare: (css) => `[data-mode="figma-dark"] {\n  ${css}\n}`,
         },
         {
-          mode: 'figjam',
-          selectors: ['[data-mode="figjam"]'],
+          input: { mode: 'figjam' },
+          prepare: (css) => `[data-mode="figjam"] {\n  ${css}\n}`,
         },
       ],
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })

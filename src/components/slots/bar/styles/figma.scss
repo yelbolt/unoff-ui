@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --bar-background-color: transparent;
-  --bar-border-color: var(--figma-color-border);
+  --bar-background-color: var(--grey-transparent);
+  --bar-border-color: var(--figma-color-border-default);
   --bar-border-width: var(--size-pos-unit);
   --bar-gap: var(--size-pos-xxsmall);
   --bar-height-compact: var(--size-pos-medium);
@@ -18,4 +18,3 @@
   --bar-padding-mobile-right: var(--size-pos-xsmall);
   --bar-padding-mobile-top: var(--size-pos-xxxsmall);
 }
-

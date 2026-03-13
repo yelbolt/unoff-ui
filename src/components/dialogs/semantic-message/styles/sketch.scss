@@ -4,13 +4,13 @@
 
 :root[data-theme="sketch"] {
   --semantic-message-background-color-default: var(--sketch-color-background-primary);
-  --semantic-message-background-color-error-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-error-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-error-default: var(--sketch-color-background-error);
-  --semantic-message-background-color-info-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-info-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-info-default: var(--sketch-color-background-info);
-  --semantic-message-background-color-success-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-success-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-success-default: var(--sketch-color-background-success);
-  --semantic-message-background-color-warning-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-warning-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-warning-default: var(--sketch-color-background-warning);
   --semantic-message-border-color-default: var(--sketch-color-border-secondary);
   --semantic-message-border-color-error: var(--sketch-color-accent-error);
@@ -28,6 +28,7 @@
   --semantic-message-border-width-success: var(--size-pos-unit);
   --semantic-message-border-width-warning: var(--size-pos-unit);
   --semantic-message-gap: var(--size-pos-xxsmall);
+  --semantic-message-max-width: 400px;
   --semantic-message-padding-anchored-bottom: var(--size-pos-small);
   --semantic-message-padding-anchored-left: var(--size-null);
   --semantic-message-padding-anchored-right: var(--size-pos-xsmall);
@@ -40,11 +41,9 @@
   --semantic-message-padding-default-left: var(--size-null);
   --semantic-message-padding-default-right: var(--size-pos-xsmall);
   --semantic-message-padding-default-top: var(--size-pos-xxsmall);
-  --semantic-message-padding-max-width: 400px;
   --semantic-message-padding-vertical-bottom: var(--size-pos-xsmall);
   --semantic-message-padding-vertical-left: var(--size-pos-xxxsmall);
   --semantic-message-padding-vertical-right: var(--size-pos-xxxsmall);
   --semantic-message-padding-vertical-top: var(--size-pos-xsmall);
   --semantic-message-radius: var(--border-radius-xlarge);
 }
-

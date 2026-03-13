@@ -1,28 +1,31 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import tokensStudioCompat, {
+  cssTransform,
+} from '../plugins/tokens-studio-compat.js'
 
 export default defineConfig({
-  tokens: ['./tokens/platforms/sketch/color.json'],
+  name: 'Sketch Colors',
+  tokens: ['./tokens/sketch-colors.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
+    tokensStudioCompat(),
     css({
       filename: 'sketch-colors.scss',
-      legacyHex: true,
-      modeSelectors: [
+      transform: cssTransform,
+      permutations: [
         {
-          mode: 'light',
-          selectors: ['[data-mode="sketch-light"]'],
+          input: { mode: 'sketchLight' },
+          prepare: (css) => `[data-mode="sketch-light"] {\n  ${css}\n}`,
         },
         {
-          mode: 'dark',
-          selectors: ['[data-mode="sketch-dark"]'],
+          input: { mode: 'sketchDark' },
+          prepare: (css) => `[data-mode="sketch-dark"] {\n  ${css}\n}`,
         },
       ],
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })
