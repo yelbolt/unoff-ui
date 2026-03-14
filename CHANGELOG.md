@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.22.1] - 2026-03-15
+
+### Changed
+
+- **Semantic message max-width token removed**: `--semantic-message-max-width` (previously `400px`) removed from all four platform theme files (Figma, Framer, Penpot, Sketch) and their corresponding token JSON files — the component now falls back to `unset` by default
+- **Label CSS variable naming standardized**: Label-related variables renamed from `--text-label-*` to `--text-styles-label-*` (`gap`, `padding-*`, `height`, `color`) across all platform theme files and `texts.module.scss`
+
+### Removed
+
+- **Unused platform type SCSS files**: Standalone `figma-types.scss`, `framer-types.scss`, `penpot-types.scss`, and `sketch-types.scss` files (which only declared `--font-stack`) removed, along with their `@import` references in the corresponding module files
+
+---
+
 ## [1.22.0] - 2026-03-14
 
 ### Added
