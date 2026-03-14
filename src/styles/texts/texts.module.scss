@@ -87,12 +87,12 @@
 .label {
   display: flex;
   align-items: center;
-  gap: var(--text-label-gap);
+  gap: var(--text-styles-label-gap);
   cursor: default;
-  padding: var(--text-label-padding-top) var(--text-label-padding-right)
-    var(--text-label-padding-bottom) var(--text-label-padding-left);
-  height: var(--text-label-height);
-  color: var(--text-label-color);
+  padding: var(--text-styles-label-padding-top) var(--text-styles-label-padding-right)
+    var(--text-styles-label-padding-bottom) var(--text-styles-label-padding-left);
+  height: var(--text-styles-label-height);
+  color: var(--text-styles-label-color);
   font-weight: var(--text-label-font-weight);
   font-size: var(--text-label-font-size);
   line-height: var(--text-label-line-height);
