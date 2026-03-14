@@ -15,7 +15,7 @@
   --multiple-slider-padding-left: var(--size-pos-medium);
   --multiple-slider-padding-right: var(--size-pos-medium);
   --multiple-slider-padding-top: var(--size-null);
-  --multiple-slider-progress-color: var(--framer-color-tint);
+  --multiple-slider-progress-color: var(--framer-color-tint-default);
   --multiple-slider-radius: var(--border-radius-large);
   --multiple-slider-status-gap: var(--size-pos-xxsmall);
   --multiple-slider-status-height: var(--size-pos-xmsmall);
@@ -24,4 +24,3 @@
   --multiple-slider-status-margin-right: var(--size-null);
   --multiple-slider-status-margin-top: var(--size-null);
 }
-

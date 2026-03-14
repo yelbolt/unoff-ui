@@ -3,19 +3,19 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --tooltip-arrow-background-color: transparent;
-  --tooltip-arrow-border-color: transparent;
+  --tooltip-arrow-background-color: var(--grey-transparent);
+  --tooltip-arrow-border-color: var(--grey-transparent);
   --tooltip-arrow-border-width: var(--size-null);
   --tooltip-arrow-radius: var(--border-radius-null);
   --tooltip-arrow-size: var(--size-pos-xxsmall);
   --tooltip-background-color: var(--sketch-color-background-primary);
-  --tooltip-border-color: transparent;
+  --tooltip-border-color: var(--grey-transparent);
   --tooltip-border-offset: var(--size-null);
   --tooltip-border-width: var(--size-null);
   --tooltip-gap: var(--size-pos-xxsmall);
-  --tooltip-image-height: 96px;
+  --tooltip-image-height: var(--size-pos-huge);
   --tooltip-image-radius: var(--border-radius-medium);
-  --tooltip-image-width: 96px;
+  --tooltip-image-width: var(--size-pos-huge);
   --tooltip-max-width: 248px;
   --tooltip-min-width: 200px;
   --tooltip-padding-bottom: var(--size-pos-xmsmall);
@@ -32,4 +32,3 @@
   --tooltip-with-image-padding-right: var(--size-pos-xxsmall);
   --tooltip-with-image-padding-top: var(--size-pos-xxxsmall);
 }
-

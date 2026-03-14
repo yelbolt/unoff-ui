@@ -1,7 +1,11 @@
 {
-  "semantic-message": {
+  "semanticMessage": {
     "gap": {
       "$value": "{size.pos.xxxsmall}",
+      "$type": "dimension"
+    },
+    "maxWidth": {
+      "$value": "400px",
       "$type": "dimension"
     },
     "padding": {
@@ -22,13 +26,6 @@
           "$value": "{size.null}",
           "$type": "dimension"
         }
-      },
-      "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
-        "$type": "dimension"
       },
       "anchored": {
         "top": {
@@ -66,7 +63,7 @@
           "$type": "dimension"
         }
       },
-      "anchored-vertical": {
+      "anchoredVertical": {
         "top": {
           "$value": "{size.pos.xsmall}",
           "$type": "dimension"
@@ -92,7 +89,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "info": {
@@ -101,7 +98,7 @@
             "$type": "color"
           },
           "accent": {
-            "$value": "#00000030",
+            "$value": "{shadow.color.black.alpha300}",
             "$type": "color"
           }
         },
@@ -111,7 +108,7 @@
             "$type": "color"
           },
           "accent": {
-            "$value": "#00000030",
+            "$value": "{shadow.color.black.alpha300}",
             "$type": "color"
           }
         },
@@ -121,7 +118,7 @@
             "$type": "color"
           },
           "accent": {
-            "$value": "#00000030",
+            "$value": "{shadow.color.black.alpha300}",
             "$type": "color"
           }
         },
@@ -131,7 +128,7 @@
             "$type": "color"
           },
           "accent": {
-            "$value": "#00000030",
+            "$value": "{shadow.color.black.alpha300}",
             "$type": "color"
           }
         }
@@ -140,24 +137,24 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "info": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "error": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "success": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "warning": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {

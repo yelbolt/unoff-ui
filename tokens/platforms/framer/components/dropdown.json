@@ -57,24 +57,24 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "onSelected": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {
@@ -117,15 +117,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {

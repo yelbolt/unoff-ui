@@ -3,8 +3,8 @@
     "text": {
       "font": {
         "family": {
-          "$value": "{font.stack}",
-          "$type": "fontFamily"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
         },
         "size": {
           "$value": "{font.size.small}",
@@ -12,20 +12,20 @@
         },
         "weight": {
           "$value": "{font.weight.medium}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
-      "line-height": {
+      "lineHeight": {
         "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
+        "$type": "number"
       },
-      "letter-spacing": {
+      "letterSpacing": {
         "$value": "{font.letterSpacing.pos.medium}",
         "$type": "dimension"
       },
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -68,56 +68,32 @@
         "$type": "dimension"
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "checked": {
+        "color": {
           "default": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "checked": {
+            "default": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
+            "disabled": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "secondary": {
-          "color": {
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
@@ -126,8 +102,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -142,8 +138,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -169,7 +167,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -249,7 +247,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -264,56 +262,32 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "checked": {
+        "color": {
           "default": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "checked": {
+            "default": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
+            "disabled": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "secondary": {
-          "color": {
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
@@ -322,8 +296,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -338,8 +332,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -358,8 +354,18 @@
         }
       },
       "transition": {
-        "$value": "background-color 0.2s ease-in-out",
-        "$type": "string"
+        "$value": {
+          "duration": {
+            "value": 200,
+            "unit": "ms"
+          },
+          "delay": {
+            "value": 0,
+            "unit": "ms"
+          },
+          "timingFunction": [0.37, 0, 0.63, 1]
+        },
+        "$type": "transition"
       },
       "knob": {
         "height": {
@@ -372,6 +378,10 @@
         },
         "radius": {
           "$value": "{border.radius.full}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "11px",
           "$type": "dimension"
         },
         "background": {
@@ -409,10 +419,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": {
-                "value": 10,
-                "unit": "px"
-              },
+              "$value": "10px",
               "$type": "dimension"
             },
             "translateY": {
@@ -428,6 +435,10 @@
                 "value": 200,
                 "unit": "ms"
               },
+              "delay": {
+                "value": 0,
+                "unit": "ms"
+              },
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
@@ -436,6 +447,10 @@
             "$value": {
               "duration": {
                 "value": 200,
+                "unit": "ms"
+              },
+              "delay": {
+                "value": 0,
                 "unit": "ms"
               },
               "timingFunction": [0.37, 0, 0.63, 1]
@@ -466,32 +481,20 @@
       },
       "inner": {
         "height": {
-          "$value": {
-            "value": 6,
-            "unit": "px"
-          },
+          "$value": "6px",
           "$type": "dimension"
         },
         "width": {
-          "$value": {
-            "value": 6,
-            "unit": "px"
-          },
+          "$value": "6px",
           "$type": "dimension"
         },
         "position": {
           "top": {
-            "$value": {
-              "value": 5,
-              "unit": "px"
-            },
+            "$value": "5px",
             "$type": "dimension"
           },
           "left": {
-            "$value": {
-              "value": 5,
-              "unit": "px"
-            },
+            "$value": "5px",
             "$type": "dimension"
           }
         }
@@ -520,7 +523,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -535,56 +538,32 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
-          },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "checked": {
+        "color": {
           "default": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "checked": {
+            "default": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
+            "disabled": {
+              "$value": "{grey.transparent}",
+              "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.null}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "transparent",
-              "$type": "string"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.null}",
-            "$type": "dimension"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
-          "color": {
-            "$value": "transparent",
-            "$type": "string"
-          }
-        },
-        "secondary": {
-          "color": {
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "checked": {
@@ -593,8 +572,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.null}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -609,8 +608,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"

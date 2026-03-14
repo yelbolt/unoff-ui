@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
+  --members-list-avatar-border-color: var(--grey-transparent);
   --members-list-avatar-border-offset: var(--size-null);
   --members-list-avatar-border-width: var(--size-null);
   --members-list-avatar-height: var(--size-pos-small);
@@ -15,4 +16,3 @@
   --members-list-more-padding-top: var(--size-null);
   --members-list-text-color: var(--sketch-color-foreground-primary);
 }
-

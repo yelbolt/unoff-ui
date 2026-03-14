@@ -65,6 +65,10 @@
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{sketch.color.border.secondary}",
+            "$type": "color"
+          },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
             "$type": "color"
@@ -91,6 +95,14 @@
             "$value": "{sketch.color.foreground.primary}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{sketch.color.foreground.primary}",
+            "$type": "color"
+          },
           "disabled": {
             "$value": "{sketch.color.foreground.disabled}",
             "$type": "color"
@@ -101,40 +113,40 @@
         "background": {
           "color": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "hover": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "disabled": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             }
           }
         },
         "border": {
           "color": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "hover": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "disabled": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             }
           },
           "width": {
@@ -208,8 +220,8 @@
         },
         "border": {
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "width": {
             "$value": "{size.null}",
@@ -270,7 +282,7 @@
         }
       },
       "radius": {
-        "$value": { "value": 10, "unit": "px" },
+        "$value": "10px",
         "$type": "dimension"
       },
       "background": {

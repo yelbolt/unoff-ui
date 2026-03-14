@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.medium}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         },
         "onBackground": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "size": {
@@ -113,20 +113,20 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "inactive": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "onBackground": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {

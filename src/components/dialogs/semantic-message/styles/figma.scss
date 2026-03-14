@@ -3,20 +3,20 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --semantic-message-background-color-default: var(--figma-color-bg);
-  --semantic-message-background-color-error-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-default: var(--figma-color-bg-default);
+  --semantic-message-background-color-error-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-error-default: var(--figma-color-bg-danger-tertiary);
-  --semantic-message-background-color-info-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-info-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-info-default: var(--figma-color-bg-brand-tertiary);
-  --semantic-message-background-color-success-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-success-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-success-default: var(--figma-color-bg-success-tertiary);
-  --semantic-message-background-color-warning-accent: color(srgb 0 0 0 / 0.18823529411764706);
+  --semantic-message-background-color-warning-accent: var(--shadow-color-black-alpha300);
   --semantic-message-background-color-warning-default: var(--figma-color-bg-warning-tertiary);
-  --semantic-message-border-color-default: transparent;
-  --semantic-message-border-color-error: transparent;
-  --semantic-message-border-color-info: transparent;
-  --semantic-message-border-color-success: transparent;
-  --semantic-message-border-color-warning: transparent;
+  --semantic-message-border-color-default: var(--grey-transparent);
+  --semantic-message-border-color-error: var(--grey-transparent);
+  --semantic-message-border-color-info: var(--grey-transparent);
+  --semantic-message-border-color-success: var(--grey-transparent);
+  --semantic-message-border-color-warning: var(--grey-transparent);
   --semantic-message-border-offset-default: var(--size-null);
   --semantic-message-border-offset-error: var(--size-null);
   --semantic-message-border-offset-info: var(--size-null);
@@ -28,6 +28,7 @@
   --semantic-message-border-width-success: var(--size-null);
   --semantic-message-border-width-warning: var(--size-null);
   --semantic-message-gap: var(--size-pos-xxxsmall);
+  --semantic-message-max-width: 400px;
   --semantic-message-padding-anchored-bottom: var(--size-pos-small);
   --semantic-message-padding-anchored-left: var(--size-null);
   --semantic-message-padding-anchored-right: var(--size-pos-xsmall);
@@ -40,11 +41,9 @@
   --semantic-message-padding-default-left: var(--size-null);
   --semantic-message-padding-default-right: var(--size-pos-xsmall);
   --semantic-message-padding-default-top: var(--size-pos-xxsmall);
-  --semantic-message-padding-max-width: 400px;
   --semantic-message-padding-vertical-bottom: var(--size-pos-xsmall);
   --semantic-message-padding-vertical-left: var(--size-pos-xxxsmall);
   --semantic-message-padding-vertical-right: var(--size-pos-xxxsmall);
   --semantic-message-padding-vertical-top: var(--size-pos-xsmall);
   --semantic-message-radius: var(--border-radius-xlarge);
 }
-

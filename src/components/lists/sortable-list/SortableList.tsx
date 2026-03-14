@@ -93,10 +93,9 @@ export interface SortableListState {
   hasTopBorder: boolean
 }
 
-export default class SortableList<T extends DefaultData> extends React.Component<
-  SortableListProps<T>,
-  SortableListState
-> {
+export default class SortableList<
+  T extends DefaultData,
+> extends React.Component<SortableListProps<T>, SortableListState> {
   private listRef: React.RefObject<HTMLUListElement>
 
   static defaultProps: Partial<SortableListProps> = {

@@ -1,5 +1,5 @@
 {
-  "keyboard-shortcut-item": {
+  "keyboardShortcutItem": {
     "padding": {
       "top": {
         "$value": "{size.null}",
@@ -28,7 +28,7 @@
     },
     "background": {
       "color": {
-        "$value": "{framer.color.bg}",
+        "$value": "{framer.color.bg.default}",
         "$type": "color"
       }
     },
@@ -83,8 +83,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

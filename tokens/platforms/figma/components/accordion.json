@@ -24,7 +24,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border.disabled}",
+        "$value": "{figma.color.border.disabled.default}",
         "$type": "color"
       }
     },
@@ -59,15 +59,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text.secondary}",
+          "$value": "{figma.color.text.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -79,15 +79,15 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{figma.color.icon.secondary}",
+          "$value": "{figma.color.icon.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "disabled": {

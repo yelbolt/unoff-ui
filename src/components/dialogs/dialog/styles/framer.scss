@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --dialog-background-color: color(srgb 0 0 0 / 0.5);
+  --dialog-background-color: rgb(0% 0% 0% / 0.5);
   --dialog-cover-padding-bottom: var(--size-pos-xsmall);
   --dialog-cover-padding-left: var(--size-pos-xsmall);
   --dialog-cover-padding-right: var(--size-pos-xsmall);
@@ -25,4 +25,3 @@
   --dialog-text-padding-right: var(--size-pos-msmall);
   --dialog-text-padding-top: var(--size-pos-xsmall);
 }
-

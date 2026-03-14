@@ -5,10 +5,7 @@
       "$type": "dimension"
     },
     "height": {
-      "$value": {
-        "value": 56,
-        "unit": "px"
-      },
+      "$value": "56px",
       "$type": "dimension"
     },
     "top": {
@@ -68,8 +65,12 @@
             "$value": "{framer.color.divider}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{framer.color.divider}",
+            "$type": "color"
+          },
           "focus": {
-            "$value": "{framer.color.tint}",
+            "$value": "{framer.color.tint.default}",
             "$type": "color"
           },
           "disabled": {
@@ -91,7 +92,15 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{framer.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -132,7 +141,7 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{framer.color.tint}",
+              "$value": "{framer.color.tint.default}",
               "$type": "color"
             },
             "disabled": {
@@ -192,27 +201,27 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         }
       },
       "text": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },
       "arrow": {
         "background": {
           "color": {
-            "$value": "{framer.color.text}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           }
         },
         "border": {
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "width": {
             "$value": "{size.null}",
@@ -244,8 +253,8 @@
       },
       "background": {
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },
@@ -278,7 +287,7 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },

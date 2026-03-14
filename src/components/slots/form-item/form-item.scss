@@ -16,10 +16,10 @@
     position: relative;
     align-items: start;
     gap: var(--form-item-gap);
-    min-width: var(--form-item-min-width);
     cursor: default;
     padding: var(--form-item-padding-top) var(--form-item-padding-right)
       var(--form-item-padding-bottom) var(--form-item-padding-left);
+    min-width: var(--form-item-min-width);
     user-select: none;
 
     .form-item__label {

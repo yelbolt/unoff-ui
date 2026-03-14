@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="penpot"] {
-  --accordion-border-color: transparent;
+  --accordion-border-color: var(--grey-transparent);
   --accordion-border-width: var(--size-null);
   --accordion-icon-color-default: var(--penpot-color-foreground-secondary);
   --accordion-icon-color-disabled: var(--penpot-color-background-tertiary);
@@ -24,4 +24,3 @@
   --accordion-text-color-expanded: var(--penpot-color-foreground-primary);
   --accordion-text-color-hover: var(--penpot-color-foreground-primary);
 }
-

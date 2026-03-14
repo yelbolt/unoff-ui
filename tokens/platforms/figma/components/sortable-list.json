@@ -1,5 +1,5 @@
 {
-  "sortable-list": {
+  "sortableList": {
     "padding": {
       "top": {
         "$value": "{size.pos.unit}",
@@ -24,7 +24,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border}",
+        "$value": "{figma.color.border.default}",
         "$type": "color"
       }
     }

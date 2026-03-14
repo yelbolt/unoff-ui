@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --accordion-border-color: transparent;
+  --accordion-border-color: var(--grey-transparent);
   --accordion-border-width: var(--size-null);
   --accordion-icon-color-default: var(--sketch-color-foreground-secondary);
   --accordion-icon-color-disabled: var(--sketch-color-foreground-disabled);
@@ -24,4 +24,3 @@
   --accordion-text-color-expanded: var(--sketch-color-foreground-primary);
   --accordion-text-color-hover: var(--sketch-color-foreground-primary);
 }
-

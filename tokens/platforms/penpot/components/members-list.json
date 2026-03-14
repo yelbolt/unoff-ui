@@ -1,5 +1,5 @@
 {
-  "members-list": {
+  "membersList": {
     "gap": {
       "$value": "{size.neg.xxxsmall}",
       "$type": "dimension"
@@ -27,8 +27,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

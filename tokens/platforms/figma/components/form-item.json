@@ -4,6 +4,10 @@
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
     },
+    "minHeight": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
     "padding": {
       "top": {
         "$value": "{size.pos.xunit}",
@@ -25,7 +29,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -36,10 +40,7 @@
     },
     "label": {
       "width": {
-        "$value": {
-          "value": 96,
-          "unit": "px"
-        },
+        "$value": "{size.pos.huge}",
         "$type": "dimension"
       },
       "margin": {

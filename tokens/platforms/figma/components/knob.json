@@ -42,7 +42,7 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{figma.color.bg}",
+            "$value": "{figma.color.bg.default}",
             "$type": "color"
           },
           "hover": {
@@ -50,11 +50,11 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.bg.selected}",
+            "$value": "{figma.color.bg.selected.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.bg.disabled}",
+            "$value": "{figma.color.bg.disabled.default}",
             "$type": "color"
           }
         }
@@ -65,12 +65,16 @@
             "$value": "{figma.color.border.disabled.strong}",
             "$type": "color"
           },
+          "hover": {
+            "$value": "{figma.color.border.disabled.strong}",
+            "$type": "color"
+          },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{figma.color.border.disabled}",
+            "$value": "{figma.color.border.disabled.default}",
             "$type": "color"
           }
         },
@@ -88,7 +92,15 @@
       "text": {
         "color": {
           "default": {
-            "$value": "{figma.color.text}",
+            "$value": "{figma.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{figma.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{figma.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -101,7 +113,7 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{figma.color.bg}",
+              "$value": "{figma.color.bg.default}",
               "$type": "color"
             },
             "hover": {
@@ -109,11 +121,11 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.bg.selected}",
+              "$value": "{figma.color.bg.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{figma.color.bg.disabled}",
+              "$value": "{figma.color.bg.disabled.default}",
               "$type": "color"
             }
           }
@@ -129,11 +141,11 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{figma.color.border.selected}",
+              "$value": "{figma.color.border.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{figma.color.border.disabled}",
+              "$value": "{figma.color.border.disabled.default}",
               "$type": "color"
             }
           },
@@ -208,8 +220,8 @@
         },
         "border": {
           "color": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "width": {
             "$value": "{size.null}",
@@ -241,8 +253,8 @@
       },
       "background": {
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },
@@ -257,7 +269,7 @@
       },
       "border": {
         "color": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         },
         "width": {
@@ -275,7 +287,7 @@
       },
       "background": {
         "color": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         }
       },

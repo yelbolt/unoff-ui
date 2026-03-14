@@ -32,7 +32,10 @@ interface ColorChipState {
   isTooltipVisible: boolean
 }
 
-export default class ColorChip extends React.Component<ColorChipProps, ColorChipState> {
+export default class ColorChip extends React.Component<
+  ColorChipProps,
+  ColorChipState
+> {
   static defaultProps: Partial<ColorChipProps> = {
     width: '16px',
     height: '16px',

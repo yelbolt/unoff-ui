@@ -29,8 +29,8 @@
     "text": {
       "font": {
         "family": {
-          "$value": "{font.stack}",
-          "$type": "fontFamily"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
         },
         "size": {
           "$value": "{font.size.xsmall}",
@@ -38,7 +38,7 @@
         },
         "weight": {
           "$value": "{font.weight.bold}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "letterSpacing": {
@@ -47,10 +47,10 @@
       },
       "lineHeight": {
         "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
+        "$type": "number"
       },
       "color": {
-        "$value": "{figma.color.text}",
+        "$value": "{figma.color.text.default}",
         "$type": "color"
       },
       "transform": {

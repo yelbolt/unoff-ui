@@ -95,8 +95,8 @@
   &.bar--vertical {
     flex-direction: column;
     align-items: stretch;
-    min-height: unset;
     min-width: var(--bar-min-height);
+    min-height: unset;
 
     & {
       --bar-padding: var(--bar-padding-default-left)

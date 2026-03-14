@@ -24,7 +24,7 @@
     },
     "background": {
       "color": {
-        "$value": "{figma.color.bg}",
+        "$value": "{figma.color.bg.default}",
         "$type": "color"
       }
     },
@@ -34,7 +34,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border}",
+        "$value": "{figma.color.border.default}",
         "$type": "color"
       }
     },

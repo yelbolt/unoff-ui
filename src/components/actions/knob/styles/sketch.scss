@@ -19,14 +19,14 @@
   --knob-input-shadow: var(--elevation-300-tooltip);
   --knob-input-top: var(--size-neg-xxsmall);
   --knob-input-width: var(--size-pos-xxlarge);
-  --knob-label-arrow-background-color-default: transparent;
-  --knob-label-arrow-background-color-disabled: transparent;
-  --knob-label-arrow-background-color-focus: transparent;
-  --knob-label-arrow-background-color-hover: transparent;
-  --knob-label-arrow-border-color-default: transparent;
-  --knob-label-arrow-border-color-disabled: transparent;
-  --knob-label-arrow-border-color-focus: transparent;
-  --knob-label-arrow-border-color-hover: transparent;
+  --knob-label-arrow-background-color-default: var(--grey-transparent);
+  --knob-label-arrow-background-color-disabled: var(--grey-transparent);
+  --knob-label-arrow-background-color-focus: var(--grey-transparent);
+  --knob-label-arrow-background-color-hover: var(--grey-transparent);
+  --knob-label-arrow-border-color-default: var(--grey-transparent);
+  --knob-label-arrow-border-color-disabled: var(--grey-transparent);
+  --knob-label-arrow-border-color-focus: var(--grey-transparent);
+  --knob-label-arrow-border-color-hover: var(--grey-transparent);
   --knob-label-arrow-border-width: var(--size-null);
   --knob-label-arrow-height: var(--size-null);
   --knob-label-arrow-radius: var(--border-radius-null);
@@ -38,6 +38,7 @@
   --knob-label-border-color-default: var(--sketch-color-border-secondary);
   --knob-label-border-color-disabled: var(--sketch-color-border-disabled);
   --knob-label-border-color-focus: var(--sketch-color-accent-primary);
+  --knob-label-border-color-hover: var(--sketch-color-border-secondary);
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
   --knob-label-height: var(--size-pos-msmall);
@@ -48,9 +49,11 @@
   --knob-label-radius: var(--border-radius-medium);
   --knob-label-text-color-default: var(--sketch-color-foreground-primary);
   --knob-label-text-color-disabled: var(--sketch-color-foreground-disabled);
+  --knob-label-text-color-focus: var(--sketch-color-foreground-primary);
+  --knob-label-text-color-hover: var(--sketch-color-foreground-primary);
   --knob-min-width: var(--size-pos-medium);
   --knob-tooltip-arrow-background-color: var(--sketch-color-foreground-primary);
-  --knob-tooltip-arrow-border-color: transparent;
+  --knob-tooltip-arrow-border-color: var(--grey-transparent);
   --knob-tooltip-arrow-border-width: var(--size-null);
   --knob-tooltip-arrow-height: var(--size-null);
   --knob-tooltip-arrow-radius: var(--border-radius-null);
@@ -66,4 +69,3 @@
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-top: var(--size-neg-xunit);
 }
-

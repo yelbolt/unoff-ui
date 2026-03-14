@@ -72,10 +72,7 @@
         "$type": "dimension"
       },
       "maxWidth": {
-        "$value": {
-          "value": 640,
-          "unit": "px"
-        },
+        "$value": "640px",
         "$type": "dimension"
       },
       "gap": {

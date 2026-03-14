@@ -32,13 +32,13 @@
       "$type": "link",
       "$value": "/src/icons/penpot/back.svg"
     },
-    "blendEmpty": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/blend-empty.svg"
-    },
     "blend": {
       "$type": "link",
       "$value": "/src/icons/penpot/blend.svg"
+    },
+    "blendEmpty": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/blend-empty.svg"
     },
     "break": {
       "$type": "link",
@@ -60,6 +60,10 @@
       "$type": "link",
       "$value": "/src/icons/penpot/caret-up.svg"
     },
+    "check": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/check.svg"
+    },
     "chevronDown": {
       "$type": "link",
       "$value": "/src/icons/penpot/chevron-down.svg"
@@ -76,17 +80,21 @@
       "$type": "link",
       "$value": "/src/icons/penpot/chevron-up.svg"
     },
-    "check": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/check.svg"
-    },
     "close": {
       "$type": "link",
       "$value": "/src/icons/penpot/close.svg"
     },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/code.svg"
+    },
     "component": {
       "$type": "link",
       "$value": "/src/icons/penpot/component.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/copy.svg"
     },
     "cornerRadius": {
       "$type": "link",
@@ -96,10 +104,6 @@
       "$type": "link",
       "$value": "/src/icons/penpot/corners.svg"
     },
-    "downward": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/downward.svg"
-    },
     "distributeHorizontalSpacing": {
       "$type": "link",
       "$value": "/src/icons/penpot/distribute-horizontal-spacing.svg"
@@ -107,6 +111,10 @@
     "distributeVerticalSpacing": {
       "$type": "link",
       "$value": "/src/icons/penpot/distribute-vertical-spacing.svg"
+    },
+    "downward": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/downward.svg"
     },
     "draft": {
       "$type": "link",
@@ -124,13 +132,13 @@
       "$type": "link",
       "$value": "/src/icons/penpot/eyedropper.svg"
     },
-    "forward": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/forward.svg"
-    },
     "filter": {
       "$type": "link",
       "$value": "/src/icons/penpot/filter.svg"
+    },
+    "forward": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/forward.svg"
     },
     "frame": {
       "$type": "link",
@@ -163,6 +171,10 @@
     "import": {
       "$type": "link",
       "$value": "/src/icons/penpot/import.svg"
+    },
+    "info": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/info.svg"
     },
     "instance": {
       "$type": "link",
@@ -220,6 +232,10 @@
       "$type": "link",
       "$value": "/src/icons/penpot/link-connected.svg"
     },
+    "list": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/list.svg"
+    },
     "listDetailed": {
       "$type": "link",
       "$value": "/src/icons/penpot/list-detailed.svg"
@@ -227,10 +243,6 @@
     "listTile": {
       "$type": "link",
       "$value": "/src/icons/penpot/list-tile.svg"
-    },
-    "list": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/list.svg"
     },
     "lockOff": {
       "$type": "link",
@@ -260,37 +272,49 @@
       "$type": "link",
       "$value": "/src/icons/penpot/recent.svg"
     },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/redo.svg"
+    },
     "refresh": {
       "$type": "link",
       "$value": "/src/icons/penpot/refresh.svg"
+    },
+    "repository": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/repository.svg"
     },
     "reset": {
       "$type": "link",
       "$value": "/src/icons/penpot/reset.svg"
     },
+    "resizeGrip": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resize-grip.svg"
+    },
     "resizeToFit": {
       "$type": "link",
       "$value": "/src/icons/penpot/resize-to-fit.svg"
-    },
-    "resolveFilled": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/resolve-filled.svg"
     },
     "resolve": {
       "$type": "link",
       "$value": "/src/icons/penpot/resolve.svg"
     },
+    "resolveFilled": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/resolve-filled.svg"
+    },
     "reverse": {
       "$type": "link",
       "$value": "/src/icons/penpot/reverse.svg"
     },
-    "searchLarge": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/search-large.svg"
-    },
     "search": {
       "$type": "link",
       "$value": "/src/icons/penpot/search.svg"
+    },
+    "searchLarge": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/search-large.svg"
     },
     "settings": {
       "$type": "link",
@@ -320,6 +344,10 @@
       "$type": "link",
       "$value": "/src/icons/penpot/spacing.svg"
     },
+    "spinner": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/spinner.svg"
+    },
     "starOff": {
       "$type": "link",
       "$value": "/src/icons/penpot/star-off.svg"
@@ -339,6 +367,10 @@
     "swap": {
       "$type": "link",
       "$value": "/src/icons/penpot/swap.svg"
+    },
+    "target": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/target.svg"
     },
     "theme": {
       "$type": "link",
@@ -360,14 +392,6 @@
       "$type": "link",
       "$value": "/src/icons/penpot/timer.svg"
     },
-    "toggleSidebarTop": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/toggle-sidebar-top.svg"
-    },
-    "toggleSidebarRight": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/toggle-sidebar-right.svg"
-    },
     "toggleSidebarBottom": {
       "$type": "link",
       "$value": "/src/icons/penpot/toggle-sidebar-bottom.svg"
@@ -376,41 +400,21 @@
       "$type": "link",
       "$value": "/src/icons/penpot/toggle-sidebar-left.svg"
     },
+    "toggleSidebarRight": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-right.svg"
+    },
+    "toggleSidebarTop": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/toggle-sidebar-top.svg"
+    },
     "trash": {
       "$type": "link",
       "$value": "/src/icons/penpot/trash.svg"
     },
-    "verticalPadding": {
+    "undo": {
       "$type": "link",
-      "$value": "/src/icons/penpot/vertical-padding.svg"
-    },
-    "visible": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/visible.svg"
-    },
-    "warningLarge": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/warning-large.svg"
-    },
-    "warning": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/warning.svg"
-    },
-    "repository": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/repository.svg"
-    },
-    "info": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/info.svg"
-    },
-    "resizeGrip": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/resize-grip.svg"
-    },
-    "spinner": {
-      "$type": "link",
-      "$value": "/src/icons/penpot/spinner.svg"
+      "$value": "/src/icons/penpot/undo.svg"
     },
     "upward": {
       "$type": "link",
@@ -420,9 +424,21 @@
       "$type": "link",
       "$value": "/src/icons/penpot/user.svg"
     },
-    "target": {
+    "verticalPadding": {
       "$type": "link",
-      "$value": "/src/icons/penpot/target.svg"
+      "$value": "/src/icons/penpot/vertical-padding.svg"
+    },
+    "visible": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/visible.svg"
+    },
+    "warning": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/warning.svg"
+    },
+    "warningLarge": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/warning-large.svg"
     }
   }
 }

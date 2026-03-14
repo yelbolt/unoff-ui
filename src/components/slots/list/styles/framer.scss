@@ -4,7 +4,7 @@
 
 :root[data-theme="framer"] {
   --list-background-color-alternate: var(--framer-color-bg-secondary);
-  --list-background-color-default: var(--framer-color-bg);
+  --list-background-color-default: var(--framer-color-bg-default);
   --list-border-color: var(--framer-color-divider);
   --list-border-width: var(--size-pos-unit);
   --list-message-padding-bottom: var(--size-pos-xsmall);
@@ -16,4 +16,3 @@
   --list-padding-right: var(--size-null);
   --list-padding-top: var(--size-pos-unit);
 }
-

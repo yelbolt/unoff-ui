@@ -214,27 +214,35 @@
       "border": {
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
             "$type": "color"
           },
           "active": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "alternative": {
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeHover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeFocus": {
             "$value": "{sketch.color.accent.primary}",
+            "$type": "color"
+          },
+          "alternativeActive": {
+            "$value": "{grey.transparent}",
             "$type": "color"
           }
         },
@@ -255,12 +263,20 @@
             "$value": "{size.null}",
             "$type": "dimension"
           },
+          "alternative": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
           "alternativeHover": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "alternativeActive": {
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -281,12 +297,20 @@
             "$value": "{size.null}",
             "$type": "dimension"
           },
+          "alternative": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
           "alternativeHover": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "alternativeActive": {
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         }
@@ -339,35 +363,35 @@
         "weight": {
           "default": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "hover": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "focus": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "active": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternative": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeHover": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeFocus": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeActive": {
             "$value": "{font.weight.normal}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           }
         },
         "transform": {

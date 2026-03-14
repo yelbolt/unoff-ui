@@ -8,11 +8,11 @@
   --dropdown-background-color-focus: var(--framer-color-bg-secondary);
   --dropdown-background-color-hover: var(--framer-color-bg-tertiary);
   --dropdown-background-color-on-selected: var(--framer-color-bg-secondary);
-  --dropdown-border-color-default: transparent;
-  --dropdown-border-color-disabled: transparent;
-  --dropdown-border-color-focus: var(--framer-color-tint);
-  --dropdown-border-color-hover: transparent;
-  --dropdown-border-color-on-selected: transparent;
+  --dropdown-border-color-default: var(--grey-transparent);
+  --dropdown-border-color-disabled: var(--grey-transparent);
+  --dropdown-border-color-focus: var(--framer-color-tint-default);
+  --dropdown-border-color-hover: var(--grey-transparent);
+  --dropdown-border-color-on-selected: var(--grey-transparent);
   --dropdown-border-offset-default: var(--size-null);
   --dropdown-border-offset-disabled: var(--size-null);
   --dropdown-border-offset-focus: var(--size-neg-unit);
@@ -40,9 +40,8 @@
   --dropdown-status-margin-left: var(--size-pos-xxsmall);
   --dropdown-status-margin-right: var(--size-null);
   --dropdown-status-margin-top: var(--size-null);
-  --dropdown-text-color-default: var(--framer-color-text);
+  --dropdown-text-color-default: var(--framer-color-text-default);
   --dropdown-text-color-disabled: var(--framer-color-text-tertiary);
-  --dropdown-text-color-focus: var(--framer-color-text);
-  --dropdown-text-color-hover: var(--framer-color-text);
+  --dropdown-text-color-focus: var(--framer-color-text-default);
+  --dropdown-text-color-hover: var(--framer-color-text-default);
 }
-

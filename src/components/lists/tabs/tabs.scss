@@ -167,6 +167,7 @@
           var(--tabs-tab-padding-alternative-left);
         --tabs-tab-radius: var(--tabs-tab-radius-alternative);
         --tabs-tab-height: var(--tabs-tab-height-alternative);
+        --tabs-tab-text-size: var(--tabs-tab-text-size-alternative);
         --tabs-tab-text-transform: var(--tabs-tab-text-transform-alternative);
         --tabs-tab-icon-width: var(--tabs-tab-icon-width-alternative);
         --tabs-tab-icon-height: var(--tabs-tab-icon-height-alternative);
@@ -183,6 +184,9 @@
         --tabs-tab-background-color: var(
           --tabs-tab-background-color-alternative
         );
+        --tabs-tab-border-color: var(--tabs-tab-border-color-alternative);
+        --tabs-tab-border-width: var(--tabs-tab-border-width-alternative);
+        --tabs-tab-border-offset: var(--tabs-tab-border-offset-alternative);
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative);
         --tabs-tab-icon-color: var(--tabs-tab-icon-color-alternative);
@@ -225,6 +229,15 @@
       &--active {
         --tabs-tab-background-color: var(
           --tabs-tab-background-color-alternative-active
+        );
+        --tabs-tab-border-color: var(
+          --tabs-tab-border-color-alternative-active
+        );
+        --tabs-tab-border-width: var(
+          --tabs-tab-border-width-alternative-active
+        );
+        --tabs-tab-border-offset: var(
+          --tabs-tab-border-offset-alternative-active
         );
         --tabs-tab-text-color: var(--tabs-tab-text-color-alternative-active);
         --tabs-tab-text-weight: var(--tabs-tab-text-weight-alternative-active);

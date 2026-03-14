@@ -11,9 +11,9 @@
   --card-background-color-default: var(--sketch-color-background-primary);
   --card-background-color-focus: var(--sketch-color-accent-disabled);
   --card-background-color-hover: var(--sketch-color-background-secondary);
-  --card-border-color-default: transparent;
+  --card-border-color-default: var(--grey-transparent);
   --card-border-color-focus: var(--sketch-color-accent-primary);
-  --card-border-color-hover: transparent;
+  --card-border-color-hover: var(--grey-transparent);
   --card-border-offset-default: var(--size-null);
   --card-border-offset-focus: var(--size-neg-unit);
   --card-border-offset-hover: var(--size-null);
@@ -30,4 +30,3 @@
   --card-ratio: 2 / 1;
   --card-width: 200px;
 }
-

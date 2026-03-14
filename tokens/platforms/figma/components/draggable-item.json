@@ -1,5 +1,5 @@
 {
-  "draggable-item": {
+  "draggableItem": {
     "template": {
       "rows": {
         "$value": "{size.pos.medium}",
@@ -31,11 +31,11 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "selected": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         },
         "pressed": {
@@ -50,7 +50,7 @@
     },
     "ghost": {
       "color": {
-        "$value": "{figma.color.border.selected}",
+        "$value": "{figma.color.border.selected.default}",
         "$type": "color"
       },
       "height": {
@@ -65,10 +65,7 @@
     "param": {
       "width": {
         "compact": {
-          "$value": {
-            "value": 112,
-            "unit": "px"
-          },
+          "$value": "112px",
           "$type": "dimension"
         },
         "square": {

@@ -57,15 +57,15 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "disabled": {
@@ -73,7 +73,7 @@
           "$type": "color"
         },
         "onSelected": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         }
       },

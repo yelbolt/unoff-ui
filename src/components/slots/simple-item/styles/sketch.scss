@@ -6,7 +6,7 @@
   --simple-item-background-color-default: var(--sketch-color-background-primary);
   --simple-item-background-color-focus: var(--sketch-color-accent-disabled);
   --simple-item-background-color-hover: var(--sketch-color-background-secondary);
-  --simple-item-border-color-default: transparent;
+  --simple-item-border-color-default: var(--grey-transparent);
   --simple-item-border-color-focus: var(--sketch-color-accent-primary);
   --simple-item-border-offset-default: var(--size-null);
   --simple-item-border-offset-focus: var(--size-neg-unit);
@@ -24,4 +24,3 @@
   --simple-item-square-min-width: var(--size-pos-medium);
   --simple-item-square-width: var(--size-pos-medium);
 }
-

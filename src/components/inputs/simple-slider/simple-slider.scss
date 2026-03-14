@@ -19,10 +19,10 @@
   &__range {
     position: relative;
     flex: 1 1 auto;
-    background-color: var(--simple-slider-background-color);
     box-shadow: inset 0 0 0 var(--simple-slider-border-width)
       var(--simple-slider-border-color);
     border-radius: var(--simple-slider-radius);
+    background-color: var(--simple-slider-background-color);
     height: var(--simple-slider-height);
   }
 
@@ -30,9 +30,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     border-radius: var(--simple-slider-radius);
     background-color: var(--simple-slider-progress-color);
+    height: 100%;
     pointer-events: none;
   }
 

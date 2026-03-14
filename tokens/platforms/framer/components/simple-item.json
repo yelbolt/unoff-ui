@@ -1,5 +1,5 @@
 {
-  "simple-item": {
+  "simpleItem": {
     "gap": {
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
@@ -29,7 +29,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "hover": {
@@ -69,28 +69,22 @@
       },
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         }
       }
     },
     "compact": {
       "minWidth": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       },
       "width": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       }
     },

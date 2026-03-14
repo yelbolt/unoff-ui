@@ -1,0 +1,24 @@
+{
+  "information": {
+    "platform": {
+      "$type": "text",
+      "$value": "Framer"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": false
+    },
+    "isNotCapitalized": {
+      "$type": "boolean",
+      "$value": true
+    },
+    "isFlex": {
+      "$type": "boolean",
+      "$value": true
+    },
+    "backgroundColor": {
+      "$type": "color",
+      "$value": "{framer.color.bg.default}"
+    }
+  }
+}

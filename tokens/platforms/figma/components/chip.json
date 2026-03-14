@@ -51,15 +51,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text.brand}",
+          "$value": "{figma.color.text.brand.default}",
           "$type": "color"
         },
         "inactive": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.text.brand}",
+          "$value": "{figma.color.text.brand.default}",
           "$type": "color"
         },
         "onBackground": {
@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.accent}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         },
         "onBackground": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "size": {
@@ -101,7 +101,7 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         },
         "onBackground": {
@@ -113,20 +113,20 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "inactive": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "onBackground": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {

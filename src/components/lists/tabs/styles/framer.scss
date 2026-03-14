@@ -4,7 +4,7 @@
 
 :root[data-theme="framer"] {
   --tabs-background-color-default: var(--framer-color-bg-secondary);
-  --tabs-background-color-vertical: var(--framer-color-bg);
+  --tabs-background-color-vertical: var(--framer-color-bg-default);
   --tabs-gap-default: var(--size-null);
   --tabs-gap-vertical: var(--size-pos-xxxsmall);
   --tabs-padding-default-bottom: var(--size-pos-xunit);
@@ -17,27 +17,33 @@
   --tabs-padding-vertical-top: var(--size-pos-xsmall);
   --tabs-radius-default: var(--border-radius-xlarge);
   --tabs-radius-vertical: var(--size-null);
-  --tabs-tab-background-color-active: var(--framer-color-bg);
-  --tabs-tab-background-color-alternative: var(--framer-color-bg);
+  --tabs-tab-background-color-active: var(--framer-color-bg-default);
+  --tabs-tab-background-color-alternative: var(--framer-color-bg-default);
   --tabs-tab-background-color-alternative-active: var(--framer-color-bg-secondary);
-  --tabs-tab-background-color-alternative-focus: var(--framer-color-bg);
-  --tabs-tab-background-color-alternative-hover: var(--framer-color-bg);
-  --tabs-tab-background-color-default: transparent;
-  --tabs-tab-background-color-focus: transparent;
-  --tabs-tab-background-color-hover: transparent;
+  --tabs-tab-background-color-alternative-focus: var(--framer-color-bg-default);
+  --tabs-tab-background-color-alternative-hover: var(--framer-color-bg-default);
+  --tabs-tab-background-color-default: var(--grey-transparent);
+  --tabs-tab-background-color-focus: var(--grey-transparent);
+  --tabs-tab-background-color-hover: var(--grey-transparent);
   --tabs-tab-border-color-active: var(--framer-color-bg-tertiary);
-  --tabs-tab-border-color-alternative-focus: var(--framer-color-tint);
-  --tabs-tab-border-color-alternative-hover: transparent;
-  --tabs-tab-border-color-default: transparent;
-  --tabs-tab-border-color-focus: var(--framer-color-tint);
-  --tabs-tab-border-color-hover: transparent;
+  --tabs-tab-border-color-alternative: var(--grey-transparent);
+  --tabs-tab-border-color-alternative-active: var(--framer-color-bg-tertiary);
+  --tabs-tab-border-color-alternative-focus: var(--framer-color-tint-default);
+  --tabs-tab-border-color-alternative-hover: var(--grey-transparent);
+  --tabs-tab-border-color-default: var(--grey-transparent);
+  --tabs-tab-border-color-focus: var(--framer-color-tint-default);
+  --tabs-tab-border-color-hover: var(--grey-transparent);
   --tabs-tab-border-offset-active: var(--size-null);
+  --tabs-tab-border-offset-alternative: var(--size-null);
+  --tabs-tab-border-offset-alternative-active: var(--size-null);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-alternative-hover: var(--size-null);
   --tabs-tab-border-offset-default: var(--size-null);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-hover: var(--size-null);
   --tabs-tab-border-width-active: var(--size-null);
+  --tabs-tab-border-width-alternative: var(--size-null);
+  --tabs-tab-border-width-alternative-active: var(--size-null);
   --tabs-tab-border-width-alternative-focus: var(--size-pos-unit);
   --tabs-tab-border-width-alternative-hover: var(--size-null);
   --tabs-tab-border-width-default: var(--size-null);
@@ -47,9 +53,9 @@
   --tabs-tab-gap-default: var(--size-pos-xunit);
   --tabs-tab-height-alternative: var(--size-pos-medium);
   --tabs-tab-height-default: var(--size-pos-medium);
-  --tabs-tab-icon-color-active: var(--framer-color-text);
+  --tabs-tab-icon-color-active: var(--framer-color-text-default);
   --tabs-tab-icon-color-alternative: var(--framer-color-text-secondary);
-  --tabs-tab-icon-color-alternative-active: var(--framer-color-text);
+  --tabs-tab-icon-color-alternative-active: var(--framer-color-text-default);
   --tabs-tab-icon-color-alternative-focus: var(--framer-color-text-secondary);
   --tabs-tab-icon-color-alternative-hover: var(--framer-color-text-secondary);
   --tabs-tab-icon-color-default: var(--framer-color-text-secondary);
@@ -59,11 +65,11 @@
   --tabs-tab-icon-height-default: var(--size-pos-small);
   --tabs-tab-icon-width-alternative: var(--size-pos-small);
   --tabs-tab-icon-width-default: var(--size-pos-small);
-  --tabs-tab-notification-background-color: var(--framer-color-tint);
-  --tabs-tab-notification-border-color-active: var(--framer-color-bg);
+  --tabs-tab-notification-background-color: var(--framer-color-tint-default);
+  --tabs-tab-notification-border-color-active: var(--framer-color-bg-default);
   --tabs-tab-notification-border-color-alternative-active: var(--framer-color-bg-secondary);
-  --tabs-tab-notification-border-color-alternative-focus: var(--framer-color-bg);
-  --tabs-tab-notification-border-color-alternative-hover: var(--framer-color-bg);
+  --tabs-tab-notification-border-color-alternative-focus: var(--framer-color-bg-default);
+  --tabs-tab-notification-border-color-alternative-hover: var(--framer-color-bg-default);
   --tabs-tab-notification-border-color-default: var(--framer-color-bg-secondary);
   --tabs-tab-notification-border-color-focus: var(--framer-color-bg-secondary);
   --tabs-tab-notification-border-color-hover: var(--framer-color-bg-secondary);
@@ -94,9 +100,9 @@
   --tabs-tab-padding-with-icon-top: var(--size-null);
   --tabs-tab-radius-alternative: var(--border-radius-xlarge);
   --tabs-tab-radius-default: var(--border-radius-large);
-  --tabs-tab-text-color-active: var(--framer-color-text);
+  --tabs-tab-text-color-active: var(--framer-color-text-default);
   --tabs-tab-text-color-alternative: var(--framer-color-text-secondary);
-  --tabs-tab-text-color-alternative-active: var(--framer-color-text);
+  --tabs-tab-text-color-alternative-active: var(--framer-color-text-default);
   --tabs-tab-text-color-alternative-focus: var(--framer-color-text-secondary);
   --tabs-tab-text-color-alternative-hover: var(--framer-color-text-secondary);
   --tabs-tab-text-color-default: var(--framer-color-text-secondary);
@@ -115,4 +121,3 @@
   --tabs-tab-text-weight-focus: var(--font-weight-medium);
   --tabs-tab-text-weight-hover: var(--font-weight-medium);
 }
-

@@ -3,8 +3,8 @@
     "text": {
       "font": {
         "family": {
-          "$value": "{font.stack}",
-          "$type": "fontFamily"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
         },
         "size": {
           "$value": "{font.size.small}",
@@ -12,14 +12,14 @@
         },
         "weight": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
-      "line-height": {
+      "lineHeight": {
         "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
+        "$type": "number"
       },
-      "letter-spacing": {
+      "letterSpacing": {
         "$value": "{font.letterSpacing.pos.medium}",
         "$type": "dimension"
       },
@@ -68,53 +68,29 @@
         "$type": "dimension"
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
               "$value": "{sketch.color.accent.primary}",
@@ -126,8 +102,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -142,8 +138,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -208,7 +206,7 @@
         },
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -230,17 +228,11 @@
     },
     "toggle": {
       "height": {
-        "$value": {
-          "value": 16,
-          "unit": "px"
-        },
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "width": {
-        "$value": {
-          "value": 24,
-          "unit": "px"
-        },
+        "$value": "{size.pos.small}",
         "$type": "dimension"
       },
       "radius": {
@@ -270,53 +262,29 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
               "$value": "{sketch.color.accent.primary}",
@@ -328,8 +296,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -344,8 +332,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -364,8 +354,18 @@
         }
       },
       "transition": {
-        "$value": "background-color 0.2s ease-in-out",
-        "$type": "string"
+        "$value": {
+          "duration": {
+            "value": 200,
+            "unit": "ms"
+          },
+          "delay": {
+            "value": 0,
+            "unit": "ms"
+          },
+          "timingFunction": [0.37, 0, 0.63, 1]
+        },
+        "$type": "transition"
       },
       "knob": {
         "height": {
@@ -381,10 +381,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": {
-            "value": 11,
-            "unit": "px"
-          },
+          "$value": "11px",
           "$type": "dimension"
         },
         "background": {
@@ -395,7 +392,7 @@
             },
             "checked": {
               "default": {
-                "$value": "{sketch.color.foreground.onaccent}",
+                "$value": "{sketch.color.foreground.onaccent.default}",
                 "$type": "color"
               },
               "disabled": {
@@ -422,10 +419,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": {
-                "value": 10,
-                "unit": "px"
-              },
+              "$value": "10px",
               "$type": "dimension"
             },
             "translateY": {
@@ -441,6 +435,10 @@
                 "value": 200,
                 "unit": "ms"
               },
+              "delay": {
+                "value": 0,
+                "unit": "ms"
+              },
               "timingFunction": [0.37, 0, 0.63, 1]
             },
             "$type": "transition"
@@ -449,6 +447,10 @@
             "$value": {
               "duration": {
                 "value": 200,
+                "unit": "ms"
+              },
+              "delay": {
+                "value": 0,
                 "unit": "ms"
               },
               "timingFunction": [0.37, 0, 0.63, 1]
@@ -504,7 +506,7 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{sketch.color.foreground.onaccent}",
+            "$value": "{sketch.color.foreground.onaccent.default}",
             "$type": "color"
           },
           "disabled": {
@@ -536,53 +538,29 @@
         }
       },
       "border": {
-        "default": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
+        "color": {
+          "default": {
             "$value": "{sketch.color.border.secondary}",
             "$type": "color"
-          }
-        },
-        "checked": {
-          "default": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
+          },
+          "checked": {
+            "default": {
               "$value": "{sketch.color.accent.primary}",
+              "$type": "color"
+            },
+            "disabled": {
+              "$value": "{sketch.color.accent.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "width": {
-              "$value": "{size.pos.unit}",
-              "$type": "dimension"
-            },
-            "color": {
-              "$value": "{sketch.color.accent.disabled}",
-              "$type": "color"
-            }
-          }
-        },
-        "disabled": {
-          "width": {
-            "$value": "{size.pos.unit}",
-            "$type": "dimension"
-          },
-          "color": {
             "$value": "{sketch.color.border.disabled}",
             "$type": "color"
-          }
-        },
-        "secondary": {
-          "color": {
+          },
+          "secondary": {
             "default": {
-              "$value": "transparent",
-              "$type": "string"
+              "$value": "{grey.transparent}",
+              "$type": "color"
             },
             "focus": {
               "$value": "{sketch.color.accent.primary}",
@@ -594,8 +572,28 @@
                 "$type": "color"
               }
             }
+          }
+        },
+        "width": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
           },
-          "width": {
+          "checked": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "disabled": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          },
+          "disabled": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"
@@ -610,8 +608,10 @@
                 "$type": "dimension"
               }
             }
-          },
-          "offset": {
+          }
+        },
+        "offset": {
+          "secondary": {
             "default": {
               "$value": "{size.null}",
               "$type": "dimension"

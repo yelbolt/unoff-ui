@@ -4,7 +4,7 @@
 
 :root[data-theme="figma"] {
   --thumbnail-background-color: var(--figma-color-bg-secondary);
-  --thumbnail-border-color: var(--figma-color-border-disabled);
+  --thumbnail-border-color: var(--figma-color-border-disabled-default);
   --thumbnail-border-offset: var(--size-neg-unit);
   --thumbnail-border-width: var(--size-pos-unit);
   --thumbnail-height: var(--size-pos-medium);
@@ -12,4 +12,3 @@
   --thumbnail-radius: var(--border-radius-medium);
   --thumbnail-width: var(--size-pos-medium);
 }
-

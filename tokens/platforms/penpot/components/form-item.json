@@ -4,6 +4,10 @@
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
     },
+    "minHeight": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
     "padding": {
       "top": {
         "$value": "{size.pos.xxxsmall}",
@@ -36,10 +40,7 @@
     },
     "label": {
       "width": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       },
       "margin": {

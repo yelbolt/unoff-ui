@@ -1,0 +1,24 @@
+{
+  "information": {
+    "platform": {
+      "$type": "text",
+      "$value": "Penpot"
+    },
+    "isCapitalized": {
+      "$type": "boolean",
+      "$value": true
+    },
+    "isNotCapitalized": {
+      "$type": "boolean",
+      "$value": false
+    },
+    "isFlex": {
+      "$type": "boolean",
+      "$value": true
+    },
+    "backgroundColor": {
+      "$type": "color",
+      "$value": "{penpot.color.background.primary}"
+    }
+  }
+}

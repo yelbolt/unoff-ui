@@ -10,13 +10,13 @@
     },
     "picto": {
       "color": {
-        "$value": "{figma.color.icon}",
+        "$value": "{figma.color.icon.default}",
         "$type": "color"
       }
     },
     "letter": {
       "color": {
-        "$value": "{figma.color.text}",
+        "$value": "{figma.color.text.default}",
         "$type": "color"
       },
       "textSize": {

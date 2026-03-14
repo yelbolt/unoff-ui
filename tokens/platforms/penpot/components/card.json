@@ -27,7 +27,7 @@
       }
     },
     "width": {
-      "$value": { "value": 200, "unit": "px" },
+      "$value": "200px",
       "$type": "dimension"
     },
     "ratio": {
@@ -53,15 +53,15 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         }
       },

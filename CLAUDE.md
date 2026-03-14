@@ -131,18 +131,18 @@ Token JSON files live in `tokens/platforms/{theme}/` — for full pipeline docum
 
 ## Available npm scripts
 
-| Script                                       | What it does                                                |
-| -------------------------------------------- | ----------------------------------------------------------- |
-| `npm run storybook`                          | Start Storybook dev server on port 6006                     |
-| `npm run build`                              | TypeScript check + Vite library build → `dist/`             |
-| `npm run test:storybook`                     | Run Vitest interaction tests (Storybook play functions)     |
-| `npm run lint`                               | ESLint (TS/TSX)                                             |
-| `npm run lint:css`                           | Stylelint (CSS/SCSS)                                        |
-| `npm run format`                             | Prettier check                                              |
-| `npm run format:fix`                         | Prettier auto-fix                                           |
+| Script                                       | What it does                                                                             |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `npm run storybook`                          | Start Storybook dev server on port 6006                                                  |
+| `npm run build`                              | TypeScript check + Vite library build → `dist/`                                          |
+| `npm run test:storybook`                     | Run Vitest interaction tests (Storybook play functions)                                  |
+| `npm run lint`                               | ESLint (TS/TSX)                                                                          |
+| `npm run lint:css`                           | Stylelint (CSS/SCSS)                                                                     |
+| `npm run format`                             | Prettier check                                                                           |
+| `npm run format:fix`                         | Prettier auto-fix                                                                        |
 | `npm run create:theme`                       | Interactive new-theme generator — see [docs/theme-generator.md](docs/theme-generator.md) |
-| `npm run scss:build -- --build theme={name}` | Compile token JSON → SCSS for a specific theme              |
-| `npm run figma:publish`                      | Publish Code Connect to Figma                               |
+| `npm run scss:build -- --build theme={name}` | Compile token JSON → SCSS for a specific theme                                           |
+| `npm run figma:publish`                      | Publish Code Connect to Figma                                                            |
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "draggable-item": {
+  "draggableItem": {
     "template": {
       "rows": {
         "$value": "{size.pos.medium}",
@@ -65,10 +65,7 @@
     "param": {
       "width": {
         "compact": {
-          "$value": {
-            "value": 112,
-            "unit": "px"
-          },
+          "$value": "112px",
           "$type": "dimension"
         },
         "square": {

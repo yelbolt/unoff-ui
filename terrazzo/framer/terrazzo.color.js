@@ -1,28 +1,36 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import tokensStudioCompat, {
+  cssTransform,
+  wrapFallbacks,
+} from '../plugins/tokens-studio-compat.js'
 
 export default defineConfig({
-  tokens: ['./tokens/platforms/framer/color.json'],
+  name: 'Framer Colors',
+  tokens: ['./tokens/framer-colors.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
+    tokensStudioCompat(),
     css({
       filename: 'framer-colors.scss',
-      legacyHex: true,
-      modeSelectors: [
+      transform: cssTransform,
+      permutations: [
         {
-          mode: 'framer-light',
-          selectors: ['[data-mode="framer-light"]'],
+          input: { mode: 'framerLight' },
+          prepare: wrapFallbacks(
+            (css) => `[data-mode="framer-light"] {\n  ${css}\n}`
+          ),
         },
         {
-          mode: 'framer-dark',
-          selectors: ['[data-mode="framer-dark"]'],
+          input: { mode: 'framerDark' },
+          prepare: wrapFallbacks(
+            (css) => `[data-mode="framer-dark"] {\n  ${css}\n}`
+          ),
         },
       ],
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })

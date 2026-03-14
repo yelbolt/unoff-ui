@@ -3,16 +3,16 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --dropdown-background-color-default: var(--figma-color-bg);
-  --dropdown-background-color-disabled: var(--figma-color-bg);
-  --dropdown-background-color-focus: var(--figma-color-bg);
-  --dropdown-background-color-hover: var(--figma-color-bg);
-  --dropdown-background-color-on-selected: var(--figma-color-bg-selected);
-  --dropdown-border-color-default: var(--figma-color-border);
-  --dropdown-border-color-disabled: var(--figma-color-border-disabled);
-  --dropdown-border-color-focus: var(--figma-color-border-selected);
-  --dropdown-border-color-hover: var(--figma-color-border);
-  --dropdown-border-color-on-selected: var(--figma-color-bg-selected);
+  --dropdown-background-color-default: var(--figma-color-bg-default);
+  --dropdown-background-color-disabled: var(--figma-color-bg-default);
+  --dropdown-background-color-focus: var(--figma-color-bg-default);
+  --dropdown-background-color-hover: var(--figma-color-bg-default);
+  --dropdown-background-color-on-selected: var(--figma-color-bg-selected-default);
+  --dropdown-border-color-default: var(--figma-color-border-default);
+  --dropdown-border-color-disabled: var(--figma-color-border-disabled-default);
+  --dropdown-border-color-focus: var(--figma-color-border-selected-default);
+  --dropdown-border-color-hover: var(--figma-color-border-default);
+  --dropdown-border-color-on-selected: var(--figma-color-bg-selected-default);
   --dropdown-border-offset-default: var(--size-neg-unit);
   --dropdown-border-offset-disabled: var(--size-neg-unit);
   --dropdown-border-offset-focus: var(--size-neg-unit);
@@ -21,10 +21,10 @@
   --dropdown-border-width-disabled: var(--size-pos-unit);
   --dropdown-border-width-focus: var(--size-pos-unit);
   --dropdown-border-width-hover: var(--size-pos-unit);
-  --dropdown-caret-color-default: var(--figma-color-icon);
+  --dropdown-caret-color-default: var(--figma-color-icon-default);
   --dropdown-caret-color-disabled: var(--figma-color-icon-disabled);
-  --dropdown-caret-color-focus: var(--figma-color-icon);
-  --dropdown-caret-color-hover: var(--figma-color-icon);
+  --dropdown-caret-color-focus: var(--figma-color-icon-default);
+  --dropdown-caret-color-hover: var(--figma-color-icon-default);
   --dropdown-caret-height: var(--size-pos-xsmall);
   --dropdown-caret-width: var(--size-pos-xsmall);
   --dropdown-gap: var(--size-pos-xxxsmall);
@@ -40,9 +40,8 @@
   --dropdown-status-margin-left: var(--size-pos-xxsmall);
   --dropdown-status-margin-right: var(--size-null);
   --dropdown-status-margin-top: var(--size-null);
-  --dropdown-text-color-default: var(--figma-color-text);
+  --dropdown-text-color-default: var(--figma-color-text-default);
   --dropdown-text-color-disabled: var(--figma-color-text-disabled);
-  --dropdown-text-color-focus: var(--figma-color-text);
-  --dropdown-text-color-hover: var(--figma-color-text);
+  --dropdown-text-color-focus: var(--figma-color-text-default);
+  --dropdown-text-color-hover: var(--figma-color-text-default);
 }
-

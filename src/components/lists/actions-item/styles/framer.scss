@@ -6,12 +6,12 @@
   --actions-item-actions-gap: var(--size-pos-xxsmall);
   --actions-item-asset-height: var(--size-pos-xxxlarge);
   --actions-item-asset-min-width: var(--size-pos-xxxlarge);
-  --actions-item-background-color-default: var(--framer-color-bg);
+  --actions-item-background-color-default: var(--framer-color-bg-default);
   --actions-item-background-color-focus: var(--framer-color-tint-dimmed);
   --actions-item-background-color-hover: var(--framer-color-bg-secondary);
   --actions-item-border-color: var(--framer-color-divider);
-  --actions-item-border-secondary-color-default: transparent;
-  --actions-item-border-secondary-color-focus: var(--framer-color-tint);
+  --actions-item-border-secondary-color-default: var(--grey-transparent);
+  --actions-item-border-secondary-color-focus: var(--framer-color-tint-default);
   --actions-item-border-secondary-offset-default: var(--size-null);
   --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
   --actions-item-border-secondary-width-default: var(--size-null);
@@ -24,4 +24,3 @@
   --actions-item-padding-right: var(--size-pos-xsmall);
   --actions-item-padding-top: var(--size-pos-xsmall);
 }
-

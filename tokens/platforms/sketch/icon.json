@@ -32,13 +32,13 @@
       "$type": "link",
       "$value": "/src/icons/sketch/back.svg"
     },
-    "blendEmpty": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/blend-empty.svg"
-    },
     "blend": {
       "$type": "link",
       "$value": "/src/icons/sketch/blend.svg"
+    },
+    "blendEmpty": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/blend-empty.svg"
     },
     "break": {
       "$type": "link",
@@ -60,6 +60,10 @@
       "$type": "link",
       "$value": "/src/icons/sketch/caret-up.svg"
     },
+    "check": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/check.svg"
+    },
     "chevronDown": {
       "$type": "link",
       "$value": "/src/icons/sketch/chevron-down.svg"
@@ -76,17 +80,21 @@
       "$type": "link",
       "$value": "/src/icons/sketch/chevron-up.svg"
     },
-    "check": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/check.svg"
-    },
     "close": {
       "$type": "link",
       "$value": "/src/icons/sketch/close.svg"
     },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/code.svg"
+    },
     "component": {
       "$type": "link",
       "$value": "/src/icons/sketch/component.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/copy.svg"
     },
     "cornerRadius": {
       "$type": "link",
@@ -96,10 +104,6 @@
       "$type": "link",
       "$value": "/src/icons/sketch/corners.svg"
     },
-    "downward": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/downward.svg"
-    },
     "distributeHorizontalSpacing": {
       "$type": "link",
       "$value": "/src/icons/sketch/distribute-horizontal-spacing.svg"
@@ -107,6 +111,10 @@
     "distributeVerticalSpacing": {
       "$type": "link",
       "$value": "/src/icons/sketch/distribute-vertical-spacing.svg"
+    },
+    "downward": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/downward.svg"
     },
     "draft": {
       "$type": "link",
@@ -124,13 +132,13 @@
       "$type": "link",
       "$value": "/src/icons/sketch/eyedropper.svg"
     },
-    "forward": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/forward.svg"
-    },
     "filter": {
       "$type": "link",
       "$value": "/src/icons/sketch/filter.svg"
+    },
+    "forward": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/forward.svg"
     },
     "frame": {
       "$type": "link",
@@ -163,6 +171,10 @@
     "import": {
       "$type": "link",
       "$value": "/src/icons/sketch/import.svg"
+    },
+    "info": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/info.svg"
     },
     "instance": {
       "$type": "link",
@@ -220,6 +232,10 @@
       "$type": "link",
       "$value": "/src/icons/sketch/link-connected.svg"
     },
+    "list": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/list.svg"
+    },
     "listDetailed": {
       "$type": "link",
       "$value": "/src/icons/sketch/list-detailed.svg"
@@ -227,10 +243,6 @@
     "listTile": {
       "$type": "link",
       "$value": "/src/icons/sketch/list-tile.svg"
-    },
-    "list": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/list.svg"
     },
     "lockOff": {
       "$type": "link",
@@ -260,37 +272,49 @@
       "$type": "link",
       "$value": "/src/icons/sketch/recent.svg"
     },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/redo.svg"
+    },
     "refresh": {
       "$type": "link",
       "$value": "/src/icons/sketch/refresh.svg"
+    },
+    "repository": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/repository.svg"
     },
     "reset": {
       "$type": "link",
       "$value": "/src/icons/sketch/reset.svg"
     },
+    "resizeGrip": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/resize-grip.svg"
+    },
     "resizeToFit": {
       "$type": "link",
       "$value": "/src/icons/sketch/resize-to-fit.svg"
-    },
-    "resolveFilled": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/resolve-filled.svg"
     },
     "resolve": {
       "$type": "link",
       "$value": "/src/icons/sketch/resolve.svg"
     },
+    "resolveFilled": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/resolve-filled.svg"
+    },
     "reverse": {
       "$type": "link",
       "$value": "/src/icons/sketch/reverse.svg"
     },
-    "searchLarge": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/search-large.svg"
-    },
     "search": {
       "$type": "link",
       "$value": "/src/icons/sketch/search.svg"
+    },
+    "searchLarge": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/search-large.svg"
     },
     "settings": {
       "$type": "link",
@@ -320,6 +344,10 @@
       "$type": "link",
       "$value": "/src/icons/sketch/spacing.svg"
     },
+    "spinner": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/spinner.svg"
+    },
     "starOff": {
       "$type": "link",
       "$value": "/src/icons/sketch/star-off.svg"
@@ -339,6 +367,10 @@
     "swap": {
       "$type": "link",
       "$value": "/src/icons/sketch/swap.svg"
+    },
+    "target": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/target.svg"
     },
     "theme": {
       "$type": "link",
@@ -360,14 +392,6 @@
       "$type": "link",
       "$value": "/src/icons/sketch/timer.svg"
     },
-    "toggleSidebarTop": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/toggle-sidebar-top.svg"
-    },
-    "toggleSidebarRight": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/toggle-sidebar-right.svg"
-    },
     "toggleSidebarBottom": {
       "$type": "link",
       "$value": "/src/icons/sketch/toggle-sidebar-bottom.svg"
@@ -376,41 +400,21 @@
       "$type": "link",
       "$value": "/src/icons/sketch/toggle-sidebar-left.svg"
     },
+    "toggleSidebarRight": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/toggle-sidebar-right.svg"
+    },
+    "toggleSidebarTop": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/toggle-sidebar-top.svg"
+    },
     "trash": {
       "$type": "link",
       "$value": "/src/icons/sketch/trash.svg"
     },
-    "verticalPadding": {
+    "undo": {
       "$type": "link",
-      "$value": "/src/icons/sketch/vertical-padding.svg"
-    },
-    "visible": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/visible.svg"
-    },
-    "warningLarge": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/warning-large.svg"
-    },
-    "warning": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/warning.svg"
-    },
-    "repository": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/repository.svg"
-    },
-    "info": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/info.svg"
-    },
-    "resizeGrip": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/resize-grip.svg"
-    },
-    "spinner": {
-      "$type": "link",
-      "$value": "/src/icons/sketch/spinner.svg"
+      "$value": "/src/icons/sketch/undo.svg"
     },
     "upward": {
       "$type": "link",
@@ -420,9 +424,21 @@
       "$type": "link",
       "$value": "/src/icons/sketch/user.svg"
     },
-    "target": {
+    "verticalPadding": {
       "$type": "link",
-      "$value": "/src/icons/sketch/target.svg"
+      "$value": "/src/icons/sketch/vertical-padding.svg"
+    },
+    "visible": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/visible.svg"
+    },
+    "warning": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/warning.svg"
+    },
+    "warningLarge": {
+      "$type": "link",
+      "$value": "/src/icons/sketch/warning-large.svg"
     }
   }
 }

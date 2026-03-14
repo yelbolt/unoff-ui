@@ -1,10 +1,7 @@
 {
   "draggableWindow": {
     "width": {
-      "$value": {
-        "value": 320,
-        "unit": "px"
-      },
+      "$value": "320px",
       "$type": "dimension"
     },
     "radius": {
@@ -42,8 +39,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

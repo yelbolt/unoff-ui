@@ -3,19 +3,19 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --tooltip-arrow-background-color: var(--framer-color-bg);
+  --tooltip-arrow-background-color: var(--framer-color-bg-default);
   --tooltip-arrow-border-color: var(--framer-color-divider);
   --tooltip-arrow-border-width: var(--size-pos-unit);
   --tooltip-arrow-radius: var(--border-radius-null);
   --tooltip-arrow-size: var(--size-pos-xsmall);
-  --tooltip-background-color: var(--framer-color-bg);
-  --tooltip-border-color: transparent;
+  --tooltip-background-color: var(--framer-color-bg-default);
+  --tooltip-border-color: var(--grey-transparent);
   --tooltip-border-offset: var(--size-null);
   --tooltip-border-width: var(--size-null);
   --tooltip-gap: var(--size-pos-xxsmall);
-  --tooltip-image-height: 96px;
+  --tooltip-image-height: var(--size-pos-huge);
   --tooltip-image-radius: var(--border-radius-xlarge);
-  --tooltip-image-width: 96px;
+  --tooltip-image-width: var(--size-pos-huge);
   --tooltip-max-width: 248px;
   --tooltip-min-width: 200px;
   --tooltip-padding-bottom: var(--size-pos-xsmall);
@@ -24,7 +24,7 @@
   --tooltip-padding-top: var(--size-pos-xsmall);
   --tooltip-radius: var(--border-radius-xlarge);
   --tooltip-shadow: var(--elevation-300-tooltip);
-  --tooltip-text-color: var(--framer-color-text);
+  --tooltip-text-color: var(--framer-color-text-default);
   --tooltip-text-transform: none;
   --tooltip-with-image-min-width: 248px;
   --tooltip-with-image-padding-bottom: var(--size-pos-xsmall);
@@ -32,4 +32,3 @@
   --tooltip-with-image-padding-right: var(--size-pos-xsmall);
   --tooltip-with-image-padding-top: var(--size-pos-xsmall);
 }
-

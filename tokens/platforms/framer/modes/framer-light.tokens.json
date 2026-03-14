@@ -1,0 +1,97 @@
+{
+  "$extensions": {
+    "com.figma.modeName": "Framer Light"
+  },
+  "framer": {
+    "$type": "color",
+    "$extensions": {
+      "com.figma.scopes": ["ALL_SCOPES"]
+    },
+    "color": {
+      "bg": {
+        "default": {
+          "$value": "#FFFFFF"
+        },
+        "secondary": {
+          "$value": "#F3F3F3"
+        },
+        "tertiary": {
+          "$value": "#EEEEEE"
+        }
+      },
+      "divider": {
+        "$value": "#EEEEEE"
+      },
+      "tint": {
+        "default": {
+          "$value": "#0099FF"
+        },
+        "dimmed": {
+          "$value": "#E5F5FF"
+        },
+        "dark": {
+          "$value": "#0088FF"
+        },
+        "extraDark": {
+          "$value": "#0077FF"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "#FFAA00"
+        },
+        "dimmed": {
+          "$value": "#FFF6E5"
+        },
+        "dark": {
+          "$value": "#FF9900"
+        },
+        "extraDark": {
+          "$value": "#FF8800"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "#33FF36"
+        },
+        "dimmed": {
+          "$value": "#EBFFEB"
+        },
+        "dark": {
+          "$value": "#22FF25"
+        },
+        "extraDark": {
+          "$value": "#11FF14"
+        }
+      },
+      "destructive": {
+        "default": {
+          "$value": "#FF3366"
+        },
+        "dimmed": {
+          "$value": "#FFEBF0"
+        },
+        "dark": {
+          "$value": "#EE2255"
+        },
+        "extraDark": {
+          "$value": "#DD1144"
+        }
+      },
+      "text": {
+        "default": {
+          "$value": "#333333"
+        },
+        "secondary": {
+          "$value": "#666666"
+        },
+        "tertiary": {
+          "$value": "#999999"
+        },
+        "reversed": {
+          "$value": "#FFFFFF"
+        }
+      }
+    }
+  }
+}

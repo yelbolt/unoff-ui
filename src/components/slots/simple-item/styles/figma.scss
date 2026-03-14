@@ -3,11 +3,11 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --simple-item-background-color-default: var(--figma-color-bg);
-  --simple-item-background-color-focus: var(--figma-color-bg-selected);
+  --simple-item-background-color-default: var(--figma-color-bg-default);
+  --simple-item-background-color-focus: var(--figma-color-bg-selected-default);
   --simple-item-background-color-hover: var(--figma-color-bg-hover);
-  --simple-item-border-color-default: transparent;
-  --simple-item-border-color-focus: var(--figma-color-border-selected);
+  --simple-item-border-color-default: var(--grey-transparent);
+  --simple-item-border-color-focus: var(--figma-color-border-selected-default);
   --simple-item-border-offset-default: var(--size-null);
   --simple-item-border-offset-focus: var(--size-neg-unit);
   --simple-item-border-radius: var(--border-radius-small);
@@ -24,4 +24,3 @@
   --simple-item-square-min-width: var(--size-pos-medium);
   --simple-item-square-width: var(--size-pos-medium);
 }
-

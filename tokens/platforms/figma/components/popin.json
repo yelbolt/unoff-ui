@@ -1,10 +1,7 @@
 {
   "popin": {
     "breakpoint": {
-      "$value": {
-        "value": 460,
-        "unit": "px"
-      },
+      "$value": "460px",
       "$type": "dimension"
     },
     "shadow": {
@@ -23,50 +20,38 @@
     },
     "width": {
       "panel": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$value": "400px",
         "$type": "dimension"
       }
     },
     "minWidth": {
-      "$value": {
-        "value": 460,
-        "unit": "px"
-      },
+      "$value": "460px",
       "$type": "dimension"
     },
     "maxWidth": {
-      "$value": {
-        "value": 576,
-        "unit": "px"
-      },
+      "$value": "576px",
       "$type": "dimension"
     },
     "minHeight": {
-      "$value": {
-        "value": 136,
-        "unit": "px"
-      },
+      "$value": "136px",
       "$type": "dimension"
     },
     "background": {
       "color": {
-        "$value": "{figma.color.bg}",
+        "$value": "{figma.color.bg.default}",
         "$type": "color"
       }
     },
     "text": {
       "color": {
-        "$value": "{figma.color.text}",
+        "$value": "{figma.color.text.default}",
         "$type": "color"
       }
     },
     "border": {
       "color": {
-        "$value": "transparent",
-        "$type": "string"
+        "$value": "{grey.transparent}",
+        "$type": "color"
       },
       "width": {
         "$value": "{size.null}",
@@ -110,7 +95,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         }
       },
@@ -172,8 +157,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --members-list-avatar-border-color: var(--framer-color-bg);
+  --members-list-avatar-border-color: var(--framer-color-bg-default);
   --members-list-avatar-border-offset: var(--size-null);
   --members-list-avatar-border-width: var(--size-pos-xunit);
   --members-list-avatar-height: var(--size-pos-medium);
@@ -14,6 +14,5 @@
   --members-list-more-padding-left: var(--size-pos-xxsmall);
   --members-list-more-padding-right: var(--size-pos-xxsmall);
   --members-list-more-padding-top: var(--size-null);
-  --members-list-text-color: var(--framer-color-text);
+  --members-list-text-color: var(--framer-color-text-default);
 }
-

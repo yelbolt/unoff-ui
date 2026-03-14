@@ -3,11 +3,11 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --knob-graduation-background-color: transparent;
+  --knob-graduation-background-color: var(--grey-transparent);
   --knob-graduation-height: var(--size-pos-xxxsmall);
   --knob-graduation-width: var(--size-pos-unit);
   --knob-height: 56px;
-  --knob-input-background-color: var(--framer-color-bg);
+  --knob-input-background-color: var(--framer-color-bg-default);
   --knob-input-border-color: var(--framer-color-divider);
   --knob-input-border-offset: var(--size-neg-unit);
   --knob-input-border-width: var(--size-pos-unit);
@@ -25,7 +25,7 @@
   --knob-label-arrow-background-color-hover: var(--framer-color-bg-tertiary);
   --knob-label-arrow-border-color-default: var(--framer-color-divider);
   --knob-label-arrow-border-color-disabled: var(--framer-color-bg-tertiary);
-  --knob-label-arrow-border-color-focus: var(--framer-color-tint);
+  --knob-label-arrow-border-color-focus: var(--framer-color-tint-default);
   --knob-label-arrow-border-color-hover: var(--framer-color-divider);
   --knob-label-arrow-border-width: var(--size-pos-unit);
   --knob-label-arrow-height: var(--size-pos-xxsmall);
@@ -37,7 +37,8 @@
   --knob-label-background-color-hover: var(--framer-color-bg-tertiary);
   --knob-label-border-color-default: var(--framer-color-divider);
   --knob-label-border-color-disabled: var(--framer-color-bg-tertiary);
-  --knob-label-border-color-focus: var(--framer-color-tint);
+  --knob-label-border-color-focus: var(--framer-color-tint-default);
+  --knob-label-border-color-hover: var(--framer-color-divider);
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
   --knob-label-height: var(--size-pos-small);
@@ -46,24 +47,25 @@
   --knob-label-padding-right: var(--size-pos-xxsmall);
   --knob-label-padding-top: var(--size-pos-xunit);
   --knob-label-radius: var(--border-radius-xlarge);
-  --knob-label-text-color-default: var(--framer-color-text);
+  --knob-label-text-color-default: var(--framer-color-text-default);
   --knob-label-text-color-disabled: var(--framer-color-text-tertiary);
+  --knob-label-text-color-focus: var(--framer-color-text-default);
+  --knob-label-text-color-hover: var(--framer-color-text-default);
   --knob-min-width: var(--size-pos-medium);
-  --knob-tooltip-arrow-background-color: var(--framer-color-text);
-  --knob-tooltip-arrow-border-color: transparent;
+  --knob-tooltip-arrow-background-color: var(--framer-color-text-default);
+  --knob-tooltip-arrow-border-color: var(--grey-transparent);
   --knob-tooltip-arrow-border-width: var(--size-null);
   --knob-tooltip-arrow-height: var(--size-pos-xxxsmall);
   --knob-tooltip-arrow-radius: var(--border-radius-null);
   --knob-tooltip-arrow-width: var(--size-pos-xxxsmall);
-  --knob-tooltip-background-color: var(--framer-color-text);
+  --knob-tooltip-background-color: var(--framer-color-text-default);
   --knob-tooltip-min-width: var(--size-pos-small);
   --knob-tooltip-padding-bottom: var(--size-pos-xxxsmall);
   --knob-tooltip-padding-left: var(--size-pos-xxsmall);
   --knob-tooltip-padding-right: var(--size-pos-xxsmall);
   --knob-tooltip-padding-top: var(--size-pos-xxxsmall);
   --knob-tooltip-radius: var(--border-radius-large);
-  --knob-tooltip-text-color: var(--framer-color-bg);
+  --knob-tooltip-text-color: var(--framer-color-bg-default);
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-top: var(--size-neg-xxxsmall);
 }
-

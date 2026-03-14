@@ -1,0 +1,131 @@
+{
+  "$extensions": {
+    "com.figma.modeName": "Penpot Dark"
+  },
+  "penpot": {
+    "$type": "color",
+    "$extensions": {
+      "com.figma.scopes": ["ALL_SCOPES"]
+    },
+    "color": {
+      "accent": {
+        "default": {
+          "$value": "#2E3434"
+        },
+        "primary": {
+          "default": {
+            "$value": "#7EFFF5"
+          },
+          "muted": {
+            "$value": "#426158"
+          }
+        },
+        "secondary": {
+          "$value": "#BB97D8"
+        },
+        "tertiary": {
+          "$value": "#00D1B8"
+        },
+        "quaternary": {
+          "$value": "#FF6FE0"
+        },
+        "overlay": {
+          "$value": "#7EFFF599"
+        },
+        "select": {
+          "$value": "#00D1B81A"
+        },
+        "success": {
+          "$value": "#2D9F8F"
+        },
+        "warning": {
+          "$value": "#FE9C07"
+        },
+        "error": {
+          "$value": "#C80857"
+        },
+        "info": {
+          "$value": "#0E9BE9"
+        }
+      },
+      "background": {
+        "default": {
+          "$value": "#18181A"
+        },
+        "primary": {
+          "$value": "#18181A"
+        },
+        "secondary": {
+          "$value": "#000"
+        },
+        "tertiary": {
+          "$value": "#212426"
+        },
+        "quaternary": {
+          "$value": "#2E3434"
+        },
+        "info": {
+          "$value": "#082C49"
+        },
+        "success": {
+          "$value": "#0A2927"
+        },
+        "warning": {
+          "$value": "#3D2501"
+        },
+        "error": {
+          "$value": "#500124"
+        }
+      },
+      "foreground": {
+        "primary": {
+          "$value": "#FFF"
+        },
+        "secondary": {
+          "$value": "#8F9DA3"
+        },
+        "disabled": {
+          "$value": "#8F9DA366"
+        },
+        "error": {
+          "$value": "#FF3277"
+        }
+      },
+      "icon": {
+        "default": {
+          "$value": "#8F9DA3"
+        }
+      },
+      "shadow": {
+        "dark": {
+          "$value": "#00000099"
+        }
+      },
+      "overlay": {
+        "default": {
+          "$value": "#18181A99"
+        },
+        "onboarding": {
+          "$value": "#18181AE6"
+        }
+      },
+      "canvas": {
+        "$value": "#BFBFBF"
+      },
+      "token": {
+        "background": {
+          "$value": "#272941"
+        },
+        "border": {
+          "$value": "#484C74"
+        },
+        "accent": {
+          "$value": "#6C6DAD"
+        },
+        "foreground": {
+          "$value": "#A7A9FF"
+        }
+      }
+    }
+  }
+}

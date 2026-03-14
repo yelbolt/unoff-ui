@@ -25,7 +25,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -37,7 +37,7 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{framer.color.text}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -72,10 +72,7 @@
         "$type": "dimension"
       },
       "maxWidth": {
-        "$value": {
-          "value": 640,
-          "unit": "px"
-        },
+        "$value": "640px",
         "$type": "dimension"
       },
       "gap": {
@@ -103,7 +100,7 @@
       "mask": {
         "background": {
           "color": {
-            "$value": "{framer.color.bg}",
+            "$value": "{framer.color.bg.default}",
             "$type": "color"
           }
         },

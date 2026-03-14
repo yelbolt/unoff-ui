@@ -1,10 +1,7 @@
 {
   "actionsList": {
     "minWidth": {
-      "$value": {
-        "value": 224,
-        "unit": "px"
-      },
+      "$value": "224px",
       "$type": "dimension"
     },
     "padding": {
@@ -37,8 +34,8 @@
     },
     "border": {
       "color": {
-        "$value": "transparent",
-        "$type": "string"
+        "$value": "{grey.transparent}",
+        "$type": "color"
       },
       "width": {
         "$value": "{size.null}",
@@ -143,8 +140,8 @@
       "background": {
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
             "$value": "{sketch.color.background.secondary}",
@@ -175,8 +172,8 @@
       "text": {
         "font": {
           "family": {
-            "$value": "{font.stack}",
-            "$type": "fontFamily"
+            "$value": "{text.fontFamily}",
+            "$type": "fontFamilies"
           },
           "size": {
             "$value": "{font.size.medium}",
@@ -184,7 +181,7 @@
           },
           "weight": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           }
         },
         "letterSpacing": {
@@ -193,7 +190,7 @@
         },
         "lineHeight": {
           "$value": "{font.lineHeight.default}",
-          "$type": "dimension"
+          "$type": "number"
         },
         "color": {
           "default": {
@@ -306,8 +303,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },
@@ -442,7 +439,7 @@
     "divider": {
       "margin": {
         "top": {
-          "$value": { "value": 11, "unit": "px" },
+          "$value": "11px",
           "$type": "dimension"
         },
         "right": {

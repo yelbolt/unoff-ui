@@ -1,10 +1,7 @@
 {
   "popin": {
     "breakpoint": {
-      "$value": {
-        "value": 460,
-        "unit": "px"
-      },
+      "$value": "460px",
       "$type": "dimension"
     },
     "shadow": {
@@ -23,32 +20,20 @@
     },
     "width": {
       "panel": {
-        "$value": {
-          "value": 460,
-          "unit": "px"
-        },
+        "$value": "460px",
         "$type": "dimension"
       }
     },
     "minWidth": {
-      "$value": {
-        "value": 460,
-        "unit": "px"
-      },
+      "$value": "460px",
       "$type": "dimension"
     },
     "maxWidth": {
-      "$value": {
-        "value": 576,
-        "unit": "px"
-      },
+      "$value": "576px",
       "$type": "dimension"
     },
     "minHeight": {
-      "$value": {
-        "value": 136,
-        "unit": "px"
-      },
+      "$value": "136px",
       "$type": "dimension"
     },
     "background": {
@@ -110,8 +95,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "text": {
@@ -172,8 +157,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       }
     },

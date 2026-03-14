@@ -48,8 +48,8 @@
     },
     "background": {
       "color": {
-        "$value": "transparent",
-        "$type": "string"
+        "$value": "{grey.transparent}",
+        "$type": "color"
       }
     },
     "border": {
@@ -58,7 +58,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border}",
+        "$value": "{figma.color.border.default}",
         "$type": "color"
       }
     },

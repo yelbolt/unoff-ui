@@ -1,5 +1,5 @@
 {
-  "simple-item": {
+  "simpleItem": {
     "gap": {
       "$value": "{size.pos.xxsmall}",
       "$type": "dimension"
@@ -29,7 +29,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "hover": {
@@ -37,7 +37,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }
@@ -69,28 +69,22 @@
       },
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.border.selected}",
+          "$value": "{figma.color.border.selected.default}",
           "$type": "color"
         }
       }
     },
     "compact": {
       "minWidth": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       },
       "width": {
-        "$value": {
-          "value": 112,
-          "unit": "px"
-        },
+        "$value": "112px",
         "$type": "dimension"
       }
     },

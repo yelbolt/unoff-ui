@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --section-background-color: var(--framer-color-bg);
+  --section-background-color: var(--framer-color-bg-default);
   --section-border-color: var(--framer-color-divider);
   --section-border-width: var(--size-pos-unit);
   --section-child-padding-default-bottom: var(--size-null);
@@ -25,4 +25,3 @@
   --section-padding-right: var(--size-null);
   --section-padding-top: var(--size-pos-xxsmall);
 }
-

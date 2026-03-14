@@ -3,7 +3,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "alternate": {
@@ -36,7 +36,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{figma.color.border}",
+        "$value": "{figma.color.border.default}",
         "$type": "color"
       }
     },

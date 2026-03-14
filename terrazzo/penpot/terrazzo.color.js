@@ -1,28 +1,36 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import tokensStudioCompat, {
+  cssTransform,
+  wrapFallbacks,
+} from '../plugins/tokens-studio-compat.js'
 
 export default defineConfig({
-  tokens: ['./tokens/platforms/penpot/color.json'],
+  name: 'Penpot Colors',
+  tokens: ['./tokens/penpot-colors.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
+    tokensStudioCompat(),
     css({
       filename: 'penpot-colors.scss',
-      legacyHex: true,
-      modeSelectors: [
+      transform: cssTransform,
+      permutations: [
         {
-          mode: 'penpot-light',
-          selectors: ['[data-mode="penpot-light"]'],
+          input: { mode: 'penpotLight' },
+          prepare: wrapFallbacks(
+            (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`
+          ),
         },
         {
-          mode: 'penpot-dark',
-          selectors: ['[data-mode="penpot-dark"]'],
+          input: { mode: 'penpotDark' },
+          prepare: wrapFallbacks(
+            (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`
+          ),
         },
       ],
     }),
   ],
   lint: {
-    rules: {
-      // my lint rules
-    },
+    rules: {},
   },
 })

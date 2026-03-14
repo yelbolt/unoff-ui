@@ -2,19 +2,13 @@
   "input": {
     "number": {
       "width": {
-        "$value": {
-          "value": 108,
-          "unit": "px"
-        },
+        "$value": "108px",
         "$type": "dimension"
       }
     },
     "color": {
       "width": {
-        "$value": {
-          "value": 108,
-          "unit": "px"
-        },
+        "$value": "108px",
         "$type": "dimension"
       }
     },
@@ -85,7 +79,7 @@
           "$type": "dimension"
         }
       },
-      "with-icon": {
+      "withIcon": {
         "top": {
           "$value": "{size.pos.medium}",
           "$type": "dimension"
@@ -103,7 +97,7 @@
           "$type": "dimension"
         }
       },
-      "with-color": {
+      "withColor": {
         "top": {
           "$value": "{size.pos.medium}",
           "$type": "dimension"
@@ -347,17 +341,17 @@
       },
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
             "$value": "{sketch.color.accent.primary}",
@@ -379,8 +373,8 @@
           }
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
           "$value": "{sketch.color.accent.primary}",
@@ -419,8 +413,8 @@
     "text": {
       "font": {
         "family": {
-          "$value": "{font.stack}",
-          "$type": "fontFamily"
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
         },
         "size": {
           "$value": "{font.size.medium}",
@@ -428,7 +422,7 @@
         },
         "weight": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "letterSpacing": {
@@ -437,7 +431,7 @@
       },
       "lineHeight": {
         "$value": "{font.lineHeight.default}",
-        "$type": "dimension"
+        "$type": "number"
       },
       "color": {
         "default": {
@@ -562,7 +556,7 @@
         }
       }
     },
-    "color-chip": {
+    "colorChip": {
       "width": {
         "$value": "{size.pos.xsmall}",
         "$type": "dimension"
@@ -609,11 +603,11 @@
       },
       "opacity": {
         "default": {
-          "$value": 1,
+          "$value": "{alpha.1000}",
           "$type": "number"
         },
         "disabled": {
-          "$value": 0.5,
+          "$value": "{alpha.500}",
           "$type": "number"
         }
       }
@@ -671,8 +665,8 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "text": {
@@ -694,7 +688,7 @@
           "$value": "{size.pos.medium}",
           "$type": "dimension"
         },
-        "long-text": {
+        "longText": {
           "$value": "{size.pos.medium}",
           "$type": "dimension"
         }

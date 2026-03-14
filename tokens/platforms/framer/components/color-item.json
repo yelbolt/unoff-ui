@@ -1,5 +1,5 @@
 {
-  "color-item": {
+  "colorItem": {
     "padding": {
       "top": {
         "$value": "{size.null}",

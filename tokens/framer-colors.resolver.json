@@ -1,0 +1,20 @@
+{
+  "name": "Framer Colors",
+  "version": "2025.10",
+  "description": "Color tokens for Framer platform, including light/dark modes",
+  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "modifiers": {
+    "mode": {
+      "description": "Framer light/dark modes",
+      "contexts": {
+        "framerLight": [
+          { "$ref": "./platforms/framer/modes/framer-light.tokens.json" }
+        ],
+        "framerDark": [
+          { "$ref": "./platforms/framer/modes/framer-dark.tokens.json" }
+        ]
+      },
+      "default": "framerLight"
+    }
+  }
+}

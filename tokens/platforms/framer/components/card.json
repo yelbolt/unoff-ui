@@ -27,7 +27,7 @@
       }
     },
     "width": {
-      "$value": { "value": 200, "unit": "px" },
+      "$value": "200px",
       "$type": "dimension"
     },
     "ratio": {
@@ -37,7 +37,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "hover": {
@@ -53,15 +53,15 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         }
       },

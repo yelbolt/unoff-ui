@@ -30,10 +30,7 @@
         }
       },
       "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$value": "400px",
         "$type": "dimension"
       },
       "background": {
@@ -77,10 +74,7 @@
         }
       },
       "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$value": "400px",
         "$type": "dimension"
       }
     }

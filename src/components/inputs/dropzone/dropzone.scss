@@ -28,12 +28,12 @@
   }
 
   &--dragged-over {
-    --semantic-message-background-color: var(--dropzone-background-color-over);
-    --dropzone-border-width: var(--dropzone-border-width-over);
-    --dropzone-border-offset: var(--dropzone-border-offset-over);
-    --dropzone-border-style: var(--dropzone-border-style-over);
-    --dropzone-border-color: var(--dropzone-border-color-over);
-    --dropzone-background-color: var(--dropzone-background-color-over);
+    --semantic-message-background-color: var(--dropzone-background-color-hover);
+    --dropzone-border-width: var(--dropzone-border-width-hover);
+    --dropzone-border-offset: var(--dropzone-border-offset-hover);
+    --dropzone-border-style: var(--dropzone-border-style-hover);
+    --dropzone-border-color: var(--dropzone-border-color-hover);
+    --dropzone-background-color: var(--dropzone-background-color-hover);
   }
 
   &--disabled {

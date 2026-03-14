@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --draggable-window-background-color: var(--figma-color-bg);
-  --draggable-window-border-color: transparent;
+  --draggable-window-background-color: var(--figma-color-bg-default);
+  --draggable-window-border-color: var(--grey-transparent);
   --draggable-window-border-offset: var(--size-null);
   --draggable-window-border-width: var(--size-null);
   --draggable-window-content-gap: var(--size-pos-xxxsmall);
@@ -12,10 +12,9 @@
   --draggable-window-content-padding-left: var(--size-pos-xxsmall);
   --draggable-window-content-padding-right: var(--size-pos-xxsmall);
   --draggable-window-content-padding-top: var(--size-pos-xxsmall);
-  --draggable-window-header-border-color: var(--figma-color-border);
+  --draggable-window-header-border-color: var(--figma-color-border-default);
   --draggable-window-header-border-width: var(--size-pos-unit);
   --draggable-window-radius: var(--border-radius-xxlarge);
   --draggable-window-shadow: var(--elevation-500-modal-window);
   --draggable-window-width: 296px;
 }
-

@@ -11,4 +11,4 @@ coverage
 **/sketch-*.scss
 **/penpot-*.scss
 **/framer-*.scss
-**/globals.scss
+**/commons.scss

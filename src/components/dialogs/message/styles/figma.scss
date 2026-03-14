@@ -4,7 +4,7 @@
 
 :root[data-theme="figma"] {
   --message-gap: var(--size-pos-xxsmall);
-  --message-icon-color-default: var(--figma-color-icon);
+  --message-icon-color-default: var(--figma-color-icon-default);
   --message-icon-color-disabled: var(--figma-color-icon-disabled);
   --message-message-padding-bottom: var(--size-pos-xxxsmall);
   --message-message-padding-left: var(--size-null);
@@ -14,11 +14,11 @@
   --message-padding-left: var(--size-pos-msmall);
   --message-padding-right: var(--size-pos-msmall);
   --message-padding-top: var(--size-null);
-  --message-text-color-default: var(--figma-color-text);
+  --message-text-color-default: var(--figma-color-text-default);
   --message-text-color-disabled: var(--figma-color-text-disabled);
   --message-ticker-gap: var(--size-pos-medium);
   --message-ticker-height: var(--size-pos-medium);
-  --message-ticker-mask-background-color: var(--figma-color-bg);
+  --message-ticker-mask-background-color: var(--figma-color-bg-default);
   --message-ticker-mask-width: var(--size-pos-xsmall);
   --message-ticker-max-width: 640px;
   --message-ticker-padding-bottom: var(--size-null);
@@ -26,4 +26,3 @@
   --message-ticker-padding-right: var(--size-pos-xsmall);
   --message-ticker-padding-top: var(--size-null);
 }
-

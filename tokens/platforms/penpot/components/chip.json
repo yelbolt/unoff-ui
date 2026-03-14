@@ -51,7 +51,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{penpot.color.accent.primary}",
+          "$value": "{penpot.color.accent.primary.default}",
           "$type": "color"
         },
         "inactive": {
@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.accent}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         },
         "onBackground": {
           "$value": "{font.weight.normal}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "size": {
@@ -113,20 +113,20 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "inactive": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
           "$value": "{penpot.color.accent.tertiary}",
           "$type": "color"
         },
         "onBackground": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {

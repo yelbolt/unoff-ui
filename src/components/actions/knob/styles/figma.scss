@@ -3,12 +3,12 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --knob-graduation-background-color: transparent;
+  --knob-graduation-background-color: var(--grey-transparent);
   --knob-graduation-height: var(--size-pos-xxxsmall);
   --knob-graduation-width: var(--size-pos-unit);
   --knob-height: var(--size-pos-xlarge);
-  --knob-input-background-color: var(--figma-color-bg);
-  --knob-input-border-color: var(--figma-color-border);
+  --knob-input-background-color: var(--figma-color-bg-default);
+  --knob-input-border-color: var(--figma-color-border-default);
   --knob-input-border-offset: var(--size-neg-unit);
   --knob-input-border-width: var(--size-pos-unit);
   --knob-input-padding-bottom: var(--size-pos-xunit);
@@ -19,25 +19,26 @@
   --knob-input-shadow: var(--elevation-300-tooltip);
   --knob-input-top: var(--size-neg-xxsmall);
   --knob-input-width: var(--size-pos-xxlarge);
-  --knob-label-arrow-background-color-default: var(--figma-color-bg);
-  --knob-label-arrow-background-color-disabled: var(--figma-color-bg-disabled);
-  --knob-label-arrow-background-color-focus: var(--figma-color-bg-selected);
+  --knob-label-arrow-background-color-default: var(--figma-color-bg-default);
+  --knob-label-arrow-background-color-disabled: var(--figma-color-bg-disabled-default);
+  --knob-label-arrow-background-color-focus: var(--figma-color-bg-selected-default);
   --knob-label-arrow-background-color-hover: var(--figma-color-bg-hover);
   --knob-label-arrow-border-color-default: var(--figma-color-border-disabled-strong);
-  --knob-label-arrow-border-color-disabled: var(--figma-color-border-disabled);
-  --knob-label-arrow-border-color-focus: var(--figma-color-border-selected);
+  --knob-label-arrow-border-color-disabled: var(--figma-color-border-disabled-default);
+  --knob-label-arrow-border-color-focus: var(--figma-color-border-selected-default);
   --knob-label-arrow-border-color-hover: var(--figma-color-border-disabled-strong);
   --knob-label-arrow-border-width: var(--size-pos-unit);
   --knob-label-arrow-height: var(--size-pos-xxsmall);
   --knob-label-arrow-radius: var(--border-radius-null);
   --knob-label-arrow-width: var(--size-pos-xxsmall);
-  --knob-label-background-color-default: var(--figma-color-bg);
-  --knob-label-background-color-disabled: var(--figma-color-bg-disabled);
-  --knob-label-background-color-focus: var(--figma-color-bg-selected);
+  --knob-label-background-color-default: var(--figma-color-bg-default);
+  --knob-label-background-color-disabled: var(--figma-color-bg-disabled-default);
+  --knob-label-background-color-focus: var(--figma-color-bg-selected-default);
   --knob-label-background-color-hover: var(--figma-color-bg-hover);
   --knob-label-border-color-default: var(--figma-color-border-disabled-strong);
-  --knob-label-border-color-disabled: var(--figma-color-border-disabled);
-  --knob-label-border-color-focus: var(--figma-color-border-selected);
+  --knob-label-border-color-disabled: var(--figma-color-border-disabled-default);
+  --knob-label-border-color-focus: var(--figma-color-border-selected-default);
+  --knob-label-border-color-hover: var(--figma-color-border-disabled-strong);
   --knob-label-border-width-default: var(--size-pos-unit);
   --knob-label-border-width-focus: var(--size-pos-unit);
   --knob-label-height: var(--size-pos-msmall);
@@ -46,11 +47,13 @@
   --knob-label-padding-right: var(--size-pos-xxxsmall);
   --knob-label-padding-top: var(--size-pos-xunit);
   --knob-label-radius: var(--border-radius-medium);
-  --knob-label-text-color-default: var(--figma-color-text);
+  --knob-label-text-color-default: var(--figma-color-text-default);
   --knob-label-text-color-disabled: var(--figma-color-text-ondisabled);
+  --knob-label-text-color-focus: var(--figma-color-text-default);
+  --knob-label-text-color-hover: var(--figma-color-text-default);
   --knob-min-width: var(--size-pos-medium);
   --knob-tooltip-arrow-background-color: var(--figma-color-bg-inverse);
-  --knob-tooltip-arrow-border-color: transparent;
+  --knob-tooltip-arrow-border-color: var(--grey-transparent);
   --knob-tooltip-arrow-border-width: var(--size-null);
   --knob-tooltip-arrow-height: var(--size-pos-xxxsmall);
   --knob-tooltip-arrow-radius: var(--border-radius-null);
@@ -66,4 +69,3 @@
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-top: var(--size-neg-xxxsmall);
 }
-

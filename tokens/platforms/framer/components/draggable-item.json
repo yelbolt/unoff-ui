@@ -1,5 +1,5 @@
 {
-  "draggable-item": {
+  "draggableItem": {
     "template": {
       "rows": {
         "$value": "{size.pos.medium}",
@@ -31,7 +31,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "selected": {
@@ -50,7 +50,7 @@
     },
     "ghost": {
       "color": {
-        "$value": "{framer.color.tint}",
+        "$value": "{framer.color.tint.default}",
         "$type": "color"
       },
       "height": {
@@ -65,10 +65,7 @@
     "param": {
       "width": {
         "compact": {
-          "$value": {
-            "value": 112,
-            "unit": "px"
-          },
+          "$value": "112px",
           "$type": "dimension"
         },
         "square": {

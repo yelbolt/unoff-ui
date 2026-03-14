@@ -1,6 +1,6 @@
 {
   "name": "@unoff/ui",
-  "version": "1.21.3",
+  "version": "1.22.0",
   "type": "module",
   "description": "Unoff UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": {
@@ -70,9 +70,6 @@
     "@storybook/addon-onboarding": "^10.2.14",
     "@storybook/addon-vitest": "^10.2.14",
     "@storybook/react-vite": "^10.2.14",
-    "@terrazzo/cli": "^0.10.3",
-    "@terrazzo/plugin-css": "^0.10.3",
-    "@terrazzo/token-tools": "^0.10.3",
     "@testing-library/react": "^15.0.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",

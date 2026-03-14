@@ -1,8 +1,8 @@
 {
-  "multiple-slider": {
+  "multipleSlider": {
     "margin": {
       "top": {
-        "$value": "{size.pos.small}",
+        "$value": "{size.pos.large}",
         "$type": "dimension"
       },
       "right": {
@@ -10,7 +10,7 @@
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
       },
       "left": {
@@ -44,6 +44,12 @@
       "$value": "{border.radius.large}",
       "$type": "dimension"
     },
+    "background": {
+      "color": {
+        "$value": "{sketch.color.background.secondary}",
+        "$type": "color"
+      }
+    },
     "border": {
       "color": {
         "$value": "{sketch.color.border.primary}",
@@ -52,6 +58,12 @@
       "width": {
         "$value": "{size.pos.unit}",
         "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{sketch.color.accent.primary}",
+        "$type": "color"
       }
     },
     "status": {

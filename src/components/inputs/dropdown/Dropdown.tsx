@@ -110,7 +110,10 @@ export interface DropdownState {
   documentWidth: number
 }
 
-export default class Dropdown extends React.Component<DropdownProps, DropdownState> {
+export default class Dropdown extends React.Component<
+  DropdownProps,
+  DropdownState
+> {
   private selectMenuRef: React.RefObject<HTMLDivElement>
   private buttonRef: React.RefObject<HTMLButtonElement>
   private listRef: React.RefObject<HTMLDivElement>

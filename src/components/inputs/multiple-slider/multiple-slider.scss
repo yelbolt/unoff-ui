@@ -20,10 +20,10 @@
   &__range {
     position: relative;
     flex: 1 1 auto;
-    background-color: var(--multiple-slider-background-color);
     box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
       var(--multiple-slider-border-color);
     border-radius: var(--multiple-slider-radius);
+    background-color: var(--multiple-slider-background-color);
     height: var(--multiple-slider-height);
 
     &--add {
@@ -43,9 +43,9 @@
   &__progress {
     position: absolute;
     top: 0;
-    height: 100%;
     border-radius: var(--multiple-slider-radius);
     background-color: var(--multiple-slider-progress-color);
+    height: 100%;
     pointer-events: none;
   }
 

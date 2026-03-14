@@ -47,26 +47,34 @@
         "disabled": {
           "$value": "{sketch.color.background.secondary}",
           "$type": "color"
+        },
+        "onSelected": {
+          "$value": "{sketch.color.accent.tertiary}",
+          "$type": "color"
         }
       }
     },
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "focus": {
           "$value": "{sketch.color.accent.primary}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
+        },
+        "onSelected": {
+          "$value": "{sketch.color.accent.primary}",
+          "$type": "color"
         }
       },
       "width": {

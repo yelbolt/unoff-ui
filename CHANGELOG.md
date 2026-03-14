@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.22.0] - 2026-03-14
+
+### Added
+
+- **Figma Plugin Stylesheet** (`figma-plugin.scss`): New stylesheet for Figma plugin contexts where the platform already injects its own CSS custom properties
+  - Maps only `-default` tokens to `var(--figma-color-x)` with no fallback values
+  - Non-default tokens are omitted — they share Figma's native variable names directly
+  - Compatible with all Figma products (Figma, FigJam, Slides, Buzz) without requiring `data-mode`
+  - Exported as `figmaPlugin` from `@unoff/ui` alongside `figmaColors`
+- **Commons design tokens**: Added `commons.scss` with shared dimension, opacity, radius, and shadow tokens used across all platform themes
+- **Shadow tokens**: Added comprehensive shadow color tokens and elevation definitions for `dropShadow` and `innerShadow` effect types
+- **Alpha color variations**: Added `alpha0` color tokens (fully transparent black and white) across all platform token definitions
+- **Resolver-based color configs**: All four platform color themes (Figma, Framer, Penpot, Sketch) now use `.resolver.json` files for correct light/dark mode resolution
+
+### Changed
+
+- **Token format migration to DTCG 2025.10**: All design token JSON files migrated from Tokens Studio legacy format to the DTCG 2025.10 standard
+  - Dimension values changed from strings (`"4px"`) to `{ value, unit }` objects
+  - `$type` fields updated: `fontFamilies → fontFamily`, `fontWeights → fontWeight`, `fontSizes → dimension`, `lineHeights → number`, `letterSpacing → dimension`, `boxShadow → shadow`
+- **Terrazzo pipeline refactored** to run on `@terrazzo/cli` and `@terrazzo/plugin-css` v2.0.0-rc.0
+  - `terrazzo.globals.js` replaced by `terrazzo.commons.js` using a commons resolver
+  - `terrazzo.type.js` removed — text styles now handled per-platform in `terrazzo.text.js`
+  - All Terrazzo component configs updated across all four platforms (207 files)
+- **`wrapFallbacks` CSS bridge**: Color tokens ending in `-default` are now emitted as `var(--base-name, raw-value)`, enabling Storybook to use hardcoded fallbacks while the Figma plugin picks up native Figma variables automatically
+- **`globals.module.scss` replaced by `commons.module.scss`** in exported style modules
+- **Naming conventions standardized**: Hover/focus states renamed from `over` to `hover` in dropzone tokens; dimension property names unified across all platforms
+- **Button letter-spacing tokens** corrected per platform (Figma, Framer, Penpot, Sketch)
+
+### Fixed
+
+- **Dimension tokens generating `undefinedundefined`**: `cssTransform` in `tokens-studio-compat.js` now handles both legacy string dimensions (`"4px"`) and DTCG `{ value, unit }` objects correctly
+- **Shadow aliases resolving inline**: Shadow tokens that alias commons elevation tokens now emit `var(--elevation-x)` references instead of inlining all layers
+- **`stopLoading` type**: Changed from `NodeJS.Timeout` to `number` for browser compatibility
+
+### Technical Details
+
+- New `tokens-studio-compat.js` plugin exports: `preprocessTokens`, `cssTransform`, `wrapFallbacks`, `wrapPassthrough`
+- `wrapPassthrough(':root')` generates the plugin-only passthrough stylesheet with zero fallback values
+- All platform token resolver files moved to `tokens/platforms/{theme}/` with DTCG-compliant mode files
+- Updated `docs/terrazzo-guide.md` with full pipeline documentation, two-file Figma strategy, and all four plugin exports
+
 ## [1.21.3] - 2026-03-06
 
 ### Changed
@@ -494,7 +535,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added `image?: string` prop to Tooltip component interface
 - Implemented `tooltip__snack` CSS class with flexbox layout and gap styling
 - Enhanced Tooltip component to conditionally render image element when `image` prop is provided
-- Updated `.prettierignore` to include `globals.scss` for better build consistency
+- Updated `.prettierignore` to include `commons.scss` for better build consistency
 - Improved Tooltip layout structure with nested presentation wrappers for better styling control
 
 ## [1.19.36] - 2025-12-02

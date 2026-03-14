@@ -39,7 +39,10 @@ interface IconChipState {
   isTooltipVisible: boolean
 }
 
-export default class IconChip extends React.Component<IconChipProps, IconChipState> {
+export default class IconChip extends React.Component<
+  IconChipProps,
+  IconChipState
+> {
   static defaultProps: Partial<IconChipProps> = {
     pin: 'BOTTOM',
     type: 'SINGLE_LINE',

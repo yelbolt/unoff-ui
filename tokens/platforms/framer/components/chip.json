@@ -51,7 +51,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
         "inactive": {
@@ -70,11 +70,11 @@
       "weight": {
         "default": {
           "$value": "{font.weight.bold}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         },
         "onBackground": {
           "$value": "{font.weight.accent}",
-          "$type": "fontWeight"
+          "$type": "fontWeights"
         }
       },
       "size": {
@@ -101,7 +101,7 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.tint}",
+          "$value": "{framer.color.tint.default}",
           "$type": "color"
         },
         "onBackground": {
@@ -113,20 +113,20 @@
     "border": {
       "color": {
         "default": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "inactive": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "hover": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         },
         "onBackground": {
-          "$value": "transparent",
-          "$type": "string"
+          "$value": "{grey.transparent}",
+          "$type": "color"
         }
       },
       "width": {

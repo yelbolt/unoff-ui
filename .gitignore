@@ -29,3 +29,6 @@ coverage/
 # Logs
 *.log
 chromatic-diagnostics.json
+
+# Temporary files
+.terrazzo-tmp/

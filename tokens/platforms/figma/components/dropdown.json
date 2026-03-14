@@ -33,23 +33,23 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "onSelected": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }
@@ -57,23 +57,23 @@
     "border": {
       "color": {
         "default": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.border.selected}",
+          "$value": "{figma.color.border.selected.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{figma.color.border.disabled}",
+          "$value": "{figma.color.border.disabled.default}",
           "$type": "color"
         },
         "onSelected": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       },
@@ -117,15 +117,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.text}",
+          "$value": "{figma.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -145,15 +145,15 @@
       },
       "color": {
         "default": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.icon}",
+          "$value": "{figma.color.icon.default}",
           "$type": "color"
         },
         "disabled": {

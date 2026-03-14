@@ -76,11 +76,11 @@
       top: 0;
       left: 0;
       z-index: 1;
-      outline: var(--select-box-border-secondary-width-default) solid
-        var(--select-box-border-secondary-color-default);
-      outline-offset: var(--select-box-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-box-border-default-width)
-        var(--select-box-border-default-color);
+      outline: var(--select-box-border-width-secondary-default) solid
+        var(--select-box-border-color-secondary-default);
+      outline-offset: var(--select-box-border-offset-secondary-default);
+      box-shadow: inset 0 0 0 var(--select-box-border-width-default)
+        var(--select-box-border-color-default);
       border-radius: var(--select-box-radius);
       background: var(--select-box-background-color-default);
       width: var(--select-box-width);
@@ -107,8 +107,8 @@
     }
 
     &:checked ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-checked-default-width)
-        var(--select-box-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-width-checked-default)
+        var(--select-box-border-color-checked-default);
       background: var(--select-box-background-color-checked-default);
     }
 
@@ -117,26 +117,26 @@
     }
 
     &:focus ~ .checkbox__box__background {
-      outline: var(--select-box-border-secondary-width-focus) solid
-        var(--select-box-border-secondary-color-focus);
-      outline-offset: var(--select-box-border-secondary-offset-focus);
+      outline: var(--select-box-border-width-secondary-focus) solid
+        var(--select-box-border-color-secondary-focus);
+      outline-offset: var(--select-box-border-offset-secondary-focus);
     }
 
     &:focus:checked ~ .checkbox__box__background {
-      outline: var(--select-box-border-secondary-width-checked-focus) solid
-        var(--select-box-border-secondary-color-checked-focus);
-      outline-offset: var(--select-box-border-secondary-offset-checked-focus);
+      outline: var(--select-box-border-width-secondary-checked-focus) solid
+        var(--select-box-border-color-secondary-checked-focus);
+      outline-offset: var(--select-box-border-offset-secondary-checked-focus);
     }
 
     &:disabled:checked ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-checked-disabled-width)
-        var(--select-box-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-width-checked-disabled)
+        var(--select-box-border-color-checked-disabled);
       background: var(--select-box-background-color-checked-disabled);
     }
 
     &:disabled ~ .checkbox__box__background {
-      box-shadow: inset 0 0 0 var(--select-box-border-disabled-width)
-        var(--select-box-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-box-border-width-disabled)
+        var(--select-box-border-color-disabled);
       background: var(--select-box-background-color-disabled);
     }
 
@@ -196,11 +196,11 @@
       z-index: 1;
       transition: background-color
         var(--select-toggle-knob-transition-background-color);
-      outline: var(--select-toggle-border-secondary-width-default) solid
-        var(--select-toggle-border-secondary-color-default);
-      outline-offset: var(--select-toggle-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-toggle-border-default-width)
-        var(--select-toggle-border-default-color);
+      outline: var(--select-toggle-border-width-secondary-default) solid
+        var(--select-toggle-border-color-secondary-default);
+      outline-offset: var(--select-toggle-border-offset-secondary-default);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-width-default)
+        var(--select-toggle-border-color-default);
       border-radius: var(--select-toggle-radius);
       background-color: var(--select-toggle-background-color-default);
       width: var(--select-toggle-width);
@@ -225,8 +225,8 @@
     }
 
     &:checked ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-default-width)
-        var(--select-toggle-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-width-checked-default)
+        var(--select-toggle-border-color-checked-default);
       background-color: var(--select-toggle-background-color-checked-default);
     }
 
@@ -241,22 +241,22 @@
     }
 
     &:focus ~ .switch__toggle__background {
-      outline: var(--select-toggle-border-secondary-width-focus) solid
-        var(--select-toggle-border-secondary-color-focus);
-      outline-offset: var(--select-toggle-border-secondary-offset-focus);
+      outline: var(--select-toggle-border-width-secondary-focus) solid
+        var(--select-toggle-border-color-secondary-focus);
+      outline-offset: var(--select-toggle-border-offset-secondary-focus);
     }
 
     &:focus:checked ~ .switch__toggle__background {
-      outline: var(--select-toggle-border-secondary-width-checked-focus) solid
-        var(--select-toggle-border-secondary-color-checked-focus);
+      outline: var(--select-toggle-border-width-secondary-checked-focus) solid
+        var(--select-toggle-border-color-secondary-checked-focus);
       outline-offset: var(
-        --select-toggle-border-secondary-offset-checked-focus
+        --select-toggle-border-offset-secondary-checked-focus
       );
     }
 
     &:disabled ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-disabled-width)
-        var(--select-toggle-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-width-disabled)
+        var(--select-toggle-border-color-disabled);
       background-color: var(--select-toggle-background-color-disabled);
     }
 
@@ -265,8 +265,8 @@
     }
 
     &:disabled:checked ~ .switch__toggle__background {
-      box-shadow: inset 0 0 0 var(--select-toggle-border-checked-disabled-width)
-        var(--select-toggle-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-toggle-border-width-checked-disabled)
+        var(--select-toggle-border-color-checked-disabled);
       background-color: var(--select-toggle-background-color-checked-disabled);
     }
 
@@ -328,11 +328,11 @@
       top: 0;
       left: 0;
       z-index: 1;
-      outline: var(--select-button-border-secondary-width-default) solid
-        var(--select-button-border-secondary-color-default);
-      outline-offset: var(--select-button-border-secondary-offset-default);
-      box-shadow: inset 0 0 0 var(--select-button-border-default-width)
-        var(--select-button-border-default-color);
+      outline: var(--select-button-border-width-secondary-default) solid
+        var(--select-button-border-color-secondary-default);
+      outline-offset: var(--select-button-border-offset-secondary-default);
+      box-shadow: inset 0 0 0 var(--select-button-border-width-default)
+        var(--select-button-border-color-default);
       border-radius: var(--select-button-radius);
       background: var(--select-button-background-color-default);
       width: var(--select-button-width);
@@ -353,8 +353,8 @@
     }
 
     &:checked ~ .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-checked-default-width)
-        var(--select-button-border-checked-default-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-width-checked-default)
+        var(--select-button-border-color-checked-default);
       background: var(--select-button-background-color-checked-default);
     }
 
@@ -363,22 +363,22 @@
     }
 
     &:focus ~ .radio__button__background {
-      outline: var(--select-button-border-secondary-width-focus) solid
-        var(--select-button-border-secondary-color-focus);
-      outline-offset: var(--select-button-border-secondary-offset-focus);
+      outline: var(--select-button-border-width-secondary-focus) solid
+        var(--select-button-border-color-secondary-focus);
+      outline-offset: var(--select-button-border-offset-secondary-focus);
     }
 
     &:focus:checked ~ .radio__button__background {
-      outline: var(--select-button-border-secondary-width-checked-focus) solid
-        var(--select-button-border-secondary-color-checked-focus);
+      outline: var(--select-button-border-width-secondary-checked-focus) solid
+        var(--select-button-border-color-secondary-checked-focus);
       outline-offset: var(
-        --select-button-border-secondary-offset-checked-focus
+        --select-button-border-offset-secondary-checked-focus
       );
     }
 
     &:disabled:checked ~ .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-checked-disabled-width)
-        var(--select-button-border-checked-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-width-checked-disabled)
+        var(--select-button-border-color-checked-disabled);
       background: var(--select-button-background-color-checked-disabled);
     }
 
@@ -387,8 +387,8 @@
     }
 
     &:disabled + .radio__button__background {
-      box-shadow: inset 0 0 0 var(--select-button-border-disabled-width)
-        var(--select-button-border-disabled-color);
+      box-shadow: inset 0 0 0 var(--select-button-border-width-disabled)
+        var(--select-button-border-color-disabled);
       background: var(--select-button-background-color-disabled);
     }
   }

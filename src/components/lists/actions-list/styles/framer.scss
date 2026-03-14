@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --actions-list-background-color: var(--framer-color-bg);
-  --actions-list-border-color: transparent;
+  --actions-list-background-color: var(--framer-color-bg-default);
+  --actions-list-border-color: var(--grey-transparent);
   --actions-list-border-offset: var(--size-null);
   --actions-list-border-width: var(--size-null);
   --actions-list-caret-color-default: var(--framer-color-text-tertiary);
@@ -22,13 +22,13 @@
   --actions-list-divider-margin-left: var(--size-null);
   --actions-list-divider-margin-right: var(--size-null);
   --actions-list-divider-margin-top: 11px;
-  --actions-list-item-background-color-default: transparent;
-  --actions-list-item-background-color-disabled: transparent;
-  --actions-list-item-background-color-focus: var(--framer-color-tint);
-  --actions-list-item-background-color-hover: var(--framer-color-tint);
-  --actions-list-item-background-color-selected: transparent;
-  --actions-list-item-background-color-selected-focus: var(--framer-color-tint);
-  --actions-list-item-background-color-selected-hover: var(--framer-color-tint);
+  --actions-list-item-background-color-default: var(--grey-transparent);
+  --actions-list-item-background-color-disabled: var(--grey-transparent);
+  --actions-list-item-background-color-focus: var(--framer-color-tint-default);
+  --actions-list-item-background-color-hover: var(--framer-color-tint-default);
+  --actions-list-item-background-color-selected: var(--grey-transparent);
+  --actions-list-item-background-color-selected-focus: var(--framer-color-tint-default);
+  --actions-list-item-background-color-selected-hover: var(--framer-color-tint-default);
   --actions-list-item-gap: var(--size-pos-xxsmall);
   --actions-list-item-height: var(--size-pos-medium);
   --actions-list-item-padding-default-bottom: var(--size-null);
@@ -36,6 +36,9 @@
   --actions-list-item-padding-default-right: var(--size-pos-xxxsmall);
   --actions-list-item-padding-default-top: var(--size-null);
   --actions-list-item-padding-selected-bottom: var(--size-null);
+  --actions-list-item-padding-selected-left: var(--size-pos-xxsmall);
+  --actions-list-item-padding-selected-right: var(--size-pos-xxxsmall);
+  --actions-list-item-padding-selected-top: var(--size-null);
   --actions-list-item-padding-selected-focus-bottom: var(--size-null);
   --actions-list-item-padding-selected-focus-left: var(--size-pos-xxsmall);
   --actions-list-item-padding-selected-focus-right: var(--size-pos-xxxsmall);
@@ -44,18 +47,15 @@
   --actions-list-item-padding-selected-hover-left: var(--size-pos-xxsmall);
   --actions-list-item-padding-selected-hover-right: var(--size-pos-xxxsmall);
   --actions-list-item-padding-selected-hover-top: var(--size-null);
-  --actions-list-item-padding-selected-left: var(--size-pos-xxsmall);
-  --actions-list-item-padding-selected-right: var(--size-pos-xxxsmall);
-  --actions-list-item-padding-selected-top: var(--size-null);
   --actions-list-item-radius: var(--border-radius-large);
-  --actions-list-item-text-color-default: var(--framer-color-text);
+  --actions-list-item-text-color-default: var(--framer-color-text-default);
   --actions-list-item-text-color-disabled: var(--framer-color-text-tertiary);
   --actions-list-item-text-color-focus: var(--framer-color-text-reversed);
   --actions-list-item-text-color-hover: var(--framer-color-text-reversed);
-  --actions-list-item-text-color-selected: var(--framer-color-text);
+  --actions-list-item-text-color-selected: var(--framer-color-text-default);
   --actions-list-item-text-color-selected-focus: var(--framer-color-text-reversed);
   --actions-list-item-text-color-selected-hover: var(--framer-color-text-reversed);
-  --actions-list-item-text-font-family: var(--font-stack);
+  --actions-list-item-text-font-family: var(--text-font-family);
   --actions-list-item-text-font-size: var(--font-size-small);
   --actions-list-item-text-font-weight: var(--font-weight-normal);
   --actions-list-item-text-letter-spacing: var(--font-letter-spacing-pos-large);
@@ -70,11 +70,11 @@
   --actions-list-patch-width: var(--size-pos-xxxsmall);
   --actions-list-radius: var(--border-radius-xlarge);
   --actions-list-shadow: var(--elevation-400-menu-panel);
-  --actions-list-spot-background-color: var(--framer-color-bg);
-  --actions-list-spot-border-color: transparent;
+  --actions-list-spot-background-color: var(--framer-color-bg-default);
+  --actions-list-spot-border-color: var(--grey-transparent);
   --actions-list-spot-border-width: var(--size-null);
   --actions-list-spot-height: var(--size-pos-xsmall);
-  --actions-list-spot-icon-color: var(--framer-color-text);
+  --actions-list-spot-icon-color: var(--framer-color-text-default);
   --actions-list-spot-inset-bottom-bottom: var(--size-null);
   --actions-list-spot-inset-bottom-left: var(--size-pos-unit);
   --actions-list-spot-inset-bottom-right: var(--size-pos-unit);
@@ -92,15 +92,14 @@
   --actions-list-submenu-inset-right-left: auto;
   --actions-list-submenu-inset-right-right: var(--size-neg-xxxsmall);
   --actions-list-submenu-inset-right-top: var(--size-neg-xxxsmall);
-  --actions-list-tick-color-default: var(--framer-color-text);
+  --actions-list-tick-color-default: var(--framer-color-text-default);
   --actions-list-tick-color-disabled: var(--framer-color-text-tertiary);
   --actions-list-tick-color-focus: var(--framer-color-text-reversed);
   --actions-list-tick-color-hover: var(--framer-color-text-reversed);
-  --actions-list-tick-color-selected: var(--framer-color-text);
+  --actions-list-tick-color-selected: var(--framer-color-text-default);
   --actions-list-tick-color-selected-focus: var(--framer-color-text-reversed);
   --actions-list-tick-color-selected-hover: var(--framer-color-text-reversed);
   --actions-list-tick-height: var(--size-pos-xsmall);
   --actions-list-tick-width: var(--size-pos-xsmall);
   --actions-list-title-text-transform: none;
 }
-

@@ -3,10 +3,10 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --keyboard-shortcut-item-background-color: var(--figma-color-bg);
+  --keyboard-shortcut-item-background-color: var(--figma-color-bg-default);
   --keyboard-shortcut-item-gap: var(--size-pos-xxsmall);
-  --keyboard-shortcut-item-key-background-color: var(--figma-color-bg);
-  --keyboard-shortcut-item-key-border-color: var(--figma-color-border);
+  --keyboard-shortcut-item-key-background-color: var(--figma-color-bg-default);
+  --keyboard-shortcut-item-key-border-color: var(--figma-color-border-default);
   --keyboard-shortcut-item-key-border-offset: var(--size-neg-unit);
   --keyboard-shortcut-item-key-border-width: var(--size-pos-unit);
   --keyboard-shortcut-item-key-gap: var(--size-pos-xxxsmall);
@@ -27,4 +27,3 @@
   --keyboard-shortcut-item-separator-padding-right: var(--size-pos-xxxsmall);
   --keyboard-shortcut-item-separator-padding-top: var(--size-null);
 }
-

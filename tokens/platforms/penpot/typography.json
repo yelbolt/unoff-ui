@@ -1,8 +1,0 @@
-{
-  "font": {
-    "stack": {
-      "$type": "fontFamily",
-      "$value": ["Work Sans", "sans-serif"]
-    }
-  }
-}

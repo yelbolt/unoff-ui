@@ -3,7 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --bar-background-color: transparent;
+  --bar-background-color: var(--grey-transparent);
   --bar-border-color: var(--sketch-color-border-primary);
   --bar-border-width: var(--size-pos-unit);
   --bar-gap: var(--size-pos-xxsmall);
@@ -18,4 +18,3 @@
   --bar-padding-mobile-right: var(--size-pos-xsmall);
   --bar-padding-mobile-top: var(--size-pos-xxxsmall);
 }
-

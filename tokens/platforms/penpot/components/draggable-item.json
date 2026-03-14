@@ -1,5 +1,5 @@
 {
-  "draggable-item": {
+  "draggableItem": {
     "template": {
       "rows": {
         "$value": "{size.pos.medium}",
@@ -50,7 +50,7 @@
     },
     "ghost": {
       "color": {
-        "$value": "{penpot.color.accent.primary}",
+        "$value": "{penpot.color.accent.primary.default}",
         "$type": "color"
       },
       "height": {
@@ -65,10 +65,7 @@
     "param": {
       "width": {
         "compact": {
-          "$value": {
-            "value": 112,
-            "unit": "px"
-          },
+          "$value": "112px",
           "$type": "dimension"
         },
         "square": {

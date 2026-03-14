@@ -25,19 +25,25 @@
   --tabs-tab-background-color-default: var(--sketch-color-background-primary);
   --tabs-tab-background-color-focus: var(--sketch-color-accent-disabled);
   --tabs-tab-background-color-hover: var(--sketch-color-background-secondary);
-  --tabs-tab-border-color-active: transparent;
+  --tabs-tab-border-color-active: var(--grey-transparent);
+  --tabs-tab-border-color-alternative: var(--grey-transparent);
+  --tabs-tab-border-color-alternative-active: var(--grey-transparent);
   --tabs-tab-border-color-alternative-focus: var(--sketch-color-accent-primary);
-  --tabs-tab-border-color-alternative-hover: transparent;
-  --tabs-tab-border-color-default: transparent;
+  --tabs-tab-border-color-alternative-hover: var(--grey-transparent);
+  --tabs-tab-border-color-default: var(--grey-transparent);
   --tabs-tab-border-color-focus: var(--sketch-color-accent-primary);
-  --tabs-tab-border-color-hover: transparent;
+  --tabs-tab-border-color-hover: var(--grey-transparent);
   --tabs-tab-border-offset-active: var(--size-null);
+  --tabs-tab-border-offset-alternative: var(--size-null);
+  --tabs-tab-border-offset-alternative-active: var(--size-null);
   --tabs-tab-border-offset-alternative-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-alternative-hover: var(--size-null);
   --tabs-tab-border-offset-default: var(--size-null);
   --tabs-tab-border-offset-focus: var(--size-neg-unit);
   --tabs-tab-border-offset-hover: var(--size-null);
   --tabs-tab-border-width-active: var(--size-null);
+  --tabs-tab-border-width-alternative: var(--size-null);
+  --tabs-tab-border-width-alternative-active: var(--size-null);
   --tabs-tab-border-width-alternative-focus: var(--size-pos-unit);
   --tabs-tab-border-width-alternative-hover: var(--size-null);
   --tabs-tab-border-width-default: var(--size-null);
@@ -115,4 +121,3 @@
   --tabs-tab-text-weight-focus: var(--font-weight-normal);
   --tabs-tab-text-weight-hover: var(--font-weight-normal);
 }
-

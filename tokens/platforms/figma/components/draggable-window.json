@@ -1,10 +1,7 @@
 {
   "draggableWindow": {
     "width": {
-      "$value": {
-        "value": 296,
-        "unit": "px"
-      },
+      "$value": "296px",
       "$type": "dimension"
     },
     "radius": {
@@ -17,14 +14,14 @@
     },
     "background": {
       "color": {
-        "$value": "{figma.color.bg}",
+        "$value": "{figma.color.bg.default}",
         "$type": "color"
       }
     },
     "border": {
       "color": {
-        "$value": "transparent",
-        "$type": "string"
+        "$value": "{grey.transparent}",
+        "$type": "color"
       },
       "width": {
         "$value": "{size.null}",
@@ -42,7 +39,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{figma.color.border}",
+          "$value": "{figma.color.border.default}",
           "$type": "color"
         }
       }

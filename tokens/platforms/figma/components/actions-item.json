@@ -1,5 +1,5 @@
 {
-  "actions-item": {
+  "actionsItem": {
     "gap": {
       "$value": "{size.pos.xsmall}",
       "$type": "dimension"
@@ -24,7 +24,7 @@
     },
     "border": {
       "color": {
-        "$value": "{figma.color.border.disabled}",
+        "$value": "{figma.color.border.disabled.default}",
         "$type": "color"
       },
       "width": {
@@ -54,11 +54,11 @@
         },
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
-            "$value": "{figma.color.border.selected}",
+            "$value": "{figma.color.border.selected.default}",
             "$type": "color"
           }
         }
@@ -67,7 +67,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{figma.color.bg}",
+          "$value": "{figma.color.bg.default}",
           "$type": "color"
         },
         "hover": {
@@ -75,7 +75,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{figma.color.bg.selected}",
+          "$value": "{figma.color.bg.selected.default}",
           "$type": "color"
         }
       }

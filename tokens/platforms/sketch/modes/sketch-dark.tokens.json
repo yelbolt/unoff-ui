@@ -1,0 +1,139 @@
+{
+  "$extensions": {
+    "com.figma.modeName": "Sketch Dark"
+  },
+  "sketch": {
+    "$type": "color",
+    "$extensions": {
+      "com.figma.scopes": ["ALL_SCOPES"]
+    },
+    "color": {
+      "accent": {
+        "default": {
+          "$value": "#F26726"
+        },
+        "primary": {
+          "$value": "#F26726"
+        },
+        "secondary": {
+          "$value": "#CE5820"
+        },
+        "tertiary": {
+          "$value": "#5F3623"
+        },
+        "info": {
+          "$value": "#84D7CF"
+        },
+        "success": {
+          "$value": "#13BE3E"
+        },
+        "warning": {
+          "$value": "#D4910C"
+        },
+        "error": {
+          "$value": "#CC0000"
+        },
+        "select": {
+          "$value": "#180A04"
+        },
+        "disabled": {
+          "$value": "#4E2F24"
+        }
+      },
+      "background": {
+        "default": {
+          "$value": "#202022"
+        },
+        "primary": {
+          "$value": "#202022"
+        },
+        "secondary": {
+          "$value": "#2D2D2F"
+        },
+        "tertiary": {
+          "$value": "#454545"
+        },
+        "info": {
+          "$value": "#2D3839"
+        },
+        "success": {
+          "$value": "#1E3526"
+        },
+        "warning": {
+          "$value": "#382F1F"
+        },
+        "error": {
+          "$value": "#371C1D"
+        },
+        "disabled": {
+          "$value": "#3E3E3F"
+        }
+      },
+      "foreground": {
+        "default": {
+          "$value": "#FFFFFF"
+        },
+        "primary": {
+          "$value": "#FFFFFF"
+        },
+        "secondary": {
+          "$value": "#D9D9D9"
+        },
+        "tertiary": {
+          "$value": "#B3B3B3"
+        },
+        "info": {
+          "$value": "#84D7CF"
+        },
+        "success": {
+          "$value": "#13BE3E"
+        },
+        "warning": {
+          "$value": "#D4910C"
+        },
+        "error": {
+          "$value": "#FF1F1F"
+        },
+        "inverted": {
+          "$value": "#202022"
+        },
+        "disabled": {
+          "$value": "#9A9A9B"
+        },
+        "onaccent": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "disabled": {
+            "$value": "#FFFFFF87"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "#303032"
+        },
+        "primary": {
+          "$value": "#303032"
+        },
+        "secondary": {
+          "$value": "#454545"
+        },
+        "tertiary": {
+          "$value": "#D9D9D9"
+        },
+        "disabled": {
+          "$value": "#303032"
+        },
+        "onaccent": {
+          "$value": "#FFFFFF7D"
+        }
+      },
+      "overlay": {
+        "default": {
+          "$value": "#1E1F20BF"
+        }
+      }
+    }
+  }
+}

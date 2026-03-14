@@ -1,0 +1,634 @@
+{
+  "figma": {
+    "$type": "color",
+    "$extensions": {
+      "com.figma.scopes": ["ALL_SCOPES"]
+    },
+    "color": {
+      "bg": {
+        "default": {
+          "$value": "#FFFFFF"
+        },
+        "brand": {
+          "default": {
+            "$value": "#9747FF"
+          },
+          "hover": {
+            "$value": "#8638E5"
+          },
+          "pressed": {
+            "$value": "#8638E5"
+          },
+          "secondary": {
+            "$value": "#7C2BDA"
+          },
+          "tertiary": {
+            "$value": "#F1E5FF"
+          }
+        },
+        "component": {
+          "default": {
+            "$value": "#9747FF"
+          },
+          "hover": {
+            "$value": "#8638E5"
+          },
+          "pressed": {
+            "$value": "#8638E5"
+          },
+          "secondary": {
+            "$value": "#7C2BDA"
+          },
+          "tertiary": {
+            "$value": "#F1E5FF"
+          }
+        },
+        "danger": {
+          "default": {
+            "$value": "#F24822"
+          },
+          "hover": {
+            "$value": "#DC3412"
+          },
+          "pressed": {
+            "$value": "#DC3412"
+          },
+          "secondary": {
+            "$value": "#BD2915"
+          },
+          "tertiary": {
+            "$value": "#FFE2E0"
+          }
+        },
+        "disabled": {
+          "default": {
+            "$value": "#D9D9D9"
+          },
+          "secondary": {
+            "$value": "#B3B3B3"
+          }
+        },
+        "hover": {
+          "$value": "#F5F5F5"
+        },
+        "inverse": {
+          "$value": "#2C2C2C"
+        },
+        "onselected": {
+          "default": {
+            "$value": "#E4CCFF"
+          },
+          "hover": {
+            "$value": "#E4CCFF"
+          },
+          "pressed": {
+            "$value": "#E4CCFF"
+          }
+        },
+        "pressed": {
+          "$value": "#F5F5F5"
+        },
+        "secondary": {
+          "$value": "#F5F5F5"
+        },
+        "selected": {
+          "default": {
+            "$value": "#F1E5FF"
+          },
+          "hover": {
+            "$value": "#E4CCFF"
+          },
+          "pressed": {
+            "$value": "#E4CCFF"
+          },
+          "secondary": {
+            "$value": "#F9F5FF"
+          },
+          "strong": {
+            "$value": "#9747FF"
+          },
+          "tertiary": {
+            "$value": "#F9F5FF"
+          }
+        },
+        "success": {
+          "default": {
+            "$value": "#14AE5C"
+          },
+          "hover": {
+            "$value": "#009951"
+          },
+          "pressed": {
+            "$value": "#009951"
+          },
+          "secondary": {
+            "$value": "#008043"
+          },
+          "tertiary": {
+            "$value": "#CFF7D3"
+          }
+        },
+        "tertiary": {
+          "$value": "#E6E6E6"
+        },
+        "warning": {
+          "default": {
+            "$value": "#FFCD29"
+          },
+          "hover": {
+            "$value": "#FFC21A"
+          },
+          "pressed": {
+            "$value": "#FFC21A"
+          },
+          "secondary": {
+            "$value": "#FAB815"
+          },
+          "tertiary": {
+            "$value": "#FFF1C2"
+          }
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "#E6E6E6"
+        },
+        "brand": {
+          "default": {
+            "$value": "#E4CCFF"
+          },
+          "strong": {
+            "$value": "#8638E5"
+          }
+        },
+        "component": {
+          "default": {
+            "$value": "#E4CCFF"
+          },
+          "hover": {
+            "$value": "#9747FF"
+          },
+          "strong": {
+            "$value": "#8638E5"
+          }
+        },
+        "danger": {
+          "default": {
+            "$value": "#FFC7C2"
+          },
+          "strong": {
+            "$value": "#DC3412"
+          }
+        },
+        "disabled": {
+          "default": {
+            "$value": "#E6E6E6"
+          },
+          "strong": {
+            "$value": "#0000004D"
+          }
+        },
+        "onbrand": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "oncomponent": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "ondanger": {
+          "default": {
+            "$value": "#DC3412"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "onselected": {
+          "default": {
+            "$value": "#E4CCFF"
+          },
+          "strong": {
+            "$value": "#000000E5"
+          }
+        },
+        "onsuccess": {
+          "default": {
+            "$value": "#009951"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          }
+        },
+        "onwarning": {
+          "default": {
+            "$value": "#FAB815"
+          },
+          "strong": {
+            "$value": "#000000E5"
+          }
+        },
+        "selected": {
+          "default": {
+            "$value": "#9747FF"
+          },
+          "strong": {
+            "$value": "#8638E5"
+          }
+        },
+        "strong": {
+          "$value": "#2C2C2C"
+        },
+        "success": {
+          "default": {
+            "$value": "#AFF4C6"
+          },
+          "strong": {
+            "$value": "#009951"
+          }
+        },
+        "warning": {
+          "default": {
+            "$value": "#FFE8A3"
+          },
+          "strong": {
+            "$value": "#B86200"
+          }
+        }
+      },
+      "icon": {
+        "default": {
+          "$value": "#000000E5"
+        },
+        "brand": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "pressed": {
+            "$value": "#7C2BDA"
+          },
+          "secondary": {
+            "$value": "#D9B8FF"
+          },
+          "tertiary": {
+            "$value": "#E4CCFF"
+          }
+        },
+        "component": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "pressed": {
+            "$value": "#7C2BDA"
+          },
+          "secondary": {
+            "$value": "#C5B2DC"
+          },
+          "tertiary": {
+            "$value": "#C5B2DC"
+          }
+        },
+        "danger": {
+          "default": {
+            "$value": "#F24822"
+          },
+          "hover": {
+            "$value": "#BD2915"
+          },
+          "pressed": {
+            "$value": "#BD2915"
+          },
+          "secondary": {
+            "default": {
+              "$value": "#F24822"
+            },
+            "hover": {
+              "$value": "#F24822"
+            }
+          },
+          "tertiary": {
+            "$value": "#F24822"
+          }
+        },
+        "disabled": {
+          "$value": "#0000004D"
+        },
+        "hover": {
+          "$value": "#000000E5"
+        },
+        "onbrand": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "oncomponent": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "ondanger": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "ondisabled": {
+          "$value": "#FFFFFF"
+        },
+        "oninverse": {
+          "$value": "#FFFFFFE5"
+        },
+        "onselected": {
+          "default": {
+            "$value": "#000000E5"
+          },
+          "secondary": {
+            "$value": "#00000080"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          },
+          "tertiary": {
+            "$value": "#0000004D"
+          }
+        },
+        "onsuccess": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "onwarning": {
+          "default": {
+            "$value": "#000000E5"
+          },
+          "secondary": {
+            "$value": "#00000080"
+          },
+          "tertiary": {
+            "$value": "#0000004D"
+          }
+        },
+        "pressed": {
+          "$value": "#8638E5"
+        },
+        "secondary": {
+          "default": {
+            "$value": "#00000080"
+          },
+          "hover": {
+            "$value": "#000000E5"
+          }
+        },
+        "selected": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "secondary": {
+            "$value": "#8638E5"
+          },
+          "tertiary": {
+            "$value": "#8638E5"
+          }
+        },
+        "success": {
+          "default": {
+            "$value": "#14AE5C"
+          },
+          "pressed": {
+            "$value": "#008043"
+          },
+          "secondary": {
+            "$value": "#14AE5C"
+          },
+          "tertiary": {
+            "$value": "#14AE5C"
+          }
+        },
+        "tertiary": {
+          "default": {
+            "$value": "#0000004D"
+          },
+          "hover": {
+            "$value": "#000000E5"
+          }
+        },
+        "warning": {
+          "default": {
+            "$value": "#FFCD29"
+          },
+          "pressed": {
+            "$value": "#B86200"
+          },
+          "secondary": {
+            "$value": "#FFCD29"
+          },
+          "tertiary": {
+            "$value": "#FFCD29"
+          }
+        }
+      },
+      "text": {
+        "default": {
+          "$value": "#000000E5"
+        },
+        "brand": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "secondary": {
+            "$value": "#8638E5"
+          },
+          "tertiary": {
+            "$value": "#8638E5"
+          }
+        },
+        "component": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "pressed": {
+            "$value": "#7C2BDA"
+          },
+          "secondary": {
+            "$value": "#C5B2DC"
+          },
+          "tertiary": {
+            "$value": "#C5B2DC"
+          }
+        },
+        "danger": {
+          "default": {
+            "$value": "#DC3412"
+          },
+          "secondary": {
+            "$value": "#DC3412"
+          },
+          "tertiary": {
+            "$value": "#DC3412"
+          }
+        },
+        "disabled": {
+          "$value": "#0000004D"
+        },
+        "hover": {
+          "$value": "#000000E5"
+        },
+        "onbrand": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "oncomponent": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "ondanger": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "ondisabled": {
+          "$value": "#FFFFFF"
+        },
+        "oninverse": {
+          "$value": "#FFFFFF"
+        },
+        "onselected": {
+          "default": {
+            "$value": "#000000E5"
+          },
+          "secondary": {
+            "$value": "#00000080"
+          },
+          "strong": {
+            "$value": "#FFFFFF"
+          },
+          "tertiary": {
+            "$value": "#0000004D"
+          }
+        },
+        "onsuccess": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#FFFFFFCC"
+          },
+          "tertiary": {
+            "$value": "#FFFFFF66"
+          }
+        },
+        "onwarning": {
+          "default": {
+            "$value": "#FFFFFF"
+          },
+          "secondary": {
+            "$value": "#00000080"
+          },
+          "tertiary": {
+            "$value": "#0000004D"
+          }
+        },
+        "secondary": {
+          "default": {
+            "$value": "#00000080"
+          },
+          "hover": {
+            "$value": "#000000E5"
+          }
+        },
+        "selected": {
+          "default": {
+            "$value": "#8638E5"
+          },
+          "secondary": {
+            "$value": "#8638E5"
+          },
+          "tertiary": {
+            "$value": "#8638E5"
+          }
+        },
+        "success": {
+          "default": {
+            "$value": "#009951"
+          },
+          "secondary": {
+            "$value": "#009951"
+          },
+          "tertiary": {
+            "$value": "#009951"
+          }
+        },
+        "tertiary": {
+          "default": {
+            "$value": "#0000004D"
+          },
+          "hover": {
+            "$value": "#000000E5"
+          }
+        },
+        "warning": {
+          "default": {
+            "$value": "#B86200"
+          },
+          "secondary": {
+            "$value": "#B86200"
+          },
+          "tertiary": {
+            "$value": "#B86200"
+          }
+        }
+      }
+    }
+  }
+}

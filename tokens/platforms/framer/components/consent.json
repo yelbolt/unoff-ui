@@ -30,15 +30,12 @@
         }
       },
       "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$value": "400px",
         "$type": "dimension"
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         }
       },
@@ -73,10 +70,7 @@
         }
       },
       "maxWidth": {
-        "$value": {
-          "value": 400,
-          "unit": "px"
-        },
+        "$value": "400px",
         "$type": "dimension"
       }
     }

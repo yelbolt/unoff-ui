@@ -2,11 +2,12 @@ import sketchTypes from '@styles/tokens/modules/sketch-types.module.scss'
 import sketchColors from '@styles/tokens/modules/sketch-colors.module.scss'
 import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
 import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
-import globals from '@styles/tokens/modules/globals.module.scss'
 import framerTypes from '@styles/tokens/modules/framer-types.module.scss'
 import framerColors from '@styles/tokens/modules/framer-colors.module.scss'
 import figmaTypes from '@styles/tokens/modules/figma-types.module.scss'
+import figmaPlugin from '@styles/tokens/modules/figma-plugin.module.scss'
 import figmaColors from '@styles/tokens/modules/figma-colors.module.scss'
+import commons from '@styles/tokens/modules/commons.module.scss'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
 import icons from '@styles/icons/icons.module.scss'
@@ -79,8 +80,9 @@ export {
   icons,
   layouts,
   texts,
-  globals,
+  commons,
   figmaColors,
+  figmaPlugin,
   figmaTypes,
   penpotColors,
   penpotTypes,

@@ -22,16 +22,40 @@
     },
     "padding": {
       "default": {
-        "top": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "right": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "bottom": { "$value": "{size.pos.xunit}", "$type": "dimension" },
-        "left": { "$value": "{size.pos.xunit}", "$type": "dimension" }
+        "top": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        }
       },
       "vertical": {
-        "top": { "$value": "{size.null}", "$type": "dimension" },
-        "right": { "$value": "{size.null}", "$type": "dimension" },
-        "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left": { "$value": "{size.null}", "$type": "dimension" }
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
       }
     },
     "background": {
@@ -190,27 +214,35 @@
       "border": {
         "color": {
           "default": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "hover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "focus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "active": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "alternative": {
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeHover": {
-            "$value": "transparent",
-            "$type": "string"
+            "$value": "{grey.transparent}",
+            "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
+            "$type": "color"
+          },
+          "alternativeActive": {
+            "$value": "{grey.transparent}",
             "$type": "color"
           }
         },
@@ -231,12 +263,20 @@
             "$value": "{size.null}",
             "$type": "dimension"
           },
+          "alternative": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
           "alternativeHover": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "alternativeActive": {
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         },
@@ -257,12 +297,20 @@
             "$value": "{size.null}",
             "$type": "dimension"
           },
+          "alternative": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
           "alternativeHover": {
             "$value": "{size.null}",
             "$type": "dimension"
           },
           "alternativeFocus": {
             "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "alternativeActive": {
+            "$value": "{size.null}",
             "$type": "dimension"
           }
         }
@@ -292,7 +340,7 @@
             "$type": "color"
           },
           "active": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "alternative": {
@@ -308,42 +356,42 @@
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           }
         },
         "weight": {
           "default": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "hover": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "focus": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "active": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternative": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeHover": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeFocus": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           },
           "alternativeActive": {
             "$value": "{font.weight.medium}",
-            "$type": "fontWeight"
+            "$type": "fontWeights"
           }
         },
         "transform": {
@@ -392,7 +440,7 @@
             "$type": "color"
           },
           "active": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           },
           "alternative": {
@@ -408,7 +456,7 @@
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           }
         }
@@ -446,7 +494,7 @@
         },
         "background": {
           "color": {
-            "$value": "{penpot.color.accent.primary}",
+            "$value": "{penpot.color.accent.primary.default}",
             "$type": "color"
           }
         },
