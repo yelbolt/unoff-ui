@@ -1,5 +1,15 @@
 {
   "segmentedControl": {
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
     "item": {
       "background": {
         "color": {
