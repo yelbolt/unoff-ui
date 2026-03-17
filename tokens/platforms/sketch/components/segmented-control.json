@@ -1,0 +1,282 @@
+{
+  "segmentedControl": {
+    "item": {
+      "background": {
+        "color": {
+          "default": {
+            "default": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "default": {
+              "value": "{sketch.color.accent.secondary}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sketch.color.accent.secondary}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sketch.color.accent.secondary}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sketch.color.accent.secondary}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "border": {
+        "color": {
+          "default": {
+            "default": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sketch.color.accent.primary}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "default": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sketch.color.accent.tertiary}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{grey.transparent}",
+              "type": "color"
+            }
+          }
+        },
+        "width": {
+          "default": {
+            "default": {
+              "value": "{size.null}",
+              "type": "number"
+            },
+            "hover": {
+              "value": "{size.null}",
+              "type": "number"
+            },
+            "focus": {
+              "value": "{size.pos.unit}",
+              "type": "number"
+            },
+            "disabled": {
+              "value": "{size.null}",
+              "type": "number"
+            }
+          },
+          "active": {
+            "default": {
+              "value": "{size.null}",
+              "type": "number"
+            },
+            "hover": {
+              "value": "{size.null}",
+              "type": "number"
+            },
+            "focus": {
+              "value": "{size.pos.unit}",
+              "type": "number"
+            },
+            "disabled": {
+              "value": "{size.null}",
+              "type": "number"
+            }
+          }
+        },
+        "offset": {
+          "default": {
+            "default": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "hover": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "focus": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "disabled": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            }
+          },
+          "active": {
+            "default": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "hover": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "focus": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            },
+            "disabled": {
+              "value": "{size.neg.unit}",
+              "type": "number"
+            }
+          }
+        }
+      },
+      "icon": {
+        "color": {
+          "default": {
+            "default": {
+              "value": "{sketch.color.foreground.secondary}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sketch.color.foreground.primary}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sketch.color.foreground.primary}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sketch.color.foreground.tertiary}",
+              "type": "color"
+            }
+          },
+          "active": {
+            "default": {
+              "value": "{sketch.color.foreground.onaccent.default}",
+              "type": "color"
+            },
+            "hover": {
+              "value": "{sketch.color.foreground.onaccent.default}",
+              "type": "color"
+            },
+            "focus": {
+              "value": "{sketch.color.foreground.onaccent.default}",
+              "type": "color"
+            },
+            "disabled": {
+              "value": "{sketch.color.foreground.onaccent.default}",
+              "type": "color"
+            }
+          }
+        }
+      },
+      "radius": {
+        "value": "{border.radius.large}",
+        "type": "number"
+      },
+      "height": {
+        "value": "{size.pos.medium}",
+        "type": "number"
+      },
+      "minWidth": {
+        "value": "{size.pos.large}",
+        "type": "number"
+      },
+      "padding": {
+        "top": {
+          "value": "{size.pos.xxxsmall}",
+          "type": "number"
+        },
+        "left": {
+          "value": "{size.pos.xxsmall}",
+          "type": "number"
+        },
+        "bottom": {
+          "value": "{size.pos.xxxsmall}",
+          "type": "number"
+        },
+        "right": {
+          "value": "{size.pos.xxsmall}",
+          "type": "number"
+        }
+      },
+      "gap": {
+        "value": "{size.null}",
+        "type": "number"
+      }
+    },
+    "border": {
+      "color": {
+        "value": "{grey.transparent}",
+        "type": "color"
+      },
+      "width": {
+        "value": "{size.null}",
+        "type": "number"
+      },
+      "offset": {
+        "value": "{size.null}",
+        "type": "number"
+      }
+    },
+    "background": {
+      "color": {
+        "value": "{sketch.color.background.primary}",
+        "type": "color"
+      }
+    },
+    "radius": {
+      "value": "{border.radius.large}",
+      "type": "number"
+    },
+    "padding": {
+      "top": {
+        "value": "{size.null}",
+        "type": "number"
+      },
+      "left": {
+        "value": "{size.null}",
+        "type": "number"
+      },
+      "bottom": {
+        "value": "{size.null}",
+        "type": "number"
+      },
+      "right": {
+        "value": "{size.null}",
+        "type": "number"
+      }
+    },
+    "gap": {
+      "value": "{border.radius.null}",
+      "type": "number"
+    }
+  }
+}
