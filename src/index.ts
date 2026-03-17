@@ -18,6 +18,7 @@ export { default as Button } from '@components/actions/button/Button'
 export { default as Knob } from '@components/actions/knob/Knob'
 export { default as Menu } from '@components/actions/menu/Menu'
 export { default as Card } from '@components/actions/card/Card'
+export { default as SegmentedControl } from '@components/actions/segmented-control/SegmentedControl'
 
 // Assets
 export { default as Icon } from '@components/assets/icon/Icon'

@@ -1,0 +1,200 @@
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
+@import 'styles/framer';
+
+.segmented-control {
+  display: flex;
+  align-items: stretch;
+  gap: var(--segmented-control-gap);
+  cursor: default;
+  outline: var(--segmented-control-border-width) solid
+    var(--segmented-control-border-color);
+  outline-offset: var(--segmented-control-border-offset);
+  border-radius: var(--segmented-control-radius);
+  background-color: var(--segmented-control-background-color);
+  padding: var(--segmented-control-padding-top)
+    var(--segmented-control-padding-right)
+    var(--segmented-control-padding-bottom)
+    var(--segmented-control-padding-left);
+  user-select: none;
+
+  &--blocked {
+    pointer-events: none;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    flex: 1 0 var(--segmented-control-item-min-width);
+    justify-content: center;
+    align-items: center;
+    gap: var(--segmented-control-item-gap);
+    outline: var(--segmented-control-item-border-width) solid
+      var(--segmented-control-item-border-color);
+    outline-offset: var(--segmented-control-item-border-offset);
+    border-radius: var(--segmented-control-item-radius);
+    background-color: var(--segmented-control-item-background-color);
+    padding: var(--segmented-control-item-padding-top)
+      var(--segmented-control-item-padding-right)
+      var(--segmented-control-item-padding-bottom)
+      var(--segmented-control-item-padding-left);
+    min-width: var(--segmented-control-item-min-width);
+    height: var(--segmented-control-item-height);
+    --icon-picto-color: var(--segmented-control-item-icon-color);
+    --icon-letter-color: var(--segmented-control-item-icon-color);
+
+    & {
+      --segmented-control-item-background-color: var(
+        --segmented-control-item-background-color-default-default
+      );
+      --segmented-control-item-border-color: var(
+        --segmented-control-item-border-color-default-default
+      );
+      --segmented-control-item-border-width: var(
+        --segmented-control-item-border-width-default-default
+      );
+      --segmented-control-item-border-offset: var(
+        --segmented-control-item-border-offset-default-default
+      );
+      --segmented-control-item-icon-color: var(
+        --segmented-control-item-icon-color-default-default
+      );
+
+      &:hover {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-default-hover
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-default-hover
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-default-hover
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-default-hover
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-default-hover
+        );
+      }
+
+      &:focus {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-default-focus
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-default-focus
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-default-focus
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-default-focus
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-default-focus
+        );
+      }
+    }
+
+    &--active {
+      --segmented-control-item-background-color: var(
+        --segmented-control-item-background-color-active-default
+      );
+      --segmented-control-item-border-color: var(
+        --segmented-control-item-border-color-active-default
+      );
+      --segmented-control-item-border-width: var(
+        --segmented-control-item-border-width-active-default
+      );
+      --segmented-control-item-border-offset: var(
+        --segmented-control-item-border-offset-active-default
+      );
+      --segmented-control-item-icon-color: var(
+        --segmented-control-item-icon-color-active-default
+      );
+
+      &:hover {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-active-hover
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-active-hover
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-active-hover
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-active-hover
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-active-hover
+        );
+      }
+
+      &:focus {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-active-focus
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-active-focus
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-active-focus
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-active-focus
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-active-focus
+        );
+      }
+    }
+
+    &--disabled {
+      & {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-default-disabled
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-default-disabled
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-default-disabled
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-default-disabled
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-default-disabled
+        );
+      }
+
+      &.segmented-control__item--active {
+        --segmented-control-item-background-color: var(
+          --segmented-control-item-background-color-active-disabled
+        );
+        --segmented-control-item-border-color: var(
+          --segmented-control-item-border-color-active-disabled
+        );
+        --segmented-control-item-border-width: var(
+          --segmented-control-item-border-width-active-disabled
+        );
+        --segmented-control-item-border-offset: var(
+          --segmented-control-item-border-offset-active-disabled
+        );
+        --segmented-control-item-icon-color: var(
+          --segmented-control-item-icon-color-active-disabled
+        );
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    align-items: center;
+    gap: var(--segmented-control-status-gap);
+    height: var(--segmented-control-status-height);
+  }
+}

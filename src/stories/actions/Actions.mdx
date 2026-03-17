@@ -142,3 +142,33 @@ A trigger button (icon or labelled) that opens a floating list of actions. Used 
 
 </Tab>
 </DocTabs>
+
+---
+
+## Segmented Control
+
+A group of mutually exclusive icon segments that act as a tab list. Used to switch between views, display modes, or related options within a compact space.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `items` defines the list of segments — each requires a unique `id`, an `icon` (picto or letter), and a `helper` label for the tooltip.
+- `active` controls which segment is currently selected — update it in response to `action`.
+- `action` fires on `mousedown` and receives `data-feature` from the segment — use `e.currentTarget.dataset.feature` to identify the selected segment.
+- Set `isDisabled` on individual items to disable specific segments without affecting others.
+- `isBlocked` disables all interactions and shows a **Pro** badge; pair with `onUnblock` to handle upgrade flows.
+- `isNew` shows a **New** badge instead of a Pro badge — use when a feature is recently available.
+- `warning` adds an `IconChip` warning badge next to the control for contextual alerts.
+- `preview` attaches an image tooltip to the Pro/New badge for a feature preview.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The container uses `role="tablist"`; each segment uses `role="tab"` (SC 4.1.2).
+- `aria-disabled` reflects both per-item and global disabled/blocked states (SC 4.1.2).
+- The active segment receives `tabIndex="-1"` to prevent redundant focus; inactive segments are focusable with `tabIndex="0"` (SC 2.1.1).
+- Tooltips are shown on `:hover` and `:focus` to satisfy pointer-independent access (SC 2.5.3).
+- Keyboard: `Enter` / `Space` activate a segment; `Escape` blurs (SC 2.1.1).
+
+</Tab>
+</DocTabs>
