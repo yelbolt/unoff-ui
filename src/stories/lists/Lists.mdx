@@ -48,6 +48,7 @@ A floating or inline list of menu options with support for groups, separators, s
 - `direction` controls which side submenus expand toward (`LEFT` / `RIGHT`).
 - `shouldScroll` enables overflow scrolling for long lists.
 - `preview` shows a tooltip with an image on hover for rich option previews.
+- `canBeSearched` adds a sticky search input at the top of the list to filter options by label; `searchLabel` sets its placeholder text; `noResultsLabel` customises the message shown when no option matches.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">
@@ -55,6 +56,7 @@ A floating or inline list of menu options with support for groups, separators, s
 - Selected option uses `aria-current="true"` (SC 1.3.1).
 - Menu items are focusable with `tabIndex` set to `0` and support keyboard navigation (SC 2.1.1).
 - `focusFirstMenuItem()` is called on keyboard open for correct focus flow (SC 2.4.3).
+- When `canBeSearched` is enabled, the search input receives focus automatically; `Escape` clears the query and closes the list (SC 2.1.1). Always set `searchLabel` to a descriptive value — it is used as the input's `aria-label` (SC 1.3.1).
 
 </Tab>
 </DocTabs>
