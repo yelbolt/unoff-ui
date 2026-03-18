@@ -3,6 +3,7 @@ import { doClassnames } from '@unoff/utils'
 import { DropdownOption } from '@tps/list.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
+import Input from '@components/inputs/input/Input'
 import Icon from '@components/assets/icon/Icon.tsx'
 import './actions-list.scss'
 
@@ -53,6 +54,19 @@ export interface ActionsListProps {
    * Ref to the submenu element
    */
   subMenuRef?: React.RefObject<HTMLUListElement>
+  /**
+   * Whether the list can be filtered by a search input
+   * @default false
+   */
+  canBeSearched?: boolean
+  /**
+   * Placeholder label for the search input
+   */
+  searchLabel?: string
+  /**
+   * Label shown when no options match the search query
+   */
+  noResultsLabel?: string
 }
 
 export interface ActionsListState {
@@ -62,6 +76,7 @@ export interface ActionsListState {
   listClientHeight?: number
   shift: number
   isVisible: boolean
+  searchQuery: string
 }
 
 export default class ActionsList extends React.Component<
@@ -75,6 +90,7 @@ export default class ActionsList extends React.Component<
     direction: 'RIGHT',
     shouldScroll: false,
     onCancellation: () => null,
+    canBeSearched: false,
   }
 
   constructor(props: ActionsListProps) {
@@ -86,6 +102,7 @@ export default class ActionsList extends React.Component<
       listClientHeight: 1,
       shift: 0,
       isVisible: true,
+      searchQuery: '',
     }
     this.scrollInterval = null
     this.subMenuContainerRef = React.createRef<HTMLDivElement>()
@@ -124,7 +141,9 @@ export default class ActionsList extends React.Component<
 
   // Direct Actions
   focusFirstMenuItem = () => {
-    const { menuRef } = this.props
+    const { menuRef, canBeSearched } = this.props
+
+    if (canBeSearched) return
 
     setTimeout(() => {
       const menuElement = menuRef?.current
@@ -187,6 +206,69 @@ export default class ActionsList extends React.Component<
       cancelAnimationFrame(this.scrollInterval)
       this.scrollInterval = null
     }
+  }
+
+  // Helpers
+  filterOptions = (
+    options: Array<DropdownOption>,
+    query: string
+  ): Array<DropdownOption> => {
+    const q = query.toLowerCase()
+    const filtered: Array<DropdownOption> = []
+
+    for (const option of options) {
+      if (option.type === 'SEPARATOR' || option.type === 'TITLE') continue
+      if (option.type === 'OPTION') {
+        if (option.label?.toLowerCase().includes(q)) filtered.push(option)
+      } else if (option.type === 'GROUP' && option.children) {
+        const matchingChildren = option.children.filter((c) =>
+          c.label?.toLowerCase().includes(q)
+        )
+        if (matchingChildren.length > 0)
+          filtered.push({ ...option, children: matchingChildren })
+      }
+    }
+
+    return filtered
+  }
+
+  // Template
+  SearchInput = () => {
+    const { searchLabel, onCancellation } = this.props
+    const { searchQuery } = this.state
+
+    return (
+      <>
+        <li
+          className="select-menu__search"
+          data-role="SEARCH"
+          onMouseDown={(e) => e.nativeEvent.stopImmediatePropagation()}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              this.setState({ searchQuery: '' })
+              onCancellation?.()
+            }
+          }}
+        >
+          <Input
+            type="TEXT"
+            value={searchQuery}
+            placeholder={searchLabel ?? 'Search…'}
+            icon={{
+              type: 'PICTO',
+              value: 'search',
+            }}
+            isAutoFocus
+            isClearable
+            onChange={(e) => this.setState({ searchQuery: e.target.value })}
+            onClear={() => this.setState({ searchQuery: '' })}
+          />
+        </li>
+        <li data-role={'SEPARATOR'}>
+          <hr />
+        </li>
+      </>
+    )
   }
 
   // Template
@@ -455,8 +537,14 @@ export default class ActionsList extends React.Component<
   }
 
   render() {
-    const { options, direction, shouldScroll, menuRef } = this.props
-    const { listScrollOffset, listScrollAmount } = this.state
+    const { options, direction, shouldScroll, menuRef, canBeSearched } =
+      this.props
+    const { listScrollOffset, listScrollAmount, searchQuery } = this.state
+
+    const displayedOptions =
+      canBeSearched && searchQuery
+        ? this.filterOptions(options, searchQuery)
+        : options
 
     return (
       <div
@@ -489,7 +577,26 @@ export default class ActionsList extends React.Component<
           onScroll={this.onScroll}
           ref={menuRef}
         >
-          {options?.map((option, index) => {
+          {canBeSearched && this.SearchInput()}
+          {canBeSearched && searchQuery && displayedOptions.length === 0 && (
+            <li
+              className={doClassnames([
+                'select-menu__item',
+                'select-menu__item--disabled',
+              ])}
+              aria-disabled="true"
+            >
+              <span
+                className={doClassnames([
+                  texts.type,
+                  'select-menu__item__label',
+                ])}
+              >
+                {this.props.noResultsLabel ?? 'No results'}
+              </span>
+            </li>
+          )}
+          {displayedOptions?.map((option, index) => {
             const isActive =
                 option.isActive !== undefined ? option.isActive : true,
               isBlocked =

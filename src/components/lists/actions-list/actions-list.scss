@@ -283,6 +283,12 @@
     display: block;
   }
 
+  &__search {
+    display: block;
+    list-style: none;
+    height: auto;
+  }
+
   &__submenu {
     position: absolute;
   }
