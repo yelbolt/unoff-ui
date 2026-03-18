@@ -84,10 +84,8 @@
     --text-color-primary: var(--dropdown-text-color);
 
     pointer-events: none;
-  }
-
-  .select-menu__item-label {
-    flex: 1;
+    flex: 1 0 auto;
+    text-align: left;
   }
 
   .select-menu__caret {
