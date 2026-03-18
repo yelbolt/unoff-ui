@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.0] - 2026-03-18
+
+### Added
+
+- **`SegmentedControl` component**: New component for switching between mutually exclusive views or display modes
+  - Supports per-item `isDisabled`, global `isBlocked` / `isNew` states with Pro / New badges
+  - `warning` prop adds an `IconChip` badge for contextual alerts
+  - `preview` prop attaches an image tooltip to the Pro/New badge
+  - Full token support across all four platform themes (Figma, Framer, Penpot, Sketch)
+- **Searchable `ActionsList`**: New `canBeSearched`, `searchLabel`, and `noResultsLabel` props
+  - Renders a sticky `Input` field (with search icon and clear button) at the top of the list
+  - Filters `OPTION` items and `GROUP` children by label (case-insensitive)
+  - Shows `noResultsLabel` (default `"No results"`) when the query matches nothing
+  - Adjacent separator is also sticky so the list scrolls beneath both elements
+- **Searchable `Menu`**: Forwards `canBeSearched`, `searchLabel`, `noResultsLabel` to `ActionsList`
+- **Searchable `Dropdown`**: Forwards `canBeSearched`, `searchLabel`, `noResultsLabel` through `Menu` and the inline `ActionsList`
+
+### Fixed
+
+- **Diagonal submenu switching**: `ActionsList` now tracks the last 5 `mousemove` `movementX` values and delays submenu changes by 350 ms when the cursor is moving towards the open submenu, preventing accidental group switches during diagonal mouse movement
+- **Submenu not closing after sub-option click**: `MenuSubOption` now calls `onCancellation?.()` after the option action fires, matching the behaviour of `MenuOption`
+- **`Dropdown` flex label**: Corrected flex properties on `.select-menu__item__label` so long option labels truncate correctly
+
+---
+
 ## [1.22.2] - 2026-03-15
 
 ### Fixed
