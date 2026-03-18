@@ -26,7 +26,7 @@ dist/                 # Build output (never edit)
 
 | Folder    | Examples                                                 |
 | --------- | -------------------------------------------------------- |
-| `actions` | Button, Accordion, Card, Knob, Menu                      |
+| `actions` | Button, Accordion, Card, Knob, Menu, Segmented Control   |
 | `assets`  | Icon, Avatar, Text, SectionTitle, Thumbnail              |
 | `dialogs` | Dialog, Message, Notification, Consent, SemanticMessage  |
 | `inputs`  | Input, Select, Dropdown, SimpleSlider, MultipleSlider    |

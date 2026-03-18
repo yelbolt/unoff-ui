@@ -282,6 +282,38 @@ function App() {
 }
 ```
 
+#### Segmented Control
+
+```tsx
+import { SegmentedControl } from '@unoff/ui'
+
+function App() {
+  return (
+    <SegmentedControl
+      items={[
+        {
+          id: 'LIST',
+          icon: { type: 'PICTO', name: 'list' },
+          helper: { label: 'List view' },
+        },
+        {
+          id: 'GRID',
+          icon: { type: 'PICTO', name: 'grid' },
+          helper: { label: 'Grid view' },
+        },
+        {
+          id: 'CANVAS',
+          icon: { type: 'PICTO', name: 'frame' },
+          helper: { label: 'Canvas view' },
+        },
+      ]}
+      active="LIST"
+      action={(e) => console.log(e.currentTarget.dataset.feature)}
+    />
+  )
+}
+```
+
 ### Inputs
 
 #### Short Text Input
