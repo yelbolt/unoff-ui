@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { expect, within, waitFor, fireEvent } from 'storybook/test'
+import { fn, expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import * as ListStories from '@stories/lists/ActionsList.stories'
 import figma from '@figma/code-connect'
@@ -288,6 +288,153 @@ export const ManyOptionsSelection: Story = {
       async () => {
         const menu = document.querySelector('.select-menu__menu')
         await expect(menu).toBeInTheDocument()
+      },
+      { timeout: 2000 }
+    )
+  },
+}
+
+export const SearchableDropdown: Story = {
+  args: {
+    id: 'searchable-dropdown',
+    options: [
+      {
+        label: 'Apple',
+        value: 'APPLE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Banana',
+        value: 'BANANA',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Cherry',
+        value: 'CHERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Date',
+        value: 'DATE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Elderberry',
+        value: 'ELDERBERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Fig',
+        value: 'FIG',
+        type: 'OPTION',
+        action: fn(),
+      },
+    ],
+    selected: 'APPLE',
+    alignment: 'LEFT',
+    pin: 'NONE',
+    canBeSearched: true,
+    searchLabel: 'Search fruits…',
+    isNew: false,
+    isBlocked: false,
+    isDisabled: false,
+  },
+  argTypes: {
+    containerId: { control: false },
+  },
+  render: (args) => {
+    const [argsState, updateArgs] = useArgs<{
+      selected: string
+    }>()
+
+    const onChange = (
+      e:
+        | React.MouseEvent<HTMLLIElement, MouseEvent>
+        | React.KeyboardEvent<HTMLLIElement>
+    ) => {
+      updateArgs({
+        selected: (e.target as HTMLInputElement).dataset.value,
+      })
+    }
+
+    return (
+      <Dropdown
+        {...args}
+        options={[
+          {
+            label: 'Apple',
+            value: 'APPLE',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Banana',
+            value: 'BANANA',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Cherry',
+            value: 'CHERRY',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Date',
+            value: 'DATE',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Elderberry',
+            value: 'ELDERBERRY',
+            type: 'OPTION',
+            action: onChange,
+          },
+          {
+            label: 'Fig',
+            value: 'FIG',
+            type: 'OPTION',
+            action: onChange,
+          },
+        ]}
+        selected={argsState.selected}
+      />
+    )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const dropdownButton = canvas.getByRole('combobox')
+    await expect(dropdownButton).toBeInTheDocument()
+
+    fireEvent.mouseDown(dropdownButton)
+
+    await waitFor(
+      () => {
+        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
+      },
+      { timeout: 1000 }
+    )
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const searchInput = document.querySelector(
+          '.select-menu__search .input__field'
+        ) as HTMLInputElement
+        await expect(searchInput).toBeInTheDocument()
+
+        fireEvent.change(searchInput, { target: { value: 'a' } })
+
+        const banana = document.querySelector('[data-value="BANANA"]')
+        await expect(banana).toBeInTheDocument()
       },
       { timeout: 2000 }
     )

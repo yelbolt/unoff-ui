@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn, expect, within } from 'storybook/test'
+import { fn, expect, within, userEvent, waitFor } from 'storybook/test'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 
 const meta = {
@@ -215,6 +215,71 @@ export const FourOptionsListInGroups: Story = {
   },
 }
 
+export const SearchableList: Story = {
+  args: {
+    options: [
+      {
+        label: 'Apple',
+        value: 'APPLE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Banana',
+        value: 'BANANA',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Cherry',
+        value: 'CHERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Date',
+        value: 'DATE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Elderberry',
+        value: 'ELDERBERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Fig',
+        value: 'FIG',
+        type: 'OPTION',
+        action: fn(),
+      },
+    ],
+    canBeSearched: true,
+    searchLabel: 'Search fruits…',
+  },
+  argTypes: {
+    direction: { control: false },
+    selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const searchInput = canvas.getByPlaceholderText('Search fruits…')
+    await expect(searchInput).toBeInTheDocument()
+
+    await userEvent.type(searchInput, 'a')
+
+    await waitFor(async () => {
+      const banana = canvas.getByText('Banana')
+      await expect(banana).toBeInTheDocument()
+    })
+
+    const cherry = canvas.queryByText('Cherry')
+    await expect(cherry).not.toBeInTheDocument()
+  },
+}
+
 export const LongListWithScroll: Story = {
   decorators: [
     (Story) => (
@@ -308,6 +373,7 @@ export const LongListWithScroll: Story = {
       },
     ],
     selected: 'OPTION_1',
+    canBeSearched: false,
     shouldScroll: true,
     containerId: 'list-container',
   },

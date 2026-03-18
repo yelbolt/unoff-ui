@@ -100,6 +100,19 @@ export interface DropdownProps {
    * Handler called when unblock is clicked
    */
   onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
+  /**
+   * Whether the option list can be filtered by a search input
+   * @default false
+   */
+  canBeSearched?: boolean
+  /**
+   * Placeholder label for the search input
+   */
+  searchLabel?: string
+  /**
+   * Label shown when no options match the search query
+   */
+  noResultsLabel?: string
 }
 
 export interface DropdownState {
@@ -327,7 +340,8 @@ export default class Dropdown extends React.Component<
       target === this.subMenuRef.current ||
       (target.tagName === 'HR' && this.menuRef.current?.contains(target)) ||
       (target.dataset.role === 'GROUP' &&
-        this.menuRef.current?.contains(target))
+        this.menuRef.current?.contains(target)) ||
+      this.listRef.current?.contains(target)
     )
       this.setState({
         isMenuOpen: true,
@@ -399,6 +413,9 @@ export default class Dropdown extends React.Component<
       alignment,
       shouldReflow,
       isBlocked,
+      canBeSearched,
+      searchLabel,
+      noResultsLabel,
     } = this.props
 
     const newAlignment = []
@@ -419,6 +436,9 @@ export default class Dropdown extends React.Component<
         helper={helper}
         warning={warning}
         isBlocked={isBlocked}
+        canBeSearched={canBeSearched}
+        searchLabel={searchLabel}
+        noResultsLabel={noResultsLabel}
       />
     )
   }
@@ -433,6 +453,9 @@ export default class Dropdown extends React.Component<
       containerId,
       isDisabled,
       isBlocked,
+      canBeSearched,
+      searchLabel,
+      noResultsLabel,
     } = this.props
     const { isMenuOpen, listShouldScroll, isTooltipVisible } = this.state
 
@@ -556,6 +579,9 @@ export default class Dropdown extends React.Component<
                   ref={this.actionsListRef}
                   menuRef={this.menuRef}
                   subMenuRef={this.subMenuRef}
+                  canBeSearched={canBeSearched}
+                  searchLabel={searchLabel}
+                  noResultsLabel={noResultsLabel}
                 />
               </div>
             )

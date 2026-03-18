@@ -89,8 +89,10 @@
   align-items: center;
   gap: var(--text-styles-label-gap);
   cursor: default;
-  padding: var(--text-styles-label-padding-top) var(--text-styles-label-padding-right)
-    var(--text-styles-label-padding-bottom) var(--text-styles-label-padding-left);
+  padding: var(--text-styles-label-padding-top)
+    var(--text-styles-label-padding-right)
+    var(--text-styles-label-padding-bottom)
+    var(--text-styles-label-padding-left);
   height: var(--text-styles-label-height);
   color: var(--text-styles-label-color);
   font-weight: var(--text-label-font-weight);

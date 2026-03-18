@@ -16,7 +16,7 @@
   min-height: var(--keyboard-shortcut-item-min-height);
   user-select: none;
 
-  @media (max-width: 460px) {
+  @media (width <= 460px) {
     flex-direction: column;
   }
 

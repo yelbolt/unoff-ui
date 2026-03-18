@@ -205,6 +205,85 @@ export const MultipleActionsIconButton: Story = {
   },
 }
 
+export const SearchableMenu: Story = {
+  args: {
+    id: 'searchable-menu',
+    type: 'ICON',
+    icon: 'adjust',
+    state: 'DEFAULT',
+    options: [
+      {
+        label: 'Apple',
+        value: 'APPLE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Banana',
+        value: 'BANANA',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Cherry',
+        value: 'CHERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Date',
+        value: 'DATE',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Elderberry',
+        value: 'ELDERBERRY',
+        type: 'OPTION',
+        action: fn(),
+      },
+      {
+        label: 'Fig',
+        value: 'FIG',
+        type: 'OPTION',
+        action: fn(),
+      },
+    ],
+    alignment: 'BOTTOM_LEFT',
+    canBeSearched: true,
+    searchLabel: 'Search fruits…',
+  },
+  argTypes: {
+    type: { control: false },
+    label: { control: false },
+    selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const menuButton = canvas.getByRole('button')
+    await expect(menuButton).toBeInTheDocument()
+
+    menuButton.focus()
+    await userEvent.keyboard('{Enter}')
+
+    await new Promise((resolve) => setTimeout(resolve, 100))
+
+    await waitFor(
+      async () => {
+        const searchInput = screen.getByPlaceholderText('Search fruits…')
+        await expect(searchInput).toBeInTheDocument()
+
+        await userEvent.type(searchInput, 'a')
+
+        const banana = screen.getByText('Banana')
+        await expect(banana).toBeInTheDocument()
+      },
+      { timeout: 1000 }
+    )
+  },
+}
+
 export const MultipleActionsButton: Story = {
   args: {
     id: 'dropdown-icon',

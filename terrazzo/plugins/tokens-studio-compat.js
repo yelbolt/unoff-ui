@@ -252,7 +252,7 @@ export const cssTransform = (token, { tokensSet, transformAlias }) => {
 export const wrapFallbacks = (prepare) => (css) => {
   const patched = css.replace(
     /(--[\w][\w-]*)-default: ([^;]+);/g,
-    '$1-default: var($1, $2);',
+    '$1-default: var($1, $2);'
   )
   return prepare(patched)
 }

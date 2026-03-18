@@ -83,6 +83,19 @@ export interface MenuProps {
    * @default false
    */
   isNew?: boolean
+  /**
+   * Whether the option list can be filtered by a search input
+   * @default false
+   */
+  canBeSearched?: boolean
+  /**
+   * Placeholder label for the search input
+   */
+  searchLabel?: string
+  /**
+   * Label shown when no options match the search query
+   */
+  noResultsLabel?: string
 }
 
 export interface MenuState {
@@ -143,7 +156,8 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
       target === this.subMenuRef.current ||
       (target.tagName === 'HR' && this.menuRef.current?.contains(target)) ||
       (target.dataset.role === 'GROUP' &&
-        this.menuRef.current?.contains(target))
+        this.menuRef.current?.contains(target)) ||
+      this.listRef.current?.contains(target)
     )
       this.setState({
         isMenuOpen: true,
@@ -269,6 +283,9 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
       isBlocked,
       isNew,
       containerId,
+      canBeSearched,
+      searchLabel,
+      noResultsLabel,
     } = this.props
     const { isMenuOpen } = this.state
 
@@ -387,6 +404,9 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
                   ref={this.actionsListRef}
                   menuRef={this.menuRef}
                   subMenuRef={this.subMenuRef}
+                  canBeSearched={canBeSearched}
+                  searchLabel={searchLabel}
+                  noResultsLabel={noResultsLabel}
                 />
               </div>
             )

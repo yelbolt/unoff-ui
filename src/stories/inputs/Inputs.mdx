@@ -21,6 +21,7 @@ A compact selection control that opens a floating list. Used for choosing one op
 - `options` supports grouping, separators, nested submenus, icons, and blocked states.
 - `containerId` confines the floating list overflow to a scrollable container.
 - `isBlocked` locks the control and shows a Pro badge; pair with `onUnblock`.
+- `canBeSearched` adds a search input at the top of the list to filter options by label; `searchLabel` sets its placeholder text; `noResultsLabel` customises the message shown when no option matches.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">
@@ -28,6 +29,7 @@ A compact selection control that opens a floating list. Used for choosing one op
 - The trigger exposes `aria-expanded` and `aria-controls` pointing to the list element (SC 4.1.2).
 - Selected option receives `aria-current="true"` (SC 1.3.1).
 - Keyboard: `Enter` / `Space` open; arrow keys navigate; `Escape` closes (SC 2.1.1).
+- When `canBeSearched` is enabled, the search input has `aria-label` from `searchLabel` — always provide a descriptive value (SC 1.3.1); `Escape` clears the query and closes the list (SC 2.1.1).
 
 </Tab>
 </DocTabs>

@@ -3,6 +3,7 @@ import { doClassnames } from '@unoff/utils'
 import { DropdownOption } from '@tps/list.types'
 import texts from '@styles/texts/texts.module.scss'
 import Chip from '@components/tags/chip/Chip'
+import Input from '@components/inputs/input/Input'
 import Icon from '@components/assets/icon/Icon.tsx'
 import './actions-list.scss'
 
@@ -53,6 +54,19 @@ export interface ActionsListProps {
    * Ref to the submenu element
    */
   subMenuRef?: React.RefObject<HTMLUListElement>
+  /**
+   * Whether the list can be filtered by a search input
+   * @default false
+   */
+  canBeSearched?: boolean
+  /**
+   * Placeholder label for the search input
+   */
+  searchLabel?: string
+  /**
+   * Label shown when no options match the search query
+   */
+  noResultsLabel?: string
 }
 
 export interface ActionsListState {
@@ -62,6 +76,7 @@ export interface ActionsListState {
   listClientHeight?: number
   shift: number
   isVisible: boolean
+  searchQuery: string
 }
 
 export default class ActionsList extends React.Component<
@@ -70,11 +85,14 @@ export default class ActionsList extends React.Component<
 > {
   private scrollInterval: number | null
   private subMenuContainerRef: React.RefObject<HTMLDivElement>
+  private movementXHistory: number[]
+  private submenuChangeTimeout: ReturnType<typeof setTimeout> | null
 
   static defaultProps: Partial<ActionsListProps> = {
     direction: 'RIGHT',
     shouldScroll: false,
     onCancellation: () => null,
+    canBeSearched: false,
   }
 
   constructor(props: ActionsListProps) {
@@ -86,9 +104,12 @@ export default class ActionsList extends React.Component<
       listClientHeight: 1,
       shift: 0,
       isVisible: true,
+      searchQuery: '',
     }
     this.scrollInterval = null
     this.subMenuContainerRef = React.createRef<HTMLDivElement>()
+    this.movementXHistory = []
+    this.submenuChangeTimeout = null
   }
 
   componentDidUpdate(
@@ -122,9 +143,73 @@ export default class ActionsList extends React.Component<
     }
   }
 
+  componentDidMount = () =>
+    document.addEventListener('mousemove', this.handleMouseMove)
+
+  componentWillUnmount = () => {
+    document.removeEventListener('mousemove', this.handleMouseMove)
+    this.clearSubmenuTimeout()
+  }
+
+  handleMouseMove = (e: MouseEvent) => {
+    this.movementXHistory.push(e.movementX)
+    if (this.movementXHistory.length > 5) this.movementXHistory.shift()
+  }
+
+  clearSubmenuTimeout = () => {
+    if (this.submenuChangeTimeout) {
+      clearTimeout(this.submenuChangeTimeout)
+      this.submenuChangeTimeout = null
+    }
+  }
+
+  isMovingTowardsSubmenu = (): boolean => {
+    const { direction } = this.props
+    if (this.movementXHistory.length === 0) return false
+    const avg =
+      this.movementXHistory.reduce((a, b) => a + b, 0) /
+      this.movementXHistory.length
+    return direction === 'RIGHT' ? avg > 0 : avg < 0
+  }
+
+  onMouseEnterGroup = (value: string) => {
+    const { openedGroup } = this.state
+
+    this.clearSubmenuTimeout()
+
+    if (openedGroup === 'EMPTY' || openedGroup === value) {
+      this.setState({ openedGroup: value })
+      return
+    }
+
+    if (this.isMovingTowardsSubmenu())
+      this.submenuChangeTimeout = setTimeout(() => {
+        this.setState({ openedGroup: value })
+        this.submenuChangeTimeout = null
+      }, 350)
+    else this.setState({ openedGroup: value })
+  }
+
+  onMouseLeaveGroup = () => {
+    if (this.isMovingTowardsSubmenu()) {
+      this.clearSubmenuTimeout()
+      this.submenuChangeTimeout = setTimeout(() => {
+        this.setState({ openedGroup: 'EMPTY' })
+        this.submenuChangeTimeout = null
+      }, 350)
+    } else {
+      this.clearSubmenuTimeout()
+      this.setState({ openedGroup: 'EMPTY' })
+    }
+  }
+
+  onMouseEnterSubmenu = () => this.clearSubmenuTimeout()
+
   // Direct Actions
   focusFirstMenuItem = () => {
-    const { menuRef } = this.props
+    const { menuRef, canBeSearched } = this.props
+
+    if (canBeSearched) return
 
     setTimeout(() => {
       const menuElement = menuRef?.current
@@ -189,6 +274,69 @@ export default class ActionsList extends React.Component<
     }
   }
 
+  // Helpers
+  filterOptions = (
+    options: Array<DropdownOption>,
+    query: string
+  ): Array<DropdownOption> => {
+    const q = query.toLowerCase()
+    const filtered: Array<DropdownOption> = []
+
+    for (const option of options) {
+      if (option.type === 'SEPARATOR' || option.type === 'TITLE') continue
+      if (option.type === 'OPTION') {
+        if (option.label?.toLowerCase().includes(q)) filtered.push(option)
+      } else if (option.type === 'GROUP' && option.children) {
+        const matchingChildren = option.children.filter((c) =>
+          c.label?.toLowerCase().includes(q)
+        )
+        if (matchingChildren.length > 0)
+          filtered.push({ ...option, children: matchingChildren })
+      }
+    }
+
+    return filtered
+  }
+
+  // Template
+  SearchInput = () => {
+    const { searchLabel, onCancellation } = this.props
+    const { searchQuery } = this.state
+
+    return (
+      <>
+        <li
+          className="select-menu__search"
+          data-role="SEARCH"
+          onMouseDown={(e) => e.nativeEvent.stopImmediatePropagation()}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              this.setState({ searchQuery: '' })
+              onCancellation?.()
+            }
+          }}
+        >
+          <Input
+            type="TEXT"
+            value={searchQuery}
+            placeholder={searchLabel ?? 'Search…'}
+            icon={{
+              type: 'PICTO',
+              value: 'search',
+            }}
+            isAutoFocus
+            isClearable
+            onChange={(e) => this.setState({ searchQuery: e.target.value })}
+            onClear={() => this.setState({ searchQuery: '' })}
+          />
+        </li>
+        <li data-role={'SEPARATOR'}>
+          <hr />
+        </li>
+      </>
+    )
+  }
+
   // Template
   SubMenu = (options: Array<DropdownOption> | undefined) => {
     const { subMenuRef } = this.props
@@ -198,6 +346,7 @@ export default class ActionsList extends React.Component<
       <div
         className="select-menu__submenu"
         role="menu"
+        onMouseEnter={this.onMouseEnterSubmenu}
         style={{
           visibility: isVisible ? 'visible' : 'hidden',
         }}
@@ -364,10 +513,8 @@ export default class ActionsList extends React.Component<
 
           return null
         }}
-        onMouseEnter={() =>
-          this.setState({ openedGroup: option.value ?? 'EMPTY' })
-        }
-        onMouseLeave={() => this.setState({ openedGroup: 'EMPTY' })}
+        onMouseEnter={() => this.onMouseEnterGroup(option.value ?? 'EMPTY')}
+        onMouseLeave={this.onMouseLeaveGroup}
         onFocus={() => null}
         onBlur={() => null}
       >
@@ -427,7 +574,10 @@ export default class ActionsList extends React.Component<
 
           return null
         }}
-        onMouseDown={!option.isBlocked ? option.action : undefined}
+        onMouseDown={(e) => {
+          if (!option.isBlocked) option.action?.(e)
+          onCancellation?.()
+        }}
       >
         {selected?.split(', ').filter((value) => value === option.value)
           .length === 1 && (
@@ -455,8 +605,14 @@ export default class ActionsList extends React.Component<
   }
 
   render() {
-    const { options, direction, shouldScroll, menuRef } = this.props
-    const { listScrollOffset, listScrollAmount } = this.state
+    const { options, direction, shouldScroll, menuRef, canBeSearched } =
+      this.props
+    const { listScrollOffset, listScrollAmount, searchQuery } = this.state
+
+    const displayedOptions =
+      canBeSearched && searchQuery
+        ? this.filterOptions(options, searchQuery)
+        : options
 
     return (
       <div
@@ -485,11 +641,31 @@ export default class ActionsList extends React.Component<
               ? 'select-menu__menu--right'
               : 'select-menu__menu--left',
             shouldScroll && 'select-menu__menu--scrolling',
+            canBeSearched && 'select-menu__menu--searchable',
           ])}
           onScroll={this.onScroll}
           ref={menuRef}
         >
-          {options?.map((option, index) => {
+          {canBeSearched && this.SearchInput()}
+          {canBeSearched && searchQuery && displayedOptions.length === 0 && (
+            <li
+              className={doClassnames([
+                'select-menu__item',
+                'select-menu__item--disabled',
+              ])}
+              aria-disabled="true"
+            >
+              <span
+                className={doClassnames([
+                  texts.type,
+                  'select-menu__item__label',
+                ])}
+              >
+                {this.props.noResultsLabel ?? 'No results'}
+              </span>
+            </li>
+          )}
+          {displayedOptions?.map((option, index) => {
             const isActive =
                 option.isActive !== undefined ? option.isActive : true,
               isBlocked =

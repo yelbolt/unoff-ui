@@ -47,7 +47,7 @@
   &--left {
     justify-content: start;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }
@@ -55,7 +55,7 @@
   &--center {
     justify-content: center;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }
@@ -63,7 +63,7 @@
   &--right {
     justify-content: end;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }
@@ -119,7 +119,7 @@
   &--left {
     justify-content: start;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }
@@ -127,7 +127,7 @@
   &--center {
     justify-content: center;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }
@@ -135,7 +135,7 @@
   &--right {
     justify-content: end;
 
-    @media (max-width: 460px) {
+    @media (width <= 460px) {
       justify-content: center;
     }
   }

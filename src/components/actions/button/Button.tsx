@@ -117,7 +117,7 @@ export interface ButtonProps {
    */
   isLoading?: boolean
   /**
-   * Whether the button is blocked (shows unblock action)
+   * Whether the button is blocked
    * @default false
    */
   isBlocked?: boolean
