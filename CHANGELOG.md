@@ -28,15 +28,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Submenu not closing after sub-option click**: `MenuSubOption` now calls `onCancellation?.()` after the option action fires, matching the behaviour of `MenuOption`
 - **`Dropdown` flex label**: Corrected flex properties on `.select-menu__item__label` so long option labels truncate correctly
 
----
-
 ## [1.22.2] - 2026-03-15
 
 ### Fixed
 
 - **Penpot copy icon SVG path**: Corrected path coordinates for the `copy` icon in the Penpot icon set — the inner rectangle was misaligned (offset by 2px) relative to the outer rectangle
-
----
 
 ## [1.22.1] - 2026-03-15
 
@@ -48,8 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - **Unused platform type SCSS files**: Standalone `figma-types.scss`, `framer-types.scss`, `penpot-types.scss`, and `sketch-types.scss` files (which only declared `--font-stack`) removed, along with their `@import` references in the corresponding module files
-
----
 
 ## [1.22.0] - 2026-03-14
 
