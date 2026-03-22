@@ -8,7 +8,7 @@ figma.connect(
     props: {
       alignment: figma.enum('Type', {
         HUG: 'LEFT',
-        STRETCH: 'FILL',
+        STRETCH: 'RIGHT',
       }),
     },
     example: (props) => (
