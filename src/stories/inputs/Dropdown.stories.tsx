@@ -15,7 +15,10 @@ const meta = {
       props: {
         alignment: figma.enum('Type', {
           HUG: 'LEFT',
-          STRETCH: 'FILL',
+          STRETCH: 'LEFT',
+        }),
+        isFill: figma.enum('Type', {
+          STRETCH: true,
         }),
       },
     },

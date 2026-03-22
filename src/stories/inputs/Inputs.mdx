@@ -16,12 +16,16 @@ A compact selection control that opens a floating list. Used for choosing one op
 <DocTabs>
 <Tab label="Usage">
 
-- `alignment="FILL"` stretches to match the trigger width — use inside form layouts.
-- `alignment="LEFT"` / `"RIGHT"` for toolbar-style dropdowns without a fixed width.
-- `options` supports grouping, separators, nested submenus, icons, and blocked states.
+- `isFill` stretches the trigger button to fill its container — use inside form layouts.
+- `alignment="LEFT"` / `"RIGHT"` controls which edge the list anchors to; works independently of `isFill`.
+- `pin="TOP"` / `"BOTTOM"` locks the list to open above or below the trigger; omit for auto-positioning.
+- `shouldReflow` swaps the trigger for an icon button below 460 px — provide an `icon` alongside.
+- `options` accepts a `DropdownOption` tree — see **Actions List** for the full option shape.
+- `selected` is the `value` of the active option; pass a comma-separated string for multiple selections.
 - `containerId` confines the floating list overflow to a scrollable container.
-- `isBlocked` locks the control and shows a Pro badge; pair with `onUnblock`.
-- `canBeSearched` adds a sticky search input at the top of the floating list to filter options by label; `searchLabel` sets its placeholder text; `noResultsLabel` customises the message shown when no option matches.
+- `canBeSearched` adds a sticky search input; `searchLabel` sets its placeholder; `noResultsLabel` overrides the empty state message.
+- `isDisabled` disables the trigger silently; `isBlocked` locks it and shows a Pro badge — pair with `onUnblock` for upgrade flows; `isNew` shows a New badge instead.
+- `warning` attaches a warning chip to the trigger; `preview` shows an image tooltip on the badge; `helper` adds an informational tooltip.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">

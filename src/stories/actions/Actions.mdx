@@ -127,12 +127,16 @@ A trigger button (icon or labelled) that opens a floating list of actions. Used 
 
 - `type="ICON"` renders a compact icon trigger — use for toolbars and list item overflows.
 - `type="PRIMARY"` renders a labelled button with a caret — use for primary actions with multiple options.
-- `options` accepts a nested `DropdownOption` tree; groups, separators, icons, and blocked states are supported.
+- `icon` / `customIcon` sets the icon for `ICON` type; `label` sets the text for `PRIMARY` type.
+- `state="LOADING"` shows a spinner on the trigger; `state="DISABLED"` disables it silently.
+- `options` accepts a `DropdownOption` tree — see **Actions List** for the full option shape.
 - `selected` highlights the currently active option.
-- `alignment` controls where the floating list anchors relative to the trigger.
-- `containerId` constrains the menu's overflow to a specific scrollable container.
-- When only one active option is present, renders it directly as a `Button` without a dropdown.
-- `canBeSearched` adds a sticky search input at the top of the floating list to filter options by label; `searchLabel` sets its placeholder text; `noResultsLabel` customises the message shown when no option matches.
+- `alignment` controls where the list anchors relative to the trigger (`BOTTOM_LEFT` · `BOTTOM_RIGHT` · `TOP_LEFT` · `TOP_RIGHT`).
+- `containerId` constrains the list overflow to a specific scrollable container.
+- `isBlocked` disables the trigger and shows a Pro badge; `isNew` shows a New badge instead.
+- `warning` attaches a warning chip to the trigger; `helper` adds an informational tooltip.
+- `canBeSearched` adds a sticky search input; `searchLabel` sets its placeholder; `noResultsLabel` overrides the empty state message.
+- When only one active, non-grouped option is present, renders it directly as a `Button` without a dropdown.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">

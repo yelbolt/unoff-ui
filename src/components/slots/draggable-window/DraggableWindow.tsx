@@ -41,7 +41,7 @@ const DraggableWindow = (props: DraggableWindowProps) => {
         triggerRef.current.buttonRef.current.getBoundingClientRect()
 
       setPosition({
-        x: triggerRect.left - windowRect.width - 8,
+        x: triggerRect.left - windowRect.left - windowRect.width - 8,
         y: 0,
       })
       setIsOpen(true)

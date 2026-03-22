@@ -18,24 +18,29 @@ export const FourOptionsList: Story = {
     options: [
       {
         label: 'Option 1',
+        shortcut: '⌘K',
         value: 'OPTION_1',
         type: 'OPTION',
+        isBlocked: true,
         action: fn(),
       },
       {
         label: 'Option 2',
+        shortcut: '⌘L',
         value: 'OPTION_2',
         type: 'OPTION',
         action: fn(),
       },
       {
         label: 'Option 3',
+        shortcut: '⌘⇥M',
         value: 'OPTION_3',
         type: 'OPTION',
         action: fn(),
       },
       {
         label: 'Option 4',
+        shortcut: '⌘⇧N',
         value: 'OPTION_4',
         type: 'OPTION',
         action: fn(),

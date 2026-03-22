@@ -9,7 +9,8 @@ import './actions-list.scss'
 
 export interface ActionsListProps {
   /**
-   * List of options to display
+   * List of options to display — each item is a `DropdownOption` with
+   * `type`, `label`, `value`, `action`, `children`, and visibility / status flags
    */
   options: Array<DropdownOption>
   /**
@@ -478,6 +479,16 @@ export default class ActionsList extends React.Component<
         >
           {option.label}
         </span>
+        {option.shortcut !== undefined && (
+          <span
+            className={doClassnames([
+              texts.type,
+              'select-menu__item__shortcut',
+            ])}
+          >
+            {option.shortcut}
+          </span>
+        )}
         {(option.isBlocked || option.isNew) && (
           <Chip preview={preview}>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}
@@ -598,6 +609,16 @@ export default class ActionsList extends React.Component<
         >
           {option.label}
         </span>
+        {option.shortcut !== undefined && (
+          <span
+            className={doClassnames([
+              texts.type,
+              'select-menu__item__shortcut',
+            ])}
+          >
+            {option.shortcut}
+          </span>
+        )}
         {(option.isBlocked || option.isNew) && (
           <Chip preview={preview}>{option.isNew ? 'New' : 'Pro'}</Chip>
         )}

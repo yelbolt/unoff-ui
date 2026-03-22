@@ -134,6 +134,16 @@
       white-space: nowrap;
     }
 
+    &__shortcut {
+      pointer-events: none;
+      font-weight: var(--actions-list-item-text-font-weight);
+      font-size: var(--actions-list-item-text-font-size);
+      line-height: var(--actions-list-item-text-line-height);
+      font-family: var(--actions-list-item-text-font-family);
+      letter-spacing: var(--actions-list-item-text-letter-spacing);
+      white-space: nowrap;
+    }
+
     &__caret {
       display: flex;
       justify-content: center;

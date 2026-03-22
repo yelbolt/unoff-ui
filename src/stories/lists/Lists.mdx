@@ -38,17 +38,18 @@ A rich list item displaying an image, title, description, a user attribution, co
 
 ## Actions List
 
-A floating or inline list of menu options with support for groups, separators, submenus, icons, and selection state. Used internally by `Dropdown` and `Menu`.
+A floating or inline list of menu options with support for groups, separators, submenus, and selection state. Used internally by `Dropdown` and `Menu`.
 
 <DocTabs>
 <Tab label="Usage">
 
-- `options` accepts a `DropdownOption` tree; groups are rendered with a group header, submenus expand on hover/focus.
-- `selected` highlights the currently active value.
-- `direction` controls which side submenus expand toward (`LEFT` / `RIGHT`).
-- `shouldScroll` enables overflow scrolling for long lists.
-- `preview` shows a tooltip with an image on hover for rich option previews.
-- `canBeSearched` adds a sticky search input at the top of the list to filter options by label; `searchLabel` sets its placeholder text; `noResultsLabel` customises the message shown when no option matches.
+- `options` accepts a `DropdownOption` tree; `type` defines the item kind (`OPTION` · `TITLE` · `SEPARATOR` · `GROUP`).
+- Each option can carry `label`, `value`, `shortcut`, `action`, `children` (for `GROUP` submenus), and `isActive` / `isBlocked` / `isNew` flags.
+- `selected` highlights the currently active value by matching against `value`.
+- `direction="LEFT"` / `"RIGHT"` controls which side submenus expand toward (default `RIGHT`).
+- `shouldScroll` enables overflow scrolling for long lists constrained by `containerId`.
+- `preview` attaches an image tooltip to Pro / New badges for rich option previews.
+- `canBeSearched` adds a sticky search input; `searchLabel` sets its placeholder; `noResultsLabel` overrides the empty state message.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">

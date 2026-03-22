@@ -29,10 +29,15 @@ export interface DropdownProps {
    */
   containerId?: string
   /**
-   * Horizontal alignment of the dropdown
+   * Horizontal alignment of the dropdown list
    * @default 'LEFT'
    */
-  alignment?: 'RIGHT' | 'LEFT' | 'FILL'
+  alignment?: 'RIGHT' | 'LEFT'
+  /**
+   * Whether the trigger button stretches to fill its container
+   * @default false
+   */
+  isFill?: boolean
   /**
    * Vertical position of helper tooltips
    * @default 'NONE'
@@ -136,6 +141,7 @@ export default class Dropdown extends React.Component<
 
   static defaultProps: Partial<DropdownProps> = {
     alignment: 'LEFT',
+    isFill: false,
     pin: 'NONE',
     shouldReflow: { isEnabled: false, icon: 'adjust' },
     isNew: false,
@@ -424,7 +430,7 @@ export default class Dropdown extends React.Component<
     if (pin === 'TOP' || pin === 'NONE') newAlignment.push('BOTTOM')
     else newAlignment.push('TOP')
 
-    if (alignment === 'LEFT' || alignment === 'FILL') newAlignment.push('LEFT')
+    if (alignment === 'LEFT') newAlignment.push('LEFT')
     else newAlignment.push('RIGHT')
 
     return (
@@ -448,6 +454,7 @@ export default class Dropdown extends React.Component<
     const {
       id,
       alignment,
+      isFill,
       options,
       selected,
       helper,
@@ -465,11 +472,11 @@ export default class Dropdown extends React.Component<
         id={id}
         className={doClassnames([
           'select-menu',
-          (() => {
-            if (alignment === 'LEFT') return 'select-menu--left'
-            if (alignment === 'RIGHT') return 'select-menu--right'
-            return 'select-menu--fill'
-          })(),
+          isFill
+            ? 'select-menu--fill'
+            : alignment === 'RIGHT'
+              ? 'select-menu--right'
+              : 'select-menu--left',
           (isDisabled || isBlocked) && 'select-menu--disabled',
         ])}
         ref={this.selectMenuRef}
@@ -573,7 +580,7 @@ export default class Dropdown extends React.Component<
                 <ActionsList
                   options={options}
                   selected={selected}
-                  direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                  direction={alignment === 'LEFT' ? 'RIGHT' : 'LEFT'}
                   shouldScroll={listShouldScroll}
                   containerId={containerId}
                   onCancellation={() => this.setState({ isMenuOpen: false })}

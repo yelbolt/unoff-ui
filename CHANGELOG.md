@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.2] - 2026-03-22
+
+### Added
+
+- **`Dropdown` `isFill` prop**: New boolean prop that stretches the trigger button to fill its container — decoupled from `alignment` so layout width and list anchor position can be set independently
+- **`ActionsList` shortcut display**: Shortcut labels now render on the trailing edge of list items — pass `shortcut` on any `OPTION` or `GROUP` entry in the `DropdownOption` tree
+
+### Changed
+
+- **`Dropdown` `alignment` prop**: `'FILL'` value removed — replace with `isFill={true}` combined with `alignment="LEFT"` (or `"RIGHT"`); `alignment` now only accepts `'LEFT'` and `'RIGHT'`
+
+### Fixed
+
+- **`DraggableWindow` position**: Corrected the translate offset so the window always appears 8 px to the left of the trigger button regardless of the panel's position in the viewport
+
 ## [1.23.1] - 2026-03-18
 
 ### Fixed
