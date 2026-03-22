@@ -9,7 +9,8 @@ import './actions-list.scss'
 
 export interface ActionsListProps {
   /**
-   * List of options to display
+   * List of options to display — each item is a `DropdownOption` with
+   * `type`, `label`, `value`, `action`, `children`, and visibility / status flags
    */
   options: Array<DropdownOption>
   /**
