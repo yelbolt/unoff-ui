@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import React from 'react'
 import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
@@ -185,102 +186,76 @@ export default class Dropdown extends React.Component<
 
   // Direct Actions
   onOpenMenu = () => {
-    const { containerId } = this.props
+    const { containerId, pin, alignment } = this.props
     const { isMenuOpen } = this.state
 
-    this.setState({
-      isMenuOpen: !isMenuOpen,
-    })
+    this.setState({ isMenuOpen: !isMenuOpen })
 
     setTimeout(() => {
-      if (this.listRef.current != null) {
-        const menuRect = this.listRef.current.getBoundingClientRect()
-        const buttonRect = this.buttonRef.current?.getBoundingClientRect()
+      if (this.listRef.current == null) return
 
-        let adjustedTop = 0
-        let adjustedLeft = 0
-        let shouldTransformY = false
-        let shouldTransformX = false
+      const menuRect = this.listRef.current.getBoundingClientRect()
+      const containerRect = this.selectMenuRef.current?.getBoundingClientRect()
 
-        if (menuRect.bottom > window.innerHeight) {
-          adjustedTop = window.innerHeight - menuRect.height - 8
-          shouldTransformY = true
-        }
-        if (menuRect.top < 0) {
-          adjustedTop = 8
-          shouldTransformY = true
-        }
+      if (!containerRect) return
 
-        if (menuRect.right > window.innerWidth) {
-          adjustedLeft = window.innerWidth - menuRect.width - 8
-          shouldTransformX = true
-        }
-        if (menuRect.left < 0) {
-          adjustedLeft = 8
-          shouldTransformX = true
-        }
+      let top: number
+      if (pin === 'TOP') top = containerRect.top - 4
+      else if (pin === 'BOTTOM')
+        top = containerRect.bottom + 4 - menuRect.height
+      else top = containerRect.top + parseInt(this.setPosition() || '0')
 
-        if (shouldTransformY) {
-          if (buttonRect)
-            this.listRef.current.style.top = `${adjustedTop - buttonRect.top}px`
-          this.listRef.current.style.transform = shouldTransformX
-            ? `translate(${adjustedLeft - menuRect.left}px, 0)`
-            : 'none'
-        }
+      let left: number
+      if (alignment === 'RIGHT') left = containerRect.right - menuRect.width
+      else left = containerRect.left
 
-        if (shouldTransformX && !shouldTransformY)
-          this.listRef.current.style.transform = `translateX(${adjustedLeft - menuRect.left}px)`
+      if (top + menuRect.height > window.innerHeight - 8)
+        top = window.innerHeight - menuRect.height - 8
+      if (top < 8) top = 8
+      if (left + menuRect.width > window.innerWidth - 8)
+        left = window.innerWidth - menuRect.width - 8
+      if (left < 8) left = 8
 
-        if (containerId !== undefined) {
-          const containerElement = document.getElementById(containerId)
-          if (containerElement) {
-            const container = containerElement.getBoundingClientRect()
-            const button = this.buttonRef.current?.getBoundingClientRect()
+      this.listRef.current.style.top = `${top}px`
+      this.listRef.current.style.left = `${left}px`
 
-            const diffTop =
-              this.listRef.current.getBoundingClientRect().top - container.top
-            const diffBottom =
+      if (containerId !== undefined) {
+        const containerElement = document.getElementById(containerId)
+        if (containerElement) {
+          const container = containerElement.getBoundingClientRect()
+          const updatedMenuRect = this.listRef.current.getBoundingClientRect()
+
+          const diffTop = updatedMenuRect.top - container.top
+          const diffBottom = updatedMenuRect.bottom - container.bottom
+
+          if (diffTop < -16) {
+            this.listRef.current.style.top = `${container.top + 16}px`
+            this.setState({ listShouldScroll: true })
+            const diffBottomV2 =
               this.listRef.current.getBoundingClientRect().bottom -
               container.bottom
-
-            if (diffTop < -16 && button) {
-              this.listRef.current.style.top = `${container.top - button.top + 16}px`
-              this.setState({
-                listShouldScroll: true,
-              })
-
-              const diffBottomV2 =
-                this.listRef.current.getBoundingClientRect().bottom -
-                container.bottom
-
-              if (diffBottomV2 < -16)
-                this.listRef.current.style.bottom = `${
-                  button.bottom - container.bottom + 16
-                }px`
-            }
-
-            if (diffBottom > -16 && button) {
+            if (diffBottomV2 < -16)
               this.listRef.current.style.bottom = `${
-                button.bottom - container.bottom + 16
+                window.innerHeight - container.bottom + 16
               }px`
-              this.setState({
-                listShouldScroll: true,
-              })
-
-              const diffTopV2 =
-                this.listRef.current.getBoundingClientRect().top - container.top
-
-              if (diffTopV2 > -16)
-                this.listRef.current.style.top = `${container.top - button.top + 16}px`
-            }
-
-            this.listRef.current.style.visibility = 'visible'
           }
-        }
 
-        // Rendre le menu visible après positionnement
-        this.setState({ isMenuVisible: true })
+          if (diffBottom > -16) {
+            this.listRef.current.style.bottom = `${
+              window.innerHeight - container.bottom + 16
+            }px`
+            this.setState({ listShouldScroll: true })
+            const diffTopV2 =
+              this.listRef.current.getBoundingClientRect().top - container.top
+            if (diffTopV2 > -16)
+              this.listRef.current.style.top = `${container.top + 16}px`
+          }
+
+          this.listRef.current.style.visibility = 'visible'
+        }
       }
+
+      this.setState({ isMenuVisible: true })
     }, 1)
   }
 
@@ -551,51 +526,40 @@ export default class Dropdown extends React.Component<
           )}
         </button>
         {this.Status()}
-        {(() => {
-          const { pin } = this.props
-
-          if (isMenuOpen)
-            return (
-              <div
-                className="floating-menu"
-                id={`${id}-menu`}
-                style={{
-                  position: 'absolute',
-                  zIndex: 99,
-                  top:
-                    pin === 'TOP'
-                      ? '-4px'
-                      : pin === 'BOTTOM'
-                        ? 'auto'
-                        : this.setPosition(),
-                  bottom: pin === 'BOTTOM' ? '-4px' : 'auto',
-                  right: alignment === 'RIGHT' ? 0 : 'auto',
-                  left: alignment === 'LEFT' ? 0 : 'auto',
-                  visibility:
-                    containerId === undefined && this.state.isMenuVisible
-                      ? 'visible'
-                      : 'hidden',
-                }}
-                ref={this.listRef}
-              >
-                <ActionsList
-                  options={options}
-                  selected={selected}
-                  direction={alignment === 'LEFT' ? 'RIGHT' : 'LEFT'}
-                  shouldScroll={listShouldScroll}
-                  containerId={containerId}
-                  onCancellation={() => this.setState({ isMenuOpen: false })}
-                  ref={this.actionsListRef}
-                  menuRef={this.menuRef}
-                  subMenuRef={this.subMenuRef}
-                  canBeSearched={canBeSearched}
-                  searchLabel={searchLabel}
-                  noResultsLabel={noResultsLabel}
-                />
-              </div>
-            )
-          return null
-        })()}
+        {isMenuOpen &&
+          createPortal(
+            <div
+              className="floating-menu"
+              id={`${id}-menu`}
+              style={{
+                position: 'fixed',
+                zIndex: 99,
+                top: 0,
+                left: 0,
+                visibility:
+                  containerId === undefined && this.state.isMenuVisible
+                    ? 'visible'
+                    : 'hidden',
+              }}
+              ref={this.listRef}
+            >
+              <ActionsList
+                options={options}
+                selected={selected}
+                direction={alignment === 'LEFT' ? 'RIGHT' : 'LEFT'}
+                shouldScroll={listShouldScroll}
+                containerId={containerId}
+                onCancellation={() => this.setState({ isMenuOpen: false })}
+                ref={this.actionsListRef}
+                menuRef={this.menuRef}
+                subMenuRef={this.subMenuRef}
+                canBeSearched={canBeSearched}
+                searchLabel={searchLabel}
+                noResultsLabel={noResultsLabel}
+              />
+            </div>,
+            document.body
+          )}
       </div>
     )
   }

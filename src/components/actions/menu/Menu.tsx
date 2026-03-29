@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import React from 'react'
 import { doClassnames } from '@unoff/utils'
 import ActionsList from '@components/lists/actions-list/ActionsList'
@@ -176,92 +177,73 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     const { containerId, alignment } = this.props
     const { isMenuOpen } = this.state
 
-    this.setState({
-      isMenuOpen: !isMenuOpen,
-    })
+    this.setState({ isMenuOpen: !isMenuOpen })
 
     setTimeout(() => {
-      if (this.listRef.current != null) {
-        const menuRect = this.listRef.current.getBoundingClientRect()
-        const buttonRect =
-          this.buttonRef.current?.buttonRef.current?.getBoundingClientRect()
+      if (this.listRef.current == null) return
 
-        let adjustedTop = 0
-        let adjustedLeft = 0
-        let shouldTransformY = false
-        let shouldTransformX = false
+      const menuRect = this.listRef.current.getBoundingClientRect()
+      const buttonRect =
+        this.buttonRef.current?.buttonRef.current?.getBoundingClientRect()
 
-        if (menuRect.bottom > window.innerHeight) {
-          adjustedTop = window.innerHeight - menuRect.height - 8
-          shouldTransformY = true
-        }
-        if (menuRect.top < 0) {
-          adjustedTop = 8
-          shouldTransformY = true
-        }
+      if (!buttonRect) return
 
-        if (menuRect.right > window.innerWidth) {
-          adjustedLeft = window.innerWidth - menuRect.width - 8
-          shouldTransformX = true
-        }
-        if (menuRect.left < 0) {
-          adjustedLeft = 8
-          shouldTransformX = true
-        }
+      const isTopAlignment = alignment?.includes('TOP')
+      const isRightAlignment = alignment?.includes('RIGHT')
 
-        if (shouldTransformY) {
-          const isTopAlignment = alignment?.includes('TOP')
-          const baseTransform = isTopAlignment ? 'translateY(-100%)' : 'none'
+      let top = isTopAlignment
+        ? buttonRect.top - menuRect.height - 8
+        : buttonRect.bottom + 8
 
-          if (buttonRect) {
-            const originalTop = isTopAlignment ? -menuRect.height : 0
-            const adjustment = adjustedTop - buttonRect.top - originalTop
-            this.listRef.current.style.top = `${adjustment}px`
-          }
+      let left = isRightAlignment
+        ? buttonRect.right - menuRect.width
+        : buttonRect.left
 
-          this.listRef.current.style.transform = shouldTransformX
-            ? `${baseTransform !== 'none' ? baseTransform + ' ' : ''}translateX(${adjustedLeft - menuRect.left}px)`
-            : baseTransform
-        }
+      if (top + menuRect.height > window.innerHeight - 8)
+        top = window.innerHeight - menuRect.height - 8
+      if (top < 8) top = 8
+      if (left + menuRect.width > window.innerWidth - 8)
+        left = window.innerWidth - menuRect.width - 8
+      if (left < 8) left = 8
 
-        if (shouldTransformX && !shouldTransformY) {
-          const isTopAlignment = alignment?.includes('TOP')
-          const baseTransform = isTopAlignment ? 'translateY(-100%)' : 'none'
+      this.listRef.current.style.top = `${top}px`
+      this.listRef.current.style.left = `${left}px`
 
-          this.listRef.current.style.transform =
-            baseTransform === 'none'
-              ? `translateX(${adjustedLeft - menuRect.left}px)`
-              : `${baseTransform} translateX(${adjustedLeft - menuRect.left}px)`
-        }
+      if (containerId !== undefined) {
+        const containerElement = document.getElementById(containerId)
+        if (containerElement) {
+          const container = containerElement.getBoundingClientRect()
+          const updatedMenuRect = this.listRef.current.getBoundingClientRect()
 
-        if (containerId !== undefined) {
-          const containerElement = document.getElementById(containerId)
-          if (containerElement) {
-            const container = containerElement.getBoundingClientRect()
-            const button =
-              this.buttonRef.current?.buttonRef.current?.getBoundingClientRect()
+          const diffTop = updatedMenuRect.top - container.top
+          const diffBottom = updatedMenuRect.bottom - container.bottom
 
-            const diffTop =
-              this.listRef.current.getBoundingClientRect().top - container.top
-            const diffBottom =
+          if (diffTop < -16) {
+            this.listRef.current.style.top = `${container.top + 16}px`
+            const diffBottomV2 =
               this.listRef.current.getBoundingClientRect().bottom -
               container.bottom
-
-            if (diffTop < -16 && button)
-              this.listRef.current.style.top = `${container.top - button.top + 16}px`
-
-            if (diffBottom > -16 && button)
+            if (diffBottomV2 < -16)
               this.listRef.current.style.bottom = `${
-                button.bottom - container.bottom + 16
+                window.innerHeight - container.bottom + 16
               }px`
-
-            this.listRef.current.style.visibility = 'visible'
           }
-        }
 
-        // Rendre le menu visible après positionnement
-        this.setState({ isMenuVisible: true })
+          if (diffBottom > -16) {
+            this.listRef.current.style.bottom = `${
+              window.innerHeight - container.bottom + 16
+            }px`
+            const diffTopV2 =
+              this.listRef.current.getBoundingClientRect().top - container.top
+            if (diffTopV2 > -16)
+              this.listRef.current.style.top = `${container.top + 16}px`
+          }
+
+          this.listRef.current.style.visibility = 'visible'
+        }
       }
+
+      this.setState({ isMenuVisible: true })
     }, 0)
 
     if (e.type === 'keydown')
@@ -381,39 +363,39 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
             aria-expanded={isMenuOpen}
           />
         )}
-        {(() => {
-          if (isMenuOpen)
-            return (
-              <div
-                id={`menu-${id}`}
-                className="floating-menu"
-                style={{
-                  position: 'absolute',
-                  zIndex: 99,
-                  visibility:
-                    containerId === undefined && this.state.isMenuVisible
-                      ? 'visible'
-                      : 'hidden',
-                }}
-                ref={this.listRef}
-              >
-                <ActionsList
-                  options={options}
-                  selected={selected}
-                  direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
-                  containerId={containerId}
-                  onCancellation={() => this.setState({ isMenuOpen: false })}
-                  ref={this.actionsListRef}
-                  menuRef={this.menuRef}
-                  subMenuRef={this.subMenuRef}
-                  canBeSearched={canBeSearched}
-                  searchLabel={searchLabel}
-                  noResultsLabel={noResultsLabel}
-                />
-              </div>
-            )
-          return null
-        })()}
+        {isMenuOpen &&
+          createPortal(
+            <div
+              id={`menu-${id}`}
+              className="floating-menu"
+              style={{
+                position: 'fixed',
+                zIndex: 99,
+                top: 0,
+                left: 0,
+                visibility:
+                  containerId === undefined && this.state.isMenuVisible
+                    ? 'visible'
+                    : 'hidden',
+              }}
+              ref={this.listRef}
+            >
+              <ActionsList
+                options={options}
+                selected={selected}
+                direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                containerId={containerId}
+                onCancellation={() => this.setState({ isMenuOpen: false })}
+                ref={this.actionsListRef}
+                menuRef={this.menuRef}
+                subMenuRef={this.subMenuRef}
+                canBeSearched={canBeSearched}
+                searchLabel={searchLabel}
+                noResultsLabel={noResultsLabel}
+              />
+            </div>,
+            document.body
+          )}
       </div>
     )
   }
