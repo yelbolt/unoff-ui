@@ -542,6 +542,7 @@ export default class Dropdown extends React.Component<
           </span>
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
+              anchor={this.buttonRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >

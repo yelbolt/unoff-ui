@@ -41,6 +41,8 @@ export default class ColorChip extends React.Component<
     height: '16px',
   }
 
+  chipRef: React.RefObject<HTMLDivElement> = React.createRef()
+
   constructor(props: ColorChipProps) {
     super(props)
     this.state = {
@@ -60,13 +62,14 @@ export default class ColorChip extends React.Component<
           isRounded && 'color-chip--rounded',
         ])}
         style={{ backgroundColor: color, width: width, height: height }}
+        ref={this.chipRef}
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
         }}
         onMouseLeave={() => this.setState({ isTooltipVisible: false })}
         role="contentinfo"
       >
-        {isTooltipVisible && <Tooltip>{helper}</Tooltip>}
+        {isTooltipVisible && <Tooltip anchor={this.chipRef}>{helper}</Tooltip>}
       </div>
     )
   }

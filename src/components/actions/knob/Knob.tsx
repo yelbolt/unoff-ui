@@ -100,6 +100,8 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
     isDisabled: false,
   }
 
+  knobRef: React.RefObject<HTMLDivElement> = React.createRef()
+
   constructor(props: KnobProps) {
     super(props)
     this.state = {
@@ -191,6 +193,7 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
           isStopInputOpen && 'knob--editing',
           (isBlocked || isDisabled) && 'knob--disabled',
         ])}
+        ref={this.knobRef}
         style={{
           left: `${offset}%`,
           zIndex: isTooltipOpen ? '2' : '1',
@@ -294,7 +297,7 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
           aria-hidden="true"
         ></div>
         {helper !== undefined && isTooltipOpen && (
-          <Tooltip type={helper.type}>{helper.label}</Tooltip>
+          <Tooltip anchor={this.knobRef} type={helper.type}>{helper.label}</Tooltip>
         )}
       </div>
     )

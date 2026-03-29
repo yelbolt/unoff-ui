@@ -180,6 +180,7 @@ export interface InputState {
 export default class Input extends React.Component<InputProps, InputState> {
   inputRef: React.RefObject<HTMLInputElement>
   textareaRef: React.RefObject<HTMLTextAreaElement>
+  wrapperRef: React.RefObject<HTMLDivElement>
 
   static defaultProps: Partial<InputProps> = {
     icon: undefined,
@@ -208,6 +209,7 @@ export default class Input extends React.Component<InputProps, InputState> {
     }
     this.inputRef = React.createRef()
     this.textareaRef = React.createRef()
+    this.wrapperRef = React.createRef()
   }
 
   // Lifecycle
@@ -676,6 +678,7 @@ export default class Input extends React.Component<InputProps, InputState> {
       >
         <div
           className="input__wrapper"
+          ref={this.wrapperRef}
           onMouseEnter={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
@@ -724,6 +727,7 @@ export default class Input extends React.Component<InputProps, InputState> {
           />
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
+              anchor={this.wrapperRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -766,6 +770,7 @@ export default class Input extends React.Component<InputProps, InputState> {
       >
         <div
           className="input__wrapper"
+          ref={this.wrapperRef}
           onMouseEnter={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
@@ -837,6 +842,7 @@ export default class Input extends React.Component<InputProps, InputState> {
           )}
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
+              anchor={this.wrapperRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -880,6 +886,7 @@ export default class Input extends React.Component<InputProps, InputState> {
       >
         <div
           className="input__wrapper"
+          ref={this.wrapperRef}
           onMouseEnter={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
@@ -941,6 +948,7 @@ export default class Input extends React.Component<InputProps, InputState> {
             )}
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
+              anchor={this.wrapperRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -969,6 +977,7 @@ export default class Input extends React.Component<InputProps, InputState> {
       >
         <div
           className="input__wrapper"
+          ref={this.wrapperRef}
           onMouseEnter={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
@@ -1004,6 +1013,7 @@ export default class Input extends React.Component<InputProps, InputState> {
           />
           {isTooltipVisible && helper !== undefined && (
             <Tooltip
+              anchor={this.wrapperRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >

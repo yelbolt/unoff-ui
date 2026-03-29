@@ -331,6 +331,7 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           )}
           {isTooltipVisible && hasTooltipContent() && (
             <Tooltip
+              anchor={this.buttonRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -455,6 +456,7 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           )}
           {isTooltipVisible && helper !== undefined && state !== 'selected' && (
             <Tooltip
+              anchor={this.buttonRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >

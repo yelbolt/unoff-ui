@@ -49,6 +49,8 @@ export default class IconChip extends React.Component<
     iconName: 'adjust',
   }
 
+  chipRef: React.RefObject<HTMLDivElement> = React.createRef()
+
   constructor(props: IconChipProps) {
     super(props)
     this.state = {
@@ -64,6 +66,7 @@ export default class IconChip extends React.Component<
     return (
       <div
         className={doClassnames(['icon-chip'])}
+        ref={this.chipRef}
         onMouseEnter={() => {
           this.setState({ isTooltipVisible: true })
         }}
@@ -77,6 +80,7 @@ export default class IconChip extends React.Component<
         />
         {isTooltipVisible && (
           <Tooltip
+            anchor={this.chipRef}
             pin={pin}
             type={type}
           >

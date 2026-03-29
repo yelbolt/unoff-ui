@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import Tooltip from '../tooltip/Tooltip'
@@ -47,9 +47,11 @@ export interface ChipProps {
 const Chip = (props: ChipProps) => {
   const { children, state = 'ACTIVE', isSolo = false, preview, action } = props
   const [isPreviewVisible, setIsPreviewVisible] = useState(false)
+  const chipRef = useRef<HTMLDivElement>(null)
 
   return (
     <div
+      ref={chipRef}
       className={doClassnames([
         'chip',
         state === 'INACTIVE' && 'chip--inactive',
@@ -114,6 +116,7 @@ const Chip = (props: ChipProps) => {
       )}
       {isPreviewVisible && (
         <Tooltip
+          anchor={chipRef}
           pin={preview?.pin || 'BOTTOM'}
           type="WITH_IMAGE"
           image={preview?.image}
