@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.6] - 2026-03-30
+
+### Fixed
+
+- **`Tooltip` arrow position (non-portal)**: Arrow (`::after`) est ancré sur `.tooltip` et reste fixe au centre de l'ancre — seul `tooltip__block` glisse pour éviter les bords du viewport, la flèche ne dérive plus avec lui
+- **`Tooltip` arrow position (portal)**: La position de la flèche est calculée via `anchorCenterX − clampedLeft` et appliquée en `--_arrow-left`, elle pointe toujours vers l'ancre même quand le tooltip est clampé
+- **`Tooltip` scroll dismissal**: La tooltip se masque dès qu'un scroll est détecté (phase capture), elle ne flotte plus au-dessus du contenu dans les listes défilables
+- **`Tooltip` knob tracking**: En mode portal, la position est recalculée à chaque frame via `requestAnimationFrame` — la tooltip suit un ancre en mouvement (ex. un `Knob` dans un slider)
+- **`DraggableWindow` portal rendering**: La fenêtre est rendue via `createPortal` sur `document.body` en `position: fixed`, échappant aux contraintes d'overflow et de stacking context du parent — la position initiale est calculée depuis le `getBoundingClientRect` du bouton déclencheur
+
 ## [1.23.5] - 2026-03-30
 
 ### Fixed
