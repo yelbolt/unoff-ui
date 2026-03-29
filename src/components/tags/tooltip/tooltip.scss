@@ -14,12 +14,17 @@
   pointer-events: none;
   user-select: none;
 
+  &::after {
+    position: absolute;
+    left: var(--_arrow-left, 50%);
+    content: '';
+  }
+
   &.tooltip--top {
     bottom: calc(100% + var(--tooltip-arrow-size));
 
-    .tooltip__block::after {
+    &::after {
       bottom: 0;
-      left: calc(50% - var(--_shift, 0px));
       transform: translateX(-50%) translateY(50%) rotate(45deg);
       transform-origin: 50% 50%;
       border-top: transparent;
@@ -38,9 +43,8 @@
   &.tooltip--bottom {
     top: calc(100% + var(--tooltip-arrow-size));
 
-    .tooltip__block::after {
+    &::after {
       top: 0;
-      left: calc(50% - var(--_shift, 0px));
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       transform-origin: 50% 50%;
       border-top: var(--tooltip-arrow-border-width) solid
@@ -57,7 +61,6 @@
   }
 
   &__block {
-    position: relative;
     display: flex;
     justify-content: center;
     gap: var(--tooltip-gap);
@@ -68,11 +71,6 @@
     background-color: var(--tooltip-background-color);
     padding: var(--tooltip-padding-top) var(--tooltip-padding-right)
       var(--tooltip-padding-bottom) var(--tooltip-padding-left);
-
-    &::after {
-      position: absolute;
-      content: '';
-    }
   }
 
   &__snack {

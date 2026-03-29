@@ -36,43 +36,73 @@ const Tooltip = (props: TooltipProps) => {
   const tooltipRef = useRef<HTMLDivElement>(null)
   const [shift, setShift] = React.useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const [fixedPos, setFixedPos] = useState<{ top: number; left: number } | null>(
+  const [fixedPos, setFixedPos] = useState<{ top: number; left: number; arrowLeft: number } | null>(
     null
   )
+  const prevFixedPos = useRef<{ top: number; left: number } | null>(null)
+  const hasShownRef = useRef(false)
+
+  useEffect(() => {
+    const handleScroll = () => setIsVisible(false)
+    window.addEventListener('scroll', handleScroll, true)
+    return () => window.removeEventListener('scroll', handleScroll, true)
+  }, [])
 
   useEffect(() => {
     const tooltipEl = tooltipRef.current
     if (!tooltipEl) return
 
     if (anchor?.current) {
-      const anchorRect = anchor.current.getBoundingClientRect()
-      const tooltipRect = tooltipEl.getBoundingClientRect()
-      const arrowOffset =
-        parseFloat(
-          getComputedStyle(document.documentElement)
-            .getPropertyValue('--tooltip-arrow-size')
-            .trim()
-        ) || 0
+      let rafId: number
 
-      let left = anchorRect.left + anchorRect.width / 2 - tooltipRect.width / 2
-      const top =
-        pin === 'TOP'
-          ? anchorRect.top - tooltipRect.height - arrowOffset
-          : anchorRect.bottom + arrowOffset
+      const updatePosition = () => {
+        if (!tooltipRef.current || !anchor.current) return
 
-      if (left < 8) left = 8
-      if (left + tooltipRect.width > window.innerWidth - 8)
-        left = window.innerWidth - tooltipRect.width - 8
+        const anchorRect = anchor.current.getBoundingClientRect()
+        const tooltipRect = tooltipRef.current.getBoundingClientRect()
+        const arrowOffset =
+          parseFloat(
+            getComputedStyle(document.documentElement)
+              .getPropertyValue('--tooltip-arrow-size')
+              .trim()
+          ) || 0
 
-      setFixedPos({ top, left })
+        const anchorCenterX = anchorRect.left + anchorRect.width / 2
+        let left = anchorCenterX - tooltipRect.width / 2
+        const top =
+          pin === 'TOP'
+            ? anchorRect.top - tooltipRect.height - arrowOffset
+            : anchorRect.bottom + arrowOffset
+
+        if (left < 8) left = 8
+        if (left + tooltipRect.width > window.innerWidth - 8)
+          left = window.innerWidth - tooltipRect.width - 8
+
+        const arrowLeft = anchorCenterX - left
+
+        if (prevFixedPos.current?.top !== top || prevFixedPos.current?.left !== left) {
+          prevFixedPos.current = { top, left }
+          setFixedPos({ top, left, arrowLeft })
+        }
+
+        if (!hasShownRef.current) {
+          hasShownRef.current = true
+          setIsVisible(true)
+        }
+
+        rafId = requestAnimationFrame(updatePosition)
+      }
+
+      rafId = requestAnimationFrame(updatePosition)
+      return () => cancelAnimationFrame(rafId)
     } else {
       const rect = tooltipEl.getBoundingClientRect()
       if (rect.x < 0) setShift(-rect.x + 8)
       if (rect.x + rect.width > window.innerWidth)
         setShift(window.innerWidth - rect.x - rect.width - 8)
-    }
 
-    setIsVisible(true)
+      setIsVisible(true)
+    }
   }, [anchor, pin])
 
   const content = (
@@ -89,16 +119,19 @@ const Tooltip = (props: TooltipProps) => {
       ref={tooltipRef}
       style={{
         visibility: isVisible ? 'visible' : 'hidden',
-        ...(fixedPos !== null && { top: fixedPos.top, left: fixedPos.left }),
-      }}
+        ...(fixedPos !== null && {
+          top: fixedPos.top,
+          left: fixedPos.left,
+          '--_arrow-left': `${fixedPos.arrowLeft}px`,
+        }),
+      } as React.CSSProperties}
       aria-hidden={!isVisible}
     >
       <div
         className="tooltip__block"
         style={{
           transform: `translateX(${shift}px)`,
-          '--_shift': `${shift}px`,
-        } as React.CSSProperties}
+        }}
         role="presentation"
       >
         <div

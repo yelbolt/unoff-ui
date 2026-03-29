@@ -4,8 +4,8 @@
 @import 'styles/framer';
 
 .draggable-window {
-  position: absolute;
-  z-index: 3;
+  position: fixed;
+  z-index: 9999;
   outline: var(--draggable-window-border-width) solid
     var(--draggable-window-border-color);
   outline-offset: var(--draggable-window-border-offset);

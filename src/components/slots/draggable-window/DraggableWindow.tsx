@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import React, { useState, useRef, useEffect } from 'react'
 import { doClassnames } from '@unoff/utils'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
@@ -41,8 +42,8 @@ const DraggableWindow = (props: DraggableWindowProps) => {
         triggerRef.current.buttonRef.current.getBoundingClientRect()
 
       setPosition({
-        x: triggerRect.left - windowRect.left - windowRect.width - 8,
-        y: 0,
+        x: triggerRect.left - windowRect.width - 8,
+        y: triggerRect.top,
       })
       setIsOpen(true)
     }
@@ -85,14 +86,15 @@ const DraggableWindow = (props: DraggableWindowProps) => {
     }
   }, [isDragging, offset])
 
-  return (
+  return createPortal(
     <div
       className={doClassnames([
         'draggable-window',
         isDragging && 'draggable-window--dragging',
       ])}
       style={{
-        transform: `translate(${position.x}px, ${position.y}px)`,
+        left: position.x,
+        top: position.y,
         visibility: isOpen ? 'visible' : 'hidden',
       }}
       onMouseDown={handleMouseDown}
@@ -131,7 +133,8 @@ const DraggableWindow = (props: DraggableWindowProps) => {
       >
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
 
