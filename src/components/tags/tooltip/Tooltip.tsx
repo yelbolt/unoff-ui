@@ -97,7 +97,8 @@ const Tooltip = (props: TooltipProps) => {
         className="tooltip__block"
         style={{
           transform: `translateX(${shift}px)`,
-        }}
+          '--_shift': `${shift}px`,
+        } as React.CSSProperties}
         role="presentation"
       >
         <div

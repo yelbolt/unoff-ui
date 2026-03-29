@@ -14,22 +14,12 @@
   pointer-events: none;
   user-select: none;
 
-  &::after {
-    position: absolute;
-    left: calc(50% - var(--tooltip-arrow-size));
-    border-width: var(--tooltip-arrow-size);
-    border-style: solid;
-    width: 0;
-    height: 0;
-    content: '';
-  }
-
   &.tooltip--top {
     bottom: calc(100% + var(--tooltip-arrow-size));
 
-    &::after {
+    .tooltip__block::after {
       bottom: 0;
-      left: 50%;
+      left: calc(50% - var(--_shift, 0px));
       transform: translateX(-50%) translateY(50%) rotate(45deg);
       transform-origin: 50% 50%;
       border-top: transparent;
@@ -48,9 +38,9 @@
   &.tooltip--bottom {
     top: calc(100% + var(--tooltip-arrow-size));
 
-    &::after {
-      top: 1px;
-      left: 50%;
+    .tooltip__block::after {
+      top: 0;
+      left: calc(50% - var(--_shift, 0px));
       transform: translateX(-50%) translateY(-50%) rotate(45deg);
       transform-origin: 50% 50%;
       border-top: var(--tooltip-arrow-border-width) solid
@@ -67,6 +57,7 @@
   }
 
   &__block {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: var(--tooltip-gap);
@@ -77,6 +68,11 @@
     background-color: var(--tooltip-background-color);
     padding: var(--tooltip-padding-top) var(--tooltip-padding-right)
       var(--tooltip-padding-bottom) var(--tooltip-padding-left);
+
+    &::after {
+      position: absolute;
+      content: '';
+    }
   }
 
   &__snack {
