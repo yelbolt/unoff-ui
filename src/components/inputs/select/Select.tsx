@@ -106,6 +106,7 @@ export interface SelectState {
 
 export default class Select extends React.Component<SelectProps, SelectState> {
   private inputRef: React.RefObject<HTMLInputElement> = React.createRef()
+  private containerRef: React.RefObject<HTMLDivElement> = React.createRef()
 
   static defaultProps: Partial<SelectProps> = {
     shouldReflow: false,
@@ -202,6 +203,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
             'checkbox',
             isBlocked && 'checkbox--blocked',
           ])}
+          ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -245,6 +247,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
           )}
           {isTooltipVisible && hasTooltipContent() && (
             <Tooltip
+              anchor={this.containerRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -284,6 +287,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       <div className={layouts['snackbar--medium']}>
         <div
           className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
+          ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -329,6 +333,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
 
           {isTooltipVisible && hasTooltipContent() && (
             <Tooltip
+              anchor={this.containerRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >
@@ -367,6 +372,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       <div className={layouts['snackbar--medium']}>
         <div
           className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
+          ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -412,6 +418,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
 
           {isTooltipVisible && hasTooltipContent() && (
             <Tooltip
+              anchor={this.containerRef}
               pin={helper?.pin || 'BOTTOM'}
               type={helper?.type || 'SINGLE_LINE'}
             >

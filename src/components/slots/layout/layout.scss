@@ -11,17 +11,6 @@
   background-color: var(--layout-background-color);
   overflow: hidden;
 
-  @media (width <= 460px) {
-    flex-direction: column;
-
-    & > * {
-      flex: 1 !important;
-      width: 100% !important;
-      min-width: unset !important;
-      max-width: unset !important;
-    }
-  }
-
   &--full-width {
     width: 100%;
   }
@@ -48,10 +37,6 @@
       justify-content: space-between;
       gap: var(--layout-distributed-gap);
       overflow-y: hidden;
-
-      @media (width <= 460px) {
-        overflow-y: auto;
-      }
     }
 
     &--centered {
@@ -71,22 +56,39 @@
 
     &--fixed {
       flex: none;
-
-      @media (width <= 460px) {
-        flex: none !important;
-        overflow: visible;
-      }
     }
   }
 
   & > div + div {
     border-left: var(--layout-block-border-width) solid
       var(--layout-block-border-color);
+  }
+}
 
-    @media (width <= 460px) {
+@media (width <= 460px) {
+  .layout--reflow {
+    flex-direction: column;
+
+    & > * {
+      flex: 1 !important;
+      width: 100% !important;
+      min-width: unset !important;
+      max-width: unset !important;
+    }
+
+    & > div + div {
       border-top: var(--layout-block-border-width) solid
         var(--layout-block-border-color);
       border-left: none;
+    }
+
+    .layout__block--distributed {
+      overflow-y: auto;
+    }
+
+    .layout__block--fixed {
+      flex: none !important;
+      overflow: visible;
     }
   }
 }

@@ -234,7 +234,9 @@ export const Icon: Story = {
 
     await userEvent.hover(button)
 
-    await expect(canvas.getByText('Adjust the parameters')).toBeInTheDocument()
+    await expect(
+      within(document.body).getByText('Adjust the parameters')
+    ).toBeInTheDocument()
 
     await userEvent.unhover(button)
     await userEvent.click(button)

@@ -31,10 +31,10 @@ export interface MembersListState {
   isMembersListVisible: boolean
 }
 
-export default class MembersList extends React.Component<
-  MembersListProps,
-  MembersListState
-> {
+export default class MembersList extends React.Component<MembersListProps, MembersListState> {
+  private memberRefs: Map<number, HTMLDivElement | null> = new Map()
+  private remainingRef: React.RefObject<HTMLDivElement> = React.createRef()
+
   static defaultProps: Partial<MembersListProps> = {
     isInverted: false,
   }
@@ -68,6 +68,7 @@ export default class MembersList extends React.Component<
               className="members-list__member"
               role="listitem"
               style={{ zIndex }}
+              ref={(el) => this.memberRefs.set(index, el)}
               onMouseEnter={() =>
                 this.setState({
                   activeTooltipIndex: index,
@@ -91,7 +92,11 @@ export default class MembersList extends React.Component<
                 />
               </div>
               {activeTooltipIndex === index && (
-                <Tooltip>{member.fullName}</Tooltip>
+                <Tooltip
+                  anchor={{ current: this.memberRefs.get(index) ?? null }}
+                >
+                  {member.fullName}
+                </Tooltip>
               )}
             </div>
           )
@@ -100,6 +105,7 @@ export default class MembersList extends React.Component<
           <div
             className="members-list__remaining"
             role="listitem"
+            ref={this.remainingRef}
             onMouseEnter={() => this.setState({ isMembersListVisible: true })}
             onMouseLeave={() => this.setState({ isMembersListVisible: false })}
           >
@@ -110,7 +116,7 @@ export default class MembersList extends React.Component<
               +{members.slice(numberOfAvatarsDisplayed).length}
             </span>
             {isMembersListVisible && (
-              <Tooltip>
+              <Tooltip anchor={this.remainingRef}>
                 <div
                   className="members-list__list"
                   role="list"

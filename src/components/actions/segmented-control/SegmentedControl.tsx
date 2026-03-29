@@ -78,6 +78,7 @@ interface SegmentedControlState {
   activeTooltipId: string | null
 }
 
+
 export default class SegmentedControl extends React.Component<
   SegmentedControlProps,
   SegmentedControlState
@@ -86,6 +87,8 @@ export default class SegmentedControl extends React.Component<
     isBlocked: false,
     isNew: false,
   }
+
+  private itemRefs: Map<string, HTMLDivElement | null> = new Map()
 
   constructor(props: SegmentedControlProps) {
     super(props)
@@ -141,6 +144,7 @@ export default class SegmentedControl extends React.Component<
             <div
               role="tab"
               key={item.helper.label.toLowerCase()}
+              ref={(el) => this.itemRefs.set(item.id, el)}
               className={doClassnames([
                 'segmented-control__item',
                 active === item.id && 'segmented-control__item--active',
@@ -172,6 +176,7 @@ export default class SegmentedControl extends React.Component<
               />
               {activeTooltipId === item.id && (
                 <Tooltip
+                  anchor={{ current: this.itemRefs.get(item.id) ?? null }}
                   pin={item.helper.pin ?? 'BOTTOM'}
                   type="SINGLE_LINE"
                 >

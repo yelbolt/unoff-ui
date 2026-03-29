@@ -36,10 +36,21 @@ export type LayoutProps = {
    * @default false
    */
   isFullHeight?: boolean
+  /**
+   * Whether to reflow on small screens
+   * @default false
+   */
+  shouldReflow?: boolean
 }
 
 const Layout = (props: LayoutProps) => {
-  const { id, column, isFullWidth = false, isFullHeight = false } = props
+  const {
+    id,
+    column,
+    isFullWidth = false,
+    isFullHeight = false,
+    shouldReflow = false,
+  } = props
 
   return (
     <div
@@ -48,6 +59,7 @@ const Layout = (props: LayoutProps) => {
         'layout',
         isFullWidth && 'layout--full-width',
         isFullHeight && 'layout--full-height',
+        shouldReflow && 'layout--reflow',
       ])}
       role="main"
     >

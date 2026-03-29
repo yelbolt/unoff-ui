@@ -109,6 +109,15 @@
     }
   }
 
+  &.tooltip--portal {
+    position: fixed;
+    top: unset;
+    bottom: unset;
+    left: 0;
+    transform: none;
+    z-index: 9999;
+  }
+
   &--withimage {
     --tooltip-min-width: var(--tooltip-with-image-min-width);
 
