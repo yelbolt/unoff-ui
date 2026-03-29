@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.5] - 2026-03-30
+
+### Fixed
+
+- **`Tooltip` arrow position on collision**: When the tooltip block slides to avoid viewport boundaries, the arrow now stays visually attached to the reference element — the arrow is anchored to `.tooltip__block` and its horizontal position compensates for the block's offset
+
 ## [1.23.4] - 2026-03-30
 
 ### Added
