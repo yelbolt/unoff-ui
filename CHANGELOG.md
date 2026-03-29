@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.4] - 2026-03-30
+
+### Added
+
+- **`Tooltip` `anchor` prop**: New prop to pass a custom anchor element for portal rendering — tooltips now render outside the component tree to avoid overflow/clipping constraints
+- **`Layout` `shouldReflow` prop**: New boolean prop that switches the layout to a single-column stack on viewports ≤ 460 px — reflow CSS is now gated behind the `layout--reflow` class instead of always-on media queries
+
+### Changed
+
+- **`Dropdown` portal rendering**: The dropdown menu now renders via a portal at `document.body` level, fixing overflow and z-index clipping issues when the trigger is inside a scrollable or transformed container
+- **`Menu` portal rendering**: Aligned with `Dropdown` — menu panel now also renders via portal with recalculated viewport-relative positioning
+
 ## [1.23.3] - 2026-03-26
 
 ### Fixed
