@@ -54,7 +54,7 @@
     "figma:parse": "figma connect parse"
   },
   "dependencies": {
-    "@unoff/utils": "^0.8.1"
+    "@unoff/utils": "^0.8.2"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -70,6 +70,8 @@
     "@storybook/addon-onboarding": "^10.2.14",
     "@storybook/addon-vitest": "^10.2.14",
     "@storybook/react-vite": "^10.2.14",
+    "@terrazzo/cli": "^2.0.0",
+    "@terrazzo/plugin-css": "^2.0.0",
     "@testing-library/react": "^15.0.7",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
