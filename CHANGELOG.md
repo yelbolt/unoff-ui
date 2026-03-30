@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.23.7] - 2026-03-30
+
+### Added
+
+- **`Dropdown` interaction backdrop**: A transparent fixed backdrop (`z-index: 98`) is now rendered in the portal when the dropdown is open — pointer events outside the `ActionsList` are blocked until the menu closes
+- **`Menu` interaction backdrop**: Same backdrop added to `Menu` — interactions outside the `ActionsList` are suspended while the menu is open
+- **`ai`, `colors`, `contrast`, `explore` icons**: Quatre nouvelles icônes ajoutées pour les quatre thèmes (figma, framer, penpot, sketch)
+
+### Documentation
+
+- **`Tooltip` MDX**: `anchor` and `image` props documented in the Storybook Usage tab
+- **`Tooltip` Figma**: Component description updated with `anchor` and `image` props
+
 ## [1.23.6] - 2026-03-30
 
 ### Fixed
