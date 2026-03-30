@@ -21,6 +21,9 @@ export type LayoutProps = {
       | 'BLANK'
       | 'DRAWER'
       | 'FIXED'
+      | Array<
+          'LIST' | 'DISTRIBUTED' | 'CENTERED' | 'BLANK' | 'DRAWER' | 'FIXED'
+        >
     /** Fixed width value */
     fixedWidth?: string
     /** Drawer configuration (when typeModifier is DRAWER) */
@@ -74,12 +77,13 @@ const Layout = (props: LayoutProps) => {
               key={index}
               className={doClassnames([
                 'layout__block',
-                item.typeModifier === 'LIST' && 'layout__block--list',
-                item.typeModifier === 'DISTRIBUTED' &&
+                item.typeModifier?.includes('LIST') && 'layout__block--list',
+                item.typeModifier?.includes('DISTRIBUTED') &&
                   'layout__block--distributed',
-                item.typeModifier === 'CENTERED' && 'layout__block--centered',
-                item.typeModifier === 'BLANK' && 'layout__block--blank',
-                item.typeModifier === 'FIXED' && 'layout__block--fixed',
+                item.typeModifier?.includes('CENTERED') &&
+                  'layout__block--centered',
+                item.typeModifier?.includes('BLANK') && 'layout__block--blank',
+                item.typeModifier?.includes('FIXED') && 'layout__block--fixed',
               ])}
               style={{
                 width:
