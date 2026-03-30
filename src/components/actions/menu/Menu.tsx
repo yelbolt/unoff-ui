@@ -365,35 +365,41 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         )}
         {isMenuOpen &&
           createPortal(
-            <div
-              id={`menu-${id}`}
-              className="floating-menu"
-              style={{
-                position: 'fixed',
-                zIndex: 99,
-                top: 0,
-                left: 0,
-                visibility:
-                  containerId === undefined && this.state.isMenuVisible
-                    ? 'visible'
-                    : 'hidden',
-              }}
-              ref={this.listRef}
-            >
-              <ActionsList
-                options={options}
-                selected={selected}
-                direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
-                containerId={containerId}
-                onCancellation={() => this.setState({ isMenuOpen: false })}
-                ref={this.actionsListRef}
-                menuRef={this.menuRef}
-                subMenuRef={this.subMenuRef}
-                canBeSearched={canBeSearched}
-                searchLabel={searchLabel}
-                noResultsLabel={noResultsLabel}
+            <>
+              <div
+                style={{ position: 'fixed', inset: 0, zIndex: 98 }}
+                aria-hidden="true"
               />
-            </div>,
+              <div
+                id={`menu-${id}`}
+                className="floating-menu"
+                style={{
+                  position: 'fixed',
+                  zIndex: 99,
+                  top: 0,
+                  left: 0,
+                  visibility:
+                    containerId === undefined && this.state.isMenuVisible
+                      ? 'visible'
+                      : 'hidden',
+                }}
+                ref={this.listRef}
+              >
+                <ActionsList
+                  options={options}
+                  selected={selected}
+                  direction={alignment?.includes('LEFT') ? 'RIGHT' : 'LEFT'}
+                  containerId={containerId}
+                  onCancellation={() => this.setState({ isMenuOpen: false })}
+                  ref={this.actionsListRef}
+                  menuRef={this.menuRef}
+                  subMenuRef={this.subMenuRef}
+                  canBeSearched={canBeSearched}
+                  searchLabel={searchLabel}
+                  noResultsLabel={noResultsLabel}
+                />
+              </div>
+            </>,
             document.body
           )}
       </div>

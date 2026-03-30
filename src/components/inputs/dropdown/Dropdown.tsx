@@ -528,36 +528,42 @@ export default class Dropdown extends React.Component<
         {this.Status()}
         {isMenuOpen &&
           createPortal(
-            <div
-              className="floating-menu"
-              id={`${id}-menu`}
-              style={{
-                position: 'fixed',
-                zIndex: 99,
-                top: 0,
-                left: 0,
-                visibility:
-                  containerId === undefined && this.state.isMenuVisible
-                    ? 'visible'
-                    : 'hidden',
-              }}
-              ref={this.listRef}
-            >
-              <ActionsList
-                options={options}
-                selected={selected}
-                direction={alignment === 'LEFT' ? 'RIGHT' : 'LEFT'}
-                shouldScroll={listShouldScroll}
-                containerId={containerId}
-                onCancellation={() => this.setState({ isMenuOpen: false })}
-                ref={this.actionsListRef}
-                menuRef={this.menuRef}
-                subMenuRef={this.subMenuRef}
-                canBeSearched={canBeSearched}
-                searchLabel={searchLabel}
-                noResultsLabel={noResultsLabel}
+            <>
+              <div
+                style={{ position: 'fixed', inset: 0, zIndex: 98 }}
+                aria-hidden="true"
               />
-            </div>,
+              <div
+                className="floating-menu"
+                id={`${id}-menu`}
+                style={{
+                  position: 'fixed',
+                  zIndex: 99,
+                  top: 0,
+                  left: 0,
+                  visibility:
+                    containerId === undefined && this.state.isMenuVisible
+                      ? 'visible'
+                      : 'hidden',
+                }}
+                ref={this.listRef}
+              >
+                <ActionsList
+                  options={options}
+                  selected={selected}
+                  direction={alignment === 'LEFT' ? 'RIGHT' : 'LEFT'}
+                  shouldScroll={listShouldScroll}
+                  containerId={containerId}
+                  onCancellation={() => this.setState({ isMenuOpen: false })}
+                  ref={this.actionsListRef}
+                  menuRef={this.menuRef}
+                  subMenuRef={this.subMenuRef}
+                  canBeSearched={canBeSearched}
+                  searchLabel={searchLabel}
+                  noResultsLabel={noResultsLabel}
+                />
+              </div>
+            </>,
             document.body
           )}
       </div>
