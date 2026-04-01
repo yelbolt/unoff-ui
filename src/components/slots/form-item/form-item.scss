@@ -15,7 +15,7 @@
     display: inline-flex;
     position: relative;
     align-items: start;
-    gap: var(--form-item-gap);
+    gap: var(--form-item-gap-default);
     cursor: default;
     padding: var(--form-item-padding-top) var(--form-item-padding-right)
       var(--form-item-padding-bottom) var(--form-item-padding-left);
@@ -96,6 +96,7 @@
     .form-item__row {
       flex-direction: column;
       align-items: stretch;
+      gap: var(--form-item-gap-multiline);
     }
 
     .form-item__label {

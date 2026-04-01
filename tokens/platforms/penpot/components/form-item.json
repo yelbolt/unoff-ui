@@ -1,8 +1,14 @@
 {
   "formItem": {
     "gap": {
-      "$value": "{size.pos.xxsmall}",
-      "$type": "dimension"
+      "default": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "multiline": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
     },
     "minHeight": {
       "$value": "{size.pos.medium}",
