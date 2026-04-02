@@ -257,8 +257,8 @@ export default class Input extends React.Component<InputProps, InputState> {
     this.setState({
       inputValue: value,
       colorValue: value,
-      lastValidColorValue: value,
     })
+
     if (onPick) onPick(e)
   }
 
@@ -384,8 +384,8 @@ export default class Input extends React.Component<InputProps, InputState> {
       })
 
       if (
-        (transformedValue !== lastValidColorValue && onBlur !== undefined) ||
-        (shouldBlur && onBlur !== undefined)
+        transformedValue.toLowerCase() !== lastValidColorValue.toLowerCase() &&
+        onBlur !== undefined
       ) {
         const syntheticEvent = {
           ...e,
@@ -663,7 +663,7 @@ export default class Input extends React.Component<InputProps, InputState> {
   }
 
   Color = () => {
-    const { id, feature, helper, isBlocked, isDisabled, onBlur } = this.props
+    const { id, feature, helper, isBlocked, isDisabled } = this.props
     const { inputValue, colorValue, isTooltipVisible } = this.state
 
     return (
@@ -698,7 +698,9 @@ export default class Input extends React.Component<InputProps, InputState> {
             onChange={
               !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
             }
-            onBlur={!(isDisabled || isBlocked) ? onBlur : undefined}
+            onBlur={(e) => {
+              if (!(isDisabled || isBlocked)) this.onBlur(e)
+            }}
             ref={this.inputRef}
           />
           <input
@@ -717,14 +719,16 @@ export default class Input extends React.Component<InputProps, InputState> {
             }
             onFocus={(e) => {
               e.target.select()
-              if (helper !== undefined) this.setState({ isTooltipVisible: true })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: true })
               this.onFocus(e)
             }}
             onKeyDown={
               !(isDisabled || isBlocked) ? this.onValidColor : undefined
             }
             onBlur={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: false })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: false })
               if (!(isDisabled || isBlocked)) this.onBlur(e)
             }}
             ref={this.inputRef}
