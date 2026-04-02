@@ -2,11 +2,14 @@ import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
 import tokensStudioCompat, {
   cssTransform,
+  preprocessTokens,
 } from './plugins/tokens-studio-compat.js'
+
+const tokens = preprocessTokens(['./tokens/commons.resolver.json'])
 
 export default defineConfig({
   name: 'Commons Tokens',
-  tokens: ['./tokens/commons.resolver.json'],
+  tokens,
   outDir: './src/styles/tokens/',
   plugins: [
     tokensStudioCompat(),

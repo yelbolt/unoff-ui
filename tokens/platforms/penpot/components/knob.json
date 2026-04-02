@@ -265,7 +265,7 @@
       },
       "shadow": {
         "$value": "{elevation.300Tooltip}",
-        "$type": "shadow"
+        "$type": "boxShadow"
       },
       "border": {
         "color": {
