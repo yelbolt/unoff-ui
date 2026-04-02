@@ -249,7 +249,15 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
         : icon
 
     return (
-      <div className={layouts['snackbar--medium']}>
+      <div
+        className={layouts['snackbar--medium']}
+        onMouseEnter={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
+        }}
+      >
         <button
           role="button"
           className={doClassnames([
@@ -277,12 +285,6 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
           onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-          onMouseEnter={() => {
-            if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
-          }}
-          onMouseLeave={() => {
-            if (hasTooltipContent()) this.setState({ isTooltipVisible: false })
-          }}
           onFocus={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -391,7 +393,15 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
     const { isTooltipVisible } = this.state
 
     return (
-      <div className={layouts['snackbar--medium']}>
+      <div
+        className={layouts['snackbar--medium']}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
+      >
         <button
           role="button"
           data-feature={feature}
@@ -416,12 +426,6 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
           onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
-          onMouseEnter={() => {
-            if (helper !== undefined) this.setState({ isTooltipVisible: true })
-          }}
-          onMouseLeave={() => {
-            if (helper !== undefined) this.setState({ isTooltipVisible: false })
-          }}
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

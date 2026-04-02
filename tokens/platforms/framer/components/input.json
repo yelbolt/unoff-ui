@@ -577,28 +577,28 @@
         "default": {
           "$value": [
             {
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 0,
+              "x": "{size.null}",
+              "y": "{size.null}",
+              "blur": "{size.null}",
               "spread": "{size.pos.unit}",
               "color": "rgba(0, 0, 0, 0.1)",
-              "inset": true
+              "type": "innerShadow"
             }
           ],
-          "$type": "shadow"
+          "$type": "boxShadow"
         },
         "focus": {
           "$value": [
             {
-              "offsetX": 0,
-              "offsetY": 0,
-              "blur": 0,
+              "x": "{size.null}",
+              "y": "{size.null}",
+              "blur": "{size.null}",
               "spread": "{size.pos.unit}",
               "color": "{framer.color.tint.default}",
-              "inset": true
+              "type": "innerShadow"
             }
           ],
-          "$type": "shadow"
+          "$type": "boxShadow"
         }
       },
       "opacity": {

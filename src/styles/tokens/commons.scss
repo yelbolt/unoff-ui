@@ -27,17 +27,17 @@
   --border-radius-full: 100px;
   --border-radius-large: 6px;
   --border-radius-medium: 4px;
-  --border-radius-null: 0px;
+  --border-radius-null: 0;
   --border-radius-small: 2px;
   --border-radius-xlarge: 8px;
   --border-radius-xsmall: 1px;
   --border-radius-xxlarge: 12px;
   --border-radius-xxxlarge: 16px;
-  --elevation-100-shapes: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.3), 0px 1px 4px 0px color(srgb 0 0 0 / 0.15);
-  --elevation-200-canvas: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.2), 0px 4px 8px 0px color(srgb 0 0 0 / 0.1), 0px 1px 4px 0px color(srgb 0 0 0 / 0.1);
-  --elevation-300-tooltip: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.15), 0px 4px 12px 0px color(srgb 0 0 0 / 0.15), 0px 1px 4px 0px color(srgb 0 0 0 / 0.1);
-  --elevation-400-menu-panel: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.15), 0px 8px 16px 0px color(srgb 0 0 0 / 0.15), 0px 2px 4px 0px color(srgb 0 0 0 / 0.15);
-  --elevation-500-modal-window: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.8), 0px 8px 24px 0px color(srgb 0 0 0 / 0.2), 0px 2px 4px 0px color(srgb 0 0 0 / 0.15);
+  --elevation-100-shapes: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha300), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
+  --elevation-200-canvas: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha100), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
+  --elevation-300-tooltip: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xmsmall) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
+  --elevation-400-menu-panel: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
+  --elevation-500-modal-window: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha800), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-small) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
   --font-letter-spacing-neg-large: -0.08px;
   --font-letter-spacing-neg-medium: -0.025px;
   --font-letter-spacing-neg-small: -0.01px;
@@ -75,6 +75,8 @@
   --shadow-color-black-alpha50: rgb(0% 0% 0% / 0.05);
   --shadow-color-black-alpha100: rgb(0% 0% 0% / 0.1);
   --shadow-color-black-alpha150: rgb(0% 0% 0% / 0.15);
+  --shadow-floating-window: var(--size-null) var(--size-pos-xunit) 14px var(--size-null) var(--shadow-color-black-alpha150);
+  --shadow-hud: var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha150);
   --shadow-color-black-alpha200: rgb(0% 0% 0% / 0.2);
   --shadow-color-black-alpha250: rgb(0% 0% 0% / 0.25);
   --shadow-color-black-alpha300: rgb(0% 0% 0% / 0.3);
@@ -113,8 +115,6 @@
   --shadow-color-white-alpha900: rgb(100% 100% 100% / 0.9);
   --shadow-color-white-alpha950: rgb(100% 100% 100% / 0.95);
   --shadow-color-white-alpha1000: rgb(100% 100% 100%);
-  --shadow-floating-window: 0px 2px 14px 0px color(srgb 0 0 0 / 0.15);
-  --shadow-hud: 0px 4px 16px 0px color(srgb 0 0 0 / 0.2), 0px 2px 8px 0px color(srgb 0 0 0 / 0.15);
   --size-neg-huge: -96px;
   --size-neg-hunit: -0.5px;
   --size-neg-large: -40px;
@@ -131,7 +131,7 @@
   --size-neg-xxsmall: -8px;
   --size-neg-xxxlarge: -80px;
   --size-neg-xxxsmall: -4px;
-  --size-null: 0px;
+  --size-null: 0;
   --size-pos-huge: 96px;
   --size-pos-hunit: 0.5px;
   --size-pos-large: 40px;
@@ -151,21 +151,21 @@
 }
 
 [data-mode*="light"] {
-  --elevation-100-shapes: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.3), 0px 1px 4px 0px color(srgb 0 0 0 / 0.15);
-  --elevation-200-canvas: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.2), 0px 4px 8px 0px color(srgb 0 0 0 / 0.1), 0px 1px 4px 0px color(srgb 0 0 0 / 0.1);
-  --elevation-300-tooltip: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.15), 0px 4px 12px 0px color(srgb 0 0 0 / 0.15), 0px 1px 4px 0px color(srgb 0 0 0 / 0.1);
-  --elevation-400-menu-panel: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.15), 0px 8px 16px 0px color(srgb 0 0 0 / 0.15), 0px 2px 4px 0px color(srgb 0 0 0 / 0.15);
-  --elevation-500-modal-window: 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.8), 0px 8px 24px 0px color(srgb 0 0 0 / 0.2), 0px 2px 4px 0px color(srgb 0 0 0 / 0.15);
-  --shadow-floating-window: 0px 2px 14px 0px color(srgb 0 0 0 / 0.15);
-  --shadow-hud: 0px 4px 16px 0px color(srgb 0 0 0 / 0.2), 0px 2px 8px 0px color(srgb 0 0 0 / 0.15);
+  --elevation-100-shapes: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha300), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
+  --elevation-200-canvas: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha100), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
+  --elevation-300-tooltip: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xmsmall) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
+  --elevation-400-menu-panel: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
+  --elevation-500-modal-window: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha800), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-small) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
+  --shadow-floating-window: var(--size-null) var(--size-pos-xunit) 14px var(--size-null) var(--shadow-color-black-alpha150);
+  --shadow-hud: var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha150);
 }
 
 [data-mode*="dark"] {
-  --elevation-100-shapes: inset 0px 0.5px 0px 0px color(srgb 1 1 1 / 0.1), inset 0px 0px 0.5px 0px color(srgb 1 1 1 / 0.3), 0px 0px 0.5px 0px color(srgb 0 0 0 / 0.5), 0px 1px 4px 0px color(srgb 0 0 0 / 0.4);
-  --elevation-200-canvas: inset 0px 0.5px 0px 0px color(srgb 1 1 1 / 0.1), inset 0px 0px 0.5px 0px color(srgb 1 1 1 / 0.2), 0px 4px 8px 0px color(srgb 0 0 0 / 0.5), 0px 1px 4px 0px color(srgb 0 0 0 / 0.5);
-  --elevation-300-tooltip: inset 0px 0.5px 0px 0px color(srgb 1 1 1 / 0.1), inset 0px 0px 0.5px 0px color(srgb 1 1 1 / 0.3), 0px 4px 12px 0px color(srgb 0 0 0 / 0.35), 0px 1px 4px 0px color(srgb 0 0 0 / 0.5);
-  --elevation-400-menu-panel: inset 0px 0.5px 0px 0px color(srgb 1 1 1 / 0.1), inset 0px 0px 0.5px 0px color(srgb 1 1 1 / 0.35), 0px 8px 16px 0px color(srgb 0 0 0 / 0.35), 0px 2px 4px 0px color(srgb 0 0 0 / 0.35);
-  --elevation-500-modal-window: inset 0px 0.5px 0px 0px color(srgb 1 1 1 / 0.1), inset 0px 0px 0.5px 0px color(srgb 1 1 1 / 0.35), 0px 8px 24px 0px color(srgb 0 0 0 / 0.45), 0px 4px 4px 0px color(srgb 0 0 0 / 0.35);
-  --shadow-floating-window: 0px 2px 14px 0px color(srgb 0 0 0 / 0.15);
-  --shadow-hud: 0px 4px 16px 0px color(srgb 0 0 0 / 0.2), 0px 2px 8px 0px color(srgb 0 0 0 / 0.15);
+  --elevation-100-shapes: inset var(--size-null) var(--size-pos-hunit) var(--size-null) var(--size-null) var(--shadow-color-white-alpha100), inset var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-white-alpha300), var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha500), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha400);
+  --elevation-200-canvas: inset var(--size-null) var(--size-pos-hunit) var(--size-null) var(--size-null) var(--shadow-color-white-alpha100), inset var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-white-alpha200), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha500), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha500);
+  --elevation-300-tooltip: inset var(--size-null) var(--size-pos-hunit) var(--size-null) var(--size-null) var(--shadow-color-white-alpha100), inset var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-white-alpha300), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xmsmall) var(--size-null) var(--shadow-color-black-alpha350), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha500);
+  --elevation-400-menu-panel: inset var(--size-null) var(--size-pos-hunit) var(--size-null) var(--size-null) var(--shadow-color-white-alpha100), inset var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-white-alpha350), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha350), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha350);
+  --elevation-500-modal-window: inset var(--size-null) var(--size-pos-hunit) var(--size-null) var(--size-null) var(--shadow-color-white-alpha100), inset var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-white-alpha350), var(--size-null) var(--size-pos-xxsmall) var(--size-pos-small) var(--size-null) var(--shadow-color-black-alpha450), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha350);
+  --shadow-floating-window: var(--size-null) var(--size-pos-xunit) 14px var(--size-null) var(--shadow-color-black-alpha150);
+  --shadow-hud: var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha150);
 }

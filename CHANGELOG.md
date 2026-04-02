@@ -5,7 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.23.10] - 2026-04-01
+## [1.23.11] - 2026-04-02
+
+### Added
+
+- **`Button` tooltip on disabled**: Tooltip now appears on hover/focus even when the button is disabled — hover events are captured on the wrapper `<div>` rather than the `<button>` itself
+- **`Input` tooltip on focus**: Tooltip now shows on focus and hides on blur for all input types (Color, Number, Text, LongText)
+
+### Changed
+
+- **`FormItem` styles**: Improved to support adaptive layouts — added secondary label styling and adjusted input margins
+- **`Button`, `Dropdown`, `Input` tooltip logic**: Refactored tooltip visibility to activate on the parent container hover rather than the interactive element, ensuring reliable and accessible tooltip behavior
+- **`SegmentedControl`**: Disabled and blocked items no longer trigger actions on `mousedown`
+- **`Input` color picker**: Fixed `onPick` and `onBlur` to not fire when no color change occurred; comparison is now case-insensitive to handle picker output casing (`#9647ff` vs `#9647FF`)
+- **`Input` SCSS**: Hover and focus styles no longer apply to disabled fields (`pointer-events` guarded via `:not(:disabled)`); removed `.input--blocked` rule in favor of pointer-event handling at the component level
+- **`Input` styles (figma, framer, penpot, sketch)**: Standardized color chip border variables to use CSS custom properties for cross-platform consistency
+
+## [1.23.10] - 2026-04-02
 
 ### Changed
 

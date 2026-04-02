@@ -1,4 +1,4 @@
-import { resolve, join, basename } from 'node:path'
+import { resolve, join, basename, dirname } from 'node:path'
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 
 /**
@@ -108,6 +108,31 @@ const parseDimensionValue = (str) => {
 }
 
 /**
+ * Normalize a Tokens Studio shadow layer to DTCG format:
+ *   x → offsetX, y → offsetY, type: "innerShadow" → inset: true
+ *   "14px" strings in spatial properties → { value: 14, unit: "px" }
+ */
+const normalizeShadowLayer = (layer) => {
+  if (!layer || typeof layer !== 'object') return layer
+  const out = { ...layer }
+  if ('x' in out && !('offsetX' in out)) {
+    out.offsetX = parseDimensionValue(out.x)
+    delete out.x
+  }
+  if ('y' in out && !('offsetY' in out)) {
+    out.offsetY = parseDimensionValue(out.y)
+    delete out.y
+  }
+  if (out.type === 'innerShadow') {
+    out.inset = true
+    delete out.type
+  }
+  for (const key of ['offsetX', 'offsetY', 'blur', 'spread'])
+    if (key in out) out[key] = parseDimensionValue(out[key])
+  return out
+}
+
+/**
  * Deep-walk a parsed token JSON object, remapping legacy $type values and
  * converting dimension string $values to DTCG {value, unit} objects so that
  * Terrazzo generates var() references instead of inlining raw strings.
@@ -130,6 +155,13 @@ const remapTypes = (obj, inheritedType = null) => {
       if (k === '$type') continue // already handled above
       if (k === '$value' && effectiveType === 'dimension')
         out.$value = parseDimensionValue(v)
+      else if (
+        k === '$value' &&
+        (effectiveType === 'shadow' || effectiveType === 'boxShadow')
+      )
+        out.$value = Array.isArray(v)
+          ? v.map(normalizeShadowLayer)
+          : normalizeShadowLayer(v)
       else if (!k.startsWith('$')) out[k] = remapTypes(v, effectiveType)
       else out[k] = v
     }
@@ -139,15 +171,49 @@ const remapTypes = (obj, inheritedType = null) => {
 }
 
 /**
+ * Preprocess a single token JSON file: transform legacy types and write to tmp.
+ * Returns the absolute path to the tmp file.
+ */
+const preprocessTokenFile = (absPath, tmpDir) => {
+  const raw = JSON.parse(readFileSync(absPath, 'utf-8'))
+  const transformed = remapTypes(raw)
+  const safeKey = absPath.replace(/[^a-zA-Z0-9]/g, '_')
+  const tmp = join(tmpDir, `${safeKey}__${basename(absPath)}`)
+  writeFileSync(tmp, JSON.stringify(transformed, null, 2))
+  return tmp
+}
+
+/**
+ * Deep-walk a resolver JSON object, rewriting all $ref string values that
+ * point to JSON token files by preprocessing them and updating the path.
+ * Paths are written as relative from tmpDir (so the resolver can live there too).
+ */
+const preprocessResolverRefs = (obj, resolverDir, tmpDir) => {
+  if (Array.isArray(obj))
+    return obj.map((v) => preprocessResolverRefs(v, resolverDir, tmpDir))
+  if (obj && typeof obj === 'object') {
+    const out = {}
+    for (const [k, v] of Object.entries(obj))
+      if (k === '$ref' && typeof v === 'string' && v.endsWith('.json')) {
+        const abs = resolve(resolverDir, v)
+        const tmp = preprocessTokenFile(abs, tmpDir)
+        out[k] = `./${basename(tmp)}`
+      } else out[k] = preprocessResolverRefs(v, resolverDir, tmpDir)
+    return out
+  }
+  return obj
+}
+
+/**
  * Preprocess token JSON files before Terrazzo parses them.
  *
- * Resolves each path relative to process.cwd() (same convention as the
- * `tokens` array in defineConfig), transforms $type values in-memory, and
- * writes results to <cwd>/.terrazzo-tmp/. Returns absolute paths to use as
- * the `tokens` array in defineConfig.
+ * Handles both plain token files and Terrazzo resolver files (detected by the
+ * presence of a `sets` or `modifiers` key). For resolvers, all `$ref` paths
+ * pointing to token JSON files are rewritten to preprocessed tmp copies so
+ * that Terrazzo never sees legacy Tokens Studio $type values.
  *
  * @param {string[]} tokenPaths - Same relative paths you'd pass to defineConfig.
- * @returns {string[]} Absolute paths to the preprocessed temp files.
+ * @returns {string[]} Absolute paths to the preprocessed files.
  */
 export const preprocessTokens = (tokenPaths) => {
   // eslint-disable-next-line no-undef
@@ -158,49 +224,19 @@ export const preprocessTokens = (tokenPaths) => {
   return tokenPaths.map((p) => {
     const abs = resolve(cwd, p)
     const raw = JSON.parse(readFileSync(abs, 'utf-8'))
-    const transformed = remapTypes(raw)
-    const safeKey = p.replace(/[^a-zA-Z0-9]/g, '_')
-    const tmp = join(tmpDir, `${safeKey}__${basename(abs)}`)
-    writeFileSync(tmp, JSON.stringify(transformed, null, 2))
-    return tmp
+
+    if (raw.sets || raw.modifiers) {
+      // Resolver file — rewrite all $ref token sources
+      const transformed = preprocessResolverRefs(raw, dirname(abs), tmpDir)
+      const safeKey = p.replace(/[^a-zA-Z0-9]/g, '_')
+      const tmp = join(tmpDir, `${safeKey}__${basename(abs)}`)
+      writeFileSync(tmp, JSON.stringify(transformed, null, 2))
+      return tmp
+    }
+
+    // Plain token file
+    return preprocessTokenFile(abs, tmpDir)
   })
-}
-
-const dimToCSS = (raw, tokensSet) => {
-  if (typeof raw === 'number') return `${raw}px`
-  if (raw && typeof raw === 'object' && 'value' in raw)
-    return `${raw.value}${raw.unit ?? ''}`
-  if (typeof raw === 'string') {
-    if (raw.startsWith('{')) {
-      const refId = raw.slice(1, -1)
-      const ref = tokensSet[refId]
-      if (ref) return dimToCSS(ref.$value, tokensSet)
-      return '0'
-    }
-    return raw
-  }
-  return '0'
-}
-
-const colorToCSS = (raw, tokensSet) => {
-  if (raw === undefined || raw === null) return 'transparent'
-  if (typeof raw === 'string' && raw.startsWith('{')) {
-    const refId = raw.slice(1, -1)
-    const ref = tokensSet[refId]
-    if (ref) return colorToCSS(ref.$value, tokensSet)
-    return 'transparent'
-  }
-  if (typeof raw === 'string') return raw
-  if (raw && typeof raw === 'object') {
-    const ch = raw.channels ?? raw.components
-    if (ch) {
-      const [r, g, b] = ch
-      const a = raw.alpha ?? 1
-      return `color(${raw.colorSpace || 'srgb'} ${r} ${g} ${b} / ${a})`
-    }
-    if (raw.hex) return raw.hex
-  }
-  return 'transparent'
 }
 
 export const cssTransform = (token, { tokensSet, transformAlias }) => {
@@ -212,27 +248,12 @@ export const cssTransform = (token, { tokensSet, transformAlias }) => {
     if (v && typeof v === 'object' && 'value' in v)
       return v.value === 0 ? '0' : `${v.value}${v.unit ?? ''}`
   }
-  if (token.$type === 'shadow' || token.$type === 'boxShadow') {
-    if (token.aliasOf) {
-      const aliasToken = tokensSet[token.aliasOf]
-      if (aliasToken && transformAlias) return transformAlias(aliasToken)
-    }
-
-    const layers = Array.isArray(token.$value) ? token.$value : [token.$value]
-    return layers
-      .map((layer) => {
-        const parts = [
-          dimToCSS(layer.offsetX ?? layer.x ?? 0, tokensSet),
-          dimToCSS(layer.offsetY ?? layer.y ?? 0, tokensSet),
-          dimToCSS(layer.blur ?? 0, tokensSet),
-          dimToCSS(layer.spread ?? 0, tokensSet),
-          colorToCSS(layer.color, tokensSet),
-        ]
-        if (layer.inset === true || layer.type === 'innerShadow')
-          parts.unshift('inset')
-        return parts.join(' ')
-      })
-      .join(', ')
+  if (
+    (token.$type === 'shadow' || token.$type === 'boxShadow') &&
+    token.aliasOf
+  ) {
+    const aliasToken = tokensSet[token.aliasOf]
+    if (aliasToken && transformAlias) return transformAlias(aliasToken)
   }
 }
 
@@ -268,9 +289,8 @@ export const wrapFallbacks = (prepare) => (css) => {
  */
 export const wrapPassthrough = (selector) => (css) => {
   const lines = []
-  for (const [, base] of css.matchAll(/(--[\w][\w-]*)-default: [^;]+;/g)) {
+  for (const [, base] of css.matchAll(/(--[\w][\w-]*)-default: [^;]+;/g))
     lines.push(`  ${base}-default: var(${base});`)
-  }
   return `${selector} {\n${lines.join('\n')}\n}\n`
 }
 

@@ -38,10 +38,6 @@
   cursor: default;
   user-select: none;
 
-  &.input--blocked {
-    pointer-events: none;
-  }
-
   &--with-icon & {
     &__field {
       padding-left: var(--input-padding-with-icon-left);
@@ -217,7 +213,7 @@
       );
     }
 
-    &:placeholder-shown:hover {
+    &:placeholder-shown:hover:not(:disabled) {
       --input-background-color: var(--input-background-color-empty-hover);
       --input-border-width: var(--input-border-width-empty-hover);
       --input-border-offset: var(--input-border-offset-empty-hover);
@@ -252,7 +248,7 @@
       );
     }
 
-    &--error:placeholder-shown:hover {
+    &--error:placeholder-shown:hover:not(:disabled) {
       --input-background-color: var(--input-background-color-empty-error-hover);
       --input-border-width: var(--input-border-width-empty-error-hover);
       --input-border-offset: var(--input-border-offset-empty-error-hover);
@@ -274,7 +270,7 @@
       );
     }
 
-    &:hover {
+    &:hover:not(:disabled) {
       --input-background-color: var(--input-background-color-hover);
       --input-border-width: var(--input-border-width-hover);
       --input-border-offset: var(--input-border-offset-hover);
@@ -303,7 +299,7 @@
       );
     }
 
-    &--error:hover {
+    &--error:hover:not(:disabled) {
       --input-background-color: var(--input-background-color-error-hover);
       --input-border-width: var(--input-border-width-error-hover);
       --input-border-offset: var(--input-border-offset-error-hover);
@@ -356,7 +352,7 @@
   }
 
   &__color {
-    &:hover ~ .input__field {
+    &:hover:not(:disabled) ~ .input__field {
       --input-background-color: var(--input-background-color-hover);
       --input-border-width: var(--input-border-width-hover);
       --input-border-offset: var(--input-border-offset-hover);

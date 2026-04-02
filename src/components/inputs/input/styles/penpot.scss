@@ -66,8 +66,8 @@
   --input-clearable-right: 6px;
   --input-clearable-top: 6px;
   --input-color-width: 108px;
-  --input-color-chip-border-default: inset 0px 0px 0px 1px color(srgb 0 0 0 / 0.1);
-  --input-color-chip-border-focus: inset 0px 0px 0px 2px color(srgb 0.49411764705882355 1 0.9607843137254902 / 1);
+  --input-color-chip-border-default: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-unit) rgb(0% 0% 0% / 0.1);
+  --input-color-chip-border-focus: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-xunit) var(--penpot-color-accent-primary-default);
   --input-color-chip-height: var(--size-pos-xsmall);
   --input-color-chip-left: var(--size-pos-xxsmall);
   --input-color-chip-opacity-default: var(--alpha-1000);

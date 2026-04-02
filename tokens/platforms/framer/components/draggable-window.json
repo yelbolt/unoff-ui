@@ -10,7 +10,7 @@
     },
     "shadow": {
       "$value": "{elevation.500ModalWindow}",
-      "$type": "shadow"
+      "$type": "boxShadow"
     },
     "background": {
       "color": {

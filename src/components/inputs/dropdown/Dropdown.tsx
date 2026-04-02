@@ -454,6 +454,12 @@ export default class Dropdown extends React.Component<
               : 'select-menu--left',
           (isDisabled || isBlocked) && 'select-menu--disabled',
         ])}
+        onMouseEnter={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: true })
+        }}
+        onMouseLeave={() => {
+          if (helper !== undefined) this.setState({ isTooltipVisible: false })
+        }}
         ref={this.selectMenuRef}
       >
         <button
@@ -485,12 +491,6 @@ export default class Dropdown extends React.Component<
             return null
           }}
           onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
-          onMouseEnter={() => {
-            if (helper !== undefined) this.setState({ isTooltipVisible: true })
-          }}
-          onMouseLeave={() => {
-            if (helper !== undefined) this.setState({ isTooltipVisible: false })
-          }}
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

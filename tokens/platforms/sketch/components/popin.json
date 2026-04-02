@@ -7,11 +7,11 @@
     "shadow": {
       "default": {
         "$value": "{elevation.500ModalWindow}",
-        "$type": "shadow"
+        "$type": "boxShadow"
       },
       "panel": {
         "$value": "{elevation.500ModalWindow}",
-        "$type": "shadow"
+        "$type": "boxShadow"
       }
     },
     "radius": {

@@ -48,7 +48,7 @@
     },
     "shadow": {
       "$value": "{elevation.400MenuPanel}",
-      "$type": "shadow"
+      "$type": "boxShadow"
     },
     "item": {
       "height": {

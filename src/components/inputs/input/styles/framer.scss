@@ -66,8 +66,8 @@
   --input-clearable-right: var(--size-pos-xxxsmall);
   --input-clearable-top: var(--size-pos-xxxsmall);
   --input-color-width: 112px;
-  --input-color-chip-border-default: inset 0px 0px 0px 1px color(srgb 0 0 0 / 0.1);
-  --input-color-chip-border-focus: inset 0px 0px 0px 1px color(srgb 0 0.6 1 / 1);
+  --input-color-chip-border-default: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-unit) rgb(0% 0% 0% / 0.1);
+  --input-color-chip-border-focus: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-unit) var(--framer-color-tint-default);
   --input-color-chip-height: var(--size-pos-small);
   --input-color-chip-left: var(--size-pos-xxxsmall);
   --input-color-chip-opacity-default: var(--alpha-1000);
