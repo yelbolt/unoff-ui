@@ -136,6 +136,7 @@ const Tooltip = (props: TooltipProps) => {
             left: fixedPos.left,
             '--_arrow-left': `${fixedPos.arrowLeft}px`,
           }),
+          zIndex: 97,
         } as React.CSSProperties
       }
       aria-hidden={!isVisible}
