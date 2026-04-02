@@ -153,7 +153,7 @@ export default class SegmentedControl extends React.Component<
               data-feature={item.id}
               tabIndex={active === item.id ? -1 : 0}
               aria-disabled={item.isDisabled || isBlocked}
-              onMouseDown={action}
+              onMouseDown={item.isDisabled || isBlocked ? undefined : action}
               onMouseEnter={() => this.setState({ activeTooltipId: item.id })}
               onMouseLeave={() => this.setState({ activeTooltipId: null })}
               onFocus={() => this.setState({ activeTooltipId: item.id })}

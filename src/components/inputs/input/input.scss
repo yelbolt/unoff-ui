@@ -38,10 +38,6 @@
   cursor: default;
   user-select: none;
 
-  &.input--blocked {
-    pointer-events: none;
-  }
-
   &--with-icon & {
     &__field {
       padding-left: var(--input-padding-with-icon-left);
