@@ -12,7 +12,7 @@
   box-sizing: border-box;
   background-color: var(--bar-background-color);
   padding: var(--bar-padding);
-  min-height: var(--bar-min-height);
+  flex: 1 0 var(--bar-min-height);
 
   & {
     --bar-padding: var(--bar-padding-default-top)
