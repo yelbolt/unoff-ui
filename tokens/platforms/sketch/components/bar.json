@@ -1,7 +1,7 @@
 {
   "bar": {
     "minHeight": {
-      "$value": "{size.pos.large}",
+      "$value": "{size.pos.xlarge}",
       "$type": "dimension"
     },
     "gap": {
