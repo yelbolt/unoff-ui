@@ -7,7 +7,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(0);
-  z-index: 3;
+  z-index: 98;
   width: auto;
   min-width: var(--tooltip-min-width);
   max-width: var(--tooltip-max-width);
@@ -109,7 +109,7 @@
     bottom: unset;
     left: 0;
     transform: none;
-    z-index: 9999;
+    z-index: 98;
   }
 
   &--withimage {

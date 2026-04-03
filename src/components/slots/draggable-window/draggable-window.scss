@@ -5,7 +5,7 @@
 
 .draggable-window {
   position: fixed;
-  z-index: 9999;
+  z-index: 97;
   outline: var(--draggable-window-border-width) solid
     var(--draggable-window-border-color);
   outline-offset: var(--draggable-window-border-offset);
