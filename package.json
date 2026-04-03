@@ -1,6 +1,6 @@
 {
   "name": "@unoff/ui",
-  "version": "1.23.14",
+  "version": "1.23.15",
   "type": "module",
   "description": "Unoff UI is a comprehensive library of UI components designed specifically for building Figma and Penpot plugins. It leverages modern tools and frameworks to ensure a seamless development experience.",
   "repository": {
