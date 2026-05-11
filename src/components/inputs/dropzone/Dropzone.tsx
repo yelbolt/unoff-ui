@@ -264,9 +264,7 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -293,9 +291,7 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -315,9 +311,7 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -331,10 +325,10 @@ export default class Dropzone extends React.Component<
         className={doClassnames([
           'dropzone',
           isDraggedOver && 'dropzone--dragged-over',
-          (isBlocked || isDisabled) && 'dropzone--disabled',
+          isDisabled && 'dropzone--disabled',
         ])}
         role="region"
-        aria-disabled={isDisabled || isBlocked}
+        aria-disabled={isDisabled}
         onDragOver={this.onDragOver}
         onDragEnter={this.onDragEnter}
         onDragLeave={this.onDragLeave}

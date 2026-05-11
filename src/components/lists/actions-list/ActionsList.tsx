@@ -433,13 +433,12 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
-          option.isBlocked && 'select-menu__item--blocked',
         ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
@@ -449,7 +448,7 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
+          if (e.key === ' ' || e.key === 'Enter') {
             option.action && option.action(e)
             onCancellation?.()
           }
@@ -458,7 +457,7 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          !option.isBlocked ? option.action?.(e) : undefined
+          option.action?.(e)
           onCancellation?.()
         }}
         onFocus={() => null}
@@ -505,19 +504,18 @@ export default class ActionsList extends React.Component<
         key={`menu-group-${index}`}
         className={doClassnames([
           'select-menu__item',
-          option.isBlocked && ' select-menu__item--blocked',
         ])}
         style={{
           zIndex: openedGroup === option.value ? 2 : 'auto',
         }}
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-disabled={option.isBlocked}
         aria-haspopup="true"
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
+          if (e.key === ' ' || e.key === 'Enter')
             return this.setState({ openedGroup: option.value ?? 'EMPTY' }, () =>
               this.focusFirstSubMenuItem()
             )
@@ -559,13 +557,12 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
-          option.isBlocked && 'select-menu__item--blocked',
         ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
@@ -575,7 +572,7 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
+          if (e.key === ' ' || e.key === 'Enter') {
             option.action && option.action(e)
             onCancellation?.()
           }
@@ -587,7 +584,7 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          if (!option.isBlocked) option.action?.(e)
+          option.action?.(e)
           onCancellation?.()
         }}
       >

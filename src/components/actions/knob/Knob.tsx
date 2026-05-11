@@ -191,7 +191,7 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
         className={doClassnames([
           'knob',
           isStopInputOpen && 'knob--editing',
-          (isBlocked || isDisabled) && 'knob--disabled',
+          isDisabled && 'knob--disabled',
         ])}
         ref={this.knobRef}
         style={{
@@ -208,41 +208,33 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
         aria-valuenow={typeof value === 'number' ? value : parseFloat(value)}
         aria-valuetext={this.transformStopValue(value).toString()}
         aria-disabled={isDisabled || isBlocked}
-        aria-readonly={isBlocked}
         tabIndex={!(isBlocked || isDisabled) ? 0 : -1}
         onKeyDown={(e) =>
-          !(isBlocked || isDisabled)
+          !isDisabled
             ? this.keyboardHandler(
                 e.key,
                 e as React.KeyboardEvent<HTMLInputElement>
               )
             : undefined
         }
-        onMouseDown={!(isBlocked || isDisabled) ? onMouseDown : undefined}
+        onMouseDown={!isDisabled ? onMouseDown : undefined}
         onMouseEnter={() =>
-          !(isBlocked || isDisabled || isStopInputOpen)
+          !(isDisabled || isStopInputOpen)
             ? this.setState({ isTooltipOpen: true })
             : undefined
         }
         onMouseLeave={(e) => {
           const isFocused = document.activeElement === e.target
-          if (isFocused && !(isBlocked || isDisabled))
-            this.setState({ isTooltipOpen: true })
+          if (isFocused && !isDisabled) this.setState({ isTooltipOpen: true })
           else this.setState({ isTooltipOpen: false })
         }}
         onFocus={() =>
-          !(isBlocked || isDisabled)
-            ? this.setState({ isTooltipOpen: true })
-            : undefined
+          !isDisabled ? this.setState({ isTooltipOpen: true }) : undefined
         }
         onBlur={() =>
-          !(isBlocked || isDisabled)
-            ? this.setState({ isTooltipOpen: false })
-            : undefined
+          !isDisabled ? this.setState({ isTooltipOpen: false }) : undefined
         }
-        onClick={(e) =>
-          !(isBlocked || isDisabled) ? this.clickHandler(e) : undefined
-        }
+        onClick={(e) => (!isBlocked && !isDisabled ? this.clickHandler(e) : undefined)}
       >
         {(isDisplayed || isTooltipOpen) && (
           <div

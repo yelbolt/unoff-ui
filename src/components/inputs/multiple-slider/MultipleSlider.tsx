@@ -104,10 +104,6 @@ interface SliderProps {
     },
     feature?: string
   ) => void
-  /**
-   * Handler called when unblock is clicked
-   */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface SliderState {
@@ -514,10 +510,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
             />
           )}
           {(isBlocked || isNew) && (
-            <Chip
-              isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
-            >
+            <Chip isSolo>
               {isNew ? 'New' : 'Pro'}
             </Chip>
           )}
@@ -533,7 +526,6 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
       <div
         className={doClassnames([
           'multiple-slider__range',
-          isBlocked && 'multiple-slider__range--blocked',
         ])}
         style={{
           background:
@@ -542,6 +534,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               : undefined,
         }}
         role="presentation"
+        onMouseDown={undefined}
       >
         <this.Progress />
         {Object.entries(scale)
@@ -566,11 +559,11 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+
               style={{
                 pointerEvents:
-                  (this.state.activeKnobId &&
-                    this.state.activeKnobId !== item[0]) ||
-                  isBlocked
+                  this.state.activeKnobId &&
+                  this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}
@@ -601,11 +594,9 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
         className={doClassnames([
           'multiple-slider__range',
           stops.list.length < (stops.max ?? Infinity) &&
-            !isBlocked &&
             'multiple-slider__range--add',
           stops.list.length === (stops.max ?? Infinity) &&
             'multiple-slider__range--not-allowed',
-          isBlocked && 'multiple-slider__range--blocked',
         ])}
         style={{
           background:
@@ -613,9 +604,9 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
               : undefined,
         }}
-        onMouseDown={(e) =>
-          stops.list.length < (stops.max ?? Infinity) && this.onAdd(e)
-        }
+        onMouseDown={(e) => {
+          if (stops.list.length < (stops.max ?? Infinity)) this.onAdd(e)
+        }}
       >
         <this.Progress />
         {Object.entries(scale)
@@ -640,11 +631,11 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+
               style={{
                 pointerEvents:
-                  (this.state.activeKnobId &&
-                    this.state.activeKnobId !== item[0]) ||
-                  isBlocked
+                  this.state.activeKnobId &&
+                  this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}

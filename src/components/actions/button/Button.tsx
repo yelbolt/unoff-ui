@@ -135,10 +135,6 @@ export interface ButtonProps {
    * Click handler for the button
    */
   action?: React.MouseEventHandler & React.KeyboardEventHandler
-  /**
-   * Handler called when unblock is clicked
-   */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface ButtonState {
@@ -193,7 +189,7 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
 
   // Templates
   Status = () => {
-    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
+    const { warning, preview, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -211,7 +207,6 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
@@ -230,7 +225,6 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
       hasMultipleActions,
       isLoading,
       isDisabled,
-      isBlocked,
       action,
       label,
       shouldReflow,
@@ -265,26 +259,22 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
             `button--${type}`,
             `button--${size}`,
             isLoading && 'button--loading',
-            isBlocked && 'button--blocked',
           ])}
           data-feature={feature}
-          disabled={isDisabled || isBlocked}
+          disabled={isDisabled}
           aria-label={
             typeof (getButtonLabel() || helper?.label) === 'string'
               ? ((getButtonLabel() || helper?.label) as string)
               : undefined
           }
-          aria-disabled={isDisabled || isBlocked}
+          aria-disabled={isDisabled}
           aria-busy={isLoading}
           onKeyDown={(e) => {
-            if (
-              (e.key === ' ' || e.key === 'Enter') &&
-              (!isDisabled || !isBlocked)
-            )
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
               action?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
-          onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
+          onMouseDown={!isDisabled ? action : undefined}
           onFocus={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -412,20 +402,17 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
             isNew && 'icon-button--new',
             isLoading && 'button--loading',
           ])}
-          disabled={isDisabled || isBlocked}
+          disabled={isDisabled}
           aria-label={typeof helper?.label === 'string' ? helper.label : icon}
-          aria-disabled={isDisabled || isBlocked}
+          aria-disabled={isDisabled}
           aria-pressed={state === 'selected'}
           aria-busy={isLoading}
           onKeyDown={(e) => {
-            if (
-              (e.key === ' ' || e.key === 'Enter') &&
-              !(isDisabled || isBlocked)
-            )
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
               action?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
-          onMouseDown={!(isDisabled || isBlocked) ? action : undefined}
+          onMouseDown={!isDisabled ? action : undefined}
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

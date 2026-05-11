@@ -84,10 +84,6 @@ export interface SimpleSliderProps {
    * Change handler
    */
   onChange: (feature: string, state: string, value: number) => void
-  /**
-   * Handler called when unblock is clicked
-   */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface SimpleSliderState {
@@ -252,7 +248,7 @@ export default class SimpleSlider extends React.Component<
   }
 
   Status = () => {
-    const { warning, isBlocked, isNew, onUnblock } = this.props
+    const { warning, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -267,10 +263,7 @@ export default class SimpleSlider extends React.Component<
             />
           )}
           {(isBlocked || isNew) && (
-            <Chip
-              isSolo
-              action={isBlocked ? onUnblock : undefined}
-            >
+            <Chip isSolo>
               {isNew ? 'New' : 'Pro'}
             </Chip>
           )}
@@ -313,6 +306,7 @@ export default class SimpleSlider extends React.Component<
                 ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
                 : undefined,
           }}
+          onMouseDown={undefined}
         >
           <this.Progress />
           <Knob

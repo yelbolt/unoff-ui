@@ -68,10 +68,6 @@ export interface SegmentedControlProps {
    * Click handler
    */
   action: React.MouseEventHandler & React.KeyboardEventHandler
-  /**
-   * Handler called when unblock is clicked
-   */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface SegmentedControlState {
@@ -98,7 +94,7 @@ export default class SegmentedControl extends React.Component<
 
   // Templates
   Status = () => {
-    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
+    const { warning, preview, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -116,7 +112,6 @@ export default class SegmentedControl extends React.Component<
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
@@ -127,16 +122,13 @@ export default class SegmentedControl extends React.Component<
 
   // Render
   render() {
-    const { items, active, isBlocked, action } = this.props
+    const { items, active, action } = this.props
     const { activeTooltipId } = this.state
 
     return (
       <div className={layouts['snackbar--medium']}>
         <div
-          className={doClassnames([
-            'segmented-control',
-            isBlocked && 'segmented-control--blocked',
-          ])}
+          className={doClassnames(['segmented-control'])}
           role="tablist"
         >
           {items.map((item) => (
@@ -147,19 +139,19 @@ export default class SegmentedControl extends React.Component<
               className={doClassnames([
                 'segmented-control__item',
                 active === item.id && 'segmented-control__item--active',
-                (item.isDisabled || isBlocked) &&
-                  'segmented-control__item--disabled',
+                item.isDisabled && 'segmented-control__item--disabled',
               ])}
               data-feature={item.id}
               tabIndex={active === item.id ? -1 : 0}
-              aria-disabled={item.isDisabled || isBlocked}
-              onMouseDown={item.isDisabled || isBlocked ? undefined : action}
+              aria-disabled={item.isDisabled}
+              onMouseDown={item.isDisabled ? undefined : action}
               onMouseEnter={() => this.setState({ activeTooltipId: item.id })}
               onMouseLeave={() => this.setState({ activeTooltipId: null })}
               onFocus={() => this.setState({ activeTooltipId: item.id })}
               onBlur={() => this.setState({ activeTooltipId: null })}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') action(e)
+                if ((e.key === 'Enter' || e.key === ' ') && !item.isDisabled)
+                  action(e)
                 if (e.key === 'Escape') (e.target as HTMLElement).blur()
               }}
             >

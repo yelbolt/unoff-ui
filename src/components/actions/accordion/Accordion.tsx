@@ -98,14 +98,10 @@ const Accordion = (props: AccordionProps) => {
       className={doClassnames([
         'accordion',
         isExpanded && 'accordion--expanded',
-        isBlocked && 'accordion--blocked',
       ])}
       onMouseDown={(e) => {
-        if (
-          (e.target as HTMLElement).dataset.feature === undefined &&
-          !isExpanded &&
-          !isBlocked
-        )
+        if ((e.target as HTMLElement).dataset.feature !== undefined) return
+        if (!isExpanded)
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
@@ -150,12 +146,11 @@ const Accordion = (props: AccordionProps) => {
                     }
                   : undefined
               }
-              isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={(e) => handleAdd(e)}
             />
           )}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+          {isNew && <Chip>{'New'}</Chip>}
         </div>
       </div>
       {isExpanded && (
