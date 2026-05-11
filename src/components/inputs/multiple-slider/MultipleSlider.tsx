@@ -513,11 +513,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && (
-            <Chip isSolo>
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       )
   }
@@ -528,9 +524,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
 
     return (
       <div
-        className={doClassnames([
-          'multiple-slider__range',
-        ])}
+        className={doClassnames(['multiple-slider__range'])}
         style={{
           background:
             colors !== undefined
@@ -566,8 +560,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               onBlock={onBlock}
               style={{
                 pointerEvents:
-                  this.state.activeKnobId &&
-                  this.state.activeKnobId !== item[0]
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}
@@ -638,8 +631,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               onBlock={onBlock}
               style={{
                 pointerEvents:
-                  this.state.activeKnobId &&
-                  this.state.activeKnobId !== item[0]
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}

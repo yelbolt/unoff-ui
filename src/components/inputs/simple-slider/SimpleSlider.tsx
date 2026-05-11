@@ -266,11 +266,7 @@ export default class SimpleSlider extends React.Component<
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && (
-            <Chip isSolo>
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       )
   }

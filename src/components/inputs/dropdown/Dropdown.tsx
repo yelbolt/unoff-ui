@@ -105,20 +105,20 @@ export interface DropdownProps {
   /**
    * Whether the option list can be filtered by a search input
    * @default false
-  */
- canBeSearched?: boolean
- /**
-  * Placeholder label for the search input
- */
-searchLabel?: string
-/**
- * Label shown when no options match the search query
-*/
-noResultsLabel?: string
-/**
- * Handler called instead of opening the dropdown when isBlocked is true
- */
-onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
+   */
+  canBeSearched?: boolean
+  /**
+   * Placeholder label for the search input
+   */
+  searchLabel?: string
+  /**
+   * Label shown when no options match the search query
+   */
+  noResultsLabel?: string
+  /**
+   * Handler called instead of opening the dropdown when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface DropdownState {
@@ -477,21 +477,22 @@ export default class Dropdown extends React.Component<
           aria-label={`Select option: ${this.findSelectedOption(options)}`}
           aria-haspopup="menu"
           onKeyDown={(e) => {
-            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled) {
-              if (isBlocked) {
-                onBlock?.(e)
-              } else {
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
+              if (isBlocked) onBlock?.(e)
+              else {
                 this.onOpenMenu()
                 setTimeout(
                   () => this.actionsListRef.current?.focusFirstMenuItem(),
                   0
                 )
               }
-            }
+
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()
             return null
           }}
-          onMouseDown={!isDisabled ? (isBlocked ? onBlock : this.onOpenMenu) : undefined}
+          onMouseDown={
+            !isDisabled ? (isBlocked ? onBlock : this.onOpenMenu) : undefined
+          }
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

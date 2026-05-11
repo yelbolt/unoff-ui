@@ -6,13 +6,13 @@
 .bar {
   display: flex;
   position: relative;
+  flex: 0 0 var(--bar-min-height);
   justify-content: space-between;
   align-items: center;
   gap: var(--bar-gap);
   box-sizing: border-box;
   background-color: var(--bar-background-color);
   padding: var(--bar-padding);
-  flex: 0 0 var(--bar-min-height);
 
   & {
     --bar-padding: var(--bar-padding-default-top)

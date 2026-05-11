@@ -158,7 +158,6 @@ const Accordion = (props: AccordionProps) => {
                   : undefined
               }
               isBlocked={isBlocked}
-
               action={(e) => handleAdd(e)}
             />
           )}
