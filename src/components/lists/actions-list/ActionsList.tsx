@@ -449,7 +449,8 @@ export default class ActionsList extends React.Component<
         onKeyDown={(e) => {
           e.stopPropagation()
           if (e.key === ' ' || e.key === 'Enter') {
-            option.action && option.action(e)
+            const handler = option.isBlocked ? option.onBlock : option.action
+            handler && handler(e)
             onCancellation?.()
           }
           if (e.key === 'Escape') onCancellation?.()
@@ -457,7 +458,8 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          option.action?.(e)
+          const handler = option.isBlocked ? option.onBlock : option.action
+          handler?.(e)
           onCancellation?.()
         }}
         onFocus={() => null}
@@ -502,9 +504,7 @@ export default class ActionsList extends React.Component<
     return (
       <li
         key={`menu-group-${index}`}
-        className={doClassnames([
-          'select-menu__item',
-        ])}
+        className={doClassnames(['select-menu__item'])}
         style={{
           zIndex: openedGroup === option.value ? 2 : 'auto',
         }}
@@ -515,14 +515,20 @@ export default class ActionsList extends React.Component<
         aria-haspopup="true"
         onKeyDown={(e) => {
           e.stopPropagation()
-          if (e.key === ' ' || e.key === 'Enter')
+          if (e.key === ' ' || e.key === 'Enter') {
+            if (option.isBlocked) {
+              option.onBlock?.(e)
+              return null
+            }
             return this.setState({ openedGroup: option.value ?? 'EMPTY' }, () =>
               this.focusFirstSubMenuItem()
             )
+          }
           if (e.key === 'Escape') onCancellation?.()
 
           return null
         }}
+        onMouseDown={option.isBlocked ? (e) => option.onBlock?.(e) : undefined}
         onMouseEnter={() => this.onMouseEnterGroup(option.value ?? 'EMPTY')}
         onMouseLeave={this.onMouseLeaveGroup}
         onFocus={() => null}
@@ -573,7 +579,8 @@ export default class ActionsList extends React.Component<
         onKeyDown={(e) => {
           e.stopPropagation()
           if (e.key === ' ' || e.key === 'Enter') {
-            option.action && option.action(e)
+            const handler = option.isBlocked ? option.onBlock : option.action
+            handler && handler(e)
             onCancellation?.()
           }
           if (e.key === 'Escape')
@@ -584,7 +591,8 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          option.action?.(e)
+          const handler = option.isBlocked ? option.onBlock : option.action
+          handler?.(e)
           onCancellation?.()
         }}
       >

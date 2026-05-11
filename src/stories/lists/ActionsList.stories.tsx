@@ -23,6 +23,7 @@ export const FourOptionsList: Story = {
         type: 'OPTION',
         isBlocked: true,
         action: fn(),
+        onBlock: fn(),
       },
       {
         label: 'Option 2',

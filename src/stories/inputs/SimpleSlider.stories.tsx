@@ -21,6 +21,12 @@ const meta: Meta<typeof SimpleSlider> = {
       </div>
     ),
   ],
+  args: {
+    onBlock: fn(),
+  },
+  argTypes: {
+    onBlock: { control: false },
+  },
 } satisfies Meta<typeof SimpleSlider>
 
 export default meta

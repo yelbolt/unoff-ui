@@ -104,6 +104,10 @@ interface SliderProps {
     },
     feature?: string
   ) => void
+  /**
+   * Handler called instead of slider interaction when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface SliderState {
@@ -519,7 +523,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
   }
 
   Edit = () => {
-    const { scale, range, colors, tips, isBlocked } = this.props
+    const { scale, range, colors, tips, isBlocked, onBlock } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
@@ -559,7 +563,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
-
+              onBlock={onBlock}
               style={{
                 pointerEvents:
                   this.state.activeKnobId &&
@@ -586,7 +590,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
   }
 
   FullyEdit = () => {
-    const { scale, stops, range, colors, tips, isBlocked } = this.props
+    const { scale, stops, range, colors, tips, isBlocked, onBlock } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
@@ -631,7 +635,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
-
+              onBlock={onBlock}
               style={{
                 pointerEvents:
                   this.state.activeKnobId &&

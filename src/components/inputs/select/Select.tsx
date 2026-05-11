@@ -93,6 +93,10 @@ export interface SelectProps {
    * Change event handler
    */
   action: React.ChangeEventHandler<HTMLInputElement>
+  /**
+   * Handler called instead of action when isBlocked is true
+   */
+  onBlock?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 export interface SelectState {
@@ -179,7 +183,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       shouldReflow,
       isChecked,
       isDisabled,
+      isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -217,7 +223,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               name={name}
               checked={isChecked}
               disabled={isDisabled}
-              onChange={action}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}
@@ -262,7 +268,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       shouldReflow,
       isChecked,
       isDisabled,
+      isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -301,7 +309,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               value={value}
               checked={isChecked}
               disabled={isDisabled}
-              onChange={action}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}
@@ -346,7 +354,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       shouldReflow,
       isChecked,
       isDisabled,
+      isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -385,7 +395,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               name={name}
               checked={isChecked}
               disabled={isDisabled}
-              onChange={action}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}

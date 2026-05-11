@@ -84,6 +84,10 @@ export interface SimpleSliderProps {
    * Change handler
    */
   onChange: (feature: string, state: string, value: number) => void
+  /**
+   * Handler called instead of slider interaction when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface SimpleSliderState {
@@ -285,6 +289,7 @@ export default class SimpleSlider extends React.Component<
       isBlocked,
       isDisabled,
       onChange,
+      onBlock,
     } = this.props
     const { isTooltipDisplay } = this.state
 
@@ -320,6 +325,7 @@ export default class SimpleSlider extends React.Component<
             isDisplayed={isTooltipDisplay}
             isBlocked={isBlocked}
             isDisabled={isDisabled}
+            onBlock={onBlock}
             onShiftRight={(e) => {
               const { step = 1 } = this.props
               if (e.shiftKey) {

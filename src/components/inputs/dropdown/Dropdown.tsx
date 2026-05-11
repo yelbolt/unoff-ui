@@ -105,16 +105,20 @@ export interface DropdownProps {
   /**
    * Whether the option list can be filtered by a search input
    * @default false
-   */
-  canBeSearched?: boolean
-  /**
-   * Placeholder label for the search input
-   */
-  searchLabel?: string
-  /**
-   * Label shown when no options match the search query
-   */
-  noResultsLabel?: string
+  */
+ canBeSearched?: boolean
+ /**
+  * Placeholder label for the search input
+ */
+searchLabel?: string
+/**
+ * Label shown when no options match the search query
+*/
+noResultsLabel?: string
+/**
+ * Handler called instead of opening the dropdown when isBlocked is true
+ */
+onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface DropdownState {
@@ -430,6 +434,8 @@ export default class Dropdown extends React.Component<
       helper,
       containerId,
       isDisabled,
+      isBlocked,
+      onBlock,
       canBeSearched,
       searchLabel,
       noResultsLabel,
@@ -472,16 +478,20 @@ export default class Dropdown extends React.Component<
           aria-haspopup="menu"
           onKeyDown={(e) => {
             if ((e.key === ' ' || e.key === 'Enter') && !isDisabled) {
-              this.onOpenMenu()
-              setTimeout(
-                () => this.actionsListRef.current?.focusFirstMenuItem(),
-                0
-              )
+              if (isBlocked) {
+                onBlock?.(e)
+              } else {
+                this.onOpenMenu()
+                setTimeout(
+                  () => this.actionsListRef.current?.focusFirstMenuItem(),
+                  0
+                )
+              }
             }
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()
             return null
           }}
-          onMouseDown={!isDisabled ? this.onOpenMenu : undefined}
+          onMouseDown={!isDisabled ? (isBlocked ? onBlock : this.onOpenMenu) : undefined}
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

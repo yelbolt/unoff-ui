@@ -62,6 +62,12 @@ export interface AccordionProps {
   onEmpty: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => void
+  /**
+   * Handler called instead of onAdd when isBlocked is true
+   */
+  onBlock?: (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => void
 }
 
 const Accordion = (props: AccordionProps) => {
@@ -77,6 +83,7 @@ const Accordion = (props: AccordionProps) => {
     children,
     onAdd,
     onEmpty,
+    onBlock,
   } = props
 
   const handleAdd = (
@@ -101,6 +108,10 @@ const Accordion = (props: AccordionProps) => {
       ])}
       onMouseDown={(e) => {
         if ((e.target as HTMLElement).dataset.feature !== undefined) return
+        if (isBlocked) {
+          onBlock?.(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
+          return
+        }
         if (!isExpanded)
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
@@ -147,6 +158,7 @@ const Accordion = (props: AccordionProps) => {
                   : undefined
               }
               isBlocked={isBlocked}
+
               action={(e) => handleAdd(e)}
             />
           )}

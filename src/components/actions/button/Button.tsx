@@ -135,6 +135,10 @@ export interface ButtonProps {
    * Click handler for the button
    */
   action?: React.MouseEventHandler & React.KeyboardEventHandler
+  /**
+   * Handler called instead of action when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface ButtonState {
@@ -225,7 +229,9 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
       hasMultipleActions,
       isLoading,
       isDisabled,
+      isBlocked,
       action,
+      onBlock,
       label,
       shouldReflow,
     } = this.props
@@ -271,10 +277,10 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           aria-busy={isLoading}
           onKeyDown={(e) => {
             if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
-              action?.(e)
+              ;(isBlocked ? onBlock : action)?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
-          onMouseDown={!isDisabled ? action : undefined}
+          onMouseDown={!isDisabled ? (isBlocked ? onBlock : action) : undefined}
           onFocus={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
           }}
@@ -379,6 +385,7 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
       isBlocked,
       isNew,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible } = this.state
 
@@ -408,11 +415,11 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           aria-pressed={state === 'selected'}
           aria-busy={isLoading}
           onKeyDown={(e) => {
-            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
-              action?.(e)
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled);
+            ;(isBlocked ? onBlock : action)?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
-          onMouseDown={!isDisabled ? action : undefined}
+          onMouseDown={!isDisabled ? (isBlocked ? onBlock : action) : undefined}
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}
@@ -433,7 +440,7 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           ) : (
             <div
               style={{
-                opacity: isDisabled || isBlocked ? 0.5 : 1,
+                opacity: isDisabled ? 0.5 : 1,
                 pointerEvents: 'none',
                 width: '100%',
                 height: '100%',

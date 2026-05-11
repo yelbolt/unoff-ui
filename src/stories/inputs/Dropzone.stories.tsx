@@ -26,6 +26,7 @@ export const ImageDropBox: Story = {
     isDisabled: false,
     isNew: false,
     onImportFiles: fn(),
+    onBlock: fn(),
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)

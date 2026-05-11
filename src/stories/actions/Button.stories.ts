@@ -13,9 +13,10 @@ const meta: Meta<typeof Button> = {
   parameters: {
     layout: 'centered',
   },
-  args: { isAutofocus: false, action: mock },
+  args: { isAutofocus: false, action: mock, onBlock: fn() },
   argTypes: {
     action: { control: false },
+    onBlock: { control: false },
   },
 } satisfies Meta<typeof Button>
 
