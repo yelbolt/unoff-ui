@@ -10,6 +10,12 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  args: {
+    onBlock: fn(),
+  },
+  argTypes: {
+    onBlock: { control: false },
+  },
 } satisfies Meta<typeof Menu>
 
 export default meta

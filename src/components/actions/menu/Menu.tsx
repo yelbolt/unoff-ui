@@ -97,6 +97,10 @@ export interface MenuProps {
    * Label shown when no options match the search query
    */
   noResultsLabel?: string
+  /**
+   * Handler called instead of opening the menu when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface MenuState {
@@ -266,6 +270,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
       alignment,
       isBlocked,
       isNew,
+      onBlock,
       containerId,
       canBeSearched,
       searchLabel,
@@ -298,6 +303,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
           isDisabled={state === 'DISABLED'}
           isBlocked={isBlocked || option.isBlocked}
           isNew={option.isNew}
+          onBlock={onBlock}
           action={
             state !== 'DISABLED'
               ? (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) =>
@@ -331,6 +337,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
             isDisabled={state === 'DISABLED'}
             isBlocked={isBlocked}
             isNew={isNew}
+            onBlock={onBlock}
             ref={this.buttonRef}
             action={(e) =>
               state !== 'DISABLED' ? this.onOpenMenu(e) : undefined
@@ -351,6 +358,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
             isDisabled={state === 'DISABLED'}
             isBlocked={isBlocked}
             isNew={isNew}
+            onBlock={onBlock}
             ref={this.buttonRef}
             action={(e) =>
               state !== 'DISABLED' ? this.onOpenMenu(e) : undefined
