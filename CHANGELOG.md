@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.0] - 2026-05-11
+
+### Added
+
+- **`onBlock` prop** on `Button`, `Accordion`, `Knob`, `SimpleSlider`, `MultipleSlider`, `Dropdown`, `Dropzone`, `Select`, and `DropdownOption` — when `isBlocked` is `true` and `onBlock` is provided, clicking or pressing the component calls `onBlock` instead of the primary action handler
+
+### Changed
+
+- **`isBlocked` behavior** across all components: the prop no longer disables interactions, removes CSS classes (`--blocked`), or applies `disabled` to native elements — the component remains fully interactive; only the "Pro" Chip badge is displayed as a visual indicator
+- **`Button`**: `isBlocked` no longer sets `disabled` on the `<button>` element; `onKeyDown` and `onMouseDown` redirect to `onBlock` when both `isBlocked` and `onBlock` are set
+- **`Input`** (Color, Number, Text, LongText): native elements are no longer `disabled` when `isBlocked`; `pointerEvents: none` and `tabIndex: -1` are applied on the native element when `isBlocked` and `onBlock` are set, and all prop handlers (`onChange`, `onFocus`, `onBlur`, `onKeyDown`) are guarded accordingly
+- **`Select`** (CheckBox, RadioButton, SwitchButton): `onMouseDown` on the container and `pointerEvents: none` on the native input redirect to `onBlock` when set; `onChange` is suppressed while blocked
+- **`Knob`**: `isBlocked` no longer applies `knob--disabled`; `onMouseDown` and `clickHandler` redirect to `onBlock` when set; keyboard handler also redirects when blocked
+- **`ActionsList` / `DropdownOption`**: `onBlock` added to the `DropdownOption` type; `MenuOption`, `MenuGroup`, and `MenuSubOption` call `onBlock` instead of `action` when `option.isBlocked && option.onBlock`
+- **`Chip` status badge**: no longer interactive — `action` removed from the "Pro" / "New" badge across all components that show it
+
+### Fixed
+
+- **`Button` `onKeyDown`**: stray semicolon after the `if` condition caused the action to fire unconditionally regardless of the key pressed; corrected for both the `Button` and `Icon` templates
+
 ## [1.23.15] - 2026-04-03
 
 ### Changed
