@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.1] - 2026-05-11
+
+### Added
+
+- **`Menu` component**: `onBlock` prop added — when `isBlocked` is `true` and `onBlock` is provided, the trigger button redirects to `onBlock` instead of opening the menu; propagated to all three internal `Button` variants (single-option, ICON, PRIMARY)
+
 ## [1.24.0] - 2026-05-11
 
 ### Added
