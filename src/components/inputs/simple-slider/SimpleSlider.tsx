@@ -343,8 +343,8 @@ export default class SimpleSlider extends React.Component<
               }
             }}
             onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-              this.onGrab(e);
-              (e.target as HTMLElement).focus()
+              this.onGrab(e)
+              ;(e.target as HTMLElement).focus()
             }}
             onValidStopValue={(_stopId, e) => this.validHandler(e)}
           />
