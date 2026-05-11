@@ -571,8 +571,8 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
                 this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
               }}
               onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-                this.onGrab(e)
-                ;(e.target as HTMLElement).focus()
+                this.onGrab(e);
+                (e.target as HTMLElement).focus()
               }}
               onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
               aria-valuenow={item[1]}
@@ -646,8 +646,8 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
                   this.onDelete(e.target as HTMLElement)
               }}
               onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-                this.onGrab(e)
-                ;(e.target as HTMLElement).focus()
+                this.onGrab(e);
+                (e.target as HTMLElement).focus()
               }}
               onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
               aria-valuenow={item[1]}

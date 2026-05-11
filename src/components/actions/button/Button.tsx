@@ -276,8 +276,8 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           aria-disabled={isDisabled}
           aria-busy={isLoading}
           onKeyDown={(e) => {
-            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled);
-            ;(isBlocked ? onBlock : action)?.(e)
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
+              (isBlocked ? onBlock : action)?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
           onMouseDown={!isDisabled ? (isBlocked ? onBlock : action) : undefined}
@@ -415,8 +415,8 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
           aria-pressed={state === 'selected'}
           aria-busy={isLoading}
           onKeyDown={(e) => {
-            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled);
-            ;(isBlocked ? onBlock : action)?.(e)
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
+              (isBlocked ? onBlock : action)?.(e)
             if (e.key === 'Escape') (e.target as HTMLElement).blur()
           }}
           onMouseDown={!isDisabled ? (isBlocked ? onBlock : action) : undefined}
