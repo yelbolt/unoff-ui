@@ -24,7 +24,6 @@ coverage/
 
 # Editor config
 .vscode/
-.claude/
 
 # Logs
 *.log

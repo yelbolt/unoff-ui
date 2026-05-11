@@ -18,7 +18,7 @@ tokens/platforms/     # DTCG-format JSON design tokens per platform theme
 terrazzo/             # Terrazzo build configs that compile tokens → SCSS vars
 scripts/              # build-scss.js, create-theme.js
 docs/                 # Specs — treat each .md as the authoritative spec for its topic (theme generator, Terrazzo pipeline, …)
-skills/               # Claude Code skills → see skills/
+.claude/skills/       # Claude Code skills → see .claude/skills/
 dist/                 # Build output (never edit)
 ```
 
@@ -160,13 +160,13 @@ MDX documentation files (`{CategoryTitle}.mdx`) use `<DocTabs>` / `<Tab>` from `
 
 ## Skills
 
-Three Claude Code skills are available in [skills/](skills/):
+Three Claude Code skills are available in [.claude/skills/](.claude/skills/):
 
-| Skill              | File                                                     | Invoke with         | Purpose                                |
-| ------------------ | -------------------------------------------------------- | ------------------- | -------------------------------------- |
-| `create-component` | [skills/create-component.md](skills/create-component.md) | `/create-component` | Scaffold a new component end-to-end    |
-| `create-theme`     | [skills/create-theme.md](skills/create-theme.md)         | `/create-theme`     | Create and configure a new brand theme |
-| `figma-doc`        | [skills/figma-doc.md](skills/figma-doc.md)               | `/figma-doc`        | Generate a Figma component description |
+| Skill              | File                                                                         | Invoke with         | Purpose                                |
+| ------------------ | ---------------------------------------------------------------------------- | ------------------- | -------------------------------------- |
+| `create-component` | [.claude/skills/create-component.md](.claude/skills/create-component.md)     | `/create-component` | Scaffold a new component end-to-end    |
+| `create-theme`     | [.claude/skills/create-theme.md](.claude/skills/create-theme.md)             | `/create-theme`     | Create and configure a new brand theme |
+| `figma-doc`        | [.claude/skills/figma-doc.md](.claude/skills/figma-doc.md)                   | `/figma-doc`        | Generate a Figma component description |
 
 ---
 
