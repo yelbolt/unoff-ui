@@ -78,6 +78,10 @@ export interface KnobProps {
    */
   onMouseDown: React.MouseEventHandler<HTMLDivElement>
   /**
+   * Handler called instead of onMouseDown when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler<HTMLDivElement>
+  /**
    * Callback when value is validated
    */
   onValidStopValue?: (
@@ -116,8 +120,20 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
     action: string,
     e: React.KeyboardEvent<HTMLInputElement>
   ) => {
-    const { value, canBeTyped, onShiftRight, onShiftLeft, onDelete } =
-      this.props
+    const {
+      value,
+      canBeTyped,
+      isBlocked,
+      onShiftRight,
+      onShiftLeft,
+      onDelete,
+      onBlock,
+    } = this.props
+
+    if (isBlocked)
+      return onBlock?.(
+        e as unknown as React.MouseEvent<HTMLDivElement, MouseEvent>
+      )
 
     const actions = {
       ArrowRight: () => {
@@ -150,7 +166,9 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
   }
 
   clickHandler = (e: React.MouseEvent<HTMLDivElement>) => {
-    const { canBeTyped, value } = this.props
+    const { canBeTyped, value, isBlocked, onBlock } = this.props
+
+    if (isBlocked) return onBlock?.(e)
 
     if (e.detail === 2 && canBeTyped)
       this.setState({
@@ -182,6 +200,7 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
       isBlocked,
       isDisabled,
       onMouseDown,
+      onBlock,
       onValidStopValue,
     } = this.props
     const { isTooltipOpen, isStopInputOpen, stopInputValue } = this.state
@@ -191,7 +210,7 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
         className={doClassnames([
           'knob',
           isStopInputOpen && 'knob--editing',
-          (isBlocked || isDisabled) && 'knob--disabled',
+          isDisabled && 'knob--disabled',
         ])}
         ref={this.knobRef}
         style={{
@@ -208,41 +227,35 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
         aria-valuenow={typeof value === 'number' ? value : parseFloat(value)}
         aria-valuetext={this.transformStopValue(value).toString()}
         aria-disabled={isDisabled || isBlocked}
-        aria-readonly={isBlocked}
         tabIndex={!(isBlocked || isDisabled) ? 0 : -1}
         onKeyDown={(e) =>
-          !(isBlocked || isDisabled)
+          !isDisabled
             ? this.keyboardHandler(
                 e.key,
                 e as React.KeyboardEvent<HTMLInputElement>
               )
             : undefined
         }
-        onMouseDown={!(isBlocked || isDisabled) ? onMouseDown : undefined}
+        onMouseDown={
+          !isDisabled ? (isBlocked ? onBlock : onMouseDown) : undefined
+        }
         onMouseEnter={() =>
-          !(isBlocked || isDisabled || isStopInputOpen)
+          !(isDisabled || isStopInputOpen)
             ? this.setState({ isTooltipOpen: true })
             : undefined
         }
         onMouseLeave={(e) => {
           const isFocused = document.activeElement === e.target
-          if (isFocused && !(isBlocked || isDisabled))
-            this.setState({ isTooltipOpen: true })
+          if (isFocused && !isDisabled) this.setState({ isTooltipOpen: true })
           else this.setState({ isTooltipOpen: false })
         }}
         onFocus={() =>
-          !(isBlocked || isDisabled)
-            ? this.setState({ isTooltipOpen: true })
-            : undefined
+          !isDisabled ? this.setState({ isTooltipOpen: true }) : undefined
         }
         onBlur={() =>
-          !(isBlocked || isDisabled)
-            ? this.setState({ isTooltipOpen: false })
-            : undefined
+          !isDisabled ? this.setState({ isTooltipOpen: false }) : undefined
         }
-        onClick={(e) =>
-          !(isBlocked || isDisabled) ? this.clickHandler(e) : undefined
-        }
+        onClick={(e) => (!isDisabled ? this.clickHandler(e) : undefined)}
       >
         {(isDisplayed || isTooltipOpen) && (
           <div

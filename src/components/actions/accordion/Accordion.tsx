@@ -62,6 +62,12 @@ export interface AccordionProps {
   onEmpty: (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
   ) => void
+  /**
+   * Handler called instead of onAdd when isBlocked is true
+   */
+  onBlock?: (
+    event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+  ) => void
 }
 
 const Accordion = (props: AccordionProps) => {
@@ -77,6 +83,7 @@ const Accordion = (props: AccordionProps) => {
     children,
     onAdd,
     onEmpty,
+    onBlock,
   } = props
 
   const handleAdd = (
@@ -98,14 +105,14 @@ const Accordion = (props: AccordionProps) => {
       className={doClassnames([
         'accordion',
         isExpanded && 'accordion--expanded',
-        isBlocked && 'accordion--blocked',
       ])}
       onMouseDown={(e) => {
-        if (
-          (e.target as HTMLElement).dataset.feature === undefined &&
-          !isExpanded &&
-          !isBlocked
-        )
+        if ((e.target as HTMLElement).dataset.feature !== undefined) return
+        if (isBlocked) {
+          onBlock?.(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
+          return
+        }
+        if (!isExpanded)
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
@@ -150,12 +157,11 @@ const Accordion = (props: AccordionProps) => {
                     }
                   : undefined
               }
-              isDisabled={isBlocked}
               isBlocked={isBlocked}
               action={(e) => handleAdd(e)}
             />
           )}
-          {(isBlocked || isNew) && <Chip>{isNew ? 'New' : 'Pro'}</Chip>}
+          {isNew && <Chip>{'New'}</Chip>}
         </div>
       </div>
       {isExpanded && (

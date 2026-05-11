@@ -103,10 +103,6 @@ export interface DropdownProps {
    */
   isNew?: boolean
   /**
-   * Handler called when unblock is clicked
-   */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
-  /**
    * Whether the option list can be filtered by a search input
    * @default false
    */
@@ -119,6 +115,10 @@ export interface DropdownProps {
    * Label shown when no options match the search query
    */
   noResultsLabel?: string
+  /**
+   * Handler called instead of opening the dropdown when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface DropdownState {
@@ -356,7 +356,7 @@ export default class Dropdown extends React.Component<
 
   // Template
   Status = () => {
-    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
+    const { warning, preview, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -374,7 +374,6 @@ export default class Dropdown extends React.Component<
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
@@ -436,6 +435,7 @@ export default class Dropdown extends React.Component<
       containerId,
       isDisabled,
       isBlocked,
+      onBlock,
       canBeSearched,
       searchLabel,
       noResultsLabel,
@@ -452,7 +452,7 @@ export default class Dropdown extends React.Component<
             : alignment === 'RIGHT'
               ? 'select-menu--right'
               : 'select-menu--left',
-          (isDisabled || isBlocked) && 'select-menu--disabled',
+          isDisabled && 'select-menu--disabled',
         ])}
         onMouseEnter={() => {
           if (helper !== undefined) this.setState({ isTooltipVisible: true })
@@ -468,7 +468,7 @@ export default class Dropdown extends React.Component<
             'select-menu__button',
             isMenuOpen && 'select-menu__button--active',
           ])}
-          disabled={isDisabled || isBlocked}
+          disabled={isDisabled}
           aria-expanded={isMenuOpen ? 'true' : 'false'}
           {...(isMenuOpen &&
             (containerId === undefined ? this.state.isMenuVisible : true) && {
@@ -477,20 +477,22 @@ export default class Dropdown extends React.Component<
           aria-label={`Select option: ${this.findSelectedOption(options)}`}
           aria-haspopup="menu"
           onKeyDown={(e) => {
-            if (
-              e.key === ' ' ||
-              (e.key === 'Enter' && !(isDisabled || isBlocked))
-            ) {
-              this.onOpenMenu()
-              setTimeout(
-                () => this.actionsListRef.current?.focusFirstMenuItem(),
-                0
-              )
-            }
+            if ((e.key === ' ' || e.key === 'Enter') && !isDisabled)
+              if (isBlocked) onBlock?.(e)
+              else {
+                this.onOpenMenu()
+                setTimeout(
+                  () => this.actionsListRef.current?.focusFirstMenuItem(),
+                  0
+                )
+              }
+
             if (e.key === 'Escape') return (e.target as HTMLElement).blur()
             return null
           }}
-          onMouseDown={!(isDisabled || isBlocked) ? this.onOpenMenu : undefined}
+          onMouseDown={
+            !isDisabled ? (isBlocked ? onBlock : this.onOpenMenu) : undefined
+          }
           onFocus={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: true })
           }}

@@ -20,6 +20,12 @@ const meta: Meta<typeof MultipleSlider> = {
       </div>
     ),
   ],
+  args: {
+    onBlock: fn(),
+  },
+  argTypes: {
+    onBlock: { control: false },
+  },
 }
 
 export default meta

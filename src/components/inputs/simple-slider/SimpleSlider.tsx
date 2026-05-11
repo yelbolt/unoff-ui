@@ -85,9 +85,9 @@ export interface SimpleSliderProps {
    */
   onChange: (feature: string, state: string, value: number) => void
   /**
-   * Handler called when unblock is clicked
+   * Handler called instead of slider interaction when isBlocked is true
    */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface SimpleSliderState {
@@ -252,7 +252,7 @@ export default class SimpleSlider extends React.Component<
   }
 
   Status = () => {
-    const { warning, isBlocked, isNew, onUnblock } = this.props
+    const { warning, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -266,14 +266,7 @@ export default class SimpleSlider extends React.Component<
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && (
-            <Chip
-              isSolo
-              action={isBlocked ? onUnblock : undefined}
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       )
   }
@@ -292,6 +285,7 @@ export default class SimpleSlider extends React.Component<
       isBlocked,
       isDisabled,
       onChange,
+      onBlock,
     } = this.props
     const { isTooltipDisplay } = this.state
 
@@ -313,6 +307,7 @@ export default class SimpleSlider extends React.Component<
                 ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
                 : undefined,
           }}
+          onMouseDown={undefined}
         >
           <this.Progress />
           <Knob
@@ -326,6 +321,7 @@ export default class SimpleSlider extends React.Component<
             isDisplayed={isTooltipDisplay}
             isBlocked={isBlocked}
             isDisabled={isDisabled}
+            onBlock={onBlock}
             onShiftRight={(e) => {
               const { step = 1 } = this.props
               if (e.shiftKey) {

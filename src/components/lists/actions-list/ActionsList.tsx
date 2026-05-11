@@ -433,13 +433,12 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
-          option.isBlocked && 'select-menu__item--blocked',
         ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
@@ -449,8 +448,9 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
-            option.action && option.action(e)
+          if (e.key === ' ' || e.key === 'Enter') {
+            const handler = option.isBlocked ? option.onBlock : option.action
+            handler && handler(e)
             onCancellation?.()
           }
           if (e.key === 'Escape') onCancellation?.()
@@ -458,7 +458,8 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          !option.isBlocked ? option.action?.(e) : undefined
+          const handler = option.isBlocked ? option.onBlock : option.action
+          handler?.(e)
           onCancellation?.()
         }}
         onFocus={() => null}
@@ -503,28 +504,31 @@ export default class ActionsList extends React.Component<
     return (
       <li
         key={`menu-group-${index}`}
-        className={doClassnames([
-          'select-menu__item',
-          option.isBlocked && ' select-menu__item--blocked',
-        ])}
+        className={doClassnames(['select-menu__item'])}
         style={{
           zIndex: openedGroup === option.value ? 2 : 'auto',
         }}
         data-is-blocked={option.isBlocked}
         data-role={'GROUP'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-disabled={option.isBlocked}
         aria-haspopup="true"
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked)
+          if (e.key === ' ' || e.key === 'Enter') {
+            if (option.isBlocked) {
+              option.onBlock?.(e)
+              return null
+            }
             return this.setState({ openedGroup: option.value ?? 'EMPTY' }, () =>
               this.focusFirstSubMenuItem()
             )
+          }
           if (e.key === 'Escape') onCancellation?.()
 
           return null
         }}
+        onMouseDown={option.isBlocked ? (e) => option.onBlock?.(e) : undefined}
         onMouseEnter={() => this.onMouseEnterGroup(option.value ?? 'EMPTY')}
         onMouseLeave={this.onMouseLeaveGroup}
         onFocus={() => null}
@@ -559,13 +563,12 @@ export default class ActionsList extends React.Component<
           'select-menu__item',
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1 && 'select-menu__item--selected',
-          option.isBlocked && 'select-menu__item--blocked',
         ])}
         data-value={option.value}
         data-is-blocked={option.isBlocked}
         data-feature={option.feature}
         data-role={'OPTION'}
-        tabIndex={option.isBlocked ? -1 : 0}
+        tabIndex={0}
         aria-current={
           selected?.split(', ').filter((value) => value === option.value)
             .length === 1
@@ -575,8 +578,9 @@ export default class ActionsList extends React.Component<
         aria-disabled={option.isBlocked}
         onKeyDown={(e) => {
           e.stopPropagation()
-          if ((e.key === ' ' || e.key === 'Enter') && !option.isBlocked) {
-            option.action && option.action(e)
+          if (e.key === ' ' || e.key === 'Enter') {
+            const handler = option.isBlocked ? option.onBlock : option.action
+            handler && handler(e)
             onCancellation?.()
           }
           if (e.key === 'Escape')
@@ -587,7 +591,8 @@ export default class ActionsList extends React.Component<
           return null
         }}
         onMouseDown={(e) => {
-          if (!option.isBlocked) option.action?.(e)
+          const handler = option.isBlocked ? option.onBlock : option.action
+          handler?.(e)
           onCancellation?.()
         }}
       >

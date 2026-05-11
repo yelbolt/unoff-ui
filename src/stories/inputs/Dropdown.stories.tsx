@@ -23,6 +23,12 @@ const meta = {
       },
     },
   },
+  args: {
+    onBlock: fn(),
+  },
+  argTypes: {
+    onBlock: { control: false },
+  },
 } satisfies Meta<typeof Dropdown>
 
 export default meta

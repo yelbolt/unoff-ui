@@ -94,9 +94,9 @@ export interface SelectProps {
    */
   action: React.ChangeEventHandler<HTMLInputElement>
   /**
-   * Handler called when unblock is clicked
+   * Handler called instead of action when isBlocked is true
    */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
+  onBlock?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 export interface SelectState {
@@ -140,7 +140,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
 
   // Templates
   Status = (type: 'checkbox' | 'radio' | 'switch') => {
-    const { warning, preview, isBlocked, isNew, onUnblock } = this.props
+    const { warning, preview, isBlocked, isNew } = this.props
 
     if (warning || isBlocked || isNew)
       return (
@@ -165,7 +165,6 @@ export default class Select extends React.Component<SelectProps, SelectState> {
             <Chip
               preview={preview}
               isSolo
-              action={isBlocked ? onUnblock : undefined}
             >
               {isNew ? 'New' : 'Pro'}
             </Chip>
@@ -186,6 +185,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       isDisabled,
       isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -199,10 +199,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
     return (
       <div className={layouts['snackbar--medium']}>
         <div
-          className={doClassnames([
-            'checkbox',
-            isBlocked && 'checkbox--blocked',
-          ])}
+          className={doClassnames(['checkbox'])}
           ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
@@ -225,8 +222,8 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               type="checkbox"
               name={name}
               checked={isChecked}
-              disabled={isDisabled || isBlocked}
-              onChange={action}
+              disabled={isDisabled}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}
@@ -238,9 +235,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
             <label
               className={doClassnames([
                 'checkbox__label',
-                (isDisabled || isBlocked) && 'checkbox__label--disabled',
+                isDisabled && 'checkbox__label--disabled',
               ])}
-              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+              htmlFor={!isDisabled ? id : undefined}
             >
               {getSelectLabel()}
             </label>
@@ -273,6 +270,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       isDisabled,
       isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -286,7 +284,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
     return (
       <div className={layouts['snackbar--medium']}>
         <div
-          className={doClassnames(['radio', isBlocked && 'radio--blocked'])}
+          className="radio"
           ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
@@ -310,8 +308,8 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               name={name}
               value={value}
               checked={isChecked}
-              disabled={isDisabled || isBlocked}
-              onChange={action}
+              disabled={isDisabled}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}
@@ -323,9 +321,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
             <label
               className={doClassnames([
                 'radio__label',
-                (isDisabled || isBlocked) && 'radio__label--disabled',
+                isDisabled && 'radio__label--disabled',
               ])}
-              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+              htmlFor={!isDisabled ? id : undefined}
             >
               {getSelectLabel()}
             </label>
@@ -358,6 +356,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
       isDisabled,
       isBlocked,
       action,
+      onBlock,
     } = this.props
     const { isTooltipVisible, documentWidth } = this.state
 
@@ -371,7 +370,7 @@ export default class Select extends React.Component<SelectProps, SelectState> {
     return (
       <div className={layouts['snackbar--medium']}>
         <div
-          className={doClassnames(['switch', isBlocked && 'switch--blocked'])}
+          className="switch"
           ref={this.containerRef}
           onMouseEnter={() => {
             if (hasTooltipContent()) this.setState({ isTooltipVisible: true })
@@ -395,8 +394,8 @@ export default class Select extends React.Component<SelectProps, SelectState> {
               role="switch"
               name={name}
               checked={isChecked}
-              disabled={isDisabled || isBlocked}
-              onChange={action}
+              disabled={isDisabled}
+              onChange={isBlocked ? onBlock : action}
               tabIndex={0}
               ref={this.inputRef}
               aria-label={label}
@@ -408,9 +407,9 @@ export default class Select extends React.Component<SelectProps, SelectState> {
             <label
               className={doClassnames([
                 'switch__label',
-                (isDisabled || isBlocked) && 'switch__label--disabled',
+                isDisabled && 'switch__label--disabled',
               ])}
-              htmlFor={!(isDisabled || isBlocked) ? id : undefined}
+              htmlFor={!isDisabled ? id : undefined}
             >
               {getSelectLabel()}
             </label>

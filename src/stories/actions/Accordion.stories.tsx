@@ -38,12 +38,14 @@ export const ExpandCollapseInput: Story = {
     ),
     onAdd: mock,
     onEmpty: mock,
+    onBlock: fn(),
   },
   argTypes: {
     ...TitleStory.TitleWithHelper.argTypes,
     children: { control: false },
     onAdd: { control: false },
     onEmpty: { control: false },
+    onBlock: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{

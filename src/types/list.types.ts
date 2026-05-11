@@ -52,4 +52,12 @@ export interface DropdownOption {
    * @default false
    */
   isNew?: boolean
+  /**
+   * Handler called instead of action when isBlocked is true
+   */
+  onBlock?: (
+    event:
+      | React.MouseEvent<HTMLLIElement, MouseEvent>
+      | React.KeyboardEvent<HTMLLIElement>
+  ) => void
 }

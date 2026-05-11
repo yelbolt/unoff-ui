@@ -10,7 +10,10 @@ const meta: Meta<typeof Select> = {
   parameters: {
     layout: 'centered',
   },
-  args: { action: fn() },
+  args: { action: fn(), onBlock: fn() },
+  argTypes: {
+    onBlock: { control: false },
+  },
 } satisfies Meta<typeof Select>
 
 export default meta

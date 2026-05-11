@@ -105,9 +105,9 @@ interface SliderProps {
     feature?: string
   ) => void
   /**
-   * Handler called when unblock is clicked
+   * Handler called instead of slider interaction when isBlocked is true
    */
-  onUnblock?: React.MouseEventHandler & React.KeyboardEventHandler
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 interface SliderState {
@@ -513,28 +513,18 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               type={warning.type}
             />
           )}
-          {(isBlocked || isNew) && (
-            <Chip
-              isSolo
-              action={isBlocked ? this.props.onUnblock : undefined}
-            >
-              {isNew ? 'New' : 'Pro'}
-            </Chip>
-          )}
+          {(isBlocked || isNew) && <Chip isSolo>{isNew ? 'New' : 'Pro'}</Chip>}
         </div>
       )
   }
 
   Edit = () => {
-    const { scale, range, colors, tips, isBlocked } = this.props
+    const { scale, range, colors, tips, isBlocked, onBlock } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
       <div
-        className={doClassnames([
-          'multiple-slider__range',
-          isBlocked && 'multiple-slider__range--blocked',
-        ])}
+        className={doClassnames(['multiple-slider__range'])}
         style={{
           background:
             colors !== undefined
@@ -542,6 +532,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               : undefined,
         }}
         role="presentation"
+        onMouseDown={undefined}
       >
         <this.Progress />
         {Object.entries(scale)
@@ -566,11 +557,10 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+              onBlock={onBlock}
               style={{
                 pointerEvents:
-                  (this.state.activeKnobId &&
-                    this.state.activeKnobId !== item[0]) ||
-                  isBlocked
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}
@@ -593,7 +583,7 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
   }
 
   FullyEdit = () => {
-    const { scale, stops, range, colors, tips, isBlocked } = this.props
+    const { scale, stops, range, colors, tips, isBlocked, onBlock } = this.props
     const { isTooltipDisplay } = this.state
 
     return (
@@ -601,11 +591,9 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
         className={doClassnames([
           'multiple-slider__range',
           stops.list.length < (stops.max ?? Infinity) &&
-            !isBlocked &&
             'multiple-slider__range--add',
           stops.list.length === (stops.max ?? Infinity) &&
             'multiple-slider__range--not-allowed',
-          isBlocked && 'multiple-slider__range--blocked',
         ])}
         style={{
           background:
@@ -613,9 +601,9 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
               : undefined,
         }}
-        onMouseDown={(e) =>
-          stops.list.length < (stops.max ?? Infinity) && this.onAdd(e)
-        }
+        onMouseDown={(e) => {
+          if (stops.list.length < (stops.max ?? Infinity)) this.onAdd(e)
+        }}
       >
         <this.Progress />
         {Object.entries(scale)
@@ -640,11 +628,10 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
               canBeTyped
               isDisplayed={isTooltipDisplay[index]}
               isBlocked={isBlocked}
+              onBlock={onBlock}
               style={{
                 pointerEvents:
-                  (this.state.activeKnobId &&
-                    this.state.activeKnobId !== item[0]) ||
-                  isBlocked
+                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
                     ? 'none'
                     : 'auto',
               }}

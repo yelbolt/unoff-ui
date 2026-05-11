@@ -60,6 +60,10 @@ export interface DropzoneProps {
    * Callback when files are successfully imported
    */
   onImportFiles: (files: Array<FileContent>) => void
+  /**
+   * Handler called instead of file import when isBlocked is true
+   */
+  onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
 }
 
 export interface DropzoneState {
@@ -181,7 +185,9 @@ export default class Dropzone extends React.Component<
   }
 
   onValidFilesViaDrop = (event: React.DragEvent) => {
-    const { acceptedMimeTypes, isMultiple } = this.props
+    const { acceptedMimeTypes, isMultiple, isBlocked, onBlock } = this.props
+
+    if (isBlocked) return onBlock?.(event)
 
     event.preventDefault()
     this.setState({
@@ -246,6 +252,7 @@ export default class Dropzone extends React.Component<
       isDisabled,
       isBlocked,
       isNew,
+      onBlock,
     } = this.props
     const { status, isLoading, isDraggedOver, blackList } = this.state
     let fragment
@@ -264,9 +271,7 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -293,9 +298,8 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                onBlock={onBlock}
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -315,9 +319,7 @@ export default class Dropzone extends React.Component<
                 isBlocked={isBlocked}
                 isDisabled={isDisabled}
                 isNew={isNew}
-                action={() =>
-                  !(isBlocked || isDisabled) && this.onValidFilesViaButton()
-                }
+                action={() => !isDisabled && this.onValidFilesViaButton()}
               />
             }
           />
@@ -331,10 +333,10 @@ export default class Dropzone extends React.Component<
         className={doClassnames([
           'dropzone',
           isDraggedOver && 'dropzone--dragged-over',
-          (isBlocked || isDisabled) && 'dropzone--disabled',
+          isDisabled && 'dropzone--disabled',
         ])}
         role="region"
-        aria-disabled={isDisabled || isBlocked}
+        aria-disabled={isDisabled}
         onDragOver={this.onDragOver}
         onDragEnter={this.onDragEnter}
         onDragLeave={this.onDragLeave}

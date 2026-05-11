@@ -295,11 +295,11 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
           type={type === 'ICON' ? 'secondary' : 'primary'}
           label={option.label}
           isLoading={state === 'LOADING'}
-          isDisabled={state === 'DISABLED' || isBlocked}
-          isBlocked={option.isBlocked}
+          isDisabled={state === 'DISABLED'}
+          isBlocked={isBlocked || option.isBlocked}
           isNew={option.isNew}
           action={
-            !(state === 'DISABLED' || isBlocked)
+            state !== 'DISABLED'
               ? (e: React.MouseEvent<Element> | React.KeyboardEvent<Element>) =>
                   // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   option.action?.(e as any)
@@ -328,13 +328,12 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
             helper={helper === undefined ? undefined : helper}
             warning={warning === undefined ? undefined : warning}
             isLoading={state === 'LOADING'}
-            isDisabled={state === 'DISABLED' || isBlocked}
+            isDisabled={state === 'DISABLED'}
+            isBlocked={isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
             action={(e) =>
-              !(state === 'DISABLED' || isBlocked)
-                ? this.onOpenMenu(e)
-                : undefined
+              state !== 'DISABLED' ? this.onOpenMenu(e) : undefined
             }
             aria-label={label}
             aria-haspopup="true"
@@ -349,13 +348,12 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
             helper={helper === undefined ? undefined : helper}
             warning={warning === undefined ? undefined : warning}
             isLoading={state === 'LOADING'}
-            isDisabled={state === 'DISABLED' || isBlocked}
+            isDisabled={state === 'DISABLED'}
+            isBlocked={isBlocked}
             isNew={isNew}
             ref={this.buttonRef}
             action={(e) =>
-              !(state === 'DISABLED' || isBlocked)
-                ? this.onOpenMenu(e)
-                : undefined
+              state !== 'DISABLED' ? this.onOpenMenu(e) : undefined
             }
             aria-label={label}
             aria-haspopup="true"

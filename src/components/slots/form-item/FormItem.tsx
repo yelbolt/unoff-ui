@@ -61,7 +61,6 @@ const FormItem = (props: FormItemProps) => {
     shouldFill = true,
     isBaseline = false,
     isMultiLine = false,
-    isBlocked = false,
     isNew = false,
     children,
   } = props
@@ -73,7 +72,6 @@ const FormItem = (props: FormItemProps) => {
         shouldFill && 'form-item--fill',
         isBaseline && 'form-item--baseline',
         isMultiLine && 'form-item--multiline',
-        isBlocked && 'form-item--blocked',
       ])}
       role="group"
       aria-describedby={helper ? `${id}-helper` : undefined}

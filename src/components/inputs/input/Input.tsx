@@ -835,11 +835,13 @@ export default class Input extends React.Component<InputProps, InputState> {
             }
             onFocus={(e) => {
               e.target.select()
-              if (helper !== undefined) this.setState({ isTooltipVisible: true })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: true })
               if (!(isDisabled || isBlocked)) this.onFocus(e)
             }}
             onBlur={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: false })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: false })
               if (!(isDisabled || isBlocked)) this.onBlur(e)
             }}
             ref={this.inputRef}
@@ -940,11 +942,13 @@ export default class Input extends React.Component<InputProps, InputState> {
               !(isDisabled || isBlocked) ? this.onChangeText : undefined
             }
             onFocus={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: true })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: true })
               if (!(isDisabled || isBlocked)) this.onFocus(e)
             }}
             onBlur={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: false })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: false })
               if (!(isDisabled || isBlocked)) this.onBlur(e)
             }}
             ref={this.inputRef}
@@ -1026,11 +1030,13 @@ export default class Input extends React.Component<InputProps, InputState> {
               !(isDisabled || isBlocked) ? this.onChangeText : undefined
             }
             onFocus={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: true })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: true })
               if (!(isDisabled || isBlocked)) this.onFocus(e)
             }}
             onBlur={(e) => {
-              if (helper !== undefined) this.setState({ isTooltipVisible: false })
+              if (helper !== undefined)
+                this.setState({ isTooltipVisible: false })
               if (!(isDisabled || isBlocked)) this.onBlur(e)
             }}
             ref={this.textareaRef}
