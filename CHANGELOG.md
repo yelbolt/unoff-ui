@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.5] - 2026-07-16
+
+### Changed
+
+- **`vitest` / `@vitest/browser` / `@vitest/browser-playwright` / `@vitest/coverage-v8` / `@vitest/ui`**: upgraded from `^4.0.17` to `^4.1.10` — fixes two critical advisories ([GHSA-2h32-95rg-cppp](https://github.com/advisories/GHSA-2h32-95rg-cppp), [GHSA-g8mr-85jm-7xhm](https://github.com/advisories/GHSA-g8mr-85jm-7xhm)) affecting Vitest browser mode
+- **`vite` override**: pinned to `^7.3.1` instead of the self-referencing `$vite` — the new `vitest` peer dependency on `vite` triggered an npm/arborist resolution bug with the `$ref` override syntax
+- **CI — npm publish workflow**: added an `npm install -g npm@latest` step before install/build — `actions/setup-node@v4` with `node-version: 22` bundles npm 10.9.8, below the 11.5.1 minimum required for npm's OIDC Trusted Publisher flow
+- **`Bar` component**: `flex: 1` added to `.bar--vertical` for correct layout handling
+
+### Fixed
+
+- **`tsconfig.json`**: removed the deprecated `baseUrl` and the now-unnecessary `ignoreDeprecations` option — `paths` already resolve relative to the config file under `moduleResolution: "bundler"`, and `ignoreDeprecations: "6.0"` was an invalid value for the installed TypeScript compiler (`TS5103`), blocking `npm run build`
+
 ## [1.24.4] - 2026-07-16
 
 ### Fixed
