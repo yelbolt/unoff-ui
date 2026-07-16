@@ -100,6 +100,7 @@
     align-items: center;
     min-width: var(--bar-min-height);
     min-height: unset;
+    flex: 1;
 
     & {
       --bar-padding: var(--bar-padding-default-left)
