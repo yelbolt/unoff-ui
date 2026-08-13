@@ -116,6 +116,30 @@
       "$type": "link",
       "$value": "/src/icons/penpot/corners.svg"
     },
+    "curveAntiHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-anti-hyperbola.svg"
+    },
+    "curveEaseInOut": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-ease-in-out.svg"
+    },
+    "curveEaseIn": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-ease-in.svg"
+    },
+    "curveEaseOut": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-ease-out.svg"
+    },
+    "curveHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-hyperbola.svg"
+    },
+    "curveLinear": {
+      "$type": "link",
+      "$value": "/src/icons/penpot/curve-linear.svg"
+    },
     "distributeHorizontalSpacing": {
       "$type": "link",
       "$value": "/src/icons/penpot/distribute-horizontal-spacing.svg"

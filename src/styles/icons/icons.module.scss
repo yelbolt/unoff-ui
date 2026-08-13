@@ -156,6 +156,36 @@
     -webkit-mask-image: var(--icon-corners);
   }
 
+  &--curve-anti-hyperbola {
+    mask-image: var(--icon-curve-anti-hyperbola);
+    -webkit-mask-image: var(--icon-curve-anti-hyperbola);
+  }
+
+  &--curve-ease-in-out {
+    mask-image: var(--icon-curve-ease-in-out);
+    -webkit-mask-image: var(--icon-curve-ease-in-out);
+  }
+
+  &--curve-ease-in {
+    mask-image: var(--icon-curve-ease-in);
+    -webkit-mask-image: var(--icon-curve-ease-in);
+  }
+
+  &--curve-ease-out {
+    mask-image: var(--icon-curve-ease-out);
+    -webkit-mask-image: var(--icon-curve-ease-out);
+  }
+
+  &--curve-hyperbola {
+    mask-image: var(--icon-curve-hyperbola);
+    -webkit-mask-image: var(--icon-curve-hyperbola);
+  }
+
+  &--curve-linear {
+    mask-image: var(--icon-curve-linear);
+    -webkit-mask-image: var(--icon-curve-linear);
+  }
+
   &--downward {
     mask-image: var(--icon-downward);
     -webkit-mask-image: var(--icon-downward);
