@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.6] - 2026-08-13
+
+### Added
+
+- **Curve icons**: six new icons — `curve-anti-hyperbola`, `curve-ease-in`, `curve-ease-in-out`, `curve-ease-out`, `curve-hyperbola`, `curve-linear` — registered in `iconList` (`src/types/icon.types.ts`) and wired end-to-end for all four platform themes: SVG assets under `src/icons/{figma,penpot,sketch,framer}/`, DTCG `link` tokens in `tokens/platforms/{theme}/icon.json`, `--icon-*` custom properties in `src/styles/icons/styles/{theme}.scss`, and `.icon--*` mask rules in `src/styles/icons/icons.module.scss`
+- **`.github/FUNDING.yml`**: GitHub Sponsors (`a-ng-d`, `yelbolt`) and Buy Me a Coffee (`a_ng_d`) funding links
+
+### Changed
+
+- **`effects` icon (Framer)**: secondary path `opacity` lowered from `.5` to `.4` for visual consistency with the rest of the Framer icon set
+
 ## [1.24.5] - 2026-07-16
 
 ### Changed
