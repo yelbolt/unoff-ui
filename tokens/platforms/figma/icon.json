@@ -116,6 +116,30 @@
       "$type": "link",
       "$value": "/src/icons/figma/corners.svg"
     },
+    "curveAntiHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-anti-hyperbola.svg"
+    },
+    "curveEaseInOut": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-ease-in-out.svg"
+    },
+    "curveEaseIn": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-ease-in.svg"
+    },
+    "curveEaseOut": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-ease-out.svg"
+    },
+    "curveHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-hyperbola.svg"
+    },
+    "curveLinear": {
+      "$type": "link",
+      "$value": "/src/icons/figma/curve-linear.svg"
+    },
     "distributeHorizontalSpacing": {
       "$type": "link",
       "$value": "/src/icons/figma/distribute-horizontal-spacing.svg"
