@@ -87,8 +87,7 @@ export interface KnobProps {
   onValidStopValue?: (
     stopId: string,
     e:
-      | React.FocusEvent<HTMLInputElement>
-      | React.KeyboardEvent<HTMLInputElement>
+      React.FocusEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>
   ) => void
 }
 

@@ -41,8 +41,8 @@
   &__gradient-container {
     position: absolute;
     inset: 0;
-    overflow: hidden;
     border-radius: var(--multiple-slider-radius);
+    overflow: hidden;
   }
 
   &__border {
@@ -56,23 +56,25 @@
 
   &__gradient-track {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     z-index: 1;
   }
 
   &__progress {
     position: absolute;
     top: 0;
+    z-index: 2;
     border-radius: var(--multiple-slider-radius);
     background-color: var(--multiple-slider-progress-color);
     height: 100%;
     pointer-events: none;
-    z-index: 2;
   }
 
   &__gamut-overlay {
     position: absolute;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
     inset: 0;
     border-radius: var(--multiple-slider-radius);
     background-image: repeating-linear-gradient(
@@ -82,8 +84,6 @@
       transparent var(--size-pos-unit),
       transparent var(--size-pos-xunit)
     );
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
     pointer-events: none;
   }
 

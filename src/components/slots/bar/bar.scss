@@ -6,13 +6,13 @@
 .bar {
   display: flex;
   position: relative;
-  min-height: var(--bar-min-height);
   justify-content: space-between;
   align-items: center;
   gap: var(--bar-gap);
   box-sizing: border-box;
   background-color: var(--bar-background-color);
   padding: var(--bar-padding);
+  min-height: var(--bar-min-height);
 
   & {
     --bar-padding: var(--bar-padding-default-top)
@@ -96,11 +96,11 @@
   }
 
   &.bar--vertical {
+    flex: 1;
     flex-direction: column;
     align-items: center;
     min-width: var(--bar-min-height);
     min-height: unset;
-    flex: 1;
 
     & {
       --bar-padding: var(--bar-padding-default-left)

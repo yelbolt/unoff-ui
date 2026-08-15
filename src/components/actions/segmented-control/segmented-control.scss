@@ -5,20 +5,20 @@
 
 .segmented-control {
   &__tabs {
-  display: flex;
-  align-items: stretch;
-  gap: var(--segmented-control-gap);
-  cursor: default;
-  outline: var(--segmented-control-border-width) solid
-    var(--segmented-control-border-color);
-  outline-offset: var(--segmented-control-border-offset);
-  border-radius: var(--segmented-control-radius);
-  background-color: var(--segmented-control-background-color);
-  padding: var(--segmented-control-padding-top)
-    var(--segmented-control-padding-right)
-    var(--segmented-control-padding-bottom)
-    var(--segmented-control-padding-left);
-  user-select: none;
+    display: flex;
+    align-items: stretch;
+    gap: var(--segmented-control-gap);
+    cursor: default;
+    outline: var(--segmented-control-border-width) solid
+      var(--segmented-control-border-color);
+    outline-offset: var(--segmented-control-border-offset);
+    border-radius: var(--segmented-control-radius);
+    background-color: var(--segmented-control-background-color);
+    padding: var(--segmented-control-padding-top)
+      var(--segmented-control-padding-right)
+      var(--segmented-control-padding-bottom)
+      var(--segmented-control-padding-left);
+    user-select: none;
   }
 
   &--blocked {

@@ -16,9 +16,7 @@ const buildLightnessSweepStops = (
     return { offset: t, color: `hsl(${hue}, ${saturation}%, ${lightness}%)` }
   })
 
-const buildChromaSweepWithGamutStops = (
-  steps: number
-): GradientTrackStop[] =>
+const buildChromaSweepWithGamutStops = (steps: number): GradientTrackStop[] =>
   Array.from({ length: steps }, (_, i) => {
     const t = steps === 1 ? 0 : i / (steps - 1)
     const saturation = Math.round(t * 100)
