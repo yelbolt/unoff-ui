@@ -20,8 +20,6 @@
   &__range {
     position: relative;
     flex: 1 1 auto;
-    box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
-      var(--multiple-slider-border-color);
     border-radius: var(--multiple-slider-radius);
     background-color: var(--multiple-slider-background-color);
     height: var(--multiple-slider-height);
@@ -38,6 +36,44 @@
       cursor: not-allowed;
       pointer-events: none;
     }
+  }
+
+  &__gradient-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: var(--multiple-slider-radius);
+  }
+
+  &__border {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 var(--multiple-slider-border-width)
+      var(--multiple-slider-border-color);
+    border-radius: var(--multiple-slider-radius);
+    pointer-events: none;
+  }
+
+  &__gradient-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &__gamut-overlay {
+    position: absolute;
+    inset: 0;
+    border-radius: var(--multiple-slider-radius);
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--multiple-slider-background-color) var(--size-null),
+      var(--multiple-slider-background-color) var(--size-pos-unit),
+      transparent var(--size-pos-unit),
+      transparent var(--size-pos-xunit)
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    pointer-events: none;
   }
 
   &__progress {

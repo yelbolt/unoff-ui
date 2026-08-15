@@ -1,7 +1,34 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
+import { GradientTrackStop } from '@components/inputs/shared/gradient-track'
 import MultipleSlider from '@components/inputs/multiple-slider/MultipleSlider'
+
+const buildLightnessSweepStops = (
+  steps: number,
+  hue: number
+): GradientTrackStop[] =>
+  Array.from({ length: steps }, (_, i) => {
+    const t = steps === 1 ? 0 : i / (steps - 1)
+    const lightness = Math.round(t * 100)
+    const saturation = Math.round(Math.sin(t * Math.PI) * 65)
+
+    return { offset: t, color: `hsl(${hue}, ${saturation}%, ${lightness}%)` }
+  })
+
+const buildChromaSweepWithGamutStops = (
+  steps: number
+): GradientTrackStop[] =>
+  Array.from({ length: steps }, (_, i) => {
+    const t = steps === 1 ? 0 : i / (steps - 1)
+    const saturation = Math.round(t * 100)
+
+    return {
+      offset: t,
+      color: `hsl(210, ${saturation}%, 55%)`,
+      outOfGamut: t > 0.7,
+    }
+  })
 
 const meta: Meta<typeof MultipleSlider> = {
   title: 'Components/Inputs/Multiple Slider',
@@ -186,6 +213,72 @@ export const EditingValues: Story = {
   },
   render: TripleValues.render,
   play: TripleValues.play,
+}
+
+export const GradientTrack: Story = {
+  args: {
+    ...TripleValues.args,
+    colors: undefined,
+    gradient: {
+      tracks: [buildLightnessSweepStops(12, 20)],
+    },
+  },
+  argTypes: {
+    ...TripleValues.argTypes,
+    gradient: { control: false },
+  },
+  render: TripleValues.render,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const sliders = canvas.getAllByRole('slider')
+    await expect(sliders.length).toBeGreaterThan(0)
+  },
+}
+
+export const GradientWithOutOfGamut: Story = {
+  args: {
+    ...GradientTrack.args,
+    scale: {
+      '0': 100,
+    },
+    stops: {
+      list: [0],
+      min: 1,
+      max: 1,
+    },
+    range: {
+      min: 0,
+      max: 200,
+      step: 1,
+    },
+    gradient: {
+      tracks: [buildChromaSweepWithGamutStops(12)],
+    },
+  },
+  argTypes: {
+    ...GradientTrack.argTypes,
+  },
+  render: GradientTrack.render,
+  play: GradientTrack.play,
+}
+
+export const StackedGradientTracks: Story = {
+  args: {
+    ...GradientTrack.args,
+    gradient: {
+      tracks: [
+        buildLightnessSweepStops(10, 0),
+        buildLightnessSweepStops(10, 140),
+        buildLightnessSweepStops(10, 260),
+      ],
+    },
+  },
+  argTypes: {
+    ...GradientTrack.argTypes,
+  },
+  render: GradientTrack.render,
+  play: GradientTrack.play,
 }
 
 export const Progressive: Story = {
