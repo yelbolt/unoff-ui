@@ -90,6 +90,7 @@
   pointer-events: none;
   user-select: none;
   text-align: center;
+  white-space: nowrap;
   --text-color-primary: var(--knob-label-text-color);
 
   span {
