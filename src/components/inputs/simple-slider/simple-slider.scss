@@ -44,6 +44,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 1;
   }
 
   &__progress {
@@ -54,6 +55,7 @@
     background-color: var(--simple-slider-progress-color);
     height: 100%;
     pointer-events: none;
+    z-index: 2;
   }
 
   &__gamut-overlay {

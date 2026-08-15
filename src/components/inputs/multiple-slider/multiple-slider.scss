@@ -58,6 +58,17 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 1;
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    border-radius: var(--multiple-slider-radius);
+    background-color: var(--multiple-slider-progress-color);
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
   }
 
   &__gamut-overlay {
@@ -73,15 +84,6 @@
     );
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    pointer-events: none;
-  }
-
-  &__progress {
-    position: absolute;
-    top: 0;
-    border-radius: var(--multiple-slider-radius);
-    background-color: var(--multiple-slider-progress-color);
-    height: 100%;
     pointer-events: none;
   }
 
