@@ -2,8 +2,15 @@ import React from 'react'
 import { doClassnames, doMap } from '@unoff/utils'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
+import {
+  buildGamutOverlayMask,
+  buildGradientBackground,
+  GradientTrackStop,
+} from '@components/inputs/shared/gradient-track'
 import Knob from '@components/actions/knob/Knob'
 import './simple-slider.scss'
+
+export type SimpleSliderGradientStop = GradientTrackStop
 
 export interface SimpleSliderProps {
   /**
@@ -33,12 +40,24 @@ export interface SimpleSliderProps {
   step?: number
   /**
    * Colors for gradient display
+   * @deprecated Prefer `gradient` for a multi-stop, out-of-gamut-aware track. Kept for existing 2-stop consumers.
    */
   colors?: {
     /** Start color */
     min: string
     /** End color */
     max: string
+  }
+  /**
+   * Gradient track(s), e.g. sampled from a color engine across the
+   * slider's domain. Takes precedence over `colors` when set.
+   *
+   * A single track fills the whole range, same as before. More than one
+   * track stacks each as a thin horizontal band (e.g. one per source color
+   * in a palette) and the range grows taller to keep every band legible.
+   */
+  gradient?: {
+    tracks: SimpleSliderGradientStop[][]
   }
   /**
    * Whether to show a progress bar from the start to the current value
@@ -94,6 +113,8 @@ export interface SimpleSliderState {
   isTooltipDisplay: boolean
 }
 
+export { buildGradientBackground, buildGamutOverlayMask }
+
 export default class SimpleSlider extends React.Component<
   SimpleSliderProps,
   SimpleSliderState
@@ -126,8 +147,7 @@ export default class SimpleSlider extends React.Component<
   // Handlers
   validHandler = (
     e:
-      | React.FocusEvent<HTMLInputElement>
-      | React.KeyboardEvent<HTMLInputElement>
+      React.FocusEvent<HTMLInputElement> | React.KeyboardEvent<HTMLInputElement>
   ) => {
     const { min, max, feature, onChange, step = 1 } = this.props
     const target = e.target as HTMLInputElement
@@ -271,6 +291,49 @@ export default class SimpleSlider extends React.Component<
       )
   }
 
+  GradientTracks = () => {
+    const { gradient } = this.props
+    if (gradient === undefined || gradient.tracks.length === 0) return null
+
+    const { tracks } = gradient
+    const bandHeight = 100 / tracks.length
+
+    return (
+      <div
+        className="simple-slider__gradient-container"
+        role="presentation"
+      >
+        {tracks.map((stops, index) => {
+          const mask = buildGamutOverlayMask(stops)
+
+          return (
+            <div
+              key={index}
+              className="simple-slider__gradient-track"
+              role="presentation"
+              style={{
+                top: `${index * bandHeight}%`,
+                height: `${bandHeight}%`,
+                background: buildGradientBackground(stops),
+              }}
+            >
+              {mask !== undefined && (
+                <div
+                  className="simple-slider__gamut-overlay"
+                  role="presentation"
+                  style={{
+                    WebkitMaskImage: mask,
+                    maskImage: mask,
+                  }}
+                />
+              )}
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
   // Render
   render() {
     const {
@@ -280,6 +343,7 @@ export default class SimpleSlider extends React.Component<
       min,
       max,
       colors,
+      gradient,
       feature,
       hasPadding,
       isBlocked,
@@ -288,6 +352,12 @@ export default class SimpleSlider extends React.Component<
       onBlock,
     } = this.props
     const { isTooltipDisplay } = this.state
+    const hasTracks = gradient !== undefined && gradient.tracks.length > 0
+    const background = hasTracks
+      ? undefined
+      : colors !== undefined
+        ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
+        : undefined
 
     return (
       <div
@@ -303,14 +373,16 @@ export default class SimpleSlider extends React.Component<
           className="simple-slider__range"
           role="presentation"
           style={{
-            background:
-              colors !== undefined
-                ? `linear-gradient(90deg, ${colors.min}, ${colors.max})`
-                : undefined,
+            background,
           }}
           onMouseDown={undefined}
         >
           <this.Progress />
+          <this.GradientTracks />
+          <div
+            className="simple-slider__border"
+            role="presentation"
+          />
           <Knob
             id={id}
             shortId={label}

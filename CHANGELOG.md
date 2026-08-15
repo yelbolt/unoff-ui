@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.7] - 2026-08-16
+
+### Added
+
+- **`SimpleSlider` / `MultipleSlider` — `gradient` prop**: renders a multi-stop, out-of-gamut-aware track instead of the old two-color `colors` gradient. Accepts `{ tracks: GradientTrackStop[][] }` — a single track fills the whole range exactly as `colors` did; more than one track stacks each as a thin horizontal band (e.g. one per source color in a palette), staying within the slider's normal height rather than growing it, so bands get thinner instead. Each stop is `{ offset, color, outOfGamut? }`; consecutive stops flagged `outOfGamut` render a diagonal hachure overlay over that portion of the track.
+- **Shared gradient-track module**: `src/components/inputs/shared/gradient-track.ts` — the `GradientTrackStop` type plus `buildGradientBackground`/`buildGamutOverlayMask` helpers, extracted so `SimpleSlider` and `MultipleSlider` share the exact same gradient and hachure logic instead of duplicating it. `SimpleSlider` re-exports `buildGradientBackground`, `buildGamutOverlayMask`, and `SimpleSliderGradientStop` (now an alias of `GradientTrackStop`) for existing consumers of its public API.
+- **`SimpleSlider` / `MultipleSlider` — rounded, clipped gradient layer**: gradient tracks now render inside a dedicated `.simple-slider__gradient-container` / `.multiple-slider__gradient-container` (`overflow: hidden`, matching border-radius), so multi-track bands respect the track's rounded corners instead of squaring them off.
+- **`SimpleSlider` / `MultipleSlider` — `.simple-slider__border` / `.multiple-slider__border`**: the track's inset border is now painted as its own layer, above any gradient track backgrounds. Previously the border lived directly on `.simple-slider__range` / `.multiple-slider__range` and was silently painted underneath — and hidden by — gradient bands, since those are DOM children painted on top of their parent's own box-shadow.
+- **`SimpleSlider` / `MultipleSlider` stories**: `GradientTrack`, `GradientWithOutOfGamut`, and `StackedGradientTracks` added to both `Components/Inputs/Simple Slider` and `Components/Inputs/Multiple Slider`, demonstrating a single-track hue sweep, an out-of-gamut hachure, and three stacked tracks respectively.
+
+### Changed
+
+- **`SimpleSlider` / `MultipleSlider` — `colors` prop**: marked `@deprecated` in favor of `gradient`. Still fully supported as a two-color fallback gradient for existing consumers, and takes over automatically whenever `gradient` is unset.
+- **`SimpleSlider` / `MultipleSlider` — hachure pattern**: tightened and densified for legibility on thin/stacked tracks — `repeating-linear-gradient` cycle reduced from 6px to 1.5px, opacity raised to 48%.
+
 ## [1.24.6] - 2026-08-13
 
 ### Added

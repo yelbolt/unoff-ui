@@ -10,7 +10,7 @@
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{size.pos.xsmall}",
         "$type": "dimension"
       },
       "left": {

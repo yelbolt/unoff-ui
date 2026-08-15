@@ -1,7 +1,35 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import SimpleSlider from '@components/inputs/simple-slider/SimpleSlider'
+import SimpleSlider, {
+  SimpleSliderGradientStop,
+} from '@components/inputs/simple-slider/SimpleSlider'
+
+const buildHueSweepStops = (
+  steps: number,
+  baseHue = 0
+): SimpleSliderGradientStop[] =>
+  Array.from({ length: steps }, (_, i) => {
+    const t = steps === 1 ? 0 : i / (steps - 1)
+    const hue = Math.round((baseHue + t * 360) % 360)
+
+    return { offset: t, color: `hsl(${hue}, 70%, 55%)` }
+  })
+
+const buildChromaSweepWithGamutStops = (
+  steps: number
+): SimpleSliderGradientStop[] =>
+  Array.from({ length: steps }, (_, i) => {
+    const t = steps === 1 ? 0 : i / (steps - 1)
+    const saturation = Math.round(t * 100)
+    const lightness = 55
+
+    return {
+      offset: t,
+      color: `hsl(210, ${saturation}%, ${lightness}%)`,
+      outOfGamut: t > 0.7,
+    }
+  })
 
 const meta: Meta<typeof SimpleSlider> = {
   title: 'Components/Inputs/Simple Slider',
@@ -90,4 +118,77 @@ export const AgeSelect: Story = {
 
     await expect(args.onChange).toHaveBeenCalled()
   },
+}
+
+export const GradientTrack: Story = {
+  args: {
+    id: 'hue-shift',
+    label: 'Hue shift',
+    value: 0,
+    min: -180,
+    max: 180,
+    step: 1,
+    colors: undefined,
+    gradient: {
+      tracks: [buildHueSweepStops(12)],
+    },
+    hasProgressBar: false,
+    hasPadding: true,
+    feature: 'SHIFT_HUE',
+    isBlocked: false,
+    isDisabled: false,
+    isNew: false,
+    onChange: fn(),
+  },
+  argTypes: {
+    feature: { control: false },
+    gradient: { control: false },
+  },
+  render: AgeSelect.render,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const slider = canvas.getByRole('slider')
+    await expect(slider).toBeInTheDocument()
+  },
+}
+
+export const GradientWithOutOfGamut: Story = {
+  args: {
+    ...GradientTrack.args,
+    id: 'chroma-shift',
+    label: 'Chroma shift',
+    value: 100,
+    min: 0,
+    max: 200,
+    feature: 'SHIFT_CHROMA',
+    gradient: {
+      tracks: [buildChromaSweepWithGamutStops(12)],
+    },
+  },
+  argTypes: {
+    ...GradientTrack.argTypes,
+  },
+  render: AgeSelect.render,
+  play: GradientTrack.play,
+}
+
+export const StackedGradientTracks: Story = {
+  args: {
+    ...GradientTrack.args,
+    id: 'palette-hue-shift',
+    label: 'Hue shift (multiple source colors)',
+    gradient: {
+      tracks: [
+        buildHueSweepStops(10, 0),
+        buildHueSweepStops(10, 140),
+        buildHueSweepStops(10, 260),
+      ],
+    },
+  },
+  argTypes: {
+    ...GradientTrack.argTypes,
+  },
+  render: AgeSelect.render,
+  play: GradientTrack.play,
 }
