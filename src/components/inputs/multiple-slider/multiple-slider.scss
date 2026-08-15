@@ -52,6 +52,7 @@
       var(--multiple-slider-border-color);
     border-radius: var(--multiple-slider-radius);
     pointer-events: none;
+    z-index: 3;
   }
 
   &__gradient-track {
