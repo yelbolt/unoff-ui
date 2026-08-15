@@ -64,13 +64,8 @@
     mask-repeat: no-repeat;
     inset: 0;
     border-radius: var(--simple-slider-radius);
-    background-image: repeating-linear-gradient(
-      135deg,
-      var(--simple-slider-background-color) var(--size-null),
-      var(--simple-slider-background-color) var(--size-pos-unit),
-      transparent var(--size-pos-unit),
-      transparent var(--size-pos-xunit)
-    );
+    background-color: var(--simple-slider-background-color);
+    opacity: var(--alpha-700);
     pointer-events: none;
   }
 
