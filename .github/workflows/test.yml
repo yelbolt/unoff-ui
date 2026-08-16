@@ -13,7 +13,7 @@ jobs:
     name: Test UI (deployment)
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      image: mcr.microsoft.com/playwright:v1.61.1-noble
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
     name: Test UI (PR)
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.57.0-noble
+      image: mcr.microsoft.com/playwright:v1.61.1-noble
     steps:
       - name: Checkout
         uses: actions/checkout@v4

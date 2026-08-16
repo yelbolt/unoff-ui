@@ -101,7 +101,7 @@
     "eslint-plugin-storybook": "10.3.4",
     "glob": "^10.3.12",
     "jsdom": "^24.0.0",
-    "playwright": "^1.57.0",
+    "playwright": "1.61.1",
     "prettier": "^3.2.5",
     "prettier-plugin-css-order": "^2.1.2",
     "sass": "^1.77.0",
