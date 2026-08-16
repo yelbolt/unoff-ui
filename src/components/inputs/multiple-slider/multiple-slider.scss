@@ -38,11 +38,18 @@
     }
   }
 
+  &__knobs {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+  }
+
   &__gradient-container {
     position: absolute;
     inset: 0;
     border-radius: var(--multiple-slider-radius);
     overflow: hidden;
+    pointer-events: none;
   }
 
   &__border {

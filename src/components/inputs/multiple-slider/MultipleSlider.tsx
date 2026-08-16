@@ -608,49 +608,52 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
           className="multiple-slider__border"
           role="presentation"
         />
-        {Object.entries(scale)
-          .sort((a, b) => a[1] - b[1])
-          .map((item, index, original) => (
-            <Knob
-              key={item[0]}
-              id={item[0]}
-              shortId={item[0]}
-              value={item[1]}
-              offset={doMap(item[1], range.min, range.max, 0, 100)}
-              min={range.min.toString()}
-              max={range.max.toString()}
-              helper={
-                index === 0 || index === original.length - 1
-                  ? {
-                      label: tips.minMax,
-                      type: 'MULTI_LINE',
-                    }
-                  : undefined
-              }
-              canBeTyped
-              isDisplayed={isTooltipDisplay[index]}
-              isBlocked={isBlocked}
-              onBlock={onBlock}
-              style={{
-                pointerEvents:
-                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
-                    ? 'none'
-                    : 'auto',
-              }}
-              onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftRight(e.target as HTMLElement, e.shiftKey)
-              }}
-              onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
-              }}
-              onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-                this.onGrab(e)
-                ;(e.target as HTMLElement).focus()
-              }}
-              onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
-              aria-valuenow={item[1]}
-            />
-          ))}
+        <div className="multiple-slider__knobs">
+          {Object.entries(scale)
+            .sort((a, b) => a[1] - b[1])
+            .map((item, index, original) => (
+              <Knob
+                key={item[0]}
+                id={item[0]}
+                shortId={item[0]}
+                value={item[1]}
+                offset={doMap(item[1], range.min, range.max, 0, 100)}
+                min={range.min.toString()}
+                max={range.max.toString()}
+                helper={
+                  index === 0 || index === original.length - 1
+                    ? {
+                        label: tips.minMax,
+                        type: 'MULTI_LINE',
+                      }
+                    : undefined
+                }
+                canBeTyped
+                isDisplayed={isTooltipDisplay[index]}
+                isBlocked={isBlocked}
+                onBlock={onBlock}
+                style={{
+                  pointerEvents:
+                    this.state.activeKnobId &&
+                    this.state.activeKnobId !== item[0]
+                      ? 'none'
+                      : 'auto',
+                }}
+                onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                  this.onShiftRight(e.target as HTMLElement, e.shiftKey)
+                }}
+                onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                  this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
+                }}
+                onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
+                  this.onGrab(e)
+                  ;(e.target as HTMLElement).focus()
+                }}
+                onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
+                aria-valuenow={item[1]}
+              />
+            ))}
+        </div>
       </div>
     )
   }
@@ -688,53 +691,56 @@ export default class Slider extends React.Component<SliderProps, SliderState> {
           className="multiple-slider__border"
           role="presentation"
         />
-        {Object.entries(scale)
-          .sort((a, b) => a[1] - b[1])
-          .map((item, index, original) => (
-            <Knob
-              key={item[0]}
-              id={item[0]}
-              shortId={item[0]}
-              value={item[1]}
-              offset={doMap(item[1], range.min, range.max, 0, 100)}
-              min={range.min.toString()}
-              max={range.max.toString()}
-              helper={
-                index === 0 || index === original.length - 1
-                  ? {
-                      label: tips.minMax,
-                      type: 'MULTI_LINE',
-                    }
-                  : undefined
-              }
-              canBeTyped
-              isDisplayed={isTooltipDisplay[index]}
-              isBlocked={isBlocked}
-              onBlock={onBlock}
-              style={{
-                pointerEvents:
-                  this.state.activeKnobId && this.state.activeKnobId !== item[0]
-                    ? 'none'
-                    : 'auto',
-              }}
-              onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftRight(e.target as HTMLElement, e.shiftKey)
-              }}
-              onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
-              }}
-              onDelete={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                if (stops.list.length > (stops.min ?? Infinity))
-                  this.onDelete(e.target as HTMLElement)
-              }}
-              onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-                this.onGrab(e)
-                ;(e.target as HTMLElement).focus()
-              }}
-              onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
-              aria-valuenow={item[1]}
-            />
-          ))}
+        <div className="multiple-slider__knobs">
+          {Object.entries(scale)
+            .sort((a, b) => a[1] - b[1])
+            .map((item, index, original) => (
+              <Knob
+                key={item[0]}
+                id={item[0]}
+                shortId={item[0]}
+                value={item[1]}
+                offset={doMap(item[1], range.min, range.max, 0, 100)}
+                min={range.min.toString()}
+                max={range.max.toString()}
+                helper={
+                  index === 0 || index === original.length - 1
+                    ? {
+                        label: tips.minMax,
+                        type: 'MULTI_LINE',
+                      }
+                    : undefined
+                }
+                canBeTyped
+                isDisplayed={isTooltipDisplay[index]}
+                isBlocked={isBlocked}
+                onBlock={onBlock}
+                style={{
+                  pointerEvents:
+                    this.state.activeKnobId &&
+                    this.state.activeKnobId !== item[0]
+                      ? 'none'
+                      : 'auto',
+                }}
+                onShiftRight={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                  this.onShiftRight(e.target as HTMLElement, e.shiftKey)
+                }}
+                onShiftLeft={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                  this.onShiftLeft(e.target as HTMLElement, e.shiftKey)
+                }}
+                onDelete={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                  if (stops.list.length > (stops.min ?? Infinity))
+                    this.onDelete(e.target as HTMLElement)
+                }}
+                onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
+                  this.onGrab(e)
+                  ;(e.target as HTMLElement).focus()
+                }}
+                onValidStopValue={(stopId, e) => this.validHandler(stopId, e)}
+                aria-valuenow={item[1]}
+              />
+            ))}
+        </div>
       </div>
     )
   }
