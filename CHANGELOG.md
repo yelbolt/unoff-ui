@@ -5,11 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.24.9] - 2026-08-17
+
+### Fixed
+
+- **`FormItem`**: Remove the `margin-left` style property if the screen width is less than `460px`.
+
 ## [1.24.8] - 2026-08-16
 
 ### Fixed
 
-- **`Multiple/Slider`**: Get back the native sliding behavior, using shortcut to shift or distribute every knob. The knobs have been gathered into one single `<div>` in order to allow the `onGrab` to operate on sliding then distributing. The adding of more absolute layers broke it because `onGrab` targets the siblings including those additional layers, that prevent the knobs from sliding at pace.
+- **`MultipleSlider`**: Get back the native sliding behavior, using shortcut to shift or distribute every knob. The knobs have been gathered into one single `<div>` in order to allow the `onGrab` to operate on sliding then distributing. The adding of more absolute layers broke it because `onGrab` targets the siblings including those additional layers, that prevent the knobs from sliding at pace.
 
 ## [1.24.7] - 2026-08-16
 

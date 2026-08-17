@@ -102,9 +102,5 @@
     .form-item__label {
       flex: 1;
     }
-
-    .form-item__input {
-      margin-left: calc(var(--form-item-padding-left) * -1);
-    }
   }
 }
