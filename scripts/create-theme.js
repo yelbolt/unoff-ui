@@ -14,22 +14,20 @@ const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 const mkdir = promisify(fs.mkdir)
 const copyFile = promisify(fs.copyFile)
+const rename = promisify(fs.rename)
 
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 })
 
-// Get current directory in ESM
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const rootDir = path.join(__dirname, '..')
 
-// Directories
 const TERRAZZO_DIR = path.join(rootDir, 'terrazzo')
 const TOKENS_PLATFORMS_DIR = path.join(rootDir, 'tokens', 'platforms')
 
-// Source theme to copy from - using figma for everything
 const SOURCE_COLOR_THEME = 'figma'
 
 /**
@@ -86,7 +84,6 @@ async function ensureDirectories(themeName) {
   const iconsDir = path.join(rootDir, 'src', 'icons', themeName)
 
   try {
-    // Create tokens platform directory if it doesn't exist
     if (!fs.existsSync(tokenDir)) {
       await mkdir(tokenDir, { recursive: true })
       log.success(
@@ -94,7 +91,6 @@ async function ensureDirectories(themeName) {
       )
     }
 
-    // Create terrazzo directory if it doesn't exist
     if (!fs.existsSync(terrazzoDir)) {
       await mkdir(terrazzoDir, { recursive: true })
       log.success(`Created terrazzo directory for ${log.highlight(themeName)}`)
@@ -121,10 +117,8 @@ async function updateStorybookPreview(themeName) {
   const previewPath = path.join(rootDir, '.storybook', 'preview.tsx')
 
   try {
-    // Read the preview file
     let previewContent = await readFile(previewPath, 'utf8')
 
-    // 1. Add the new theme to the toolbar items list
     const themesItemsRegex = /(items: \[.*?'sketch'.*?)(\],)/
     const updatedThemesItems = `$1, '${themeName}'$2`
     previewContent = previewContent.replace(
@@ -132,7 +126,6 @@ async function updateStorybookPreview(themeName) {
       updatedThemesItems
     )
 
-    // 2. Add the light and dark modes for the new theme with proper indentation
     const modesItemsRegex = new RegExp(
       `(items: \\[\\s*.*?'${SOURCE_COLOR_THEME}-dark',\\s*)`,
       's'
@@ -140,7 +133,6 @@ async function updateStorybookPreview(themeName) {
     const updatedModesItems = `$1  '${themeName}-light',\n          '${themeName}-dark',\n        `
     previewContent = previewContent.replace(modesItemsRegex, updatedModesItems)
 
-    // 3. Add background colors for the new theme modes with proper indentation
     const backgroundMapRegex = new RegExp(
       `(const backgroundMap = \\{.*?'${SOURCE_COLOR_THEME}-dark': '#202022',\\s*)`,
       's'
@@ -173,19 +165,20 @@ async function updateStorybookPreview(themeName) {
  * @returns {string} Updated content
  */
 function replaceAllThemeNames(content, newThemeName) {
-  // List of all possible theme names to replace
   const existingThemes = ['figma', 'penpot', 'sketch']
 
   let updatedContent = content
 
-  // Replace all patterns for each theme
   for (const oldTheme of existingThemes)
     updatedContent = updatedContent
       .replace(
         new RegExp(`\\b${oldTheme}-light\\b`, 'g'),
         `${newThemeName}-light`
       )
-      .replace(new RegExp(`\\b${oldTheme}-dark\\b`, 'g'), `${newThemeName}-dark`)
+      .replace(
+        new RegExp(`\\b${oldTheme}-dark\\b`, 'g'),
+        `${newThemeName}-dark`
+      )
       // Data attributes with double quotes
       .replace(
         new RegExp(`\\[data-theme="${oldTheme}"\\]`, 'g'),
@@ -280,13 +273,11 @@ async function createTerrazzoFiles(themeName) {
   const targetTerrazzoDir = path.join(TERRAZZO_DIR, themeName)
 
   try {
-    // Create the target directory if it doesn't exist
     if (!fs.existsSync(targetTerrazzoDir)) {
       await mkdir(targetTerrazzoDir, { recursive: true })
       log.success(`Created Terrazzo directory for ${log.highlight(themeName)}`)
     }
 
-    // Create the components directory if needed
     const targetComponentsDir = path.join(targetTerrazzoDir, 'components')
     if (!fs.existsSync(targetComponentsDir)) {
       await mkdir(targetComponentsDir, { recursive: true })
@@ -295,26 +286,19 @@ async function createTerrazzoFiles(themeName) {
       )
     }
 
-    // Process root Terrazzo configuration files
     const terrazzFiles = await readdir(sourceTerrazzoDir)
 
     for (const file of terrazzFiles) {
       const sourceFilePath = path.join(sourceTerrazzoDir, file)
       const targetFilePath = path.join(targetTerrazzoDir, file)
 
-      // Only copy files (not directories) that are JavaScript files
       if (fs.statSync(sourceFilePath).isFile() && file.endsWith('.js')) {
-        // Read the source file content
         let content = await readFile(sourceFilePath, 'utf8')
 
-        // Replace all theme names with the new theme name
         content = replaceAllThemeNames(content, themeName)
 
-        // For text and colors terrazzo files, ensure icon.json is included but icon tokens are excluded
         if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js')
           if (!content.includes(`./tokens/platforms/${themeName}/icon.json`))
-            // Check if icon.json is already included in the tokens array
-            // Add icon.json to the tokens array
             content = content.replace(
               /tokens: \[([\s\S]*?)\]/,
               (match, tokensContent) => {
@@ -322,7 +306,6 @@ async function createTerrazzoFiles(themeName) {
               }
             )
 
-        // Write the updated content to the target file
         await writeFile(targetFilePath, content)
         log.step(
           `Created Terrazzo configuration file: ${log.path(path.relative(rootDir, targetFilePath))}`
@@ -330,7 +313,6 @@ async function createTerrazzoFiles(themeName) {
       }
     }
 
-    // Process component Terrazzo configuration files
     const sourceComponentsDir = path.join(sourceTerrazzoDir, 'components')
 
     if (fs.existsSync(sourceComponentsDir)) {
@@ -340,15 +322,12 @@ async function createTerrazzoFiles(themeName) {
         const sourceFilePath = path.join(sourceComponentsDir, file)
         const targetFilePath = path.join(targetComponentsDir, file)
 
-        // Only copy files that are JavaScript files
         if (fs.statSync(sourceFilePath).isFile() && file.endsWith('.js')) {
           // Read the source file content
           let content = await readFile(sourceFilePath, 'utf8')
 
-          // Replace all theme names with the new theme name
           content = replaceAllThemeNames(content, themeName)
 
-          // Write the updated content to the target file
           await writeFile(targetFilePath, content)
           log.step(
             `Created Terrazzo component file: ${log.path(path.relative(rootDir, targetFilePath))}`
@@ -374,14 +353,11 @@ async function createTerrazzoFiles(themeName) {
  */
 async function updateScssImports(themeName) {
   try {
-    // Define paths to look for SCSS files
     const stylesDir = path.join(rootDir, 'src', 'styles')
     const componentDir = path.join(rootDir, 'src', 'components')
 
-    // Process files in src/styles
     await processStylesDirectory(stylesDir, themeName)
 
-    // Process files in src/components recursively
     await processComponentsDirectory(componentDir, themeName)
 
     log.success(
@@ -402,7 +378,6 @@ async function updateScssImports(themeName) {
  */
 async function processStylesDirectory(stylesDir, themeName) {
   try {
-    // Process each subdirectory in styles (tokens, icons, texts, etc.)
     const entries = await readdir(stylesDir, { withFileTypes: true })
 
     for (const entry of entries)
@@ -410,7 +385,6 @@ async function processStylesDirectory(stylesDir, themeName) {
         const dirPath = path.join(stylesDir, entry.name)
         const files = await readdir(dirPath)
 
-        // Process each .scss file in the directory
         for (const file of files)
           if (file.endsWith('.scss') || file.endsWith('.module.scss')) {
             const filePath = path.join(dirPath, file)
@@ -441,10 +415,8 @@ async function processComponentsDirectory(componentDir, themeName) {
       const fullPath = path.join(componentDir, entry.name)
 
       if (entry.isDirectory()) {
-        // Check for styles directory or .scss files
         const subEntries = await readdir(fullPath)
 
-        // Check if this component has a styles directory
         const stylesDir = subEntries.find((item) => item === 'styles')
         if (stylesDir) {
           const stylesDirPath = path.join(fullPath, 'styles')
@@ -458,14 +430,12 @@ async function processComponentsDirectory(componentDir, themeName) {
           }
         }
 
-        // Check for scss files directly in the component directory
         for (const file of subEntries)
           if (file.endsWith('.scss')) {
             const filePath = path.join(fullPath, file)
             await updateImportsInFile(filePath, themeName)
           }
 
-        // Recurse into subdirectories
         await processComponentsDirectory(fullPath, themeName)
       }
     }
@@ -484,30 +454,24 @@ async function processComponentsDirectory(componentDir, themeName) {
  */
 async function updateImportsInFile(filePath, themeName) {
   try {
-    // Read file content
     const content = await readFile(filePath, 'utf8')
 
-    // Check if the file has an import for the source theme
     const sourceImportRegex = new RegExp(
       `@import ['"](styles/)?${SOURCE_COLOR_THEME}['"];`,
       'g'
     )
 
     if (sourceImportRegex.test(content)) {
-      // This file already imports the source theme
-      // Check if it already imports the new theme as well
       const newThemeImportRegex = new RegExp(
         `@import ['"](styles/)?${themeName}['"];`,
         'g'
       )
 
       if (!newThemeImportRegex.test(content)) {
-        // Add import for the new theme after the source theme import
         const updatedContent = content.replace(sourceImportRegex, (match) => {
           return `${match}\n@import ${match.includes('styles/') ? `'styles/${themeName}'` : `'${themeName}'`};`
         })
 
-        // Write the updated content back to the file
         await writeFile(filePath, updatedContent)
         log.step(
           `Added ${log.highlight(themeName)} import to ${log.path(path.relative(rootDir, filePath))}`
@@ -545,15 +509,12 @@ async function createThemeModuleFiles(themeName) {
   )
 
   try {
-    // Ensure the modules directory exists
     if (!fs.existsSync(tokensModulesDir)) {
       await mkdir(tokensModulesDir, { recursive: true })
       log.success(`Created tokens modules directory`)
     }
 
-    // Create the types module file
-    const typesContent = `@import '../${themeName}-types.scss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    const typesContent = `@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :export {
   module: '${themeName}-types';
@@ -564,7 +525,6 @@ async function createThemeModuleFiles(themeName) {
       `Created ${log.highlight(themeName)} types module at ${log.path(path.relative(rootDir, typesModulePath))}`
     )
 
-    // Create the colors module file
     const colorsContent = `@import '../${themeName}-colors.scss';
 
 :export {
@@ -591,13 +551,11 @@ async function updateThemeStylesImports(themeName) {
   const themeStylesPath = path.join(rootDir, '.storybook', 'theme-styles.scss')
 
   try {
-    // Check if theme-styles.scss exists
     if (!fs.existsSync(themeStylesPath)) {
       log.warn(
         `${log.path('.storybook/theme-styles.scss')} does not exist. Creating it with initial imports.`
       )
 
-      // Create initial theme-styles.scss with imports for the new theme
       const initialContent = `@import '../src/styles/tokens/modules/${themeName}-colors.module.scss';\n@import '../src/styles/tokens/modules/${themeName}-types.module.scss';\n`
       await writeFile(themeStylesPath, initialContent)
       log.success(
@@ -606,10 +564,8 @@ async function updateThemeStylesImports(themeName) {
       return
     }
 
-    // Read the current content of theme-styles.scss
     const themeStylesContent = await readFile(themeStylesPath, 'utf8')
 
-    // Check if the imports for this theme are already present
     if (themeStylesContent.includes(`${themeName}-colors.module.scss`)) {
       log.info(
         `Imports for ${log.highlight(themeName)} already exist in theme-styles.scss`
@@ -617,29 +573,24 @@ async function updateThemeStylesImports(themeName) {
       return
     }
 
-    // Look for the last import statement to add our imports after it
     const lastImportIndex = themeStylesContent.lastIndexOf('@import')
     if (lastImportIndex === -1)
       throw new Error(
         'Could not find any @import statements in theme-styles.scss'
       )
 
-    // Find the end of the last import statement (the line ending)
     const endOfLastImport = themeStylesContent.indexOf(';', lastImportIndex) + 1
 
-    // Create the new import statements for the new theme
     const newImports = `
 
 @import '../src/styles/tokens/modules/${themeName}-colors.module.scss';
 @import '../src/styles/tokens/modules/${themeName}-types.module.scss';`
 
-    // Insert the new imports after the last import statement
     const updatedContent =
       themeStylesContent.slice(0, endOfLastImport) +
       newImports +
       themeStylesContent.slice(endOfLastImport)
 
-    // Write the updated content back to the file
     await writeFile(themeStylesPath, updatedContent)
     log.success(
       `Added ${log.highlight(themeName)} imports to theme-styles.scss`
@@ -661,7 +612,6 @@ async function copyIconsFromFigma(themeName) {
   const targetIconsDir = path.join(rootDir, 'src', 'icons', themeName)
 
   try {
-    // Check if source icons directory exists
     if (!fs.existsSync(sourceIconsDir)) {
       log.warn(
         `Source icons directory ${log.path(sourceIconsDir)} does not exist. Skipping icons copy.`
@@ -669,13 +619,11 @@ async function copyIconsFromFigma(themeName) {
       return
     }
 
-    // Create the target directory if it doesn't exist
     if (!fs.existsSync(targetIconsDir)) {
       await mkdir(targetIconsDir, { recursive: true })
       log.success(`Created icons directory for ${log.highlight(themeName)}`)
     }
 
-    // Copy all SVG files from the source icons directory
     const iconFiles = await readdir(sourceIconsDir)
 
     for (const file of iconFiles)
@@ -704,7 +652,6 @@ async function updateIconPaths(themeName) {
   const iconJsonPath = path.join(TOKENS_PLATFORMS_DIR, themeName, 'icon.json')
 
   try {
-    // Check if icon.json exists
     if (!fs.existsSync(iconJsonPath)) {
       log.warn(
         `Icon JSON file ${log.path(iconJsonPath)} does not exist. Skipping icon paths update.`
@@ -712,10 +659,8 @@ async function updateIconPaths(themeName) {
       return
     }
 
-    // Read the icon.json file
     let iconContent = await readFile(iconJsonPath, 'utf8')
 
-    // Replace all icon paths from source theme to new theme
     const sourceIconPath = `/src/icons/${SOURCE_COLOR_THEME}/`
     const targetIconPath = `/src/icons/${themeName}/`
 
@@ -724,7 +669,6 @@ async function updateIconPaths(themeName) {
       targetIconPath
     )
 
-    // Write the updated content back to the file
     await writeFile(iconJsonPath, iconContent)
     log.success(
       `Updated icon paths in ${log.highlight('icon.json')} for theme ${log.highlight(themeName)}`
@@ -746,7 +690,6 @@ async function copyPlatformTokens(themeName) {
   const targetTokensDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
 
   try {
-    // Create the target directory if it doesn't exist
     if (!fs.existsSync(targetTokensDir)) {
       await mkdir(targetTokensDir, { recursive: true })
       log.success(
@@ -769,13 +712,11 @@ async function copyPlatformTokens(themeName) {
         const targetPath = path.join(targetDir, entry.name)
 
         if (entry.isDirectory()) {
-          // Create directory and recurse into it
           if (!fs.existsSync(targetPath))
             await mkdir(targetPath, { recursive: true })
 
           await copyFilesRecursively(sourcePath, targetPath)
         } else if (entry.isFile()) {
-          // Copy the file
           await copyFile(sourcePath, targetPath)
           log.step(
             `Copied token file: ${log.path(path.relative(rootDir, targetPath))}`
@@ -795,6 +736,152 @@ async function copyPlatformTokens(themeName) {
   }
 }
 
+/**
+ * The copied mode files (modes/{source}-light.tokens.json etc.) still carry the
+ * source theme's filename and internal token namespace (root key "figma", and
+ * alias references like "{figma.color.bg.default}"). Left as-is, the new theme's
+ * own components would keep resolving to the SOURCE theme's colors forever,
+ * silently ignoring anything the user edits in the new theme's token files.
+ * This renames the mode files and rewrites the namespace so the new theme's
+ * tokens resolve to themselves.
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function fixCopiedTokenNamespace(themeName) {
+  const themeTokensDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
+  const modesDir = path.join(themeTokensDir, 'modes')
+
+  try {
+    if (fs.existsSync(modesDir)) {
+      const modeFiles = await readdir(modesDir)
+
+      for (const file of modeFiles)
+        if (file.startsWith(`${SOURCE_COLOR_THEME}-`)) {
+          const newFileName = file.replace(
+            `${SOURCE_COLOR_THEME}-`,
+            `${themeName}-`
+          )
+          await rename(
+            path.join(modesDir, file),
+            path.join(modesDir, newFileName)
+          )
+          log.step(
+            `Renamed ${log.path(`modes/${file}`)} to ${log.path(`modes/${newFileName}`)}`
+          )
+        }
+    }
+
+    let renamedRootKeys = 0
+    let renamedAliasRefs = 0
+
+    /** @param {string} dir */
+    const walkAndFix = async (dir) => {
+      const entries = await readdir(dir, { withFileTypes: true })
+
+      for (const entry of entries) {
+        const entryPath = path.join(dir, entry.name)
+
+        if (entry.isDirectory()) await walkAndFix(entryPath)
+        else if (entry.isFile() && entry.name.endsWith('.json')) {
+          const content = await readFile(entryPath, 'utf8')
+
+          const rootKeyRegex = new RegExp(`"${SOURCE_COLOR_THEME}":\\s*\\{`)
+          const aliasRefRegex = new RegExp(`\\{${SOURCE_COLOR_THEME}\\.`, 'g')
+
+          let updatedContent = content
+          if (rootKeyRegex.test(updatedContent)) {
+            updatedContent = updatedContent.replace(
+              rootKeyRegex,
+              `"${themeName}": {`
+            )
+            renamedRootKeys += 1
+          }
+          if (aliasRefRegex.test(updatedContent)) {
+            const matches = updatedContent.match(aliasRefRegex)
+            renamedAliasRefs += matches ? matches.length : 0
+            updatedContent = updatedContent.replace(
+              aliasRefRegex,
+              `{${themeName}.`
+            )
+          }
+
+          if (updatedContent !== content)
+            await writeFile(entryPath, updatedContent)
+        }
+      }
+    }
+
+    await walkAndFix(themeTokensDir)
+
+    log.success(
+      `Rewrote token namespace for ${log.highlight(themeName)} (${renamedRootKeys} root key(s), ${renamedAliasRefs} alias reference(s))`
+    )
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error fixing copied token namespace: ${error.message}`)
+    throw error
+  }
+}
+
+/**
+ * Create a {theme}-colors.resolver.json for the new theme, based on the
+ * source theme's resolver, pointing at the renamed mode files. Without this,
+ * terrazzo.color.js would keep building from the SOURCE theme's resolver and
+ * the new theme's color customizations would never reach the SCSS output.
+ * @param {string} themeName - The name of the theme
+ * @returns {Promise<void>}
+ */
+async function createColorResolver(themeName) {
+  const sourceResolverPath = path.join(
+    rootDir,
+    'tokens',
+    `${SOURCE_COLOR_THEME}-colors.resolver.json`
+  )
+  const targetResolverPath = path.join(
+    rootDir,
+    'tokens',
+    `${themeName}-colors.resolver.json`
+  )
+
+  try {
+    if (!fs.existsSync(sourceResolverPath)) {
+      log.warn(
+        `Source resolver ${log.path(sourceResolverPath)} does not exist. Skipping resolver creation.`
+      )
+      return
+    }
+
+    let content = await readFile(sourceResolverPath, 'utf8')
+
+    content = content
+      .replace(
+        new RegExp(`/platforms/${SOURCE_COLOR_THEME}/modes/`, 'g'),
+        `/platforms/${themeName}/modes/`
+      )
+      .replace(
+        new RegExp(`${SOURCE_COLOR_THEME}-light\\.tokens\\.json`, 'g'),
+        `${themeName}-light.tokens.json`
+      )
+      .replace(
+        new RegExp(`${SOURCE_COLOR_THEME}-dark\\.tokens\\.json`, 'g'),
+        `${themeName}-dark.tokens.json`
+      )
+      .replace(
+        /"name": "[^"]+"/,
+        `"name": "${themeName[0].toUpperCase()}${themeName.slice(1)} Colors"`
+      )
+
+    await writeFile(targetResolverPath, content)
+    log.success(
+      `Created color resolver at ${log.path(path.relative(rootDir, targetResolverPath))}`
+    )
+  } catch (err) {
+    const error = err instanceof Error ? err : new Error(String(err))
+    log.error(`Error creating color resolver: ${error.message}`)
+    throw error
+  }
+}
+
 async function main() {
   try {
     log.title('Welcome to the Unoff UI Theme Generator!')
@@ -805,17 +892,17 @@ async function main() {
     const themeName = await askThemeName()
     log.step(`Creating new theme: ${log.highlight(themeName)}`)
 
-    // Execute only necessary tasks (tokens JSON and Terrazzo configs)
     await ensureDirectories(themeName)
     await createTerrazzoFiles(themeName)
     await copyPlatformTokens(themeName)
+    await fixCopiedTokenNamespace(themeName)
+    await createColorResolver(themeName)
     await copyIconsFromFigma(themeName)
     await updateIconPaths(themeName)
     await updateScssImports(themeName)
     await updateStorybookPreview(themeName)
     await createThemeModuleFiles(themeName)
     await updateThemeStylesImports(themeName)
-    // SCSS files will be generated from tokens using the build-scss.js script
 
     log.success(
       `Theme "${log.highlight(themeName)}" has been successfully created!`

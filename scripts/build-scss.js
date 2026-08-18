@@ -33,12 +33,12 @@ import chalk from 'chalk'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 const projectRoot = path.join(__dirname, '..')
-// Process command line arguments
+
 const args = process.argv.slice(2)
-const BUILD_MODE = args.length > 0 // Enable build mode if any arguments are provided
+const BUILD_MODE = args.length > 0
 let THEME = null
 let COMPONENT = null
-let TOKEN_TYPE = null // text, icon, color, typography
+let TOKEN_TYPE = null
 
 // Parse arguments
 args.forEach((arg) => {
@@ -49,8 +49,7 @@ args.forEach((arg) => {
   else if (arg === 'color') TOKEN_TYPE = 'color'
   else if (arg === 'type') TOKEN_TYPE = 'type'
 })
-// If component or token type is specified but no theme, build for all themes
-// Function to find all Terrazzo files
+
 function findTerrazzoFiles(dir) {
   let results = []
   const files = fs.readdirSync(dir, { withFileTypes: true })
@@ -63,7 +62,7 @@ function findTerrazzoFiles(dir) {
   }
   return results
 }
-// Function to group files by theme
+
 function groupFilesByTheme(files) {
   return files.reduce((acc, file) => {
     const relativePath = file.replace(projectRoot, '')
@@ -85,7 +84,7 @@ function groupFilesByTheme(files) {
     return acc
   }, {})
 }
-// Function to execute terrazzo build on a file
+
 async function buildTerrazzoFile(filePath) {
   return new Promise((resolve, reject) => {
     console.log(chalk.blue(`\nBuilding ${filePath}...`))
@@ -104,7 +103,7 @@ async function buildTerrazzoFile(filePath) {
     })
   })
 }
-// Function to display information about Terrazzo files
+
 function displayTerrazzoFiles(groupedFiles) {
   console.log(chalk.bold.blue('\n=== AVAILABLE TERRAZZO FILES ===\n'))
   for (const [theme, files] of Object.entries(groupedFiles)) {
@@ -146,20 +145,18 @@ function displayTerrazzoFiles(groupedFiles) {
   console.log(chalk.cyan('npm run scss:build color'))
   console.log(chalk.cyan('npm run scss:build text\n'))
 }
-// Main function that executes the script
+
 async function main() {
   try {
     const terrazzoDir = path.join(projectRoot, 'terrazzo')
     const terrazzoFiles = findTerrazzoFiles(terrazzoDir)
     const groupedFiles = groupFilesByTheme(terrazzoFiles)
     if (!BUILD_MODE) {
-      // List mode only
       displayTerrazzoFiles(groupedFiles)
       return
     }
-    // Build mode
+
     if (TOKEN_TYPE && !THEME) {
-      // Build a specific token type for all themes
       const tokenDisplayName = TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
       console.log(
         chalk.blue(`\nBuilding ${tokenDisplayName} tokens for all themes...`)
@@ -190,7 +187,6 @@ async function main() {
         )
       )
     } else if (COMPONENT && !THEME) {
-      // Build a specific component for all themes
       console.log(
         chalk.blue(`\nBuilding component ${COMPONENT} for all themes...`)
       )
@@ -239,7 +235,6 @@ async function main() {
         process.exit(1)
       }
       if (TOKEN_TYPE) {
-        // Build a specific token type for a specific theme
         const tokenDisplayName =
           TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
         const tokenFile = themeFiles.tokens.find((t) => t.name === TOKEN_TYPE)
@@ -258,7 +253,6 @@ async function main() {
           )
         )
       } else if (COMPONENT) {
-        // Build a specific component for a specific theme
         const componentFile = themeFiles.components.find(
           (c) => c.name === COMPONENT
         )
@@ -277,7 +271,6 @@ async function main() {
           )
         )
       } else {
-        // Build all files for the theme
         console.log(chalk.blue(`\nBuilding all files for theme ${THEME}...`))
         // First build tokens
         for (const tokenFile of themeFiles.tokens)
@@ -290,7 +283,6 @@ async function main() {
         )
       }
     } else
-      // Build all themes
       for (const [theme, files] of Object.entries(groupedFiles)) {
         console.log(chalk.blue(`\nBuilding all files for theme ${theme}...`))
         // First build tokens
@@ -308,5 +300,5 @@ async function main() {
     process.exit(1)
   }
 }
-// Execute the script
+
 main()
