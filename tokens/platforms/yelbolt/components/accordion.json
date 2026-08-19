@@ -1,0 +1,100 @@
+{
+  "accordion": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.border.disabled.default}",
+        "$type": "color"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.text.secondary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.text.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.icon.secondary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{yelbolt.color.icon.default}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{yelbolt.color.icon.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.icon.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

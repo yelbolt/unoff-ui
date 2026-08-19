@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "width": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "picto": {
+      "color": {
+        "$value": "{yelbolt.color.icon.default}",
+        "$type": "color"
+      }
+    },
+    "letter": {
+      "color": {
+        "$value": "{yelbolt.color.text.default}",
+        "$type": "color"
+      },
+      "textSize": {
+        "$value": "{font.size.xsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

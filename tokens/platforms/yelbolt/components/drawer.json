@@ -1,0 +1,30 @@
+{
+  "drawer": {
+    "background": {
+      "color": {
+        "$value": "{yelbolt.color.bg.default}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.border.default}",
+        "$type": "color"
+      }
+    },
+    "knob": {
+      "size": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "position": {
+        "$value": "{size.neg.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

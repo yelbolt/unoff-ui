@@ -1,0 +1,72 @@
+{
+  "draggableWindow": {
+    "width": {
+      "$value": "296px",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.xxlarge}",
+      "$type": "dimension"
+    },
+    "shadow": {
+      "$value": "{elevation.500ModalWindow}",
+      "$type": "boxShadow"
+    },
+    "background": {
+      "color": {
+        "$value": "{yelbolt.color.bg.default}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{grey.transparent}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "header": {
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{yelbolt.color.border.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "content": {
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

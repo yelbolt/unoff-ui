@@ -1,0 +1,102 @@
+{
+  "simpleItem": {
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      }
+    },
+    "minHeight": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.bg.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{yelbolt.color.bg.hover}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{yelbolt.color.bg.selected.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "radius": {
+        "$value": "{border.radius.small}",
+        "$type": "dimension"
+      },
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      },
+      "color": {
+        "default": {
+          "$value": "{grey.transparent}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{yelbolt.color.border.selected.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "compact": {
+      "minWidth": {
+        "$value": "112px",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "112px",
+        "$type": "dimension"
+      }
+    },
+    "square": {
+      "minWidth": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "width": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

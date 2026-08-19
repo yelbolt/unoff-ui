@@ -1,0 +1,64 @@
+{
+  "list": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.bg.default}",
+          "$type": "color"
+        },
+        "alternate": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.border.default}",
+        "$type": "color"
+      }
+    },
+    "message": {
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

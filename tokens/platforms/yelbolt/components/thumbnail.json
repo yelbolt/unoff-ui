@@ -1,0 +1,40 @@
+{
+  "thumbnail": {
+    "width": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.border.disabled.default}",
+        "$type": "color"
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "{yelbolt.color.bg.secondary}",
+        "$type": "color"
+      }
+    }
+  }
+}

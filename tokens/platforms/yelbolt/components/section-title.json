@@ -1,0 +1,74 @@
+{
+  "sectionTitle": {
+    "height": {
+      "$value": "{size.pos.medium}",
+      "$type": "dimension"
+    },
+    "gap": {
+      "$value": "{size.pos.xxxsmall}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "text": {
+      "font": {
+        "family": {
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
+        },
+        "size": {
+          "$value": "{font.size.xsmall}",
+          "$type": "dimension"
+        },
+        "weight": {
+          "$value": "{font.weight.bold}",
+          "$type": "fontWeights"
+        }
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.medium}",
+        "$type": "dimension"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "number"
+      },
+      "color": {
+        "$value": "{yelbolt.color.text.default}",
+        "$type": "color"
+      },
+      "transform": {
+        "$value": "none",
+        "$type": "string"
+      }
+    },
+    "info": {
+      "icon": {
+        "width": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "height": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

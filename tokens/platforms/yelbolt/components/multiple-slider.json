@@ -1,0 +1,98 @@
+{
+  "multipleSlider": {
+    "margin": {
+      "top": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "height": {
+      "$value": "{size.pos.xsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.small}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{yelbolt.color.bg.secondary}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{yelbolt.color.border.disabled.strong}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{yelbolt.color.bg.brand.default}",
+        "$type": "color"
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

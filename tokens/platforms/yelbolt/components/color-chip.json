@@ -1,0 +1,22 @@
+{
+  "colorChip": {
+    "radius": {
+      "$value": "{border.radius.small}",
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "$value": "rgba(0, 0, 0, 0.1)",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

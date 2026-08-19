@@ -1,0 +1,702 @@
+{
+  "input": {
+    "number": {
+      "width": {
+        "$value": "{size.pos.huge}",
+        "$type": "dimension"
+      }
+    },
+    "color": {
+      "width": {
+        "$value": "{size.pos.huge}",
+        "$type": "dimension"
+      }
+    },
+    "height": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "default": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "clearable": {
+        "top": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.medium}",
+          "$type": "dimension"
+        }
+      },
+      "unit": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      },
+      "withIcon": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      },
+      "withColor": {
+        "top": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "clearable": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        },
+        "empty": {
+          "default": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{yelbolt.color.bg.secondary}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{yelbolt.color.bg.secondary}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{yelbolt.color.bg.secondary}",
+              "$type": "color"
+            }
+          }
+        },
+        "hover": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        },
+        "error": {
+          "default": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.bg.secondary}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.bg.tertiary}",
+          "$type": "color"
+        },
+        "onselected": {
+          "default": {
+            "$value": "{yelbolt.color.bg.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.bg.default}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "border": {
+      "width": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "empty": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "error": {
+            "default": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "hover": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.pos.unit}",
+              "$type": "dimension"
+            }
+          }
+        },
+        "hover": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "error": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
+        },
+        "disabled": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "onselected": {
+          "default": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.pos.unit}",
+            "$type": "dimension"
+          }
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "empty": {
+          "default": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "error": {
+            "default": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "hover": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            },
+            "focus": {
+              "$value": "{size.neg.unit}",
+              "$type": "dimension"
+            }
+          }
+        },
+        "hover": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "focus": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "error": {
+          "default": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "focus": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
+        },
+        "disabled": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "onselected": {
+          "default": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          },
+          "hover": {
+            "$value": "{size.neg.unit}",
+            "$type": "dimension"
+          }
+        }
+      },
+      "color": {
+        "default": {
+          "$value": "{grey.transparent}",
+          "$type": "color"
+        },
+        "empty": {
+          "default": {
+            "$value": "{grey.transparent}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.border.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.border.selected.default}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{yelbolt.color.border.danger.default}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{yelbolt.color.border.danger.default}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{yelbolt.color.border.danger.strong}",
+              "$type": "color"
+            }
+          }
+        },
+        "hover": {
+          "$value": "{yelbolt.color.border.default}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{yelbolt.color.border.selected.default}",
+          "$type": "color"
+        },
+        "error": {
+          "default": {
+            "$value": "{yelbolt.color.border.danger.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.border.danger.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.border.danger.strong}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.border.disabled.default}",
+          "$type": "color"
+        },
+        "onselected": {
+          "default": {
+            "$value": "{yelbolt.color.border.selected.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.border.selected.default}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "text": {
+      "font": {
+        "family": {
+          "$value": "{text.fontFamily}",
+          "$type": "fontFamilies"
+        },
+        "size": {
+          "$value": "{font.size.xsmall}",
+          "$type": "dimension"
+        },
+        "weight": {
+          "$value": "{font.weight.normal}",
+          "$type": "fontWeights"
+        }
+      },
+      "letterSpacing": {
+        "$value": "{font.letterSpacing.pos.xlarge}",
+        "$type": "dimension"
+      },
+      "lineHeight": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "number"
+      },
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "empty": {
+          "default": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{yelbolt.color.text.default}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{yelbolt.color.text.default}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{yelbolt.color.text.default}",
+              "$type": "color"
+            }
+          }
+        },
+        "hover": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "error": {
+          "default": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          },
+          "hover": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.text.default}",
+            "$type": "color"
+          }
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.text.disabled}",
+          "$type": "color"
+        }
+      },
+      "placeholder": {
+        "color": {
+          "default": {
+            "$value": "{yelbolt.color.text.secondary.default}",
+            "$type": "color"
+          },
+          "empty": {
+            "default": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            },
+            "error": {
+              "default": {
+                "$value": "{yelbolt.color.text.secondary.default}",
+                "$type": "color"
+              },
+              "hover": {
+                "$value": "{yelbolt.color.text.secondary.default}",
+                "$type": "color"
+              },
+              "focus": {
+                "$value": "{yelbolt.color.text.secondary.default}",
+                "$type": "color"
+              }
+            }
+          },
+          "hover": {
+            "$value": "{yelbolt.color.text.secondary.default}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{yelbolt.color.text.secondary.default}",
+            "$type": "color"
+          },
+          "error": {
+            "default": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            },
+            "hover": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            },
+            "focus": {
+              "$value": "{yelbolt.color.text.secondary.default}",
+              "$type": "color"
+            }
+          },
+          "disabled": {
+            "$value": "{yelbolt.color.text.disabled}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "colorChip": {
+      "width": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{border.radius.small}",
+        "$type": "dimension"
+      },
+      "border": {
+        "default": {
+          "$value": [
+            {
+              "x": "{size.null}",
+              "y": "{size.null}",
+              "blur": "{size.null}",
+              "spread": "{size.pos.unit}",
+              "color": "rgba(0, 0, 0, 0.1)",
+              "type": "innerShadow"
+            }
+          ],
+          "$type": "boxShadow"
+        },
+        "focus": {
+          "$value": [
+            {
+              "x": "{size.null}",
+              "y": "{size.null}",
+              "blur": "{size.null}",
+              "spread": "{size.pos.unit}",
+              "color": "{yelbolt.color.border.selected.default}",
+              "type": "innerShadow"
+            }
+          ],
+          "$type": "boxShadow"
+        }
+      },
+      "opacity": {
+        "default": {
+          "$value": "{alpha.1000}",
+          "$type": "number"
+        },
+        "disabled": {
+          "$value": "{alpha.500}",
+          "$type": "number"
+        }
+      }
+    },
+    "icon": {
+      "width": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.icon.disabled}",
+        "$type": "color"
+      }
+    },
+    "textarea": {
+      "minHeight": {
+        "$value": "{size.pos.xxlarge}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      },
+      "background": {
+        "color": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{yelbolt.color.border.default}",
+          "$type": "color"
+        }
+      },
+      "text": {
+        "color": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "placeholder": {
+          "color": {
+            "$value": "{yelbolt.color.text.secondary.default}",
+            "$type": "color"
+          }
+        }
+      }
+    },
+    "status": {
+      "height": {
+        "default": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        },
+        "longText": {
+          "$value": "{size.pos.small}",
+          "$type": "dimension"
+        }
+      },
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

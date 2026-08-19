@@ -1,0 +1,21 @@
+{
+  "name": "Yelbolt Colors",
+  "version": "2025.10",
+  "description": "Color tokens for Yelbolt platform, including light/dark/figjam modes",
+  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "modifiers": {
+    "mode": {
+      "description": "Yelbolt light/dark/figjam modes",
+      "contexts": {
+        "figmaLight": [
+          { "$ref": "./platforms/yelbolt/modes/yelbolt-light.tokens.json" }
+        ],
+        "figmaDark": [
+          { "$ref": "./platforms/yelbolt/modes/yelbolt-dark.tokens.json" }
+        ],
+        "figjam": [{ "$ref": "./platforms/yelbolt/modes/figjam.tokens.json" }]
+      },
+      "default": "figmaLight"
+    }
+  }
+}

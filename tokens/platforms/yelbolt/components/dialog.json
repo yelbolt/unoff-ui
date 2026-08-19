@@ -1,0 +1,104 @@
+{
+  "dialog": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "$value": "rgba(0, 0, 0, 0.5)",
+        "$type": "color"
+      }
+    },
+    "cover": {
+      "width": {
+        "$value": "248px",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "ratio": {
+        "$value": "8 / 5",
+        "$type": "string"
+      }
+    },
+    "text": {
+      "gap": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "form": {
+      "gap": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

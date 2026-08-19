@@ -1,0 +1,32 @@
+{
+  "sortableList": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{yelbolt.color.border.default}",
+        "$type": "color"
+      }
+    }
+  }
+}

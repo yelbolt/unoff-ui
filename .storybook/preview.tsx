@@ -24,6 +24,8 @@ const withTheme: Decorator = (Story, context) => {
         'sketch-dark': '#202022',
         'framer-light': '#ffffff',
         'framer-dark': '#111111',
+        'yelbolt-light': '#ffffff',
+        'yelbolt-dark': '#202022',
       }
 
       const bgValue = backgroundMap[modes as keyof typeof backgroundMap]
@@ -46,7 +48,7 @@ const preview: Preview = {
       toolbar: {
         title: 'UI Theme',
         icon: 'paintbrush',
-        items: ['figma', 'penpot', 'sketch', 'framer'],
+        items: ['figma', 'penpot', 'sketch', 'framer', 'yelbolt'],
         dynamicTitle: true,
       },
     },
@@ -66,6 +68,8 @@ const preview: Preview = {
           'sketch-dark',
           'framer-light',
           'framer-dark',
+          'yelbolt-light',
+          'yelbolt-dark',
         ],
         dynamicTitle: true,
       },

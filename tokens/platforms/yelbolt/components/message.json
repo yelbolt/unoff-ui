@@ -1,0 +1,114 @@
+{
+  "message": {
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.msmall}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.msmall}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.text.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.icon.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.icon.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "message": {
+      "padding": {
+        "top": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "ticker": {
+      "height": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "maxWidth": {
+        "$value": "640px",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      },
+      "mask": {
+        "background": {
+          "color": {
+            "$value": "{yelbolt.color.bg.default}",
+            "$type": "color"
+          }
+        },
+        "width": {
+          "$value": "{size.pos.xsmall}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "formItem": {
+    "gap": {
+      "default": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "multiline": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "minHeight": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.text.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.text.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "label": {
+      "width": {
+        "$value": "{size.pos.huge}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "default": {
+          "top": {
+            "$value": "{size.pos.xxxsmall}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "multiline": {
+          "top": {
+            "$value": "{size.pos.xxsmall}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        }
+      }
+    },
+    "chip": {
+      "margin": {
+        "default": {
+          "top": {
+            "$value": "{size.pos.xunit}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        },
+        "multiline": {
+          "top": {
+            "$value": "{size.pos.xunit}",
+            "$type": "dimension"
+          },
+          "right": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "bottom": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          },
+          "left": {
+            "$value": "{size.null}",
+            "$type": "dimension"
+          }
+        }
+      }
+    },
+    "helper": {
+      "padding": {
+        "top": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{size.null}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{size.pos.xxxsmall}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "disabled": {
+          "$value": "{yelbolt.color.icon.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

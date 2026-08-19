@@ -1,0 +1,22 @@
+{
+  "menu": {
+    "position": {
+      "topRight": {
+        "$value": "{size.neg.xxsmall}",
+        "$type": "dimension"
+      },
+      "topLeft": {
+        "$value": "{size.neg.xxsmall}",
+        "$type": "dimension"
+      },
+      "bottomRight": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      },
+      "bottomLeft": {
+        "$value": "{size.pos.medium}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

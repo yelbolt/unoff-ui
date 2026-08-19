@@ -1,0 +1,112 @@
+{
+  "dropzone": {
+    "padding": {
+      "top": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{size.pos.xxsmall}",
+      "$type": "dimension"
+    },
+    "minWidth": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "minHeight": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.border.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{yelbolt.color.border.selected.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.border.disabled.default}",
+          "$type": "color"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{size.neg.xunit}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{size.neg.unit}",
+          "$type": "dimension"
+        }
+      },
+      "style": {
+        "default": {
+          "$value": "dashed",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "solid",
+          "$type": "string"
+        },
+        "disabled": {
+          "$value": "dashed",
+          "$type": "string"
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{yelbolt.color.bg.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{yelbolt.color.bg.selected.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{yelbolt.color.bg.secondary}",
+          "$type": "color"
+        }
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    }
+  }
+}

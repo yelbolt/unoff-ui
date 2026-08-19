@@ -1,0 +1,74 @@
+{
+  "inputsBar": {
+    "gap": {
+      "default": {
+        "$value": "{size.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "inner": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      }
+    },
+    "width": {
+      "$value": "{size.pos.xlarge}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      }
+    },
+    "margin": {
+      "top": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{size.null}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "$value": "{yelbolt.color.border.selected.default}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      }
+    },
+    "input": {
+      "radius": {
+        "$value": "{border.radius.null}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

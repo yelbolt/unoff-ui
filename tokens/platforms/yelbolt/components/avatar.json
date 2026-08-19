@@ -1,0 +1,16 @@
+{
+  "avatar": {
+    "width": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{size.pos.small}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{border.radius.xxlarge}",
+      "$type": "dimension"
+    }
+  }
+}
