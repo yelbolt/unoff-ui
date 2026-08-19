@@ -123,6 +123,16 @@
       --icon-picto-color: var(--actions-list-tick-color);
     }
 
+    &__start {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      width: var(--actions-list-start-width);
+      height: var(--actions-list-start-height);
+      pointer-events: none;
+    }
+
     &__label {
       flex: 1;
       pointer-events: none;
@@ -300,6 +310,9 @@
   }
 
   &__menu--searchable {
+    max-height: var(--actions-list-max-height);
+    overflow-y: auto;
+
     li.select-menu__search {
       position: sticky;
       top: 0;

@@ -474,7 +474,9 @@ export default class ActionsList extends React.Component<
             />
           </span>
         )}
-
+        {option.startSlot !== undefined && (
+          <span className="select-menu__item__start">{option.startSlot}</span>
+        )}
         <span
           className={doClassnames([texts.type, 'select-menu__item__label'])}
         >
@@ -534,6 +536,9 @@ export default class ActionsList extends React.Component<
         onFocus={() => null}
         onBlur={() => null}
       >
+        {option.startSlot !== undefined && (
+          <span className="select-menu__item__start">{option.startSlot}</span>
+        )}
         <span
           className={doClassnames([texts.type, 'select-menu__item__label'])}
         >
@@ -604,6 +609,9 @@ export default class ActionsList extends React.Component<
               iconName="check"
             />
           </span>
+        )}
+        {option.startSlot !== undefined && (
+          <span className="select-menu__item__start">{option.startSlot}</span>
         )}
         <span
           className={doClassnames([
