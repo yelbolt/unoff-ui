@@ -145,8 +145,10 @@ export default class ActionsList extends React.Component<
   }
 
   // Lifecycle
-  componentDidMount = () =>
+  componentDidMount = () => {
     document.addEventListener('mousemove', this.handleMouseMove)
+    this.scrollToSelectedOption()
+  }
 
   componentWillUnmount = () => {
     document.removeEventListener('mousemove', this.handleMouseMove)
@@ -208,6 +210,46 @@ export default class ActionsList extends React.Component<
   onMouseEnterSubmenu = () => this.clearSubmenuTimeout()
 
   // Direct Actions
+  scrollToSelectedOption = () => {
+    const { menuRef, selected, canBeSearched } = this.props
+
+    if (!canBeSearched || !selected) return
+
+    setTimeout(() => {
+      const menuElement = menuRef?.current
+      if (!menuElement) return
+
+      const firstSelectedValue = selected.split(', ')[0]
+      const selectedElement = menuElement.querySelector(
+        `li[data-value="${firstSelectedValue}"]`
+      ) as HTMLElement | null
+      if (!selectedElement) return
+
+      const searchElement = menuElement.querySelector(
+        '.select-menu__search'
+      ) as HTMLElement | null
+      const stickyElement =
+        (searchElement?.nextElementSibling as HTMLElement | null) ??
+        searchElement
+      const stickyOffset = stickyElement
+        ? Math.max(
+            stickyElement.getBoundingClientRect().bottom -
+              menuElement.getBoundingClientRect().top,
+            0
+          )
+        : 0
+      const visibleHeight = menuElement.clientHeight - stickyOffset
+
+      const targetScrollTop =
+        selectedElement.offsetTop -
+        stickyOffset -
+        visibleHeight / 2 +
+        selectedElement.offsetHeight / 2
+
+      menuElement.scrollTop = Math.max(targetScrollTop, 0)
+    }, 0)
+  }
+
   focusFirstMenuItem = () => {
     const { menuRef, canBeSearched } = this.props
 
