@@ -60,6 +60,7 @@
   --actions-list-item-text-font-weight: var(--font-weight-medium);
   --actions-list-item-text-letter-spacing: var(--font-letter-spacing-pos-medium);
   --actions-list-item-text-line-height: var(--font-line-height-default);
+  --actions-list-max-height: 320px;
   --actions-list-min-width: 224px;
   --actions-list-padding-bottom: var(--size-pos-xxsmall);
   --actions-list-padding-left: var(--size-pos-xxsmall);
@@ -84,6 +85,8 @@
   --actions-list-spot-inset-top-right: var(--size-pos-unit);
   --actions-list-spot-inset-top-top: var(--size-null);
   --actions-list-spot-radius: var(--border-radius-xlarge);
+  --actions-list-start-height: var(--size-pos-xsmall);
+  --actions-list-start-width: var(--size-pos-xsmall);
   --actions-list-submenu-inset-left-bottom: auto;
   --actions-list-submenu-inset-left-left: var(--size-neg-xxsmall);
   --actions-list-submenu-inset-left-right: auto;

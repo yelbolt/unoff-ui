@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, within, userEvent, waitFor } from 'storybook/test'
+import { useRef } from 'react'
+import ColorChip from '@components/tags/color-chip/ColorChip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
+import Icon from '@components/assets/icon/Icon'
 
 const meta = {
   title: 'Components/Lists/Actions List',
@@ -286,6 +289,91 @@ export const SearchableList: Story = {
   },
 }
 
+export const SearchableListWithManyOptions: Story = {
+  args: {
+    options: Array.from({ length: 20 }, (_, index) => ({
+      label: `Option ${index + 1}`,
+      value: `OPTION_${index + 1}`,
+      type: 'OPTION' as const,
+      action: fn(),
+    })),
+    canBeSearched: true,
+    searchLabel: 'Search options…',
+  },
+  argTypes: {
+    direction: { control: false },
+    selected: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const searchInput = canvas.getByPlaceholderText('Search options…')
+    await expect(searchInput).toBeInTheDocument()
+
+    const menu = canvasElement.querySelector('.select-menu__menu--searchable')
+    await expect(menu).toBeInTheDocument()
+
+    const allOptions = canvas.getAllByText(/Option \d+/)
+    await expect(allOptions.length).toBe(20)
+  },
+}
+
+export const SearchableListScrollsToSelected: Story = {
+  args: {
+    options: Array.from({ length: 20 }, (_, index) => ({
+      label: `Option ${index + 1}`,
+      value: `OPTION_${index + 1}`,
+      type: 'OPTION' as const,
+      action: fn(),
+    })),
+    selected: 'OPTION_10',
+    canBeSearched: true,
+    searchLabel: 'Filter options…',
+  },
+  argTypes: {
+    direction: { control: false },
+  },
+  render: (args) => {
+    const menuRef = useRef<HTMLUListElement>(null)
+    return (
+      <ActionsList
+        {...args}
+        menuRef={menuRef}
+      />
+    )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const searchInput = canvas.getByPlaceholderText('Filter options…')
+    await expect(searchInput).toBeInTheDocument()
+
+    const menu = canvasElement.querySelector(
+      '.select-menu__menu--searchable'
+    ) as HTMLElement
+    await expect(menu).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(menu.scrollTop).toBeGreaterThan(0)
+    })
+
+    const selectedOption = canvasElement.querySelector(
+      '[data-value="OPTION_10"]'
+    ) as HTMLElement
+    await expect(selectedOption).toBeInTheDocument()
+
+    const menuRect = menu.getBoundingClientRect()
+    const optionRect = selectedOption.getBoundingClientRect()
+    await expect(optionRect.top).toBeGreaterThanOrEqual(menuRect.top)
+    await expect(optionRect.bottom).toBeLessThanOrEqual(menuRect.bottom)
+
+    const optionCenter = (optionRect.top + optionRect.bottom) / 2
+    const relativeCenter = (optionCenter - menuRect.top) / menuRect.height
+    await expect(relativeCenter).toBeGreaterThan(0.3)
+    await expect(relativeCenter).toBeLessThan(0.7)
+  },
+}
+
 export const LongListWithScroll: Story = {
   decorators: [
     (Story) => (
@@ -394,5 +482,78 @@ export const LongListWithScroll: Story = {
 
     const allOptions = canvas.getAllByText(/Option \d+/)
     await expect(allOptions.length).toBe(12)
+  },
+}
+
+export const OptionsWithStartSlot: Story = {
+  args: {
+    options: [
+      {
+        label: 'Grid view',
+        value: 'GRID',
+        type: 'OPTION',
+        action: fn(),
+        startSlot: (
+          <Icon
+            type="PICTO"
+            iconName="tidy-up-grid"
+          />
+        ),
+      },
+      {
+        label: 'List view',
+        value: 'LIST',
+        type: 'OPTION',
+        action: fn(),
+        startSlot: (
+          <Icon
+            type="PICTO"
+            iconName="list-detailed"
+          />
+        ),
+      },
+      {
+        type: 'SEPARATOR',
+      },
+      {
+        label: 'Ocean blue',
+        value: 'OCEAN_BLUE',
+        type: 'OPTION',
+        action: fn(),
+        startSlot: (
+          <ColorChip
+            color="#1E6FD9"
+            isRounded
+          />
+        ),
+      },
+      {
+        label: 'Sunset orange',
+        value: 'SUNSET_ORANGE',
+        type: 'OPTION',
+        action: fn(),
+        startSlot: (
+          <ColorChip
+            color="#E8622C"
+            isRounded
+          />
+        ),
+      },
+    ],
+    selected: 'OCEAN_BLUE',
+  },
+  argTypes: {
+    direction: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const gridView = canvas.getByText('Grid view')
+    await expect(gridView).toBeInTheDocument()
+
+    const startSlots = canvasElement.querySelectorAll(
+      '.select-menu__item__start'
+    )
+    await expect(startSlots.length).toBe(4)
   },
 }

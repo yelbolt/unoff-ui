@@ -30,6 +30,11 @@ export interface DropdownOption {
    */
   children?: Array<DropdownOption> | []
   /**
+   * Content rendered to the left of the label — typically an `Icon` or a
+   * `ColorChip` — for `OPTION` and `GROUP` items
+   */
+  startSlot?: React.ReactNode
+  /**
    * Click / keydown handler called when the option is selected
    */
   action?: (
