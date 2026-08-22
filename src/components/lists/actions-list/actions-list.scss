@@ -60,6 +60,7 @@
       z-index: 1;
       height: 100%;
       overflow: hidden auto;
+      overscroll-behavior-y: chain;
     }
 
     &--left .select-menu__submenu {
@@ -311,7 +312,8 @@
 
   &__menu--searchable {
     max-height: var(--actions-list-max-height);
-    overflow-y: auto;
+    overflow: hidden auto;
+    overscroll-behavior-y: chain;
 
     li.select-menu__search {
       position: sticky;
