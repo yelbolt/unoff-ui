@@ -4,6 +4,10 @@
       "$value": "224px",
       "$type": "dimension"
     },
+    "maxHeight": {
+      "$value": "320px",
+      "$type": "dimension"
+    },
     "padding": {
       "top": {
         "$value": "{size.pos.xxxsmall}",
@@ -346,6 +350,16 @@
           "$value": "{penpot.color.foreground.disabled}",
           "$type": "color"
         }
+      }
+    },
+    "start": {
+      "width": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
       }
     },
     "caret": {
