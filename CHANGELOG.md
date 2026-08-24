@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.25.0] - 2026-08-24
+
+### Added
+
+- **`ActionsList` — `startSlot` option prop**: `DropdownOption` gains an optional `startSlot?: React.ReactNode` field, rendered as a fixed-size `.select-menu__item__start` slot to the left of an option's label (typically an `Icon` or a `ColorChip`), for `OPTION` and `GROUP` items across the default, searchable, and small item variants. Sizing is driven by the new `--actions-list-start-width` / `--actions-list-start-height` tokens.
+- **`ActionsList` — scroll to selected option**: on mount, if the menu is searchable and has a `selected` value, the menu automatically scrolls so the first selected option is centered in the visible area (accounting for the sticky search bar), instead of opening scrolled to the top.
+- **`ActionsList` — `--actions-list-max-height` token**: the searchable menu (`&__menu--searchable`) now caps its height and scrolls internally (`overflow: hidden auto`), with `overscroll-behavior-y: chain` added to both the searchable menu and the submenu track to stop scroll chaining into the page.
+
+### Fixed
+
+- **`ColorChip`**: removed the erroneous `role="contentinfo"` attribute from the root element.
+
 ## [1.24.9] - 2026-08-17
 
 ### Fixed
