@@ -98,6 +98,13 @@ export interface MenuProps {
    */
   noResultsLabel?: string
   /**
+   * Whether the trigger + actions list stay rendered even when there is
+   * only one active option, instead of collapsing that option into a
+   * standalone button
+   * @default false
+   */
+  isAlwaysExpanded?: boolean
+  /**
    * Handler called instead of opening the menu when isBlocked is true
    */
   onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
@@ -124,6 +131,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     alignment: 'BOTTOM_LEFT',
     isBlocked: false,
     isNew: false,
+    isAlwaysExpanded: false,
   }
 
   constructor(props: MenuProps) {
@@ -275,6 +283,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
       canBeSearched,
       searchLabel,
       noResultsLabel,
+      isAlwaysExpanded,
     } = this.props
     const { isMenuOpen } = this.state
 
@@ -293,7 +302,11 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     )
 
     if (activeOptions.length === 0) return null
-    if (activeOptions.length === 1 && activeOptions[0].children === undefined) {
+    if (
+      !isAlwaysExpanded &&
+      activeOptions.length === 1 &&
+      activeOptions[0].children === undefined
+    ) {
       const option = activeOptions[0]
       return (
         <Button
