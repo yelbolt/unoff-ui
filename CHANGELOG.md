@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.25.2] - 2026-09-01
+
+### Added
+
+- **`Menu` / `Dropdown` — `isAlwaysExpanded` prop**: new optional `isAlwaysExpanded?: boolean` prop (default `false`). Normally, a `Menu` with exactly one active, childless option collapses into a standalone `Button` instead of rendering the full trigger + actions list; setting `isAlwaysExpanded` keeps the trigger and actions list rendered even in that single-option case. `Dropdown` forwards the prop to its internal `Menu`, where it only applies once `shouldReflow` has collapsed the dropdown into a menu.
+- **`Tabs`**: the overflow menu now passes `isAlwaysExpanded` to its internal `Menu`, so a single overflowed tab still renders as a proper menu trigger instead of collapsing into a bare button.
+
 ## [1.25.1] - 2026-08-24
 
 ### Fixed

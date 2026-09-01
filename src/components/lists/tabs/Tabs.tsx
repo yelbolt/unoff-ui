@@ -215,6 +215,7 @@ const Tabs = (props: TabsProps) => {
             selected={activeInOverflow ? active : undefined}
             alignment="BOTTOM_LEFT"
             isNew={activeInOverflow}
+            isAlwaysExpanded
           />
         )}
       </div>
