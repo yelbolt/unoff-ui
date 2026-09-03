@@ -116,6 +116,14 @@ export interface DropdownProps {
    */
   noResultsLabel?: string
   /**
+   * Whether the trigger + actions list stay rendered even when there is
+   * only one active option, instead of collapsing that option into a
+   * standalone button. Only applies when `shouldReflow` collapses the
+   * dropdown into a Menu.
+   * @default false
+   */
+  isAlwaysExpanded?: boolean
+  /**
    * Handler called instead of opening the dropdown when isBlocked is true
    */
   onBlock?: React.MouseEventHandler & React.KeyboardEventHandler
@@ -148,6 +156,7 @@ export default class Dropdown extends React.Component<
     isNew: false,
     isBlocked: false,
     isDisabled: false,
+    isAlwaysExpanded: false,
   }
 
   constructor(props: DropdownProps) {
@@ -397,6 +406,7 @@ export default class Dropdown extends React.Component<
       canBeSearched,
       searchLabel,
       noResultsLabel,
+      isAlwaysExpanded,
     } = this.props
 
     const newAlignment = []
@@ -420,6 +430,7 @@ export default class Dropdown extends React.Component<
         canBeSearched={canBeSearched}
         searchLabel={searchLabel}
         noResultsLabel={noResultsLabel}
+        isAlwaysExpanded={isAlwaysExpanded}
       />
     )
   }

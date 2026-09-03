@@ -61,6 +61,7 @@
       z-index: 1;
       height: 100%;
       overflow: hidden auto;
+      overscroll-behavior-y: chain;
     }
 
     &--left .select-menu__submenu {
@@ -122,6 +123,16 @@
       height: var(--actions-list-caret-height);
       pointer-events: none;
       --icon-picto-color: var(--actions-list-tick-color);
+    }
+
+    &__start {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      align-items: center;
+      width: var(--actions-list-start-width);
+      height: var(--actions-list-start-height);
+      pointer-events: none;
     }
 
     &__label {
@@ -301,6 +312,10 @@
   }
 
   &__menu--searchable {
+    max-height: var(--actions-list-max-height);
+    overflow: hidden auto;
+    overscroll-behavior-y: chain;
+
     li.select-menu__search {
       position: sticky;
       top: 0;
