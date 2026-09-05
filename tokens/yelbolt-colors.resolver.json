@@ -1,21 +1,65 @@
 {
   "name": "Yelbolt Colors",
   "version": "2025.10",
-  "description": "Color tokens for Yelbolt platform, including light/dark/figjam modes",
-  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "description": "Color tokens for Yelbolt brands platform, including light/dark modes",
+  "resolutionOrder": [
+    { "$ref": "#/sets/primitives" },
+    { "$ref": "#/modifiers/mode" }
+  ],
+  "sets": {
+    "primitives": {
+      "description": "Yelbolt color primitives (shade ramps per family)",
+      "sources": [{ "$ref": "./platforms/yelbolt/colors.json" }]
+    }
+  },
   "modifiers": {
     "mode": {
-      "description": "Yelbolt light/dark/figjam modes",
+      "description": "Yelbolt brands light/dark modes",
       "contexts": {
-        "figmaLight": [
-          { "$ref": "./platforms/yelbolt/modes/yelbolt-light.tokens.json" }
+        "isbLight": [
+          { "$ref": "./platforms/yelbolt/modes/isb-light.tokens.json" }
         ],
-        "figmaDark": [
-          { "$ref": "./platforms/yelbolt/modes/yelbolt-dark.tokens.json" }
+        "isbDark": [
+          { "$ref": "./platforms/yelbolt/modes/isb-dark.tokens.json" }
         ],
-        "figjam": [{ "$ref": "./platforms/yelbolt/modes/figjam.tokens.json" }]
+        "ntlLight": [
+          { "$ref": "./platforms/yelbolt/modes/ntl-light.tokens.json" }
+        ],
+        "ntlDark": [
+          { "$ref": "./platforms/yelbolt/modes/ntl-dark.tokens.json" }
+        ],
+        "tcnLight": [
+          { "$ref": "./platforms/yelbolt/modes/tcn-light.tokens.json" }
+        ],
+        "tcnDark": [
+          { "$ref": "./platforms/yelbolt/modes/tcn-dark.tokens.json" }
+        ],
+        "uicpLight": [
+          { "$ref": "./platforms/yelbolt/modes/uicp-light.tokens.json" }
+        ],
+        "uicpDark": [
+          { "$ref": "./platforms/yelbolt/modes/uicp-dark.tokens.json" }
+        ],
+        "uicsLight": [
+          { "$ref": "./platforms/yelbolt/modes/uics-light.tokens.json" }
+        ],
+        "uicsDark": [
+          { "$ref": "./platforms/yelbolt/modes/uics-dark.tokens.json" }
+        ],
+        "unoLight": [
+          { "$ref": "./platforms/yelbolt/modes/uno-light.tokens.json" }
+        ],
+        "unoDark": [
+          { "$ref": "./platforms/yelbolt/modes/uno-dark.tokens.json" }
+        ],
+        "ylbLight": [
+          { "$ref": "./platforms/yelbolt/modes/ylb-light.tokens.json" }
+        ],
+        "ylbDark": [
+          { "$ref": "./platforms/yelbolt/modes/ylb-dark.tokens.json" }
+        ]
       },
-      "default": "figmaLight"
+      "default": "ylbLight"
     }
   }
 }

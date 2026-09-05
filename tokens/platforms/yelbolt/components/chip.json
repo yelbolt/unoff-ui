@@ -51,15 +51,15 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.text.brand.default}",
+          "$value": "{color.text.brand.default}",
           "$type": "color"
         },
         "inactive": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.text.brand.default}",
+          "$value": "{color.text.brand.default}",
           "$type": "color"
         },
         "onBackground": {
@@ -93,15 +93,15 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.selected.secondary}",
+          "$value": "{color.background.selected.default}",
           "$type": "color"
         },
         "inactive": {
-          "$value": "{yelbolt.color.bg.tertiary}",
+          "$value": "{color.background.tertiary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.bg.selected.default}",
+          "$value": "{color.background.selected.hover}",
           "$type": "color"
         },
         "onBackground": {

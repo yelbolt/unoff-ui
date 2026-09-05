@@ -31,15 +31,15 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "selected": {
-          "$value": "{yelbolt.color.bg.selected.default}",
+          "$value": "{color.background.selected.default}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{yelbolt.color.bg.pressed}",
+          "$value": "{color.background.primary.pressed}",
           "$type": "color"
         }
       }
@@ -50,7 +50,7 @@
     },
     "ghost": {
       "color": {
-        "$value": "{yelbolt.color.border.selected.default}",
+        "$value": "{color.border.selected.default}",
         "$type": "color"
       },
       "height": {

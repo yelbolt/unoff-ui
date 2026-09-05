@@ -144,11 +144,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.bg.selected.strong}",
+            "$value": "{color.background.selected.strong}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.bg.selected.strong}",
+            "$value": "{color.background.selected.strong}",
             "$type": "color"
           },
           "selected": {
@@ -156,11 +156,11 @@
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{yelbolt.color.bg.selected.strong}",
+            "$value": "{color.background.selected.strong}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{yelbolt.color.bg.selected.strong}",
+            "$value": "{color.background.selected.strong}",
             "$type": "color"
           },
           "disabled": {

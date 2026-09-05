@@ -50,7 +50,7 @@
         "$type": "number"
       },
       "color": {
-        "$value": "{yelbolt.color.text.default}",
+        "$value": "{color.text.primary.default}",
         "$type": "color"
       },
       "transform": {

@@ -3,11 +3,11 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "alternate": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         }
       }
@@ -36,7 +36,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{yelbolt.color.border.default}",
+        "$value": "{color.border.primary.default}",
         "$type": "color"
       }
     },

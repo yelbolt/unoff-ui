@@ -1,0 +1,1315 @@
+{
+  "color": {
+    "background": {
+      "brand": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "brand": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      }
+    },
+    "text": {
+      "brand": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "brand": {
+        "default": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.8}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UNO.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UNO.1}",
+          "$type": "color"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "UNO Light"
+  }
+}

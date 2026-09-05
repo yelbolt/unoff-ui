@@ -10,13 +10,13 @@
     },
     "picto": {
       "color": {
-        "$value": "{yelbolt.color.icon.default}",
+        "$value": "{color.icon.primary.default}",
         "$type": "color"
       }
     },
     "letter": {
       "color": {
-        "$value": "{yelbolt.color.text.default}",
+        "$value": "{color.text.primary.default}",
         "$type": "color"
       },
       "textSize": {

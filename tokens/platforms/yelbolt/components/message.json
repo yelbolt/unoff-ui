@@ -25,11 +25,11 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.text.disabled}",
+          "$value": "{color.text.primary.disabled}",
           "$type": "color"
         }
       }
@@ -37,11 +37,11 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.icon.default}",
+          "$value": "{color.icon.primary.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.icon.disabled}",
+          "$value": "{color.icon.primary.disabled}",
           "$type": "color"
         }
       }
@@ -100,7 +100,7 @@
       "mask": {
         "background": {
           "color": {
-            "$value": "{yelbolt.color.bg.default}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           }
         },

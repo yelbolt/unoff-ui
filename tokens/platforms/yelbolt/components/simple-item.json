@@ -29,15 +29,15 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.bg.hover}",
+          "$value": "{color.background.primary.hover}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{yelbolt.color.bg.selected.default}",
+          "$value": "{color.background.selected.default}",
           "$type": "color"
         }
       }
@@ -73,7 +73,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{yelbolt.color.border.selected.default}",
+          "$value": "{color.border.selected.default}",
           "$type": "color"
         }
       }

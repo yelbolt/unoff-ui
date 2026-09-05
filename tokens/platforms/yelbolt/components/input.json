@@ -129,70 +129,70 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{yelbolt.color.bg.secondary}",
+              "$value": "{color.background.secondary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.bg.secondary}",
+              "$value": "{color.background.secondary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.bg.secondary}",
+              "$value": "{color.background.secondary.default}",
               "$type": "color"
             }
           }
         },
         "hover": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         },
         "error": {
           "default": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "{yelbolt.color.bg.tertiary}",
+          "$value": "{color.background.tertiary.default}",
           "$type": "color"
         },
         "onselected": {
           "default": {
-            "$value": "{yelbolt.color.bg.default}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.bg.default}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           }
         }
@@ -350,61 +350,61 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.border.default}",
+            "$value": "{color.border.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.border.selected.default}",
+            "$value": "{color.border.selected.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{yelbolt.color.border.danger.default}",
+              "$value": "{color.border.danger.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.border.danger.default}",
+              "$value": "{color.border.danger.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.border.danger.strong}",
+              "$value": "{color.border.danger.strong}",
               "$type": "color"
             }
           }
         },
         "hover": {
-          "$value": "{yelbolt.color.border.default}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{yelbolt.color.border.selected.default}",
+          "$value": "{color.border.selected.default}",
           "$type": "color"
         },
         "error": {
           "default": {
-            "$value": "{yelbolt.color.border.danger.default}",
+            "$value": "{color.border.danger.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.border.danger.default}",
+            "$value": "{color.border.danger.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.border.danger.strong}",
+            "$value": "{color.border.danger.strong}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "{yelbolt.color.border.disabled.default}",
+          "$value": "{color.border.primary.disabled}",
           "$type": "color"
         },
         "onselected": {
           "default": {
-            "$value": "{yelbolt.color.border.selected.default}",
+            "$value": "{color.border.selected.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.border.selected.default}",
+            "$value": "{color.border.selected.default}",
             "$type": "color"
           }
         }
@@ -435,122 +435,122 @@
       },
       "color": {
         "default": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "empty": {
           "default": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{yelbolt.color.text.default}",
+              "$value": "{color.text.primary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.text.default}",
+              "$value": "{color.text.primary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.text.default}",
+              "$value": "{color.text.primary.default}",
               "$type": "color"
             }
           }
         },
         "hover": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "error": {
           "default": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           }
         },
         "disabled": {
-          "$value": "{yelbolt.color.text.disabled}",
+          "$value": "{color.text.primary.disabled}",
           "$type": "color"
         }
       },
       "placeholder": {
         "color": {
           "default": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "empty": {
             "default": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             },
             "error": {
               "default": {
-                "$value": "{yelbolt.color.text.secondary.default}",
+                "$value": "{color.text.secondary.default}",
                 "$type": "color"
               },
               "hover": {
-                "$value": "{yelbolt.color.text.secondary.default}",
+                "$value": "{color.text.secondary.default}",
                 "$type": "color"
               },
               "focus": {
-                "$value": "{yelbolt.color.text.secondary.default}",
+                "$value": "{color.text.secondary.default}",
                 "$type": "color"
               }
             }
           },
           "hover": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "error": {
             "default": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.text.secondary.default}",
+              "$value": "{color.text.secondary.default}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{yelbolt.color.text.disabled}",
+            "$value": "{color.text.primary.disabled}",
             "$type": "color"
           }
         }
@@ -594,7 +594,7 @@
               "y": "{size.null}",
               "blur": "{size.null}",
               "spread": "{size.pos.unit}",
-              "color": "{yelbolt.color.border.selected.default}",
+              "color": "{color.border.selected.default}",
               "type": "innerShadow"
             }
           ],
@@ -622,7 +622,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{yelbolt.color.icon.disabled}",
+        "$value": "{color.icon.primary.disabled}",
         "$type": "color"
       }
     },
@@ -651,7 +651,7 @@
       },
       "background": {
         "color": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         }
       },
@@ -665,18 +665,18 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{yelbolt.color.border.default}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         }
       },
       "text": {
         "color": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "placeholder": {
           "color": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           }
         }

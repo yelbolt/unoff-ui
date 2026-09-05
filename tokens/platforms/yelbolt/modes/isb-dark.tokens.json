@@ -1,0 +1,1315 @@
+{
+  "color": {
+    "background": {
+      "brand": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "brand": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      }
+    },
+    "text": {
+      "brand": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "brand": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.6}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.1}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{ISB.8}",
+          "$type": "color"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "ISB Dark"
+  }
+}

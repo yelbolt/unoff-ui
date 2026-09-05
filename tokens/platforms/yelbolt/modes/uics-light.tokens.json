@@ -1,0 +1,1315 @@
+{
+  "color": {
+    "background": {
+      "brand": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "brand": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      }
+    },
+    "text": {
+      "brand": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "brand": {
+        "default": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.4}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        }
+      },
+      "primary": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "tertiary": {
+        "default": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "danger": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "default": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "selected": {
+        "default": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.6}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.5}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.3}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        }
+      },
+      "onBrand": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onPrimary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSecondary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onTertiary": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onDanger": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSuccess": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onWarning": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onSelected": {
+        "default": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.8}",
+          "$type": "color"
+        }
+      },
+      "onInverse": {
+        "default": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{UICS.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{UICS.1}",
+          "$type": "color"
+        }
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "UICS Light"
+  }
+}

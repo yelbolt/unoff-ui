@@ -38,13 +38,13 @@
     },
     "background": {
       "color": {
-        "$value": "{yelbolt.color.bg.default}",
+        "$value": "{color.background.primary.default}",
         "$type": "color"
       }
     },
     "text": {
       "color": {
-        "$value": "{yelbolt.color.text.default}",
+        "$value": "{color.text.primary.default}",
         "$type": "color"
       }
     },
@@ -95,7 +95,7 @@
           "$type": "dimension"
         },
         "color": {
-          "$value": "{yelbolt.color.border.default}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         }
       },

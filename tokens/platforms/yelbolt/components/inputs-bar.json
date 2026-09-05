@@ -56,7 +56,7 @@
     },
     "border": {
       "color": {
-        "$value": "{yelbolt.color.border.selected.default}",
+        "$value": "{color.border.selected.default}",
         "$type": "color"
       },
       "width": {

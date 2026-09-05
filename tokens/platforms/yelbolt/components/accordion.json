@@ -24,7 +24,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{yelbolt.color.border.disabled.default}",
+        "$value": "{color.border.primary.disabled}",
         "$type": "color"
       }
     },
@@ -59,19 +59,19 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.text.secondary.default}",
+          "$value": "{color.text.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{yelbolt.color.text.default}",
+          "$value": "{color.text.primary.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.text.disabled}",
+          "$value": "{color.text.primary.disabled}",
           "$type": "color"
         }
       }
@@ -79,19 +79,19 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.icon.secondary.default}",
+          "$value": "{color.icon.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.icon.default}",
+          "$value": "{color.icon.primary.default}",
           "$type": "color"
         },
         "expanded": {
-          "$value": "{yelbolt.color.icon.default}",
+          "$value": "{color.icon.primary.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.icon.disabled}",
+          "$value": "{color.icon.primary.disabled}",
           "$type": "color"
         }
       }

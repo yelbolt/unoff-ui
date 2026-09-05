@@ -33,15 +33,15 @@
     "border": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.border.default}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.border.selected.default}",
+          "$value": "{color.border.selected.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.border.disabled.default}",
+          "$value": "{color.border.primary.disabled}",
           "$type": "color"
         }
       },
@@ -91,15 +91,15 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{yelbolt.color.bg.selected.default}",
+          "$value": "{color.background.selected.default}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{yelbolt.color.bg.secondary}",
+          "$value": "{color.background.primary.disabled}",
           "$type": "color"
         }
       }

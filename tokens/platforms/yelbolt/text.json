@@ -6,31 +6,31 @@
     },
     "color": {
       "primary": {
-        "$value": "{yelbolt.color.text.default}",
+        "$value": "{color.text.primary.default}",
         "$type": "color"
       },
       "secondary": {
-        "$value": "{yelbolt.color.text.secondary.default}",
+        "$value": "{color.text.secondary.default}",
         "$type": "color"
       },
       "tertiary": {
-        "$value": "{yelbolt.color.text.tertiary.default}",
+        "$value": "{color.text.tertiary.default}",
         "$type": "color"
       },
       "success": {
-        "$value": "{yelbolt.color.text.success.default}",
+        "$value": "{color.text.success.default}",
         "$type": "color"
       },
       "warning": {
-        "$value": "{yelbolt.color.text.warning.default}",
+        "$value": "{color.text.warning.default}",
         "$type": "color"
       },
       "alert": {
-        "$value": "{yelbolt.color.text.danger.default}",
+        "$value": "{color.text.danger.default}",
         "$type": "color"
       },
       "inverse": {
-        "$value": "{yelbolt.color.text.oninverse}",
+        "$value": "{color.text.onInverse.default}",
         "$type": "color"
       }
     },
@@ -135,7 +135,7 @@
       },
       "link": {
         "color": {
-          "$value": "{yelbolt.color.text.brand.default}",
+          "$value": "{color.text.brand.default}",
           "$type": "color"
         },
         "decoration": {
@@ -153,7 +153,7 @@
       },
       "label": {
         "color": {
-          "$value": "{yelbolt.color.text.tertiary.default}",
+          "$value": "{color.text.tertiary.default}",
           "$type": "color"
         },
         "height": {

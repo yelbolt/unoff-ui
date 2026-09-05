@@ -26,13 +26,13 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{yelbolt.color.border.disabled.default}",
+        "$value": "{color.border.primary.disabled}",
         "$type": "color"
       }
     },
     "background": {
       "color": {
-        "$value": "{yelbolt.color.bg.secondary}",
+        "$value": "{color.background.secondary.default}",
         "$type": "color"
       }
     }

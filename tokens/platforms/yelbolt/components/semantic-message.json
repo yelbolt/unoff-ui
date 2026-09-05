@@ -85,12 +85,12 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "info": {
           "default": {
-            "$value": "{yelbolt.color.bg.brand.tertiary}",
+            "$value": "{color.background.brand.pressed}",
             "$type": "color"
           },
           "accent": {
@@ -100,7 +100,7 @@
         },
         "error": {
           "default": {
-            "$value": "{yelbolt.color.bg.danger.tertiary}",
+            "$value": "{color.background.danger.pressed}",
             "$type": "color"
           },
           "accent": {
@@ -110,7 +110,7 @@
         },
         "success": {
           "default": {
-            "$value": "{yelbolt.color.bg.success.tertiary}",
+            "$value": "{color.background.success.pressed}",
             "$type": "color"
           },
           "accent": {
@@ -120,7 +120,7 @@
         },
         "warning": {
           "default": {
-            "$value": "{yelbolt.color.bg.warning.tertiary}",
+            "$value": "{color.background.warning.pressed}",
             "$type": "color"
           },
           "accent": {

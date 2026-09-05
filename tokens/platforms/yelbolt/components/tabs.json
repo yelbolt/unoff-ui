@@ -61,11 +61,11 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         },
         "vertical": {
-          "$value": "{yelbolt.color.bg.default}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         }
       }
@@ -178,35 +178,35 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{yelbolt.color.bg.default}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.bg.hover}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.bg.hover}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "active": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "alternative": {
-            "$value": "{yelbolt.color.bg.default}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{yelbolt.color.bg.hover}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{yelbolt.color.bg.hover}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{yelbolt.color.bg.secondary}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           }
         }
@@ -222,7 +222,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.border.selected.default}",
+            "$value": "{color.border.selected.default}",
             "$type": "color"
           },
           "active": {
@@ -238,7 +238,7 @@
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{yelbolt.color.border.selected.default}",
+            "$value": "{color.border.selected.default}",
             "$type": "color"
           },
           "alternativeActive": {
@@ -328,35 +328,35 @@
         },
         "color": {
           "default": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "active": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "alternative": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           }
         },
@@ -428,35 +428,35 @@
         },
         "color": {
           "default": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "active": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "alternative": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{yelbolt.color.text.secondary.default}",
+            "$value": "{color.text.secondary.default}",
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{yelbolt.color.text.default}",
+            "$value": "{color.text.primary.default}",
             "$type": "color"
           }
         }
@@ -494,38 +494,38 @@
         },
         "background": {
           "color": {
-            "$value": "{yelbolt.color.bg.brand.default}",
+            "$value": "{color.background.brand.default}",
             "$type": "color"
           }
         },
         "border": {
           "color": {
             "default": {
-              "$value": "{yelbolt.color.bg.default}",
+              "$value": "{color.background.primary.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{yelbolt.color.bg.hover}",
+              "$value": "{color.background.primary.hover}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{yelbolt.color.bg.hover}",
+              "$value": "{color.background.primary.hover}",
               "$type": "color"
             },
             "active": {
-              "$value": "{yelbolt.color.bg.secondary}",
+              "$value": "{color.background.secondary.default}",
               "$type": "color"
             },
             "alternativeHover": {
-              "$value": "{yelbolt.color.bg.hover}",
+              "$value": "{color.background.primary.hover}",
               "$type": "color"
             },
             "alternativeFocus": {
-              "$value": "{yelbolt.color.bg.hover}",
+              "$value": "{color.background.primary.hover}",
               "$type": "color"
             },
             "alternativeActive": {
-              "$value": "{yelbolt.color.bg.secondary}",
+              "$value": "{color.background.secondary.default}",
               "$type": "color"
             }
           },

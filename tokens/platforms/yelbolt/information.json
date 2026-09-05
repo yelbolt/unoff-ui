@@ -18,7 +18,7 @@
     },
     "backgroundColor": {
       "$type": "color",
-      "$value": "{yelbolt.color.bg.default}"
+      "$value": "{color.background.primary.default}"
     }
   }
 }
