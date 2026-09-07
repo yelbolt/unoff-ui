@@ -2,46 +2,46 @@
   "multipleSlider": {
     "margin": {
       "top": {
-        "$value": "{size.pos.large}",
+        "$value": "{space.offset.1000}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.offset.200}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       }
     },
     "padding": {
       "top": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       }
     },
     "height": {
-      "$value": "{size.pos.xsmall}",
+      "$value": "{control.size.400}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.small}",
+      "$value": "{radius.small}",
       "$type": "dimension"
     },
     "background": {
@@ -56,7 +56,7 @@
         "$type": "color"
       },
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       }
     },
@@ -68,29 +68,29 @@
     },
     "status": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       },
       "margin": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.offset.200}",
           "$type": "dimension"
         }
       },
       "height": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{control.size.400}",
         "$type": "dimension"
       }
     }

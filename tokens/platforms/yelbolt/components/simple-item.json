@@ -1,29 +1,29 @@
 {
   "simpleItem": {
     "gap": {
-      "$value": "{size.pos.xxsmall}",
+      "$value": "{space.gap.200}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       }
     },
     "minHeight": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.size.800}",
       "$type": "dimension"
     },
     "background": {
@@ -44,26 +44,26 @@
     },
     "border": {
       "radius": {
-        "$value": "{border.radius.small}",
+        "$value": "{radius.small}",
         "$type": "dimension"
       },
       "width": {
         "default": {
-          "$value": "{size.null}",
+          "$value": "{stroke.width.none}",
           "$type": "dimension"
         },
         "focus": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         }
       },
       "offset": {
         "default": {
-          "$value": "{size.null}",
+          "$value": "{stroke.offset.none}",
           "$type": "dimension"
         },
         "focus": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         }
       },
@@ -90,11 +90,11 @@
     },
     "square": {
       "minWidth": {
-        "$value": "{size.pos.medium}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       },
       "width": {
-        "$value": "{size.pos.medium}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       }
     }

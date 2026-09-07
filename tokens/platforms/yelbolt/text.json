@@ -36,11 +36,11 @@
     },
     "fontWeight": {
       "medium": {
-        "$value": "{font.weight.medium}",
+        "$value": "{type.weight.500}",
         "$type": "fontWeights"
       },
       "bold": {
-        "$value": "{font.weight.bold}",
+        "$value": "{type.weight.600}",
         "$type": "fontWeights"
       }
     },
@@ -51,19 +51,19 @@
           "$type": "fontFamilies"
         },
         "fontSize": {
-          "$value": "{font.size.xsmall}",
+          "$value": "{type.size.02}",
           "$type": "dimension"
         },
         "fontWeight": {
-          "$value": "{font.weight.medium}",
+          "$value": "{type.weight.500}",
           "$type": "fontWeights"
         },
         "lineHeight": {
-          "$value": "{font.lineHeight.default}",
+          "$value": "{type.leading.default}",
           "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.xlarge}",
+          "$value": "{type.tracking.xlarge}",
           "$type": "dimension"
         }
       },
@@ -73,19 +73,19 @@
           "$type": "fontFamilies"
         },
         "fontSize": {
-          "$value": "{font.size.small}",
+          "$value": "{type.size.01}",
           "$type": "dimension"
         },
         "fontWeight": {
-          "$value": "{font.weight.medium}",
+          "$value": "{type.weight.500}",
           "$type": "fontWeights"
         },
         "lineHeight": {
-          "$value": "{font.lineHeight.default}",
+          "$value": "{type.leading.default}",
           "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.large}",
+          "$value": "{type.tracking.xlarge}",
           "$type": "dimension"
         }
       },
@@ -95,19 +95,19 @@
           "$type": "fontFamilies"
         },
         "fontSize": {
-          "$value": "{font.size.medium}",
+          "$value": "{type.size.04}",
           "$type": "dimension"
         },
         "fontWeight": {
-          "$value": "{font.weight.medium}",
+          "$value": "{type.weight.500}",
           "$type": "fontWeights"
         },
         "lineHeight": {
-          "$value": "{font.lineHeight.large}",
+          "$value": "{type.leading.large}",
           "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.medium}",
+          "$value": "{type.tracking.medium}",
           "$type": "dimension"
         }
       },
@@ -117,19 +117,19 @@
           "$type": "fontFamilies"
         },
         "fontSize": {
-          "$value": "{font.size.large}",
+          "$value": "{type.size.05}",
           "$type": "dimension"
         },
         "fontWeight": {
-          "$value": "{font.weight.medium}",
+          "$value": "{type.weight.500}",
           "$type": "fontWeights"
         },
         "lineHeight": {
-          "$value": "{font.lineHeight.large}",
+          "$value": "{type.leading.large}",
           "$type": "number"
         },
         "letterSpacing": {
-          "$value": "{font.letterSpacing.pos.small}",
+          "$value": "{type.tracking.small}",
           "$type": "dimension"
         }
       },
@@ -157,29 +157,29 @@
           "$type": "color"
         },
         "height": {
-          "$value": "{size.pos.medium}",
+          "$value": "{control.size.800}",
           "$type": "dimension"
         },
         "padding": {
           "top": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{space.inset.100}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           }
         },
         "gap": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{space.gap.100}",
           "$type": "dimension"
         }
       }

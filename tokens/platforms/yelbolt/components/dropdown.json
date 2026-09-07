@@ -1,33 +1,33 @@
 {
   "dropdown": {
     "height": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.size.600}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.inset.100}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       }
     },
     "radius": {
-      "$value": "{border.radius.medium}",
+      "$value": "{radius.medium}",
       "$type": "dimension"
     },
     "gap": {
-      "$value": "{size.pos.xxxsmall}",
+      "$value": "{space.gap.100}",
       "$type": "dimension"
     },
     "background": {
@@ -79,37 +79,37 @@
       },
       "width": {
         "default": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "focus": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "disabled": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         }
       },
       "offset": {
         "default": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "focus": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "disabled": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         }
       }
@@ -136,11 +136,11 @@
     },
     "caret": {
       "width": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{control.icon.400}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{control.icon.400}",
         "$type": "dimension"
       },
       "color": {
@@ -164,28 +164,28 @@
     },
     "status": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{size.pos.small}",
+        "$value": "{control.size.600}",
         "$type": "dimension"
       },
       "margin": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.offset.200}",
           "$type": "dimension"
         }
       }

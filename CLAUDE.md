@@ -125,7 +125,19 @@ Token JSON files live in `tokens/platforms/{theme}/` — for full pipeline docum
 - `text.json` — typography tokens
 - `icon.json` — icon file paths
 - `typography.json` — composite typography tokens
+- `modes/` — per-mode system layer (colors, and on `yelbolt` also dimensions)
 - `components/` — per-component tokens
+
+### Dimension system (`yelbolt` only)
+
+On `yelbolt`, component tokens no longer reference commons primitives directly.
+They go through a `dimension.*` system layer that lives inside each mode file
+next to the colors, so a mode can modulate spacing, sizing and type metrics the
+same way it modulates color — see [docs/dimension-system.md](docs/dimension-system.md).
+
+The other four themes still reference `{size.*}` / `{font.*}` / `{border.radius.*}`
+straight from their component tokens. Do not mix the two conventions within a
+theme.
 
 ---
 

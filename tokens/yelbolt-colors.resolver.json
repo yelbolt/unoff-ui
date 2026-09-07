@@ -1,20 +1,23 @@
 {
-  "name": "Yelbolt Colors",
+  "name": "Yelbolt Modes",
   "version": "2025.10",
-  "description": "Color tokens for Yelbolt brands platform, including light/dark modes",
+  "description": "Mode tokens for Yelbolt brands platform — colors and dimensions, per brand and light/dark scheme",
   "resolutionOrder": [
     { "$ref": "#/sets/primitives" },
     { "$ref": "#/modifiers/mode" }
   ],
   "sets": {
     "primitives": {
-      "description": "Yelbolt color primitives (shade ramps per family)",
-      "sources": [{ "$ref": "./platforms/yelbolt/colors.json" }]
+      "description": "Yelbolt color primitives (shade ramps per family) plus the commons scale the dimension system draws from",
+      "sources": [
+        { "$ref": "./commons/commons.tokens.json" },
+        { "$ref": "./platforms/yelbolt/colors.json" }
+      ]
     }
   },
   "modifiers": {
     "mode": {
-      "description": "Yelbolt brands light/dark modes",
+      "description": "Yelbolt brands light/dark modes — each context carries both a color and a dimension system",
       "contexts": {
         "isbLight": [
           { "$ref": "./platforms/yelbolt/modes/isb-light.tokens.json" }

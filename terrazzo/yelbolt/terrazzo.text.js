@@ -44,6 +44,7 @@ export default defineConfig({
         'UNO.**',
         'YLB.**',
         'font.**',
+        'dimension.**',
         'size.**',
         'shadow.**',
         'border.**',

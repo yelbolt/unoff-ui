@@ -5,7 +5,7 @@ import tokensStudioCompat, {
   wrapFallbacks,
 } from '../plugins/tokens-studio-compat.js'
 
-const PRIMITIVE_TOKENS = [
+const BRAND_RAMPS = [
   'ISB.**',
   'NTL.**',
   'TCN.**',
@@ -14,6 +14,18 @@ const PRIMITIVE_TOKENS = [
   'UNO.**',
   'YLB.**',
 ]
+
+const COMMONS_TOKENS = [
+  'size.**',
+  'font.**',
+  'border.**',
+  'grey.**',
+  'alpha.**',
+  'shadow.**',
+  'elevation.**',
+]
+
+const PRIMITIVE_TOKENS = [...BRAND_RAMPS, ...COMMONS_TOKENS]
 
 export default defineConfig({
   name: 'Yelbolt Colors',
@@ -25,6 +37,11 @@ export default defineConfig({
       filename: 'yelbolt-colors.scss',
       transform: cssTransform,
       permutations: [
+        {
+          input: { mode: 'ylbLight' },
+          include: BRAND_RAMPS,
+          prepare: (css) => `:root {\n  ${css}\n}`,
+        },
         {
           input: { mode: 'isbLight' },
           exclude: PRIMITIVE_TOKENS,
