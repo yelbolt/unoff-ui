@@ -139,7 +139,7 @@
   --color-background-brand-pressed: var(--isb-5);
   --color-background-brand-strong: var(--isb-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--isb-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -169,7 +169,7 @@
   --color-background-selected-pressed: var(--isb-6);
   --color-background-selected-strong: var(--isb-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--isb-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -193,7 +193,7 @@
   --color-border-brand-pressed: var(--isb-6);
   --color-border-brand-strong: var(--isb-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--isb-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -223,7 +223,7 @@
   --color-border-selected-pressed: var(--isb-7);
   --color-border-selected-strong: var(--isb-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--isb-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -247,7 +247,7 @@
   --color-icon-brand-pressed: var(--isb-4);
   --color-icon-brand-strong: var(--isb-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--isb-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -331,7 +331,7 @@
   --color-icon-selected-pressed: var(--isb-6);
   --color-icon-selected-strong: var(--isb-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--isb-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -355,7 +355,7 @@
   --color-text-brand-pressed: var(--isb-4);
   --color-text-brand-strong: var(--isb-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--isb-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -439,7 +439,7 @@
   --color-text-selected-pressed: var(--isb-6);
   --color-text-selected-strong: var(--isb-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--isb-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -953,7 +953,7 @@
   --color-background-brand-pressed: var(--ntl-5);
   --color-background-brand-strong: var(--ntl-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--ntl-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -983,7 +983,7 @@
   --color-background-selected-pressed: var(--ntl-6);
   --color-background-selected-strong: var(--ntl-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--ntl-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -995,7 +995,7 @@
   --color-background-tertiary-pressed: var(--ntl-5);
   --color-background-tertiary-strong: var(--ntl-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--ntl-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -1007,7 +1007,7 @@
   --color-border-brand-pressed: var(--ntl-6);
   --color-border-brand-strong: var(--ntl-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--ntl-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -1037,7 +1037,7 @@
   --color-border-selected-pressed: var(--ntl-7);
   --color-border-selected-strong: var(--ntl-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--ntl-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -1049,7 +1049,7 @@
   --color-border-tertiary-pressed: var(--ntl-6);
   --color-border-tertiary-strong: var(--ntl-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--ntl-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -1061,7 +1061,7 @@
   --color-icon-brand-pressed: var(--ntl-4);
   --color-icon-brand-strong: var(--ntl-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--ntl-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -1145,7 +1145,7 @@
   --color-icon-selected-pressed: var(--ntl-6);
   --color-icon-selected-strong: var(--ntl-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--ntl-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -1157,7 +1157,7 @@
   --color-icon-tertiary-pressed: var(--ntl-6);
   --color-icon-tertiary-strong: var(--ntl-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--ntl-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -1169,7 +1169,7 @@
   --color-text-brand-pressed: var(--ntl-4);
   --color-text-brand-strong: var(--ntl-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--ntl-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -1253,7 +1253,7 @@
   --color-text-selected-pressed: var(--ntl-6);
   --color-text-selected-strong: var(--ntl-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--ntl-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -1265,7 +1265,7 @@
   --color-text-tertiary-pressed: var(--ntl-6);
   --color-text-tertiary-strong: var(--ntl-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--ntl-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);
@@ -1797,7 +1797,7 @@
   --color-background-selected-pressed: var(--tcn-6);
   --color-background-selected-strong: var(--tcn-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--tcn-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -1809,7 +1809,7 @@
   --color-background-tertiary-pressed: var(--tcn-5);
   --color-background-tertiary-strong: var(--tcn-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--tcn-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -1851,7 +1851,7 @@
   --color-border-selected-pressed: var(--tcn-7);
   --color-border-selected-strong: var(--tcn-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--tcn-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -1863,7 +1863,7 @@
   --color-border-tertiary-pressed: var(--tcn-6);
   --color-border-tertiary-strong: var(--tcn-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--tcn-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -1959,7 +1959,7 @@
   --color-icon-selected-pressed: var(--tcn-6);
   --color-icon-selected-strong: var(--tcn-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--tcn-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -1971,7 +1971,7 @@
   --color-icon-tertiary-pressed: var(--tcn-6);
   --color-icon-tertiary-strong: var(--tcn-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--tcn-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -2067,7 +2067,7 @@
   --color-text-selected-pressed: var(--tcn-6);
   --color-text-selected-strong: var(--tcn-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--tcn-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -2079,7 +2079,7 @@
   --color-text-tertiary-pressed: var(--tcn-6);
   --color-text-tertiary-strong: var(--tcn-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--tcn-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);
@@ -2581,7 +2581,7 @@
   --color-background-brand-pressed: var(--uicp-5);
   --color-background-brand-strong: var(--uicp-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--uicp-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -2611,7 +2611,7 @@
   --color-background-selected-pressed: var(--uicp-6);
   --color-background-selected-strong: var(--uicp-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--uicp-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -2623,7 +2623,7 @@
   --color-background-tertiary-pressed: var(--uicp-5);
   --color-background-tertiary-strong: var(--uicp-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--uicp-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -2635,7 +2635,7 @@
   --color-border-brand-pressed: var(--uicp-6);
   --color-border-brand-strong: var(--uicp-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--uicp-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -2665,7 +2665,7 @@
   --color-border-selected-pressed: var(--uicp-7);
   --color-border-selected-strong: var(--uicp-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--uicp-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -2677,7 +2677,7 @@
   --color-border-tertiary-pressed: var(--uicp-6);
   --color-border-tertiary-strong: var(--uicp-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--uicp-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -2689,7 +2689,7 @@
   --color-icon-brand-pressed: var(--uicp-4);
   --color-icon-brand-strong: var(--uicp-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--uicp-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -2773,7 +2773,7 @@
   --color-icon-selected-pressed: var(--uicp-6);
   --color-icon-selected-strong: var(--uicp-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--uicp-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -2785,7 +2785,7 @@
   --color-icon-tertiary-pressed: var(--uicp-6);
   --color-icon-tertiary-strong: var(--uicp-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--uicp-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -2797,7 +2797,7 @@
   --color-text-brand-pressed: var(--uicp-4);
   --color-text-brand-strong: var(--uicp-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--uicp-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -2881,7 +2881,7 @@
   --color-text-selected-pressed: var(--uicp-6);
   --color-text-selected-strong: var(--uicp-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--uicp-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -2893,7 +2893,7 @@
   --color-text-tertiary-pressed: var(--uicp-6);
   --color-text-tertiary-strong: var(--uicp-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--uicp-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);
@@ -3395,7 +3395,7 @@
   --color-background-brand-pressed: var(--uics-5);
   --color-background-brand-strong: var(--uics-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--uics-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -3437,7 +3437,7 @@
   --color-background-tertiary-pressed: var(--uics-5);
   --color-background-tertiary-strong: var(--uics-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--uics-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -3449,7 +3449,7 @@
   --color-border-brand-pressed: var(--uics-6);
   --color-border-brand-strong: var(--uics-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--uics-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -3491,7 +3491,7 @@
   --color-border-tertiary-pressed: var(--uics-6);
   --color-border-tertiary-strong: var(--uics-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--uics-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -3503,7 +3503,7 @@
   --color-icon-brand-pressed: var(--uics-4);
   --color-icon-brand-strong: var(--uics-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--uics-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -3599,7 +3599,7 @@
   --color-icon-tertiary-pressed: var(--uics-6);
   --color-icon-tertiary-strong: var(--uics-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--uics-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -3611,7 +3611,7 @@
   --color-text-brand-pressed: var(--uics-4);
   --color-text-brand-strong: var(--uics-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--uics-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -3707,7 +3707,7 @@
   --color-text-tertiary-pressed: var(--uics-6);
   --color-text-tertiary-strong: var(--uics-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--uics-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);
@@ -4209,7 +4209,7 @@
   --color-background-brand-pressed: var(--uno-5);
   --color-background-brand-strong: var(--uno-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--uno-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -4239,7 +4239,7 @@
   --color-background-selected-pressed: var(--uno-6);
   --color-background-selected-strong: var(--uno-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--uno-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -4251,7 +4251,7 @@
   --color-background-tertiary-pressed: var(--uno-5);
   --color-background-tertiary-strong: var(--uno-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--uno-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -4263,7 +4263,7 @@
   --color-border-brand-pressed: var(--uno-6);
   --color-border-brand-strong: var(--uno-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--uno-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -4293,7 +4293,7 @@
   --color-border-selected-pressed: var(--uno-7);
   --color-border-selected-strong: var(--uno-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--uno-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -4305,7 +4305,7 @@
   --color-border-tertiary-pressed: var(--uno-6);
   --color-border-tertiary-strong: var(--uno-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--uno-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -4317,7 +4317,7 @@
   --color-icon-brand-pressed: var(--uno-4);
   --color-icon-brand-strong: var(--uno-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--uno-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -4401,7 +4401,7 @@
   --color-icon-selected-pressed: var(--uno-6);
   --color-icon-selected-strong: var(--uno-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--uno-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -4413,7 +4413,7 @@
   --color-icon-tertiary-pressed: var(--uno-6);
   --color-icon-tertiary-strong: var(--uno-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--uno-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -4425,7 +4425,7 @@
   --color-text-brand-pressed: var(--uno-4);
   --color-text-brand-strong: var(--uno-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--uno-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -4509,7 +4509,7 @@
   --color-text-selected-pressed: var(--uno-6);
   --color-text-selected-strong: var(--uno-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--uno-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -4521,7 +4521,7 @@
   --color-text-tertiary-pressed: var(--uno-6);
   --color-text-tertiary-strong: var(--uno-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--uno-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);
@@ -5023,7 +5023,7 @@
   --color-background-brand-pressed: var(--ylb-5);
   --color-background-brand-strong: var(--ylb-6);
   --color-background-danger-default: var(--color-background-danger, var(--tcn-3));
-  --color-background-danger-disabled: var(--ylb-2);
+  --color-background-danger-disabled: var(--tcn-2);
   --color-background-danger-focus: var(--tcn-3);
   --color-background-danger-hover: var(--tcn-4);
   --color-background-danger-pressed: var(--tcn-5);
@@ -5053,7 +5053,7 @@
   --color-background-selected-pressed: var(--ylb-6);
   --color-background-selected-strong: var(--ylb-7);
   --color-background-success-default: var(--color-background-success, var(--uics-3));
-  --color-background-success-disabled: var(--ylb-2);
+  --color-background-success-disabled: var(--uics-2);
   --color-background-success-focus: var(--uics-3);
   --color-background-success-hover: var(--uics-4);
   --color-background-success-pressed: var(--uics-5);
@@ -5065,7 +5065,7 @@
   --color-background-tertiary-pressed: var(--ylb-5);
   --color-background-tertiary-strong: var(--ylb-6);
   --color-background-warning-default: var(--color-background-warning, var(--isb-3));
-  --color-background-warning-disabled: var(--ylb-2);
+  --color-background-warning-disabled: var(--isb-2);
   --color-background-warning-focus: var(--isb-3);
   --color-background-warning-hover: var(--isb-4);
   --color-background-warning-pressed: var(--isb-5);
@@ -5077,7 +5077,7 @@
   --color-border-brand-pressed: var(--ylb-6);
   --color-border-brand-strong: var(--ylb-6);
   --color-border-danger-default: var(--color-border-danger, var(--tcn-4));
-  --color-border-danger-disabled: var(--ylb-2);
+  --color-border-danger-disabled: var(--tcn-2);
   --color-border-danger-focus: var(--tcn-4);
   --color-border-danger-hover: var(--tcn-5);
   --color-border-danger-pressed: var(--tcn-6);
@@ -5107,7 +5107,7 @@
   --color-border-selected-pressed: var(--ylb-7);
   --color-border-selected-strong: var(--ylb-8);
   --color-border-success-default: var(--color-border-success, var(--uics-4));
-  --color-border-success-disabled: var(--ylb-2);
+  --color-border-success-disabled: var(--uics-2);
   --color-border-success-focus: var(--uics-4);
   --color-border-success-hover: var(--uics-5);
   --color-border-success-pressed: var(--uics-6);
@@ -5119,7 +5119,7 @@
   --color-border-tertiary-pressed: var(--ylb-6);
   --color-border-tertiary-strong: var(--ylb-7);
   --color-border-warning-default: var(--color-border-warning, var(--isb-4));
-  --color-border-warning-disabled: var(--ylb-2);
+  --color-border-warning-disabled: var(--isb-2);
   --color-border-warning-focus: var(--isb-4);
   --color-border-warning-hover: var(--isb-5);
   --color-border-warning-pressed: var(--isb-6);
@@ -5131,7 +5131,7 @@
   --color-icon-brand-pressed: var(--ylb-4);
   --color-icon-brand-strong: var(--ylb-4);
   --color-icon-danger-default: var(--color-icon-danger, var(--tcn-4));
-  --color-icon-danger-disabled: var(--ylb-3);
+  --color-icon-danger-disabled: var(--tcn-3);
   --color-icon-danger-focus: var(--tcn-4);
   --color-icon-danger-hover: var(--tcn-4);
   --color-icon-danger-pressed: var(--tcn-4);
@@ -5215,7 +5215,7 @@
   --color-icon-selected-pressed: var(--ylb-6);
   --color-icon-selected-strong: var(--ylb-7);
   --color-icon-success-default: var(--color-icon-success, var(--uics-4));
-  --color-icon-success-disabled: var(--ylb-3);
+  --color-icon-success-disabled: var(--uics-3);
   --color-icon-success-focus: var(--uics-4);
   --color-icon-success-hover: var(--uics-4);
   --color-icon-success-pressed: var(--uics-4);
@@ -5227,7 +5227,7 @@
   --color-icon-tertiary-pressed: var(--ylb-6);
   --color-icon-tertiary-strong: var(--ylb-7);
   --color-icon-warning-default: var(--color-icon-warning, var(--isb-4));
-  --color-icon-warning-disabled: var(--ylb-3);
+  --color-icon-warning-disabled: var(--isb-3);
   --color-icon-warning-focus: var(--isb-4);
   --color-icon-warning-hover: var(--isb-4);
   --color-icon-warning-pressed: var(--isb-4);
@@ -5239,7 +5239,7 @@
   --color-text-brand-pressed: var(--ylb-4);
   --color-text-brand-strong: var(--ylb-4);
   --color-text-danger-default: var(--color-text-danger, var(--tcn-4));
-  --color-text-danger-disabled: var(--ylb-3);
+  --color-text-danger-disabled: var(--tcn-3);
   --color-text-danger-focus: var(--tcn-4);
   --color-text-danger-hover: var(--tcn-4);
   --color-text-danger-pressed: var(--tcn-4);
@@ -5323,7 +5323,7 @@
   --color-text-selected-pressed: var(--ylb-6);
   --color-text-selected-strong: var(--ylb-7);
   --color-text-success-default: var(--color-text-success, var(--uics-4));
-  --color-text-success-disabled: var(--ylb-3);
+  --color-text-success-disabled: var(--uics-3);
   --color-text-success-focus: var(--uics-4);
   --color-text-success-hover: var(--uics-4);
   --color-text-success-pressed: var(--uics-4);
@@ -5335,7 +5335,7 @@
   --color-text-tertiary-pressed: var(--ylb-6);
   --color-text-tertiary-strong: var(--ylb-7);
   --color-text-warning-default: var(--color-text-warning, var(--isb-4));
-  --color-text-warning-disabled: var(--ylb-3);
+  --color-text-warning-disabled: var(--isb-3);
   --color-text-warning-focus: var(--isb-4);
   --color-text-warning-hover: var(--isb-4);
   --color-text-warning-pressed: var(--isb-4);

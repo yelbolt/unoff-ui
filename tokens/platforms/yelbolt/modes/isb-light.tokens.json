@@ -123,7 +123,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.2}",
+          "$value": "{TCN.2}",
           "$type": "color"
         },
         "strong": {
@@ -149,7 +149,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.2}",
+          "$value": "{UICS.2}",
           "$type": "color"
         },
         "strong": {
@@ -359,7 +359,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.2}",
+          "$value": "{TCN.2}",
           "$type": "color"
         },
         "strong": {
@@ -385,7 +385,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.2}",
+          "$value": "{UICS.2}",
           "$type": "color"
         },
         "strong": {
@@ -595,7 +595,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.3}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -621,7 +621,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.3}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
@@ -1065,7 +1065,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.3}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -1091,7 +1091,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.3}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
