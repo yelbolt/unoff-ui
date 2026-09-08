@@ -281,7 +281,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.7}",
           "$type": "color"
         },
         "strong": {
@@ -307,7 +307,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "strong": {
@@ -333,7 +333,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.5}",
           "$type": "color"
         },
         "strong": {

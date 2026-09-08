@@ -281,7 +281,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{NTL.4}",
+          "$value": "{NTL.7}",
           "$type": "color"
         },
         "strong": {
@@ -307,7 +307,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{NTL.4}",
+          "$value": "{NTL.6}",
           "$type": "color"
         },
         "strong": {
@@ -333,7 +333,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{NTL.4}",
+          "$value": "{NTL.5}",
           "$type": "color"
         },
         "strong": {
