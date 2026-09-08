@@ -1507,6 +1507,18 @@
         "$value": "{size.pos.xmsmall}",
         "$type": "dimension"
       },
+      "400": {
+        "$value": "{size.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "500": {
+        "$value": "{size.pos.msmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{size.pos.small}",
+        "$type": "dimension"
+      },
       "800": {
         "$value": "{size.pos.medium}",
         "$type": "dimension"
