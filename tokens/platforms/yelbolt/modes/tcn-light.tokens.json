@@ -208,6 +208,32 @@
           "$value": "{TCN.7}",
           "$type": "color"
         }
+      },
+      "inverse": {
+        "default": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{TCN.7}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        }
       }
     },
     "border": {
@@ -412,6 +438,32 @@
         },
         "disabled": {
           "$value": "{TCN.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        }
+      },
+      "inverse": {
+        "default": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{TCN.8}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{TCN.7}",
           "$type": "color"
         },
         "strong": {
@@ -626,6 +678,32 @@
         },
         "strong": {
           "$value": "{TCN.7}",
+          "$type": "color"
+        }
+      },
+      "inverse": {
+        "default": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{TCN.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{TCN.1}",
           "$type": "color"
         }
       },
@@ -1070,6 +1148,32 @@
         },
         "strong": {
           "$value": "{TCN.7}",
+          "$type": "color"
+        }
+      },
+      "inverse": {
+        "default": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{TCN.1}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{TCN.2}",
+          "$type": "color"
+        },
+        "strong": {
+          "$value": "{TCN.1}",
           "$type": "color"
         }
       },

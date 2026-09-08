@@ -302,13 +302,13 @@
   --icon-button-large-height: var(--control-icon-800);
   --icon-button-large-width: var(--control-icon-800);
   --icon-button-selected-background-color-default: var(--color-background-selected-default);
-  --icon-button-selected-background-color-disabled: var(--color-background-brand-pressed);
+  --icon-button-selected-background-color-disabled: var(--color-background-selected-disabled);
   --icon-button-selected-background-color-focus: var(--color-background-selected-focus);
   --icon-button-selected-background-color-hover: var(--color-background-selected-hover);
   --icon-button-selected-background-color-pressed: var(--color-background-selected-pressed);
   --icon-button-selected-border-color-default: var(--grey-transparent);
   --icon-button-selected-border-color-disabled: var(--grey-transparent);
-  --icon-button-selected-border-color-focus: var(--color-border-selected-default);
+  --icon-button-selected-border-color-focus: var(--color-border-selected-strong);
   --icon-button-selected-border-color-hover: var(--grey-transparent);
   --icon-button-selected-border-color-pressed: var(--grey-transparent);
   --icon-button-selected-border-offset-default: var(--stroke-offset-none);
@@ -324,7 +324,7 @@
   --icon-button-selected-icon-color-default: var(--color-icon-on-brand-default);
   --icon-button-selected-icon-color-disabled: var(--color-icon-on-brand-disabled);
   --icon-button-selected-icon-color-focus: var(--color-icon-on-brand-focus);
-  --icon-button-selected-icon-color-hover: var(--color-icon-on-brand-hover);
+  --icon-button-selected-icon-color-hover: var(--color-icon-on-brand-pressed);
   --icon-button-selected-icon-color-pressed: var(--color-icon-on-brand-pressed);
   --icon-button-selected-notification-background-color-default: var(--color-background-primary-default);
   --icon-button-selected-notification-background-color-disabled: var(--color-background-primary-disabled);
