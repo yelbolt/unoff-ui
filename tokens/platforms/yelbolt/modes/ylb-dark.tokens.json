@@ -1457,6 +1457,10 @@
       }
     },
     "gap": {
+      "025": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
       "050": {
         "$value": "{size.pos.xunit}",
         "$type": "dimension"
@@ -1515,6 +1519,10 @@
     "pull": {
       "025": {
         "$value": "{size.neg.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{size.neg.xunit}",
         "$type": "dimension"
       },
       "100": {
@@ -1591,6 +1599,18 @@
       }
     },
     "icon": {
+      "025": {
+        "$value": "{size.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{size.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{size.pos.xxxsmall}",
+        "$type": "dimension"
+      },
       "200": {
         "$value": "{size.pos.xxsmall}",
         "$type": "dimension"
@@ -1640,6 +1660,16 @@
       "thick": {
         "$value": "{size.neg.xunit}",
         "$type": "dimension"
+      },
+      "positive": {
+        "thin": {
+          "$value": "{size.pos.unit}",
+          "$type": "dimension"
+        },
+        "thick": {
+          "$value": "{size.pos.xunit}",
+          "$type": "dimension"
+        }
       }
     }
   },

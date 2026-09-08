@@ -60,31 +60,31 @@
         "$type": "dimension"
       },
       "width": {
-        "$value": "{control.size.400}",
+        "$value": "{control.size.500}",
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{radius.medium}",
+        "$value": "{radius.large}",
         "$type": "dimension"
       },
       "border": {
         "color": {
           "default": {
-            "$value": "{color.border.primary.default}",
+            "$value": "{color.border.secondary.default}",
             "$type": "color"
           },
           "checked": {
             "default": {
-              "$value": "{color.border.selected.strong}",
+              "$value": "{color.border.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.default}",
+              "$value": "{color.background.selected.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{color.border.primary.disabled}",
+            "$value": "{color.border.secondary.disabled}",
             "$type": "color"
           },
           "secondary": {
@@ -93,12 +93,12 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.border.selected.default}",
+              "$value": "{color.border.secondary.focus}",
               "$type": "color"
             },
             "checked": {
               "focus": {
-                "$value": "{color.border.selected.strong}",
+                "$value": "{color.border.selected.focus}",
                 "$type": "color"
               }
             }
@@ -167,16 +167,16 @@
           },
           "checked": {
             "default": {
-              "$value": "{color.background.selected.strong}",
+              "$value": "{color.background.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.default}",
+              "$value": "{color.background.selected.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{color.background.primary.default}",
+            "$value": "{color.background.secondary.disabled}",
             "$type": "color"
           }
         }
@@ -192,7 +192,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{space.pull.100}",
+            "$value": "{space.pull.025}",
             "$type": "dimension"
           }
         },
@@ -206,11 +206,11 @@
         },
         "color": {
           "default": {
-            "$value": "{grey.0}",
+            "$value": "{color.icon.onSelected.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{color.icon.primary.disabled}",
+            "$value": "{color.icon.onSelected.disabled}",
             "$type": "color"
           }
         }
@@ -228,11 +228,11 @@
     },
     "toggle": {
       "height": {
-        "$value": "{control.size.300}",
+        "$value": "{control.size.400}",
         "$type": "dimension"
       },
       "width": {
-        "$value": "{control.size.600}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       },
       "radius": {
@@ -247,7 +247,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{color.background.selected.strong}",
+              "$value": "{color.background.selected.default}",
               "$type": "color"
             },
             "disabled": {
@@ -264,21 +264,21 @@
       "border": {
         "color": {
           "default": {
-            "$value": "{color.border.primary.default}",
+            "$value": "{color.border.secondary.default}",
             "$type": "color"
           },
           "checked": {
             "default": {
-              "$value": "{color.background.selected.strong}",
+              "$value": "{color.border.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.disabled}",
+              "$value": "{color.border.selected.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{color.border.primary.disabled}",
+            "$value": "{color.border.secondary.disabled}",
             "$type": "color"
           },
           "secondary": {
@@ -287,12 +287,12 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.border.selected.default}",
+              "$value": "{color.border.secondary.focus}",
               "$type": "color"
             },
             "checked": {
               "focus": {
-                "$value": "{color.border.selected.strong}",
+                "$value": "{color.border.selected.focus}",
                 "$type": "color"
               }
             }
@@ -369,11 +369,11 @@
       },
       "knob": {
         "height": {
-          "$value": "10px",
+          "$value": "{control.size.300}",
           "$type": "dimension"
         },
         "width": {
-          "$value": "10px",
+          "$value": "{control.size.400}",
           "$type": "dimension"
         },
         "radius": {
@@ -381,27 +381,27 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": "7px",
+          "$value": "{space.offset.025}",
           "$type": "dimension"
         },
         "background": {
           "color": {
             "default": {
-              "$value": "{grey.0}",
+              "$value": "{color.icon.onSelected.default}",
               "$type": "color"
             },
             "checked": {
               "default": {
-                "$value": "{color.icon.onBrand.default}",
+                "$value": "{color.icon.onSelected.default}",
                 "$type": "color"
               },
               "disabled": {
-                "$value": "{color.icon.onBrand.disabled}",
+                "$value": "{color.icon.onSelected.disabled}",
                 "$type": "color"
               }
             },
             "disabled": {
-              "$value": "{color.icon.primary.disabled}",
+              "$value": "{color.icon.onSelected.disabled}",
               "$type": "color"
             }
           }
@@ -409,21 +409,21 @@
         "transform": {
           "default": {
             "translateX": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.050}",
               "$type": "dimension"
             },
             "translateY": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.050}",
               "$type": "dimension"
             }
           },
           "checked": {
             "translateX": {
-              "$value": "13px",
+              "$value": "{space.offset.300}",
               "$type": "dimension"
             },
             "translateY": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.050}",
               "$type": "dimension"
             }
           }
@@ -476,7 +476,7 @@
         "$type": "dimension"
       },
       "width": {
-        "$value": "{control.size.400}",
+        "$value": "{control.size.600}",
         "$type": "dimension"
       },
       "inner": {
@@ -485,7 +485,7 @@
           "$type": "dimension"
         },
         "width": {
-          "$value": "{control.size.200}",
+          "$value": "{control.size.400}",
           "$type": "dimension"
         },
         "position": {
@@ -506,11 +506,11 @@
       "icon": {
         "color": {
           "default": {
-            "$value": "{color.icon.primary.default}",
+            "$value": "{color.icon.onSelected.default}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{color.icon.primary.disabled}",
+            "$value": "{color.icon.onSelected.disabled}",
             "$type": "color"
           }
         }
@@ -518,21 +518,21 @@
       "background": {
         "color": {
           "default": {
-            "$value": "{color.background.primary.default}",
+            "$value": "{color.background.secondary.default}",
             "$type": "color"
           },
           "checked": {
             "default": {
-              "$value": "{color.background.primary.default}",
+              "$value": "{color.background.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.primary.default}",
+              "$value": "{color.background.selected.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{color.background.primary.default}",
+            "$value": "{color.background.secondary.disabled}",
             "$type": "color"
           }
         }
@@ -540,21 +540,21 @@
       "border": {
         "color": {
           "default": {
-            "$value": "{color.icon.primary.default}",
+            "$value": "{color.border.secondary.default}",
             "$type": "color"
           },
           "checked": {
             "default": {
-              "$value": "{color.icon.primary.default}",
+              "$value": "{color.border.selected.default}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.icon.primary.disabled}",
+              "$value": "{color.border.selected.disabled}",
               "$type": "color"
             }
           },
           "disabled": {
-            "$value": "{color.icon.primary.disabled}",
+            "$value": "{color.border.secondary.disabled}",
             "$type": "color"
           },
           "secondary": {
@@ -563,12 +563,12 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.border.selected.default}",
+              "$value": "{color.border.selected.focus}",
               "$type": "color"
             },
             "checked": {
               "focus": {
-                "$value": "{color.border.selected.default}",
+                "$value": "{color.border.selected.focus}",
                 "$type": "color"
               }
             }
