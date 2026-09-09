@@ -1589,6 +1589,10 @@
         "$value": "{size.pos.medium}",
         "$type": "dimension"
       },
+      "900": {
+        "$value": "{size.pos.xmedium}",
+        "$type": "dimension"
+      },
       "1000": {
         "$value": "{size.pos.large}",
         "$type": "dimension"
