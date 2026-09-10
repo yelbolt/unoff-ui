@@ -151,7 +151,7 @@
       }
     }
   },
-  "size": {
+  "scale": {
     "$type": "dimension",
     "$description": "A comprehensive set of spacing/sizing values to ensure consistent layout and spacing across all supported platforms. These values can be used for margins, paddings, gaps, and other spacing needs.",
     "$extensions": {
@@ -162,6 +162,9 @@
         "EFFECT_FLOAT",
         "OPACITY"
       ]
+    },
+    "null": {
+      "$value": "0px"
     },
     "neg": {
       "huge": {
@@ -212,9 +215,6 @@
       "hunit": {
         "$value": "-0.5px"
       }
-    },
-    "null": {
-      "$value": "0px"
     },
     "pos": {
       "hunit": {

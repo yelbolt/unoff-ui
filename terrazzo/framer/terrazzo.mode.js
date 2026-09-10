@@ -6,7 +6,7 @@ import tokensStudioCompat, {
 } from '../plugins/tokens-studio-compat.js'
 
 const COMMONS_TOKENS = [
-  'size.**',
+  'scale.**',
   'font.**',
   'border.**',
   'grey.**',
@@ -19,27 +19,27 @@ const COMMONS_TOKENS = [
 ]
 
 export default defineConfig({
-  name: 'Sketch Colors',
-  tokens: ['./tokens/sketch-colors.resolver.json'],
+  name: 'Framer Modes',
+  tokens: ['./tokens/framer-modes.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
     tokensStudioCompat(),
     css({
-      filename: 'sketch-colors.scss',
+      filename: 'framer-modes.scss',
       transform: cssTransform,
       permutations: [
         {
-          input: { mode: 'sketchLight' },
+          input: { mode: 'framerLight' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="sketch-light"] {\n  ${css}\n}`
+            (css) => `[data-mode="framer-light"] {\n  ${css}\n}`
           ),
         },
         {
-          input: { mode: 'sketchDark' },
+          input: { mode: 'framerDark' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="sketch-dark"] {\n  ${css}\n}`
+            (css) => `[data-mode="framer-dark"] {\n  ${css}\n}`
           ),
         },
       ],

@@ -1,12 +1,12 @@
 import sketchTypes from '@styles/tokens/modules/sketch-types.module.scss'
-import sketchColors from '@styles/tokens/modules/sketch-colors.module.scss'
+import sketchModes from '@styles/tokens/modules/sketch-modes.module.scss'
 import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
-import penpotColors from '@styles/tokens/modules/penpot-colors.module.scss'
+import penpotModes from '@styles/tokens/modules/penpot-modes.module.scss'
 import framerTypes from '@styles/tokens/modules/framer-types.module.scss'
-import framerColors from '@styles/tokens/modules/framer-colors.module.scss'
+import framerModes from '@styles/tokens/modules/framer-modes.module.scss'
 import figmaTypes from '@styles/tokens/modules/figma-types.module.scss'
 import figmaPlugin from '@styles/tokens/modules/figma-plugin.module.scss'
-import figmaColors from '@styles/tokens/modules/figma-colors.module.scss'
+import figmaModes from '@styles/tokens/modules/figma-modes.module.scss'
 import commons from '@styles/tokens/modules/commons.module.scss'
 import texts from '@styles/texts/texts.module.scss'
 import layouts from '@styles/layouts.module.scss'
@@ -82,13 +82,13 @@ export {
   layouts,
   texts,
   commons,
-  figmaColors,
+  figmaModes,
   figmaPlugin,
   figmaTypes,
-  penpotColors,
+  penpotModes,
   penpotTypes,
-  sketchColors,
+  sketchModes,
   sketchTypes,
-  framerColors,
+  framerModes,
   framerTypes,
 }

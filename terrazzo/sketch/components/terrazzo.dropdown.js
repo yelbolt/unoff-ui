@@ -32,7 +32,7 @@ export default defineConfig({
         'space.**',
         'stroke.**',
         'type.**',
-        'size.**',
+        'scale.**',
         'shadow.**',
         'border.**',
         'grey.**',

@@ -1,7 +1,7 @@
 {
-  "name": "Framer Colors",
+  "name": "Penpot Modes",
   "version": "2025.10",
-  "description": "Color tokens for Framer platform, including light/dark modes",
+  "description": "Mode tokens for Penpot platform, including light/dark modes",
   "resolutionOrder": [
     {
       "$ref": "#/sets/primitives"
@@ -22,20 +22,20 @@
   },
   "modifiers": {
     "mode": {
-      "description": "Framer light/dark modes",
+      "description": "Penpot light/dark modes",
       "contexts": {
-        "framerLight": [
+        "penpotLight": [
           {
-            "$ref": "./platforms/framer/modes/framer-light.tokens.json"
+            "$ref": "./platforms/penpot/modes/penpot-light.tokens.json"
           }
         ],
-        "framerDark": [
+        "penpotDark": [
           {
-            "$ref": "./platforms/framer/modes/framer-dark.tokens.json"
+            "$ref": "./platforms/penpot/modes/penpot-dark.tokens.json"
           }
         ]
       },
-      "default": "framerLight"
+      "default": "penpotLight"
     }
   }
 }

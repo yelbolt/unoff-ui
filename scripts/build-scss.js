@@ -20,7 +20,7 @@
  *    npm run scss:build theme=sketch text
  *
  * 6. Build a specific token type for all themes:
- *    npm run scss:build color
+ *    npm run scss:build mode
  *
  */
 import { fileURLToPath } from 'url'
@@ -46,6 +46,7 @@ args.forEach((arg) => {
   else if (arg.startsWith('component=')) COMPONENT = arg.split('=')[1]
   else if (arg === 'text') TOKEN_TYPE = 'text'
   else if (arg === 'icon') TOKEN_TYPE = 'icon'
+  else if (arg === 'mode') TOKEN_TYPE = 'mode'
   else if (arg === 'color') TOKEN_TYPE = 'color'
   else if (arg === 'type') TOKEN_TYPE = 'type'
 })
@@ -138,11 +139,16 @@ function displayTerrazzoFiles(groupedFiles) {
   console.log(chalk.cyan('npm run scss:build component=button\n'))
   console.log(chalk.bold('Build a specific token type for a theme:'))
   console.log(chalk.cyan('npm run scss:build theme=sketch text'))
-  console.log(chalk.cyan('npm run scss:build theme=penpot color\n'))
+  console.log(chalk.cyan('npm run scss:build theme=penpot mode'))
+  console.log(
+    chalk.cyan(
+      'npm run scss:build theme=yelbolt color  # primitive ramps only, yelbolt-only\n'
+    )
+  )
   console.log(chalk.bold('Build a specific token type for all themes:'))
   console.log(chalk.cyan('npm run scss:build type'))
   console.log(chalk.cyan('npm run scss:build icon'))
-  console.log(chalk.cyan('npm run scss:build color'))
+  console.log(chalk.cyan('npm run scss:build mode'))
   console.log(chalk.cyan('npm run scss:build text\n'))
 }
 

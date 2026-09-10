@@ -113,11 +113,22 @@ All public exports go through `src/index.ts`. Components are grouped by category
 tokens/platforms/{theme}/*.json   (DTCG format)
         ↓  npm run scss:build -- --build theme={theme}
         ↓  Terrazzo (terrazzo/{theme}/*.js configs)
-src/styles/tokens/{theme}-colors.scss
+src/styles/tokens/{theme}-modes.scss
 src/styles/tokens/{theme}-types.scss
-src/styles/tokens/modules/{theme}-colors.module.scss   (re-exported via index.ts)
+src/styles/tokens/modules/{theme}-modes.module.scss   (re-exported via index.ts)
 src/styles/tokens/modules/{theme}-types.module.scss
 ```
+
+`modes` is the semantic/system layer — colors on every theme, plus dimensions
+and motion on `yelbolt`. `figma`, `penpot`, `sketch` and `framer` resolve their
+own colors directly into that layer at build time, so `modes` is their only
+token output. `yelbolt` additionally owns a primitive color palette
+(`platforms/yelbolt/colors.json`) that must survive as reusable `:root`
+variables, so it alone also builds a `color` layer:
+`terrazzo/yelbolt/terrazzo.color.js` → `src/styles/tokens/yelbolt-colors.scss`
+/ `modules/yelbolt-colors.module.scss`. Keep that split when a future theme
+gains its own primitive palette — `color` names the primitive, `mode` names
+the semantic layer built on top of it.
 
 Token JSON files live in `tokens/platforms/{theme}/` — for full pipeline documentation see [docs/terrazzo-guide.md](docs/terrazzo-guide.md):
 
@@ -135,7 +146,7 @@ They go through a `dimension.*` system layer that lives inside each mode file
 next to the colors, so a mode can modulate spacing, sizing and type metrics the
 same way it modulates color — see [docs/dimension-system.md](docs/dimension-system.md).
 
-The other four themes still reference `{size.*}` / `{font.*}` / `{border.radius.*}`
+The other four themes still reference `{scale.*}` / `{font.*}` / `{border.radius.*}`
 straight from their component tokens. Do not mix the two conventions within a
 theme.
 

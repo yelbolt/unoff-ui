@@ -1,7 +1,7 @@
 {
-  "name": "Figma Colors",
+  "name": "Figma Modes",
   "version": "2025.10",
-  "description": "Color tokens for Figma platform, including light/dark/figjam modes",
+  "description": "Mode tokens for Figma platform, including light/dark/figjam modes",
   "resolutionOrder": [
     {
       "$ref": "#/sets/primitives"

@@ -236,7 +236,7 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "background": {

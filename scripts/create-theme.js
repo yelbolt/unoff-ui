@@ -28,7 +28,7 @@ const rootDir = path.join(__dirname, '..')
 const TERRAZZO_DIR = path.join(rootDir, 'terrazzo')
 const TOKENS_PLATFORMS_DIR = path.join(rootDir, 'tokens', 'platforms')
 
-const SOURCE_COLOR_THEME = 'figma'
+const SOURCE_MODE_THEME = 'figma'
 
 /**
  * Utility functions for colorful logging
@@ -127,14 +127,14 @@ async function updateStorybookPreview(themeName) {
     )
 
     const modesItemsRegex = new RegExp(
-      `(items: \\[\\s*.*?'${SOURCE_COLOR_THEME}-dark',\\s*)`,
+      `(items: \\[\\s*.*?'${SOURCE_MODE_THEME}-dark',\\s*)`,
       's'
     )
     const updatedModesItems = `$1  '${themeName}-light',\n          '${themeName}-dark',\n        `
     previewContent = previewContent.replace(modesItemsRegex, updatedModesItems)
 
     const backgroundMapRegex = new RegExp(
-      `(const backgroundMap = \\{.*?'${SOURCE_COLOR_THEME}-dark': '#202022',\\s*)`,
+      `(const backgroundMap = \\{.*?'${SOURCE_MODE_THEME}-dark': '#202022',\\s*)`,
       's'
     )
     const updatedBackgroundMap = `$1  '${themeName}-light': '#ffffff',\n        '${themeName}-dark': '#202022',\n      `
@@ -269,7 +269,7 @@ function replaceAllThemeNames(content, newThemeName) {
  * @returns {Promise<void>}
  */
 async function createTerrazzoFiles(themeName) {
-  const sourceTerrazzoDir = path.join(TERRAZZO_DIR, SOURCE_COLOR_THEME)
+  const sourceTerrazzoDir = path.join(TERRAZZO_DIR, SOURCE_MODE_THEME)
   const targetTerrazzoDir = path.join(TERRAZZO_DIR, themeName)
 
   try {
@@ -297,7 +297,7 @@ async function createTerrazzoFiles(themeName) {
 
         content = replaceAllThemeNames(content, themeName)
 
-        if (file === 'terrazzo.colors.js' || file === 'terrazzo.text.js')
+        if (file === 'terrazzo.mode.js' || file === 'terrazzo.text.js')
           if (!content.includes(`./tokens/platforms/${themeName}/icon.json`))
             content = content.replace(
               /tokens: \[([\s\S]*?)\]/,
@@ -457,7 +457,7 @@ async function updateImportsInFile(filePath, themeName) {
     const content = await readFile(filePath, 'utf8')
 
     const sourceImportRegex = new RegExp(
-      `@import ['"](styles/)?${SOURCE_COLOR_THEME}['"];`,
+      `@import ['"](styles/)?${SOURCE_MODE_THEME}['"];`,
       'g'
     )
 
@@ -503,9 +503,9 @@ async function createThemeModuleFiles(themeName) {
     tokensModulesDir,
     `${themeName}-types.module.scss`
   )
-  const colorsModulePath = path.join(
+  const modesModulePath = path.join(
     tokensModulesDir,
-    `${themeName}-colors.module.scss`
+    `${themeName}-modes.module.scss`
   )
 
   try {
@@ -525,15 +525,15 @@ async function createThemeModuleFiles(themeName) {
       `Created ${log.highlight(themeName)} types module at ${log.path(path.relative(rootDir, typesModulePath))}`
     )
 
-    const colorsContent = `@import '../${themeName}-colors.scss';
+    const modesContent = `@import '../${themeName}-modes.scss';
 
 :export {
-  module: '${themeName}-colors';
+  module: '${themeName}-modes';
 }
 `
-    await writeFile(colorsModulePath, colorsContent)
+    await writeFile(modesModulePath, modesContent)
     log.success(
-      `Created ${log.highlight(themeName)} colors module at ${log.path(path.relative(rootDir, colorsModulePath))}`
+      `Created ${log.highlight(themeName)} modes module at ${log.path(path.relative(rootDir, modesModulePath))}`
     )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
@@ -556,7 +556,7 @@ async function updateThemeStylesImports(themeName) {
         `${log.path('.storybook/theme-styles.scss')} does not exist. Creating it with initial imports.`
       )
 
-      const initialContent = `@import '../src/styles/tokens/modules/${themeName}-colors.module.scss';\n@import '../src/styles/tokens/modules/${themeName}-types.module.scss';\n`
+      const initialContent = `@import '../src/styles/tokens/modules/${themeName}-modes.module.scss';\n@import '../src/styles/tokens/modules/${themeName}-types.module.scss';\n`
       await writeFile(themeStylesPath, initialContent)
       log.success(
         `Created ${log.path('.storybook/theme-styles.scss')} with ${log.highlight(themeName)} imports`
@@ -566,7 +566,7 @@ async function updateThemeStylesImports(themeName) {
 
     const themeStylesContent = await readFile(themeStylesPath, 'utf8')
 
-    if (themeStylesContent.includes(`${themeName}-colors.module.scss`)) {
+    if (themeStylesContent.includes(`${themeName}-modes.module.scss`)) {
       log.info(
         `Imports for ${log.highlight(themeName)} already exist in theme-styles.scss`
       )
@@ -583,7 +583,7 @@ async function updateThemeStylesImports(themeName) {
 
     const newImports = `
 
-@import '../src/styles/tokens/modules/${themeName}-colors.module.scss';
+@import '../src/styles/tokens/modules/${themeName}-modes.module.scss';
 @import '../src/styles/tokens/modules/${themeName}-types.module.scss';`
 
     const updatedContent =
@@ -608,7 +608,7 @@ async function updateThemeStylesImports(themeName) {
  * @returns {Promise<void>}
  */
 async function copyIconsFromFigma(themeName) {
-  const sourceIconsDir = path.join(rootDir, 'src', 'icons', SOURCE_COLOR_THEME)
+  const sourceIconsDir = path.join(rootDir, 'src', 'icons', SOURCE_MODE_THEME)
   const targetIconsDir = path.join(rootDir, 'src', 'icons', themeName)
 
   try {
@@ -661,7 +661,7 @@ async function updateIconPaths(themeName) {
 
     let iconContent = await readFile(iconJsonPath, 'utf8')
 
-    const sourceIconPath = `/src/icons/${SOURCE_COLOR_THEME}/`
+    const sourceIconPath = `/src/icons/${SOURCE_MODE_THEME}/`
     const targetIconPath = `/src/icons/${themeName}/`
 
     iconContent = iconContent.replace(
@@ -686,7 +686,7 @@ async function updateIconPaths(themeName) {
  * @returns {Promise<void>}
  */
 async function copyPlatformTokens(themeName) {
-  const sourceTokensDir = path.join(TOKENS_PLATFORMS_DIR, SOURCE_COLOR_THEME)
+  const sourceTokensDir = path.join(TOKENS_PLATFORMS_DIR, SOURCE_MODE_THEME)
   const targetTokensDir = path.join(TOKENS_PLATFORMS_DIR, themeName)
 
   try {
@@ -756,9 +756,9 @@ async function fixCopiedTokenNamespace(themeName) {
       const modeFiles = await readdir(modesDir)
 
       for (const file of modeFiles)
-        if (file.startsWith(`${SOURCE_COLOR_THEME}-`)) {
+        if (file.startsWith(`${SOURCE_MODE_THEME}-`)) {
           const newFileName = file.replace(
-            `${SOURCE_COLOR_THEME}-`,
+            `${SOURCE_MODE_THEME}-`,
             `${themeName}-`
           )
           await rename(
@@ -785,8 +785,8 @@ async function fixCopiedTokenNamespace(themeName) {
         else if (entry.isFile() && entry.name.endsWith('.json')) {
           const content = await readFile(entryPath, 'utf8')
 
-          const rootKeyRegex = new RegExp(`"${SOURCE_COLOR_THEME}":\\s*\\{`)
-          const aliasRefRegex = new RegExp(`\\{${SOURCE_COLOR_THEME}\\.`, 'g')
+          const rootKeyRegex = new RegExp(`"${SOURCE_MODE_THEME}":\\s*\\{`)
+          const aliasRefRegex = new RegExp(`\\{${SOURCE_MODE_THEME}\\.`, 'g')
 
           let updatedContent = content
           if (rootKeyRegex.test(updatedContent)) {
@@ -824,23 +824,23 @@ async function fixCopiedTokenNamespace(themeName) {
 }
 
 /**
- * Create a {theme}-colors.resolver.json for the new theme, based on the
+ * Create a {theme}-modes.resolver.json for the new theme, based on the
  * source theme's resolver, pointing at the renamed mode files. Without this,
- * terrazzo.color.js would keep building from the SOURCE theme's resolver and
+ * terrazzo.mode.js would keep building from the SOURCE theme's resolver and
  * the new theme's color customizations would never reach the SCSS output.
  * @param {string} themeName - The name of the theme
  * @returns {Promise<void>}
  */
-async function createColorResolver(themeName) {
+async function createModeResolver(themeName) {
   const sourceResolverPath = path.join(
     rootDir,
     'tokens',
-    `${SOURCE_COLOR_THEME}-colors.resolver.json`
+    `${SOURCE_MODE_THEME}-modes.resolver.json`
   )
   const targetResolverPath = path.join(
     rootDir,
     'tokens',
-    `${themeName}-colors.resolver.json`
+    `${themeName}-modes.resolver.json`
   )
 
   try {
@@ -855,29 +855,29 @@ async function createColorResolver(themeName) {
 
     content = content
       .replace(
-        new RegExp(`/platforms/${SOURCE_COLOR_THEME}/modes/`, 'g'),
+        new RegExp(`/platforms/${SOURCE_MODE_THEME}/modes/`, 'g'),
         `/platforms/${themeName}/modes/`
       )
       .replace(
-        new RegExp(`${SOURCE_COLOR_THEME}-light\\.tokens\\.json`, 'g'),
+        new RegExp(`${SOURCE_MODE_THEME}-light\\.tokens\\.json`, 'g'),
         `${themeName}-light.tokens.json`
       )
       .replace(
-        new RegExp(`${SOURCE_COLOR_THEME}-dark\\.tokens\\.json`, 'g'),
+        new RegExp(`${SOURCE_MODE_THEME}-dark\\.tokens\\.json`, 'g'),
         `${themeName}-dark.tokens.json`
       )
       .replace(
         /"name": "[^"]+"/,
-        `"name": "${themeName[0].toUpperCase()}${themeName.slice(1)} Colors"`
+        `"name": "${themeName[0].toUpperCase()}${themeName.slice(1)} Modes"`
       )
 
     await writeFile(targetResolverPath, content)
     log.success(
-      `Created color resolver at ${log.path(path.relative(rootDir, targetResolverPath))}`
+      `Created mode resolver at ${log.path(path.relative(rootDir, targetResolverPath))}`
     )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
-    log.error(`Error creating color resolver: ${error.message}`)
+    log.error(`Error creating mode resolver: ${error.message}`)
     throw error
   }
 }
@@ -896,7 +896,7 @@ async function main() {
     await createTerrazzoFiles(themeName)
     await copyPlatformTokens(themeName)
     await fixCopiedTokenNamespace(themeName)
-    await createColorResolver(themeName)
+    await createModeResolver(themeName)
     await copyIconsFromFigma(themeName)
     await updateIconPaths(themeName)
     await updateScssImports(themeName)
@@ -934,7 +934,7 @@ async function main() {
       `8. ${log.highlight(`@import 'styles/${themeName}'`)} statements have been added to all relevant SCSS files`
     )
     log.info(
-      `9. Module files have been created at ${log.path(`src/styles/tokens/modules/${themeName}-types.module.scss`)} and ${log.path(`src/styles/tokens/modules/${themeName}-colors.module.scss`)}`
+      `9. Module files have been created at ${log.path(`src/styles/tokens/modules/${themeName}-types.module.scss`)} and ${log.path(`src/styles/tokens/modules/${themeName}-modes.module.scss`)}`
     )
     log.info(
       `10. Module imports have been added to ${log.path('.storybook/theme-styles.scss')}`

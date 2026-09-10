@@ -120,22 +120,22 @@ The file must mirror the same values across all themes (start by copying one and
 {
   "{camelCaseName}": {
     "base": {
-      "height": { "$value": "{size.pos.small}", "$type": "dimension" },
-      "gap": { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
+      "height": { "$value": "{scale.pos.small}", "$type": "dimension" },
+      "gap": { "$value": "{scale.pos.xxxsmall}", "$type": "dimension" },
       "radius": { "$value": "{border.radius.medium}", "$type": "dimension" },
       "padding": {
-        "top": { "$value": "{size.null}", "$type": "dimension" },
-        "right": { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
-        "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left": { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
+        "top": { "$value": "{scale.null}", "$type": "dimension" },
+        "right": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" },
+        "bottom": { "$value": "{scale.null}", "$type": "dimension" },
+        "left": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" }
       },
       "background": {
         "color": { "$value": "transparent", "$type": "string" }
       },
       "border": {
         "color": { "$value": "transparent", "$type": "string" },
-        "width": { "$value": "{size.null}", "$type": "dimension" },
-        "offset": { "$value": "{size.null}", "$type": "dimension" }
+        "width": { "$value": "{scale.null}", "$type": "dimension" },
+        "offset": { "$value": "{scale.null}", "$type": "dimension" }
       },
       "text": {
         "color": { "$value": "{figma.color.text}", "$type": "color" }
@@ -162,11 +162,11 @@ The file must mirror the same values across all themes (start by copying one and
       },
       "border": {
         "width": {
-          "default": { "$value": "{size.null}", "$type": "dimension" },
-          "hover": { "$value": "{size.null}", "$type": "dimension" },
-          "pressed": { "$value": "{size.null}", "$type": "dimension" },
-          "focus": { "$value": "{size.pos.unit}", "$type": "dimension" },
-          "disabled": { "$value": "{size.null}", "$type": "dimension" }
+          "default": { "$value": "{scale.null}", "$type": "dimension" },
+          "hover": { "$value": "{scale.null}", "$type": "dimension" },
+          "pressed": { "$value": "{scale.null}", "$type": "dimension" },
+          "focus": { "$value": "{scale.pos.unit}", "$type": "dimension" },
+          "disabled": { "$value": "{scale.null}", "$type": "dimension" }
         },
         "color": {
           "default": { "$value": "transparent", "$type": "string" },
@@ -249,7 +249,7 @@ export default defineConfig({
       exclude: [
         '{theme}.color.*',
         'font.*',
-        'size.*',
+        'scale.*',
         'shadow.*',
         'border.*',
         'grey.*',

@@ -1,0 +1,1462 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+
+<Meta title="Foundations/Colors/Yelbolt" />
+
+# Yelbolt Colors
+
+Color tokens from the Yelbolt design system. Unlike the other four themes, Yelbolt ships **seven color families** (`YLB`, `NTL`, `UICP`, `UNO`, `TCN`, `UICS`, `ISB`) instead of a single brand hue — each is an 8-step shade/tint ramp, and each has its own `{family}-{light,dark}` mode pair activated via `data-mode="yelbolt-{family}-{light,dark}"` (e.g. `data-mode="yelbolt-ylb-dark"`). Use CSS custom properties (e.g. `var(--color-background-brand-default)`) in your styles — see [docs/color-mode-gradation.md](../../../docs/color-mode-gradation.md) for the full derivation rule.
+
+---
+
+## Primitives
+
+The eight shade/tint steps (`1` = lightest, `8` = darkest) for each of the seven families:
+
+<ColorPalette>
+  <ColorItem
+    title="YLB — yellow (brand)"
+    subtitle="--ylb-*"
+    colors={{
+      '1': '#ffff8c',
+      '2': '#f5f166',
+      '3': '#d0c900',
+      '4': '#a29800',
+      '5': '#6f6200',
+      '6': '#443600',
+      '7': '#251800',
+      '8': '#140900',
+    }}
+  />
+  <ColorItem
+    title="NTL — neutral"
+    subtitle="--ntl-*"
+    colors={{
+      '1': '#ffffe8',
+      '2': '#ebecd1',
+      '3': '#c5c5a7',
+      '4': '#959676',
+      '5': '#626244',
+      '6': '#39381e',
+      '7': '#1b1b06',
+      '8': '#0d0c00',
+    }}
+  />
+  <ColorItem
+    title="UICP — cyan"
+    subtitle="--uicp-*"
+    colors={{
+      '1': '#caffff',
+      '2': '#aff8ff',
+      '3': '#7ed2de',
+      '4': '#42a3b0',
+      '5': '#006e7a',
+      '6': '#00424d',
+      '7': '#00212b',
+      '8': '#001119',
+    }}
+  />
+  <ColorItem
+    title="UNO — purple"
+    subtitle="--uno-*"
+    colors={{
+      '1': '#f6f5ff',
+      '2': '#e0deff',
+      '3': '#b9b5ff',
+      '4': '#8a83ed',
+      '5': '#594cb4',
+      '6': '#33207d',
+      '7': '#19004f',
+      '8': '#0d0035',
+    }}
+  />
+  <ColorItem
+    title="TCN — pink / red"
+    subtitle="--tcn-*"
+    colors={{
+      '1': '#ffe3fa',
+      '2': '#ffcae4',
+      '3': '#ff9fbc',
+      '4': '#d76b8c',
+      '5': '#9c3459',
+      '6': '#670331',
+      '7': '#3d0015',
+      '8': '#260008',
+    }}
+  />
+  <ColorItem
+    title="UICS — green"
+    subtitle="--uics-*"
+    colors={{
+      '1': '#c8ffd1',
+      '2': '#acffb7',
+      '3': '#7bdd8b',
+      '4': '#3cad55',
+      '5': '#00761d',
+      '6': '#004800',
+      '7': '#002600',
+      '8': '#001500',
+    }}
+  />
+  <ColorItem
+    title="ISB — gold / amber"
+    subtitle="--isb-*"
+    colors={{
+      '1': '#fffec3',
+      '2': '#fee8a8',
+      '3': '#dac178',
+      '4': '#ab913e',
+      '5': '#765c00',
+      '6': '#493200',
+      '7': '#281500',
+      '8': '#160700',
+    }}
+  />
+</ColorPalette>
+
+---
+
+## YLB Mode — Semantic Tokens
+
+`YLB` is the default brand family. Within a mode, `primary` / `secondary` / `tertiary` form a darkness gradient off that mode's own family, `brand` is a fixed saturated pivot, and `danger` / `success` / `warning` always borrow `TCN` / `UICS` / `ISB` respectively — see [docs/color-mode-gradation.md](../../../docs/color-mode-gradation.md) for the full rule. The other six families (`NTL`, `UICP`, `UNO`, `TCN`, `UICS`, `ISB`) follow the exact same derivation, swapping in their own ramp.
+
+### Light Mode
+
+#### Background
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-background-brand-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#a29800',
+      pressed: '#6f6200',
+      focus: '#d0c900',
+      disabled: '#a29800',
+      strong: '#443600',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-background-primary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#f5f166',
+      disabled: '#f5f166',
+      strong: '#a29800',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-background-secondary-*"
+    colors={{
+      default: '#f5f166',
+      hover: '#d0c900',
+      pressed: '#a29800',
+      focus: '#d0c900',
+      disabled: '#d0c900',
+      strong: '#6f6200',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-background-tertiary-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#a29800',
+      pressed: '#6f6200',
+      focus: '#a29800',
+      disabled: '#a29800',
+      strong: '#443600',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-background-danger-*"
+    colors={{
+      default: '#ff9fbc',
+      hover: '#d76b8c',
+      pressed: '#9c3459',
+      focus: '#ff9fbc',
+      disabled: '#d76b8c',
+      strong: '#670331',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-background-success-*"
+    colors={{
+      default: '#7bdd8b',
+      hover: '#3cad55',
+      pressed: '#00761d',
+      focus: '#7bdd8b',
+      disabled: '#3cad55',
+      strong: '#004800',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-background-warning-*"
+    colors={{
+      default: '#dac178',
+      hover: '#ab913e',
+      pressed: '#765c00',
+      focus: '#dac178',
+      disabled: '#ab913e',
+      strong: '#493200',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-background-selected-*"
+    colors={{
+      default: '#a29800',
+      hover: '#6f6200',
+      pressed: '#443600',
+      focus: '#a29800',
+      disabled: '#d0c900',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-background-inverse-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#140900',
+      strong: '#140900',
+    }}
+  />
+</ColorPalette>
+
+#### Border
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-border-brand-*"
+    colors={{
+      default: '#a29800',
+      hover: '#6f6200',
+      pressed: '#443600',
+      focus: '#a29800',
+      disabled: '#a29800',
+      strong: '#443600',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-border-primary-*"
+    colors={{
+      default: '#f5f166',
+      hover: '#d0c900',
+      pressed: '#a29800',
+      focus: '#d0c900',
+      disabled: '#d0c900',
+      strong: '#6f6200',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-border-secondary-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#a29800',
+      pressed: '#6f6200',
+      focus: '#a29800',
+      disabled: '#a29800',
+      strong: '#443600',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-border-tertiary-*"
+    colors={{
+      default: '#a29800',
+      hover: '#6f6200',
+      pressed: '#443600',
+      focus: '#6f6200',
+      disabled: '#6f6200',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-border-danger-*"
+    colors={{
+      default: '#d76b8c',
+      hover: '#9c3459',
+      pressed: '#670331',
+      focus: '#d76b8c',
+      disabled: '#d76b8c',
+      strong: '#670331',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-border-success-*"
+    colors={{
+      default: '#3cad55',
+      hover: '#00761d',
+      pressed: '#004800',
+      focus: '#3cad55',
+      disabled: '#3cad55',
+      strong: '#004800',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-border-warning-*"
+    colors={{
+      default: '#ab913e',
+      hover: '#765c00',
+      pressed: '#493200',
+      focus: '#ab913e',
+      disabled: '#ab913e',
+      strong: '#493200',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-border-selected-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#443600',
+      pressed: '#251800',
+      focus: '#443600',
+      disabled: '#d0c900',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-border-inverse-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#140900',
+      strong: '#140900',
+    }}
+  />
+</ColorPalette>
+
+#### Icon
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-icon-brand-*"
+    colors={{
+      default: '#a29800',
+      hover: '#a29800',
+      pressed: '#a29800',
+      focus: '#a29800',
+      disabled: '#a29800',
+      strong: '#a29800',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-icon-primary-*"
+    colors={{
+      default: '#251800',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#251800',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-icon-secondary-*"
+    colors={{
+      default: '#443600',
+      hover: '#251800',
+      pressed: '#251800',
+      focus: '#443600',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-icon-tertiary-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#443600',
+      pressed: '#443600',
+      focus: '#6f6200',
+      disabled: '#6f6200',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-icon-danger-*"
+    colors={{
+      default: '#d76b8c',
+      hover: '#d76b8c',
+      pressed: '#d76b8c',
+      focus: '#d76b8c',
+      disabled: '#d76b8c',
+      strong: '#d76b8c',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-icon-success-*"
+    colors={{
+      default: '#3cad55',
+      hover: '#3cad55',
+      pressed: '#3cad55',
+      focus: '#3cad55',
+      disabled: '#3cad55',
+      strong: '#3cad55',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-icon-warning-*"
+    colors={{
+      default: '#ab913e',
+      hover: '#ab913e',
+      pressed: '#ab913e',
+      focus: '#ab913e',
+      disabled: '#ab913e',
+      strong: '#ab913e',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-icon-selected-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#443600',
+      pressed: '#443600',
+      focus: '#6f6200',
+      disabled: '#d0c900',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-icon-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Brand"
+    subtitle="--color-icon-on-brand-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#ffff8c',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Primary"
+    subtitle="--color-icon-on-primary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Secondary"
+    subtitle="--color-icon-on-secondary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Tertiary"
+    subtitle="--color-icon-on-tertiary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Danger"
+    subtitle="--color-icon-on-danger-*"
+    colors={{
+      default: '#260008',
+      hover: '#260008',
+      pressed: '#ffe3fa',
+      focus: '#260008',
+      disabled: '#9c3459',
+      strong: '#260008',
+    }}
+  />
+  <ColorItem
+    title="On Success"
+    subtitle="--color-icon-on-success-*"
+    colors={{
+      default: '#001500',
+      hover: '#001500',
+      pressed: '#001500',
+      focus: '#001500',
+      disabled: '#00761d',
+      strong: '#001500',
+    }}
+  />
+  <ColorItem
+    title="On Warning"
+    subtitle="--color-icon-on-warning-*"
+    colors={{
+      default: '#160700',
+      hover: '#160700',
+      pressed: '#160700',
+      focus: '#160700',
+      disabled: '#765c00',
+      strong: '#160700',
+    }}
+  />
+  <ColorItem
+    title="On Selected"
+    subtitle="--color-icon-on-selected-*"
+    colors={{
+      default: '#140900',
+      hover: '#251800',
+      pressed: '#443600',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Inverse"
+    subtitle="--color-icon-on-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+</ColorPalette>
+
+#### Text
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-text-brand-*"
+    colors={{
+      default: '#a29800',
+      hover: '#a29800',
+      pressed: '#a29800',
+      focus: '#a29800',
+      disabled: '#a29800',
+      strong: '#a29800',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-text-primary-*"
+    colors={{
+      default: '#251800',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#251800',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-text-secondary-*"
+    colors={{
+      default: '#443600',
+      hover: '#251800',
+      pressed: '#251800',
+      focus: '#443600',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-text-tertiary-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#443600',
+      pressed: '#443600',
+      focus: '#6f6200',
+      disabled: '#6f6200',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-text-danger-*"
+    colors={{
+      default: '#d76b8c',
+      hover: '#d76b8c',
+      pressed: '#d76b8c',
+      focus: '#d76b8c',
+      disabled: '#d76b8c',
+      strong: '#d76b8c',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-text-success-*"
+    colors={{
+      default: '#3cad55',
+      hover: '#3cad55',
+      pressed: '#3cad55',
+      focus: '#3cad55',
+      disabled: '#3cad55',
+      strong: '#3cad55',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-text-warning-*"
+    colors={{
+      default: '#ab913e',
+      hover: '#ab913e',
+      pressed: '#ab913e',
+      focus: '#ab913e',
+      disabled: '#ab913e',
+      strong: '#ab913e',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-text-selected-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#443600',
+      pressed: '#443600',
+      focus: '#6f6200',
+      disabled: '#d0c900',
+      strong: '#251800',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-text-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Brand"
+    subtitle="--color-text-on-brand-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#ffff8c',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Primary"
+    subtitle="--color-text-on-primary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Secondary"
+    subtitle="--color-text-on-secondary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Tertiary"
+    subtitle="--color-text-on-tertiary-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Danger"
+    subtitle="--color-text-on-danger-*"
+    colors={{
+      default: '#260008',
+      hover: '#260008',
+      pressed: '#ffe3fa',
+      focus: '#260008',
+      disabled: '#9c3459',
+      strong: '#260008',
+    }}
+  />
+  <ColorItem
+    title="On Success"
+    subtitle="--color-text-on-success-*"
+    colors={{
+      default: '#001500',
+      hover: '#001500',
+      pressed: '#001500',
+      focus: '#001500',
+      disabled: '#00761d',
+      strong: '#001500',
+    }}
+  />
+  <ColorItem
+    title="On Warning"
+    subtitle="--color-text-on-warning-*"
+    colors={{
+      default: '#160700',
+      hover: '#160700',
+      pressed: '#160700',
+      focus: '#160700',
+      disabled: '#765c00',
+      strong: '#160700',
+    }}
+  />
+  <ColorItem
+    title="On Selected"
+    subtitle="--color-text-on-selected-*"
+    colors={{
+      default: '#140900',
+      hover: '#251800',
+      pressed: '#443600',
+      focus: '#140900',
+      disabled: '#6f6200',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Inverse"
+    subtitle="--color-text-on-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+</ColorPalette>
+
+---
+
+### Dark Mode
+
+#### Background
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-background-brand-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#f5f166',
+      pressed: '#ffff8c',
+      focus: '#d0c900',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-background-primary-*"
+    colors={{
+      default: '#140900',
+      hover: '#251800',
+      pressed: '#443600',
+      focus: '#251800',
+      disabled: '#251800',
+      strong: '#d0c900',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-background-secondary-*"
+    colors={{
+      default: '#251800',
+      hover: '#443600',
+      pressed: '#6f6200',
+      focus: '#443600',
+      disabled: '#443600',
+      strong: '#f5f166',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-background-tertiary-*"
+    colors={{
+      default: '#443600',
+      hover: '#6f6200',
+      pressed: '#a29800',
+      focus: '#6f6200',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-background-danger-*"
+    colors={{
+      default: '#ff9fbc',
+      hover: '#ffcae4',
+      pressed: '#ffe3fa',
+      focus: '#ff9fbc',
+      disabled: '#670331',
+      strong: '#ffe3fa',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-background-success-*"
+    colors={{
+      default: '#7bdd8b',
+      hover: '#acffb7',
+      pressed: '#c8ffd1',
+      focus: '#7bdd8b',
+      disabled: '#004800',
+      strong: '#c8ffd1',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-background-warning-*"
+    colors={{
+      default: '#dac178',
+      hover: '#fee8a8',
+      pressed: '#fffec3',
+      focus: '#dac178',
+      disabled: '#493200',
+      strong: '#fffec3',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-background-selected-*"
+    colors={{
+      default: '#a29800',
+      hover: '#d0c900',
+      pressed: '#f5f166',
+      focus: '#a29800',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-background-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#ffff8c',
+      strong: '#6f6200',
+    }}
+  />
+</ColorPalette>
+
+#### Border
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-border-brand-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#f5f166',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-border-primary-*"
+    colors={{
+      default: '#251800',
+      hover: '#443600',
+      pressed: '#6f6200',
+      focus: '#d0c900',
+      disabled: '#443600',
+      strong: '#f5f166',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-border-secondary-*"
+    colors={{
+      default: '#443600',
+      hover: '#6f6200',
+      pressed: '#a29800',
+      focus: '#d0c900',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-border-tertiary-*"
+    colors={{
+      default: '#6f6200',
+      hover: '#a29800',
+      pressed: '#d0c900',
+      focus: '#d0c900',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-border-danger-*"
+    colors={{
+      default: '#ff9fbc',
+      hover: '#ffcae4',
+      pressed: '#ffe3fa',
+      focus: '#ffe3fa',
+      disabled: '#670331',
+      strong: '#ffe3fa',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-border-success-*"
+    colors={{
+      default: '#7bdd8b',
+      hover: '#acffb7',
+      pressed: '#c8ffd1',
+      focus: '#c8ffd1',
+      disabled: '#004800',
+      strong: '#c8ffd1',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-border-warning-*"
+    colors={{
+      default: '#dac178',
+      hover: '#fee8a8',
+      pressed: '#fffec3',
+      focus: '#fffec3',
+      disabled: '#493200',
+      strong: '#fffec3',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-border-selected-*"
+    colors={{
+      default: '#a29800',
+      hover: '#d0c900',
+      pressed: '#f5f166',
+      focus: '#d0c900',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-border-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#d0c900',
+      disabled: '#ffff8c',
+      strong: '#443600',
+    }}
+  />
+</ColorPalette>
+
+#### Icon
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-icon-brand-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#f5f166',
+      pressed: '#ffff8c',
+      focus: '#d0c900',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-icon-primary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-icon-secondary-*"
+    colors={{
+      default: '#f5f166',
+      hover: '#d0c900',
+      pressed: '#a29800',
+      focus: '#f5f166',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-icon-tertiary-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#a29800',
+      pressed: '#6f6200',
+      focus: '#d0c900',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-icon-danger-*"
+    colors={{
+      default: '#ff9fbc',
+      hover: '#ffcae4',
+      pressed: '#ffe3fa',
+      focus: '#ff9fbc',
+      disabled: '#9c3459',
+      strong: '#ffe3fa',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-icon-success-*"
+    colors={{
+      default: '#7bdd8b',
+      hover: '#acffb7',
+      pressed: '#c8ffd1',
+      focus: '#7bdd8b',
+      disabled: '#00761d',
+      strong: '#c8ffd1',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-icon-warning-*"
+    colors={{
+      default: '#dac178',
+      hover: '#fee8a8',
+      pressed: '#fffec3',
+      focus: '#dac178',
+      disabled: '#765c00',
+      strong: '#fffec3',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-icon-selected-*"
+    colors={{
+      default: '#a29800',
+      hover: '#d0c900',
+      pressed: '#f5f166',
+      focus: '#a29800',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-icon-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#d0c900',
+    }}
+  />
+  <ColorItem
+    title="On Brand"
+    subtitle="--color-icon-on-brand-*"
+    colors={{
+      default: '#443600',
+      hover: '#251800',
+      pressed: '#140900',
+      focus: '#443600',
+      disabled: '#a29800',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Primary"
+    subtitle="--color-icon-on-primary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Secondary"
+    subtitle="--color-icon-on-secondary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Tertiary"
+    subtitle="--color-icon-on-tertiary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Danger"
+    subtitle="--color-icon-on-danger-*"
+    colors={{
+      default: '#670331',
+      hover: '#3d0015',
+      pressed: '#260008',
+      focus: '#670331',
+      disabled: '#d76b8c',
+      strong: '#260008',
+    }}
+  />
+  <ColorItem
+    title="On Success"
+    subtitle="--color-icon-on-success-*"
+    colors={{
+      default: '#004800',
+      hover: '#002600',
+      pressed: '#001500',
+      focus: '#004800',
+      disabled: '#3cad55',
+      strong: '#001500',
+    }}
+  />
+  <ColorItem
+    title="On Warning"
+    subtitle="--color-icon-on-warning-*"
+    colors={{
+      default: '#493200',
+      hover: '#281500',
+      pressed: '#160700',
+      focus: '#493200',
+      disabled: '#ab913e',
+      strong: '#160700',
+    }}
+  />
+  <ColorItem
+    title="On Selected"
+    subtitle="--color-icon-on-selected-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Inverse"
+    subtitle="--color-icon-on-inverse-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#a29800',
+      strong: '#140900',
+    }}
+  />
+</ColorPalette>
+
+#### Text
+
+<ColorPalette>
+  <ColorItem
+    title="Brand"
+    subtitle="--color-text-brand-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#f5f166',
+      pressed: '#ffff8c',
+      focus: '#d0c900',
+      disabled: '#6f6200',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Primary"
+    subtitle="--color-text-primary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Secondary"
+    subtitle="--color-text-secondary-*"
+    colors={{
+      default: '#f5f166',
+      hover: '#d0c900',
+      pressed: '#a29800',
+      focus: '#f5f166',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Tertiary"
+    subtitle="--color-text-tertiary-*"
+    colors={{
+      default: '#d0c900',
+      hover: '#a29800',
+      pressed: '#6f6200',
+      focus: '#d0c900',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Danger"
+    subtitle="--color-text-danger-*"
+    colors={{
+      default: '#ff9fbc',
+      hover: '#ffcae4',
+      pressed: '#ffe3fa',
+      focus: '#ff9fbc',
+      disabled: '#9c3459',
+      strong: '#ffe3fa',
+    }}
+  />
+  <ColorItem
+    title="Success"
+    subtitle="--color-text-success-*"
+    colors={{
+      default: '#7bdd8b',
+      hover: '#acffb7',
+      pressed: '#c8ffd1',
+      focus: '#7bdd8b',
+      disabled: '#00761d',
+      strong: '#c8ffd1',
+    }}
+  />
+  <ColorItem
+    title="Warning"
+    subtitle="--color-text-warning-*"
+    colors={{
+      default: '#dac178',
+      hover: '#fee8a8',
+      pressed: '#fffec3',
+      focus: '#dac178',
+      disabled: '#765c00',
+      strong: '#fffec3',
+    }}
+  />
+  <ColorItem
+    title="Selected"
+    subtitle="--color-text-selected-*"
+    colors={{
+      default: '#a29800',
+      hover: '#d0c900',
+      pressed: '#f5f166',
+      focus: '#a29800',
+      disabled: '#443600',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="Inverse"
+    subtitle="--color-text-inverse-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#d0c900',
+    }}
+  />
+  <ColorItem
+    title="On Brand"
+    subtitle="--color-text-on-brand-*"
+    colors={{
+      default: '#443600',
+      hover: '#251800',
+      pressed: '#140900',
+      focus: '#443600',
+      disabled: '#a29800',
+      strong: '#140900',
+    }}
+  />
+  <ColorItem
+    title="On Primary"
+    subtitle="--color-text-on-primary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Secondary"
+    subtitle="--color-text-on-secondary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Tertiary"
+    subtitle="--color-text-on-tertiary-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#ffff8c',
+      pressed: '#ffff8c',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Danger"
+    subtitle="--color-text-on-danger-*"
+    colors={{
+      default: '#670331',
+      hover: '#3d0015',
+      pressed: '#260008',
+      focus: '#670331',
+      disabled: '#d76b8c',
+      strong: '#260008',
+    }}
+  />
+  <ColorItem
+    title="On Success"
+    subtitle="--color-text-on-success-*"
+    colors={{
+      default: '#004800',
+      hover: '#002600',
+      pressed: '#001500',
+      focus: '#004800',
+      disabled: '#3cad55',
+      strong: '#001500',
+    }}
+  />
+  <ColorItem
+    title="On Warning"
+    subtitle="--color-text-on-warning-*"
+    colors={{
+      default: '#493200',
+      hover: '#281500',
+      pressed: '#160700',
+      focus: '#493200',
+      disabled: '#ab913e',
+      strong: '#160700',
+    }}
+  />
+  <ColorItem
+    title="On Selected"
+    subtitle="--color-text-on-selected-*"
+    colors={{
+      default: '#ffff8c',
+      hover: '#f5f166',
+      pressed: '#d0c900',
+      focus: '#ffff8c',
+      disabled: '#a29800',
+      strong: '#ffff8c',
+    }}
+  />
+  <ColorItem
+    title="On Inverse"
+    subtitle="--color-text-on-inverse-*"
+    colors={{
+      default: '#140900',
+      hover: '#140900',
+      pressed: '#140900',
+      focus: '#140900',
+      disabled: '#a29800',
+      strong: '#140900',
+    }}
+  />
+</ColorPalette>

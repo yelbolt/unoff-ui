@@ -6,6 +6,7 @@
     "**/sketch.scss",
     "**/framer.scss",
     "**/commons.scss",
+    "**/*-modes.scss",
     "**/*-colors.scss",
     "**/*-types.scss",
     "coverage/**",

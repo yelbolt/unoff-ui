@@ -75,7 +75,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
  *     Figma injects no timing variables, and dropping them would leave every
  *     `--<component>-transition` shorthand referencing an undefined var, which
  *     invalidates the whole `transition` declaration at computed-value time.
- *     Load the resulting file INSTEAD of figma-colors.scss in the plugin so
+ *     Load the resulting file INSTEAD of figma-modes.scss in the plugin so
  *     the platform's colors apply for all products (FigJam, Slides, Buzz…)
  *     regardless of data-mode.
  *

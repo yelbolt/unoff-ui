@@ -7,7 +7,7 @@ import tokensStudioCompat, {
 } from '../plugins/tokens-studio-compat.js'
 
 const COMMONS_TOKENS = [
-  'size.**',
+  'scale.**',
   'font.**',
   'border.**',
   'grey.**',
@@ -20,13 +20,13 @@ const COMMONS_TOKENS = [
 ]
 
 export default defineConfig({
-  name: 'Figma Colors',
-  tokens: ['./tokens/figma-colors.resolver.json'],
+  name: 'Figma Modes',
+  tokens: ['./tokens/figma-modes.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
     tokensStudioCompat(),
     css({
-      filename: 'figma-colors.scss',
+      filename: 'figma-modes.scss',
       transform: cssTransform,
       permutations: [
         {

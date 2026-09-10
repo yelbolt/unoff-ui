@@ -6,7 +6,7 @@ import tokensStudioCompat, {
 } from '../plugins/tokens-studio-compat.js'
 
 const COMMONS_TOKENS = [
-  'size.**',
+  'scale.**',
   'font.**',
   'border.**',
   'grey.**',
@@ -19,27 +19,27 @@ const COMMONS_TOKENS = [
 ]
 
 export default defineConfig({
-  name: 'Framer Colors',
-  tokens: ['./tokens/framer-colors.resolver.json'],
+  name: 'Penpot Modes',
+  tokens: ['./tokens/penpot-modes.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
     tokensStudioCompat(),
     css({
-      filename: 'framer-colors.scss',
+      filename: 'penpot-modes.scss',
       transform: cssTransform,
       permutations: [
         {
-          input: { mode: 'framerLight' },
+          input: { mode: 'penpotLight' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="framer-light"] {\n  ${css}\n}`
+            (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`
           ),
         },
         {
-          input: { mode: 'framerDark' },
+          input: { mode: 'penpotDark' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="framer-dark"] {\n  ${css}\n}`
+            (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`
           ),
         },
       ],

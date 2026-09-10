@@ -1,16 +1,17 @@
-@import '../src/styles/tokens/modules/figma-colors.module.scss';
+@import '../src/styles/tokens/modules/figma-modes.module.scss';
 @import '../src/styles/tokens/modules/figma-types.module.scss';
 
-@import '../src/styles/tokens/modules/penpot-colors.module.scss';
+@import '../src/styles/tokens/modules/penpot-modes.module.scss';
 @import '../src/styles/tokens/modules/penpot-types.module.scss';
 
-@import '../src/styles/tokens/modules/sketch-colors.module.scss';
+@import '../src/styles/tokens/modules/sketch-modes.module.scss';
 @import '../src/styles/tokens/modules/sketch-types.module.scss';
 
-@import '../src/styles/tokens/modules/framer-colors.module.scss';
+@import '../src/styles/tokens/modules/framer-modes.module.scss';
 @import '../src/styles/tokens/modules/framer-types.module.scss';
 
 @import '../src/styles/tokens/modules/yelbolt-colors.module.scss';
+@import '../src/styles/tokens/modules/yelbolt-modes.module.scss';
 @import '../src/styles/tokens/modules/yelbolt-types.module.scss';
 
 @import '../src/styles/tokens/modules/commons.module.scss';

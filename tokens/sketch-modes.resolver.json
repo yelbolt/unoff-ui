@@ -1,7 +1,7 @@
 {
-  "name": "Penpot Colors",
+  "name": "Sketch Modes",
   "version": "2025.10",
-  "description": "Color tokens for Penpot platform, including light/dark modes",
+  "description": "Mode tokens for Sketch platform, including light/dark modes",
   "resolutionOrder": [
     {
       "$ref": "#/sets/primitives"
@@ -22,20 +22,20 @@
   },
   "modifiers": {
     "mode": {
-      "description": "Penpot light/dark modes",
+      "description": "Sketch light/dark modes",
       "contexts": {
-        "penpotLight": [
+        "sketchLight": [
           {
-            "$ref": "./platforms/penpot/modes/penpot-light.tokens.json"
+            "$ref": "./platforms/sketch/modes/sketch-light.tokens.json"
           }
         ],
-        "penpotDark": [
+        "sketchDark": [
           {
-            "$ref": "./platforms/penpot/modes/penpot-dark.tokens.json"
+            "$ref": "./platforms/sketch/modes/sketch-dark.tokens.json"
           }
         ]
       },
-      "default": "penpotLight"
+      "default": "sketchLight"
     }
   }
 }

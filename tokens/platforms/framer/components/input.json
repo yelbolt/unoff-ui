@@ -577,10 +577,10 @@
         "default": {
           "$value": [
             {
-              "x": "{size.null}",
-              "y": "{size.null}",
-              "blur": "{size.null}",
-              "spread": "{size.pos.unit}",
+              "x": "{scale.null}",
+              "y": "{scale.null}",
+              "blur": "{scale.null}",
+              "spread": "{scale.pos.unit}",
               "color": "rgba(0, 0, 0, 0.1)",
               "type": "innerShadow"
             }
@@ -590,10 +590,10 @@
         "focus": {
           "$value": [
             {
-              "x": "{size.null}",
-              "y": "{size.null}",
-              "blur": "{size.null}",
-              "spread": "{size.pos.unit}",
+              "x": "{scale.null}",
+              "y": "{scale.null}",
+              "blur": "{scale.null}",
+              "spread": "{scale.pos.unit}",
               "color": "{framer.color.tint.default}",
               "type": "innerShadow"
             }

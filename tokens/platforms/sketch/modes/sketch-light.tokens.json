@@ -138,244 +138,244 @@
   },
   "space": {
     "none": {
-      "$value": "{size.null}",
+      "$value": "{scale.null}",
       "$type": "dimension"
     },
     "inset": {
       "025": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{scale.pos.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "300": {
-        "$value": "{size.pos.xmsmall}",
+        "$value": "{scale.pos.xmsmall}",
         "$type": "dimension"
       },
       "400": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{scale.pos.xsmall}",
         "$type": "dimension"
       },
       "500": {
-        "$value": "{size.pos.msmall}",
+        "$value": "{scale.pos.msmall}",
         "$type": "dimension"
       },
       "600": {
-        "$value": "{size.pos.small}",
+        "$value": "{scale.pos.small}",
         "$type": "dimension"
       },
       "800": {
-        "$value": "{size.pos.medium}",
+        "$value": "{scale.pos.medium}",
         "$type": "dimension"
       }
     },
     "gap": {
       "025": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{scale.pos.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "400": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{scale.pos.xsmall}",
         "$type": "dimension"
       },
       "600": {
-        "$value": "{size.pos.small}",
+        "$value": "{scale.pos.small}",
         "$type": "dimension"
       },
       "800": {
-        "$value": "{size.pos.medium}",
+        "$value": "{scale.pos.medium}",
         "$type": "dimension"
       }
     },
     "offset": {
       "025": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{scale.pos.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "300": {
-        "$value": "{size.pos.xmsmall}",
+        "$value": "{scale.pos.xmsmall}",
         "$type": "dimension"
       },
       "400": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{scale.pos.xsmall}",
         "$type": "dimension"
       },
       "500": {
-        "$value": "{size.pos.msmall}",
+        "$value": "{scale.pos.msmall}",
         "$type": "dimension"
       },
       "600": {
-        "$value": "{size.pos.small}",
+        "$value": "{scale.pos.small}",
         "$type": "dimension"
       },
       "800": {
-        "$value": "{size.pos.medium}",
+        "$value": "{scale.pos.medium}",
         "$type": "dimension"
       },
       "1000": {
-        "$value": "{size.pos.large}",
+        "$value": "{scale.pos.large}",
         "$type": "dimension"
       }
     },
     "pull": {
       "025": {
-        "$value": "{size.neg.unit}",
+        "$value": "{scale.neg.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.neg.xunit}",
+        "$value": "{scale.neg.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.neg.xxxsmall}",
+        "$value": "{scale.neg.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.neg.xxsmall}",
+        "$value": "{scale.neg.xxsmall}",
         "$type": "dimension"
       }
     }
   },
   "control": {
     "none": {
-      "$value": "{size.null}",
+      "$value": "{scale.null}",
       "$type": "dimension"
     },
     "size": {
       "025": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{scale.pos.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "300": {
-        "$value": "{size.pos.xmsmall}",
+        "$value": "{scale.pos.xmsmall}",
         "$type": "dimension"
       },
       "400": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{scale.pos.xsmall}",
         "$type": "dimension"
       },
       "500": {
-        "$value": "{size.pos.msmall}",
+        "$value": "{scale.pos.msmall}",
         "$type": "dimension"
       },
       "600": {
-        "$value": "{size.pos.small}",
+        "$value": "{scale.pos.small}",
         "$type": "dimension"
       },
       "800": {
-        "$value": "{size.pos.medium}",
+        "$value": "{scale.pos.medium}",
         "$type": "dimension"
       },
       "900": {
-        "$value": "{size.pos.xmedium}",
+        "$value": "{scale.pos.xmedium}",
         "$type": "dimension"
       },
       "1000": {
-        "$value": "{size.pos.large}",
+        "$value": "{scale.pos.large}",
         "$type": "dimension"
       },
       "1200": {
-        "$value": "{size.pos.xlarge}",
+        "$value": "{scale.pos.xlarge}",
         "$type": "dimension"
       },
       "1600": {
-        "$value": "{size.pos.xxlarge}",
+        "$value": "{scale.pos.xxlarge}",
         "$type": "dimension"
       },
       "2000": {
-        "$value": "{size.pos.xxxlarge}",
+        "$value": "{scale.pos.xxxlarge}",
         "$type": "dimension"
       },
       "2400": {
-        "$value": "{size.pos.huge}",
+        "$value": "{scale.pos.huge}",
         "$type": "dimension"
       }
     },
     "icon": {
       "025": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "050": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       },
       "100": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{scale.pos.xxxsmall}",
         "$type": "dimension"
       },
       "200": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{scale.pos.xxsmall}",
         "$type": "dimension"
       },
       "400": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{scale.pos.xsmall}",
         "$type": "dimension"
       },
       "500": {
-        "$value": "{size.pos.msmall}",
+        "$value": "{scale.pos.msmall}",
         "$type": "dimension"
       },
       "600": {
-        "$value": "{size.pos.small}",
+        "$value": "{scale.pos.small}",
         "$type": "dimension"
       },
       "800": {
-        "$value": "{size.pos.medium}",
+        "$value": "{scale.pos.medium}",
         "$type": "dimension"
       },
       "900": {
-        "$value": "{size.pos.large}",
+        "$value": "{scale.pos.large}",
         "$type": "dimension"
       },
       "1000": {
-        "$value": "{size.pos.xlarge}",
+        "$value": "{scale.pos.xlarge}",
         "$type": "dimension"
       }
     }
@@ -383,38 +383,38 @@
   "stroke": {
     "width": {
       "none": {
-        "$value": "{size.null}",
+        "$value": "{scale.null}",
         "$type": "dimension"
       },
       "thin": {
-        "$value": "{size.pos.unit}",
+        "$value": "{scale.pos.unit}",
         "$type": "dimension"
       },
       "thick": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{scale.pos.xunit}",
         "$type": "dimension"
       }
     },
     "offset": {
       "none": {
-        "$value": "{size.null}",
+        "$value": "{scale.null}",
         "$type": "dimension"
       },
       "thin": {
-        "$value": "{size.neg.unit}",
+        "$value": "{scale.neg.unit}",
         "$type": "dimension"
       },
       "thick": {
-        "$value": "{size.neg.xunit}",
+        "$value": "{scale.neg.xunit}",
         "$type": "dimension"
       },
       "positive": {
         "thin": {
-          "$value": "{size.pos.unit}",
+          "$value": "{scale.pos.unit}",
           "$type": "dimension"
         },
         "thick": {
-          "$value": "{size.pos.xunit}",
+          "$value": "{scale.pos.xunit}",
           "$type": "dimension"
         }
       }

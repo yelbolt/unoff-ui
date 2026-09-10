@@ -6,7 +6,7 @@ import tokensStudioCompat, {
 } from '../plugins/tokens-studio-compat.js'
 
 const COMMONS_TOKENS = [
-  'size.**',
+  'scale.**',
   'font.**',
   'border.**',
   'grey.**',
@@ -19,27 +19,27 @@ const COMMONS_TOKENS = [
 ]
 
 export default defineConfig({
-  name: 'Penpot Colors',
-  tokens: ['./tokens/penpot-colors.resolver.json'],
+  name: 'Sketch Modes',
+  tokens: ['./tokens/sketch-modes.resolver.json'],
   outDir: './src/styles/tokens/',
   plugins: [
     tokensStudioCompat(),
     css({
-      filename: 'penpot-colors.scss',
+      filename: 'sketch-modes.scss',
       transform: cssTransform,
       permutations: [
         {
-          input: { mode: 'penpotLight' },
+          input: { mode: 'sketchLight' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`
+            (css) => `[data-mode="sketch-light"] {\n  ${css}\n}`
           ),
         },
         {
-          input: { mode: 'penpotDark' },
+          input: { mode: 'sketchDark' },
           exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
-            (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`
+            (css) => `[data-mode="sketch-dark"] {\n  ${css}\n}`
           ),
         },
       ],

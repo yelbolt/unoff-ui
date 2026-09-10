@@ -8,18 +8,18 @@
     "hud": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxxsmall}",
-          "blur": "{size.pos.xsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxxsmall}",
+          "blur": "{scale.pos.xsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha200}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xunit}",
-          "blur": "{size.pos.xxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xunit}",
+          "blur": "{scale.pos.xxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha150}",
           "type": "dropShadow"
         }
@@ -27,10 +27,10 @@
     },
     "floatingWindow": {
       "$value": {
-        "x": "{size.null}",
-        "y": "{size.pos.xunit}",
+        "x": "{scale.null}",
+        "y": "{scale.pos.xunit}",
         "blur": "14px",
-        "spread": "{size.null}",
+        "spread": "{scale.null}",
         "color": "{shadow.color.black.alpha150}",
         "type": "dropShadow"
       }
@@ -45,34 +45,34 @@
     "100Shapes": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.hunit}",
-          "blur": "{size.null}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.hunit}",
+          "blur": "{scale.null}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha100}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha300}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha500}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.unit}",
-          "blur": "{size.pos.xxxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.unit}",
+          "blur": "{scale.pos.xxxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha400}",
           "type": "dropShadow"
         }
@@ -81,34 +81,34 @@
     "200Canvas": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.hunit}",
-          "blur": "{size.null}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.hunit}",
+          "blur": "{scale.null}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha100}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha200}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxxsmall}",
-          "blur": "{size.pos.xxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxxsmall}",
+          "blur": "{scale.pos.xxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha500}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.unit}",
-          "blur": "{size.pos.xxxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.unit}",
+          "blur": "{scale.pos.xxxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha500}",
           "type": "dropShadow"
         }
@@ -117,34 +117,34 @@
     "300Tooltip": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.hunit}",
-          "blur": "{size.null}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.hunit}",
+          "blur": "{scale.null}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha100}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha300}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxxsmall}",
-          "blur": "{size.pos.xmsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxxsmall}",
+          "blur": "{scale.pos.xmsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha350}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.unit}",
-          "blur": "{size.pos.xxxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.unit}",
+          "blur": "{scale.pos.xxxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha500}",
           "type": "dropShadow"
         }
@@ -153,34 +153,34 @@
     "400MenuPanel": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.hunit}",
-          "blur": "{size.null}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.hunit}",
+          "blur": "{scale.null}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha100}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha350}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxsmall}",
-          "blur": "{size.pos.xsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxsmall}",
+          "blur": "{scale.pos.xsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha350}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xunit}",
-          "blur": "{size.pos.xxxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xunit}",
+          "blur": "{scale.pos.xxxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha350}",
           "type": "dropShadow"
         }
@@ -189,34 +189,34 @@
     "500ModalWindow": {
       "$value": [
         {
-          "x": "{size.null}",
-          "y": "{size.pos.hunit}",
-          "blur": "{size.null}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.hunit}",
+          "blur": "{scale.null}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha100}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.null}",
-          "blur": "{size.pos.hunit}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.null}",
+          "blur": "{scale.pos.hunit}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.white.alpha350}",
           "type": "innerShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxsmall}",
-          "blur": "{size.pos.small}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxsmall}",
+          "blur": "{scale.pos.small}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha450}",
           "type": "dropShadow"
         },
         {
-          "x": "{size.null}",
-          "y": "{size.pos.xxxsmall}",
-          "blur": "{size.pos.xxxsmall}",
-          "spread": "{size.null}",
+          "x": "{scale.null}",
+          "y": "{scale.pos.xxxsmall}",
+          "blur": "{scale.pos.xxxsmall}",
+          "spread": "{scale.null}",
           "color": "{shadow.color.black.alpha350}",
           "type": "dropShadow"
         }

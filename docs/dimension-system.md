@@ -10,12 +10,12 @@ Colors have always had three layers. Dimensions had two.
 
 | Layer         | Colors                                              | Dimensions (before)                          |
 | ------------- | --------------------------------------------------- | -------------------------------------------- |
-| **Primitive** | `platforms/yelbolt/colors.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `size.pos.*` |
+| **Primitive** | `platforms/yelbolt/colors.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `scale.pos.*` |
 | **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*` | — _missing_                                  |
 | **Component** | `platforms/yelbolt/components/*.json`               | `platforms/yelbolt/components/*.json`        |
 
 Because the middle layer was missing, a component token reached straight into
-the primitive scale: `button.base.height` was literally `{size.pos.small}`. That
+the primitive scale: `button.base.height` was literally `{scale.pos.small}`. That
 made every dimension global and immutable — a mode could restyle every colour in
 the library but could not widen a single letter-space.
 
@@ -44,10 +44,10 @@ a mode may want to move one without moving the other:
 | `dimension.control` | heights, widths, min/max, icon boxes    | `none`, `pos.{unit…huge}` (14)                                  |
 | `dimension.border`  | stroke weight and focus-ring offset     | `width.{none,thin,thick}`, `offset.{none,thin,thick}`           |
 | `dimension.radius`  | corner radii                            | `null`, `small`, `medium`, `large`, `xlarge`, `xxlarge`, `full` |
-| `dimension.text`    | type metrics                            | `size.*`, `leading.*`, `tracking.*`, `weight.*`                 |
+| `dimension.text`    | type metrics                            | `scale.*`, `leading.*`, `tracking.*`, `weight.*`                 |
 
 `space` and `control` share a rung vocabulary with commons on purpose: the
-migration stays auditable (`{size.pos.small}` → `{dimension.control.pos.small}`),
+migration stays auditable (`{scale.pos.small}` → `{dimension.control.pos.small}`),
 and the value added is the **role split**, not a new size language.
 
 `dimension.text` exposes four parallel ladders rather than composed style
@@ -98,14 +98,14 @@ Component tokens are emitted once at `:root[data-theme="yelbolt"]`
 (`0,1,0`). If `dimension.**` were ever emitted into a component stylesheet it
 would **outrank the mode block and silently kill the modulation**.
 
-That is why every yelbolt terrazzo config except `terrazzo.color.js` carries
-`'dimension.**'` in its `exclude` list. `terrazzo.color.js` is the single place
+That is why every yelbolt terrazzo config except `terrazzo.mode.js` carries
+`'dimension.**'` in its `exclude` list. `terrazzo.mode.js` is the single place
 the dimension system is emitted — once per mode.
 
 ## Build wiring
 
-`tokens/yelbolt-colors.resolver.json` loads commons into its `primitives` set,
-so the mode files can resolve `{size.pos.*}` and friends:
+`tokens/yelbolt-modes.resolver.json` loads commons into its `primitives` set,
+so the mode files can resolve `{scale.pos.*}` and friends:
 
 ```jsonc
 "sets": {
@@ -118,10 +118,17 @@ so the mode files can resolve `{size.pos.*}` and friends:
 }
 ```
 
-`terrazzo/yelbolt/terrazzo.color.js` then excludes those primitives from
+`terrazzo/yelbolt/terrazzo.mode.js` then excludes those primitives from
 per-mode emission via `PRIMITIVE_TOKENS` — the commons scale is already declared
-once at `:root` by `commons.scss`, and re-emitting it inside all 14 mode blocks
-would bloat the output for no gain.
+once at `:root` by `commons.scss`, and the brand ramps (`YLB.*`, `NTL.*`, …) are
+declared once at `:root` by `terrazzo.color.js` → `yelbolt-colors.scss`, so
+re-emitting either inside all 14 mode blocks would bloat the output for no gain.
+
+`yelbolt` is the only theme with a standalone `terrazzo.color.js` — it is the
+one theme with its own primitive color palette (`platforms/yelbolt/colors.json`)
+that needs emitting as reusable `:root` variables. `figma`, `penpot`, `sketch`
+and `framer` resolve their colors directly into the mode layer at build time,
+so they have no separate primitive layer to name `color` and stay pure `mode`.
 
 Rebuild with:
 
@@ -141,7 +148,7 @@ grep -rho 'var(--dimension-[a-z0-9-]*)' \
   | sed 's/var(\(.*\))/\1/' | sort -u > /tmp/used.txt
 
 # every --dimension-* the mode layer declares
-grep -o '^\s*--dimension-[a-z0-9-]*' src/styles/tokens/yelbolt-colors.scss \
+grep -o '^\s*--dimension-[a-z0-9-]*' src/styles/tokens/yelbolt-modes.scss \
   | tr -d ' ' | sort -u > /tmp/declared.txt
 
 comm -23 /tmp/used.txt /tmp/declared.txt   # used but undeclared → breaks at runtime
@@ -153,7 +160,7 @@ Both must be empty.
 ## Out of scope
 
 `boxShadow` layer geometry (`x`, `y`, `blur`, `spread` inside a shadow `$value`)
-still references `{size.*}` directly. Shadows are already mode-aware through the
+still references `{scale.*}` directly. Shadows are already mode-aware through the
 commons light/dark effect sets, so they belong to the elevation system rather
 than this one.
 
@@ -162,8 +169,8 @@ than this one.
 1. Add a `dimension` block to each mode file in
    `tokens/platforms/{theme}/modes/`.
 2. Add commons to that theme's colors resolver `primitives` set.
-3. Extend `PRIMITIVE_TOKENS` in `terrazzo/{theme}/terrazzo.color.js` with
-   `size.**`, `font.**`, `border.**`, `grey.**`, `alpha.**`, `shadow.**`,
+3. Extend `PRIMITIVE_TOKENS` in `terrazzo/{theme}/terrazzo.mode.js` with
+   `scale.**`, `font.**`, `border.**`, `grey.**`, `alpha.**`, `shadow.**`,
    `elevation.**`.
 4. Add `'dimension.**'` to the `exclude` list of every **other** terrazzo config
    for that theme.

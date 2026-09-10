@@ -157,29 +157,29 @@
           "$type": "color"
         },
         "height": {
-          "$value": "{size.pos.medium}",
+          "$value": "{scale.pos.medium}",
           "$type": "dimension"
         },
         "padding": {
           "top": {
-            "$value": "{size.null}",
+            "$value": "{scale.null}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.pos.xxxsmall}",
+            "$value": "{scale.pos.xxxsmall}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{scale.null}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": "{scale.pos.xxsmall}",
             "$type": "dimension"
           }
         },
         "gap": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{scale.pos.xxxsmall}",
           "$type": "dimension"
         }
       }

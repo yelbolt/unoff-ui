@@ -18,7 +18,7 @@ terrazzo/
   ├── plugins/
   │   └── tokens-studio-compat.js  # Compatibility plugin (required by all configs)
   ├── figma/                   # Configuration for Figma theme
-  │   ├── terrazzo.color.js    # Color variables generation
+  │   ├── terrazzo.mode.js     # Mode variables generation (color, plus dimension/motion on themes that carry them)
   │   ├── terrazzo.icon.js     # Icon variables generation
   │   ├── terrazzo.text.js     # Text variables generation
   │   └── components/          # Component configurations
@@ -28,24 +28,31 @@ terrazzo/
   │       └── ...
   ├── framer/                  # Configuration for Framer theme
   ├── penpot/                  # Configuration for Penpot theme
-  └── sketch/                  # Configuration for Sketch theme
+  ├── sketch/                  # Configuration for Sketch theme
+  └── yelbolt/                 # Configuration for Yelbolt theme
+      ├── terrazzo.color.js    # Primitive color ramps only (yelbolt-colors.scss) — yelbolt is the
+      │                        # only theme with its own primitive palette (colors.json), so it is
+      │                        # the only one with a standalone `color` build alongside `mode`
+      ├── terrazzo.mode.js     # Semantic mode layer (color, dimension, motion)
+      └── …
 ```
 
 ## Token Files Structure
 
 Token source files live in `tokens/` and follow two different patterns depending on whether the config supports modes (light/dark variants):
 
-### Resolver-based configs (color tokens, commons)
+### Resolver-based configs (mode tokens, commons)
 
 Configs that need light/dark permutations reference a **resolver JSON file** as their `tokens` entry. The resolver declares the resolution order and per-mode source files:
 
 ```
 tokens/
   ├── commons.resolver.json          # Common tokens (spacing, typography, border-radius, shadows)
-  ├── figma-colors.resolver.json     # Figma color palette with light/dark/figjam modes
-  ├── framer-colors.resolver.json
-  ├── penpot-colors.resolver.json
-  ├── sketch-colors.resolver.json
+  ├── figma-modes.resolver.json      # Figma mode layer (color, per light/dark/figjam)
+  ├── framer-modes.resolver.json
+  ├── penpot-modes.resolver.json
+  ├── sketch-modes.resolver.json
+  ├── yelbolt-modes.resolver.json    # Shared by terrazzo.color.js (primitives) and terrazzo.mode.js (semantic layer)
   ├── commons/
   │   ├── commons.tokens.json        # Base common tokens
   │   └── modes/
@@ -62,7 +69,13 @@ tokens/
       │       └── …
       ├── framer/  …
       ├── penpot/  …
-      └── sketch/  …
+      ├── sketch/  …
+      └── yelbolt/
+          ├── colors.json          # Primitive brand ramps (YLB.*, NTL.*, …) — built by terrazzo.color.js only
+          ├── text.json
+          ├── modes/                # 14 brand × light/dark mode files (color + dimension + motion)
+          └── components/
+              └── …
 ```
 
 ### `preprocessTokens` configs (text, component tokens)
@@ -78,8 +91,8 @@ All Terrazzo configs import from `terrazzo/plugins/tokens-studio-compat.js`. It 
 | `default` (`tokensStudioCompat()`) | `plugins: [tokensStudioCompat(), …]`   | Terrazzo plugin (enforce: `"pre"`) — remaps remaining legacy `$type` values at transform stage                                                                                                                                                                                                                                                                                                  |
 | `preprocessTokens(paths)`          | `tokens: preprocessTokens(tokenPaths)` | Preprocesses token files to `.terrazzo-tmp/` before Terrazzo parses them — required when token files contain Tokens Studio-style `$type` names                                                                                                                                                                                                                                                  |
 | `cssTransform`                     | `css({ transform: cssTransform })`     | Custom CSS transform — handles dimension string values (`"4px"`) and resolves shadow aliases to `var()` references                                                                                                                                                                                                                                                                              |
-| `wrapFallbacks(prepare)`           | `prepare: wrapFallbacks(css => \`…\`)` | For every `-default` token, rewrites the value as `var(--base-name, raw-value)`. Bridges Storybook (no `--base-name` set → raw fallback used) and Figma plugin loading `figma-colors.scss` (Figma injects `--base-name` natively → picked up). Non-default tokens keep their raw value unchanged.                                                                                               |
-| `wrapPassthrough(selector)`        | `prepare: wrapPassthrough(':root')`    | Generates a lightweight plugin-only stylesheet (`figma-plugin.scss`). Emits only `-default` tokens mapped to `var(--base-name)` with no fallback. Non-default tokens are omitted — they share the platform's native variable names directly. Load this file **instead of** `figma-colors.scss` in the plugin to support all Figma products (FigJam, Slides, Buzz…) without setting `data-mode`. |
+| `wrapFallbacks(prepare)`           | `prepare: wrapFallbacks(css => \`…\`)` | For every `-default` token, rewrites the value as `var(--base-name, raw-value)`. Bridges Storybook (no `--base-name` set → raw fallback used) and Figma plugin loading `figma-modes.scss` (Figma injects `--base-name` natively → picked up). Non-default tokens keep their raw value unchanged.                                                                                               |
+| `wrapPassthrough(selector)`        | `prepare: wrapPassthrough(':root')`    | Generates a lightweight plugin-only stylesheet (`figma-plugin.scss`). Emits only `-default` tokens mapped to `var(--base-name)` with no fallback. Non-default tokens are omitted — they share the platform's native variable names directly. Load this file **instead of** `figma-modes.scss` in the plugin to support all Figma products (FigJam, Slides, Buzz…) without setting `data-mode`. |
 
 ### Two-file strategy for Figma
 
@@ -87,7 +100,7 @@ The Figma theme generates two output files with different purposes:
 
 | File                | Load in      | How it works                                                                                                                                                                                                                                                                             |
 | ------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `figma-colors.scss` | Storybook    | Scoped `[data-mode]` blocks with hardcoded fallback values. Set `data-mode` on `<html>` to activate the right theme. `-default` tokens use `var(--figma-color-x, rgb(…))` so they also pick up Figma native vars if loaded in the plugin.                                                |
+| `figma-modes.scss`  | Storybook    | Scoped `[data-mode]` blocks with hardcoded fallback values. Set `data-mode` on `<html>` to activate the right theme. `-default` tokens use `var(--figma-color-x, rgb(…))` so they also pick up Figma native vars if loaded in the plugin.                                                |
 | `figma-plugin.scss` | Figma plugin | Unscoped `:root` block. Maps only `-default` tokens to `var(--figma-color-x)` (no fallback). Non-default tokens like `--figma-color-bg-secondary` are already Figma's native variable names — no declaration needed. Works for all products (Figma, FigJam, Slides, Buzz) automatically. |
 
 `cssTransform` must always be passed to the `css()` plugin. Without it, dimension tokens output `undefinedundefined` and shadow tokens that alias commons elevation tokens get incorrectly inlined.
@@ -159,7 +172,7 @@ This will build the specified component for every theme that contains it.
 
 ### Build Specific Token Types
 
-You can build specific types of design tokens (text, icon, color) instead of entire themes or components:
+You can build specific types of design tokens (text, icon, mode) instead of entire themes or components:
 
 #### Build a Token Type for All Themes
 
@@ -167,8 +180,8 @@ You can build specific types of design tokens (text, icon, color) instead of ent
 # Build text tokens for all themes
 npm run scss:build text
 
-# Build color tokens for all themes
-npm run scss:build color
+# Build mode tokens for all themes
+npm run scss:build mode
 
 # Build icon tokens for all themes
 npm run scss:build icon
@@ -180,8 +193,8 @@ npm run scss:build icon
 # Build text tokens for sketch theme only
 npm run scss:build theme=sketch text
 
-# Build color tokens for penpot theme only
-npm run scss:build theme=penpot color
+# Build mode tokens for penpot theme only
+npm run scss:build theme=penpot mode
 
 # Build icon tokens for figma theme only
 npm run scss:build theme=figma icon
@@ -190,7 +203,7 @@ npm run scss:build theme=figma icon
 Available token types are:
 
 - `text` - Text styling tokens (font sizes, weights, colors)
-- `color` - Color palette tokens
+- `mode` - The mode layer (color, plus dimension/motion on themes that carry them)
 - `icon` - Icon-related tokens
 
 ## Common Use Cases
@@ -240,10 +253,10 @@ npm run scss:build theme=sketch
 npm run scss:build
 ```
 
-### Update Color Tokens Across All Themes
+### Update Mode Tokens Across All Themes
 
 ```bash
-npm run scss:build color
+npm run scss:build mode
 ```
 
 ## Adding a New Terrazzo Config

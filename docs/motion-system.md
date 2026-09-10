@@ -155,14 +155,14 @@ silently kill the modulation** — exactly the trap `dimension.**` carries.
 
 That is why every one of the 65 component terrazzo configs excludes
 `motion.**`, alongside the three primitive families `duration.**`, `easing.**`
-and `transform.**`. The mode-level `terrazzo.color.js` of each theme is the
+and `transform.**`. The mode-level `terrazzo.mode.js` of each theme is the
 single place the motion system is emitted.
 
 ## Build wiring
 
 The four platform color resolvers previously sourced only their own mode files.
 They now load commons into a `primitives` set — mirroring
-`yelbolt-colors.resolver.json` — so `{duration.*}` and friends resolve, with
+`yelbolt-modes.resolver.json` — so `{duration.*}` and friends resolve, with
 `COMMONS_TOKENS` excluded from each permutation so no primitive is re-emitted:
 
 ```jsonc
@@ -174,7 +174,7 @@ They now load commons into a `primitives` set — mirroring
 
 ### The Figma plugin passthrough
 
-`figma-plugin.scss` is loaded **instead of** `figma-colors.scss` inside the
+`figma-plugin.scss` is loaded **instead of** `figma-modes.scss` inside the
 Figma plugin, and `wrapPassthrough` deliberately emits only `-default`
 properties — every other token shares a name with a variable Figma injects
 natively. Motion has no such counterpart, so it must survive verbatim:
