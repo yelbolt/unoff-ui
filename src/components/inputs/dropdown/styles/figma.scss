@@ -44,4 +44,10 @@
   --dropdown-text-color-disabled: var(--figma-color-text-disabled);
   --dropdown-text-color-focus: var(--figma-color-text-default);
   --dropdown-text-color-hover: var(--figma-color-text-default);
+  --dropdown-transform-default: var(--motion-transform-none);
+  --dropdown-transform-disabled: var(--motion-transform-none);
+  --dropdown-transform-focus: var(--motion-transform-none);
+  --dropdown-transform-hover: var(--motion-transform-none);
+  --dropdown-transform-pressed: var(--motion-transform-sink);
+  --dropdown-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

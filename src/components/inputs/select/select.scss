@@ -76,7 +76,15 @@
       position: absolute;
       top: 0;
       left: 0;
+      transform: var(--select-transform-default);
       z-index: 1;
+      transition:
+        background var(--select-transition),
+        box-shadow var(--select-transition),
+        outline-color var(--select-transition),
+        outline-width var(--select-transition),
+        outline-offset var(--select-transition),
+        transform var(--select-transition);
       outline: var(--select-box-border-width-secondary-default) solid
         var(--select-box-border-color-secondary-default);
       outline-offset: var(--select-box-border-offset-secondary-default);
@@ -105,6 +113,10 @@
       width: var(--select-box-tick-width);
       height: var(--select-box-tick-height);
       pointer-events: none;
+    }
+
+    &:active ~ .checkbox__box__background {
+      transform: var(--select-transform-pressed);
     }
 
     &:checked ~ .checkbox__box__background {
@@ -194,9 +206,15 @@
       position: absolute;
       top: 0;
       left: 0;
+      transform: var(--select-transform-default);
       z-index: 1;
-      transition: background-color
-        var(--select-toggle-knob-transition-background-color);
+      transition:
+        background-color var(--select-toggle-knob-transition-background-color),
+        box-shadow var(--select-transition),
+        outline-color var(--select-transition),
+        outline-width var(--select-transition),
+        outline-offset var(--select-transition),
+        transform var(--select-transition);
       outline: var(--select-toggle-border-width-secondary-default) solid
         var(--select-toggle-border-color-secondary-default);
       outline-offset: var(--select-toggle-border-offset-secondary-default);
@@ -223,6 +241,10 @@
       background-color: var(--select-toggle-knob-background-color-default);
       width: var(--select-toggle-knob-width);
       height: var(--select-toggle-knob-height);
+    }
+
+    &:active ~ .switch__toggle__background {
+      transform: var(--select-transform-pressed);
     }
 
     &:checked ~ .switch__toggle__background {
@@ -328,7 +350,15 @@
       position: absolute;
       top: 0;
       left: 0;
+      transform: var(--select-transform-default);
       z-index: 1;
+      transition:
+        background var(--select-transition),
+        box-shadow var(--select-transition),
+        outline-color var(--select-transition),
+        outline-width var(--select-transition),
+        outline-offset var(--select-transition),
+        transform var(--select-transition);
       outline: var(--select-button-border-width-secondary-default) solid
         var(--select-button-border-color-secondary-default);
       outline-offset: var(--select-button-border-offset-secondary-default);
@@ -351,6 +381,10 @@
       background-color: var(--select-button-icon-color-default);
       width: var(--select-button-inner-width);
       height: var(--select-button-inner-height);
+    }
+
+    &:active ~ .radio__button__background {
+      transform: var(--select-transform-pressed);
     }
 
     &:checked ~ .radio__button__background {
@@ -392,5 +426,20 @@
         var(--select-button-border-color-disabled);
       background: var(--select-button-background-color-disabled);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .checkbox,
+  .radio,
+  .switch {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

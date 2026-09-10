@@ -33,6 +33,18 @@
   --border-radius-xsmall: 1px;
   --border-radius-xxlarge: 12px;
   --border-radius-xxxlarge: 16px;
+  --duration-large: 280ms;
+  --duration-medium: 200ms;
+  --duration-null: 0ms;
+  --duration-small: 120ms;
+  --duration-xlarge: 400ms;
+  --duration-xsmall: 80ms;
+  --easing-accelerate: cubic-bezier(0.65, 0, 1, 1);
+  --easing-decelerate: cubic-bezier(0, 0, 0.35, 1);
+  --easing-emphasized: cubic-bezier(0.34, 0, 0.2, 1);
+  --easing-linear: cubic-bezier(0, 0, 1, 1);
+  --easing-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --easing-standard: cubic-bezier(0.37, 0, 0.63, 1);
   --elevation-100-shapes: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha300), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha150);
   --elevation-200-canvas: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha100), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
   --elevation-300-tooltip: var(--size-null) var(--size-null) var(--size-pos-hunit) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xmsmall) var(--size-null) var(--shadow-color-black-alpha150), var(--size-null) var(--size-pos-unit) var(--size-pos-xxxsmall) var(--size-null) var(--shadow-color-black-alpha100);
@@ -51,6 +63,7 @@
   --font-size-large: 14px;
   --font-size-medium: 13px;
   --font-size-small: 12px;
+  --font-size-xlarge: 16px;
   --font-size-xsmall: 11px;
   --font-size-xxsmall: 10px;
   --font-size-xxxsmall: 9px;
@@ -75,8 +88,6 @@
   --shadow-color-black-alpha50: rgb(0% 0% 0% / 0.05);
   --shadow-color-black-alpha100: rgb(0% 0% 0% / 0.1);
   --shadow-color-black-alpha150: rgb(0% 0% 0% / 0.15);
-  --shadow-floating-window: var(--size-null) var(--size-pos-xunit) 14px var(--size-null) var(--shadow-color-black-alpha150);
-  --shadow-hud: var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha150);
   --shadow-color-black-alpha200: rgb(0% 0% 0% / 0.2);
   --shadow-color-black-alpha250: rgb(0% 0% 0% / 0.25);
   --shadow-color-black-alpha300: rgb(0% 0% 0% / 0.3);
@@ -115,6 +126,8 @@
   --shadow-color-white-alpha900: rgb(100% 100% 100% / 0.9);
   --shadow-color-white-alpha950: rgb(100% 100% 100% / 0.95);
   --shadow-color-white-alpha1000: rgb(100% 100% 100%);
+  --shadow-floating-window: var(--size-null) var(--size-pos-xunit) 14px var(--size-null) var(--shadow-color-black-alpha150);
+  --shadow-hud: var(--size-null) var(--size-pos-xxxsmall) var(--size-pos-xsmall) var(--size-null) var(--shadow-color-black-alpha200), var(--size-null) var(--size-pos-xunit) var(--size-pos-xxsmall) var(--size-null) var(--shadow-color-black-alpha150);
   --size-neg-huge: -96px;
   --size-neg-hunit: -0.5px;
   --size-neg-large: -40px;
@@ -148,6 +161,19 @@
   --size-pos-xxsmall: 8px;
   --size-pos-xxxlarge: 80px;
   --size-pos-xxxsmall: 4px;
+  --transform-none: none;
+  --transform-scale-down-large: scale(0.94);
+  --transform-scale-down-medium: scale(0.96);
+  --transform-scale-down-small: scale(0.98);
+  --transform-scale-up-large: scale(1.06);
+  --transform-scale-up-medium: scale(1.04);
+  --transform-scale-up-small: scale(1.02);
+  --transform-translate-down-large: translateY(4px);
+  --transform-translate-down-medium: translateY(2px);
+  --transform-translate-down-small: translateY(1px);
+  --transform-translate-up-large: translateY(-4px);
+  --transform-translate-up-medium: translateY(-2px);
+  --transform-translate-up-small: translateY(-1px);
 }
 
 [data-mode*="light"] {

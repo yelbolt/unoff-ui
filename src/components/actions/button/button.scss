@@ -73,6 +73,14 @@
 
 .text-button {
   gap: var(--button-base-gap);
+  transform: var(--button-base-transform-default);
+  transition:
+    background-color var(--button-base-transition),
+    outline-color var(--button-base-transition),
+    outline-width var(--button-base-transition),
+    outline-offset var(--button-base-transition),
+    color var(--button-base-transition),
+    transform var(--button-base-transition);
   outline: var(--button-base-border-width) solid var(--button-base-border-color);
   outline-offset: var(--button-base-border-offset);
   border-radius: var(--button-base-radius);
@@ -97,6 +105,22 @@
     --button-base-padding: var(--button-base-padding-top)
       var(--button-base-padding-right) var(--button-base-padding-bottom)
       var(--button-base-padding-left);
+  }
+
+  &:enabled:hover {
+    transform: var(--button-base-transform-hover);
+  }
+
+  &:enabled:focus {
+    transform: var(--button-base-transform-focus);
+  }
+
+  &:enabled:active {
+    transform: var(--button-base-transform-pressed);
+  }
+
+  &:disabled {
+    transform: var(--button-base-transform-disabled);
   }
 
   &--small {
@@ -540,6 +564,13 @@
 }
 
 .icon-button {
+  transform: var(--icon-button-base-transform-default);
+  transition:
+    background-color var(--icon-button-base-transition),
+    outline-color var(--icon-button-base-transition),
+    outline-width var(--icon-button-base-transition),
+    outline-offset var(--icon-button-base-transition),
+    transform var(--icon-button-base-transition);
   outline: var(--icon-button-base-border-width) solid
     var(--icon-button-base-border-color);
   outline-offset: var(--icon-button-base-border-offset);
@@ -551,6 +582,22 @@
     var(--icon-button-base-padding-left);
   width: var(--icon-button-base-width);
   height: var(--icon-button-base-height);
+
+  &:enabled:hover {
+    transform: var(--icon-button-base-transform-hover);
+  }
+
+  &:enabled:focus {
+    transform: var(--icon-button-base-transform-focus);
+  }
+
+  &:enabled:active {
+    transform: var(--icon-button-base-transform-pressed);
+  }
+
+  &:disabled {
+    transform: var(--icon-button-base-transform-disabled);
+  }
 
   .icon-box {
     background-color: var(--icon-button-base-icon-color);
@@ -820,5 +867,19 @@
         --icon-button-selected-notification-border-color-disabled
       );
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-button,
+  .icon-button {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

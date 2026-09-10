@@ -120,4 +120,10 @@
   --tabs-tab-text-weight-default: var(--type-weight-550);
   --tabs-tab-text-weight-focus: var(--type-weight-550);
   --tabs-tab-text-weight-hover: var(--type-weight-550);
+  --tabs-transform-default: var(--motion-transform-none);
+  --tabs-transform-disabled: var(--motion-transform-none);
+  --tabs-transform-focus: var(--motion-transform-none);
+  --tabs-transform-hover: var(--motion-transform-none);
+  --tabs-transform-pressed: var(--motion-transform-none);
+  --tabs-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

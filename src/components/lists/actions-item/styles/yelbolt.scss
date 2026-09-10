@@ -23,4 +23,10 @@
   --actions-item-padding-left: var(--space-inset-600);
   --actions-item-padding-right: var(--space-inset-400);
   --actions-item-padding-top: var(--space-inset-400);
+  --actions-item-transform-default: var(--motion-transform-none);
+  --actions-item-transform-disabled: var(--motion-transform-none);
+  --actions-item-transform-focus: var(--motion-transform-none);
+  --actions-item-transform-hover: var(--motion-transform-none);
+  --actions-item-transform-pressed: var(--motion-transform-none);
+  --actions-item-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

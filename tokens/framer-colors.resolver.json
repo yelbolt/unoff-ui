@@ -2,16 +2,37 @@
   "name": "Framer Colors",
   "version": "2025.10",
   "description": "Color tokens for Framer platform, including light/dark modes",
-  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "resolutionOrder": [
+    {
+      "$ref": "#/sets/primitives"
+    },
+    {
+      "$ref": "#/modifiers/mode"
+    }
+  ],
+  "sets": {
+    "primitives": {
+      "description": "Commons primitives — the duration/easing/transform scales the semantic motion layer draws from.",
+      "sources": [
+        {
+          "$ref": "./commons/commons.tokens.json"
+        }
+      ]
+    }
+  },
   "modifiers": {
     "mode": {
       "description": "Framer light/dark modes",
       "contexts": {
         "framerLight": [
-          { "$ref": "./platforms/framer/modes/framer-light.tokens.json" }
+          {
+            "$ref": "./platforms/framer/modes/framer-light.tokens.json"
+          }
         ],
         "framerDark": [
-          { "$ref": "./platforms/framer/modes/framer-dark.tokens.json" }
+          {
+            "$ref": "./platforms/framer/modes/framer-dark.tokens.json"
+          }
         ]
       },
       "default": "framerLight"

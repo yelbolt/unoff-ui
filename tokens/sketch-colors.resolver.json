@@ -2,16 +2,37 @@
   "name": "Sketch Colors",
   "version": "2025.10",
   "description": "Color tokens for Sketch platform, including light/dark modes",
-  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "resolutionOrder": [
+    {
+      "$ref": "#/sets/primitives"
+    },
+    {
+      "$ref": "#/modifiers/mode"
+    }
+  ],
+  "sets": {
+    "primitives": {
+      "description": "Commons primitives — the duration/easing/transform scales the semantic motion layer draws from.",
+      "sources": [
+        {
+          "$ref": "./commons/commons.tokens.json"
+        }
+      ]
+    }
+  },
   "modifiers": {
     "mode": {
       "description": "Sketch light/dark modes",
       "contexts": {
         "sketchLight": [
-          { "$ref": "./platforms/sketch/modes/sketch-light.tokens.json" }
+          {
+            "$ref": "./platforms/sketch/modes/sketch-light.tokens.json"
+          }
         ],
         "sketchDark": [
-          { "$ref": "./platforms/sketch/modes/sketch-dark.tokens.json" }
+          {
+            "$ref": "./platforms/sketch/modes/sketch-dark.tokens.json"
+          }
         ]
       },
       "default": "sketchLight"

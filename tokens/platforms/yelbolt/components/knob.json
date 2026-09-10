@@ -313,6 +313,36 @@
         "$value": "{control.size.1600}",
         "$type": "dimension"
       }
+    },
+    "transition": {
+      "$value": {
+        "duration": "{motion.duration.fast}",
+        "delay": "{motion.duration.instant}",
+        "timingFunction": "{motion.easing.standard}"
+      },
+      "$type": "transition"
+    },
+    "transform": {
+      "default": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "hover": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "pressed": {
+        "$value": "{motion.transform.sink}",
+        "$type": "string"
+      },
+      "focus": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "disabled": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      }
     }
   }
 }

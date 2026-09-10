@@ -23,4 +23,10 @@
   --simple-item-padding-top: var(--space-inset-050);
   --simple-item-square-min-width: var(--control-size-800);
   --simple-item-square-width: var(--control-size-800);
+  --simple-item-transform-default: var(--motion-transform-none);
+  --simple-item-transform-disabled: var(--motion-transform-none);
+  --simple-item-transform-focus: var(--motion-transform-none);
+  --simple-item-transform-hover: var(--motion-transform-none);
+  --simple-item-transform-pressed: var(--motion-transform-none);
+  --simple-item-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

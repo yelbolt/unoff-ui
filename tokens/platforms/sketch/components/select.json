@@ -355,15 +355,9 @@
       },
       "transition": {
         "$value": {
-          "duration": {
-            "value": 200,
-            "unit": "ms"
-          },
-          "delay": {
-            "value": 0,
-            "unit": "ms"
-          },
-          "timingFunction": [0.37, 0, 0.63, 1]
+          "duration": "{motion.duration.control}",
+          "delay": "{motion.duration.instant}",
+          "timingFunction": "{motion.easing.standard}"
         },
         "$type": "transition"
       },
@@ -431,29 +425,17 @@
         "transition": {
           "backgroundColor": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
-              "delay": {
-                "value": 0,
-                "unit": "ms"
-              },
-              "timingFunction": [0.37, 0, 0.63, 1]
+              "duration": "{motion.duration.control}",
+              "delay": "{motion.duration.instant}",
+              "timingFunction": "{motion.easing.standard}"
             },
             "$type": "transition"
           },
           "transform": {
             "$value": {
-              "duration": {
-                "value": 200,
-                "unit": "ms"
-              },
-              "delay": {
-                "value": 0,
-                "unit": "ms"
-              },
-              "timingFunction": [0.37, 0, 0.63, 1]
+              "duration": "{motion.duration.control}",
+              "delay": "{motion.duration.instant}",
+              "timingFunction": "{motion.easing.standard}"
             },
             "$type": "transition"
           }
@@ -628,6 +610,36 @@
             }
           }
         }
+      }
+    },
+    "transition": {
+      "$value": {
+        "duration": "{motion.duration.fast}",
+        "delay": "{motion.duration.instant}",
+        "timingFunction": "{motion.easing.standard}"
+      },
+      "$type": "transition"
+    },
+    "transform": {
+      "default": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "hover": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "pressed": {
+        "$value": "{motion.transform.sink}",
+        "$type": "string"
+      },
+      "focus": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
+      },
+      "disabled": {
+        "$value": "{motion.transform.none}",
+        "$type": "string"
       }
     }
   }

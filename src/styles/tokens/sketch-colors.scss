@@ -3,6 +3,20 @@
  * ------------------------------------------- */
 
 [data-mode="sketch-light"] {
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
   --sketch-color-accent-default: var(--sketch-color-accent, rgb(94.902% 40.392% 14.902%));
   --sketch-color-accent-disabled: rgb(98.824% 89.412% 84.706%);
   --sketch-color-accent-error: rgb(80% 0% 0%);
@@ -44,6 +58,20 @@
 }
 
 [data-mode="sketch-dark"] {
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
   --sketch-color-accent-default: var(--sketch-color-accent, rgb(94.902% 40.392% 14.902%));
   --sketch-color-accent-disabled: rgb(30.588% 18.431% 14.118%);
   --sketch-color-accent-error: rgb(80% 0% 0%);

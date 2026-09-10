@@ -2,18 +2,43 @@
   "name": "Figma Colors",
   "version": "2025.10",
   "description": "Color tokens for Figma platform, including light/dark/figjam modes",
-  "resolutionOrder": [{ "$ref": "#/modifiers/mode" }],
+  "resolutionOrder": [
+    {
+      "$ref": "#/sets/primitives"
+    },
+    {
+      "$ref": "#/modifiers/mode"
+    }
+  ],
+  "sets": {
+    "primitives": {
+      "description": "Commons primitives — the duration/easing/transform scales the semantic motion layer draws from.",
+      "sources": [
+        {
+          "$ref": "./commons/commons.tokens.json"
+        }
+      ]
+    }
+  },
   "modifiers": {
     "mode": {
       "description": "Figma light/dark/figjam modes",
       "contexts": {
         "figmaLight": [
-          { "$ref": "./platforms/figma/modes/figma-light.tokens.json" }
+          {
+            "$ref": "./platforms/figma/modes/figma-light.tokens.json"
+          }
         ],
         "figmaDark": [
-          { "$ref": "./platforms/figma/modes/figma-dark.tokens.json" }
+          {
+            "$ref": "./platforms/figma/modes/figma-dark.tokens.json"
+          }
         ],
-        "figjam": [{ "$ref": "./platforms/figma/modes/figjam.tokens.json" }]
+        "figjam": [
+          {
+            "$ref": "./platforms/figma/modes/figjam.tokens.json"
+          }
+        ]
       },
       "default": "figmaLight"
     }

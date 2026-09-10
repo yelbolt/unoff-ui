@@ -40,6 +40,26 @@
     --icon-picto-color: var(--tabs-tab-icon-color);
     --icon-letter-color: var(--tabs-tab-icon-color);
 
+    transform: var(--tabs-transform-default);
+    transition:
+      background-color var(--tabs-transition),
+      outline-color var(--tabs-transition),
+      outline-width var(--tabs-transition),
+      outline-offset var(--tabs-transition),
+      transform var(--tabs-transition);
+
+    &:hover {
+      transform: var(--tabs-transform-hover);
+    }
+
+    &:focus {
+      transform: var(--tabs-transform-focus);
+    }
+
+    &:active {
+      transform: var(--tabs-transform-pressed);
+    }
+
     & > span {
       pointer-events: none;
       color: var(--tabs-tab-text-color);
@@ -248,5 +268,18 @@
         );
       }
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs__tab {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

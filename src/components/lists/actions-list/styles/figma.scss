@@ -105,4 +105,10 @@
   --actions-list-tick-height: var(--size-pos-xsmall);
   --actions-list-tick-width: var(--size-pos-xsmall);
   --actions-list-title-text-transform: none;
+  --actions-list-transform-default: var(--motion-transform-none);
+  --actions-list-transform-disabled: var(--motion-transform-none);
+  --actions-list-transform-focus: var(--motion-transform-none);
+  --actions-list-transform-hover: var(--motion-transform-none);
+  --actions-list-transform-pressed: var(--motion-transform-none);
+  --actions-list-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

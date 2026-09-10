@@ -63,4 +63,10 @@
   --segmented-control-radius: var(--border-radius-xlarge);
   --segmented-control-status-gap: var(--size-pos-xxsmall);
   --segmented-control-status-height: var(--size-pos-medium);
+  --segmented-control-transform-default: var(--motion-transform-none);
+  --segmented-control-transform-disabled: var(--motion-transform-none);
+  --segmented-control-transform-focus: var(--motion-transform-none);
+  --segmented-control-transform-hover: var(--motion-transform-none);
+  --segmented-control-transform-pressed: var(--motion-transform-sink);
+  --segmented-control-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

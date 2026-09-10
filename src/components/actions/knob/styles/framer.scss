@@ -68,4 +68,10 @@
   --knob-tooltip-text-color: var(--framer-color-bg-default);
   --knob-tooltip-top: var(--size-neg-xxsmall);
   --knob-top: var(--size-neg-xxxsmall);
+  --knob-transform-default: var(--motion-transform-none);
+  --knob-transform-disabled: var(--motion-transform-none);
+  --knob-transform-focus: var(--motion-transform-none);
+  --knob-transform-hover: var(--motion-transform-none);
+  --knob-transform-pressed: var(--motion-transform-sink);
+  --knob-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

@@ -112,10 +112,16 @@
   --select-toggle-knob-transform-checked-translate-y: var(--size-pos-unit);
   --select-toggle-knob-transform-default-translate-x: var(--size-pos-unit);
   --select-toggle-knob-transform-default-translate-y: var(--size-pos-unit);
-  --select-toggle-knob-transition-background-color: 200ms 0ms cubic-bezier(0.37, 0, 0.63, 1);
-  --select-toggle-knob-transition-transform: 200ms 0ms cubic-bezier(0.37, 0, 0.63, 1);
+  --select-toggle-knob-transition-background-color: var(--motion-duration-control) var(--motion-duration-instant) var(--motion-easing-standard);
+  --select-toggle-knob-transition-transform: var(--motion-duration-control) var(--motion-duration-instant) var(--motion-easing-standard);
   --select-toggle-knob-width: 10px;
   --select-toggle-radius: var(--size-pos-xxsmall);
-  --select-toggle-transition: 200ms 0ms cubic-bezier(0.37, 0, 0.63, 1);
+  --select-toggle-transition: var(--motion-duration-control) var(--motion-duration-instant) var(--motion-easing-standard);
   --select-toggle-width: var(--size-pos-small);
+  --select-transform-default: var(--motion-transform-none);
+  --select-transform-disabled: var(--motion-transform-none);
+  --select-transform-focus: var(--motion-transform-none);
+  --select-transform-hover: var(--motion-transform-none);
+  --select-transform-pressed: var(--motion-transform-sink);
+  --select-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

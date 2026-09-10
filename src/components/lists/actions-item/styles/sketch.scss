@@ -23,4 +23,10 @@
   --actions-item-padding-left: var(--size-pos-small);
   --actions-item-padding-right: var(--size-pos-xsmall);
   --actions-item-padding-top: var(--size-pos-xsmall);
+  --actions-item-transform-default: var(--motion-transform-none);
+  --actions-item-transform-disabled: var(--motion-transform-none);
+  --actions-item-transform-focus: var(--motion-transform-none);
+  --actions-item-transform-hover: var(--motion-transform-none);
+  --actions-item-transform-pressed: var(--motion-transform-none);
+  --actions-item-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

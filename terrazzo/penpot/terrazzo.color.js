@@ -5,6 +5,19 @@ import tokensStudioCompat, {
   wrapFallbacks,
 } from '../plugins/tokens-studio-compat.js'
 
+const COMMONS_TOKENS = [
+  'size.**',
+  'font.**',
+  'border.**',
+  'grey.**',
+  'alpha.**',
+  'shadow.**',
+  'elevation.**',
+  'duration.**',
+  'easing.**',
+  'transform.**',
+]
+
 export default defineConfig({
   name: 'Penpot Colors',
   tokens: ['./tokens/penpot-colors.resolver.json'],
@@ -17,12 +30,14 @@ export default defineConfig({
       permutations: [
         {
           input: { mode: 'penpotLight' },
+          exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
             (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`
           ),
         },
         {
           input: { mode: 'penpotDark' },
+          exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
             (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`
           ),

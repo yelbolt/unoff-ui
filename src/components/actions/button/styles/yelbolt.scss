@@ -62,6 +62,12 @@
   --button-base-text-letter-spacing: var(--type-tracking-xlarge);
   --button-base-text-line-height: var(--type-leading-default);
   --button-base-text-transform: none;
+  --button-base-transform-default: var(--motion-transform-none);
+  --button-base-transform-disabled: var(--motion-transform-none);
+  --button-base-transform-focus: var(--motion-transform-none);
+  --button-base-transform-hover: var(--motion-transform-none);
+  --button-base-transform-pressed: var(--motion-transform-sink);
+  --button-base-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --button-destructive-background-color-default: var(--color-background-danger-default);
   --button-destructive-background-color-disabled: var(--color-background-danger-disabled);
   --button-destructive-background-color-focus: var(--color-background-danger-focus);
@@ -240,6 +246,12 @@
   --icon-button-base-padding-top: var(--space-none);
   --icon-button-base-radius: var(--radius-full);
   --icon-button-base-text-color: var(--color-text-primary-default);
+  --icon-button-base-transform-default: var(--motion-transform-none);
+  --icon-button-base-transform-disabled: var(--motion-transform-none);
+  --icon-button-base-transform-focus: var(--motion-transform-none);
+  --icon-button-base-transform-hover: var(--motion-transform-none);
+  --icon-button-base-transform-pressed: var(--motion-transform-sink);
+  --icon-button-base-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --icon-button-base-width: var(--control-icon-900);
   --icon-button-default-background-color-default: var(--color-background-primary-default);
   --icon-button-default-background-color-disabled: var(--color-background-primary-disabled);

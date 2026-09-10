@@ -23,6 +23,9 @@ const COMMONS_TOKENS = [
   'alpha.**',
   'shadow.**',
   'elevation.**',
+  'duration.**',
+  'easing.**',
+  'transform.**',
 ]
 
 const PRIMITIVE_TOKENS = [...BRAND_RAMPS, ...COMMONS_TOKENS]

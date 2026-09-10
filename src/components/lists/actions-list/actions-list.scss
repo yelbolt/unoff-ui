@@ -95,6 +95,25 @@
     user-select: none;
     --text-color-primary: var(--actions-list-item-text-color);
 
+    transform: var(--actions-list-transform-default);
+    transition:
+      background-color var(--actions-list-transition),
+      color var(--actions-list-transition),
+      padding var(--actions-list-transition),
+      transform var(--actions-list-transition);
+
+    &:hover {
+      transform: var(--actions-list-transform-hover);
+    }
+
+    &:focus {
+      transform: var(--actions-list-transform-focus);
+    }
+
+    &:active {
+      transform: var(--actions-list-transform-pressed);
+    }
+
     &[data-role='TITLE'] {
       text-transform: var(--actions-list-title-text-transform);
     }
@@ -333,5 +352,18 @@
 
   &__submenu {
     position: absolute;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select-menu__item {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

@@ -39,4 +39,10 @@
   --chip-text-transform: none;
   --chip-text-weight-default: var(--font-weight-accent);
   --chip-text-weight-on-background: var(--font-weight-normal);
+  --chip-transform-default: var(--motion-transform-none);
+  --chip-transform-disabled: var(--motion-transform-none);
+  --chip-transform-focus: var(--motion-transform-none);
+  --chip-transform-hover: var(--motion-transform-none);
+  --chip-transform-pressed: var(--motion-transform-sink);
+  --chip-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

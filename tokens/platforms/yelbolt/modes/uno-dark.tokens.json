@@ -1799,5 +1799,62 @@
   },
   "$extensions": {
     "com.figma.modeName": "UNO Dark"
+  },
+  "motion": {
+    "$description": "Semantic motion layer. Components never reach into the duration/easing/transform primitives directly — they go through these lanes so a mode can retime or immobilise the whole library.",
+    "duration": {
+      "$type": "duration",
+      "$description": "Interaction lanes (instant/fast/base/slow) pace feedback the user triggers; `control` paces a control's own state travel and stays alive on every platform.",
+      "instant": {
+        "$value": "{duration.null}"
+      },
+      "fast": {
+        "$value": "{duration.small}"
+      },
+      "base": {
+        "$value": "{duration.medium}"
+      },
+      "slow": {
+        "$value": "{duration.large}"
+      },
+      "control": {
+        "$value": "{duration.medium}"
+      }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "$description": "Motion character. `default` is the house curve.",
+      "standard": {
+        "$value": "{easing.standard}"
+      },
+      "entrance": {
+        "$value": "{easing.decelerate}"
+      },
+      "exit": {
+        "$value": "{easing.accelerate}"
+      },
+      "emphasis": {
+        "$value": "{easing.emphasized}"
+      }
+    },
+    "transform": {
+      "$type": "string",
+      "$description": "Interaction feedback expressed as a CSS transform function.",
+      "none": {
+        "$value": "{transform.none}"
+      },
+      "raise": {
+        "$value": "{transform.translate.up.small}"
+      },
+      "sink": {
+        "$value": "{transform.scale.down.small}"
+      },
+      "grow": {
+        "$value": "{transform.scale.up.small}"
+      },
+      "shrink": {
+        "$value": "{transform.scale.down.medium}"
+      }
+    }
   }
 }

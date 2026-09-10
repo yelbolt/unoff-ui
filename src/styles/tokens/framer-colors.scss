@@ -27,6 +27,20 @@
   --framer-color-warning-default: var(--framer-color-warning, rgb(100% 66.667% 0%));
   --framer-color-warning-dimmed: rgb(100% 96.471% 89.804%);
   --framer-color-warning-extra-dark: rgb(100% 53.333% 0%);
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
 }
 
 [data-mode="framer-dark"] {
@@ -54,4 +68,18 @@
   --framer-color-warning-default: var(--framer-color-warning, rgb(100% 66.667% 0%));
   --framer-color-warning-dimmed: rgb(20.784% 15.686% 5.4902%);
   --framer-color-warning-extra-dark: rgb(100% 53.333% 0%);
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
 }

@@ -3,6 +3,20 @@
  * ------------------------------------------- */
 
 [data-mode="penpot-light"] {
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
   --penpot-color-accent-default: var(--penpot-color-accent, rgb(93.333% 94.118% 94.902%));
   --penpot-color-accent-error: rgb(78.431% 3.1373% 34.118%);
   --penpot-color-accent-info: rgb(5.4902% 60.784% 91.373%);
@@ -40,6 +54,20 @@
 }
 
 [data-mode="penpot-dark"] {
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
   --penpot-color-accent-default: var(--penpot-color-accent, rgb(18.039% 20.392% 20.392%));
   --penpot-color-accent-error: rgb(78.431% 3.1373% 34.118%);
   --penpot-color-accent-info: rgb(5.4902% 60.784% 91.373%);

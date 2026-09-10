@@ -6,6 +6,19 @@ import tokensStudioCompat, {
   wrapPassthrough,
 } from '../plugins/tokens-studio-compat.js'
 
+const COMMONS_TOKENS = [
+  'size.**',
+  'font.**',
+  'border.**',
+  'grey.**',
+  'alpha.**',
+  'shadow.**',
+  'elevation.**',
+  'duration.**',
+  'easing.**',
+  'transform.**',
+]
+
 export default defineConfig({
   name: 'Figma Colors',
   tokens: ['./tokens/figma-colors.resolver.json'],
@@ -18,18 +31,21 @@ export default defineConfig({
       permutations: [
         {
           input: { mode: 'figmaLight' },
+          exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
             (css) => `[data-mode="figma-light"] {\n  ${css}\n}`
           ),
         },
         {
           input: { mode: 'figmaDark' },
+          exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
             (css) => `[data-mode="figma-dark"] {\n  ${css}\n}`
           ),
         },
         {
           input: { mode: 'figjam' },
+          exclude: COMMONS_TOKENS,
           prepare: wrapFallbacks(
             (css) => `[data-mode="figjam"] {\n  ${css}\n}`
           ),
@@ -42,7 +58,8 @@ export default defineConfig({
       permutations: [
         {
           input: { mode: 'figmaLight' },
-          prepare: wrapPassthrough(':root'),
+          exclude: COMMONS_TOKENS,
+          prepare: wrapPassthrough(':root', { keep: ['--motion-'] }),
         },
       ],
     }),

@@ -8,6 +8,14 @@ li.actions-item {
   display: flex;
   align-items: center;
   gap: var(--actions-item-gap);
+  transform: var(--actions-item-transform-default);
+  transition:
+    background-color var(--actions-item-transition),
+    outline-color var(--actions-item-transition),
+    outline-width var(--actions-item-transition),
+    outline-offset var(--actions-item-transition),
+    border-bottom-color var(--actions-item-transition),
+    transform var(--actions-item-transition);
   outline: var(--actions-item-border-secondary-width) solid
     var(--actions-item-border-secondary-color);
   outline-offset: var(--actions-item-border-secondary-offset);
@@ -44,12 +52,18 @@ li.actions-item {
 
   &--interactive {
     &:hover {
+      transform: var(--actions-item-transform-hover);
       --actions-item-background-color: var(
         --actions-item-background-color-hover
       );
     }
 
+    &:active {
+      transform: var(--actions-item-transform-pressed);
+    }
+
     &:focus {
+      transform: var(--actions-item-transform-focus);
       --actions-item-background-color: var(
         --actions-item-background-color-focus
       );
@@ -85,5 +99,18 @@ li.actions-item {
     justify-content: end;
     align-items: center;
     gap: var(--actions-item-actions-gap);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  li.actions-item {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

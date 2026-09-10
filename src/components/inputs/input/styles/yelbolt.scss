@@ -146,4 +146,10 @@
   --input-textarea-padding-top: var(--space-inset-200);
   --input-textarea-text-color: var(--color-text-primary-default);
   --input-textarea-text-placeholder-color: var(--color-text-secondary-default);
+  --input-transform-default: var(--motion-transform-none);
+  --input-transform-disabled: var(--motion-transform-none);
+  --input-transform-focus: var(--motion-transform-none);
+  --input-transform-hover: var(--motion-transform-none);
+  --input-transform-pressed: var(--motion-transform-none);
+  --input-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
 }

@@ -291,6 +291,9 @@
       },
       "large": {
         "$value": "14px"
+      },
+      "xlarge": {
+        "$value": "16px"
       }
     },
     "weight": {
@@ -493,6 +496,123 @@
         },
         "alpha1000": {
           "$value": "rgba(255, 255, 255, 1)"
+        }
+      }
+    }
+  },
+  "duration": {
+    "$type": "duration",
+    "$description": "A comprehensive set of duration values to ensure consistent motion pacing across all supported platforms. These values can be used for transitions, animations, and any timed state change. Platforms that do not expose motion resolve their semantic lanes to `null`.",
+    "null": {
+      "$value": {
+        "value": 0,
+        "unit": "ms"
+      }
+    },
+    "xsmall": {
+      "$value": {
+        "value": 80,
+        "unit": "ms"
+      }
+    },
+    "small": {
+      "$value": {
+        "value": 120,
+        "unit": "ms"
+      }
+    },
+    "medium": {
+      "$value": {
+        "value": 200,
+        "unit": "ms"
+      }
+    },
+    "large": {
+      "$value": {
+        "value": 280,
+        "unit": "ms"
+      }
+    },
+    "xlarge": {
+      "$value": {
+        "value": 400,
+        "unit": "ms"
+      }
+    }
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "$description": "A comprehensive set of easing curves to ensure consistent motion character across all supported platforms. `standard` is the house curve, recovered from the pre-existing select toggle transition.",
+    "linear": {
+      "$value": [0, 0, 1, 1]
+    },
+    "standard": {
+      "$value": [0.37, 0, 0.63, 1]
+    },
+    "decelerate": {
+      "$value": [0, 0, 0.35, 1]
+    },
+    "accelerate": {
+      "$value": [0.65, 0, 1, 1]
+    },
+    "emphasized": {
+      "$value": [0.34, 0, 0.2, 1]
+    },
+    "overshoot": {
+      "$value": [0.34, 1.56, 0.64, 1]
+    }
+  },
+  "transform": {
+    "$type": "string",
+    "$description": "A comprehensive set of transform functions to ensure consistent interaction feedback across all supported platforms. Authored as complete CSS transform functions because DTCG has no transform type. Platforms that do not expose motion resolve their semantic lanes to `none`.",
+    "none": {
+      "$value": "none"
+    },
+    "scale": {
+      "down": {
+        "small": {
+          "$value": "scale(0.98)"
+        },
+        "medium": {
+          "$value": "scale(0.96)"
+        },
+        "large": {
+          "$value": "scale(0.94)"
+        }
+      },
+      "up": {
+        "small": {
+          "$value": "scale(1.02)"
+        },
+        "medium": {
+          "$value": "scale(1.04)"
+        },
+        "large": {
+          "$value": "scale(1.06)"
+        }
+      }
+    },
+    "translate": {
+      "up": {
+        "small": {
+          "$value": "translateY(-1px)"
+        },
+        "medium": {
+          "$value": "translateY(-2px)"
+        },
+        "large": {
+          "$value": "translateY(-4px)"
+        }
+      },
+      "down": {
+        "small": {
+          "$value": "translateY(1px)"
+        },
+        "medium": {
+          "$value": "translateY(2px)"
+        },
+        "large": {
+          "$value": "translateY(4px)"
         }
       }
     }

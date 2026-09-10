@@ -34,7 +34,7 @@
   --button-alternative-text-color-hover: var(--sketch-color-accent-primary);
   --button-alternative-text-color-pressed: var(--sketch-color-accent-primary);
   --button-alternative-text-decoration-default: none;
-  --button-alternative-text-decoration-disabled: var(--grey-transparent);
+  --button-alternative-text-decoration-disabled: none;
   --button-alternative-text-decoration-focus: none;
   --button-alternative-text-decoration-hover: none;
   --button-alternative-text-decoration-pressed: none;
@@ -62,6 +62,12 @@
   --button-base-text-letter-spacing: var(--font-letter-spacing-pos-small);
   --button-base-text-line-height: var(--font-line-height-default);
   --button-base-text-transform: none;
+  --button-base-transform-default: var(--motion-transform-none);
+  --button-base-transform-disabled: var(--motion-transform-none);
+  --button-base-transform-focus: var(--motion-transform-none);
+  --button-base-transform-hover: var(--motion-transform-none);
+  --button-base-transform-pressed: var(--motion-transform-sink);
+  --button-base-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --button-destructive-background-color-default: var(--sketch-color-accent-error);
   --button-destructive-background-color-disabled: var(--sketch-color-background-error);
   --button-destructive-background-color-focus: var(--sketch-color-accent-error);
@@ -93,7 +99,7 @@
   --button-destructive-text-color-hover: var(--sketch-color-foreground-onaccent-default);
   --button-destructive-text-color-pressed: var(--sketch-color-foreground-onaccent-default);
   --button-destructive-text-decoration-default: none;
-  --button-destructive-text-decoration-disabled: var(--grey-transparent);
+  --button-destructive-text-decoration-disabled: none;
   --button-destructive-text-decoration-focus: none;
   --button-destructive-text-decoration-hover: none;
   --button-destructive-text-decoration-pressed: none;
@@ -133,7 +139,7 @@
   --button-primary-text-color-hover: var(--sketch-color-foreground-onaccent-default);
   --button-primary-text-color-pressed: var(--sketch-color-foreground-onaccent-default);
   --button-primary-text-decoration-default: none;
-  --button-primary-text-decoration-disabled: var(--grey-transparent);
+  --button-primary-text-decoration-disabled: none;
   --button-primary-text-decoration-focus: none;
   --button-primary-text-decoration-hover: none;
   --button-primary-text-decoration-pressed: none;
@@ -168,7 +174,7 @@
   --button-secondary-text-color-hover: var(--sketch-color-foreground-primary);
   --button-secondary-text-color-pressed: var(--sketch-color-foreground-primary);
   --button-secondary-text-decoration-default: none;
-  --button-secondary-text-decoration-disabled: var(--grey-transparent);
+  --button-secondary-text-decoration-disabled: none;
   --button-secondary-text-decoration-focus: none;
   --button-secondary-text-decoration-hover: none;
   --button-secondary-text-decoration-pressed: none;
@@ -214,7 +220,7 @@
   --button-tertiary-text-color-hover: var(--sketch-color-accent-primary);
   --button-tertiary-text-color-pressed: var(--sketch-color-accent-primary);
   --button-tertiary-text-decoration-default: none;
-  --button-tertiary-text-decoration-disabled: var(--grey-transparent);
+  --button-tertiary-text-decoration-disabled: none;
   --button-tertiary-text-decoration-focus: underline;
   --button-tertiary-text-decoration-hover: none;
   --button-tertiary-text-decoration-pressed: none;
@@ -240,6 +246,12 @@
   --icon-button-base-padding-top: var(--size-null);
   --icon-button-base-radius: var(--border-radius-large);
   --icon-button-base-text-color: var(--sketch-color-background-secondary);
+  --icon-button-base-transform-default: var(--motion-transform-none);
+  --icon-button-base-transform-disabled: var(--motion-transform-none);
+  --icon-button-base-transform-focus: var(--motion-transform-none);
+  --icon-button-base-transform-hover: var(--motion-transform-none);
+  --icon-button-base-transform-pressed: var(--motion-transform-sink);
+  --icon-button-base-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --icon-button-base-width: var(--size-pos-large);
   --icon-button-default-background-color-default: var(--sketch-color-background-primary);
   --icon-button-default-background-color-disabled: var(--sketch-color-background-primary);

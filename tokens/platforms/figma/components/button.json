@@ -110,6 +110,36 @@
           "$value": "{size.pos.small}",
           "$type": "dimension"
         }
+      },
+      "transition": {
+        "$value": {
+          "duration": "{motion.duration.fast}",
+          "delay": "{motion.duration.instant}",
+          "timingFunction": "{motion.easing.standard}"
+        },
+        "$type": "transition"
+      },
+      "transform": {
+        "default": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "pressed": {
+          "$value": "{motion.transform.sink}",
+          "$type": "string"
+        },
+        "focus": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "disabled": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        }
       }
     },
     "small": {
@@ -304,8 +334,8 @@
             "$type": "string"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },
@@ -468,8 +498,8 @@
             "$type": "string"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },
@@ -546,8 +576,8 @@
             "$type": "string"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },
@@ -820,8 +850,8 @@
             "$type": "string"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },
@@ -984,8 +1014,8 @@
             "$type": "string"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },
@@ -1117,6 +1147,36 @@
             "$value": "{size.null}",
             "$type": "dimension"
           }
+        }
+      },
+      "transition": {
+        "$value": {
+          "duration": "{motion.duration.fast}",
+          "delay": "{motion.duration.instant}",
+          "timingFunction": "{motion.easing.standard}"
+        },
+        "$type": "transition"
+      },
+      "transform": {
+        "default": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "pressed": {
+          "$value": "{motion.transform.sink}",
+          "$type": "string"
+        },
+        "focus": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
+        },
+        "disabled": {
+          "$value": "{motion.transform.none}",
+          "$type": "string"
         }
       }
     },
@@ -1408,8 +1468,8 @@
             "$type": "color"
           },
           "disabled": {
-            "$value": "{grey.transparent}",
-            "$type": "color"
+            "$value": "none",
+            "$type": "string"
           }
         }
       },

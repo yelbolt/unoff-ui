@@ -9,6 +9,14 @@
   position: relative;
   align-items: center;
   gap: var(--chip-gap);
+  transform: var(--chip-transform-default);
+  transition:
+    background-color var(--chip-transition),
+    outline-color var(--chip-transition),
+    outline-width var(--chip-transition),
+    outline-offset var(--chip-transition),
+    color var(--chip-transition),
+    transform var(--chip-transition);
   cursor: default;
   box-sizing: border-box;
   margin: var(--chip-margin-top) var(--chip-margin-right)
@@ -32,6 +40,18 @@
       --chip-border-offset: var(--chip-border-offset-default);
       --chip-border-width: var(--chip-border-width-default);
       --chip-text-color: var(--chip-text-color-default);
+    }
+
+    &:hover {
+      transform: var(--chip-transform-hover);
+    }
+
+    &:focus {
+      transform: var(--chip-transform-focus);
+    }
+
+    &:active {
+      transform: var(--chip-transform-pressed);
     }
 
     &:hover,
@@ -90,5 +110,18 @@
     --chip-border-offset: var(--chip-border-offset-on-background);
     --chip-text-color: var(--chip-text-color-on-background);
     --chip-text-weight: var(--chip-text-weight-on-background);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

@@ -9,6 +9,13 @@
   justify-content: space-between;
   align-items: start;
   gap: var(--simple-item-gap);
+  transform: var(--simple-item-transform-default);
+  transition:
+    background-color var(--simple-item-transition),
+    outline-color var(--simple-item-transition),
+    outline-width var(--simple-item-transition),
+    outline-offset var(--simple-item-transition),
+    transform var(--simple-item-transition);
   box-sizing: content-box;
   outline: var(--simple-item-border-width) solid var(--simple-item-border-color);
   outline-offset: var(--simple-item-border-offset);
@@ -34,10 +41,16 @@
 
   &--interactive {
     &:hover {
+      transform: var(--simple-item-transform-hover);
       --simple-item-background-color: var(--simple-item-background-color-hover);
     }
 
+    &:active {
+      transform: var(--simple-item-transform-pressed);
+    }
+
     &:focus {
+      transform: var(--simple-item-transform-focus);
       --simple-item-background-color: var(--simple-item-background-color-focus);
       --simple-item-border-width: var(--simple-item-border-width-focus);
       --simple-item-border-offset: var(--simple-item-border-offset-focus);
@@ -80,5 +93,18 @@
     &--fill {
       flex: 1;
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .simple-item {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

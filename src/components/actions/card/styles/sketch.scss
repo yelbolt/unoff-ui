@@ -28,5 +28,11 @@
   --card-padding-top: var(--size-pos-xxsmall);
   --card-radius: var(--size-pos-xsmall);
   --card-ratio: 2 / 1;
+  --card-transform-default: var(--motion-transform-none);
+  --card-transform-disabled: var(--motion-transform-none);
+  --card-transform-focus: var(--motion-transform-none);
+  --card-transform-hover: var(--motion-transform-raise);
+  --card-transform-pressed: var(--motion-transform-sink);
+  --card-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --card-width: 200px;
 }

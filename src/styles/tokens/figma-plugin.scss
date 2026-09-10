@@ -57,4 +57,18 @@
   --figma-color-text-success-default: var(--figma-color-text-success);
   --figma-color-text-tertiary-default: var(--figma-color-text-tertiary);
   --figma-color-text-warning-default: var(--figma-color-text-warning);
+  --motion-duration-base: var(--duration-null);
+  --motion-duration-control: var(--duration-medium);
+  --motion-duration-fast: var(--duration-null);
+  --motion-duration-instant: var(--duration-null);
+  --motion-duration-slow: var(--duration-null);
+  --motion-easing-emphasis: var(--easing-emphasized);
+  --motion-easing-entrance: var(--easing-decelerate);
+  --motion-easing-exit: var(--easing-accelerate);
+  --motion-easing-standard: var(--easing-standard);
+  --motion-transform-grow: var(--transform-none);
+  --motion-transform-none: var(--transform-none);
+  --motion-transform-raise: var(--transform-none);
+  --motion-transform-shrink: var(--transform-none);
+  --motion-transform-sink: var(--transform-none);
 }

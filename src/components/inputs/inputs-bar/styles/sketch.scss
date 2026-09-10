@@ -17,5 +17,11 @@
   --inputs-bar-padding-right: var(--size-pos-unit);
   --inputs-bar-padding-top: var(--size-null);
   --inputs-bar-radius: var(--border-radius-large);
+  --inputs-bar-transform-default: var(--motion-transform-none);
+  --inputs-bar-transform-disabled: var(--motion-transform-none);
+  --inputs-bar-transform-focus: var(--motion-transform-none);
+  --inputs-bar-transform-hover: var(--motion-transform-none);
+  --inputs-bar-transform-pressed: var(--motion-transform-none);
+  --inputs-bar-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
   --inputs-bar-width: var(--size-pos-xlarge);
 }
