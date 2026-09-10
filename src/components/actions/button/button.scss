@@ -128,6 +128,8 @@
       var(--button-small-padding-right) var(--button-small-padding-bottom)
       var(--button-small-padding-left);
     --button-base-height: var(--button-small-height);
+    --button-base-text-font-size: var(--button-small-text-font-size);
+    --button-base-text-line-height: var(--button-small-text-line-height);
   }
 
   &--large {
@@ -135,6 +137,8 @@
       var(--button-large-padding-right) var(--button-large-padding-bottom)
       var(--button-large-padding-left);
     --button-base-height: var(--button-large-height);
+    --button-base-text-font-size: var(--button-large-text-font-size);
+    --button-base-text-line-height: var(--button-large-text-line-height);
   }
 
   .icon-chip {

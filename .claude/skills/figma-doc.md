@@ -21,17 +21,26 @@ The description must be clear, concise, and structured so it is useful to both d
 
 ## Step 1 — Identify the component
 
-The user will provide a **Figma URL** pointing to the component node (e.g. `https://www.figma.com/design/RDBmy7x5HfkZHpafVqHNWQ/Unoff-v0.1?node-id=3521-3846`). Extract the `node-id` from the URL.
+**Default target file:** every unoff-ui component's description lives in the same design-system file — fileKey `RDBmy7x5HfkZHpafVqHNWQ` ("Unoff v0.1"). A bare component name is enough to run this skill; you do not need the user to paste a URL. If they do provide a Figma URL pointing to a specific node, extract the `node-id` from it and use that node directly instead of searching by name.
 
-### 1a — Fetch Figma variants via figma-console MCP
+### 1a — Read the current live description (no Desktop connection needed)
+
+Before touching Figma Desktop, check what's already published — this doubles as the sync check when this skill is invoked to verify drift rather than write from scratch:
+
+1. Call `mcp__figma__search_design_system` with `fileKey: "RDBmy7x5HfkZHpafVqHNWQ"`, `entity: "component"`, `query: "{ComponentName}"`. This is REST-based and works whether or not Figma Desktop is open.
+2. If it returns an existing `description`, treat it as the current live doc to diff against once you've synthesized the fresh version in Step 2.
+3. If no result comes back, there's nothing published yet — proceed straight to synthesis.
+
+### 1b — Fetch Figma variants via figma-console MCP (Desktop Bridge)
 
 Use the **Figma Desktop Bridge plugin** (figma-console MCP) to retrieve the real component properties and variants directly from Figma:
 
-1. Call `figma_get_component` with the `nodeId` extracted from the URL and the file URL.
-2. From the response, extract: component properties (enum, boolean, text), variant values, and any existing description.
-3. Use these as the authoritative source for the **Variants (Figma)** section of the output.
+1. If you only have a component name (no node-id), first resolve it to a node: call `mcp__figma-console__figma_search_components` with `query: "{ComponentName}"` against the currently open file.
+2. Call `figma_get_component` with the resolved `nodeId` (and the file URL if not auto-detected).
+3. From the response, extract: component properties (enum, boolean, text), variant values, and any existing description.
+4. Use these as the authoritative source for the **Variants (Figma)** section of the output.
 
-> **Prerequisite:** the Figma Desktop Bridge plugin must be running in Figma (Right-click → Plugins → Development → Figma Desktop Bridge). If `figma_get_component` fails, use `figma_execute` with `figma.getNodeByIdAsync(nodeId)` to fetch the node directly. If both fail, fall back to inferring variants from the `.figma.tsx` file or Storybook args.
+> **Prerequisite:** the Figma Desktop Bridge plugin must be running in Figma, with the `RDBmy7x5HfkZHpafVqHNWQ` file open (Right-click → Plugins → Development → Figma Desktop Bridge). Check with `mcp__figma-console__figma_get_status` (`probe: true`) before relying on it. If the bridge isn't connected or a different file is open, don't fail: fall back to inferring variants from the `.figma.tsx` file, Storybook argTypes, or the REST description fetched in Step 1a, and tell the user their next step is to open that file + reopen the Desktop Bridge plugin so the description can actually be written (Step 4).
 
 ### 1b — Read the source files
 
@@ -199,12 +208,14 @@ A `warning`, `isBlocked`, or `isNew` flag appends a status indicator next to the
 
 ## Step 4 — Write the description to Figma
 
-Once the description is finalised, call `figma_set_description` with **both** parameters:
+If the synthesized description matches what Step 1a already found live, say so and stop — do not re-push an identical description.
 
-- `description`: plain-text fallback (summary sentence only)
-- `descriptionMarkdown`: the full rich-text document
+Otherwise, once the description is finalised:
 
-Also present the final `descriptionMarkdown` content in a fenced code block so the user can review it. Note any props or Figma variants that could not be confirmed (e.g. MCP unavailable, missing `.figma.tsx`) so the user can fill gaps manually.
+- **Desktop Bridge connected to `RDBmy7x5HfkZHpafVqHNWQ`:** call `figma_set_description` with **both** parameters — `description` (plain-text fallback, summary sentence only) and `descriptionMarkdown` (the full rich-text document) — against the `nodeId` resolved in Step 1b.
+- **Not connected, or the wrong file is open:** do not fail silently. Tell the user the description is ready but couldn't be pushed, give the reconnect steps (open `RDBmy7x5HfkZHpafVqHNWQ` in Figma Desktop → Plugins → Development → Figma Desktop Bridge → Run), and present the full `descriptionMarkdown` so they can paste it manually or ask you to retry after reconnecting.
+
+Always present the final `descriptionMarkdown` content in a fenced code block so the user can review it, whether or not the push succeeded. Note any props or Figma variants that could not be confirmed (e.g. MCP unavailable, missing `.figma.tsx`) so the user can fill gaps manually.
 
 ---
 

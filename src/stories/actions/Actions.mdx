@@ -50,8 +50,11 @@ The primary interactive element for triggering actions, navigating, or submittin
 
 - Use `shouldReflow` to swap label for icon below 460 px for responsive layouts.
 - Use `isLoading` to indicate async processing and prevent double submission.
-- Use `isBlocked` for paywalled features with an optional `onUnblock` callback.
+- Use `isBlocked` for paywalled features, with `onBlock` firing instead of `action` while blocked.
 - Use `url` + `isLink` to render as an external link styled as a button.
+- Use `hasMultipleActions` to append a caret for a button that also opens a menu of related actions.
+- Use `isNew` to show a "New"/"Pro" badge, and `warning` to attach a warning callout — both render in the button's status area.
+- Use `preview` to show an image preview alongside the "New"/"Pro" badge.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">

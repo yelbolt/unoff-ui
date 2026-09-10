@@ -215,23 +215,23 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "strong": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.3}",
           "$type": "color"
         }
       }
@@ -447,27 +447,27 @@
       },
       "inverse": {
         "default": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.5}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "strong": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.4}",
           "$type": "color"
         }
       }
@@ -847,7 +847,7 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{UICS.8}",
+          "$value": "{UICS.1}",
           "$type": "color"
         },
         "focus": {
@@ -873,7 +873,7 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.1}",
           "$type": "color"
         },
         "focus": {
@@ -1317,7 +1317,7 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{UICS.8}",
+          "$value": "{UICS.1}",
           "$type": "color"
         },
         "focus": {
@@ -1343,7 +1343,7 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.1}",
           "$type": "color"
         },
         "focus": {

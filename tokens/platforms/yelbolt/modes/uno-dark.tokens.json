@@ -447,23 +447,23 @@
       },
       "inverse": {
         "default": {
-          "$value": "{UNO.1}",
-          "$type": "color"
-        },
-        "hover": {
           "$value": "{UNO.2}",
           "$type": "color"
         },
-        "pressed": {
+        "hover": {
           "$value": "{UNO.3}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{UNO.4}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.2}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.1}",
+          "$value": "{UNO.2}",
           "$type": "color"
         },
         "strong": {
@@ -527,19 +527,19 @@
       },
       "secondary": {
         "default": {
-          "$value": "{UNO.2}",
-          "$type": "color"
-        },
-        "hover": {
           "$value": "{UNO.3}",
           "$type": "color"
         },
-        "pressed": {
+        "hover": {
           "$value": "{UNO.4}",
           "$type": "color"
         },
+        "pressed": {
+          "$value": "{UNO.5}",
+          "$type": "color"
+        },
         "focus": {
-          "$value": "{UNO.2}",
+          "$value": "{UNO.3}",
           "$type": "color"
         },
         "disabled": {
@@ -683,27 +683,27 @@
       },
       "inverse": {
         "default": {
-          "$value": "{UNO.1}",
+          "$value": "{UNO.8}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{UNO.2}",
+          "$value": "{UNO.7}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.1}",
+          "$value": "{UNO.8}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "strong": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.6}",
           "$type": "color"
         }
       },
@@ -1153,27 +1153,27 @@
       },
       "inverse": {
         "default": {
-          "$value": "{UNO.1}",
+          "$value": "{UNO.8}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{UNO.2}",
+          "$value": "{UNO.7}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.1}",
+          "$value": "{UNO.8}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "strong": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.6}",
           "$type": "color"
         }
       },

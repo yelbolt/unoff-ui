@@ -164,6 +164,18 @@
           "$value": "{space.inset.200}",
           "$type": "dimension"
         }
+      },
+      "text": {
+        "font": {
+          "size": {
+            "$value": "{type.size.02}",
+            "$type": "dimension"
+          }
+        },
+        "lineHeight": {
+          "$value": "{type.leading.default}",
+          "$type": "number"
+        }
       }
     },
     "large": {
@@ -187,6 +199,18 @@
         "left": {
           "$value": "{space.inset.600}",
           "$type": "dimension"
+        }
+      },
+      "text": {
+        "font": {
+          "size": {
+            "$value": "{type.size.04}",
+            "$type": "dimension"
+          }
+        },
+        "lineHeight": {
+          "$value": "{type.leading.large}",
+          "$type": "number"
         }
       }
     },

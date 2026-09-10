@@ -385,6 +385,19 @@ Before finishing, verify:
 - [ ] `src/index.ts` has the new export in the right category block
 - [ ] Story file exists with at least one `play` test per exported story
 - [ ] MDX documentation section added to the category doc
+- [ ] `component-reviewer` invoked to confirm MDX/props sync and push the Figma description (Step 7) — do not consider the component done without this
+
+---
+
+## Step 7 — Sync docs (mandatory, do not skip)
+
+Creating the component is not done until its two documentation surfaces are confirmed in sync — this is not optional cleanup, it is part of the deliverable:
+
+1. Invoke the **`component-reviewer`** agent (see `.claude/agents/component-reviewer.md`) for the new component, telling it this is a post-creation check.
+2. It will re-verify the MDX section written in Step 5 actually matches the final `Props` interface (props sometimes change between drafting the MDX and finishing the TSX), and push a fresh description to the Figma design-system file (fileKey `RDBmy7x5HfkZHpafVqHNWQ`, "Unoff v0.1") following the `/figma-doc` format.
+3. If the Figma Desktop Bridge isn't connected to that file, it will hand you the ready-to-paste description markdown instead of failing silently — pass that along to the user.
+
+Report the outcome of both syncs alongside the rest of the creation summary.
 
 ---
 

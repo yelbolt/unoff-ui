@@ -5,7 +5,7 @@ import { DocTabs, Tab } from './DocTabs'
 
 # Getting Started
 
-Unoff UI is a component library designed for building plugins and tools targeting Figma, Penpot, Sketch and Framer. It ships with full theming support, interaction-tested stories, and WCAG 2.2 accessibility guidelines.
+Unoff UI is a component library designed for building plugins and tools targeting Figma, Penpot, Sketch, Framer and Yelbolt. It ships with full theming support, interaction-tested stories, and WCAG 2.2 accessibility guidelines.
 
 ---
 
@@ -44,8 +44,10 @@ document.documentElement.setAttribute('data-mode', 'figma-dark')
 
 Available values:
 
-- **`data-theme`** — `figma` · `penpot` · `sketch` · `framer`
-- **`data-mode`** — `figma-light` · `figma-dark` · `figjam` · `penpot-light` · `penpot-dark` · `sketch-light` · `sketch-dark` · `framer-light` · `framer-dark`
+- **`data-theme`** — `figma` · `penpot` · `sketch` · `framer` · `yelbolt`
+- **`data-mode`** — `figma-light` · `figma-dark` · `figjam` · `penpot-light` · `penpot-dark` · `sketch-light` · `sketch-dark` · `framer-light` · `framer-dark` · `yelbolt-{family}-light` · `yelbolt-{family}-dark`
+
+Yelbolt ships **seven color families** instead of a single brand hue — `ylb`, `ntl`, `uicp`, `uno`, `tcn`, `uics`, `isb` — each with its own light/dark mode pair, e.g. `data-mode="yelbolt-ylb-dark"`. See [Yelbolt Colors](?path=/docs/foundations-colors-yelbolt--docs) for the full derivation rule.
 
 ## What's in the docs
 
@@ -73,12 +75,13 @@ Each component page includes two perspectives:
 
 ## Themes
 
-The library supports four platforms, each with light and dark modes:
+The library supports five platforms, each with light and dark modes:
 
 - **Figma** — Figma UI (light + dark + FigJam)
 - **Penpot** — Penpot UI (light + dark)
 - **Sketch** — Sketch UI (light + dark)
 - **Framer** — Framer UI (light + dark)
+- **Yelbolt** — seven brand color families (light + dark each)
 
 Use the **UI Theme** and **Color Mode** toolbar controls at the top of any story to preview components in the target environment.
 

@@ -108,6 +108,8 @@
   --button-large-padding-left: var(--space-inset-800);
   --button-large-padding-right: var(--space-inset-800);
   --button-large-padding-top: var(--space-none);
+  --button-large-text-font-size: var(--type-size-03);
+  --button-large-text-line-height: var(--type-leading-large);
   --button-primary-background-color-default: var(--framer-color-tint-default);
   --button-primary-background-color-disabled: var(--framer-color-bg-tertiary);
   --button-primary-background-color-focus: var(--framer-color-tint-dark);
@@ -183,6 +185,8 @@
   --button-small-padding-left: var(--space-inset-200);
   --button-small-padding-right: var(--space-inset-200);
   --button-small-padding-top: var(--space-none);
+  --button-small-text-font-size: var(--type-size-01);
+  --button-small-text-line-height: var(--type-leading-default);
   --button-status-gap: var(--space-gap-200);
   --button-status-height: var(--control-size-800);
   --button-tertiary-background-color-default: var(--framer-color-bg-default);
