@@ -9,28 +9,28 @@
       "$type": "dimension"
     },
     "gap": {
-      "$value": "{size.pos.xxsmall}",
+      "$value": "{space.gap.200}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.xlarge}",
+      "$value": "{radius.xlarge}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       }
     },
@@ -46,11 +46,11 @@
         "$type": "color"
       },
       "width": {
-        "$value": "{size.null}",
+        "$value": "{stroke.width.none}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{size.null}",
+        "$value": "{stroke.offset.none}",
         "$type": "dimension"
       }
     },
@@ -70,11 +70,11 @@
     },
     "arrow": {
       "size": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{control.size.400}",
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{border.radius.null}",
+        "$value": "{radius.none}",
         "$type": "dimension"
       },
       "background": {
@@ -89,22 +89,22 @@
           "$type": "color"
         },
         "width": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         }
       }
     },
     "image": {
       "width": {
-        "$value": "{size.pos.huge}",
+        "$value": "{control.size.2400}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{size.pos.huge}",
+        "$value": "{control.size.2400}",
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{border.radius.xlarge}",
+        "$value": "{radius.xlarge}",
         "$type": "dimension"
       }
     },
@@ -115,19 +115,19 @@
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         }
       }

@@ -13,7 +13,6 @@ const tokenPaths = [
   './tokens/platforms/figma/modes/figma-dark.tokens.json',
   './tokens/platforms/figma/modes/figjam.tokens.json',
   './tokens/platforms/figma/text.json',
-  './tokens/platforms/figma/icon.json',
   './tokens/platforms/figma/components/keyboard-shortcut-item.json',
 ]
 
@@ -29,6 +28,11 @@ export default defineConfig({
       exclude: [
         'figma.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',
@@ -37,6 +41,10 @@ export default defineConfig({
         'elevation.**',
         'text.**',
         'icon.**',
+        'motion.**',
+        'duration.**',
+        'easing.**',
+        'transform.**',
       ],
       baseSelector: ':root[data-theme="figma"]',
     }),

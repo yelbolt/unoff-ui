@@ -10,7 +10,6 @@ const tokenPaths = [
   './tokens/platforms/sketch/modes/sketch-light.tokens.json',
   './tokens/platforms/sketch/modes/sketch-dark.tokens.json',
   './tokens/platforms/sketch/text.json',
-  './tokens/platforms/sketch/icon.json',
   './tokens/platforms/sketch/components/input.json',
 ]
 
@@ -26,6 +25,11 @@ export default defineConfig({
       exclude: [
         'sketch.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',

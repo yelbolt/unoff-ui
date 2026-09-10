@@ -2,19 +2,19 @@
   "dialog": {
     "padding": {
       "top": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       }
     },
@@ -31,19 +31,19 @@
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.medium}",
+          "$value": "{space.inset.800}",
           "$type": "dimension"
         }
       },
@@ -54,48 +54,48 @@
     },
     "text": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.medium}",
+          "$value": "{space.inset.800}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.medium}",
+          "$value": "{space.inset.800}",
           "$type": "dimension"
         }
       }
     },
     "form": {
       "gap": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.gap.100}",
         "$type": "dimension"
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.medium}",
+          "$value": "{space.inset.800}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.small}",
+          "$value": "{space.inset.600}",
           "$type": "dimension"
         }
       }

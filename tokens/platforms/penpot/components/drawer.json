@@ -8,7 +8,7 @@
     },
     "border": {
       "width": {
-        "$value": "{size.null}",
+        "$value": "{stroke.width.none}",
         "$type": "dimension"
       },
       "style": {
@@ -22,11 +22,11 @@
     },
     "knob": {
       "size": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{control.size.200}",
         "$type": "dimension"
       },
       "position": {
-        "$value": "{size.neg.xxxsmall}",
+        "$value": "{space.pull.100}",
         "$type": "dimension"
       }
     }

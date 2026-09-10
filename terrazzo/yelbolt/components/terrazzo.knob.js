@@ -25,7 +25,6 @@ const tokenPaths = [
   './tokens/platforms/yelbolt/modes/ylb-dark.tokens.json',
   './tokens/platforms/yelbolt/colors.json',
   './tokens/platforms/yelbolt/text.json',
-  './tokens/platforms/yelbolt/icon.json',
   './tokens/platforms/yelbolt/components/knob.json',
 ]
 
@@ -60,7 +59,6 @@ export default defineConfig({
         'alpha.**',
         'elevation.**',
         'text.**',
-        'icon.**',
         'motion.**',
         'duration.**',
         'easing.**',

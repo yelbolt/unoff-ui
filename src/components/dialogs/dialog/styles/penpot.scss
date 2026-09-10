@@ -4,24 +4,24 @@
 
 :root[data-theme="penpot"] {
   --dialog-background-color: var(--penpot-color-overlay-default);
-  --dialog-cover-padding-bottom: var(--size-pos-xsmall);
-  --dialog-cover-padding-left: var(--size-pos-medium);
-  --dialog-cover-padding-right: var(--size-null);
-  --dialog-cover-padding-top: var(--size-pos-xsmall);
+  --dialog-cover-padding-bottom: var(--space-inset-400);
+  --dialog-cover-padding-left: var(--space-inset-800);
+  --dialog-cover-padding-right: var(--space-none);
+  --dialog-cover-padding-top: var(--space-inset-400);
   --dialog-cover-ratio: 8 / 5;
   --dialog-cover-width: 248px;
-  --dialog-form-gap: var(--size-pos-xxxsmall);
-  --dialog-form-padding-bottom: var(--size-pos-xxsmall);
-  --dialog-form-padding-left: var(--size-pos-small);
-  --dialog-form-padding-right: var(--size-pos-medium);
-  --dialog-form-padding-top: var(--size-pos-xxsmall);
-  --dialog-padding-bottom: var(--size-pos-medium);
-  --dialog-padding-left: var(--size-pos-medium);
-  --dialog-padding-right: var(--size-pos-medium);
-  --dialog-padding-top: var(--size-pos-medium);
-  --dialog-text-gap: var(--size-pos-xxsmall);
-  --dialog-text-padding-bottom: var(--size-pos-xsmall);
-  --dialog-text-padding-left: var(--size-pos-medium);
-  --dialog-text-padding-right: var(--size-pos-medium);
-  --dialog-text-padding-top: var(--size-pos-xsmall);
+  --dialog-form-gap: var(--space-gap-100);
+  --dialog-form-padding-bottom: var(--space-inset-200);
+  --dialog-form-padding-left: var(--space-inset-600);
+  --dialog-form-padding-right: var(--space-inset-800);
+  --dialog-form-padding-top: var(--space-inset-200);
+  --dialog-padding-bottom: var(--space-inset-800);
+  --dialog-padding-left: var(--space-inset-800);
+  --dialog-padding-right: var(--space-inset-800);
+  --dialog-padding-top: var(--space-inset-800);
+  --dialog-text-gap: var(--space-gap-200);
+  --dialog-text-padding-bottom: var(--space-inset-400);
+  --dialog-text-padding-left: var(--space-inset-800);
+  --dialog-text-padding-right: var(--space-inset-800);
+  --dialog-text-padding-top: var(--space-inset-400);
 }

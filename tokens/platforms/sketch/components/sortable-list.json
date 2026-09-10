@@ -2,25 +2,25 @@
   "sortableList": {
     "padding": {
       "top": {
-        "$value": "{size.pos.unit}",
+        "$value": "{space.inset.025}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.unit}",
+        "$value": "{space.inset.025}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       }
     },
     "border": {
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "color": {

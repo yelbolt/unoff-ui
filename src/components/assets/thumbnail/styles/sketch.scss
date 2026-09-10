@@ -5,10 +5,10 @@
 :root[data-theme="sketch"] {
   --thumbnail-background-color: var(--sketch-color-background-secondary);
   --thumbnail-border-color: var(--sketch-color-border-primary);
-  --thumbnail-border-offset: var(--size-neg-unit);
-  --thumbnail-border-width: var(--size-pos-unit);
-  --thumbnail-height: var(--size-pos-medium);
-  --thumbnail-padding: var(--size-pos-xsmall);
-  --thumbnail-radius: var(--border-radius-large);
-  --thumbnail-width: var(--size-pos-medium);
+  --thumbnail-border-offset: var(--stroke-offset-thin);
+  --thumbnail-border-width: var(--stroke-width-thin);
+  --thumbnail-height: var(--control-icon-800);
+  --thumbnail-padding: var(--space-inset-400);
+  --thumbnail-radius: var(--radius-large);
+  --thumbnail-width: var(--control-icon-800);
 }

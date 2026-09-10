@@ -4,15 +4,15 @@
 
 :root[data-theme="framer"] {
   --members-list-avatar-border-color: var(--framer-color-bg-default);
-  --members-list-avatar-border-offset: var(--size-null);
-  --members-list-avatar-border-width: var(--size-pos-xunit);
-  --members-list-avatar-height: var(--size-pos-medium);
-  --members-list-avatar-radius: var(--border-radius-xlarge);
-  --members-list-avatar-width: var(--size-pos-medium);
-  --members-list-gap: var(--size-neg-xxxsmall);
-  --members-list-more-padding-bottom: var(--size-null);
-  --members-list-more-padding-left: var(--size-pos-xxsmall);
-  --members-list-more-padding-right: var(--size-pos-xxsmall);
-  --members-list-more-padding-top: var(--size-null);
+  --members-list-avatar-border-offset: var(--stroke-offset-none);
+  --members-list-avatar-border-width: var(--stroke-width-thick);
+  --members-list-avatar-height: var(--control-icon-800);
+  --members-list-avatar-radius: var(--radius-xlarge);
+  --members-list-avatar-width: var(--control-icon-800);
+  --members-list-gap: var(--space-pull-100);
+  --members-list-more-padding-bottom: var(--space-none);
+  --members-list-more-padding-left: var(--space-inset-200);
+  --members-list-more-padding-right: var(--space-inset-200);
+  --members-list-more-padding-top: var(--space-none);
   --members-list-text-color: var(--framer-color-text-default);
 }

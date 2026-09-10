@@ -59,7 +59,6 @@ export default defineConfig({
         'alpha.**',
         'elevation.**',
         'text.**',
-        'icon.**',
         'motion.**',
         'duration.**',
         'easing.**',

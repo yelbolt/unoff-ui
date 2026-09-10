@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --menu-position-bottom-left: var(--size-pos-large);
-  --menu-position-bottom-right: var(--size-pos-large);
-  --menu-position-top-left: var(--size-neg-xxsmall);
-  --menu-position-top-right: var(--size-neg-xxsmall);
+  --menu-position-bottom-left: var(--space-offset-1000);
+  --menu-position-bottom-right: var(--space-offset-1000);
+  --menu-position-top-left: var(--space-pull-200);
+  --menu-position-top-right: var(--space-pull-200);
 }

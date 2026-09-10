@@ -1,24 +1,24 @@
 {
   "actionsItem": {
     "gap": {
-      "$value": "{size.pos.xsmall}",
+      "$value": "{space.gap.400}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       }
     },
@@ -28,27 +28,27 @@
         "$type": "color"
       },
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "secondary": {
         "width": {
           "default": {
-            "$value": "{size.null}",
+            "$value": "{control.none}",
             "$type": "dimension"
           },
           "focus": {
-            "$value": "{size.pos.unit}",
+            "$value": "{control.size.025}",
             "$type": "dimension"
           }
         },
         "offset": {
           "default": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "focus": {
-            "$value": "{size.neg.unit}",
+            "$value": "{space.pull.025}",
             "$type": "dimension"
           }
         },
@@ -82,23 +82,23 @@
     },
     "asset": {
       "minWidth": {
-        "$value": "{size.pos.xxxlarge}",
+        "$value": "{control.size.2000}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{size.pos.xxxlarge}",
+        "$value": "{control.size.2000}",
         "$type": "dimension"
       }
     },
     "content": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       }
     },
     "actions": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       }
     },

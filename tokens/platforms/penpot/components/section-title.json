@@ -1,28 +1,28 @@
 {
   "sectionTitle": {
     "height": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.size.800}",
       "$type": "dimension"
     },
     "gap": {
-      "$value": "{size.pos.xxxsmall}",
+      "$value": "{space.gap.100}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.inset.100}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       }
     },
@@ -33,20 +33,20 @@
           "$type": "fontFamilies"
         },
         "size": {
-          "$value": "{font.size.small}",
+          "$value": "{type.size.02}",
           "$type": "dimension"
         },
         "weight": {
-          "$value": "{font.weight.medium}",
+          "$value": "{type.weight.500}",
           "$type": "fontWeights"
         }
       },
       "letterSpacing": {
-        "$value": "{font.letterSpacing.pos.medium}",
+        "$value": "{type.tracking.medium}",
         "$type": "dimension"
       },
       "lineHeight": {
-        "$value": "{font.lineHeight.default}",
+        "$value": "{type.leading.default}",
         "$type": "number"
       },
       "color": {
@@ -61,11 +61,11 @@
     "info": {
       "icon": {
         "width": {
-          "$value": "{size.pos.medium}",
+          "$value": "{control.icon.800}",
           "$type": "dimension"
         },
         "height": {
-          "$value": "{size.pos.medium}",
+          "$value": "{control.icon.800}",
           "$type": "dimension"
         }
       }

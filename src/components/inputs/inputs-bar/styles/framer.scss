@@ -4,24 +4,24 @@
 
 :root[data-theme="framer"] {
   --inputs-bar-border-color: var(--framer-color-tint-default);
-  --inputs-bar-border-width: var(--size-pos-unit);
-  --inputs-bar-gap-default: var(--size-pos-xxsmall);
-  --inputs-bar-gap-inner: var(--size-null);
-  --inputs-bar-input-radius: var(--border-radius-null);
-  --inputs-bar-margin-bottom: var(--size-null);
-  --inputs-bar-margin-left: var(--size-neg-unit);
-  --inputs-bar-margin-right: var(--size-neg-unit);
-  --inputs-bar-margin-top: var(--size-null);
-  --inputs-bar-padding-bottom: var(--size-null);
-  --inputs-bar-padding-left: var(--size-pos-unit);
-  --inputs-bar-padding-right: var(--size-pos-unit);
-  --inputs-bar-padding-top: var(--size-null);
-  --inputs-bar-radius: var(--border-radius-xlarge);
+  --inputs-bar-border-width: var(--stroke-width-thin);
+  --inputs-bar-gap-default: var(--space-gap-200);
+  --inputs-bar-gap-inner: var(--space-none);
+  --inputs-bar-input-radius: var(--radius-none);
+  --inputs-bar-margin-bottom: var(--space-none);
+  --inputs-bar-margin-left: var(--space-pull-025);
+  --inputs-bar-margin-right: var(--space-pull-025);
+  --inputs-bar-margin-top: var(--space-none);
+  --inputs-bar-padding-bottom: var(--space-none);
+  --inputs-bar-padding-left: var(--space-inset-025);
+  --inputs-bar-padding-right: var(--space-inset-025);
+  --inputs-bar-padding-top: var(--space-none);
+  --inputs-bar-radius: var(--radius-xlarge);
   --inputs-bar-transform-default: var(--motion-transform-none);
   --inputs-bar-transform-disabled: var(--motion-transform-none);
   --inputs-bar-transform-focus: var(--motion-transform-none);
   --inputs-bar-transform-hover: var(--motion-transform-none);
   --inputs-bar-transform-pressed: var(--motion-transform-none);
   --inputs-bar-transition: var(--motion-duration-fast) var(--motion-duration-instant) var(--motion-easing-standard);
-  --inputs-bar-width: var(--size-pos-xlarge);
+  --inputs-bar-width: var(--control-size-1200);
 }

@@ -3,9 +3,9 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --icon-height: var(--size-pos-small);
+  --icon-height: var(--control-icon-600);
   --icon-letter-color: var(--framer-color-text-default);
-  --icon-letter-text-size: var(--font-size-xxxsmall);
+  --icon-letter-text-size: var(--type-size-000);
   --icon-picto-color: var(--framer-color-text-default);
-  --icon-width: var(--size-pos-small);
+  --icon-width: var(--control-icon-600);
 }

@@ -3,30 +3,30 @@
  * ------------------------------------------- */
 
 :root[data-theme="penpot"] {
-  --card-actions-gap: var(--size-pos-xxsmall);
-  --card-actions-padding-bottom: var(--size-pos-xxsmall);
-  --card-actions-padding-left: var(--size-pos-xxsmall);
-  --card-actions-padding-right: var(--size-pos-xxsmall);
-  --card-actions-padding-top: var(--size-pos-xxsmall);
+  --card-actions-gap: var(--space-gap-200);
+  --card-actions-padding-bottom: var(--space-inset-200);
+  --card-actions-padding-left: var(--space-inset-200);
+  --card-actions-padding-right: var(--space-inset-200);
+  --card-actions-padding-top: var(--space-inset-200);
   --card-background-color-default: var(--penpot-color-background-primary);
   --card-background-color-focus: var(--penpot-color-accent-primary-muted);
   --card-background-color-hover: var(--penpot-color-background-secondary);
   --card-border-color-default: var(--grey-transparent);
   --card-border-color-focus: var(--penpot-color-accent-primary-default);
   --card-border-color-hover: var(--grey-transparent);
-  --card-border-offset-default: var(--size-null);
-  --card-border-offset-focus: var(--size-neg-unit);
-  --card-border-offset-hover: var(--size-null);
-  --card-border-width-default: var(--size-null);
-  --card-border-width-focus: var(--size-pos-unit);
-  --card-border-width-hover: var(--size-null);
-  --card-content-gap: var(--size-pos-xxxsmall);
-  --card-gap: var(--size-pos-xxsmall);
-  --card-padding-bottom: var(--size-pos-xxsmall);
-  --card-padding-left: var(--size-pos-xxsmall);
-  --card-padding-right: var(--size-pos-xxsmall);
-  --card-padding-top: var(--size-pos-xxsmall);
-  --card-radius: var(--border-radius-xlarge);
+  --card-border-offset-default: var(--stroke-offset-none);
+  --card-border-offset-focus: var(--stroke-offset-thin);
+  --card-border-offset-hover: var(--stroke-offset-none);
+  --card-border-width-default: var(--stroke-width-none);
+  --card-border-width-focus: var(--stroke-width-thin);
+  --card-border-width-hover: var(--stroke-width-none);
+  --card-content-gap: var(--space-gap-100);
+  --card-gap: var(--space-gap-200);
+  --card-padding-bottom: var(--space-inset-200);
+  --card-padding-left: var(--space-inset-200);
+  --card-padding-right: var(--space-inset-200);
+  --card-padding-top: var(--space-inset-200);
+  --card-radius: var(--radius-xlarge);
   --card-ratio: 2 / 1;
   --card-transform-default: var(--motion-transform-none);
   --card-transform-disabled: var(--motion-transform-none);

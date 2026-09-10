@@ -8,24 +8,24 @@
     },
     "banner": {
       "gap": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       },
       "padding": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         }
       },
@@ -41,7 +41,7 @@
       },
       "border": {
         "width": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "style": {
@@ -57,19 +57,19 @@
     "list": {
       "padding": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xsmall}",
+          "$value": "{space.inset.400}",
           "$type": "dimension"
         }
       },

@@ -28,6 +28,11 @@ export default defineConfig({
       exclude: [
         'penpot.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',

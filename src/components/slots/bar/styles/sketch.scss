@@ -5,16 +5,16 @@
 :root[data-theme="sketch"] {
   --bar-background-color: var(--grey-transparent);
   --bar-border-color: var(--sketch-color-border-primary);
-  --bar-border-width: var(--size-pos-unit);
-  --bar-gap: var(--size-pos-xxsmall);
-  --bar-height-compact: var(--size-pos-medium);
-  --bar-min-height: var(--size-pos-xlarge);
-  --bar-padding-default-bottom: var(--size-null);
-  --bar-padding-default-left: var(--size-pos-xsmall);
-  --bar-padding-default-right: var(--size-pos-xsmall);
-  --bar-padding-default-top: var(--size-null);
-  --bar-padding-mobile-bottom: var(--size-pos-xxxsmall);
-  --bar-padding-mobile-left: var(--size-pos-xsmall);
-  --bar-padding-mobile-right: var(--size-pos-xsmall);
-  --bar-padding-mobile-top: var(--size-pos-xxxsmall);
+  --bar-border-width: var(--stroke-width-thin);
+  --bar-gap: var(--space-gap-200);
+  --bar-height-compact: var(--control-size-800);
+  --bar-min-height: var(--control-size-1200);
+  --bar-padding-default-bottom: var(--space-none);
+  --bar-padding-default-left: var(--space-inset-400);
+  --bar-padding-default-right: var(--space-inset-400);
+  --bar-padding-default-top: var(--space-none);
+  --bar-padding-mobile-bottom: var(--space-inset-100);
+  --bar-padding-mobile-left: var(--space-inset-400);
+  --bar-padding-mobile-right: var(--space-inset-400);
+  --bar-padding-mobile-top: var(--space-inset-100);
 }

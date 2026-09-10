@@ -4,26 +4,26 @@
 
 :root[data-theme="figma"] {
   --keyboard-shortcut-item-background-color: var(--figma-color-bg-default);
-  --keyboard-shortcut-item-gap: var(--size-pos-xxsmall);
+  --keyboard-shortcut-item-gap: var(--space-gap-200);
   --keyboard-shortcut-item-key-background-color: var(--figma-color-bg-default);
   --keyboard-shortcut-item-key-border-color: var(--figma-color-border-default);
-  --keyboard-shortcut-item-key-border-offset: var(--size-neg-unit);
-  --keyboard-shortcut-item-key-border-width: var(--size-pos-unit);
-  --keyboard-shortcut-item-key-gap: var(--size-pos-xxxsmall);
-  --keyboard-shortcut-item-key-height: var(--size-pos-small);
-  --keyboard-shortcut-item-key-min-width: var(--size-pos-xxsmall);
-  --keyboard-shortcut-item-key-padding-bottom: var(--size-null);
-  --keyboard-shortcut-item-key-padding-left: var(--size-pos-xxsmall);
-  --keyboard-shortcut-item-key-padding-right: var(--size-pos-xxsmall);
-  --keyboard-shortcut-item-key-padding-top: var(--size-null);
-  --keyboard-shortcut-item-key-radius: var(--border-radius-large);
-  --keyboard-shortcut-item-min-height: var(--size-pos-medium);
-  --keyboard-shortcut-item-padding-bottom: var(--size-null);
-  --keyboard-shortcut-item-padding-left: var(--size-pos-small);
-  --keyboard-shortcut-item-padding-right: var(--size-pos-small);
-  --keyboard-shortcut-item-padding-top: var(--size-null);
-  --keyboard-shortcut-item-separator-padding-bottom: var(--size-null);
-  --keyboard-shortcut-item-separator-padding-left: var(--size-pos-xxxsmall);
-  --keyboard-shortcut-item-separator-padding-right: var(--size-pos-xxxsmall);
-  --keyboard-shortcut-item-separator-padding-top: var(--size-null);
+  --keyboard-shortcut-item-key-border-offset: var(--stroke-offset-thin);
+  --keyboard-shortcut-item-key-border-width: var(--stroke-width-thin);
+  --keyboard-shortcut-item-key-gap: var(--space-gap-100);
+  --keyboard-shortcut-item-key-height: var(--control-size-600);
+  --keyboard-shortcut-item-key-min-width: var(--control-size-200);
+  --keyboard-shortcut-item-key-padding-bottom: var(--space-none);
+  --keyboard-shortcut-item-key-padding-left: var(--space-inset-200);
+  --keyboard-shortcut-item-key-padding-right: var(--space-inset-200);
+  --keyboard-shortcut-item-key-padding-top: var(--space-none);
+  --keyboard-shortcut-item-key-radius: var(--radius-large);
+  --keyboard-shortcut-item-min-height: var(--control-size-800);
+  --keyboard-shortcut-item-padding-bottom: var(--space-none);
+  --keyboard-shortcut-item-padding-left: var(--space-inset-600);
+  --keyboard-shortcut-item-padding-right: var(--space-inset-600);
+  --keyboard-shortcut-item-padding-top: var(--space-none);
+  --keyboard-shortcut-item-separator-padding-bottom: var(--space-none);
+  --keyboard-shortcut-item-separator-padding-left: var(--space-inset-100);
+  --keyboard-shortcut-item-separator-padding-right: var(--space-inset-100);
+  --keyboard-shortcut-item-separator-padding-top: var(--space-none);
 }

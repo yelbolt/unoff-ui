@@ -6,7 +6,7 @@
   --drawer-background-color: var(--penpot-color-background-primary);
   --drawer-border-color: var(--grey-transparent);
   --drawer-border-style: solid;
-  --drawer-border-width: var(--size-null);
-  --drawer-knob-position: var(--size-neg-xxxsmall);
-  --drawer-knob-size: var(--size-pos-xxsmall);
+  --drawer-border-width: var(--stroke-width-none);
+  --drawer-knob-position: var(--space-pull-100);
+  --drawer-knob-size: var(--control-size-200);
 }

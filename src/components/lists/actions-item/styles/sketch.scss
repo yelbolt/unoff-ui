@@ -3,26 +3,26 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --actions-item-actions-gap: var(--size-pos-xxsmall);
-  --actions-item-asset-height: var(--size-pos-xxxlarge);
-  --actions-item-asset-min-width: var(--size-pos-xxxlarge);
+  --actions-item-actions-gap: var(--space-gap-200);
+  --actions-item-asset-height: var(--control-size-2000);
+  --actions-item-asset-min-width: var(--control-size-2000);
   --actions-item-background-color-default: var(--sketch-color-background-primary);
   --actions-item-background-color-focus: var(--sketch-color-accent-disabled);
   --actions-item-background-color-hover: var(--sketch-color-background-secondary);
   --actions-item-border-color: var(--sketch-color-border-primary);
   --actions-item-border-secondary-color-default: var(--grey-transparent);
   --actions-item-border-secondary-color-focus: var(--sketch-color-accent-primary);
-  --actions-item-border-secondary-offset-default: var(--size-null);
-  --actions-item-border-secondary-offset-focus: var(--size-neg-unit);
-  --actions-item-border-secondary-width-default: var(--size-null);
-  --actions-item-border-secondary-width-focus: var(--size-pos-unit);
-  --actions-item-border-width: var(--size-pos-unit);
-  --actions-item-content-gap: var(--size-pos-xxsmall);
-  --actions-item-gap: var(--size-pos-xsmall);
-  --actions-item-padding-bottom: var(--size-pos-xsmall);
-  --actions-item-padding-left: var(--size-pos-small);
-  --actions-item-padding-right: var(--size-pos-xsmall);
-  --actions-item-padding-top: var(--size-pos-xsmall);
+  --actions-item-border-secondary-offset-default: var(--space-none);
+  --actions-item-border-secondary-offset-focus: var(--space-pull-025);
+  --actions-item-border-secondary-width-default: var(--control-none);
+  --actions-item-border-secondary-width-focus: var(--control-size-025);
+  --actions-item-border-width: var(--stroke-width-thin);
+  --actions-item-content-gap: var(--space-gap-200);
+  --actions-item-gap: var(--space-gap-400);
+  --actions-item-padding-bottom: var(--space-inset-400);
+  --actions-item-padding-left: var(--space-inset-600);
+  --actions-item-padding-right: var(--space-inset-400);
+  --actions-item-padding-top: var(--space-inset-400);
   --actions-item-transform-default: var(--motion-transform-none);
   --actions-item-transform-disabled: var(--motion-transform-none);
   --actions-item-transform-focus: var(--motion-transform-none);

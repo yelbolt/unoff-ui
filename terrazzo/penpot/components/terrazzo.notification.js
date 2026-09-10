@@ -12,7 +12,6 @@ const tokenPaths = [
   './tokens/platforms/penpot/modes/penpot-light.tokens.json',
   './tokens/platforms/penpot/modes/penpot-dark.tokens.json',
   './tokens/platforms/penpot/text.json',
-  './tokens/platforms/penpot/icon.json',
   './tokens/platforms/penpot/components/notification.json',
 ]
 
@@ -28,6 +27,11 @@ export default defineConfig({
       exclude: [
         'penpot.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',
@@ -36,6 +40,10 @@ export default defineConfig({
         'elevation.**',
         'text.**',
         'icon.**',
+        'motion.**',
+        'duration.**',
+        'easing.**',
+        'transform.**',
       ],
       baseSelector: ':root[data-theme="penpot"]',
     }),

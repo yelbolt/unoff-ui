@@ -27,6 +27,11 @@ export default defineConfig({
       exclude: [
         'sketch.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',

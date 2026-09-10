@@ -2,24 +2,24 @@
   "dropzone": {
     "padding": {
       "top": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       }
     },
     "gap": {
-      "$value": "{size.pos.xxsmall}",
+      "$value": "{space.gap.200}",
       "$type": "dimension"
     },
     "minWidth": {
@@ -47,29 +47,29 @@
       },
       "width": {
         "default": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{size.pos.xunit}",
+          "$value": "{stroke.width.thick}",
           "$type": "dimension"
         },
         "disabled": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         }
       },
       "offset": {
         "default": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{size.neg.xunit}",
+          "$value": "{stroke.offset.thick}",
           "$type": "dimension"
         },
         "disabled": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         }
       },
@@ -105,7 +105,7 @@
       }
     },
     "radius": {
-      "$value": "{border.radius.xlarge}",
+      "$value": "{radius.xlarge}",
       "$type": "dimension"
     }
   }

@@ -8,7 +8,7 @@
     },
     "border": {
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "color": {
@@ -18,11 +18,11 @@
     },
     "knob": {
       "size": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{control.size.200}",
         "$type": "dimension"
       },
       "position": {
-        "$value": "{size.neg.xxxsmall}",
+        "$value": "{space.pull.100}",
         "$type": "dimension"
       }
     }

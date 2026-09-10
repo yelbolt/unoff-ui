@@ -2,19 +2,19 @@
   "menu": {
     "position": {
       "topRight": {
-        "$value": "{size.neg.xxsmall}",
+        "$value": "{space.pull.200}",
         "$type": "dimension"
       },
       "topLeft": {
-        "$value": "{size.neg.xxsmall}",
+        "$value": "{space.pull.200}",
         "$type": "dimension"
       },
       "bottomRight": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.offset.800}",
         "$type": "dimension"
       },
       "bottomLeft": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.offset.800}",
         "$type": "dimension"
       }
     }

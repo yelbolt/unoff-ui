@@ -12,7 +12,6 @@ const tokenPaths = [
   './tokens/platforms/framer/modes/framer-light.tokens.json',
   './tokens/platforms/framer/modes/framer-dark.tokens.json',
   './tokens/platforms/framer/text.json',
-  './tokens/platforms/framer/icon.json',
   './tokens/platforms/framer/components/dropzone.json',
 ]
 
@@ -28,6 +27,11 @@ export default defineConfig({
       exclude: [
         'framer.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',
@@ -36,6 +40,10 @@ export default defineConfig({
         'elevation.**',
         'text.**',
         'icon.**',
+        'motion.**',
+        'duration.**',
+        'easing.**',
+        'transform.**',
       ],
       baseSelector: ':root[data-theme="framer"]',
     }),

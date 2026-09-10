@@ -5,10 +5,10 @@
 :root[data-theme="framer"] {
   --thumbnail-background-color: var(--framer-color-bg-secondary);
   --thumbnail-border-color: var(--framer-color-divider);
-  --thumbnail-border-offset: var(--size-neg-unit);
-  --thumbnail-border-width: var(--size-pos-unit);
-  --thumbnail-height: var(--size-pos-medium);
-  --thumbnail-padding: var(--size-pos-xsmall);
-  --thumbnail-radius: var(--border-radius-xlarge);
-  --thumbnail-width: var(--size-pos-medium);
+  --thumbnail-border-offset: var(--stroke-offset-thin);
+  --thumbnail-border-width: var(--stroke-width-thin);
+  --thumbnail-height: var(--control-icon-800);
+  --thumbnail-padding: var(--space-inset-400);
+  --thumbnail-radius: var(--radius-xlarge);
+  --thumbnail-width: var(--control-icon-800);
 }

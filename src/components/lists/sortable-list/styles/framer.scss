@@ -4,9 +4,9 @@
 
 :root[data-theme="framer"] {
   --sortable-list-border-color: var(--framer-color-divider);
-  --sortable-list-border-width: var(--size-pos-unit);
-  --sortable-list-padding-bottom: var(--size-pos-unit);
-  --sortable-list-padding-left: var(--size-null);
-  --sortable-list-padding-right: var(--size-null);
-  --sortable-list-padding-top: var(--size-pos-unit);
+  --sortable-list-border-width: var(--stroke-width-thin);
+  --sortable-list-padding-bottom: var(--space-inset-025);
+  --sortable-list-padding-left: var(--space-none);
+  --sortable-list-padding-right: var(--space-none);
+  --sortable-list-padding-top: var(--space-inset-025);
 }

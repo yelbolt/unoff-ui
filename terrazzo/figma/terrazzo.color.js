@@ -59,7 +59,7 @@ export default defineConfig({
         {
           input: { mode: 'figmaLight' },
           exclude: COMMONS_TOKENS,
-          prepare: wrapPassthrough(':root', { keep: ['--motion-'] }),
+          prepare: wrapPassthrough(':root', { keep: [] }),
         },
       ],
     }),

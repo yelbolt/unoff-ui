@@ -2,7 +2,7 @@
   "draggableItem": {
     "template": {
       "rows": {
-        "$value": "{size.pos.medium}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       },
       "columns": {
@@ -12,19 +12,19 @@
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xsmall}",
+        "$value": "{space.inset.400}",
         "$type": "dimension"
       }
     },
@@ -45,7 +45,7 @@
       }
     },
     "gap": {
-      "$value": "{size.pos.xxsmall}",
+      "$value": "{space.gap.200}",
       "$type": "dimension"
     },
     "ghost": {
@@ -54,11 +54,11 @@
         "$type": "color"
       },
       "height": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{control.size.050}",
         "$type": "dimension"
       },
       "inset": {
-        "$value": "{size.neg.unit}",
+        "$value": "{space.pull.025}",
         "$type": "dimension"
       }
     },
@@ -69,7 +69,7 @@
           "$type": "dimension"
         },
         "square": {
-          "$value": "{size.pos.medium}",
+          "$value": "{control.size.800}",
           "$type": "dimension"
         }
       }

@@ -1,11 +1,11 @@
 {
   "iconChip": {
     "width": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "height": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     }
   }

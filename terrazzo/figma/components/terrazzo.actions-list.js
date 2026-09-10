@@ -13,7 +13,6 @@ const tokenPaths = [
   './tokens/platforms/figma/modes/figma-dark.tokens.json',
   './tokens/platforms/figma/modes/figjam.tokens.json',
   './tokens/platforms/figma/text.json',
-  './tokens/platforms/figma/icon.json',
   './tokens/platforms/figma/components/actions-list.json',
 ]
 
@@ -29,6 +28,11 @@ export default defineConfig({
       exclude: [
         'figma.color.**',
         'font.**',
+        'control.**',
+        'radius.**',
+        'space.**',
+        'stroke.**',
+        'type.**',
         'size.**',
         'shadow.**',
         'border.**',
