@@ -139,6 +139,27 @@ The other four themes still reference `{size.*}` / `{font.*}` / `{border.radius.
 straight from their component tokens. Do not mix the two conventions within a
 theme.
 
+### Motion system (all themes)
+
+Transitions and interaction transforms are three-layered like colors: primitive
+ramps (`duration`, `easing`, `transform`) in commons, a semantic `motion.*`
+block at the **root** of every mode file, and a DTCG composite `transition`
+token plus per-state `transform` tokens on each component — see
+[docs/motion-system.md](docs/motion-system.md).
+
+Two rules carry teeth:
+
+- Every component terrazzo config must exclude `motion.**` (plus `duration.**`,
+  `easing.**`, `transform.**`). Emitted into a component stylesheet, `motion.**`
+  outranks the mode block and silently kills all modulation.
+- No semantic motion lane may be named `default` — `wrapFallbacks` would rewrite
+  it into a phantom `var(--motion-…)` override hook.
+
+`figma`, `penpot`, `sketch` and `framer` resolve their interaction lanes to
+`0ms` / `none`. The one exception is `motion.duration.control`, which stays at
+200ms everywhere because it carries a control's own state travel (the switch
+knob) rather than decorative feedback.
+
 ### Color mode gradation (`yelbolt` only)
 
 `yelbolt` ships seven color families (`YLB`, `NTL`, `UICP`, `UNO`, `TCN`,
@@ -199,3 +220,5 @@ Three Claude Code skills are available in [.claude/skills/](.claude/skills/):
 - Do not edit files in `dist/`.
 - Do not commit changes to `.storybook/preview.tsx` theme arrays manually — the `create:theme` script handles it.
 - Do not use `npm run scss:build` without `-- --build theme=…` — without the flag it only lists files.
+- Do not run Prettier over generated token files (`src/**/styles/{theme}.scss`, `src/styles/tokens/*.scss`) — they are committed as Terrazzo emits them; reformatting them is churn the next build reverts.
+- Do not name a semantic motion lane `default`, and do not let `motion.**` be emitted from a component terrazzo config.
