@@ -20,15 +20,15 @@
     },
     "border": {
       "color": {
-        "$value": "{grey.transparent}",
+        "$value": "{color.border.primary.default}",
         "$type": "color"
       },
       "width": {
-        "$value": "{stroke.width.none}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{stroke.offset.none}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       }
     },

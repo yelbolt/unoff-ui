@@ -25,6 +25,12 @@
     height: var(--simple-slider-height);
   }
 
+  &__knobs {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+  }
+
   &__gradient-container {
     position: absolute;
     inset: 0;

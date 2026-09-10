@@ -33,15 +33,15 @@
     "border": {
       "color": {
         "default": {
-          "$value": "{color.border.primary.default}",
+          "$value": "{color.border.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{color.border.selected.default}",
+          "$value": "{color.border.selected.focus}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{color.border.primary.disabled}",
+          "$value": "{color.border.secondary.disabled}",
           "$type": "color"
         }
       },
@@ -91,21 +91,21 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{color.background.primary.default}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{color.background.selected.default}",
+          "$value": "{color.background.selected.focus}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{color.background.primary.disabled}",
+          "$value": "{color.background.secondary.disabled}",
           "$type": "color"
         }
       }
     },
     "radius": {
-      "$value": "{radius.medium}",
+      "$value": "{radius.xlarge}",
       "$type": "dimension"
     }
   }

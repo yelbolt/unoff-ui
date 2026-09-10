@@ -37,7 +37,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{color.background.selected.default}",
+          "$value": "{color.background.selected.focus}",
           "$type": "color"
         }
       }
@@ -73,7 +73,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{color.border.selected.default}",
+          "$value": "{color.border.selected.focus}",
           "$type": "color"
         }
       }

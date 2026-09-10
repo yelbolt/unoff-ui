@@ -4,11 +4,11 @@
 
 :root[data-theme="yelbolt"] {
   --thumbnail-background-color: var(--color-background-secondary-default);
-  --thumbnail-border-color: var(--color-border-primary-disabled);
+  --thumbnail-border-color: var(--color-border-secondary-default);
   --thumbnail-border-offset: var(--stroke-offset-thin);
   --thumbnail-border-width: var(--stroke-width-thin);
   --thumbnail-height: var(--control-icon-800);
   --thumbnail-padding: var(--space-inset-400);
-  --thumbnail-radius: var(--radius-medium);
+  --thumbnail-radius: var(--radius-xlarge);
   --thumbnail-width: var(--control-icon-800);
 }

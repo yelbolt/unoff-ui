@@ -51,7 +51,7 @@
       }
     },
     "radius": {
-      "$value": "{radius.medium}",
+      "$value": "{radius.large}",
       "$type": "dimension"
     },
     "border": {

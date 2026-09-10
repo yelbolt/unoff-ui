@@ -13,12 +13,12 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{radius.medium}",
+      "$value": "{radius.xxlarge}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{space.inset.100}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       },
       "right": {
@@ -26,7 +26,7 @@
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{space.inset.100}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       },
       "left": {
@@ -36,27 +36,27 @@
     },
     "background": {
       "color": {
-        "$value": "{grey.1000}",
+        "$value": "{color.background.inverse.default}",
         "$type": "color"
       }
     },
     "border": {
       "color": {
-        "$value": "{grey.transparent}",
+        "$value": "{color.border.inverse.default}",
         "$type": "color"
       },
       "width": {
-        "$value": "{stroke.width.none}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{stroke.offset.none}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       }
     },
     "text": {
       "color": {
-        "$value": "{grey.0}",
+        "$value": "{color.text.onInverse.default}",
         "$type": "color"
       },
       "transform": {
@@ -79,13 +79,13 @@
       },
       "background": {
         "color": {
-          "$value": "{grey.1000}",
+          "$value": "{color.background.inverse.default}",
           "$type": "color"
         }
       },
       "border": {
         "color": {
-          "$value": "{grey.900}",
+          "$value": "{color.border.inverse.default}",
           "$type": "color"
         },
         "width": {
@@ -104,7 +104,7 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{radius.medium}",
+        "$value": "{radius.large}",
         "$type": "dimension"
       }
     },

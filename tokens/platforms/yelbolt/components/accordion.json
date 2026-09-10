@@ -24,7 +24,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{color.border.primary.disabled}",
+        "$value": "{color.border.primary.default}",
         "$type": "color"
       }
     },
@@ -59,7 +59,7 @@
     "text": {
       "color": {
         "default": {
-          "$value": "{color.text.secondary.default}",
+          "$value": "{color.text.tertiary.default}",
           "$type": "color"
         },
         "hover": {
@@ -71,7 +71,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{color.text.primary.disabled}",
+          "$value": "{color.text.tertiary.disabled}",
           "$type": "color"
         }
       }
@@ -79,7 +79,7 @@
     "icon": {
       "color": {
         "default": {
-          "$value": "{color.icon.secondary.default}",
+          "$value": "{color.icon.tertiary.default}",
           "$type": "color"
         },
         "hover": {
@@ -91,7 +91,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{color.icon.primary.disabled}",
+          "$value": "{color.icon.tertiary.disabled}",
           "$type": "color"
         }
       }

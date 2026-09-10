@@ -5,9 +5,9 @@
 :root[data-theme="yelbolt"] {
   --popin-actions-gap: var(--space-gap-200);
   --popin-background-color: var(--color-background-primary-default);
-  --popin-border-color: var(--grey-transparent);
-  --popin-border-offset: var(--stroke-offset-none);
-  --popin-border-width: var(--stroke-width-none);
+  --popin-border-color: var(--color-border-primary-default);
+  --popin-border-offset: var(--stroke-offset-thin);
+  --popin-border-width: var(--stroke-width-thin);
   --popin-breakpoint: 460px;
   --popin-content-padding-empty-bottom: var(--space-inset-600);
   --popin-content-padding-empty-left: var(--space-inset-600);
@@ -35,6 +35,6 @@
   --popin-radius: var(--radius-xxlarge);
   --popin-shadow-default: var(--elevation-500-modal-window);
   --popin-shadow-panel: var(--elevation-400-menu-panel);
-  --popin-text-color: var(--color-text-primary-default);
+  --popin-text-color: var(--color-text-on-primary-default);
   --popin-width-panel: 400px;
 }

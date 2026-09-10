@@ -41,7 +41,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{YLB.1}",
+          "$value": "{YLB.2}",
           "$type": "color"
         },
         "disabled": {
@@ -67,7 +67,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{YLB.2}",
+          "$value": "{YLB.3}",
           "$type": "color"
         },
         "disabled": {
@@ -93,7 +93,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{YLB.3}",
+          "$value": "{YLB.4}",
           "$type": "color"
         },
         "disabled": {
@@ -1646,6 +1646,10 @@
       "800": {
         "$value": "{size.pos.medium}",
         "$type": "dimension"
+      },
+      "900": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
       }
     }
   },
@@ -1722,23 +1726,23 @@
   "type": {
     "size": {
       "01": {
-        "$value": "{font.size.xxsmall}",
-        "$type": "dimension"
-      },
-      "02": {
         "$value": "{font.size.xsmall}",
         "$type": "dimension"
       },
-      "03": {
+      "02": {
         "$value": "{font.size.small}",
         "$type": "dimension"
       },
-      "04": {
+      "03": {
         "$value": "{font.size.medium}",
         "$type": "dimension"
       },
-      "05": {
+      "04": {
         "$value": "{font.size.large}",
+        "$type": "dimension"
+      },
+      "05": {
+        "$value": "{font.size.xlarge}",
         "$type": "dimension"
       }
     },

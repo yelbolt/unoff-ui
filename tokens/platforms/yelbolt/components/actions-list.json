@@ -23,26 +23,26 @@
       }
     },
     "radius": {
-      "$value": "{radius.xlarge}",
+      "$value": "{radius.xxlarge}",
       "$type": "dimension"
     },
     "background": {
       "color": {
-        "$value": "{grey.1000}",
+        "$value": "{color.background.primary.default}",
         "$type": "color"
       }
     },
     "border": {
       "color": {
-        "$value": "{grey.transparent}",
+        "$value": "{color.border.primary.default}",
         "$type": "color"
       },
       "width": {
-        "$value": "{stroke.width.none}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{stroke.offset.none}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       }
     },
@@ -52,7 +52,7 @@
     },
     "item": {
       "height": {
-        "$value": "{control.size.600}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       },
       "padding": {
@@ -134,37 +134,37 @@
         "$type": "dimension"
       },
       "radius": {
-        "$value": "{radius.large}",
+        "$value": "{radius.xlarge}",
         "$type": "dimension"
       },
       "background": {
         "color": {
           "default": {
-            "$value": "{grey.transparent}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{color.background.selected.strong}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{color.background.selected.strong}",
+            "$value": "{color.background.primary.focus}",
             "$type": "color"
           },
           "selected": {
-            "$value": "{grey.transparent}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{color.background.selected.strong}",
+            "$value": "{color.background.primary.hover}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{color.background.selected.strong}",
+            "$value": "{color.background.primary.focus}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{grey.1000}",
+            "$value": "{color.background.primary.default}",
             "$type": "color"
           }
         }
@@ -194,31 +194,31 @@
         },
         "color": {
           "default": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.hover}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.focus}",
             "$type": "color"
           },
           "selected": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.default}",
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.hover}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{grey.0}",
+            "$value": "{color.text.onPrimary.focus}",
             "$type": "color"
           },
           "disabled": {
-            "$value": "{grey.600}",
+            "$value": "{color.text.onPrimary.disabled}",
             "$type": "color"
           }
         }
@@ -249,13 +249,13 @@
       },
       "background": {
         "color": {
-          "$value": "{grey.1000}",
+          "$value": "{color.background.primary.default}",
           "$type": "color"
         }
       },
       "icon": {
         "color": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.default}",
           "$type": "color"
         }
       },
@@ -319,31 +319,31 @@
       },
       "color": {
         "default": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.hover}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.focus}",
           "$type": "color"
         },
         "selected": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.default}",
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.hover}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.focus}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{grey.600}",
+          "$value": "{color.icon.onPrimary.disabled}",
           "$type": "color"
         }
       }
@@ -359,31 +359,31 @@
       },
       "color": {
         "default": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.hover}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.focus}",
           "$type": "color"
         },
         "selected": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.default}",
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.hover}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{grey.0}",
+          "$value": "{color.icon.onPrimary.focus}",
           "$type": "color"
         },
         "disabled": {
-          "$value": "{grey.600}",
+          "$value": "{color.icon.onPrimary.disabled}",
           "$type": "color"
         }
       }
@@ -461,7 +461,7 @@
       },
       "background": {
         "color": {
-          "$value": "{grey.900}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         }
       }

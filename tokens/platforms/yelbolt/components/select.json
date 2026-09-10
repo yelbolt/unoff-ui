@@ -79,7 +79,7 @@
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.disabled}",
+              "$value": "{color.border.selected.disabled}",
               "$type": "color"
             }
           },
@@ -192,7 +192,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{space.pull.025}",
+            "$value": "{space.pull.050}",
             "$type": "dimension"
           }
         },
@@ -419,7 +419,7 @@
           },
           "checked": {
             "translateX": {
-              "$value": "{space.offset.300}",
+              "$value": "14px",
               "$type": "dimension"
             },
             "translateY": {
@@ -563,7 +563,7 @@
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.border.selected.focus}",
+              "$value": "{color.border.secondary.focus}",
               "$type": "color"
             },
             "checked": {

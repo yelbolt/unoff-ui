@@ -19,7 +19,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.5}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "strong": {
@@ -41,7 +41,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.8}",
+          "$value": "{UNO.7}",
           "$type": "color"
         },
         "disabled": {
@@ -67,7 +67,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.7}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "disabled": {
@@ -93,7 +93,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.6}",
+          "$value": "{UNO.5}",
           "$type": "color"
         },
         "disabled": {
@@ -123,7 +123,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.5}",
+          "$value": "{TCN.6}",
           "$type": "color"
         },
         "strong": {
@@ -149,7 +149,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.5}",
+          "$value": "{UICS.6}",
           "$type": "color"
         },
         "strong": {
@@ -175,7 +175,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.5}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "strong": {
@@ -255,7 +255,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UNO.5}",
+          "$value": "{UNO.6}",
           "$type": "color"
         },
         "strong": {
@@ -359,7 +359,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.5}",
+          "$value": "{TCN.6}",
           "$type": "color"
         },
         "strong": {
@@ -385,7 +385,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.5}",
+          "$value": "{UICS.6}",
           "$type": "color"
         },
         "strong": {
@@ -411,7 +411,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.5}",
+          "$value": "{ISB.6}",
           "$type": "color"
         },
         "strong": {
@@ -1646,6 +1646,10 @@
       "800": {
         "$value": "{size.pos.medium}",
         "$type": "dimension"
+      },
+      "900": {
+        "$value": "{size.pos.large}",
+        "$type": "dimension"
       }
     }
   },
@@ -1722,23 +1726,23 @@
   "type": {
     "size": {
       "01": {
-        "$value": "{font.size.xxsmall}",
-        "$type": "dimension"
-      },
-      "02": {
         "$value": "{font.size.xsmall}",
         "$type": "dimension"
       },
-      "03": {
+      "02": {
         "$value": "{font.size.small}",
         "$type": "dimension"
       },
-      "04": {
+      "03": {
         "$value": "{font.size.medium}",
         "$type": "dimension"
       },
-      "05": {
+      "04": {
         "$value": "{font.size.large}",
+        "$type": "dimension"
+      },
+      "05": {
+        "$value": "{font.size.xlarge}",
         "$type": "dimension"
       }
     },

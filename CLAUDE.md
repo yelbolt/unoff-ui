@@ -139,6 +139,15 @@ The other four themes still reference `{size.*}` / `{font.*}` / `{border.radius.
 straight from their component tokens. Do not mix the two conventions within a
 theme.
 
+### Color mode gradation (`yelbolt` only)
+
+`yelbolt` ships seven color families (`YLB`, `NTL`, `UICP`, `UNO`, `TCN`,
+`UICS`, `ISB`), one per `{family}-{dark,light}` mode file. Within a mode,
+`primary`/`secondary`/`tertiary` form a darkness gradient off that mode's own
+family, `brand` is a fixed saturated pivot, and `danger`/`success`/`warning`
+always borrow `TCN`/`UICS`/`ISB` respectively at `brand`'s tier regardless of
+the mode's own family — see [docs/color-mode-gradation.md](docs/color-mode-gradation.md).
+
 ---
 
 ## Available npm scripts

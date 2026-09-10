@@ -24,7 +24,7 @@
     },
     "border": {
       "color": {
-        "$value": "{color.border.primary.disabled}",
+        "$value": "{color.border.primary.default}",
         "$type": "color"
       },
       "width": {
@@ -58,7 +58,7 @@
             "$type": "color"
           },
           "focus": {
-            "$value": "{color.border.selected.default}",
+            "$value": "{color.border.selected.focus}",
             "$type": "color"
           }
         }
@@ -75,7 +75,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{color.background.selected.default}",
+          "$value": "{color.background.selected.focus}",
           "$type": "color"
         }
       }

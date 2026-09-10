@@ -6,15 +6,15 @@
     },
     "avatar": {
       "radius": {
-        "$value": "{radius.xxlarge}",
+        "$value": "{radius.xlarge}",
         "$type": "dimension"
       },
       "width": {
-        "$value": "{control.icon.600}",
+        "$value": "{control.icon.800}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{control.icon.600}",
+        "$value": "{control.icon.800}",
         "$type": "dimension"
       },
       "border": {
@@ -54,7 +54,7 @@
     },
     "text": {
       "color": {
-        "$value": "{grey.0}",
+        "$value": "{color.text.onInverse.default}",
         "$type": "color"
       }
     }

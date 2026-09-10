@@ -37,11 +37,11 @@
       }
     },
     "height": {
-      "$value": "{control.size.400}",
+      "$value": "{control.size.300}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{radius.small}",
+      "$value": "{radius.large}",
       "$type": "dimension"
     },
     "background": {
@@ -52,7 +52,7 @@
     },
     "border": {
       "color": {
-        "$value": "{color.border.secondary.strong}",
+        "$value": "{color.border.secondary.default}",
         "$type": "color"
       },
       "width": {

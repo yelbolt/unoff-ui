@@ -13,7 +13,7 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{radius.medium}",
+      "$value": "{radius.xlarge}",
       "$type": "dimension"
     },
     "border": {
@@ -26,7 +26,7 @@
         "$type": "dimension"
       },
       "color": {
-        "$value": "{color.border.primary.disabled}",
+        "$value": "{color.border.secondary.default}",
         "$type": "color"
       }
     },

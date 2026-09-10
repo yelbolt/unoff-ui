@@ -3,30 +3,30 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
-  --semantic-message-background-color-default: var(--color-background-primary-default);
+  --semantic-message-background-color-default: var(--color-background-primary-disabled);
   --semantic-message-background-color-error-accent: var(--shadow-color-black-alpha300);
-  --semantic-message-background-color-error-default: var(--color-background-danger-pressed);
+  --semantic-message-background-color-error-default: var(--color-background-danger-disabled);
   --semantic-message-background-color-info-accent: var(--shadow-color-black-alpha300);
-  --semantic-message-background-color-info-default: var(--color-background-brand-pressed);
+  --semantic-message-background-color-info-default: var(--color-background-brand-disabled);
   --semantic-message-background-color-success-accent: var(--shadow-color-black-alpha300);
-  --semantic-message-background-color-success-default: var(--color-background-success-pressed);
+  --semantic-message-background-color-success-default: var(--color-background-success-disabled);
   --semantic-message-background-color-warning-accent: var(--shadow-color-black-alpha300);
-  --semantic-message-background-color-warning-default: var(--color-background-warning-pressed);
-  --semantic-message-border-color-default: var(--grey-transparent);
-  --semantic-message-border-color-error: var(--grey-transparent);
-  --semantic-message-border-color-info: var(--grey-transparent);
-  --semantic-message-border-color-success: var(--grey-transparent);
-  --semantic-message-border-color-warning: var(--grey-transparent);
-  --semantic-message-border-offset-default: var(--stroke-offset-none);
-  --semantic-message-border-offset-error: var(--stroke-offset-none);
-  --semantic-message-border-offset-info: var(--stroke-offset-none);
-  --semantic-message-border-offset-success: var(--stroke-offset-none);
-  --semantic-message-border-offset-warning: var(--stroke-offset-none);
-  --semantic-message-border-width-default: var(--stroke-width-none);
-  --semantic-message-border-width-error: var(--stroke-width-none);
-  --semantic-message-border-width-info: var(--stroke-width-none);
-  --semantic-message-border-width-success: var(--stroke-width-none);
-  --semantic-message-border-width-warning: var(--stroke-width-none);
+  --semantic-message-background-color-warning-default: var(--color-background-warning-disabled);
+  --semantic-message-border-color-default: var(--color-border-primary-disabled);
+  --semantic-message-border-color-error: var(--color-border-danger-disabled);
+  --semantic-message-border-color-info: var(--color-border-brand-disabled);
+  --semantic-message-border-color-success: var(--color-border-success-disabled);
+  --semantic-message-border-color-warning: var(--color-border-warning-disabled);
+  --semantic-message-border-offset-default: var(--stroke-offset-thin);
+  --semantic-message-border-offset-error: var(--stroke-offset-thin);
+  --semantic-message-border-offset-info: var(--stroke-offset-thin);
+  --semantic-message-border-offset-success: var(--stroke-offset-thin);
+  --semantic-message-border-offset-warning: var(--stroke-offset-thin);
+  --semantic-message-border-width-default: var(--stroke-width-thin);
+  --semantic-message-border-width-error: var(--stroke-width-thin);
+  --semantic-message-border-width-info: var(--stroke-width-thin);
+  --semantic-message-border-width-success: var(--stroke-width-thin);
+  --semantic-message-border-width-warning: var(--stroke-width-thin);
   --semantic-message-gap: var(--space-gap-100);
   --semantic-message-padding-anchored-bottom: var(--space-inset-600);
   --semantic-message-padding-anchored-left: var(--space-none);
@@ -44,5 +44,5 @@
   --semantic-message-padding-vertical-left: var(--space-inset-100);
   --semantic-message-padding-vertical-right: var(--space-inset-100);
   --semantic-message-padding-vertical-top: var(--space-inset-400);
-  --semantic-message-radius: var(--radius-xlarge);
+  --semantic-message-radius: var(--radius-xxlarge);
 }

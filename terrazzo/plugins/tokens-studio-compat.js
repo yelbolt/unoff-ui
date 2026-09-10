@@ -33,6 +33,11 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
  *     per-permutation `tokensSet` so resolver modes (light/dark) work correctly:
  *
  *     - dimension  "$value": "4px"      (string) → returned as-is as CSS
+ *     - fontWeight / fontWeights (aliasChain set) → var(--alias-token)
+ *                  reference, same as dimension. Needed because resolver
+ *                  permutations other than the default context never pass
+ *                  through the transform() pre-hook above, so their tokens
+ *                  keep the raw Tokens Studio "fontWeights" $type.
  *     - shadow / boxShadow (aliasOf set) → var(--alias-token) reference, so
  *                  component tokens that alias an elevation token emit e.g.
  *                  var(--elevation-300-tooltip) rather than inlined layers.
@@ -240,7 +245,11 @@ export const preprocessTokens = (tokenPaths) => {
 }
 
 export const cssTransform = (token, { tokensSet, transformAlias }) => {
-  if (token.$type === 'dimension') {
+  if (
+    token.$type === 'dimension' ||
+    token.$type === 'fontWeight' ||
+    token.$type === 'fontWeights'
+  ) {
     if (token.aliasChain?.[0])
       return transformAlias(tokensSet[token.aliasChain[0]])
     const v = token.$value

@@ -8,7 +8,7 @@
   --select-box-background-color-default: var(--color-background-secondary-default);
   --select-box-background-color-disabled: var(--color-background-secondary-disabled);
   --select-box-border-color-checked-default: var(--color-border-selected-default);
-  --select-box-border-color-checked-disabled: var(--color-background-selected-disabled);
+  --select-box-border-color-checked-disabled: var(--color-border-selected-disabled);
   --select-box-border-color-default: var(--color-border-secondary-default);
   --select-box-border-color-disabled: var(--color-border-secondary-disabled);
   --select-box-border-color-secondary-checked-focus: var(--color-border-selected-focus);
@@ -30,7 +30,7 @@
   --select-box-tick-color-disabled: var(--color-icon-on-selected-disabled);
   --select-box-tick-height: var(--control-size-600);
   --select-box-tick-icon: var(--icon-check);
-  --select-box-tick-position-left: var(--space-pull-025);
+  --select-box-tick-position-left: var(--space-pull-050);
   --select-box-tick-position-top: var(--space-pull-100);
   --select-box-tick-width: var(--control-size-600);
   --select-box-width: var(--control-size-500);
@@ -44,7 +44,7 @@
   --select-button-border-color-disabled: var(--color-border-secondary-disabled);
   --select-button-border-color-secondary-checked-focus: var(--color-border-selected-focus);
   --select-button-border-color-secondary-default: var(--grey-transparent);
-  --select-button-border-color-secondary-focus: var(--color-border-selected-focus);
+  --select-button-border-color-secondary-focus: var(--color-border-secondary-focus);
   --select-button-border-offset-secondary-checked-focus: var(--stroke-offset-thin);
   --select-button-border-offset-secondary-default: var(--stroke-offset-none);
   --select-button-border-offset-secondary-focus: var(--stroke-offset-thin);
@@ -108,7 +108,7 @@
   --select-toggle-knob-height: var(--control-size-300);
   --select-toggle-knob-left: var(--space-offset-025);
   --select-toggle-knob-radius: var(--radius-full);
-  --select-toggle-knob-transform-checked-translate-x: var(--space-offset-300);
+  --select-toggle-knob-transform-checked-translate-x: 14px;
   --select-toggle-knob-transform-checked-translate-y: var(--space-offset-050);
   --select-toggle-knob-transform-default-translate-x: var(--space-offset-050);
   --select-toggle-knob-transform-default-translate-y: var(--space-offset-050);

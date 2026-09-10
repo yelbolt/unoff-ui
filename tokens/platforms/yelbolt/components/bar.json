@@ -48,7 +48,7 @@
     },
     "background": {
       "color": {
-        "$value": "{grey.transparent}",
+        "$value": "{color.background.primary.default}",
         "$type": "color"
       }
     },

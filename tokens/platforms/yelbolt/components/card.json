@@ -5,24 +5,24 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{radius.xlarge}",
+      "$value": "{radius.xxlarge}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{space.inset.200}",
+        "$value": "{space.inset.300}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{space.inset.200}",
+        "$value": "{space.inset.300}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{space.inset.200}",
+        "$value": "{space.inset.300}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{space.inset.200}",
+        "$value": "{space.inset.300}",
         "$type": "dimension"
       }
     },
@@ -45,7 +45,7 @@
           "$type": "color"
         },
         "focus": {
-          "$value": "{color.background.selected.default}",
+          "$value": "{color.background.primary.focus}",
           "$type": "color"
         }
       }
@@ -53,25 +53,25 @@
     "border": {
       "color": {
         "default": {
-          "$value": "{grey.transparent}",
+          "$value": "{color.border.primary.default}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{grey.transparent}",
+          "$value": "{color.border.primary.hover}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{color.border.selected.default}",
+          "$value": "{color.border.primary.focus}",
           "$type": "color"
         }
       },
       "width": {
         "default": {
-          "$value": "{stroke.width.none}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{stroke.width.none}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "focus": {
@@ -81,11 +81,11 @@
       },
       "offset": {
         "default": {
-          "$value": "{stroke.offset.none}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "hover": {
-          "$value": "{stroke.offset.none}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "focus": {

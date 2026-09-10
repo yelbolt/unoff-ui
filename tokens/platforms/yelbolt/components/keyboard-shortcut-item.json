@@ -34,7 +34,7 @@
     },
     "key": {
       "radius": {
-        "$value": "{radius.large}",
+        "$value": "{radius.xxlarge}",
         "$type": "dimension"
       },
       "padding": {
@@ -43,7 +43,7 @@
           "$type": "dimension"
         },
         "right": {
-          "$value": "{space.inset.200}",
+          "$value": "{space.inset.300}",
           "$type": "dimension"
         },
         "bottom": {
@@ -51,7 +51,7 @@
           "$type": "dimension"
         },
         "left": {
-          "$value": "{space.inset.200}",
+          "$value": "{space.inset.300}",
           "$type": "dimension"
         }
       },

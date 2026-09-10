@@ -3,12 +3,12 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
-  --dropzone-background-color-default: var(--color-background-primary-default);
-  --dropzone-background-color-disabled: var(--color-background-primary-disabled);
-  --dropzone-background-color-hover: var(--color-background-selected-default);
-  --dropzone-border-color-default: var(--color-border-primary-default);
-  --dropzone-border-color-disabled: var(--color-border-primary-disabled);
-  --dropzone-border-color-hover: var(--color-border-selected-default);
+  --dropzone-background-color-default: var(--color-background-secondary-default);
+  --dropzone-background-color-disabled: var(--color-background-secondary-disabled);
+  --dropzone-background-color-hover: var(--color-background-selected-focus);
+  --dropzone-border-color-default: var(--color-border-secondary-default);
+  --dropzone-border-color-disabled: var(--color-border-secondary-disabled);
+  --dropzone-border-color-hover: var(--color-border-selected-focus);
   --dropzone-border-offset-default: var(--stroke-offset-thin);
   --dropzone-border-offset-disabled: var(--stroke-offset-thin);
   --dropzone-border-offset-hover: var(--stroke-offset-thick);
@@ -25,5 +25,5 @@
   --dropzone-padding-left: var(--space-inset-600);
   --dropzone-padding-right: var(--space-inset-600);
   --dropzone-padding-top: var(--space-inset-600);
-  --dropzone-radius: var(--radius-medium);
+  --dropzone-radius: var(--radius-xlarge);
 }

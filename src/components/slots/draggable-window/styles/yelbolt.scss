@@ -4,9 +4,9 @@
 
 :root[data-theme="yelbolt"] {
   --draggable-window-background-color: var(--color-background-primary-default);
-  --draggable-window-border-color: var(--grey-transparent);
-  --draggable-window-border-offset: var(--stroke-offset-none);
-  --draggable-window-border-width: var(--stroke-width-none);
+  --draggable-window-border-color: var(--color-border-primary-default);
+  --draggable-window-border-offset: var(--stroke-offset-thin);
+  --draggable-window-border-width: var(--stroke-width-thin);
   --draggable-window-content-gap: var(--space-gap-100);
   --draggable-window-content-padding-bottom: var(--space-inset-200);
   --draggable-window-content-padding-left: var(--space-inset-200);

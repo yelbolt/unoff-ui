@@ -7,11 +7,11 @@
   --actions-item-asset-height: var(--control-size-2000);
   --actions-item-asset-min-width: var(--control-size-2000);
   --actions-item-background-color-default: var(--color-background-primary-default);
-  --actions-item-background-color-focus: var(--color-background-selected-default);
+  --actions-item-background-color-focus: var(--color-background-selected-focus);
   --actions-item-background-color-hover: var(--color-background-primary-hover);
-  --actions-item-border-color: var(--color-border-primary-disabled);
+  --actions-item-border-color: var(--color-border-primary-default);
   --actions-item-border-secondary-color-default: var(--grey-transparent);
-  --actions-item-border-secondary-color-focus: var(--color-border-selected-default);
+  --actions-item-border-secondary-color-focus: var(--color-border-selected-focus);
   --actions-item-border-secondary-offset-default: var(--space-none);
   --actions-item-border-secondary-offset-focus: var(--space-pull-025);
   --actions-item-border-secondary-width-default: var(--control-none);

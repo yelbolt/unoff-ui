@@ -4,10 +4,10 @@
 
 :root[data-theme="yelbolt"] {
   --simple-item-background-color-default: var(--color-background-primary-default);
-  --simple-item-background-color-focus: var(--color-background-selected-default);
+  --simple-item-background-color-focus: var(--color-background-selected-focus);
   --simple-item-background-color-hover: var(--color-background-primary-hover);
   --simple-item-border-color-default: var(--grey-transparent);
-  --simple-item-border-color-focus: var(--color-border-selected-default);
+  --simple-item-border-color-focus: var(--color-border-selected-focus);
   --simple-item-border-offset-default: var(--stroke-offset-none);
   --simple-item-border-offset-focus: var(--stroke-offset-thin);
   --simple-item-border-radius: var(--radius-small);

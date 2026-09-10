@@ -4,9 +4,9 @@
 
 :root[data-theme="yelbolt"] {
   --multiple-slider-background-color: var(--color-background-secondary-default);
-  --multiple-slider-border-color: var(--color-border-secondary-strong);
+  --multiple-slider-border-color: var(--color-border-secondary-default);
   --multiple-slider-border-width: var(--stroke-width-thin);
-  --multiple-slider-height: var(--control-size-400);
+  --multiple-slider-height: var(--control-size-300);
   --multiple-slider-margin-bottom: var(--space-offset-200);
   --multiple-slider-margin-left: var(--space-none);
   --multiple-slider-margin-right: var(--space-none);
@@ -16,7 +16,7 @@
   --multiple-slider-padding-right: var(--space-inset-800);
   --multiple-slider-padding-top: var(--space-none);
   --multiple-slider-progress-color: var(--color-background-brand-default);
-  --multiple-slider-radius: var(--radius-small);
+  --multiple-slider-radius: var(--radius-large);
   --multiple-slider-status-gap: var(--space-gap-200);
   --multiple-slider-status-height: var(--control-size-400);
   --multiple-slider-status-margin-bottom: var(--space-none);

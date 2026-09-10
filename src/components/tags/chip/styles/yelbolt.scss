@@ -3,9 +3,9 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
-  --chip-background-color-default: var(--color-background-selected-default);
-  --chip-background-color-hover: var(--color-background-selected-hover);
-  --chip-background-color-inactive: var(--color-background-tertiary-default);
+  --chip-background-color-default: var(--color-background-brand-default);
+  --chip-background-color-hover: var(--color-background-brand-hover);
+  --chip-background-color-inactive: var(--color-background-tertiary-disabled);
   --chip-background-color-on-background: rgb(100% 100% 100% / 0.4);
   --chip-border-color-default: var(--grey-transparent);
   --chip-border-color-hover: var(--grey-transparent);
@@ -26,13 +26,13 @@
   --chip-margin-right: var(--space-none);
   --chip-margin-top: var(--space-none);
   --chip-padding-bottom: var(--space-none);
-  --chip-padding-left: var(--space-inset-100);
-  --chip-padding-right: var(--space-inset-100);
+  --chip-padding-left: var(--space-inset-200);
+  --chip-padding-right: var(--space-inset-200);
   --chip-padding-top: var(--space-none);
-  --chip-radius: var(--radius-small);
-  --chip-text-color-default: var(--color-text-brand-default);
-  --chip-text-color-hover: var(--color-text-brand-default);
-  --chip-text-color-inactive: var(--color-text-primary-default);
+  --chip-radius: var(--radius-xxlarge);
+  --chip-text-color-default: var(--color-text-on-brand-default);
+  --chip-text-color-hover: var(--color-text-on-brand-hover);
+  --chip-text-color-inactive: var(--color-text-on-tertiary-disabled);
   --chip-text-color-on-background: var(--grey-1000);
   --chip-text-letter-spacing: var(--type-tracking-xlarge);
   --chip-text-size: var(--type-size-01);

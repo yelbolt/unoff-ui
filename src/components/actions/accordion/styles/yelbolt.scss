@@ -3,10 +3,10 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
-  --accordion-border-color: var(--color-border-primary-disabled);
+  --accordion-border-color: var(--color-border-primary-default);
   --accordion-border-width: var(--stroke-width-thin);
-  --accordion-icon-color-default: var(--color-icon-secondary-default);
-  --accordion-icon-color-disabled: var(--color-icon-primary-disabled);
+  --accordion-icon-color-default: var(--color-icon-tertiary-default);
+  --accordion-icon-color-disabled: var(--color-icon-tertiary-disabled);
   --accordion-icon-color-expanded: var(--color-icon-primary-default);
   --accordion-icon-color-hover: var(--color-icon-primary-default);
   --accordion-padding-bottom: var(--space-inset-100);
@@ -19,8 +19,8 @@
   --accordion-row-padding-left: var(--space-inset-400);
   --accordion-row-padding-right: var(--space-inset-400);
   --accordion-row-padding-top: var(--space-none);
-  --accordion-text-color-default: var(--color-text-secondary-default);
-  --accordion-text-color-disabled: var(--color-text-primary-disabled);
+  --accordion-text-color-default: var(--color-text-tertiary-default);
+  --accordion-text-color-disabled: var(--color-text-tertiary-disabled);
   --accordion-text-color-expanded: var(--color-text-primary-default);
   --accordion-text-color-hover: var(--color-text-primary-default);
 }
