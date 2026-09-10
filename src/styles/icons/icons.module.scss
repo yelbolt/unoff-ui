@@ -9,8 +9,15 @@
   -webkit-mask-position: center;
   mask-size: cover;
   -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   cursor: default;
   pointer-events: none;
+
+  :root[data-theme="yelbolt"] & {
+    mask-size: 66.666%;
+    -webkit-mask-size: 66.666%;
+  }
 
   &--adjust {
     mask-image: var(--icon-adjust);

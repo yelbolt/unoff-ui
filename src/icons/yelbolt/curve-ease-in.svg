@@ -1,3 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-  <path fill="#000" d="M18.5 3a2.5 2.5 0 0 1 .491 4.95c-.083 3.386-1.104 6.12-3.012 8.029-1.91 1.909-4.643 2.93-8.029 3.012a2.5 2.5 0 1 1-.003-1c3.188-.082 5.645-1.04 7.325-2.72 1.679-1.679 2.637-4.136 2.72-7.324A2.5 2.5 0 0 1 18.5 3m-13 14a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m13-13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="5" cy="19" r="2"/>
+  <circle cx="19" cy="5" r="2"/>
+  <path d="M7 19C12 19 19 14 19 7"/>
 </svg>

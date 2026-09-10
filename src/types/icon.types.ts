@@ -83,6 +83,7 @@ export const iconList = [
   'reset',
   'resize-grip',
   'resize-to-fit',
+  'resolve',
   'resolve-filled',
   'reverse',
   'search-large',

@@ -132,17 +132,21 @@ export const SwitchButton: Story = {
     value: { control: false },
   },
   render: (args) => {
-    const [isChecked, setIsChecked] = useState(args.isChecked ?? false)
+    const [argsState, updateArgs] = useArgs<{
+      isChecked: boolean
+    }>()
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      setIsChecked(!isChecked)
+      updateArgs({
+        isChecked: !argsState.isChecked,
+      })
       args.action(e)
     }
 
     return (
       <Select
         {...args}
-        isChecked={isChecked}
+        isChecked={argsState.isChecked}
         action={action}
       />
     )

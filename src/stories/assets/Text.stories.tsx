@@ -26,7 +26,12 @@ export const AllStyles: Story = {
       <Text weight="bold">Bold text</Text>
       <Text color="secondary">Secondary text</Text>
       <Text color="tertiary">Tertiary text</Text>
-      <div style={{ background: '#333', padding: '8px' }}>
+      <div
+        style={{
+          background: 'var(--color-text-primary-default)',
+          padding: '8px',
+        }}
+      >
         <Text color="inverse">Inverse text</Text>
       </div>
       <div style={{ width: '200px' }}>
@@ -81,7 +86,12 @@ export const AllColors: Story = {
       <Text color="warning">Warning text (warning)</Text>
       <Text color="alert">Alert text (alert)</Text>
       <Text color="link">Link text (link)</Text>
-      <div style={{ background: '#333', padding: '8px' }}>
+      <div
+        style={{
+          background: 'var(--color-text-primary-default)',
+          padding: '8px',
+        }}
+      >
         <Text color="inverse">Inverse text (inverse)</Text>
       </div>
     </div>
