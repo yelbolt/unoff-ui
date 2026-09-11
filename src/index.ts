@@ -1,3 +1,6 @@
+import yelboltTypes from '@styles/tokens/modules/yelbolt-types.module.scss'
+import yelboltModes from '@styles/tokens/modules/yelbolt-modes.module.scss'
+import yelboltColors from '@styles/tokens/modules/yelbolt-colors.module.scss'
 import sketchTypes from '@styles/tokens/modules/sketch-types.module.scss'
 import sketchModes from '@styles/tokens/modules/sketch-modes.module.scss'
 import penpotTypes from '@styles/tokens/modules/penpot-types.module.scss'
@@ -91,4 +94,7 @@ export {
   sketchTypes,
   framerModes,
   framerTypes,
+  yelboltModes,
+  yelboltTypes,
+  yelboltColors,
 }
