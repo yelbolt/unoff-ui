@@ -18,6 +18,7 @@
  *
  * 5. Build a specific token type for a theme:
  *    npm run scss:build theme=sketch text
+ *    npm run scss:build theme=sketch components
  *
  * 6. Build a specific token type for all themes:
  *    npm run scss:build mode
@@ -48,7 +49,7 @@ args.forEach((arg) => {
   else if (arg === 'icon') TOKEN_TYPE = 'icon'
   else if (arg === 'mode') TOKEN_TYPE = 'mode'
   else if (arg === 'color') TOKEN_TYPE = 'color'
-  else if (arg === 'type') TOKEN_TYPE = 'type'
+  else if (arg === 'components') TOKEN_TYPE = 'components'
 })
 
 function findTerrazzoFiles(dir) {
@@ -68,7 +69,7 @@ function groupFilesByTheme(files) {
   return files.reduce((acc, file) => {
     const relativePath = file.replace(projectRoot, '')
     const pathParts = relativePath.split('/')
-    const theme = pathParts[2]
+    const theme = pathParts.length > 3 ? pathParts[2] : 'commons'
     const isComponent = pathParts.includes('components')
     const componentName = isComponent
       ? path.basename(file, '.js').replace('terrazzo.', '')
@@ -92,6 +93,9 @@ async function buildTerrazzoFile(filePath) {
     const child = spawn('npx', ['terrazzo', 'build', '-c', filePath], {
       stdio: 'inherit',
       shell: true,
+      env: COMPONENT
+        ? { ...process.env, TZ_COMPONENT: COMPONENT }
+        : process.env,
     })
     child.on('close', (code) => {
       if (code === 0) {
@@ -146,7 +150,7 @@ function displayTerrazzoFiles(groupedFiles) {
     )
   )
   console.log(chalk.bold('Build a specific token type for all themes:'))
-  console.log(chalk.cyan('npm run scss:build type'))
+  console.log(chalk.cyan('npm run scss:build components'))
   console.log(chalk.cyan('npm run scss:build icon'))
   console.log(chalk.cyan('npm run scss:build mode'))
   console.log(chalk.cyan('npm run scss:build text\n'))
@@ -163,7 +167,7 @@ async function main() {
     }
 
     if (TOKEN_TYPE && !THEME) {
-      const tokenDisplayName = TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
+      const tokenDisplayName = TOKEN_TYPE
       console.log(
         chalk.blue(`\nBuilding ${tokenDisplayName} tokens for all themes...`)
       )
@@ -196,32 +200,21 @@ async function main() {
       console.log(
         chalk.blue(`\nBuilding component ${COMPONENT} for all themes...`)
       )
-      let componentFound = false
       let builtCount = 0
 
       for (const [theme, files] of Object.entries(groupedFiles)) {
-        const componentFile = files.components.find((c) => c.name === COMPONENT)
-        if (componentFile) {
-          componentFound = true
-          await buildTerrazzoFile(componentFile.path)
+        const componentsFile = files.tokens.find((t) => t.name === 'components')
+        if (componentsFile) {
+          await buildTerrazzoFile(componentsFile.path)
           builtCount++
           console.log(
             chalk.green(`✅ Built component ${COMPONENT} for theme ${theme}`)
           )
-        } else
-          console.log(
-            chalk.yellow(
-              `⚠️  Component ${COMPONENT} not found in theme ${theme}`
-            )
-          )
+        }
       }
 
-      if (!componentFound) {
-        console.error(
-          chalk.red(
-            `Component "${COMPONENT}" not found in any theme. Available components vary by theme.`
-          )
-        )
+      if (!builtCount) {
+        console.error(chalk.red('No components config found in any theme.'))
         process.exit(1)
       }
 
@@ -241,13 +234,12 @@ async function main() {
         process.exit(1)
       }
       if (TOKEN_TYPE) {
-        const tokenDisplayName =
-          TOKEN_TYPE === 'type' ? 'typography' : TOKEN_TYPE
+        const tokenDisplayName = TOKEN_TYPE
         const tokenFile = themeFiles.tokens.find((t) => t.name === TOKEN_TYPE)
         if (!tokenFile) {
           console.error(
             chalk.red(
-              `Token type "${tokenDisplayName}" not found in theme "${THEME}". Available token types: ${themeFiles.tokens.map((t) => (t.name === 'type' ? 'typography' : t.name)).join(', ')}`
+              `Token type "${tokenDisplayName}" not found in theme "${THEME}". Available token types: ${themeFiles.tokens.map((t) => t.name).join(', ')}`
             )
           )
           process.exit(1)
@@ -259,18 +251,14 @@ async function main() {
           )
         )
       } else if (COMPONENT) {
-        const componentFile = themeFiles.components.find(
-          (c) => c.name === COMPONENT
+        const componentsFile = themeFiles.tokens.find(
+          (t) => t.name === 'components'
         )
-        if (!componentFile) {
-          console.error(
-            chalk.red(
-              `Component "${COMPONENT}" not found in theme "${THEME}". Available components: ${themeFiles.components.map((c) => c.name).join(', ')}`
-            )
-          )
+        if (!componentsFile) {
+          console.error(chalk.red(`Theme "${THEME}" has no components config.`))
           process.exit(1)
         }
-        await buildTerrazzoFile(componentFile.path)
+        await buildTerrazzoFile(componentsFile.path)
         console.log(
           chalk.green(
             `\n✅ Successfully built component ${COMPONENT} for theme ${THEME}`

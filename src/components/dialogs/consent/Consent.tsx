@@ -312,7 +312,7 @@ export default class Consent extends React.Component<
                   </div>
                 }
                 border={['BOTTOM']}
-                padding="var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall) 0"
+                padding="var(--scale-pos-xxxsmall) 0 var(--scale-pos-xxsmall) 0"
               />
             </li>
             {vendorsList.map((vendor, index) => (
@@ -375,7 +375,7 @@ export default class Consent extends React.Component<
                   border={
                     index === vendorsConsent.length - 1 ? undefined : ['BOTTOM']
                   }
-                  padding="var(--size-pos-xxxsmall) 0 var(--size-pos-xxsmall) 0"
+                  padding="var(--scale-pos-xxxsmall) 0 var(--scale-pos-xxsmall) 0"
                 />
               </li>
             ))}

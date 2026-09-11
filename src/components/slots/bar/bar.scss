@@ -55,17 +55,17 @@
 
   &__left {
     flex: 1;
-    padding: var(--size-pos-xunit) 0;
+    padding: var(--scale-pos-xunit) 0;
   }
 
   &__right {
     flex: none;
-    padding: var(--size-pos-xunit) 0;
+    padding: var(--scale-pos-xunit) 0;
   }
 
   &__solo {
     flex: 1;
-    padding: var(--size-pos-xunit) 0;
+    padding: var(--scale-pos-xunit) 0;
   }
 
   &.bar--inverted {

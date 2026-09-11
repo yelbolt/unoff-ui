@@ -66,8 +66,8 @@
   --input-clearable-right: var(--space-offset-050);
   --input-clearable-top: var(--space-offset-050);
   --input-color-width: var(--control-size-2400);
-  --input-color-chip-border-default: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-unit) rgb(0% 0% 0% / 0.1);
-  --input-color-chip-border-focus: inset var(--size-null) var(--size-null) var(--size-null) var(--size-pos-unit) var(--figma-color-border-selected-default);
+  --input-color-chip-border-default: inset var(--scale-null) var(--scale-null) var(--scale-null) var(--scale-pos-unit) rgb(0% 0% 0% / 0.1);
+  --input-color-chip-border-focus: inset var(--scale-null) var(--scale-null) var(--scale-null) var(--scale-pos-unit) var(--figma-color-border-selected-default);
   --input-color-chip-height: var(--control-size-400);
   --input-color-chip-left: var(--space-offset-100);
   --input-color-chip-opacity-default: var(--alpha-1000);
