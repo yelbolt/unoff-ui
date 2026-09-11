@@ -4,8 +4,8 @@
 
 :root[data-theme="yelbolt"] {
   --knob-graduation-background-color: var(--grey-transparent);
-  --knob-graduation-height: var(--control-size-100);
-  --knob-graduation-width: var(--control-size-025);
+  --knob-graduation-height: var(--control-none);
+  --knob-graduation-width: var(--control-none);
   --knob-height: var(--control-size-600);
   --knob-input-background-color: var(--color-background-secondary-default);
   --knob-input-border-color: var(--color-border-secondary-default);
@@ -42,7 +42,7 @@
   --knob-label-border-width-default: var(--stroke-width-thin);
   --knob-label-border-width-focus: var(--stroke-width-thin);
   --knob-label-height: var(--control-size-600);
-  --knob-label-padding-bottom: var(--space-inset-100);
+  --knob-label-padding-bottom: var(--space-inset-050);
   --knob-label-padding-left: var(--space-inset-200);
   --knob-label-padding-right: var(--space-inset-200);
   --knob-label-padding-top: var(--space-inset-050);

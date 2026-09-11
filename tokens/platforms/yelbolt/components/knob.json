@@ -27,7 +27,7 @@
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{space.inset.100}",
+          "$value": "{space.inset.050}",
           "$type": "dimension"
         },
         "left": {
@@ -244,11 +244,11 @@
     },
     "graduation": {
       "width": {
-        "$value": "{control.size.025}",
+        "$value": "{control.none}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{control.size.100}",
+        "$value": "{control.none}",
         "$type": "dimension"
       },
       "background": {
