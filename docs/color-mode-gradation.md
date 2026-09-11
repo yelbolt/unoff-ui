@@ -65,16 +65,16 @@ and shift them one step toward `brand` (same family, no swap).
 **`inverse`** — `background`/`border` only (see below for `text`/`icon`) —
 flips the mode's own polarity using that mode's own family: it rests near the
 end of the ramp opposite the mode's dominant tone, then punches all the way
-to the *other* end on `strong` for maximum contrast/amplitude. `focus`
+to the _other_ end on `strong` for maximum contrast/amplitude. `focus`
 mirrors `default` as usual; `disabled` sits one step in from the resting end.
 
-| State                       | Dark   | Light  |
-| ---------------------------- | ------ | ------ |
-| `default` / `focus`          | step 1 | step 8 |
-| `hover`                       | step 2 | step 7 |
-| `pressed`                     | step 3 | step 6 |
-| `disabled`                    | step 2 | step 7 |
-| `strong`                      | step 8 | step 1 |
+| State               | Dark   | Light  |
+| ------------------- | ------ | ------ |
+| `default` / `focus` | step 1 | step 8 |
+| `hover`             | step 2 | step 7 |
+| `pressed`           | step 3 | step 6 |
+| `disabled`          | step 2 | step 7 |
+| `strong`            | step 8 | step 1 |
 
 `text.inverse` / `icon.inverse` don't get this graduated treatment — they're
 a straight copy of that mode's `onInverse` (see below), since "inverse text"

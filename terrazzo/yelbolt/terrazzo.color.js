@@ -1,6 +1,8 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
-import tokensStudioCompat, { cssTransform } from '../plugins/tokens-studio-compat.js'
+import tokensStudioCompat, {
+  cssTransform,
+} from '../plugins/tokens-studio-compat.js'
 
 const BRAND_RAMPS = [
   'ISB.**',

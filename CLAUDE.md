@@ -215,12 +215,12 @@ MDX documentation files (`{CategoryTitle}.mdx`) use `<DocTabs>` / `<Tab>` from `
 
 Claude Code skills are available in [.claude/skills/](.claude/skills/):
 
-| Skill               | File                                                                       | Invoke with          | Purpose                                                 |
-| ------------------- | --------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------- |
-| `create-component`  | [.claude/skills/create-component.md](.claude/skills/create-component.md)  | `/create-component`  | Scaffold a new component end-to-end                     |
-| `review-component`  | [.claude/skills/review-component.md](.claude/skills/review-component.md)  | `/review-component`  | Audit an existing component and resync its docs         |
-| `create-theme`      | [.claude/skills/create-theme.md](.claude/skills/create-theme.md)          | `/create-theme`      | Create and configure a new brand theme                  |
-| `figma-doc`         | [.claude/skills/figma-doc.md](.claude/skills/figma-doc.md)                | `/figma-doc`         | Generate/resync a component description directly in Figma |
+| Skill              | File                                                                     | Invoke with         | Purpose                                                   |
+| ------------------ | ------------------------------------------------------------------------ | ------------------- | --------------------------------------------------------- |
+| `create-component` | [.claude/skills/create-component.md](.claude/skills/create-component.md) | `/create-component` | Scaffold a new component end-to-end                       |
+| `review-component` | [.claude/skills/review-component.md](.claude/skills/review-component.md) | `/review-component` | Audit an existing component and resync its docs           |
+| `create-theme`     | [.claude/skills/create-theme.md](.claude/skills/create-theme.md)         | `/create-theme`     | Create and configure a new brand theme                    |
+| `figma-doc`        | [.claude/skills/figma-doc.md](.claude/skills/figma-doc.md)               | `/figma-doc`        | Generate/resync a component description directly in Figma |
 
 `create-component` and `review-component` both delegate their documentation gate to the **`component-reviewer`** agent ([.claude/agents/component-reviewer.md](.claude/agents/component-reviewer.md)). On every component created or reviewed, two checks are mandatory and never skipped: the Storybook MDX prop docs (`src/stories/{category}/{CategoryTitle}.mdx`) must match the current `Props` interface, and the component's description in the Figma design-system file (fileKey `RDBmy7x5HfkZHpafVqHNWQ`, "Unoff v0.1") must be pushed up to date via `figma_set_description` — or, when the Figma Desktop Bridge isn't connected, handed back as ready-to-paste markdown instead of silently skipped.
 

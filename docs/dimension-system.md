@@ -8,11 +8,11 @@
 
 Colors have always had three layers. Dimensions had two.
 
-| Layer         | Colors                                              | Dimensions (before)                          |
-| ------------- | --------------------------------------------------- | -------------------------------------------- |
+| Layer         | Colors                                              | Dimensions (before)                           |
+| ------------- | --------------------------------------------------- | --------------------------------------------- |
 | **Primitive** | `platforms/yelbolt/colors.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `scale.pos.*` |
-| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*` | — _missing_                                  |
-| **Component** | `platforms/yelbolt/components/*.json`               | `platforms/yelbolt/components/*.json`        |
+| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*` | — _missing_                                   |
+| **Component** | `platforms/yelbolt/components/*.json`               | `platforms/yelbolt/components/*.json`         |
 
 Because the middle layer was missing, a component token reached straight into
 the primitive scale: `button.base.height` was literally `{scale.pos.small}`. That
@@ -44,7 +44,7 @@ a mode may want to move one without moving the other:
 | `dimension.control` | heights, widths, min/max, icon boxes    | `none`, `pos.{unit…huge}` (14)                                  |
 | `dimension.border`  | stroke weight and focus-ring offset     | `width.{none,thin,thick}`, `offset.{none,thin,thick}`           |
 | `dimension.radius`  | corner radii                            | `null`, `small`, `medium`, `large`, `xlarge`, `xxlarge`, `full` |
-| `dimension.text`    | type metrics                            | `scale.*`, `leading.*`, `tracking.*`, `weight.*`                 |
+| `dimension.text`    | type metrics                            | `scale.*`, `leading.*`, `tracking.*`, `weight.*`                |
 
 `space` and `control` share a rung vocabulary with commons on purpose: the
 migration stays auditable (`{scale.pos.small}` → `{dimension.control.pos.small}`),

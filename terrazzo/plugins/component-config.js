@@ -1,10 +1,10 @@
 import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
+import { COMPONENTS, PRIMITIVE_EXCLUDES } from '../components.manifest.js'
 import tokensStudioCompat, {
   cssTransform,
   preprocessTokens,
 } from './tokens-studio-compat.js'
-import { COMPONENTS, PRIMITIVE_EXCLUDES } from '../components.manifest.js'
 
 const COMMONS = [
   './tokens/commons/commons.tokens.json',
@@ -39,6 +39,7 @@ export function defineComponentsConfig({
   extraTokens = [],
   colorExcludes,
 }) {
+  // eslint-disable-next-line no-undef
   const only = process.env.TZ_COMPONENT
   const components = only
     ? COMPONENTS.filter((c) => c.name === only)
@@ -51,7 +52,9 @@ export function defineComponentsConfig({
 
   const tokenPaths = [
     ...COMMONS,
-    ...modes.map((m) => `./tokens/platforms/${platform}/modes/${m}.tokens.json`),
+    ...modes.map(
+      (m) => `./tokens/platforms/${platform}/modes/${m}.tokens.json`
+    ),
     ...extraTokens,
     `./tokens/platforms/${platform}/text.json`,
     `./tokens/platforms/${platform}/icon.json`,
