@@ -28,11 +28,11 @@
   --select-box-radius: var(--radius-large);
   --select-box-tick-color-default: var(--color-icon-on-selected-default);
   --select-box-tick-color-disabled: var(--color-icon-on-selected-disabled);
-  --select-box-tick-height: var(--control-size-600);
+  --select-box-tick-height: var(--control-size-400);
   --select-box-tick-icon: var(--icon-check);
-  --select-box-tick-position-left: var(--space-pull-050);
-  --select-box-tick-position-top: var(--space-pull-100);
-  --select-box-tick-width: var(--control-size-600);
+  --select-box-tick-position-left: var(--space-offset-050);
+  --select-box-tick-position-top: var(--space-none);
+  --select-box-tick-width: var(--control-size-400);
   --select-box-width: var(--control-size-500);
   --select-button-background-color-checked-default: var(--color-background-selected-default);
   --select-button-background-color-checked-disabled: var(--color-background-selected-disabled);
@@ -103,8 +103,8 @@
   --select-toggle-height: var(--control-size-400);
   --select-toggle-knob-background-color-checked-default: var(--color-icon-on-selected-default);
   --select-toggle-knob-background-color-checked-disabled: var(--color-icon-on-selected-disabled);
-  --select-toggle-knob-background-color-default: var(--color-icon-on-selected-default);
-  --select-toggle-knob-background-color-disabled: var(--color-icon-on-selected-disabled);
+  --select-toggle-knob-background-color-default: var(--color-icon-on-secondary-default);
+  --select-toggle-knob-background-color-disabled: var(--color-icon-on-secondary-disabled);
   --select-toggle-knob-height: var(--control-size-300);
   --select-toggle-knob-left: var(--space-offset-025);
   --select-toggle-knob-radius: var(--radius-full);

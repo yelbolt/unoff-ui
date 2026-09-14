@@ -188,20 +188,20 @@
         },
         "position": {
           "top": {
-            "$value": "{space.pull.100}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{space.pull.050}",
+            "$value": "{space.offset.050}",
             "$type": "dimension"
           }
         },
         "width": {
-          "$value": "{control.size.600}",
+          "$value": "{control.size.400}",
           "$type": "dimension"
         },
         "height": {
-          "$value": "{control.size.600}",
+          "$value": "{control.size.400}",
           "$type": "dimension"
         },
         "color": {
@@ -381,7 +381,7 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{color.icon.onSelected.default}",
+              "$value": "{color.icon.onSecondary.default}",
               "$type": "color"
             },
             "checked": {
@@ -395,7 +395,7 @@
               }
             },
             "disabled": {
-              "$value": "{color.icon.onSelected.disabled}",
+              "$value": "{color.icon.onSecondary.disabled}",
               "$type": "color"
             }
           }

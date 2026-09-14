@@ -23,7 +23,7 @@
       }
     },
     "minHeight": {
-      "$value": "{control.size.800}",
+      "$value": "{control.size.1000}",
       "$type": "dimension"
     },
     "background": {
