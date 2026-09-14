@@ -294,7 +294,7 @@
             "$type": "dimension"
           },
           "active": {
-            "$value": "{stroke.offset.none}",
+            "$value": "{stroke.offset.thin}",
             "$type": "dimension"
           },
           "alternative": {
@@ -332,7 +332,7 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{color.text.onPrimary.hover}",
+            "$value": "{color.text.onPrimary.default}",
             "$type": "color"
           },
           "focus": {
@@ -348,15 +348,15 @@
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{color.text.onPrimary.hover}",
+            "$value": "{color.text.onPrimary.default}",
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{color.text.onPrimary.default}",
+            "$value": "{color.text.onPrimary.focus}",
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{color.text.onPrimary.default}",
+            "$value": "{color.text.onSelected.default}",
             "$type": "color"
           }
         },
@@ -374,7 +374,7 @@
             "$type": "fontWeights"
           },
           "active": {
-            "$value": "{type.weight.600}",
+            "$value": "{type.weight.550}",
             "$type": "fontWeights"
           },
           "alternative": {
@@ -390,7 +390,7 @@
             "$type": "fontWeights"
           },
           "alternativeActive": {
-            "$value": "{type.weight.600}",
+            "$value": "{type.weight.550}",
             "$type": "fontWeights"
           }
         },
@@ -428,35 +428,35 @@
         },
         "color": {
           "default": {
-            "$value": "{color.text.secondary.default}",
+            "$value": "{color.icon.secondary.default}",
             "$type": "color"
           },
           "hover": {
-            "$value": "{color.text.secondary.default}",
+            "$value": "{color.icon.secondary.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{color.text.primary.default}",
+            "$value": "{color.icon.secondary.focus}",
             "$type": "color"
           },
           "active": {
-            "$value": "{color.text.primary.default}",
+            "$value": "{color.icon.onSelected.default}",
             "$type": "color"
           },
           "alternative": {
-            "$value": "{color.text.secondary.default}",
+            "$value": "{color.icon.secondary.default}",
             "$type": "color"
           },
           "alternativeHover": {
-            "$value": "{color.text.secondary.default}",
+            "$value": "{color.icon.secondary.default}",
             "$type": "color"
           },
           "alternativeFocus": {
-            "$value": "{color.text.primary.default}",
+            "$value": "{color.icon.secondary.focus}",
             "$type": "color"
           },
           "alternativeActive": {
-            "$value": "{color.text.primary.default}",
+            "$value": "{color.icon.onSelected.default}",
             "$type": "color"
           }
         }

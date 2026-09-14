@@ -1,7 +1,7 @@
 {
   "bar": {
     "minHeight": {
-      "$value": "{control.size.1000}",
+      "$value": "{control.size.1200}",
       "$type": "dimension"
     },
     "gap": {

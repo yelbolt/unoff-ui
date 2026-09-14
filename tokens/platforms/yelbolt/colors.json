@@ -4,19 +4,19 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 1, 0.549],
-        "hex": "#ffff8c"
+        "components": [1, 1, 0.698],
+        "hex": "#ffffb2"
       },
-      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid)",
+      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.03:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.04
+            "ratio": 1.03
           },
           "dark": {
             "score": "AAA",
-            "ratio": 18.64
+            "ratio": 18.88
           }
         },
         "com.uicp.apca": {
@@ -25,7 +25,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 102.19,
+            "score": 103.06,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -35,29 +35,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.961, 0.945, 0.4],
-        "hex": "#f5f166"
+        "components": [0.91, 0.855, 0.424],
+        "hex": "#e8da6c"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.6 (avoid)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.4 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.17
+            "ratio": 1.41
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.51
+            "ratio": 13.72
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 9.6,
-            "recommendation": "AVOID"
+            "score": 22.42,
+            "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 94.16,
-            "recommendation": "FLUENT_TEXT"
+            "score": 82.82,
+            "recommendation": "CONTENT_TEXT"
           }
         }
       }
@@ -66,28 +66,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.816, 0.788, 0],
-        "hex": "#d0c900"
+        "components": [0.773, 0.702, 0],
+        "hex": "#c5b300"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.72:1 (A) · APCA Lc 34.4 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.11:1 (A) · APCA Lc 45.4 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.72
+            "ratio": 2.11
           },
           "dark": {
             "score": "AAA",
-            "ratio": 11.25
+            "ratio": 9.18
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 34.4,
-            "recommendation": "SPOT_TEXT"
+            "score": 45.36,
+            "recommendation": "HEADLINES"
           },
           "dark": {
-            "score": 72.01,
+            "score": 61.92,
             "recommendation": "BODY_TEXT"
           }
         }
@@ -97,29 +97,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.635, 0.596, 0],
-        "hex": "#a29800"
+        "components": [0.639, 0.549, 0],
+        "hex": "#a38c00"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 2.95:1 (A) · APCA Lc 60.6 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.28:1 (A) · APCA Lc 64.9 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 2.95
+            "ratio": 3.28
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.57
+            "ratio": 5.9
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 60.63,
+            "score": 64.9,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 47.43,
-            "recommendation": "HEADLINES"
+            "score": 43.28,
+            "recommendation": "SPOT_TEXT"
           }
         }
       }
@@ -128,28 +128,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.435, 0.384, 0],
-        "hex": "#6f6200"
+        "components": [0.498, 0.4, 0],
+        "hex": "#7f6600"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 6.05:1 (AA) · APCA Lc 84.6 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.45:1 (AA) · APCA Lc 81.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 6.05
+            "ratio": 5.45
           },
           "dark": {
             "score": "A",
-            "ratio": 3.2
+            "ratio": 3.56
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 84.58,
+            "score": 81.65,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 23.31,
+            "score": 26.4,
             "recommendation": "NON_TEXT"
           }
         }
@@ -159,28 +159,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.267, 0.212, 0],
-        "hex": "#443600"
+        "components": [0.349, 0.267, 0],
+        "hex": "#594400"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 11.68:1 (AAA) · APCA Lc 99.6 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.20:1 (AAA) · APCA Lc 94.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 11.68
+            "ratio": 9.2
           },
           "dark": {
             "score": "A",
-            "ratio": 1.66
+            "ratio": 2.1
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 99.59,
+            "score": 94.64,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 0,
+            "score": 12.31,
             "recommendation": "AVOID"
           }
         }
@@ -190,24 +190,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.145, 0.094, 0],
-        "hex": "#251800"
+        "components": [0.208, 0.145, 0],
+        "hex": "#352500"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 17.13:1 (AAA) · APCA Lc 105.4 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.63:1 (AAA) · APCA Lc 103.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 17.13
+            "ratio": 14.63
           },
           "dark": {
             "score": "A",
-            "ratio": 1.13
+            "ratio": 1.32
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 105.4,
+            "score": 103.36,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -285,8 +285,8 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 1, 0.91],
-        "hex": "#ffffe8"
+        "components": [1, 1, 0.937],
+        "hex": "#ffffef"
       },
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.00:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
@@ -297,7 +297,7 @@
           },
           "dark": {
             "score": "AAA",
-            "ratio": 19.37
+            "ratio": 19.45
           }
         },
         "com.uicp.apca": {
@@ -306,7 +306,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 104.81,
+            "score": 105.08,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -316,29 +316,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.922, 0.925, 0.82],
-        "hex": "#ebecd1"
+        "components": [0.851, 0.851, 0.765],
+        "hex": "#d9d9c3"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.19:1 (A) · APCA Lc 10.6 (avoid)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.6 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.19
+            "ratio": 1.41
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.31
+            "ratio": 13.71
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 10.58,
-            "recommendation": "AVOID"
+            "score": 22.58,
+            "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 93.3,
-            "recommendation": "FLUENT_TEXT"
+            "score": 82.68,
+            "recommendation": "CONTENT_TEXT"
           }
         }
       }
@@ -347,28 +347,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.773, 0.773, 0.655],
-        "hex": "#c5c5a7"
+        "components": [0.698, 0.698, 0.596],
+        "hex": "#b2b298"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.74:1 (A) · APCA Lc 35.2 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.13:1 (A) · APCA Lc 46.2 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.74
+            "ratio": 2.13
           },
           "dark": {
             "score": "AAA",
-            "ratio": 11.14
+            "ratio": 9.08
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 35.22,
-            "recommendation": "SPOT_TEXT"
+            "score": 46.16,
+            "recommendation": "HEADLINES"
           },
           "dark": {
-            "score": 71.27,
+            "score": 61.17,
             "recommendation": "BODY_TEXT"
           }
         }
@@ -378,29 +378,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.584, 0.588, 0.463],
-        "hex": "#959676"
+        "components": [0.553, 0.553, 0.435],
+        "hex": "#8d8d6f"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 3.00:1 (A) · APCA Lc 61.6 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.36:1 (A) · APCA Lc 66.0 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 3
+            "ratio": 3.36
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.45
+            "ratio": 5.77
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 61.58,
+            "score": 65.96,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 46.52,
-            "recommendation": "HEADLINES"
+            "score": 42.25,
+            "recommendation": "SPOT_TEXT"
           }
         }
       }
@@ -409,28 +409,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.384, 0.384, 0.267],
-        "hex": "#626244"
+        "components": [0.412, 0.412, 0.298],
+        "hex": "#69694c"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 6.19:1 (AA) · APCA Lc 85.3 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.56:1 (AA) · APCA Lc 82.4 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 6.19
+            "ratio": 5.56
           },
           "dark": {
             "score": "A",
-            "ratio": 3.13
+            "ratio": 3.48
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 85.32,
+            "score": 82.43,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 22.53,
+            "score": 25.58,
             "recommendation": "NON_TEXT"
           }
         }
@@ -440,28 +440,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.224, 0.22, 0.118],
-        "hex": "#39381e"
+        "components": [0.282, 0.278, 0.184],
+        "hex": "#48472f"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 11.78:1 (AAA) · APCA Lc 99.9 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.34:1 (AAA) · APCA Lc 95.1 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 11.78
+            "ratio": 9.34
           },
           "dark": {
             "score": "A",
-            "ratio": 1.64
+            "ratio": 2.07
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 99.88,
+            "score": 95.14,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 0,
+            "score": 11.75,
             "recommendation": "AVOID"
           }
         }
@@ -471,24 +471,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.106, 0.106, 0.024],
-        "hex": "#1b1b06"
+        "components": [0.157, 0.157, 0.086],
+        "hex": "#282816"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 17.18:1 (AAA) · APCA Lc 105.5 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.74:1 (AAA) · APCA Lc 103.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 17.18
+            "ratio": 14.74
           },
           "dark": {
             "score": "A",
-            "ratio": 1.13
+            "ratio": 1.31
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 105.49,
+            "score": 103.57,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -502,8 +502,8 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.051, 0.047, 0],
-        "hex": "#0d0c00"
+        "components": [0.047, 0.047, 0.012],
+        "hex": "#0c0c03"
       },
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.37:1 (AAA) · APCA Lc 106.6 (fluent text)",
       "$extensions": {
@@ -519,7 +519,7 @@
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.63,
+            "score": 106.64,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -566,8 +566,8 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 0.996, 0.765],
-        "hex": "#fffec3"
+        "components": [1, 0.996, 0.839],
+        "hex": "#fffed6"
       },
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.02:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
@@ -578,7 +578,7 @@
           },
           "dark": {
             "score": "AAA",
-            "ratio": 18.9
+            "ratio": 19.07
           }
         },
         "com.uicp.apca": {
@@ -587,7 +587,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 103.11,
+            "score": 103.72,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -597,29 +597,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.996, 0.91, 0.659],
-        "hex": "#fee8a8"
+        "components": [0.925, 0.835, 0.631],
+        "hex": "#ecd5a1"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.20:1 (A) · APCA Lc 11.1 (avoid)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.42:1 (A) · APCA Lc 22.8 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.2
+            "ratio": 1.42
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.19
+            "ratio": 13.65
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 11.08,
-            "recommendation": "AVOID"
+            "score": 22.83,
+            "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 92.86,
-            "recommendation": "FLUENT_TEXT"
+            "score": 82.45,
+            "recommendation": "CONTENT_TEXT"
           }
         }
       }
@@ -628,28 +628,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.855, 0.757, 0.471],
-        "hex": "#dac178"
+        "components": [0.788, 0.678, 0.427],
+        "hex": "#c9ad6d"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.74:1 (A) · APCA Lc 35.3 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.14:1 (A) · APCA Lc 46.3 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.74
+            "ratio": 2.14
           },
           "dark": {
             "score": "AAA",
-            "ratio": 11.11
+            "ratio": 9.05
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 35.34,
-            "recommendation": "SPOT_TEXT"
+            "score": 46.26,
+            "recommendation": "HEADLINES"
           },
           "dark": {
-            "score": 71.16,
+            "score": 61.07,
             "recommendation": "BODY_TEXT"
           }
         }
@@ -659,29 +659,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.671, 0.569, 0.243],
-        "hex": "#ab913e"
+        "components": [0.651, 0.525, 0.227],
+        "hex": "#a6863a"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 3.02:1 (A) · APCA Lc 61.8 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.40:1 (A) · APCA Lc 66.3 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 3.02
+            "ratio": 3.4
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.4
+            "ratio": 5.7
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 61.77,
+            "score": 66.33,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 46.33,
-            "recommendation": "HEADLINES"
+            "score": 41.88,
+            "recommendation": "SPOT_TEXT"
           }
         }
       }
@@ -690,28 +690,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.463, 0.361, 0],
-        "hex": "#765c00"
+        "components": [0.506, 0.384, 0.02],
+        "hex": "#816205"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 6.28:1 (AA) · APCA Lc 85.5 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.63:1 (AA) · APCA Lc 82.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 6.28
+            "ratio": 5.63
           },
           "dark": {
             "score": "A",
-            "ratio": 3.09
+            "ratio": 3.44
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 85.51,
+            "score": 82.55,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 22.33,
+            "score": 25.45,
             "recommendation": "NON_TEXT"
           }
         }
@@ -721,28 +721,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.286, 0.196, 0],
-        "hex": "#493200"
+        "components": [0.357, 0.255, 0],
+        "hex": "#5b4100"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 11.91:1 (AAA) · APCA Lc 99.9 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.41:1 (AAA) · APCA Lc 95.1 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 11.91
+            "ratio": 9.41
           },
           "dark": {
             "score": "A",
-            "ratio": 1.63
+            "ratio": 2.06
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 99.92,
+            "score": 95.11,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 0,
+            "score": 11.78,
             "recommendation": "AVOID"
           }
         }
@@ -752,24 +752,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.157, 0.082, 0],
-        "hex": "#281500"
+        "components": [0.212, 0.137, 0],
+        "hex": "#362300"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 17.30:1 (AAA) · APCA Lc 105.5 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.83:1 (AAA) · APCA Lc 103.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 17.3
+            "ratio": 14.83
           },
           "dark": {
             "score": "A",
-            "ratio": 1.12
+            "ratio": 1.31
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 105.47,
+            "score": 103.53,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -783,8 +783,8 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.086, 0.027, 0],
-        "hex": "#160700"
+        "components": [0.078, 0.031, 0],
+        "hex": "#140800"
       },
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.47:1 (AAA) · APCA Lc 106.6 (fluent text)",
       "$extensions": {
@@ -800,7 +800,7 @@
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.6,
+            "score": 106.62,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -847,19 +847,19 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.792, 1, 1],
-        "hex": "#caffff"
+        "components": [0.859, 1, 1],
+        "hex": "#dbffff"
       },
-      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.08:1 (A) · APCA Lc 0.0 (avoid)",
+      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.05:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.08
+            "ratio": 1.05
           },
           "dark": {
             "score": "AAA",
-            "ratio": 18
+            "ratio": 18.47
           }
         },
         "com.uicp.apca": {
@@ -868,7 +868,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 99.81,
+            "score": 101.53,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -878,29 +878,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.686, 0.973, 1],
-        "hex": "#aff8ff"
+        "components": [0.659, 0.89, 0.925],
+        "hex": "#a8e3ec"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.5 (avoid)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.39:1 (A) · APCA Lc 21.6 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.17
+            "ratio": 1.39
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.54
+            "ratio": 13.9
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 9.48,
-            "recommendation": "AVOID"
+            "score": 21.62,
+            "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 94.26,
-            "recommendation": "FLUENT_TEXT"
+            "score": 83.53,
+            "recommendation": "CONTENT_TEXT"
           }
         }
       }
@@ -909,28 +909,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.494, 0.824, 0.871],
-        "hex": "#7ed2de"
+        "components": [0.451, 0.745, 0.788],
+        "hex": "#73bec9"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.70:1 (A) · APCA Lc 33.9 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.09:1 (A) · APCA Lc 44.9 (spot text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.7
+            "ratio": 2.09
           },
           "dark": {
             "score": "AAA",
-            "ratio": 11.37
+            "ratio": 9.29
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 33.91,
+            "score": 44.88,
             "recommendation": "SPOT_TEXT"
           },
           "dark": {
-            "score": 72.45,
+            "score": 62.36,
             "recommendation": "BODY_TEXT"
           }
         }
@@ -940,29 +940,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.259, 0.639, 0.69],
-        "hex": "#42a3b0"
+        "components": [0.239, 0.604, 0.651],
+        "hex": "#3d9aa6"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 2.92:1 (A) · APCA Lc 60.2 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.5 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 2.92
+            "ratio": 3.25
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.63
+            "ratio": 5.96
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 60.16,
+            "score": 64.47,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 47.89,
-            "recommendation": "HEADLINES"
+            "score": 43.71,
+            "recommendation": "SPOT_TEXT"
           }
         }
       }
@@ -971,28 +971,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.431, 0.478],
-        "hex": "#006e7a"
+        "components": [0, 0.459, 0.506],
+        "hex": "#007581"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 5.90:1 (AA) · APCA Lc 83.5 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.37:1 (AA) · APCA Lc 80.9 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 5.9
+            "ratio": 5.37
           },
           "dark": {
             "score": "A",
-            "ratio": 3.28
+            "ratio": 3.61
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 83.53,
+            "score": 80.86,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 24.42,
+            "score": 27.22,
             "recommendation": "NON_TEXT"
           }
         }
@@ -1002,28 +1002,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.259, 0.302],
-        "hex": "#00424d"
+        "components": [0, 0.318, 0.357],
+        "hex": "#00515b"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 10.98:1 (AAA) · APCA Lc 98.1 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 8.90:1 (AAA) · APCA Lc 93.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 10.98
+            "ratio": 8.9
           },
           "dark": {
             "score": "A",
-            "ratio": 1.76
+            "ratio": 2.18
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 98.1,
+            "score": 93.64,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 8.33,
+            "score": 13.45,
             "recommendation": "AVOID"
           }
         }
@@ -1033,24 +1033,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.129, 0.169],
-        "hex": "#00212b"
+        "components": [0, 0.184, 0.212],
+        "hex": "#002f36"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 16.54:1 (AAA) · APCA Lc 104.9 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.19:1 (AAA) · APCA Lc 102.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 16.54
+            "ratio": 14.19
           },
           "dark": {
             "score": "A",
-            "ratio": 1.17
+            "ratio": 1.36
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 104.89,
+            "score": 102.77,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1064,24 +1064,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.067, 0.098],
-        "hex": "#001119"
+        "components": [0, 0.063, 0.082],
+        "hex": "#001015"
       },
-      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 18.94:1 (AAA) · APCA Lc 106.4 (fluent text)",
+      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.10:1 (AAA) · APCA Lc 106.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 18.94
+            "ratio": 19.1
           },
           "dark": {
             "score": "A",
-            "ratio": 1.02
+            "ratio": 1.01
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.39,
+            "score": 106.47,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1128,19 +1128,19 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.784, 1, 0.82],
-        "hex": "#c8ffd1"
+        "components": [0.855, 1, 0.878],
+        "hex": "#daffe0"
       },
-      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid)",
+      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.11
+            "ratio": 1.07
           },
           "dark": {
             "score": "AAA",
-            "ratio": 17.46
+            "ratio": 18.1
           }
         },
         "com.uicp.apca": {
@@ -1149,7 +1149,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 97.78,
+            "score": 100.15,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -1159,29 +1159,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.675, 1, 0.718],
-        "hex": "#acffb7"
+        "components": [0.651, 0.922, 0.682],
+        "hex": "#a6ebae"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.2 (avoid)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.37:1 (A) · APCA Lc 20.5 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.17
+            "ratio": 1.37
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.59
+            "ratio": 14.13
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 9.24,
-            "recommendation": "AVOID"
+            "score": 20.47,
+            "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 94.48,
-            "recommendation": "FLUENT_TEXT"
+            "score": 84.55,
+            "recommendation": "CONTENT_TEXT"
           }
         }
       }
@@ -1190,28 +1190,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.482, 0.867, 0.545],
-        "hex": "#7bdd8b"
+        "components": [0.439, 0.78, 0.494],
+        "hex": "#70c77e"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.65:1 (A) · APCA Lc 32.0 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.04:1 (A) · APCA Lc 43.7 (spot text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.65
+            "ratio": 2.04
           },
           "dark": {
             "score": "AAA",
-            "ratio": 11.74
+            "ratio": 9.5
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 31.96,
+            "score": 43.68,
             "recommendation": "SPOT_TEXT"
           },
           "dark": {
-            "score": 74.23,
+            "score": 63.48,
             "recommendation": "BODY_TEXT"
           }
         }
@@ -1221,28 +1221,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.235, 0.678, 0.333],
-        "hex": "#3cad55"
+        "components": [0.216, 0.643, 0.314],
+        "hex": "#37a450"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 2.84:1 (A) · APCA Lc 58.9 (headlines)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.15:1 (A) · APCA Lc 63.0 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 2.84
+            "ratio": 3.15
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.83
+            "ratio": 6.16
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 58.86,
-            "recommendation": "HEADLINES"
+            "score": 63.03,
+            "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 49.14,
+            "score": 45.1,
             "recommendation": "HEADLINES"
           }
         }
@@ -1252,28 +1252,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.463, 0.114],
-        "hex": "#00761d"
+        "components": [0, 0.494, 0.165],
+        "hex": "#007e2a"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 5.74:1 (AA) · APCA Lc 82.6 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.16:1 (AA) · APCA Lc 79.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 5.74
+            "ratio": 5.16
           },
           "dark": {
             "score": "A",
-            "ratio": 3.37
+            "ratio": 3.76
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 82.64,
+            "score": 79.59,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 25.36,
+            "score": 28.53,
             "recommendation": "NON_TEXT"
           }
         }
@@ -1283,28 +1283,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.282, 0],
-        "hex": "#004800"
+        "components": [0, 0.345, 0.055],
+        "hex": "#00580e"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 10.75:1 (AAA) · APCA Lc 97.5 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 8.63:1 (AAA) · APCA Lc 92.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 10.75
+            "ratio": 8.63
           },
           "dark": {
             "score": "A",
-            "ratio": 1.8
+            "ratio": 2.25
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 97.51,
+            "score": 92.81,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 9.02,
+            "score": 14.38,
             "recommendation": "AVOID"
           }
         }
@@ -1314,24 +1314,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.149, 0],
-        "hex": "#002600"
+        "components": [0, 0.204, 0],
+        "hex": "#003400"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 16.22:1 (AAA) · APCA Lc 104.6 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 13.90:1 (AAA) · APCA Lc 102.3 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 16.22
+            "ratio": 13.9
           },
           "dark": {
             "score": "A",
-            "ratio": 1.19
+            "ratio": 1.39
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 104.57,
+            "score": 102.35,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1345,24 +1345,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0, 0.082, 0],
-        "hex": "#001500"
+        "components": [0, 0.071, 0],
+        "hex": "#001200"
       },
-      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 18.71:1 (AAA) · APCA Lc 106.2 (fluent text)",
+      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.07:1 (AAA) · APCA Lc 106.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 18.71
+            "ratio": 19.07
           },
           "dark": {
             "score": "A",
-            "ratio": 1.04
+            "ratio": 1.02
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.25,
+            "score": 106.43,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1409,28 +1409,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 0.89, 0.98],
-        "hex": "#ffe3fa"
+        "components": [1, 0.925, 0.984],
+        "hex": "#ffecfb"
       },
-      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.18:1 (A) · APCA Lc 9.9 (avoid)",
+      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.18
+            "ratio": 1.11
           },
           "dark": {
             "score": "AAA",
-            "ratio": 16.47
+            "ratio": 17.43
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 9.86,
+            "score": 0,
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 93.93,
+            "score": 97.6,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -1440,28 +1440,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 0.792, 0.894],
-        "hex": "#ffcae4"
+        "components": [1, 0.741, 0.824],
+        "hex": "#ffbdd2"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.40:1 (A) · APCA Lc 21.8 (non text)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.54:1 (A) · APCA Lc 27.9 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.4
+            "ratio": 1.54
           },
           "dark": {
             "score": "AAA",
-            "ratio": 13.85
+            "ratio": 12.58
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 21.82,
+            "score": 27.9,
             "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 83.35,
+            "score": 77.9,
             "recommendation": "CONTENT_TEXT"
           }
         }
@@ -1471,29 +1471,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [1, 0.624, 0.737],
-        "hex": "#ff9fbc"
+        "components": [0.929, 0.565, 0.667],
+        "hex": "#ed90aa"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.89:1 (A) · APCA Lc 39.7 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.26:1 (A) · APCA Lc 48.7 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.89
+            "ratio": 2.26
           },
           "dark": {
             "score": "AAA",
-            "ratio": 10.22
+            "ratio": 8.57
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 39.75,
-            "recommendation": "SPOT_TEXT"
+            "score": 48.74,
+            "recommendation": "HEADLINES"
           },
           "dark": {
-            "score": 67.11,
-            "recommendation": "BODY_TEXT"
+            "score": 58.75,
+            "recommendation": "HEADLINES"
           }
         }
       }
@@ -1502,28 +1502,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.843, 0.42, 0.549],
-        "hex": "#d76b8c"
+        "components": [0.8, 0.392, 0.522],
+        "hex": "#cc6485"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.3 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.62:1 (A) · APCA Lc 68.3 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 3.25
+            "ratio": 3.62
           },
           "dark": {
             "score": "AA",
-            "ratio": 5.96
+            "ratio": 5.36
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 64.29,
+            "score": 68.25,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 43.88,
+            "score": 39.98,
             "recommendation": "SPOT_TEXT"
           }
         }
@@ -1533,28 +1533,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.612, 0.204, 0.349],
-        "hex": "#9c3459"
+        "components": [0.639, 0.247, 0.38],
+        "hex": "#a33f61"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 6.80:1 (AA) · APCA Lc 87.0 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 6.02:1 (AA) · APCA Lc 84.0 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 6.8
+            "ratio": 6.02
           },
           "dark": {
             "score": "A",
-            "ratio": 2.85
+            "ratio": 3.22
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 86.97,
+            "score": 83.97,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 20.77,
+            "score": 23.97,
             "recommendation": "NON_TEXT"
           }
         }
@@ -1564,28 +1564,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.404, 0.012, 0.192],
-        "hex": "#670331"
+        "components": [0.463, 0.133, 0.255],
+        "hex": "#762241"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 12.68:1 (AAA) · APCA Lc 99.8 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.98:1 (AAA) · APCA Lc 95.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 12.68
+            "ratio": 9.98
           },
           "dark": {
             "score": "A",
-            "ratio": 1.53
+            "ratio": 1.94
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 99.75,
+            "score": 95.77,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 0,
+            "score": 11.03,
             "recommendation": "AVOID"
           }
         }
@@ -1595,24 +1595,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.239, 0, 0.082],
-        "hex": "#3d0015"
+        "components": [0.286, 0.031, 0.137],
+        "hex": "#490823"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 17.14:1 (AAA) · APCA Lc 104.7 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 15.44:1 (AAA) · APCA Lc 103.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 17.14
+            "ratio": 15.44
           },
           "dark": {
             "score": "A",
-            "ratio": 1.13
+            "ratio": 1.25
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 104.67,
+            "score": 103.49,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1626,24 +1626,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.149, 0, 0.031],
-        "hex": "#260008"
+        "components": [0.122, 0, 0.035],
+        "hex": "#1f0009"
       },
-      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.08:1 (AAA) · APCA Lc 106.1 (fluent text)",
+      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.51:1 (AAA) · APCA Lc 106.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 19.08
+            "ratio": 19.51
           },
           "dark": {
             "score": "A",
-            "ratio": 1.02
+            "ratio": 1.01
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.11,
+            "score": 106.38,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1690,19 +1690,19 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.965, 0.961, 1],
-        "hex": "#f6f5ff"
+        "components": [0.973, 0.976, 1],
+        "hex": "#f8f9ff"
       },
-      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid)",
+      "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.07
+            "ratio": 1.04
           },
           "dark": {
             "score": "AAA",
-            "ratio": 18.16
+            "ratio": 18.68
           }
         },
         "com.uicp.apca": {
@@ -1711,7 +1711,7 @@
             "recommendation": "AVOID"
           },
           "dark": {
-            "score": 100.35,
+            "score": 102.29,
             "recommendation": "FLUENT_TEXT"
           }
         }
@@ -1721,28 +1721,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.878, 0.871, 1],
-        "hex": "#e0deff"
+        "components": [0.812, 0.808, 1],
+        "hex": "#cfceff"
       },
-      "$description": "Shade/Tint color with 93.5% of lightness — WCAG 1.29:1 (A) · APCA Lc 16.5 (non text)",
+      "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.49:1 (A) · APCA Lc 25.9 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.29
+            "ratio": 1.49
           },
           "dark": {
             "score": "AAA",
-            "ratio": 15.02
+            "ratio": 13.02
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 16.46,
+            "score": 25.87,
             "recommendation": "NON_TEXT"
           },
           "dark": {
-            "score": 88.12,
+            "score": 79.73,
             "recommendation": "CONTENT_TEXT"
           }
         }
@@ -1752,29 +1752,29 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.725, 0.71, 1],
-        "hex": "#b9b5ff"
+        "components": [0.655, 0.643, 1],
+        "hex": "#a7a4ff"
       },
-      "$description": "Shade/Tint color with 81.6% of lightness — WCAG 1.86:1 (A) · APCA Lc 39.1 (spot text)",
+      "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.21:1 (A) · APCA Lc 47.7 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 1.86
+            "ratio": 2.21
           },
           "dark": {
             "score": "AAA",
-            "ratio": 10.39
+            "ratio": 8.78
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 39.06,
-            "recommendation": "SPOT_TEXT"
+            "score": 47.72,
+            "recommendation": "HEADLINES"
           },
           "dark": {
-            "score": 67.75,
-            "recommendation": "BODY_TEXT"
+            "score": 59.72,
+            "recommendation": "HEADLINES"
           }
         }
       }
@@ -1783,28 +1783,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.541, 0.514, 0.929],
-        "hex": "#8a83ed"
+        "components": [0.51, 0.482, 0.882],
+        "hex": "#827be1"
       },
-      "$description": "Shade/Tint color with 66.3% of lightness — WCAG 3.16:1 (A) · APCA Lc 63.5 (body text)",
+      "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.53:1 (A) · APCA Lc 67.7 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "A",
-            "ratio": 3.16
+            "ratio": 3.53
           },
           "dark": {
             "score": "AA",
-            "ratio": 6.12
+            "ratio": 5.49
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 63.5,
+            "score": 67.66,
             "recommendation": "BODY_TEXT"
           },
           "dark": {
-            "score": 44.65,
+            "score": 40.57,
             "recommendation": "SPOT_TEXT"
           }
         }
@@ -1814,28 +1814,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.349, 0.298, 0.706],
-        "hex": "#594cb4"
+        "components": [0.376, 0.337, 0.725],
+        "hex": "#6056b9"
       },
-      "$description": "Shade/Tint color with 48.7% of lightness — WCAG 6.65:1 (AA) · APCA Lc 86.9 (content text)",
+      "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.87:1 (AA) · APCA Lc 83.7 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AA",
-            "ratio": 6.65
+            "ratio": 5.87
           },
           "dark": {
             "score": "A",
-            "ratio": 2.91
+            "ratio": 3.3
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 86.87,
+            "score": 83.68,
             "recommendation": "CONTENT_TEXT"
           },
           "dark": {
-            "score": 20.87,
+            "score": 24.27,
             "recommendation": "NON_TEXT"
           }
         }
@@ -1845,28 +1845,28 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.2, 0.125, 0.49],
-        "hex": "#33207d"
+        "components": [0.255, 0.212, 0.537],
+        "hex": "#413689"
       },
-      "$description": "Shade/Tint color with 33.4% of lightness — WCAG 12.61:1 (AAA) · APCA Lc 100.6 (fluent text)",
+      "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.80:1 (AAA) · APCA Lc 95.9 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 12.61
+            "ratio": 9.8
           },
           "dark": {
             "score": "A",
-            "ratio": 1.54
+            "ratio": 1.98
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 100.61,
+            "score": 95.86,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
-            "score": 0,
+            "score": 10.93,
             "recommendation": "AVOID"
           }
         }
@@ -1876,24 +1876,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.098, 0, 0.31],
-        "hex": "#19004f"
+        "components": [0.141, 0.098, 0.345],
+        "hex": "#241958"
       },
-      "$description": "Shade/Tint color with 21.5% of lightness — WCAG 17.95:1 (AAA) · APCA Lc 105.2 (fluent text)",
+      "$description": "Shade/Tint color with 27.1% of lightness — WCAG 15.29:1 (AAA) · APCA Lc 103.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 17.95
+            "ratio": 15.29
           },
           "dark": {
             "score": "A",
-            "ratio": 1.08
+            "ratio": 1.27
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 105.22,
+            "score": 103.78,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {
@@ -1907,24 +1907,24 @@
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
-        "components": [0.051, 0, 0.208],
-        "hex": "#0d0035"
+        "components": [0.039, 0.012, 0.161],
+        "hex": "#0a0329"
       },
-      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.39:1 (AAA) · APCA Lc 106.2 (fluent text)",
+      "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.59:1 (AAA) · APCA Lc 106.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
           "light": {
             "score": "AAA",
-            "ratio": 19.39
+            "ratio": 19.59
           },
           "dark": {
             "score": "A",
-            "ratio": 1
+            "ratio": 1.01
           }
         },
         "com.uicp.apca": {
           "light": {
-            "score": 106.23,
+            "score": 106.51,
             "recommendation": "FLUENT_TEXT"
           },
           "dark": {

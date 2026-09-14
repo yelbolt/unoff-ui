@@ -4,127 +4,127 @@
 
 :root {
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.02:1 (A) · APCA Lc 0.0 (avoid) */
-  --isb-1: rgb(100% 99.6% 76.5%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.20:1 (A) · APCA Lc 11.1 (avoid) */
-  --isb-2: rgb(99.6% 91% 65.9%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.74:1 (A) · APCA Lc 35.3 (spot text) */
-  --isb-3: rgb(85.5% 75.7% 47.1%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 3.02:1 (A) · APCA Lc 61.8 (body text) */
-  --isb-4: rgb(67.1% 56.9% 24.3%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 6.28:1 (AA) · APCA Lc 85.5 (content text) */
-  --isb-5: rgb(46.3% 36.1% 0%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 11.91:1 (AAA) · APCA Lc 99.9 (fluent text) */
-  --isb-6: rgb(28.6% 19.6% 0%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 17.30:1 (AAA) · APCA Lc 105.5 (fluent text) */
-  --isb-7: rgb(15.7% 8.2% 0%);
+  --isb-1: rgb(100% 99.6% 83.9%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.42:1 (A) · APCA Lc 22.8 (non text) */
+  --isb-2: rgb(92.5% 83.5% 63.1%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.14:1 (A) · APCA Lc 46.3 (headlines) */
+  --isb-3: rgb(78.8% 67.8% 42.7%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.40:1 (A) · APCA Lc 66.3 (body text) */
+  --isb-4: rgb(65.1% 52.5% 22.7%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.63:1 (AA) · APCA Lc 82.6 (content text) */
+  --isb-5: rgb(50.6% 38.4% 2%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 9.41:1 (AAA) · APCA Lc 95.1 (fluent text) */
+  --isb-6: rgb(35.7% 25.5% 0%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 14.83:1 (AAA) · APCA Lc 103.5 (fluent text) */
+  --isb-7: rgb(21.2% 13.7% 0%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.47:1 (AAA) · APCA Lc 106.6 (fluent text) */
-  --isb-8: rgb(8.6% 2.7% 0%);
+  --isb-8: rgb(7.8% 3.1% 0%);
   /* Source color */
   --isb-source: rgb(97.6% 86.3% 52.5%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.00:1 (A) · APCA Lc 0.0 (avoid) */
-  --ntl-1: rgb(100% 100% 91%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.19:1 (A) · APCA Lc 10.6 (avoid) */
-  --ntl-2: rgb(92.2% 92.5% 82%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.74:1 (A) · APCA Lc 35.2 (spot text) */
-  --ntl-3: rgb(77.3% 77.3% 65.5%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 3.00:1 (A) · APCA Lc 61.6 (body text) */
-  --ntl-4: rgb(58.4% 58.8% 46.3%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 6.19:1 (AA) · APCA Lc 85.3 (content text) */
-  --ntl-5: rgb(38.4% 38.4% 26.7%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 11.78:1 (AAA) · APCA Lc 99.9 (fluent text) */
-  --ntl-6: rgb(22.4% 22% 11.8%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 17.18:1 (AAA) · APCA Lc 105.5 (fluent text) */
-  --ntl-7: rgb(10.6% 10.6% 2.4%);
+  --ntl-1: rgb(100% 100% 93.7%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.6 (non text) */
+  --ntl-2: rgb(85.1% 85.1% 76.5%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.13:1 (A) · APCA Lc 46.2 (headlines) */
+  --ntl-3: rgb(69.8% 69.8% 59.6%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.36:1 (A) · APCA Lc 66.0 (body text) */
+  --ntl-4: rgb(55.3% 55.3% 43.5%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.56:1 (AA) · APCA Lc 82.4 (content text) */
+  --ntl-5: rgb(41.2% 41.2% 29.8%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 9.34:1 (AAA) · APCA Lc 95.1 (fluent text) */
+  --ntl-6: rgb(28.2% 27.8% 18.4%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 14.74:1 (AAA) · APCA Lc 103.6 (fluent text) */
+  --ntl-7: rgb(15.7% 15.7% 8.6%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.37:1 (AAA) · APCA Lc 106.6 (fluent text) */
-  --ntl-8: rgb(5.1% 4.7% 0%);
+  --ntl-8: rgb(4.7% 4.7% 1.2%);
   /* Source color */
   --ntl-source: rgb(12.9% 12.5% 1.2%);
-  /* Shade/Tint color with 100.0% of lightness — WCAG 1.18:1 (A) · APCA Lc 9.9 (avoid) */
-  --tcn-1: rgb(100% 89% 98%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.40:1 (A) · APCA Lc 21.8 (non text) */
-  --tcn-2: rgb(100% 79.2% 89.4%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.89:1 (A) · APCA Lc 39.7 (spot text) */
-  --tcn-3: rgb(100% 62.4% 73.7%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.3 (body text) */
-  --tcn-4: rgb(84.3% 42% 54.9%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 6.80:1 (AA) · APCA Lc 87.0 (content text) */
-  --tcn-5: rgb(61.2% 20.4% 34.9%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 12.68:1 (AAA) · APCA Lc 99.8 (fluent text) */
-  --tcn-6: rgb(40.4% 1.2% 19.2%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 17.14:1 (AAA) · APCA Lc 104.7 (fluent text) */
-  --tcn-7: rgb(23.9% 0% 8.2%);
-  /* Shade/Tint color with 15.0% of lightness — WCAG 19.08:1 (AAA) · APCA Lc 106.1 (fluent text) */
-  --tcn-8: rgb(14.9% 0% 3.1%);
+  /* Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid) */
+  --tcn-1: rgb(100% 92.5% 98.4%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.54:1 (A) · APCA Lc 27.9 (non text) */
+  --tcn-2: rgb(100% 74.1% 82.4%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.26:1 (A) · APCA Lc 48.7 (headlines) */
+  --tcn-3: rgb(92.9% 56.5% 66.7%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.62:1 (A) · APCA Lc 68.3 (body text) */
+  --tcn-4: rgb(80% 39.2% 52.2%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 6.02:1 (AA) · APCA Lc 84.0 (content text) */
+  --tcn-5: rgb(63.9% 24.7% 38%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 9.98:1 (AAA) · APCA Lc 95.8 (fluent text) */
+  --tcn-6: rgb(46.3% 13.3% 25.5%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 15.44:1 (AAA) · APCA Lc 103.5 (fluent text) */
+  --tcn-7: rgb(28.6% 3.1% 13.7%);
+  /* Shade/Tint color with 15.0% of lightness — WCAG 19.51:1 (AAA) · APCA Lc 106.4 (fluent text) */
+  --tcn-8: rgb(12.2% 0% 3.5%);
   /* Source color */
   --tcn-source: rgb(97.6% 52.2% 65.9%);
-  /* Shade/Tint color with 100.0% of lightness — WCAG 1.08:1 (A) · APCA Lc 0.0 (avoid) */
-  --uicp-1: rgb(79.2% 100% 100%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.5 (avoid) */
-  --uicp-2: rgb(68.6% 97.3% 100%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.70:1 (A) · APCA Lc 33.9 (spot text) */
-  --uicp-3: rgb(49.4% 82.4% 87.1%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 2.92:1 (A) · APCA Lc 60.2 (body text) */
-  --uicp-4: rgb(25.9% 63.9% 69%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 5.90:1 (AA) · APCA Lc 83.5 (content text) */
-  --uicp-5: rgb(0% 43.1% 47.8%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 10.98:1 (AAA) · APCA Lc 98.1 (fluent text) */
-  --uicp-6: rgb(0% 25.9% 30.2%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 16.54:1 (AAA) · APCA Lc 104.9 (fluent text) */
-  --uicp-7: rgb(0% 12.9% 16.9%);
-  /* Shade/Tint color with 15.0% of lightness — WCAG 18.94:1 (AAA) · APCA Lc 106.4 (fluent text) */
-  --uicp-8: rgb(0% 6.7% 9.8%);
+  /* Shade/Tint color with 100.0% of lightness — WCAG 1.05:1 (A) · APCA Lc 0.0 (avoid) */
+  --uicp-1: rgb(85.9% 100% 100%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.39:1 (A) · APCA Lc 21.6 (non text) */
+  --uicp-2: rgb(65.9% 89% 92.5%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.09:1 (A) · APCA Lc 44.9 (spot text) */
+  --uicp-3: rgb(45.1% 74.5% 78.8%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.5 (body text) */
+  --uicp-4: rgb(23.9% 60.4% 65.1%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.37:1 (AA) · APCA Lc 80.9 (content text) */
+  --uicp-5: rgb(0% 45.9% 50.6%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 8.90:1 (AAA) · APCA Lc 93.6 (fluent text) */
+  --uicp-6: rgb(0% 31.8% 35.7%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 14.19:1 (AAA) · APCA Lc 102.8 (fluent text) */
+  --uicp-7: rgb(0% 18.4% 21.2%);
+  /* Shade/Tint color with 15.0% of lightness — WCAG 19.10:1 (AAA) · APCA Lc 106.5 (fluent text) */
+  --uicp-8: rgb(0% 6.3% 8.2%);
   /* Source color */
   --uicp-source: rgb(53.3% 92.2% 97.6%);
-  /* Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid) */
-  --uics-1: rgb(78.4% 100% 82%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.2 (avoid) */
-  --uics-2: rgb(67.5% 100% 71.8%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.65:1 (A) · APCA Lc 32.0 (spot text) */
-  --uics-3: rgb(48.2% 86.7% 54.5%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 2.84:1 (A) · APCA Lc 58.9 (headlines) */
-  --uics-4: rgb(23.5% 67.8% 33.3%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 5.74:1 (AA) · APCA Lc 82.6 (content text) */
-  --uics-5: rgb(0% 46.3% 11.4%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 10.75:1 (AAA) · APCA Lc 97.5 (fluent text) */
-  --uics-6: rgb(0% 28.2% 0%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 16.22:1 (AAA) · APCA Lc 104.6 (fluent text) */
-  --uics-7: rgb(0% 14.9% 0%);
-  /* Shade/Tint color with 15.0% of lightness — WCAG 18.71:1 (AAA) · APCA Lc 106.2 (fluent text) */
-  --uics-8: rgb(0% 8.2% 0%);
+  /* Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid) */
+  --uics-1: rgb(85.5% 100% 87.8%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.37:1 (A) · APCA Lc 20.5 (non text) */
+  --uics-2: rgb(65.1% 92.2% 68.2%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.04:1 (A) · APCA Lc 43.7 (spot text) */
+  --uics-3: rgb(43.9% 78% 49.4%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.15:1 (A) · APCA Lc 63.0 (body text) */
+  --uics-4: rgb(21.6% 64.3% 31.4%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.16:1 (AA) · APCA Lc 79.6 (content text) */
+  --uics-5: rgb(0% 49.4% 16.5%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 8.63:1 (AAA) · APCA Lc 92.8 (fluent text) */
+  --uics-6: rgb(0% 34.5% 5.5%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 13.90:1 (AAA) · APCA Lc 102.3 (fluent text) */
+  --uics-7: rgb(0% 20.4% 0%);
+  /* Shade/Tint color with 15.0% of lightness — WCAG 19.07:1 (AAA) · APCA Lc 106.4 (fluent text) */
+  --uics-8: rgb(0% 7.1% 0%);
   /* Source color */
   --uics-source: rgb(52.5% 97.6% 60%);
-  /* Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid) */
-  --uno-1: rgb(96.5% 96.1% 100%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.29:1 (A) · APCA Lc 16.5 (non text) */
-  --uno-2: rgb(87.8% 87.1% 100%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.86:1 (A) · APCA Lc 39.1 (spot text) */
-  --uno-3: rgb(72.5% 71% 100%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 3.16:1 (A) · APCA Lc 63.5 (body text) */
-  --uno-4: rgb(54.1% 51.4% 92.9%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 6.65:1 (AA) · APCA Lc 86.9 (content text) */
-  --uno-5: rgb(34.9% 29.8% 70.6%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 12.61:1 (AAA) · APCA Lc 100.6 (fluent text) */
-  --uno-6: rgb(20% 12.5% 49%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 17.95:1 (AAA) · APCA Lc 105.2 (fluent text) */
-  --uno-7: rgb(9.8% 0% 31%);
-  /* Shade/Tint color with 15.0% of lightness — WCAG 19.39:1 (AAA) · APCA Lc 106.2 (fluent text) */
-  --uno-8: rgb(5.1% 0% 20.8%);
+  /* Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid) */
+  --uno-1: rgb(97.3% 97.6% 100%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.49:1 (A) · APCA Lc 25.9 (non text) */
+  --uno-2: rgb(81.2% 80.8% 100%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.21:1 (A) · APCA Lc 47.7 (headlines) */
+  --uno-3: rgb(65.5% 64.3% 100%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.53:1 (A) · APCA Lc 67.7 (body text) */
+  --uno-4: rgb(51% 48.2% 88.2%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.87:1 (AA) · APCA Lc 83.7 (content text) */
+  --uno-5: rgb(37.6% 33.7% 72.5%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 9.80:1 (AAA) · APCA Lc 95.9 (fluent text) */
+  --uno-6: rgb(25.5% 21.2% 53.7%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 15.29:1 (AAA) · APCA Lc 103.8 (fluent text) */
+  --uno-7: rgb(14.1% 9.8% 34.5%);
+  /* Shade/Tint color with 15.0% of lightness — WCAG 19.59:1 (AAA) · APCA Lc 106.5 (fluent text) */
+  --uno-8: rgb(3.9% 1.2% 16.1%);
   /* Source color */
   --uno-source: rgb(56.1% 52.9% 96.9%);
-  /* Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid) */
-  --ylb-1: rgb(100% 100% 54.9%);
-  /* Shade/Tint color with 93.5% of lightness — WCAG 1.17:1 (A) · APCA Lc 9.6 (avoid) */
-  --ylb-2: rgb(96.1% 94.5% 40%);
-  /* Shade/Tint color with 81.6% of lightness — WCAG 1.72:1 (A) · APCA Lc 34.4 (spot text) */
-  --ylb-3: rgb(81.6% 78.8% 0%);
-  /* Shade/Tint color with 66.3% of lightness — WCAG 2.95:1 (A) · APCA Lc 60.6 (body text) */
-  --ylb-4: rgb(63.5% 59.6% 0%);
-  /* Shade/Tint color with 48.7% of lightness — WCAG 6.05:1 (AA) · APCA Lc 84.6 (content text) */
-  --ylb-5: rgb(43.5% 38.4% 0%);
-  /* Shade/Tint color with 33.4% of lightness — WCAG 11.68:1 (AAA) · APCA Lc 99.6 (fluent text) */
-  --ylb-6: rgb(26.7% 21.2% 0%);
-  /* Shade/Tint color with 21.5% of lightness — WCAG 17.13:1 (AAA) · APCA Lc 105.4 (fluent text) */
-  --ylb-7: rgb(14.5% 9.4% 0%);
+  /* Shade/Tint color with 100.0% of lightness — WCAG 1.03:1 (A) · APCA Lc 0.0 (avoid) */
+  --ylb-1: rgb(100% 100% 69.8%);
+  /* Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.4 (non text) */
+  --ylb-2: rgb(91% 85.5% 42.4%);
+  /* Shade/Tint color with 75.7% of lightness — WCAG 2.11:1 (A) · APCA Lc 45.4 (headlines) */
+  --ylb-3: rgb(77.3% 70.2% 0%);
+  /* Shade/Tint color with 63.6% of lightness — WCAG 3.28:1 (A) · APCA Lc 64.9 (body text) */
+  --ylb-4: rgb(63.9% 54.9% 0%);
+  /* Shade/Tint color with 51.4% of lightness — WCAG 5.45:1 (AA) · APCA Lc 81.6 (content text) */
+  --ylb-5: rgb(49.8% 40% 0%);
+  /* Shade/Tint color with 39.3% of lightness — WCAG 9.20:1 (AAA) · APCA Lc 94.6 (fluent text) */
+  --ylb-6: rgb(34.9% 26.7% 0%);
+  /* Shade/Tint color with 27.1% of lightness — WCAG 14.63:1 (AAA) · APCA Lc 103.4 (fluent text) */
+  --ylb-7: rgb(20.8% 14.5% 0%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.39:1 (AAA) · APCA Lc 106.6 (fluent text) */
   --ylb-8: rgb(7.8% 3.5% 0%);
   /* Source color */
