@@ -35,7 +35,7 @@
 
   &--alternate {
     & > *:nth-child(even) {
-      background-color: var(--list-alternate-background-color-alternate);
+      background-color: var(--list-background-color-alternate) !important;
     }
   }
 }
