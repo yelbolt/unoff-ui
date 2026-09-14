@@ -19,7 +19,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -123,7 +123,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.4}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -149,7 +149,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.4}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
@@ -175,7 +175,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -185,27 +185,27 @@
       },
       "selected": {
         "default": {
-          "$value": "{ISB.4}",
-          "$type": "color"
-        },
-        "hover": {
-          "$value": "{ISB.5}",
-          "$type": "color"
-        },
-        "pressed": {
-          "$value": "{ISB.6}",
-          "$type": "color"
-        },
-        "focus": {
-          "$value": "{ISB.4}",
-          "$type": "color"
-        },
-        "disabled": {
           "$value": "{ISB.3}",
           "$type": "color"
         },
+        "hover": {
+          "$value": "{ISB.4}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{ISB.5}",
+          "$type": "color"
+        },
+        "focus": {
+          "$value": "{ISB.3}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{ISB.2}",
+          "$type": "color"
+        },
         "strong": {
-          "$value": "{ISB.7}",
+          "$value": "{ISB.6}",
           "$type": "color"
         }
       },
@@ -255,7 +255,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -359,7 +359,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.4}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -385,7 +385,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.4}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
@@ -411,7 +411,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -491,7 +491,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -595,7 +595,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.4}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -621,7 +621,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.4}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
@@ -647,7 +647,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -891,7 +891,7 @@
       },
       "onSelected": {
         "default": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "hover": {
@@ -899,11 +899,11 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.6}",
+          "$value": "{ISB.2}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "disabled": {
@@ -911,7 +911,7 @@
           "$type": "color"
         },
         "strong": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.2}",
           "$type": "color"
         }
       },
@@ -961,7 +961,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -1065,7 +1065,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{TCN.4}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "strong": {
@@ -1091,7 +1091,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{UICS.4}",
+          "$value": "{UICS.3}",
           "$type": "color"
         },
         "strong": {
@@ -1117,7 +1117,7 @@
           "$type": "color"
         },
         "disabled": {
-          "$value": "{ISB.4}",
+          "$value": "{ISB.3}",
           "$type": "color"
         },
         "strong": {
@@ -1361,7 +1361,7 @@
       },
       "onSelected": {
         "default": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "hover": {
@@ -1369,11 +1369,11 @@
           "$type": "color"
         },
         "pressed": {
-          "$value": "{ISB.6}",
+          "$value": "{ISB.2}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.7}",
           "$type": "color"
         },
         "disabled": {
@@ -1381,7 +1381,7 @@
           "$type": "color"
         },
         "strong": {
-          "$value": "{ISB.8}",
+          "$value": "{ISB.2}",
           "$type": "color"
         }
       },
