@@ -193,11 +193,11 @@
               "$type": "color"
             },
             "hover": {
-              "$value": "{color.icon.onSelected.hover}",
+              "$value": "{color.icon.onSelected.default}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.icon.onSelected.focus}",
+              "$value": "{color.icon.onSelected.default}",
               "$type": "color"
             },
             "disabled": {
