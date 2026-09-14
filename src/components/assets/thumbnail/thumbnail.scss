@@ -12,7 +12,8 @@
   background: var(--thumbnail-background-color);
   height: 100%;
 
-  .thumbnail__image {
+  .thumbnail__image,
+  .thumbnail__fragment {
     margin: auto;
     max-width: calc(100% - var(--thumbnail-padding));
     max-height: calc(100% - var(--thumbnail-padding));

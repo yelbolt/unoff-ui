@@ -335,6 +335,8 @@ export const Default: Story = {
 
 Add one exported story per meaningful variant (matching the component's `type` or primary prop values).
 
+If the props are a discriminated union offering mutually exclusive content modes (e.g. an image `src` vs a `children`/fragment slot, as in `Thumbnail`), add one story per mode — a single default-args story only exercises whichever branch its args happen to satisfy and leaves the other completely untested.
+
 Each `play` function must:
 
 - Verify the element is in the DOM

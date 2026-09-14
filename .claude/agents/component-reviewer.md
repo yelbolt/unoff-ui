@@ -60,6 +60,7 @@ Any hit on the hook / relative-import / hardcoded-value greps is a blocking find
 - [ ] Terrazzo config exists for all four platforms
 - [ ] Exported from `src/index.ts` in the right category block, alphabetical order
 - [ ] Story file has one exported story per meaningful variant, each with a `play` function asserting presence + primary interaction + `args.action` call count where applicable
+- [ ] If `Props` is a discriminated union of mutually exclusive content modes (e.g. an image `src` vs a `children`/fragment slot, as in `Thumbnail`), each mode has its own story — flag it as blocking if one branch has no coverage
 
 ### 2. Storybook MDX prop parity (blocking — always run, never skip)
 
