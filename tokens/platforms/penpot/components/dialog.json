@@ -99,6 +99,30 @@
           "$type": "dimension"
         }
       }
+    },
+    "block": {
+      "gap": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        }
+      }
     }
   }
 }

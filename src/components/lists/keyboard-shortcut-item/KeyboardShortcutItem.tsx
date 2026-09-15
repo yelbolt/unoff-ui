@@ -28,7 +28,7 @@ const KeyboardShortcutItem = (props: KeyboardShortcutItemProps) => {
         role="presentation"
       >
         <span
-          className={texts.type}
+          className={doClassnames([texts.type, texts['type--tertiary']])}
           role="presentation"
         >
           {label}

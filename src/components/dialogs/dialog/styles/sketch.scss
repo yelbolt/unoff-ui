@@ -4,6 +4,11 @@
 
 :root[data-theme="sketch"] {
   --dialog-background-color: var(--sketch-color-overlay-default);
+  --dialog-block-gap: var(--space-none);
+  --dialog-block-padding-bottom: var(--space-inset-400);
+  --dialog-block-padding-left: var(--space-inset-400);
+  --dialog-block-padding-right: var(--space-inset-400);
+  --dialog-block-padding-top: var(--space-inset-400);
   --dialog-cover-padding-bottom: var(--space-inset-400);
   --dialog-cover-padding-left: var(--space-inset-800);
   --dialog-cover-padding-right: var(--space-none);

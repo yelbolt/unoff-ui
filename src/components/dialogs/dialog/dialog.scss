@@ -70,6 +70,23 @@
     padding: var(--dialog-form-padding-top) var(--dialog-form-padding-right)
       var(--dialog-form-padding-bottom) var(--dialog-form-padding-left);
   }
+
+  .dialog__block {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--dialog-block-gap);
+    margin: 0;
+    padding: var(--dialog-block-padding-top) var(--dialog-block-padding-right)
+      var(--dialog-block-padding-bottom) var(--dialog-block-padding-left);
+  }
+
+  .dialog__blank {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 @media (width <= 460px) {

@@ -4,6 +4,11 @@
 
 :root[data-theme="figma"] {
   --dialog-background-color: rgb(0% 0% 0% / 0.5);
+  --dialog-block-gap: var(--space-none);
+  --dialog-block-padding-bottom: var(--space-inset-200);
+  --dialog-block-padding-left: var(--space-inset-200);
+  --dialog-block-padding-right: var(--space-inset-200);
+  --dialog-block-padding-top: var(--space-inset-200);
   --dialog-cover-padding-bottom: var(--space-inset-400);
   --dialog-cover-padding-left: var(--space-inset-400);
   --dialog-cover-padding-right: var(--space-inset-400);

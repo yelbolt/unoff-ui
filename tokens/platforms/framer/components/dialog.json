@@ -95,6 +95,30 @@
           "$type": "dimension"
         },
         "left": {
+          "$value": "{space.inset.300}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "block": {
+      "gap": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{space.inset.200}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.inset.200}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.inset.200}",
+          "$type": "dimension"
+        },
+        "left": {
           "$value": "{space.inset.200}",
           "$type": "dimension"
         }
