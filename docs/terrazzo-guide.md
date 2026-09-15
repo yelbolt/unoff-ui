@@ -14,28 +14,36 @@ In the unoff-ui project, Terrazzo files are organized as follows:
 
 ```
 terrazzo/
-  ├── terrazzo.commons.js      # Cross-platform common tokens (spacing, typography, shadows)
+  ├── terrazzo.commons.js       # Cross-platform common tokens (spacing, typography, shadows)
+  ├── components.manifest.js    # Single registry of all 43 components (name, category, include
+  │                              # globs) shared by every theme's terrazzo.components.js
   ├── plugins/
-  │   └── tokens-studio-compat.js  # Compatibility plugin (required by all configs)
-  ├── figma/                   # Configuration for Figma theme
-  │   ├── terrazzo.mode.js     # Mode variables generation (color, plus dimension/motion on themes that carry them)
-  │   ├── terrazzo.icon.js     # Icon variables generation
-  │   ├── terrazzo.text.js     # Text variables generation
-  │   └── components/          # Component configurations
-  │       ├── terrazzo.accordion.js
-  │       ├── terrazzo.button.js
-  │       ├── terrazzo.select.js
-  │       └── ...
-  ├── framer/                  # Configuration for Framer theme
-  ├── penpot/                  # Configuration for Penpot theme
-  ├── sketch/                  # Configuration for Sketch theme
+  │   ├── tokens-studio-compat.js   # Compatibility plugin (required by all configs)
+  │   └── component-config.js       # defineComponentsConfig() — builds the one config that emits
+  │                                  # every component stylesheet for a given theme from the manifest
+  ├── figma/                    # Configuration for Figma theme
+  │   ├── terrazzo.components.js    # Emits styles/figma.scss for all 43 components (manifest-driven)
+  │   ├── terrazzo.mode.js          # Mode variables generation (color, plus dimension/motion on themes that carry them)
+  │   ├── terrazzo.icon.js          # Icon variables generation
+  │   └── terrazzo.text.js          # Text variables generation
+  ├── framer/                  # Configuration for Framer theme (same 4-file shape as figma/)
+  ├── penpot/                  # Configuration for Penpot theme (same 4-file shape as figma/)
+  ├── sketch/                  # Configuration for Sketch theme (same 4-file shape as figma/)
   └── yelbolt/                 # Configuration for Yelbolt theme
-      ├── terrazzo.color.js    # Primitive color ramps only (yelbolt-colors.scss) — yelbolt is the
-      │                        # only theme with its own primitive palette (colors.json), so it is
-      │                        # the only one with a standalone `color` build alongside `mode`
-      ├── terrazzo.mode.js     # Semantic mode layer (color, dimension, motion)
-      └── …
+      ├── terrazzo.color.js       # Primitive color ramps only (yelbolt-colors.scss) — yelbolt is the
+      │                           # only theme with its own primitive palette (colors.json), so it is
+      │                           # the only one with a standalone `color` build alongside `mode`
+      ├── terrazzo.components.js  # Emits styles/yelbolt.scss for all 43 components (manifest-driven)
+      ├── terrazzo.mode.js        # Semantic mode layer (color, dimension, motion), 14 family × light/dark permutations
+      └── terrazzo.text.js
 ```
+
+Every theme's `terrazzo.components.js` is a thin call to `defineComponentsConfig()` (in
+`terrazzo/plugins/component-config.js`) passing only `platform`, its mode list, and its color
+excludes — one Terrazzo config emits all 43 component stylesheets for that theme by iterating
+`COMPONENTS` from `components.manifest.js`. There are no more per-component config files; adding a
+component means adding one entry to the manifest (see "Adding a New Component" below), not a
+new file per theme.
 
 ## Token Files Structure
 
@@ -151,6 +159,7 @@ Available themes are:
 - `framer`
 - `penpot`
 - `sketch`
+- `yelbolt`
 
 ### Build a Specific Component for a Theme
 
@@ -259,19 +268,40 @@ npm run scss:build
 npm run scss:build mode
 ```
 
+## Adding a New Component
+
+Components no longer get their own Terrazzo config file. Add one entry to `terrazzo/components.manifest.js`:
+
+```js
+{ name: 'my-comp', category: 'actions', include: ['myComp.**'] }
+```
+
+`include` is the glob(s) matched against the component's token root key(s) across the resolved
+token set — it scopes what gets emitted into that component's stylesheet, it does not affect token
+resolution (all tokens are resolved for every component; `include`/`exclude` only filter the
+output). Every theme's `terrazzo.components.js` reads this same manifest, so one entry produces the
+`styles/{theme}.scss` output for all five themes automatically — create the component's token JSON
+(`tokens/platforms/{theme}/components/{name}.json`) for each theme first, then run
+`npm run scss:build -- --build component={name}` to generate all five stylesheets at once.
+
 ## Adding a New Terrazzo Config
 
-All Terrazzo configs must:
+A new *theme-level* config (not a component) — e.g. adding a `mode`, `text`, `icon`, or `color`
+build for a new platform — must:
 
 1. Import `tokensStudioCompat` (default), `cssTransform`, and optionally `preprocessTokens` from `../plugins/tokens-studio-compat.js`
 2. Pass `tokensStudioCompat()` as the first entry in `plugins`
 3. Pass `cssTransform` to the `css()` plugin via `transform: cssTransform`
 4. Use `preprocessTokens(tokenPaths)` as the `tokens` value when the source files may contain Tokens Studio `$type` names
 
+A new theme's `terrazzo.components.js` should instead call `defineComponentsConfig()` from
+`terrazzo/plugins/component-config.js` (see `terrazzo/figma/terrazzo.components.js` for the
+minimal shape) rather than being written by hand.
+
 ## Important Notes
 
 - Generated files are automatically saved in the directories specified in the Terrazzo configuration.
 - Do not directly modify generated CSS files, as your changes will be overwritten during the next generation.
-- If you add a new component, don't forget to create the corresponding Terrazzo configuration file.
+- If you add a new component, register it once in `terrazzo/components.manifest.js` — every theme picks it up automatically, no per-theme config file needed.
 - Terrazzo 2.0.0-rc.0 is currently installed locally. Once a stable release is published, the dependency should be updated in `package.json`.
 - The `.terrazzo-tmp/` directory is created automatically by `preprocessTokens` and should be added to `.gitignore`.

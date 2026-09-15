@@ -79,11 +79,12 @@ Example: `--button-primary-background-color-hover`
 
 The SCSS file for each component:
 
-1. Imports all four platform themes at the top:
+1. Imports all five platform themes at the top:
    ```scss
    @import 'styles/penpot';
    @import 'styles/sketch';
    @import 'styles/figma';
+   @import 'styles/yelbolt';
    @import 'styles/framer';
    ```
 2. Uses only CSS variables for every themeable value — no hardcoded colors, spacing, radii, or font values.
@@ -98,8 +99,11 @@ document.documentElement.setAttribute('data-theme', 'figma')
 document.documentElement.setAttribute('data-mode', 'figma-dark')
 ```
 
-Available themes: `figma` · `penpot` · `sketch` · `framer`
-Available modes: `{theme}-light` · `{theme}-dark` (plus `figjam` for figma)
+Available themes: `figma` · `penpot` · `sketch` · `framer` · `yelbolt`
+Available modes: `{theme}-light` · `{theme}-dark` (plus `figjam` for figma). `yelbolt` instead has
+14 modes, one per `{family}-{light,dark}` pair across its seven color families
+(`isb` · `ntl` · `tcn` · `uicp` · `uics` · `uno` · `ylb`), e.g.
+`data-mode="yelbolt-ylb-dark"` — see [docs/color-mode-gradation.md](docs/color-mode-gradation.md).
 
 ### Public exports
 
