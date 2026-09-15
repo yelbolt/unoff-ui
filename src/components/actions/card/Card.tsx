@@ -63,8 +63,11 @@ const Card = (props: CardProps) => {
   } = props
   const hasAsset = Boolean(src) || (insert !== undefined && insert !== null)
 
-  const isFromActions = (target: EventTarget | null) =>
-    target instanceof HTMLElement && target.closest('.card__actions') !== null
+  const isFromActionControl = (target: EventTarget | null) =>
+    target instanceof HTMLElement &&
+    target.closest(
+      '.card__actions button, .card__actions a, .card__actions input, .card__actions select, .card__actions textarea, .card__actions [role="button"]'
+    ) !== null
 
   return (
     <div
@@ -75,12 +78,12 @@ const Card = (props: CardProps) => {
       onFocus={() => setActionsVisible(true)}
       onBlur={() => setActionsVisible(false)}
       onKeyDown={(e) => {
-        if (isFromActions(e.target)) return
+        if (isFromActionControl(e.target)) return
         if (e.key === 'Enter' || e.key === ' ') action(e)
         if (e.key === 'Escape') (e.target as HTMLElement).blur()
       }}
       onMouseDown={(e) => {
-        if (isFromActions(e.target)) return
+        if (isFromActionControl(e.target)) return
         action(e)
       }}
       tabIndex={0}

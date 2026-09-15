@@ -71,6 +71,20 @@ export const Default: Story = {
     const [firstAction] = await canvas.findAllByRole('button')
     await userEvent.click(firstAction)
     await expect(args.action).toHaveBeenCalledTimes(callsBeforeActionClick)
+
+    card.focus()
+    const overlay = canvasElement.querySelector('.card__actions') as HTMLElement
+    const overlayRect = overlay.getBoundingClientRect()
+    const emptySpot = document.elementFromPoint(
+      Math.round(overlayRect.left + 4),
+      Math.round(overlayRect.top + 4)
+    ) as HTMLElement
+    const callsBeforeEmptySpaceClick = (args.action as ReturnType<typeof fn>)
+      .mock.calls.length
+    emptySpot.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }))
+    await expect(args.action).toHaveBeenCalledTimes(
+      callsBeforeEmptySpaceClick + 1
+    )
   },
 }
 

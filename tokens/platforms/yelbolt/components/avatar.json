@@ -5,11 +5,11 @@
       "$type": "dimension"
     },
     "height": {
-      "$value": "{control.icon.800}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{radius.xlarge}",
+      "$value": "{radius.full}",
       "$type": "dimension"
     }
   }
