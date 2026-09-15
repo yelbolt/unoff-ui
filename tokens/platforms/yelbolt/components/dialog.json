@@ -87,7 +87,7 @@
           "$type": "dimension"
         },
         "right": {
-          "$value": "{space.inset.400}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "bottom": {
