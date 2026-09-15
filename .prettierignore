@@ -7,8 +7,10 @@ coverage
 **/sketch.scss
 **/penpot.scss
 **/framer.scss
+**/yelbolt.scss
 **/figma-*.scss
 **/sketch-*.scss
 **/penpot-*.scss
 **/framer-*.scss
+**/yelbolt-*.scss
 **/commons.scss
