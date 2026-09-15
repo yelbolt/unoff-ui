@@ -12,11 +12,11 @@
     },
     "radius": {
       "default": {
-        "$value": "{radius.full}",
+        "$value": "{radius.xxlarge}",
         "$type": "dimension"
       },
       "vertical": {
-        "$value": "{radius.full}",
+        "$value": "{radius.xxlarge}",
         "$type": "dimension"
       }
     },

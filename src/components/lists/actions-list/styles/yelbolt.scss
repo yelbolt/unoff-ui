@@ -5,7 +5,7 @@
 :root[data-theme="yelbolt"] {
   --actions-list-background-color: var(--color-background-primary-default);
   --actions-list-border-color: var(--color-border-primary-default);
-  --actions-list-border-offset: var(--stroke-offset-thin);
+  --actions-list-border-offset: var(--stroke-offset-none);
   --actions-list-border-width: var(--stroke-width-thin);
   --actions-list-caret-color-default: var(--color-icon-on-primary-default);
   --actions-list-caret-color-disabled: var(--color-icon-on-primary-disabled);

@@ -58,7 +58,7 @@
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{stroke.offset.thin}",
+        "$value": "{stroke.offset.none}",
         "$type": "dimension"
       }
     },
