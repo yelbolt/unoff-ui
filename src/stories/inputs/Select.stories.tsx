@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within, waitFor } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 import Select from '@components/inputs/select/Select'
 
 const meta: Meta<typeof Select> = {
@@ -36,21 +36,24 @@ export const CheckBox: Story = {
     value: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean
-    }>()
+    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
+    const [isChecked, setIsChecked] = useState(argsState.isChecked)
+
+    useEffect(() => {
+      setIsChecked(argsState.isChecked)
+    }, [argsState.isChecked])
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        isChecked: !argsState.isChecked,
-      })
+      const next = !isChecked
+      setIsChecked(next)
+      updateArgs({ isChecked: next })
       args.action(e)
     }
 
     return (
       <Select
         {...args}
-        isChecked={argsState.isChecked}
+        isChecked={isChecked}
         action={action}
       />
     )
@@ -64,6 +67,7 @@ export const CheckBox: Story = {
 
     await userEvent.click(checkbox)
     await expect(args.action).toHaveBeenCalled()
+    await waitFor(() => expect(checkbox).toBeChecked())
   },
 }
 
@@ -84,21 +88,24 @@ export const RadioButton: Story = {
     value: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean
-    }>()
+    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
+    const [isChecked, setIsChecked] = useState(argsState.isChecked)
+
+    useEffect(() => {
+      setIsChecked(argsState.isChecked)
+    }, [argsState.isChecked])
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        isChecked: !argsState.isChecked,
-      })
+      const next = !isChecked
+      setIsChecked(next)
+      updateArgs({ isChecked: next })
       args.action(e)
     }
 
     return (
       <Select
         {...args}
-        isChecked={argsState.isChecked}
+        isChecked={isChecked}
         action={action}
       />
     )
@@ -112,6 +119,7 @@ export const RadioButton: Story = {
 
     await userEvent.click(radio)
     await expect(args.action).toHaveBeenCalled()
+    await waitFor(() => expect(radio).toBeChecked())
   },
 }
 
@@ -132,21 +140,24 @@ export const SwitchButton: Story = {
     value: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      isChecked: boolean
-    }>()
+    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
+    const [isChecked, setIsChecked] = useState(argsState.isChecked)
+
+    useEffect(() => {
+      setIsChecked(argsState.isChecked)
+    }, [argsState.isChecked])
 
     const action = (e: ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        isChecked: !argsState.isChecked,
-      })
+      const next = !isChecked
+      setIsChecked(next)
+      updateArgs({ isChecked: next })
       args.action(e)
     }
 
     return (
       <Select
         {...args}
-        isChecked={argsState.isChecked}
+        isChecked={isChecked}
         action={action}
       />
     )

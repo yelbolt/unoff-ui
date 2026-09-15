@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within } from 'storybook/test'
-import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
 import Icon from '@components/assets/icon/Icon'
 import Card from '@components/actions/card/Card'
@@ -38,24 +37,14 @@ export const Default: Story = {
           icon="star-on"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
         <Button
           type="icon"
           icon="search"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
       </>
     ),
@@ -75,6 +64,13 @@ export const Default: Story = {
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
+
+    const callsBeforeActionClick = (args.action as ReturnType<typeof fn>).mock
+      .calls.length
+    await userEvent.hover(card)
+    const [firstAction] = await canvas.findAllByRole('button')
+    await userEvent.click(firstAction)
+    await expect(args.action).toHaveBeenCalledTimes(callsBeforeActionClick)
   },
 }
 
@@ -132,12 +128,7 @@ export const WithoutTitle: Story = {
         icon="settings"
         size="small"
         state="default"
-        action={(
-          e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-        ) => {
-          e.stopPropagation()
-          fn()
-        }}
+        action={() => fn()}
       />
     ),
   },
@@ -176,24 +167,14 @@ export const Filled: Story = {
           icon="styles"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
         <Button
           type="icon"
           icon="trash"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
       </>
     ),
@@ -241,12 +222,7 @@ export const WithInsert: Story = {
         icon="trash"
         size="small"
         state="default"
-        action={(
-          e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-        ) => {
-          e.stopPropagation()
-          fn()
-        }}
+        action={() => fn()}
       />
     ),
   },
@@ -263,9 +239,16 @@ export const WithInsert: Story = {
     const card = canvas.getByRole('article')
     // Actions overlay is revealed on focus, over the fragment slot
     card.focus()
-    await expect(await canvas.findByRole('button')).toBeInTheDocument()
+    const actionButton = await canvas.findByRole('button')
+    await expect(actionButton).toBeInTheDocument()
 
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
+
+    // Clicking the action button itself must not also trigger the card
+    const callsBeforeActionClick = (args.action as ReturnType<typeof fn>).mock
+      .calls.length
+    await userEvent.click(actionButton)
+    await expect(args.action).toHaveBeenCalledTimes(callsBeforeActionClick)
   },
 }

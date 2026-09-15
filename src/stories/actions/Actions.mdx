@@ -82,7 +82,7 @@ A content container for presenting a named item with an optional thumbnail, tag,
 - `tag` places a `Chip` badge on the thumbnail — use for status, type, or category labels.
 - `title` + `subtitle` form the primary identity of the card; `richText` allows freeform content below.
 - `shouldFill` makes the card expand to fill its container — useful in grid layouts.
-- The entire card is interactive via `action`; avoid nesting other interactive elements unless they stop propagation.
+- The entire card is interactive via `action`; a click or keypress on anything rendered inside `actions` is automatically excluded from it, so those buttons don't need to call `stopPropagation` themselves.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">
