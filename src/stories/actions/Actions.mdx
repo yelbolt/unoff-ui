@@ -77,7 +77,8 @@ A content container for presenting a named item with an optional thumbnail, tag,
 <DocTabs>
 <Tab label="Usage">
 
-- Use `src` to show a thumbnail preview; pair with `actions` for contextual hover actions (e.g. duplicate, delete).
+- Use `src` to show a thumbnail preview, or `insert` to fill the same slot with a fragment (an icon, initials, a color swatch) when no image exists; both are forwarded to `Thumbnail`.
+- The asset slot — and therefore the `actions` overlay — is rendered as soon as either `src` or `insert` is present; pair it with `actions` for contextual hover actions (e.g. duplicate, delete).
 - `tag` places a `Chip` badge on the thumbnail — use for status, type, or category labels.
 - `title` + `subtitle` form the primary identity of the card; `richText` allows freeform content below.
 - `shouldFill` makes the card expand to fill its container — useful in grid layouts.

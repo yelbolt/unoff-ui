@@ -2,7 +2,21 @@ import { useEffect, useState } from 'react'
 import Icon from '../icon/Icon'
 import './thumbnail.scss'
 
-interface ThumbnailSharedProps {
+export interface ThumbnailProps {
+  /**
+   * Image source URL to display
+   */
+  src?: string
+  /**
+   * Alt text for the image
+   * @default 'Image thumbnail'
+   */
+  alt?: string
+  /**
+   * Custom content to display in the same slot (an icon, initials, a color swatch, etc.).
+   * Used when no `src` is provided, and as the fallback when the image fails to load
+   */
+  insert?: React.ReactNode
   /**
    * Width of the thumbnail
    * @default '100%'
@@ -15,35 +29,17 @@ interface ThumbnailSharedProps {
   height?: string
 }
 
-interface ThumbnailImageProps extends ThumbnailSharedProps {
-  /**
-   * Image source URL to display
-   */
-  src: string
-  /**
-   * Alt text for the image
-   * @default 'Image thumbnail'
-   */
-  alt?: string
-  children?: never
-}
-
-interface ThumbnailFragmentProps extends ThumbnailSharedProps {
-  src?: never
-  alt?: never
-  /**
-   * Custom content to display instead of an image (an icon, initials, a color swatch, etc.)
-   */
-  children: React.ReactNode
-}
-
-export type ThumbnailProps = ThumbnailImageProps | ThumbnailFragmentProps
-
 const Thumbnail = (props: ThumbnailProps) => {
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
-  const { src, width = '100%', height = '100%', children } = props
-  const alt = 'alt' in props ? (props.alt ?? 'Image thumbnail') : undefined
+  const {
+    src,
+    alt = 'Image thumbnail',
+    insert,
+    width = '100%',
+    height = '100%',
+  } = props
+  const hasInsert = insert !== undefined && insert !== null
 
   useEffect(() => {
     if (!src) return
@@ -55,7 +51,7 @@ const Thumbnail = (props: ThumbnailProps) => {
     img.onerror = () => setIsError(true)
   }, [src])
 
-  if (!src)
+  if (!src || isError)
     return (
       <div
         className="thumbnail"
@@ -64,25 +60,18 @@ const Thumbnail = (props: ThumbnailProps) => {
           height: height,
         }}
       >
-        <div className="thumbnail__fragment">{children}</div>
-      </div>
-    )
-
-  if (isError)
-    return (
-      <div
-        className="thumbnail"
-        style={{
-          width: width,
-          height: height,
-        }}
-      >
-        <Icon
-          type="PICTO"
-          iconName="warning"
-          customClassName="thumbnail__error"
-          aria-hidden="true"
-        />
+        {hasInsert ? (
+          <div className="thumbnail__fragment">{insert}</div>
+        ) : (
+          isError && (
+            <Icon
+              type="PICTO"
+              iconName="warning"
+              customClassName="thumbnail__error"
+              aria-hidden="true"
+            />
+          )
+        )}
       </div>
     )
 

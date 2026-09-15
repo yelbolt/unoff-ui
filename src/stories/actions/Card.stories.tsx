@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within } from 'storybook/test'
 import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
+import Icon from '@components/assets/icon/Icon'
 import Card from '@components/actions/card/Card'
 import Button from '@components/actions/button/Button'
 
@@ -210,6 +211,60 @@ export const Filled: Story = {
     await expect(image).toBeInTheDocument()
 
     const card = canvas.getByRole('article')
+    await userEvent.click(card)
+    await expect(args.action).toHaveBeenCalled()
+  },
+}
+
+export const WithInsert: Story = {
+  args: {
+    insert: (
+      <Icon
+        type="PICTO"
+        iconName="library"
+      />
+    ),
+    tag: 'No preview',
+    title: 'Card with a fragment',
+    subtitle: 'No image, an insert instead',
+    richText: (
+      <span className={texts.type}>
+        This card fills its asset slot with a fragment and still exposes hover
+        actions
+      </span>
+    ),
+    shouldFill: false,
+    action: fn(),
+    actions: (
+      <Button
+        type="icon"
+        icon="trash"
+        size="small"
+        state="default"
+        action={(
+          e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
+        ) => {
+          e.stopPropagation()
+          fn()
+        }}
+      />
+    ),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const title = canvas.getByText('Card with a fragment')
+    await expect(title).toBeInTheDocument()
+
+    // No image is fetched, yet the asset slot and its actions exist
+    await expect(canvasElement.querySelector('img')).toBeNull()
+    await expect(canvas.getByLabelText('library')).toBeInTheDocument()
+
+    const card = canvas.getByRole('article')
+    // Actions overlay is revealed on focus, over the fragment slot
+    card.focus()
+    await expect(await canvas.findByRole('button')).toBeInTheDocument()
+
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
   },

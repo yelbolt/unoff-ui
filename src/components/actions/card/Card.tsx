@@ -11,6 +11,11 @@ interface CardProps {
    */
   src?: string
   /**
+   * Custom content to display in the card thumbnail slot (an icon, initials, a
+   * color swatch, etc.) instead of — or as a fallback for — an image
+   */
+  insert?: React.ReactNode
+  /**
    * Tag label of the card
    */
   tag?: string
@@ -47,6 +52,7 @@ const Card = (props: CardProps) => {
   const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
   const {
     src,
+    insert,
     tag,
     title,
     subtitle,
@@ -55,6 +61,7 @@ const Card = (props: CardProps) => {
     shouldFill = false,
     action,
   } = props
+  const hasAsset = Boolean(src) || (insert !== undefined && insert !== null)
 
   return (
     <div
@@ -79,12 +86,15 @@ const Card = (props: CardProps) => {
           <Chip isSolo>{tag}</Chip>
         </div>
       )}
-      {src && (
+      {hasAsset && (
         <div
           className="card__asset"
           role="group"
         >
-          <Thumbnail src={src} />
+          <Thumbnail
+            src={src}
+            insert={insert}
+          />
           {actions && (
             <div
               className={'card__actions'}

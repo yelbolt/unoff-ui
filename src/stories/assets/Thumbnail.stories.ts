@@ -30,7 +30,7 @@ export const Fragment: Story = {
   args: {
     width: '300px',
     height: '200px',
-    children: 'AB',
+    insert: 'AB',
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
