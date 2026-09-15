@@ -3,7 +3,7 @@
 
 # Unoff UI
 
-Unoff UI is a comprehensive library of UI components designed specifically for building Figma, Penpot, and Sketch plugins. It leverages modern tools and frameworks to ensure a seamless development experience.
+Unoff UI is a comprehensive library of UI components designed specifically for building Figma, Penpot, Sketch, and Framer plugins. It leverages modern tools and frameworks to ensure a seamless development experience. Every component ships with five platform themes out of the box — `figma`, `penpot`, `sketch`, `framer`, and `yelbolt` — switchable at runtime via a `data-theme` attribute.
 
 <img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/a4c6c693-db16-43a8-a553-28362380a1b3" />
 

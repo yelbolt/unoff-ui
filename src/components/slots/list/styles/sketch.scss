@@ -6,13 +6,13 @@
   --list-background-color-alternate: var(--sketch-color-background-secondary);
   --list-background-color-default: var(--sketch-color-background-primary);
   --list-border-color: var(--sketch-color-border-primary);
-  --list-border-width: var(--size-pos-unit);
-  --list-message-padding-bottom: var(--size-pos-xsmall);
-  --list-message-padding-left: var(--size-pos-xsmall);
-  --list-message-padding-right: var(--size-pos-xsmall);
-  --list-message-padding-top: var(--size-pos-xsmall);
-  --list-padding-bottom: var(--size-pos-unit);
-  --list-padding-left: var(--size-null);
-  --list-padding-right: var(--size-null);
-  --list-padding-top: var(--size-pos-unit);
+  --list-border-width: var(--stroke-width-thin);
+  --list-message-padding-bottom: var(--space-inset-400);
+  --list-message-padding-left: var(--space-inset-400);
+  --list-message-padding-right: var(--space-inset-400);
+  --list-message-padding-top: var(--space-inset-400);
+  --list-padding-bottom: var(--space-inset-025);
+  --list-padding-left: var(--space-none);
+  --list-padding-right: var(--space-none);
+  --list-padding-top: var(--space-inset-025);
 }

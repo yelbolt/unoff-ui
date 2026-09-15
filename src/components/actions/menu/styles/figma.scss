@@ -3,8 +3,8 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
-  --menu-position-bottom-left: var(--size-pos-medium);
-  --menu-position-bottom-right: var(--size-pos-medium);
-  --menu-position-top-left: var(--size-neg-xxsmall);
-  --menu-position-top-right: var(--size-neg-xxsmall);
+  --menu-position-bottom-left: var(--space-offset-800);
+  --menu-position-bottom-right: var(--space-offset-800);
+  --menu-position-top-left: var(--space-pull-200);
+  --menu-position-top-right: var(--space-pull-200);
 }

@@ -630,5 +630,486 @@
         }
       }
     }
+  },
+  "space": {
+    "none": {
+      "$value": "{scale.null}",
+      "$type": "dimension"
+    },
+    "inset": {
+      "025": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "300": {
+        "$value": "{scale.pos.xmsmall}",
+        "$type": "dimension"
+      },
+      "400": {
+        "$value": "{scale.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "500": {
+        "$value": "{scale.pos.msmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{scale.pos.small}",
+        "$type": "dimension"
+      },
+      "800": {
+        "$value": "{scale.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "025": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "400": {
+        "$value": "{scale.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{scale.pos.small}",
+        "$type": "dimension"
+      },
+      "800": {
+        "$value": "{scale.pos.medium}",
+        "$type": "dimension"
+      }
+    },
+    "offset": {
+      "025": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "300": {
+        "$value": "{scale.pos.xmsmall}",
+        "$type": "dimension"
+      },
+      "400": {
+        "$value": "{scale.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "500": {
+        "$value": "{scale.pos.msmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{scale.pos.small}",
+        "$type": "dimension"
+      },
+      "800": {
+        "$value": "{scale.pos.medium}",
+        "$type": "dimension"
+      },
+      "1000": {
+        "$value": "{scale.pos.large}",
+        "$type": "dimension"
+      }
+    },
+    "pull": {
+      "025": {
+        "$value": "{scale.neg.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.neg.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.neg.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.neg.xxsmall}",
+        "$type": "dimension"
+      }
+    }
+  },
+  "control": {
+    "none": {
+      "$value": "{scale.null}",
+      "$type": "dimension"
+    },
+    "size": {
+      "025": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "300": {
+        "$value": "{scale.pos.xmsmall}",
+        "$type": "dimension"
+      },
+      "400": {
+        "$value": "{scale.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "500": {
+        "$value": "{scale.pos.msmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{scale.pos.small}",
+        "$type": "dimension"
+      },
+      "800": {
+        "$value": "{scale.pos.medium}",
+        "$type": "dimension"
+      },
+      "900": {
+        "$value": "{scale.pos.xmedium}",
+        "$type": "dimension"
+      },
+      "1000": {
+        "$value": "{scale.pos.large}",
+        "$type": "dimension"
+      },
+      "1200": {
+        "$value": "{scale.pos.xlarge}",
+        "$type": "dimension"
+      },
+      "1600": {
+        "$value": "{scale.pos.xxlarge}",
+        "$type": "dimension"
+      },
+      "2000": {
+        "$value": "{scale.pos.xxxlarge}",
+        "$type": "dimension"
+      },
+      "2400": {
+        "$value": "{scale.pos.huge}",
+        "$type": "dimension"
+      }
+    },
+    "icon": {
+      "025": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "050": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      },
+      "100": {
+        "$value": "{scale.pos.xxxsmall}",
+        "$type": "dimension"
+      },
+      "200": {
+        "$value": "{scale.pos.xxsmall}",
+        "$type": "dimension"
+      },
+      "400": {
+        "$value": "{scale.pos.xsmall}",
+        "$type": "dimension"
+      },
+      "500": {
+        "$value": "{scale.pos.msmall}",
+        "$type": "dimension"
+      },
+      "600": {
+        "$value": "{scale.pos.small}",
+        "$type": "dimension"
+      },
+      "800": {
+        "$value": "{scale.pos.medium}",
+        "$type": "dimension"
+      },
+      "900": {
+        "$value": "{scale.pos.large}",
+        "$type": "dimension"
+      }
+    }
+  },
+  "stroke": {
+    "width": {
+      "none": {
+        "$value": "{scale.null}",
+        "$type": "dimension"
+      },
+      "thin": {
+        "$value": "{scale.pos.unit}",
+        "$type": "dimension"
+      },
+      "thick": {
+        "$value": "{scale.pos.xunit}",
+        "$type": "dimension"
+      }
+    },
+    "offset": {
+      "none": {
+        "$value": "{scale.null}",
+        "$type": "dimension"
+      },
+      "thin": {
+        "$value": "{scale.neg.unit}",
+        "$type": "dimension"
+      },
+      "thick": {
+        "$value": "{scale.neg.xunit}",
+        "$type": "dimension"
+      },
+      "positive": {
+        "thin": {
+          "$value": "{scale.pos.unit}",
+          "$type": "dimension"
+        },
+        "thick": {
+          "$value": "{scale.pos.xunit}",
+          "$type": "dimension"
+        }
+      }
+    }
+  },
+  "radius": {
+    "none": {
+      "$value": "{border.radius.null}",
+      "$type": "dimension"
+    },
+    "small": {
+      "$value": "{border.radius.small}",
+      "$type": "dimension"
+    },
+    "medium": {
+      "$value": "{border.radius.medium}",
+      "$type": "dimension"
+    },
+    "large": {
+      "$value": "{border.radius.large}",
+      "$type": "dimension"
+    },
+    "xlarge": {
+      "$value": "{border.radius.xlarge}",
+      "$type": "dimension"
+    },
+    "xxlarge": {
+      "$value": "{border.radius.xxlarge}",
+      "$type": "dimension"
+    },
+    "full": {
+      "$value": "{border.radius.full}",
+      "$type": "dimension"
+    }
+  },
+  "global": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.bg.default}",
+          "$type": "color"
+        },
+        "inverse": {
+          "$value": "{figma.color.bg.inverse}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{figma.color.bg.selected.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{figma.color.border.default}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{stroke.offset.thin}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{radius.medium}",
+      "$type": "dimension"
+    }
+  },
+  "type": {
+    "size": {
+      "01": {
+        "$value": "{font.size.xsmall}",
+        "$type": "dimension"
+      },
+      "02": {
+        "$value": "{font.size.small}",
+        "$type": "dimension"
+      },
+      "03": {
+        "$value": "{font.size.medium}",
+        "$type": "dimension"
+      },
+      "04": {
+        "$value": "{font.size.large}",
+        "$type": "dimension"
+      },
+      "05": {
+        "$value": "{font.size.xlarge}",
+        "$type": "dimension"
+      },
+      "00": {
+        "$value": "{font.size.xxsmall}",
+        "$type": "dimension"
+      }
+    },
+    "leading": {
+      "default": {
+        "$value": "{font.lineHeight.default}",
+        "$type": "number"
+      },
+      "large": {
+        "$value": "{font.lineHeight.large}",
+        "$type": "number"
+      }
+    },
+    "tracking": {
+      "small": {
+        "$value": "{font.letterSpacing.pos.small}",
+        "$type": "dimension"
+      },
+      "medium": {
+        "$value": "{font.letterSpacing.pos.medium}",
+        "$type": "dimension"
+      },
+      "large": {
+        "$value": "{font.letterSpacing.pos.large}",
+        "$type": "dimension"
+      },
+      "xlarge": {
+        "$value": "{font.letterSpacing.pos.xlarge}",
+        "$type": "dimension"
+      }
+    },
+    "weight": {
+      "400": {
+        "$value": "{font.weight.normal}",
+        "$type": "fontWeights"
+      },
+      "450": {
+        "$value": "{font.weight.accent}",
+        "$type": "fontWeights"
+      },
+      "500": {
+        "$value": "{font.weight.medium}",
+        "$type": "fontWeights"
+      },
+      "550": {
+        "$value": "{font.weight.semi}",
+        "$type": "fontWeights"
+      },
+      "600": {
+        "$value": "{font.weight.bold}",
+        "$type": "fontWeights"
+      }
+    }
+  },
+  "motion": {
+    "$description": "Semantic motion layer. Components never reach into the duration/easing/transform primitives directly — they go through these lanes so a mode can retime or immobilise the whole library.",
+    "duration": {
+      "$type": "duration",
+      "$description": "Interaction lanes (instant/fast/base/slow) pace feedback the user triggers; `control` paces a control's own state travel and stays alive on every platform.",
+      "instant": {
+        "$value": "{duration.null}"
+      },
+      "fast": {
+        "$value": "{duration.null}"
+      },
+      "base": {
+        "$value": "{duration.null}"
+      },
+      "slow": {
+        "$value": "{duration.null}"
+      },
+      "control": {
+        "$value": "{duration.medium}"
+      }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "$description": "Motion character. `default` is the house curve.",
+      "standard": {
+        "$value": "{easing.standard}"
+      },
+      "entrance": {
+        "$value": "{easing.decelerate}"
+      },
+      "exit": {
+        "$value": "{easing.accelerate}"
+      },
+      "emphasis": {
+        "$value": "{easing.emphasized}"
+      }
+    },
+    "transform": {
+      "$type": "string",
+      "$description": "Interaction feedback expressed as a CSS transform function.",
+      "none": {
+        "$value": "{transform.none}"
+      },
+      "raise": {
+        "$value": "{transform.none}"
+      },
+      "sink": {
+        "$value": "{transform.none}"
+      },
+      "grow": {
+        "$value": "{transform.none}"
+      },
+      "shrink": {
+        "$value": "{transform.none}"
+      }
+    }
   }
 }

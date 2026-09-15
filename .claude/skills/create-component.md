@@ -73,6 +73,7 @@ The SCSS file **must**:
    @import 'styles/penpot';
    @import 'styles/sketch';
    @import 'styles/figma';
+   @import 'styles/yelbolt';
    @import 'styles/framer';
    ```
 2. Use CSS custom properties (variables) for **all** themeable values. Variable naming convention:
@@ -108,34 +109,49 @@ The SCSS file **must**:
 
 ### 2c — Component token set (JSON)
 
-Create the design token file for **each of the four platform themes**:
+Create the design token file for **each of the five platform themes**:
 
 ```
-tokens/platforms/{figma|penpot|sketch|framer}/components/{component-name}.json
+tokens/platforms/{figma|penpot|sketch|framer|yelbolt}/components/{component-name}.json
 ```
 
-The file must mirror the same values across all themes (start by copying one and adapting the semantic references per theme). Token structure follows DTCG format with nested objects mapping to the CSS variable naming convention:
+The file must mirror the same values across all themes (start by copying one and adapting the semantic references per theme). Token structure follows DTCG format with nested objects mapping to the CSS variable naming convention.
+
+`yelbolt` is the exception: it does not reference `{scale.*}` / `{font.*}` / `{border.radius.*}`
+commons primitives directly like the other four. It routes every dimension through its own
+`dimension.*` system layer (`{control.*}`, `{space.*}`, `{radius.*}`, `{stroke.*}`, `{type.*}` —
+see [docs/dimension-system.md](../../docs/dimension-system.md)) and every color through a
+theme-generic `{color.*}` reference (e.g. `{color.text.primary.default}`) instead of a
+platform-namespaced one (e.g. `{figma.color.text}`). It also carries `transition` and per-state
+`transform` tokens driven by `{motion.*}` (see
+[docs/motion-system.md](../../docs/motion-system.md)) — the other four themes only need a bare
+`transition`/`transform` resolving to `0ms`/`none` (except `motion.duration.control`, which stays
+at 200ms everywhere). Do not copy the figma/penpot/sketch/framer JSON verbatim into yelbolt's file —
+build it from `tokens/platforms/yelbolt/components/button.json` as the reference pattern instead.
+
+The figma/penpot/sketch/framer template below (DTCG format, nested objects mapping to the CSS
+variable naming convention):
 
 ```json
 {
   "{camelCaseName}": {
     "base": {
-      "height": { "$value": "{size.pos.small}", "$type": "dimension" },
-      "gap": { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
+      "height": { "$value": "{scale.pos.small}", "$type": "dimension" },
+      "gap": { "$value": "{scale.pos.xxxsmall}", "$type": "dimension" },
       "radius": { "$value": "{border.radius.medium}", "$type": "dimension" },
       "padding": {
-        "top": { "$value": "{size.null}", "$type": "dimension" },
-        "right": { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
-        "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left": { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
+        "top": { "$value": "{scale.null}", "$type": "dimension" },
+        "right": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" },
+        "bottom": { "$value": "{scale.null}", "$type": "dimension" },
+        "left": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" }
       },
       "background": {
         "color": { "$value": "transparent", "$type": "string" }
       },
       "border": {
         "color": { "$value": "transparent", "$type": "string" },
-        "width": { "$value": "{size.null}", "$type": "dimension" },
-        "offset": { "$value": "{size.null}", "$type": "dimension" }
+        "width": { "$value": "{scale.null}", "$type": "dimension" },
+        "offset": { "$value": "{scale.null}", "$type": "dimension" }
       },
       "text": {
         "color": { "$value": "{figma.color.text}", "$type": "color" }
@@ -162,11 +178,11 @@ The file must mirror the same values across all themes (start by copying one and
       },
       "border": {
         "width": {
-          "default": { "$value": "{size.null}", "$type": "dimension" },
-          "hover": { "$value": "{size.null}", "$type": "dimension" },
-          "pressed": { "$value": "{size.null}", "$type": "dimension" },
-          "focus": { "$value": "{size.pos.unit}", "$type": "dimension" },
-          "disabled": { "$value": "{size.null}", "$type": "dimension" }
+          "default": { "$value": "{scale.null}", "$type": "dimension" },
+          "hover": { "$value": "{scale.null}", "$type": "dimension" },
+          "pressed": { "$value": "{scale.null}", "$type": "dimension" },
+          "focus": { "$value": "{scale.pos.unit}", "$type": "dimension" },
+          "disabled": { "$value": "{scale.null}", "$type": "dimension" }
         },
         "color": {
           "default": { "$value": "transparent", "$type": "string" },
@@ -213,65 +229,43 @@ Rules:
 - Use semantic token references from the platform namespace (e.g. `{figma.color.bg.brand}`) — never raw hex values.
 - All five interaction states must be present for every color property: `default`, `hover`, `pressed`, `focus`, `disabled`.
 - Non-colour properties (dimensions, strings) only need a single value unless they change per state.
-- Reference files: `tokens/platforms/figma/components/button.json`, `tokens/platforms/figma/components/chip.json`
+- Reference files: `tokens/platforms/figma/components/button.json`, `tokens/platforms/figma/components/chip.json` (figma/penpot/sketch/framer pattern); `tokens/platforms/yelbolt/components/button.json` (yelbolt pattern)
 
-### 2d — Terrazzo configuration
+### 2d — Register the component in the Terrazzo manifest
 
-Create one Terrazzo config per platform theme in:
-
-```
-terrazzo/{figma|penpot|sketch|framer}/components/terrazzo.{component-name}.js
-```
-
-Each file follows exactly the same structure — only the theme name and component path change:
+Components do **not** get their own Terrazzo config file per theme. Every theme's
+`terrazzo/{theme}/terrazzo.components.js` emits all component stylesheets from one shared registry:
+add a single entry to `terrazzo/components.manifest.js`:
 
 ```js
-import css from '@terrazzo/plugin-css'
-import { defineConfig } from '@terrazzo/cli'
-
-export default defineConfig({
-  name: 'global',
-  tokens: [
-    './tokens/globals/color.json',
-    './tokens/globals/typography.json',
-    './tokens/globals/spacing.json',
-    './tokens/globals/effect.json',
-    './tokens/globals/radius.json',
-    './tokens/platforms/{theme}/color.json',
-    './tokens/platforms/{theme}/typography.json',
-    './tokens/platforms/{theme}/icon.json',
-    './tokens/platforms/{theme}/components/{component-name}.json',
-  ],
-  outDir: './src/components/{category}/{kebab-name}/',
-  plugins: [
-    css({
-      filename: 'styles/{theme}.scss',
-      exclude: [
-        '{theme}.color.*',
-        'font.*',
-        'size.*',
-        'shadow.*',
-        'border.*',
-        'grey.*',
-        'elevation.*',
-        'icon.*',
-      ],
-      baseSelector: ':root[data-theme="{theme}"]',
-    }),
-  ],
-  lint: {
-    rules: {},
-  },
-})
+{ name: '{component-name}', category: '{category}', include: ['{camelCaseName}.**'] }
 ```
 
-Rules:
+- `name` — kebab-case, matches the folder name.
+- `category` — one of `actions`, `assets`, `dialogs`, `inputs`, `lists`, `slots`, `tags`.
+- `include` — glob(s) matched against the component's token root key(s) (the same `camelCaseName`
+  used as the root key in the token JSON from Step 2c). List more than one entry if the component's
+  tokens span multiple root keys (e.g. `button` also covers `iconButton`).
 
-- Create **four files** (figma, penpot, sketch, framer) — one per theme.
-- `outDir` points to the component's source folder (where Terrazzo writes the generated `styles/{theme}.scss`).
-- `filename` in the CSS plugin is always `styles/{theme}.scss` — this is what the component's SCSS imports with `@import 'styles/{theme}'`.
-- The `exclude` list always contains `'{theme}.color.*'` (using the actual theme name), plus the standard global namespaces.
-- Reference files: `terrazzo/figma/components/terrazzo.button.js`, `terrazzo/figma/components/terrazzo.chip.js`
+Keep the array alphabetically ordered by `name`, matching the existing entries.
+
+This one entry is enough for all five themes — there is nothing further to create per theme. Each
+`terrazzo/{theme}/terrazzo.components.js` calls `defineComponentsConfig()` (from
+`terrazzo/plugins/component-config.js`), which reads `COMPONENTS` from the manifest and generates
+`styles/{theme}.scss` for every entry, scoped by that entry's `include` and excluding all primitive/motion
+namespaces (`PRIMITIVE_EXCLUDES` in the manifest file) automatically — no manual `exclude` list to
+write.
+
+Once the token JSON (Step 2c) exists for a theme and the manifest entry is added, generate that
+theme's stylesheet with:
+
+```bash
+npm run scss:build -- --build theme={theme} component={component-name}
+# or, for all five themes at once:
+npm run scss:build -- --build component={component-name}
+```
+
+Reference files: `terrazzo/components.manifest.js`, `terrazzo/figma/terrazzo.components.js`, `terrazzo/plugins/component-config.js`. Full pipeline details: [docs/terrazzo-guide.md](../../docs/terrazzo-guide.md).
 
 ---
 
@@ -335,6 +329,8 @@ export const Default: Story = {
 
 Add one exported story per meaningful variant (matching the component's `type` or primary prop values).
 
+If the props are a discriminated union offering mutually exclusive content modes (e.g. an image `src` vs a `children`/fragment slot, as in `Thumbnail`), add one story per mode — a single default-args story only exercises whichever branch its args happen to satisfy and leaves the other completely untested.
+
 Each `play` function must:
 
 - Verify the element is in the DOM
@@ -379,12 +375,25 @@ Open (or create) `src/stories/{category}/{CategoryTitle}.mdx` and add a section 
 Before finishing, verify:
 
 - [ ] `{ComponentName}.tsx` exports a `default` class and a named `{ComponentName}Props` interface
-- [ ] `{component-name}.scss` uses only CSS variables for themeable values and imports all four platform theme files
-- [ ] Token JSON created in `tokens/platforms/{figma|penpot|sketch|framer}/components/{component-name}.json` for all four themes
-- [ ] Terrazzo config created in `terrazzo/{figma|penpot|sketch|framer}/components/terrazzo.{component-name}.js` for all four themes
+- [ ] `{component-name}.scss` uses only CSS variables for themeable values and imports all five platform theme files
+- [ ] Token JSON created in `tokens/platforms/{figma|penpot|sketch|framer|yelbolt}/components/{component-name}.json` for all five themes (yelbolt using its own `dimension.*`/`{color.*}`/`motion.*` conventions, not the other four's)
+- [ ] Component registered in `terrazzo/components.manifest.js` and `npm run scss:build -- --build component={component-name}` run to generate all five `styles/{theme}.scss` files
 - [ ] `src/index.ts` has the new export in the right category block
 - [ ] Story file exists with at least one `play` test per exported story
 - [ ] MDX documentation section added to the category doc
+- [ ] `component-reviewer` invoked to confirm MDX/props sync and push the Figma description (Step 7) — do not consider the component done without this
+
+---
+
+## Step 7 — Sync docs (mandatory, do not skip)
+
+Creating the component is not done until its two documentation surfaces are confirmed in sync — this is not optional cleanup, it is part of the deliverable:
+
+1. Invoke the **`component-reviewer`** agent (see `.claude/agents/component-reviewer.md`) for the new component, telling it this is a post-creation check.
+2. It will re-verify the MDX section written in Step 5 actually matches the final `Props` interface (props sometimes change between drafting the MDX and finishing the TSX), and push a fresh description to the Figma design-system file (fileKey `RDBmy7x5HfkZHpafVqHNWQ`, "Unoff v0.1") following the `/figma-doc` format.
+3. If the Figma Desktop Bridge isn't connected to that file, it will hand you the ready-to-paste description markdown instead of failing silently — pass that along to the user.
+
+Report the outcome of both syncs alongside the rest of the creation summary.
 
 ---
 
@@ -392,8 +401,8 @@ Before finishing, verify:
 
 - Component example: `src/components/actions/button/Button.tsx`
 - SCSS token pattern: `src/components/actions/button/button.scss`
-- Component token JSON example: `tokens/platforms/figma/components/button.json`
-- Terrazzo config example: `terrazzo/figma/components/terrazzo.button.js`
+- Component token JSON example: `tokens/platforms/figma/components/button.json` (figma/penpot/sketch/framer pattern), `tokens/platforms/yelbolt/components/button.json` (yelbolt pattern)
+- Terrazzo manifest entry: `terrazzo/components.manifest.js`
 - Story example: `src/stories/actions/Button.stories.ts`
 - MDX doc example: `src/stories/actions/Actions.mdx`
 - Main export: `src/index.ts`

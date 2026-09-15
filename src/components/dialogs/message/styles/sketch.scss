@@ -3,26 +3,26 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
-  --message-gap: var(--size-pos-xxsmall);
+  --message-gap: var(--space-gap-200);
   --message-icon-color-default: var(--sketch-color-foreground-primary);
   --message-icon-color-disabled: var(--sketch-color-foreground-disabled);
-  --message-message-padding-bottom: var(--size-pos-xxxsmall);
-  --message-message-padding-left: var(--size-null);
-  --message-message-padding-right: var(--size-null);
-  --message-message-padding-top: var(--size-pos-xxxsmall);
-  --message-padding-bottom: var(--size-null);
-  --message-padding-left: var(--size-pos-msmall);
-  --message-padding-right: var(--size-pos-msmall);
-  --message-padding-top: var(--size-null);
+  --message-message-padding-bottom: var(--space-inset-100);
+  --message-message-padding-left: var(--space-none);
+  --message-message-padding-right: var(--space-none);
+  --message-message-padding-top: var(--space-inset-100);
+  --message-padding-bottom: var(--space-none);
+  --message-padding-left: var(--space-inset-500);
+  --message-padding-right: var(--space-inset-500);
+  --message-padding-top: var(--space-none);
   --message-text-color-default: var(--sketch-color-foreground-primary);
   --message-text-color-disabled: var(--sketch-color-foreground-disabled);
-  --message-ticker-gap: var(--size-pos-medium);
-  --message-ticker-height: var(--size-pos-medium);
+  --message-ticker-gap: var(--space-gap-800);
+  --message-ticker-height: var(--control-size-800);
   --message-ticker-mask-background-color: var(--sketch-color-background-primary);
-  --message-ticker-mask-width: var(--size-pos-xsmall);
+  --message-ticker-mask-width: var(--control-size-400);
   --message-ticker-max-width: 640px;
-  --message-ticker-padding-bottom: var(--size-null);
-  --message-ticker-padding-left: var(--size-pos-xsmall);
-  --message-ticker-padding-right: var(--size-pos-xsmall);
-  --message-ticker-padding-top: var(--size-null);
+  --message-ticker-padding-bottom: var(--space-none);
+  --message-ticker-padding-left: var(--space-inset-400);
+  --message-ticker-padding-right: var(--space-inset-400);
+  --message-ticker-padding-top: var(--space-none);
 }

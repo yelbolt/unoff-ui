@@ -1,0 +1,112 @@
+{
+  "dropzone": {
+    "padding": {
+      "top": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{space.gap.200}",
+      "$type": "dimension"
+    },
+    "minWidth": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "minHeight": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "border": {
+      "color": {
+        "default": {
+          "$value": "{color.border.secondary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{color.border.selected.focus}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{color.border.secondary.disabled}",
+          "$type": "color"
+        }
+      },
+      "width": {
+        "default": {
+          "$value": "{stroke.width.thin}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{stroke.width.thick}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{stroke.width.thin}",
+          "$type": "dimension"
+        }
+      },
+      "offset": {
+        "default": {
+          "$value": "{stroke.offset.thin}",
+          "$type": "dimension"
+        },
+        "hover": {
+          "$value": "{stroke.offset.thick}",
+          "$type": "dimension"
+        },
+        "disabled": {
+          "$value": "{stroke.offset.thin}",
+          "$type": "dimension"
+        }
+      },
+      "style": {
+        "default": {
+          "$value": "dashed",
+          "$type": "string"
+        },
+        "hover": {
+          "$value": "solid",
+          "$type": "string"
+        },
+        "disabled": {
+          "$value": "dashed",
+          "$type": "string"
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{color.background.secondary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{color.background.selected.focus}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{color.background.secondary.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "radius": {
+      "$value": "{radius.xlarge}",
+      "$type": "dimension"
+    }
+  }
+}

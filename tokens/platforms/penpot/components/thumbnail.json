@@ -1,28 +1,28 @@
 {
   "thumbnail": {
     "width": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.icon.800}",
       "$type": "dimension"
     },
     "height": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.icon.800}",
       "$type": "dimension"
     },
     "padding": {
-      "$value": "{size.pos.xsmall}",
+      "$value": "{space.inset.400}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.xlarge}",
+      "$value": "{radius.xlarge}",
       "$type": "dimension"
     },
     "border": {
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{size.neg.unit}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       },
       "color": {

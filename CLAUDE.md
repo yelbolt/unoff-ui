@@ -79,11 +79,12 @@ Example: `--button-primary-background-color-hover`
 
 The SCSS file for each component:
 
-1. Imports all four platform themes at the top:
+1. Imports all five platform themes at the top:
    ```scss
    @import 'styles/penpot';
    @import 'styles/sketch';
    @import 'styles/figma';
+   @import 'styles/yelbolt';
    @import 'styles/framer';
    ```
 2. Uses only CSS variables for every themeable value — no hardcoded colors, spacing, radii, or font values.
@@ -98,8 +99,11 @@ document.documentElement.setAttribute('data-theme', 'figma')
 document.documentElement.setAttribute('data-mode', 'figma-dark')
 ```
 
-Available themes: `figma` · `penpot` · `sketch` · `framer`
-Available modes: `{theme}-light` · `{theme}-dark` (plus `figjam` for figma)
+Available themes: `figma` · `penpot` · `sketch` · `framer` · `yelbolt`
+Available modes: `{theme}-light` · `{theme}-dark` (plus `figjam` for figma). `yelbolt` instead has
+14 modes, one per `{family}-{light,dark}` pair across its seven color families
+(`isb` · `ntl` · `tcn` · `uicp` · `uics` · `uno` · `ylb`), e.g.
+`data-mode="yelbolt-ylb-dark"` — see [docs/color-mode-gradation.md](docs/color-mode-gradation.md).
 
 ### Public exports
 
@@ -113,11 +117,22 @@ All public exports go through `src/index.ts`. Components are grouped by category
 tokens/platforms/{theme}/*.json   (DTCG format)
         ↓  npm run scss:build -- --build theme={theme}
         ↓  Terrazzo (terrazzo/{theme}/*.js configs)
-src/styles/tokens/{theme}-colors.scss
+src/styles/tokens/{theme}-modes.scss
 src/styles/tokens/{theme}-types.scss
-src/styles/tokens/modules/{theme}-colors.module.scss   (re-exported via index.ts)
+src/styles/tokens/modules/{theme}-modes.module.scss   (re-exported via index.ts)
 src/styles/tokens/modules/{theme}-types.module.scss
 ```
+
+`modes` is the semantic/system layer — colors on every theme, plus dimensions
+and motion on `yelbolt`. `figma`, `penpot`, `sketch` and `framer` resolve their
+own colors directly into that layer at build time, so `modes` is their only
+token output. `yelbolt` additionally owns a primitive color palette
+(`platforms/yelbolt/colors.json`) that must survive as reusable `:root`
+variables, so it alone also builds a `color` layer:
+`terrazzo/yelbolt/terrazzo.color.js` → `src/styles/tokens/yelbolt-colors.scss`
+/ `modules/yelbolt-colors.module.scss`. Keep that split when a future theme
+gains its own primitive palette — `color` names the primitive, `mode` names
+the semantic layer built on top of it.
 
 Token JSON files live in `tokens/platforms/{theme}/` — for full pipeline documentation see [docs/terrazzo-guide.md](docs/terrazzo-guide.md):
 
@@ -125,7 +140,49 @@ Token JSON files live in `tokens/platforms/{theme}/` — for full pipeline docum
 - `text.json` — typography tokens
 - `icon.json` — icon file paths
 - `typography.json` — composite typography tokens
+- `modes/` — per-mode system layer (colors, and on `yelbolt` also dimensions)
 - `components/` — per-component tokens
+
+### Dimension system (`yelbolt` only)
+
+On `yelbolt`, component tokens no longer reference commons primitives directly.
+They go through a `dimension.*` system layer that lives inside each mode file
+next to the colors, so a mode can modulate spacing, sizing and type metrics the
+same way it modulates color — see [docs/dimension-system.md](docs/dimension-system.md).
+
+The other four themes still reference `{scale.*}` / `{font.*}` / `{border.radius.*}`
+straight from their component tokens. Do not mix the two conventions within a
+theme.
+
+### Motion system (all themes)
+
+Transitions and interaction transforms are three-layered like colors: primitive
+ramps (`duration`, `easing`, `transform`) in commons, a semantic `motion.*`
+block at the **root** of every mode file, and a DTCG composite `transition`
+token plus per-state `transform` tokens on each component — see
+[docs/motion-system.md](docs/motion-system.md).
+
+Two rules carry teeth:
+
+- Every component terrazzo config must exclude `motion.**` (plus `duration.**`,
+  `easing.**`, `transform.**`). Emitted into a component stylesheet, `motion.**`
+  outranks the mode block and silently kills all modulation.
+- No semantic motion lane may be named `default` — `wrapFallbacks` would rewrite
+  it into a phantom `var(--motion-…)` override hook.
+
+`figma`, `penpot`, `sketch` and `framer` resolve their interaction lanes to
+`0ms` / `none`. The one exception is `motion.duration.control`, which stays at
+200ms everywhere because it carries a control's own state travel (the switch
+knob) rather than decorative feedback.
+
+### Color mode gradation (`yelbolt` only)
+
+`yelbolt` ships seven color families (`YLB`, `NTL`, `UICP`, `UNO`, `TCN`,
+`UICS`, `ISB`), one per `{family}-{dark,light}` mode file. Within a mode,
+`primary`/`secondary`/`tertiary` form a darkness gradient off that mode's own
+family, `brand` is a fixed saturated pivot, and `danger`/`success`/`warning`
+always borrow `TCN`/`UICS`/`ISB` respectively at `brand`'s tier regardless of
+the mode's own family — see [docs/color-mode-gradation.md](docs/color-mode-gradation.md).
 
 ---
 
@@ -160,13 +217,16 @@ MDX documentation files (`{CategoryTitle}.mdx`) use `<DocTabs>` / `<Tab>` from `
 
 ## Skills
 
-Three Claude Code skills are available in [.claude/skills/](.claude/skills/):
+Claude Code skills are available in [.claude/skills/](.claude/skills/):
 
-| Skill              | File                                                                     | Invoke with         | Purpose                                |
-| ------------------ | ------------------------------------------------------------------------ | ------------------- | -------------------------------------- |
-| `create-component` | [.claude/skills/create-component.md](.claude/skills/create-component.md) | `/create-component` | Scaffold a new component end-to-end    |
-| `create-theme`     | [.claude/skills/create-theme.md](.claude/skills/create-theme.md)         | `/create-theme`     | Create and configure a new brand theme |
-| `figma-doc`        | [.claude/skills/figma-doc.md](.claude/skills/figma-doc.md)               | `/figma-doc`        | Generate a Figma component description |
+| Skill              | File                                                                     | Invoke with         | Purpose                                                   |
+| ------------------ | ------------------------------------------------------------------------ | ------------------- | --------------------------------------------------------- |
+| `create-component` | [.claude/skills/create-component.md](.claude/skills/create-component.md) | `/create-component` | Scaffold a new component end-to-end                       |
+| `review-component` | [.claude/skills/review-component.md](.claude/skills/review-component.md) | `/review-component` | Audit an existing component and resync its docs           |
+| `create-theme`     | [.claude/skills/create-theme.md](.claude/skills/create-theme.md)         | `/create-theme`     | Create and configure a new brand theme                    |
+| `figma-doc`        | [.claude/skills/figma-doc.md](.claude/skills/figma-doc.md)               | `/figma-doc`        | Generate/resync a component description directly in Figma |
+
+`create-component` and `review-component` both delegate their documentation gate to the **`component-reviewer`** agent ([.claude/agents/component-reviewer.md](.claude/agents/component-reviewer.md)). On every component created or reviewed, two checks are mandatory and never skipped: the Storybook MDX prop docs (`src/stories/{category}/{CategoryTitle}.mdx`) must match the current `Props` interface, and the component's description in the Figma design-system file (fileKey `RDBmy7x5HfkZHpafVqHNWQ`, "Unoff v0.1") must be pushed up to date via `figma_set_description` — or, when the Figma Desktop Bridge isn't connected, handed back as ready-to-paste markdown instead of silently skipped.
 
 ---
 
@@ -178,3 +238,5 @@ Three Claude Code skills are available in [.claude/skills/](.claude/skills/):
 - Do not edit files in `dist/`.
 - Do not commit changes to `.storybook/preview.tsx` theme arrays manually — the `create:theme` script handles it.
 - Do not use `npm run scss:build` without `-- --build theme=…` — without the flag it only lists files.
+- Do not run Prettier over generated token files (`src/**/styles/{theme}.scss`, `src/styles/tokens/*.scss`) — they are committed as Terrazzo emits them; reformatting them is churn the next build reverts.
+- Do not name a semantic motion lane `default`, and do not let `motion.**` be emitted from a component terrazzo config.

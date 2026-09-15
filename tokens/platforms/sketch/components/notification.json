@@ -2,19 +2,19 @@
   "notification": {
     "padding": {
       "top": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.medium}",
+        "$value": "{space.inset.800}",
         "$type": "dimension"
       }
     },

@@ -1,7 +1,7 @@
 {
   "colorChip": {
     "radius": {
-      "$value": "{border.radius.small}",
+      "$value": "{radius.small}",
       "$type": "dimension"
     },
     "border": {
@@ -10,11 +10,11 @@
         "$type": "color"
       },
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{size.neg.unit}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       }
     }

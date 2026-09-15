@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within } from 'storybook/test'
-import React from 'react'
 import texts from '@styles/texts/texts.module.scss'
+import Icon from '@components/assets/icon/Icon'
 import Card from '@components/actions/card/Card'
 import Button from '@components/actions/button/Button'
 
@@ -37,24 +37,14 @@ export const Default: Story = {
           icon="star-on"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
         <Button
           type="icon"
           icon="search"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
       </>
     ),
@@ -74,6 +64,27 @@ export const Default: Story = {
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
+
+    const callsBeforeActionClick = (args.action as ReturnType<typeof fn>).mock
+      .calls.length
+    await userEvent.hover(card)
+    const [firstAction] = await canvas.findAllByRole('button')
+    await userEvent.click(firstAction)
+    await expect(args.action).toHaveBeenCalledTimes(callsBeforeActionClick)
+
+    card.focus()
+    const overlay = canvasElement.querySelector('.card__actions') as HTMLElement
+    const overlayRect = overlay.getBoundingClientRect()
+    const emptySpot = document.elementFromPoint(
+      Math.round(overlayRect.left + 4),
+      Math.round(overlayRect.top + 4)
+    ) as HTMLElement
+    const callsBeforeEmptySpaceClick = (args.action as ReturnType<typeof fn>)
+      .mock.calls.length
+    emptySpot.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }))
+    await expect(args.action).toHaveBeenCalledTimes(
+      callsBeforeEmptySpaceClick + 1
+    )
   },
 }
 
@@ -131,12 +142,7 @@ export const WithoutTitle: Story = {
         icon="settings"
         size="small"
         state="default"
-        action={(
-          e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-        ) => {
-          e.stopPropagation()
-          fn()
-        }}
+        action={() => fn()}
       />
     ),
   },
@@ -175,24 +181,14 @@ export const Filled: Story = {
           icon="styles"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
         <Button
           type="icon"
           icon="trash"
           size="small"
           state="default"
-          action={(
-            e: React.MouseEvent<Element> | React.KeyboardEvent<Element>
-          ) => {
-            e.stopPropagation()
-            fn()
-          }}
+          action={() => fn()}
         />
       </>
     ),
@@ -212,5 +208,61 @@ export const Filled: Story = {
     const card = canvas.getByRole('article')
     await userEvent.click(card)
     await expect(args.action).toHaveBeenCalled()
+  },
+}
+
+export const WithInsert: Story = {
+  args: {
+    insert: (
+      <Icon
+        type="PICTO"
+        iconName="library"
+      />
+    ),
+    tag: 'No preview',
+    title: 'Card with a fragment',
+    subtitle: 'No image, an insert instead',
+    richText: (
+      <span className={texts.type}>
+        This card fills its asset slot with a fragment and still exposes hover
+        actions
+      </span>
+    ),
+    shouldFill: false,
+    action: fn(),
+    actions: (
+      <Button
+        type="icon"
+        icon="trash"
+        size="small"
+        state="default"
+        action={() => fn()}
+      />
+    ),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+
+    const title = canvas.getByText('Card with a fragment')
+    await expect(title).toBeInTheDocument()
+
+    // No image is fetched, yet the asset slot and its actions exist
+    await expect(canvasElement.querySelector('img')).toBeNull()
+    await expect(canvas.getByLabelText('library')).toBeInTheDocument()
+
+    const card = canvas.getByRole('article')
+    // Actions overlay is revealed on focus, over the fragment slot
+    card.focus()
+    const actionButton = await canvas.findByRole('button')
+    await expect(actionButton).toBeInTheDocument()
+
+    await userEvent.click(card)
+    await expect(args.action).toHaveBeenCalled()
+
+    // Clicking the action button itself must not also trigger the card
+    const callsBeforeActionClick = (args.action as ReturnType<typeof fn>).mock
+      .calls.length
+    await userEvent.click(actionButton)
+    await expect(args.action).toHaveBeenCalledTimes(callsBeforeActionClick)
   },
 }

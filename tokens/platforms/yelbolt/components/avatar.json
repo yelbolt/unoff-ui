@@ -1,0 +1,16 @@
+{
+  "avatar": {
+    "width": {
+      "$value": "{control.icon.800}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{control.icon.600}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{radius.full}",
+      "$type": "dimension"
+    }
+  }
+}

@@ -4,21 +4,21 @@
 
 :root[data-theme="sketch"] {
   --accordion-border-color: var(--grey-transparent);
-  --accordion-border-width: var(--size-null);
+  --accordion-border-width: var(--stroke-width-none);
   --accordion-icon-color-default: var(--sketch-color-foreground-secondary);
   --accordion-icon-color-disabled: var(--sketch-color-foreground-disabled);
   --accordion-icon-color-expanded: var(--sketch-color-foreground-primary);
   --accordion-icon-color-hover: var(--sketch-color-foreground-primary);
-  --accordion-padding-bottom: var(--size-pos-xxxsmall);
-  --accordion-padding-left: var(--size-null);
-  --accordion-padding-right: var(--size-null);
-  --accordion-padding-top: var(--size-pos-xxxsmall);
-  --accordion-row-gap: var(--size-null);
-  --accordion-row-height: var(--size-pos-medium);
-  --accordion-row-padding-bottom: var(--size-null);
-  --accordion-row-padding-left: var(--size-pos-xsmall);
-  --accordion-row-padding-right: var(--size-pos-xsmall);
-  --accordion-row-padding-top: var(--size-null);
+  --accordion-padding-bottom: var(--space-inset-100);
+  --accordion-padding-left: var(--space-none);
+  --accordion-padding-right: var(--space-none);
+  --accordion-padding-top: var(--space-inset-100);
+  --accordion-row-gap: var(--space-none);
+  --accordion-row-height: var(--control-size-800);
+  --accordion-row-padding-bottom: var(--space-none);
+  --accordion-row-padding-left: var(--space-inset-400);
+  --accordion-row-padding-right: var(--space-inset-400);
+  --accordion-row-padding-top: var(--space-none);
   --accordion-text-color-default: var(--sketch-color-foreground-secondary);
   --accordion-text-color-disabled: var(--sketch-color-foreground-disabled);
   --accordion-text-color-expanded: var(--sketch-color-foreground-primary);

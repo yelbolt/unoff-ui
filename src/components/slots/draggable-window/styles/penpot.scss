@@ -5,16 +5,16 @@
 :root[data-theme="penpot"] {
   --draggable-window-background-color: var(--penpot-color-background-primary);
   --draggable-window-border-color: var(--penpot-color-background-quaternary);
-  --draggable-window-border-offset: var(--size-neg-unit);
-  --draggable-window-border-width: var(--size-pos-unit);
-  --draggable-window-content-gap: var(--size-pos-xxxsmall);
-  --draggable-window-content-padding-bottom: var(--size-pos-xxsmall);
-  --draggable-window-content-padding-left: var(--size-pos-xxsmall);
-  --draggable-window-content-padding-right: var(--size-pos-xxsmall);
-  --draggable-window-content-padding-top: var(--size-pos-xxsmall);
+  --draggable-window-border-offset: var(--stroke-offset-thin);
+  --draggable-window-border-width: var(--stroke-width-thin);
+  --draggable-window-content-gap: var(--space-gap-100);
+  --draggable-window-content-padding-bottom: var(--space-inset-200);
+  --draggable-window-content-padding-left: var(--space-inset-200);
+  --draggable-window-content-padding-right: var(--space-inset-200);
+  --draggable-window-content-padding-top: var(--space-inset-200);
   --draggable-window-header-border-color: var(--grey-transparent);
-  --draggable-window-header-border-width: var(--size-null);
-  --draggable-window-radius: var(--border-radius-xxlarge);
+  --draggable-window-header-border-width: var(--stroke-width-none);
+  --draggable-window-radius: var(--radius-xxlarge);
   --draggable-window-shadow: none;
   --draggable-window-width: 320px;
 }

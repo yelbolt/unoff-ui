@@ -383,44 +383,46 @@ export default class SimpleSlider extends React.Component<
             className="simple-slider__border"
             role="presentation"
           />
-          <Knob
-            id={id}
-            shortId={label}
-            value={value}
-            offset={doMap(value, min, max, 0, 100)}
-            min={min.toString()}
-            max={max.toString()}
-            canBeTyped={true}
-            isDisplayed={isTooltipDisplay}
-            isBlocked={isBlocked}
-            isDisabled={isDisabled}
-            onBlock={onBlock}
-            onShiftRight={(e) => {
-              const { step = 1 } = this.props
-              if (e.shiftKey) {
-                const newValue = this.roundToStep(value + step * 10, step)
-                onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
-              } else {
-                const newValue = this.roundToStep(value + step, step)
-                onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
-              }
-            }}
-            onShiftLeft={(e) => {
-              const { step = 1 } = this.props
-              if (e.shiftKey) {
-                const newValue = this.roundToStep(value - step * 10, step)
-                onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
-              } else {
-                const newValue = this.roundToStep(value - step, step)
-                onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
-              }
-            }}
-            onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
-              this.onGrab(e)
-              ;(e.target as HTMLElement).focus()
-            }}
-            onValidStopValue={(_stopId, e) => this.validHandler(e)}
-          />
+          <div className="simple-slider__knobs">
+            <Knob
+              id={id}
+              shortId={label}
+              value={value}
+              offset={doMap(value, min, max, 0, 100)}
+              min={min.toString()}
+              max={max.toString()}
+              canBeTyped={true}
+              isDisplayed={isTooltipDisplay}
+              isBlocked={isBlocked}
+              isDisabled={isDisabled}
+              onBlock={onBlock}
+              onShiftRight={(e) => {
+                const { step = 1 } = this.props
+                if (e.shiftKey) {
+                  const newValue = this.roundToStep(value + step * 10, step)
+                  onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
+                } else {
+                  const newValue = this.roundToStep(value + step, step)
+                  onChange(feature, 'SHIFTED', newValue > max ? max : newValue)
+                }
+              }}
+              onShiftLeft={(e) => {
+                const { step = 1 } = this.props
+                if (e.shiftKey) {
+                  const newValue = this.roundToStep(value - step * 10, step)
+                  onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
+                } else {
+                  const newValue = this.roundToStep(value - step, step)
+                  onChange(feature, 'SHIFTED', newValue < min ? min : newValue)
+                }
+              }}
+              onMouseDown={(e: React.MouseEvent<HTMLElement>) => {
+                this.onGrab(e)
+                ;(e.target as HTMLElement).focus()
+              }}
+              onValidStopValue={(_stopId, e) => this.validHandler(e)}
+            />
+          </div>
         </div>
         {this.Status()}
       </div>

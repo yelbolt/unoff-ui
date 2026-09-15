@@ -4,7 +4,7 @@
 
 :root[data-theme="figma"] {
   --color-chip-border-color: rgb(0% 0% 0% / 0.1);
-  --color-chip-border-offset: var(--size-neg-unit);
-  --color-chip-border-width: var(--size-pos-unit);
-  --color-chip-radius: var(--border-radius-small);
+  --color-chip-border-offset: var(--stroke-offset-thin);
+  --color-chip-border-width: var(--stroke-width-thin);
+  --color-chip-radius: var(--radius-small);
 }

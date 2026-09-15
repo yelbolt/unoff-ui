@@ -107,22 +107,26 @@ A low-level typographic primitive for rendering inline or block text with size, 
 
 ## Thumbnail
 
-Displays an image with loading and error states. Used inside cards, list items, and file pickers.
+Displays an image with loading and error states, or a custom fragment (an icon, initials, a color swatch) in the same fixed slot. Used inside cards, list items, and file pickers.
 
 <DocTabs>
 <Tab label="Usage">
 
-- Provide a meaningful `alt` description for every content image.
-- Set `width` / `height` to match the intended slot size precisely to avoid layout shift.
-- The component handles loading (spinner) and error (warning icon) states automatically.
-- Uses `loading="lazy"` — ensure the image is not above the fold in critical rendering paths.
+- Pass `src` for image mode, `insert` for fragment mode — they are two independent props and may be combined.
+- In image mode, provide a meaningful `alt` description for every content image.
+- In fragment mode, `insert` is rendered as-is inside the same bordered slot; there is no loading or error state since nothing is fetched.
+- When both are passed, `src` wins and `insert` becomes the fallback rendered in place of the warning icon if the image fails to load.
+- Set `width` / `height` to match the intended slot size precisely to avoid layout shift — this applies identically to both modes.
+- Image mode handles loading (spinner) and error (warning icon, or `insert` when provided) states automatically.
+- Uses `loading="lazy"` for images — ensure the image is not above the fold in critical rendering paths.
 
 </Tab>
 <Tab label="Accessibility (WCAG 2.2)">
 
 - `alt` must describe the image content meaningfully — avoid "image" or "thumbnail" as the sole alt text (SC 1.1.1).
 - Loading state uses `aria-busy="true"`; the spinner is `aria-hidden` (SC 4.1.3).
-- Error state replaces the image with a warning icon — consider providing additional context in the parent (SC 1.1.1).
+- Error state replaces the image with a warning icon, or with `insert` when one is provided — consider providing additional context in the parent (SC 1.1.1).
+- In fragment mode, ensure the passed `insert` carries its own accessible name or is marked decorative — Thumbnail does not add one on its behalf (SC 1.1.1).
 
 </Tab>
 </DocTabs>

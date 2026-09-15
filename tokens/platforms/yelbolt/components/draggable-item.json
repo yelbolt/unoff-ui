@@ -1,0 +1,78 @@
+{
+  "draggableItem": {
+    "template": {
+      "rows": {
+        "$value": "{control.size.800}",
+        "$type": "dimension"
+      },
+      "columns": {
+        "$value": "repeat(76, 1fr)",
+        "$type": "string"
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{space.inset.100}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.inset.400}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.inset.100}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.inset.400}",
+        "$type": "dimension"
+      }
+    },
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{color.background.primary.default}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{color.background.selected.default}",
+          "$type": "color"
+        },
+        "pressed": {
+          "$value": "{color.background.primary.pressed}",
+          "$type": "color"
+        }
+      }
+    },
+    "gap": {
+      "$value": "{space.gap.200}",
+      "$type": "dimension"
+    },
+    "ghost": {
+      "color": {
+        "$value": "{color.border.selected.default}",
+        "$type": "color"
+      },
+      "height": {
+        "$value": "{control.size.050}",
+        "$type": "dimension"
+      },
+      "inset": {
+        "$value": "{space.pull.025}",
+        "$type": "dimension"
+      }
+    },
+    "param": {
+      "width": {
+        "compact": {
+          "$value": "112px",
+          "$type": "dimension"
+        },
+        "square": {
+          "$value": "{control.size.800}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

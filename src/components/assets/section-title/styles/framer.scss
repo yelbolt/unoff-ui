@@ -3,19 +3,19 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --section-title-gap: var(--size-pos-xxxsmall);
-  --section-title-height: var(--size-pos-medium);
-  --section-title-info-icon-height: var(--size-pos-medium);
-  --section-title-info-icon-width: var(--size-pos-medium);
-  --section-title-padding-bottom: var(--size-null);
-  --section-title-padding-left: var(--size-pos-xxsmall);
-  --section-title-padding-right: var(--size-pos-xxxsmall);
-  --section-title-padding-top: var(--size-null);
+  --section-title-gap: var(--space-gap-100);
+  --section-title-height: var(--control-size-800);
+  --section-title-info-icon-height: var(--control-icon-800);
+  --section-title-info-icon-width: var(--control-icon-800);
+  --section-title-padding-bottom: var(--space-none);
+  --section-title-padding-left: var(--space-inset-200);
+  --section-title-padding-right: var(--space-inset-100);
+  --section-title-padding-top: var(--space-none);
   --section-title-text-color: var(--framer-color-text-default);
   --section-title-text-font-family: var(--text-font-family);
-  --section-title-text-font-size: var(--font-size-small);
-  --section-title-text-font-weight: var(--font-weight-bold);
-  --section-title-text-letter-spacing: var(--font-letter-spacing-pos-large);
-  --section-title-text-line-height: var(--font-line-height-default);
+  --section-title-text-font-size: var(--type-size-02);
+  --section-title-text-font-weight: var(--type-weight-600);
+  --section-title-text-letter-spacing: var(--type-tracking-large);
+  --section-title-text-line-height: var(--type-leading-default);
   --section-title-text-transform: none;
 }

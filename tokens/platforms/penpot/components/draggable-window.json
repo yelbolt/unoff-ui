@@ -5,7 +5,7 @@
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.xxlarge}",
+      "$value": "{radius.xxlarge}",
       "$type": "dimension"
     },
     "shadow": {
@@ -24,18 +24,18 @@
         "$type": "color"
       },
       "width": {
-        "$value": "{size.pos.unit}",
+        "$value": "{stroke.width.thin}",
         "$type": "dimension"
       },
       "offset": {
-        "$value": "{size.neg.unit}",
+        "$value": "{stroke.offset.thin}",
         "$type": "dimension"
       }
     },
     "header": {
       "border": {
         "width": {
-          "$value": "{size.null}",
+          "$value": "{stroke.width.none}",
           "$type": "dimension"
         },
         "color": {
@@ -47,24 +47,24 @@
     "content": {
       "padding": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         }
       },
       "gap": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.gap.100}",
         "$type": "dimension"
       }
     }

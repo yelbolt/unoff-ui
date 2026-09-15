@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/yelbolt';
 @import 'styles/framer';
 
 .draggable-window {
@@ -14,10 +15,9 @@
   background-color: var(--draggable-window-background-color);
   width: var(--draggable-window-width);
   max-width: 100%;
+  overflow: hidden;
 
   &__header {
-    --bar-border: var(--draggable-window-header-border);
-
     cursor: move;
 
     .section-title {
