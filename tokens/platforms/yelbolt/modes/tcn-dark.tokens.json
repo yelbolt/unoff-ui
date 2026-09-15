@@ -527,19 +527,19 @@
       },
       "secondary": {
         "default": {
-          "$value": "{TCN.3}",
+          "$value": "{TCN.2}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{TCN.4}",
+          "$value": "{TCN.3}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{TCN.5}",
+          "$value": "{TCN.4}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{TCN.3}",
+          "$value": "{TCN.2}",
           "$type": "color"
         },
         "disabled": {

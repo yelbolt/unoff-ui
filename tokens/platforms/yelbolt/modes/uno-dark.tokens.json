@@ -527,19 +527,19 @@
       },
       "secondary": {
         "default": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.2}",
           "$type": "color"
         },
         "hover": {
-          "$value": "{UNO.4}",
+          "$value": "{UNO.3}",
           "$type": "color"
         },
         "pressed": {
-          "$value": "{UNO.5}",
+          "$value": "{UNO.4}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{UNO.3}",
+          "$value": "{UNO.2}",
           "$type": "color"
         },
         "disabled": {
