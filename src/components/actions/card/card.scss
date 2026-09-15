@@ -89,6 +89,7 @@
     inset: 0;
     padding: var(--card-actions-padding-top) var(--card-actions-padding-right)
       var(--card-actions-padding-bottom) var(--card-actions-padding-left);
+    z-index: 2;
   }
 
   &__text {
