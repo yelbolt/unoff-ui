@@ -412,6 +412,42 @@
       "$type": "dimension"
     }
   },
+  "global": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{framer.color.bg.default}",
+          "$type": "color"
+        },
+        "inverse": {
+          "$value": "{framer.color.text.default}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{framer.color.tint.dimmed}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{framer.color.divider}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{stroke.offset.thin}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{radius.xlarge}",
+      "$type": "dimension"
+    }
+  },
   "type": {
     "size": {
       "01": {

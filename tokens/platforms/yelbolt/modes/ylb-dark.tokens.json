@@ -1723,6 +1723,42 @@
       "$type": "dimension"
     }
   },
+  "global": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{color.background.primary.default}",
+          "$type": "color"
+        },
+        "inverse": {
+          "$value": "{color.background.inverse.default}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{color.background.selected.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{color.border.primary.default}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{stroke.offset.thin}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{radius.xxlarge}",
+      "$type": "dimension"
+    }
+  },
   "type": {
     "size": {
       "01": {

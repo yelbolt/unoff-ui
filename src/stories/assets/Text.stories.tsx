@@ -28,7 +28,7 @@ export const AllStyles: Story = {
       <Text color="tertiary">Tertiary text</Text>
       <div
         style={{
-          background: 'var(--color-text-primary-default)',
+          background: 'var(--global-background-color-inverse)',
           padding: '8px',
         }}
       >
@@ -88,7 +88,7 @@ export const AllColors: Story = {
       <Text color="link">Link text (link)</Text>
       <div
         style={{
-          background: 'var(--color-text-primary-default)',
+          background: 'var(--global-background-color-inverse)',
           padding: '8px',
         }}
       >

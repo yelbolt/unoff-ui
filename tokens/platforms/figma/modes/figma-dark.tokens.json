@@ -941,6 +941,42 @@
       "$type": "dimension"
     }
   },
+  "global": {
+    "background": {
+      "color": {
+        "default": {
+          "$value": "{figma.color.bg.default}",
+          "$type": "color"
+        },
+        "inverse": {
+          "$value": "{figma.color.bg.inverse}",
+          "$type": "color"
+        },
+        "selected": {
+          "$value": "{figma.color.bg.selected.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{figma.color.border.default}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{stroke.offset.thin}",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "$value": "{radius.medium}",
+      "$type": "dimension"
+    }
+  },
   "type": {
     "size": {
       "01": {

@@ -40,6 +40,7 @@ export default defineConfig({
         'duration.**',
         'easing.**',
         'transform.**',
+        'global.**',
       ],
       baseSelector: ':root[data-theme="figma"]',
     }),

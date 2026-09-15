@@ -2,7 +2,6 @@ import css from '@terrazzo/plugin-css'
 import { defineConfig } from '@terrazzo/cli'
 import tokensStudioCompat, {
   cssTransform,
-  wrapFallbacks,
 } from '../plugins/tokens-studio-compat.js'
 
 const COMMONS_TOKENS = [
@@ -31,16 +30,12 @@ export default defineConfig({
         {
           input: { mode: 'penpotLight' },
           exclude: COMMONS_TOKENS,
-          prepare: wrapFallbacks(
-            (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`
-          ),
+          prepare: (css) => `[data-mode="penpot-light"] {\n  ${css}\n}`,
         },
         {
           input: { mode: 'penpotDark' },
           exclude: COMMONS_TOKENS,
-          prepare: wrapFallbacks(
-            (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`
-          ),
+          prepare: (css) => `[data-mode="penpot-dark"] {\n  ${css}\n}`,
         },
       ],
     }),

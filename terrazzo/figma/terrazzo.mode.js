@@ -58,7 +58,7 @@ export default defineConfig({
       permutations: [
         {
           input: { mode: 'figmaLight' },
-          exclude: COMMONS_TOKENS,
+          exclude: [...COMMONS_TOKENS, 'type.**', 'global.**'],
           prepare: wrapPassthrough(':root', { keep: [] }),
         },
       ],
