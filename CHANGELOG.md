@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.0] - 2026-09-15
+
+### Added
+
+- **`yelbolt` theme — 5th platform**: a full new brand theme alongside `figma`/`penpot`/`sketch`/`framer`, with token, SCSS, and icon coverage across all seven component categories (`tokens/platforms/yelbolt/`, `terrazzo/yelbolt/`, `src/icons/yelbolt/`). Activate via `data-theme="yelbolt"` with `{family}-{dark,light}` modes spanning seven color families (`YLB`, `NTL`, `UICP`, `UNO`, `TCN`, `UICS`, `ISB`) — see [docs/color-mode-gradation.md](docs/color-mode-gradation.md). Within a mode, `primary`/`secondary`/`tertiary` form a darkness gradient off that mode's own family, `brand` is a fixed saturated pivot, and `danger`/`success`/`warning` always borrow `TCN`/`UICS`/`ISB` at `brand`'s tier regardless of the mode's own family.
+- **Dimension system (`yelbolt` only)**: component tokens route spacing, sizing, and type metrics through a `dimension.*` system layer embedded in each mode file, so a mode can modulate spacing/sizing the same way it modulates color instead of referencing commons primitives directly — see [docs/dimension-system.md](docs/dimension-system.md).
+- **Motion system (all themes)**: transitions and interaction transforms are now three-layered like colors — primitive `duration`/`easing`/`transform` ramps in commons, a semantic `motion.*` block at the root of every mode file, and a DTCG composite `transition` token plus per-state `transform` tokens on each component — see [docs/motion-system.md](docs/motion-system.md). `figma`, `penpot`, `sketch`, and `framer` resolve their interaction lanes to `0ms`/`none`, except `motion.duration.control` which stays at 200ms everywhere since it carries a control's own state travel (e.g. the switch knob) rather than decorative feedback.
+- **Storybook — theme switcher**: new `.storybook/addons/theme-switcher/` addon lets Storybook toggle between all five platform themes (including Yelbolt) directly from the toolbar, replacing the previous static preview configuration.
+- **`Thumbnail` — `insert` prop (fragment mode)**: the component can now render custom content (an icon, initials, a color swatch) in its slot instead of an image. `src` and `insert` are two independent optional props rather than a mutually exclusive union, so both can be passed together: `src` still wins, and `insert` then doubles as the fallback rendered in place of the warning icon when the image fails to load. `alt` now also defaults to `'Image thumbnail'` whenever it is omitted, instead of leaving the `<img>` without an alt attribute.
+- **`Card` — `insert` prop**: new optional `insert?: React.ReactNode`, forwarded to the card's `Thumbnail` so a card can show a fragment in its asset slot when it has no image preview.
+- **Curve icons**: `curve-anti-hyperbola`, `curve-ease-in`, `curve-ease-in-out`, `curve-ease-out`, `curve-hyperbola`, `curve-linear`, plus a new `resolve` icon type, wired end-to-end for all five platform themes.
+
+### Changed
+
+- **Icons**: SVG assets across all themes switched from fill-based to stroke-based rendering for visual consistency and easier theming.
+- **`Bar` / `Tabs`**: style refinements for closer visual alignment — `Bar` minimum height increased; `Tabs` active-state stroke, hover/focus/active color references, and font weights adjusted for clearer hierarchy.
+- **`Segmented Control`**: icon colors on focus/hover now use the default color instead of a state-specific variant.
+- **Global design tokens**: background-color, border, and radius primitives added across all five platform token configs; Terrazzo `exclude` patterns tightened (notably to keep `motion.**` out of component stylesheets), and the unused `wrapFallbacks` step removed from the Framer/Penpot/Sketch prepare pipeline.
+
+### Fixed
+
+- **`Card` — actions over a fragment**: the asset slot (and with it the `actions` hover/focus overlay) was only rendered when `src` was set, so a card without an image could not carry actions at all; it is now rendered as soon as either `src` or `insert` is present. Previously the only way to get a fragment into the slot was `Thumbnail`'s `children`, which `Card` never exposed — and which the old `src`-XOR-`children` typing forbade combining with an image anyway.
+- **`Card` — action buttons double-firing the card's own click**: clicking (or pressing Enter/Space on) a button rendered in `actions` also triggered the card's `action`, unless that button's own handler called `stopPropagation` itself. `Card` now ignores mouse and keyboard activation that originates from an actual control (button, link, etc.) inside its `actions` slot, so nested buttons no longer need to guard against it — the empty space of the `actions` overlay itself (not covered by any control) is unaffected and still acts as a regular card click.
+- **`Select` stories — `CheckBox` / `RadioButton` / `SwitchButton` never actually re-checked in interaction tests**: these three stories drove `isChecked` purely through Storybook's `useArgs`, whose `updateArgs` doesn't trigger a re-render inside the Vitest interaction-test runner (confirmed: the story's `render` never ran a second time after a click there), so the input's `checked` state silently never flipped in tests — only `SwitchButton`'s test asserted `toBeChecked` and caught it, `CheckBox`/`RadioButton` had the same gap untested. All three now also hold `isChecked` in local `useState`, kept in sync with the `useArgs` value both ways: a click updates local state (so the input reliably re-renders in every environment, tests included) and still calls `updateArgs` so the Controls panel reflects it in a live Storybook, and an external Controls-panel edit flows back into local state via a `useEffect` on the arg. `CheckBox`/`RadioButton` also gained the missing `toBeChecked` assertion.
+- **`List`**: corrected the alternate row background color variable reference.
+- **`Button`**: simplified the tooltip visibility condition.
+
 ## [1.25.2] - 2026-09-01
 
 ### Added
