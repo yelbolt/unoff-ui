@@ -170,7 +170,10 @@ export default class Button extends React.Component<ButtonProps, ButtonState> {
     super(props)
     this.state = {
       isTooltipVisible: false,
-      documentWidth: document.documentElement.clientWidth,
+      documentWidth:
+        typeof document !== 'undefined'
+          ? document.documentElement.clientWidth
+          : 1024,
     }
   }
 
