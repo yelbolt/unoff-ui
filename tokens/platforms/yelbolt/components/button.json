@@ -1357,23 +1357,23 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{color.background.selected.default}",
+              "$value": "{color.background.brand.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{color.background.selected.hover}",
+              "$value": "{color.background.brand.hover}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{color.background.selected.pressed}",
+              "$value": "{color.background.brand.pressed}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.background.selected.focus}",
+              "$value": "{color.background.brand.focus}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.disabled}",
+              "$value": "{color.background.brand.disabled}",
               "$type": "color"
             }
           }
@@ -1525,23 +1525,23 @@
         "background": {
           "color": {
             "default": {
-              "$value": "{color.background.selected.default}",
+              "$value": "{color.background.brand.default}",
               "$type": "color"
             },
             "hover": {
-              "$value": "{color.background.selected.hover}",
+              "$value": "{color.background.brand.hover}",
               "$type": "color"
             },
             "pressed": {
-              "$value": "{color.background.selected.pressed}",
+              "$value": "{color.background.brand.pressed}",
               "$type": "color"
             },
             "focus": {
-              "$value": "{color.background.selected.focus}",
+              "$value": "{color.background.brand.focus}",
               "$type": "color"
             },
             "disabled": {
-              "$value": "{color.background.selected.disabled}",
+              "$value": "{color.background.brand.disabled}",
               "$type": "color"
             }
           }

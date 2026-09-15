@@ -1,7 +1,7 @@
 {
   "section": {
     "gap": {
-      "$value": "{space.none}",
+      "$value": "{space.gap.050}",
       "$type": "dimension"
     },
     "padding": {

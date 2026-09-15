@@ -494,7 +494,7 @@
         },
         "background": {
           "color": {
-            "$value": "{color.background.selected.default}",
+            "$value": "{color.background.brand.default}",
             "$type": "color"
           }
         },
