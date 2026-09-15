@@ -1,11 +1,11 @@
 {
   "icon": {
     "width": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "height": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "picto": {
@@ -20,7 +20,7 @@
         "$type": "color"
       },
       "textSize": {
-        "$value": "{font.size.small}",
+        "$value": "{type.size.02}",
         "$type": "dimension"
       }
     }

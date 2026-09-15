@@ -6,16 +6,16 @@
   --consent-background-color: rgb(0% 0% 0% / 0.5);
   --consent-banner-background-color: var(--figma-color-bg-default);
   --consent-banner-border-color: var(--figma-color-border-default);
-  --consent-banner-border-width: var(--size-pos-unit);
-  --consent-banner-gap: var(--size-pos-xxsmall);
+  --consent-banner-border-width: var(--stroke-width-thin);
+  --consent-banner-gap: var(--space-gap-200);
   --consent-banner-max-width: 400px;
-  --consent-banner-padding-bottom: var(--size-pos-xxsmall);
-  --consent-banner-padding-left: var(--size-pos-xsmall);
-  --consent-banner-padding-right: var(--size-pos-xsmall);
-  --consent-banner-padding-top: var(--size-pos-xxsmall);
+  --consent-banner-padding-bottom: var(--space-inset-200);
+  --consent-banner-padding-left: var(--space-inset-400);
+  --consent-banner-padding-right: var(--space-inset-400);
+  --consent-banner-padding-top: var(--space-inset-200);
   --consent-list-max-width: 400px;
-  --consent-list-padding-bottom: var(--size-null);
-  --consent-list-padding-left: var(--size-pos-xsmall);
-  --consent-list-padding-right: var(--size-null);
-  --consent-list-padding-top: var(--size-null);
+  --consent-list-padding-bottom: var(--space-none);
+  --consent-list-padding-left: var(--space-inset-400);
+  --consent-list-padding-right: var(--space-none);
+  --consent-list-padding-top: var(--space-none);
 }

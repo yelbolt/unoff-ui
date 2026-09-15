@@ -140,7 +140,7 @@ export const WithoutActionNorThumbnail: Story = {
         <div
           style={{
             display: 'flex',
-            gap: 'var(--size-pos-xxsmall)',
+            gap: 'var(--scale-pos-xxsmall)',
           }}
         >
           <div

@@ -120,22 +120,22 @@ The file must mirror the same values across all themes (start by copying one and
 {
   "{camelCaseName}": {
     "base": {
-      "height": { "$value": "{size.pos.small}", "$type": "dimension" },
-      "gap": { "$value": "{size.pos.xxxsmall}", "$type": "dimension" },
+      "height": { "$value": "{scale.pos.small}", "$type": "dimension" },
+      "gap": { "$value": "{scale.pos.xxxsmall}", "$type": "dimension" },
       "radius": { "$value": "{border.radius.medium}", "$type": "dimension" },
       "padding": {
-        "top": { "$value": "{size.null}", "$type": "dimension" },
-        "right": { "$value": "{size.pos.xxsmall}", "$type": "dimension" },
-        "bottom": { "$value": "{size.null}", "$type": "dimension" },
-        "left": { "$value": "{size.pos.xxsmall}", "$type": "dimension" }
+        "top": { "$value": "{scale.null}", "$type": "dimension" },
+        "right": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" },
+        "bottom": { "$value": "{scale.null}", "$type": "dimension" },
+        "left": { "$value": "{scale.pos.xxsmall}", "$type": "dimension" }
       },
       "background": {
         "color": { "$value": "transparent", "$type": "string" }
       },
       "border": {
         "color": { "$value": "transparent", "$type": "string" },
-        "width": { "$value": "{size.null}", "$type": "dimension" },
-        "offset": { "$value": "{size.null}", "$type": "dimension" }
+        "width": { "$value": "{scale.null}", "$type": "dimension" },
+        "offset": { "$value": "{scale.null}", "$type": "dimension" }
       },
       "text": {
         "color": { "$value": "{figma.color.text}", "$type": "color" }
@@ -162,11 +162,11 @@ The file must mirror the same values across all themes (start by copying one and
       },
       "border": {
         "width": {
-          "default": { "$value": "{size.null}", "$type": "dimension" },
-          "hover": { "$value": "{size.null}", "$type": "dimension" },
-          "pressed": { "$value": "{size.null}", "$type": "dimension" },
-          "focus": { "$value": "{size.pos.unit}", "$type": "dimension" },
-          "disabled": { "$value": "{size.null}", "$type": "dimension" }
+          "default": { "$value": "{scale.null}", "$type": "dimension" },
+          "hover": { "$value": "{scale.null}", "$type": "dimension" },
+          "pressed": { "$value": "{scale.null}", "$type": "dimension" },
+          "focus": { "$value": "{scale.pos.unit}", "$type": "dimension" },
+          "disabled": { "$value": "{scale.null}", "$type": "dimension" }
         },
         "color": {
           "default": { "$value": "transparent", "$type": "string" },
@@ -249,7 +249,7 @@ export default defineConfig({
       exclude: [
         '{theme}.color.*',
         'font.*',
-        'size.*',
+        'scale.*',
         'shadow.*',
         'border.*',
         'grey.*',
@@ -335,6 +335,8 @@ export const Default: Story = {
 
 Add one exported story per meaningful variant (matching the component's `type` or primary prop values).
 
+If the props are a discriminated union offering mutually exclusive content modes (e.g. an image `src` vs a `children`/fragment slot, as in `Thumbnail`), add one story per mode — a single default-args story only exercises whichever branch its args happen to satisfy and leaves the other completely untested.
+
 Each `play` function must:
 
 - Verify the element is in the DOM
@@ -385,6 +387,19 @@ Before finishing, verify:
 - [ ] `src/index.ts` has the new export in the right category block
 - [ ] Story file exists with at least one `play` test per exported story
 - [ ] MDX documentation section added to the category doc
+- [ ] `component-reviewer` invoked to confirm MDX/props sync and push the Figma description (Step 7) — do not consider the component done without this
+
+---
+
+## Step 7 — Sync docs (mandatory, do not skip)
+
+Creating the component is not done until its two documentation surfaces are confirmed in sync — this is not optional cleanup, it is part of the deliverable:
+
+1. Invoke the **`component-reviewer`** agent (see `.claude/agents/component-reviewer.md`) for the new component, telling it this is a post-creation check.
+2. It will re-verify the MDX section written in Step 5 actually matches the final `Props` interface (props sometimes change between drafting the MDX and finishing the TSX), and push a fresh description to the Figma design-system file (fileKey `RDBmy7x5HfkZHpafVqHNWQ`, "Unoff v0.1") following the `/figma-doc` format.
+3. If the Figma Desktop Bridge isn't connected to that file, it will hand you the ready-to-paste description markdown instead of failing silently — pass that along to the user.
+
+Report the outcome of both syncs alongside the rest of the creation summary.
 
 ---
 

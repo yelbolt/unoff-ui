@@ -1,0 +1,100 @@
+{
+  "accordion": {
+    "padding": {
+      "top": {
+        "$value": "{space.inset.100}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.inset.100}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.border.primary.default}",
+        "$type": "color"
+      }
+    },
+    "row": {
+      "gap": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{control.size.900}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{space.inset.400}",
+          "$type": "dimension"
+        }
+      }
+    },
+    "text": {
+      "color": {
+        "default": {
+          "$value": "{color.text.tertiary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{color.text.primary.default}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{color.text.primary.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{color.text.tertiary.disabled}",
+          "$type": "color"
+        }
+      }
+    },
+    "icon": {
+      "color": {
+        "default": {
+          "$value": "{color.icon.tertiary.default}",
+          "$type": "color"
+        },
+        "hover": {
+          "$value": "{color.icon.primary.default}",
+          "$type": "color"
+        },
+        "expanded": {
+          "$value": "{color.icon.primary.default}",
+          "$type": "color"
+        },
+        "disabled": {
+          "$value": "{color.icon.tertiary.disabled}",
+          "$type": "color"
+        }
+      }
+    }
+  }
+}

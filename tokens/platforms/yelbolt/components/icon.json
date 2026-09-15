@@ -1,0 +1,28 @@
+{
+  "icon": {
+    "width": {
+      "$value": "{control.icon.600}",
+      "$type": "dimension"
+    },
+    "height": {
+      "$value": "{control.icon.600}",
+      "$type": "dimension"
+    },
+    "picto": {
+      "color": {
+        "$value": "{color.icon.primary.default}",
+        "$type": "color"
+      }
+    },
+    "letter": {
+      "color": {
+        "$value": "{color.text.primary.default}",
+        "$type": "color"
+      },
+      "textSize": {
+        "$value": "{type.size.02}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

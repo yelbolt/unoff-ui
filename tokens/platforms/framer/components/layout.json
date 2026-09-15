@@ -3,25 +3,25 @@
     "block": {
       "padding": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         }
       },
       "border": {
         "width": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "color": {
@@ -39,19 +39,19 @@
     "list": {
       "padding": {
         "top": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         }
       }
@@ -59,26 +59,26 @@
     "centered": {
       "padding": {
         "top": {
-          "$value": "{size.pos.small}",
+          "$value": "{space.inset.600}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.small}",
+          "$value": "{space.inset.600}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.pos.small}",
+          "$value": "{space.inset.600}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.small}",
+          "$value": "{space.inset.600}",
           "$type": "dimension"
         }
       }
     },
     "distributed": {
       "gap": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.gap.600}",
         "$type": "dimension"
       }
     }

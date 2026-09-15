@@ -1,0 +1,112 @@
+{
+  "keyboardShortcutItem": {
+    "padding": {
+      "top": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.inset.600}",
+        "$type": "dimension"
+      }
+    },
+    "gap": {
+      "$value": "{space.gap.200}",
+      "$type": "dimension"
+    },
+    "minHeight": {
+      "$value": "{control.size.800}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{color.background.primary.default}",
+        "$type": "color"
+      }
+    },
+    "key": {
+      "radius": {
+        "$value": "{radius.xxlarge}",
+        "$type": "dimension"
+      },
+      "padding": {
+        "top": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.inset.300}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{space.inset.300}",
+          "$type": "dimension"
+        }
+      },
+      "minWidth": {
+        "$value": "{control.size.200}",
+        "$type": "dimension"
+      },
+      "gap": {
+        "$value": "{space.gap.100}",
+        "$type": "dimension"
+      },
+      "height": {
+        "$value": "{control.size.600}",
+        "$type": "dimension"
+      },
+      "background": {
+        "color": {
+          "$value": "{color.background.primary.default}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "width": {
+          "$value": "{stroke.width.thin}",
+          "$type": "dimension"
+        },
+        "offset": {
+          "$value": "{stroke.offset.thin}",
+          "$type": "dimension"
+        },
+        "color": {
+          "$value": "{color.border.primary.default}",
+          "$type": "color"
+        }
+      }
+    },
+    "separator": {
+      "padding": {
+        "top": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.inset.100}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{space.inset.100}",
+          "$type": "dimension"
+        }
+      }
+    }
+  }
+}

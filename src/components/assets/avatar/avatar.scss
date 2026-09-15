@@ -1,12 +1,13 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/yelbolt';
 @import 'styles/framer';
 
 .user {
   display: flex;
   align-items: center;
-  gap: var(--size-pos-xxsmall);
+  gap: var(--scale-pos-xxsmall);
 
   &--inverted {
     flex-direction: row-reverse;

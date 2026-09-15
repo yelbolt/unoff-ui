@@ -35,7 +35,7 @@ When prompted, enter the theme name. The script will:
 - Create `src/icons/{theme}/` — SVG icons copied from the `figma` theme
 - Add `@import` statements for the new theme to all relevant SCSS files
 - Register the theme in `.storybook/preview.tsx` (toolbar + background colors)
-- Create SCSS module files at `src/styles/tokens/modules/{theme}-colors.module.scss` and `{theme}-types.module.scss`
+- Create SCSS module files at `src/styles/tokens/modules/{theme}-modes.module.scss` and `{theme}-types.module.scss`
 - Add imports to `.storybook/theme-styles.scss`
 
 After the script finishes, confirm with the user that it completed without errors before continuing.
@@ -175,4 +175,4 @@ If the brand has a system font, use:
 - Source theme tokens (to compare against): `tokens/platforms/figma/`
 - Terrazzo config example: `terrazzo/figma/`
 - Storybook preview config: `.storybook/preview.tsx`
-- SCSS module example: `src/styles/tokens/modules/figma-colors.module.scss`
+- SCSS module example: `src/styles/tokens/modules/figma-modes.module.scss`

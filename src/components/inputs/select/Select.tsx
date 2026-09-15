@@ -120,7 +120,10 @@ export default class Select extends React.Component<SelectProps, SelectState> {
     super(props)
     this.state = {
       isTooltipVisible: false,
-      documentWidth: document.documentElement.clientWidth,
+      documentWidth:
+        typeof document !== 'undefined'
+          ? document.documentElement.clientWidth
+          : 1024,
     }
   }
 

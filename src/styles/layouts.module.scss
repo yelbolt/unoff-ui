@@ -5,19 +5,19 @@
   &--tight {
     @extend .snackbar;
 
-    gap: var(--size-pos-xxxsmall);
+    gap: var(--scale-pos-xxxsmall);
   }
 
   &--medium {
     @extend .snackbar;
 
-    gap: var(--size-pos-xxsmall);
+    gap: var(--scale-pos-xxsmall);
   }
 
   &--large {
     @extend .snackbar;
 
-    gap: var(--size-pos-xsmall);
+    gap: var(--scale-pos-xsmall);
   }
 
   &--start {
@@ -77,19 +77,19 @@
   &--tight {
     @extend .stackbar;
 
-    gap: var(--size-pos-xxxsmall);
+    gap: var(--scale-pos-xxxsmall);
   }
 
   &--medium {
     @extend .stackbar;
 
-    gap: var(--size-pos-xxsmall);
+    gap: var(--scale-pos-xxsmall);
   }
 
   &--large {
     @extend .stackbar;
 
-    gap: var(--size-pos-xsmall);
+    gap: var(--scale-pos-xsmall);
   }
 
   &--start {

@@ -1,6 +1,7 @@
 @import 'styles/penpot';
 @import 'styles/sketch';
 @import 'styles/figma';
+@import 'styles/yelbolt';
 @import 'styles/framer';
 
 .card {
@@ -8,6 +9,13 @@
   position: relative;
   flex-direction: column;
   gap: var(--card-gap);
+  transform: var(--card-transform-default);
+  transition:
+    background-color var(--card-transition),
+    outline-color var(--card-transition),
+    outline-width var(--card-transition),
+    outline-offset var(--card-transition),
+    transform var(--card-transition);
   box-sizing: border-box;
   outline: var(--card-border-width) solid var(--card-border-color);
   outline-offset: var(--card-border-offset);
@@ -29,6 +37,7 @@
   }
 
   &:hover {
+    transform: var(--card-transform-hover);
     --card-background-color: var(--card-background-color-hover);
     --card-border-width: var(--card-border-width-hover);
     --card-border-color: var(--card-border-color-hover);
@@ -40,6 +49,7 @@
   }
 
   &:focus {
+    transform: var(--card-transform-focus);
     --card-background-color: var(--card-background-color-focus);
     --card-border-width: var(--card-border-width-focus);
     --card-border-color: var(--card-border-color-focus);
@@ -48,6 +58,10 @@
     .card__actions {
       visibility: visible;
     }
+  }
+
+  &:active {
+    transform: var(--card-transform-pressed);
   }
 
   &__tags {
@@ -75,11 +89,25 @@
     inset: 0;
     padding: var(--card-actions-padding-top) var(--card-actions-padding-right)
       var(--card-actions-padding-bottom) var(--card-actions-padding-left);
+    z-index: 2;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     gap: var(--card-content-gap);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    --motion-duration-fast: 0ms;
+    --motion-duration-base: 0ms;
+    --motion-duration-slow: 0ms;
+    --motion-duration-control: 0ms;
+    --motion-transform-raise: none;
+    --motion-transform-sink: none;
+    --motion-transform-grow: none;
+    --motion-transform-shrink: none;
   }
 }

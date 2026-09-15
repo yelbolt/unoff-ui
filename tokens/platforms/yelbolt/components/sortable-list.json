@@ -1,0 +1,32 @@
+{
+  "sortableList": {
+    "padding": {
+      "top": {
+        "$value": "{space.inset.025}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.inset.025}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      }
+    },
+    "border": {
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      },
+      "color": {
+        "$value": "{color.border.primary.default}",
+        "$type": "color"
+      }
+    }
+  }
+}

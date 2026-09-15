@@ -33,6 +33,11 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
  *     per-permutation `tokensSet` so resolver modes (light/dark) work correctly:
  *
  *     - dimension  "$value": "4px"      (string) → returned as-is as CSS
+ *     - fontWeight / fontWeights (aliasChain set) → var(--alias-token)
+ *                  reference, same as dimension. Needed because resolver
+ *                  permutations other than the default context never pass
+ *                  through the transform() pre-hook above, so their tokens
+ *                  keep the raw Tokens Studio "fontWeights" $type.
  *     - shadow / boxShadow (aliasOf set) → var(--alias-token) reference, so
  *                  component tokens that alias an elevation token emit e.g.
  *                  var(--elevation-300-tooltip) rather than inlined layers.
@@ -65,14 +70,19 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
  *     Non-default tokens are omitted entirely — they share the exact same name
  *     as the platform's native variables, so the platform's injected `:root`
  *     values are picked up directly without any declaration needed.
- *     Load the resulting file INSTEAD of figma-colors.scss in the plugin so
+ *     The `keep` option names prefixes that have NO native counterpart and so
+ *     must survive verbatim — the semantic motion layer (`--motion-*`) is one:
+ *     Figma injects no timing variables, and dropping them would leave every
+ *     `--<component>-transition` shorthand referencing an undefined var, which
+ *     invalidates the whole `transition` declaration at computed-value time.
+ *     Load the resulting file INSTEAD of figma-modes.scss in the plugin so
  *     the platform's colors apply for all products (FigJam, Slides, Buzz…)
  *     regardless of data-mode.
  *
  *     Usage:
  *       import tokensStudioCompat, { cssTransform, wrapPassthrough }
  *         from '../plugins/tokens-studio-compat.js'
- *       prepare: wrapPassthrough(':root')
+ *       prepare: wrapPassthrough(':root', { keep: ['--motion-'] })
  *
  * TYPE_MAP (shared by all three exports):
  *   fontFamilies → fontFamily  (DTCG)
@@ -240,7 +250,11 @@ export const preprocessTokens = (tokenPaths) => {
 }
 
 export const cssTransform = (token, { tokensSet, transformAlias }) => {
-  if (token.$type === 'dimension') {
+  if (
+    token.$type === 'dimension' ||
+    token.$type === 'fontWeight' ||
+    token.$type === 'fontWeights'
+  ) {
     if (token.aliasChain?.[0])
       return transformAlias(tokensSet[token.aliasChain[0]])
     const v = token.$value
@@ -285,14 +299,23 @@ export const wrapFallbacks = (prepare) => (css) => {
  * Non-default tokens are omitted — they share the platform's native names.
  *
  * @param {string} selector - The CSS selector to wrap the block in (e.g. ':root').
+ * @param {object} [options]
+ * @param {string[]} [options.keep] - Custom-property name prefixes to emit
+ *   verbatim (value and all) rather than omit, for families the platform does
+ *   not inject natively.
  * @returns {(css: string) => string}
  */
-export const wrapPassthrough = (selector) => (css) => {
-  const lines = []
-  for (const [, base] of css.matchAll(/(--[\w][\w-]*)-default: [^;]+;/g))
-    lines.push(`  ${base}-default: var(${base});`)
-  return `${selector} {\n${lines.join('\n')}\n}\n`
-}
+export const wrapPassthrough =
+  (selector, { keep = [] } = {}) =>
+  (css) => {
+    const lines = []
+    for (const [, name, value] of css.matchAll(/(--[\w][\w-]*): ([^;]+);/g))
+      if (name.endsWith('-default'))
+        lines.push(`  ${name}: var(${name.slice(0, -'-default'.length)});`)
+      else if (keep.some((prefix) => name.startsWith(prefix)))
+        lines.push(`  ${name}: ${value};`)
+    return `${selector} {\n${lines.join('\n')}\n}\n`
+  }
 
 export default function tokensStudioCompat() {
   return {

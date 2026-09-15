@@ -1,0 +1,484 @@
+{
+  "icon": {
+    "adjust": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/adjust.svg"
+    },
+    "ai": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/ai.svg"
+    },
+    "alert": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/alert.svg"
+    },
+    "angle": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/angle.svg"
+    },
+    "arrowLeftRight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/arrow-left-right.svg"
+    },
+    "arrowUpDown": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/arrow-up-down.svg"
+    },
+    "autoLayoutHorizontal": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/auto-layout-horizontal.svg"
+    },
+    "autoLayoutVertical": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/auto-layout-vertical.svg"
+    },
+    "back": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/back.svg"
+    },
+    "blend": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/blend.svg"
+    },
+    "blendEmpty": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/blend-empty.svg"
+    },
+    "break": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/break.svg"
+    },
+    "caretDown": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/caret-down.svg"
+    },
+    "caretLeft": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/caret-left.svg"
+    },
+    "caretRight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/caret-right.svg"
+    },
+    "caretUp": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/caret-up.svg"
+    },
+    "check": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/check.svg"
+    },
+    "chevronDown": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/chevron-down.svg"
+    },
+    "chevronLeft": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/chevron-left.svg"
+    },
+    "chevronRight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/chevron-right.svg"
+    },
+    "chevronUp": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/chevron-up.svg"
+    },
+    "close": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/close.svg"
+    },
+    "code": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/code.svg"
+    },
+    "colors": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/colors.svg"
+    },
+    "component": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/component.svg"
+    },
+    "contrast": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/contrast.svg"
+    },
+    "copy": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/copy.svg"
+    },
+    "cornerRadius": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/corner-radius.svg"
+    },
+    "corners": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/corners.svg"
+    },
+    "curveAntiHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-anti-hyperbola.svg"
+    },
+    "curveEaseInOut": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-ease-in-out.svg"
+    },
+    "curveEaseIn": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-ease-in.svg"
+    },
+    "curveEaseOut": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-ease-out.svg"
+    },
+    "curveHyperbola": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-hyperbola.svg"
+    },
+    "curveLinear": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/curve-linear.svg"
+    },
+    "distributeHorizontalSpacing": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/distribute-horizontal-spacing.svg"
+    },
+    "distributeVerticalSpacing": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/distribute-vertical-spacing.svg"
+    },
+    "downward": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/downward.svg"
+    },
+    "draft": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/draft.svg"
+    },
+    "effects": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/effects.svg"
+    },
+    "ellipses": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/ellipses.svg"
+    },
+    "explore": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/explore.svg"
+    },
+    "eyedropper": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/eyedropper.svg"
+    },
+    "filter": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/filter.svg"
+    },
+    "forward": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/forward.svg"
+    },
+    "frame": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/frame.svg"
+    },
+    "group": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/group.svg"
+    },
+    "help": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/help.svg"
+    },
+    "hidden": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/hidden.svg"
+    },
+    "horizontalPadding": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/horizontal-padding.svg"
+    },
+    "hyperlink": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/hyperlink.svg"
+    },
+    "image": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/image.svg"
+    },
+    "import": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/import.svg"
+    },
+    "info": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/info.svg"
+    },
+    "instance": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/instance.svg"
+    },
+    "key": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/key.svg"
+    },
+    "layoutAlignBottom": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-bottom.svg"
+    },
+    "layoutAlignHorizontalCenters": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-horizontal-centers.svg"
+    },
+    "layoutAlignLeft": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-left.svg"
+    },
+    "layoutAlignRight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-right.svg"
+    },
+    "layoutAlignTop": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-top.svg"
+    },
+    "layoutAlignVerticalCenters": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-align-vertical-centers.svg"
+    },
+    "layoutGridColumns": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-grid-columns.svg"
+    },
+    "layoutGridRows": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-grid-rows.svg"
+    },
+    "layoutGridUniform": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/layout-grid-uniform.svg"
+    },
+    "library": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/library.svg"
+    },
+    "linkBroken": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/link-broken.svg"
+    },
+    "linkConnected": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/link-connected.svg"
+    },
+    "list": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/list.svg"
+    },
+    "listDetailed": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/list-detailed.svg"
+    },
+    "listTile": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/list-tile.svg"
+    },
+    "lockOff": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/lock-off.svg"
+    },
+    "lockOn": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/lock-on.svg"
+    },
+    "minus": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/minus.svg"
+    },
+    "play": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/play.svg"
+    },
+    "plus": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/plus.svg"
+    },
+    "random": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/random.svg"
+    },
+    "recent": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/recent.svg"
+    },
+    "redo": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/redo.svg"
+    },
+    "refresh": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/refresh.svg"
+    },
+    "repository": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/repository.svg"
+    },
+    "reset": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/reset.svg"
+    },
+    "resizeGrip": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/resize-grip.svg"
+    },
+    "resizeToFit": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/resize-to-fit.svg"
+    },
+    "resolve": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/resolve.svg"
+    },
+    "resolveFilled": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/resolve-filled.svg"
+    },
+    "reverse": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/reverse.svg"
+    },
+    "search": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/search.svg"
+    },
+    "searchLarge": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/search-large.svg"
+    },
+    "settings": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/settings.svg"
+    },
+    "share": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/share.svg"
+    },
+    "smiley": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/smiley.svg"
+    },
+    "sortAlphaAsc": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/sort-alpha-asc.svg"
+    },
+    "sortAlphaDsc": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/sort-alpha-dsc.svg"
+    },
+    "sortTopBottom": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/sort-top-bottom.svg"
+    },
+    "spacing": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/spacing.svg"
+    },
+    "spinner": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/spinner.svg"
+    },
+    "starOff": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/star-off.svg"
+    },
+    "starOn": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/star-on.svg"
+    },
+    "strokeWeight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/stroke-weight.svg"
+    },
+    "styles": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/styles.svg"
+    },
+    "swap": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/swap.svg"
+    },
+    "target": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/target.svg"
+    },
+    "theme": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/theme.svg"
+    },
+    "tidyUpGrid": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/tidy-up-grid.svg"
+    },
+    "tidyUpListHorizontal": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/tidy-up-list-horizontal.svg"
+    },
+    "tidyUpListVertical": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/tidy-up-list-vertical.svg"
+    },
+    "timer": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/timer.svg"
+    },
+    "toggleSidebarBottom": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/toggle-sidebar-bottom.svg"
+    },
+    "toggleSidebarLeft": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/toggle-sidebar-left.svg"
+    },
+    "toggleSidebarRight": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/toggle-sidebar-right.svg"
+    },
+    "toggleSidebarTop": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/toggle-sidebar-top.svg"
+    },
+    "trash": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/trash.svg"
+    },
+    "undo": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/undo.svg"
+    },
+    "upward": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/upward.svg"
+    },
+    "user": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/user.svg"
+    },
+    "verticalPadding": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/vertical-padding.svg"
+    },
+    "visible": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/visible.svg"
+    },
+    "warning": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/warning.svg"
+    },
+    "warningLarge": {
+      "$type": "link",
+      "$value": "/src/icons/yelbolt/warning-large.svg"
+    }
+  }
+}

@@ -1,15 +1,15 @@
 {
   "avatar": {
     "width": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "height": {
-      "$value": "{size.pos.small}",
+      "$value": "{control.icon.600}",
       "$type": "dimension"
     },
     "radius": {
-      "$value": "{border.radius.xxlarge}",
+      "$value": "{radius.xxlarge}",
       "$type": "dimension"
     }
   }

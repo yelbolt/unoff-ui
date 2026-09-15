@@ -5,7 +5,7 @@
 :root[data-theme="framer"] {
   --drawer-background-color: var(--framer-color-bg-default);
   --drawer-border-color: var(--framer-color-divider);
-  --drawer-border-width: var(--size-pos-unit);
-  --drawer-knob-position: var(--size-neg-xxxsmall);
-  --drawer-knob-size: var(--size-pos-xxsmall);
+  --drawer-border-width: var(--stroke-width-thin);
+  --drawer-knob-position: var(--space-pull-100);
+  --drawer-knob-size: var(--control-size-200);
 }

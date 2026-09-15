@@ -4,8 +4,8 @@
 
 :root[data-theme="sketch"] {
   --notification-message-max-width: 400px;
-  --notification-padding-bottom: var(--size-pos-medium);
-  --notification-padding-left: var(--size-pos-medium);
-  --notification-padding-right: var(--size-pos-medium);
-  --notification-padding-top: var(--size-pos-medium);
+  --notification-padding-bottom: var(--space-inset-800);
+  --notification-padding-left: var(--space-inset-800);
+  --notification-padding-right: var(--space-inset-800);
+  --notification-padding-top: var(--space-inset-800);
 }

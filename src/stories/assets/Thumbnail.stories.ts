@@ -25,3 +25,16 @@ export const ExternalImage: Story = {
     await expect(img).toBeInTheDocument()
   },
 }
+
+export const Fragment: Story = {
+  args: {
+    width: '300px',
+    height: '200px',
+    insert: 'AB',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const fragment = canvas.getByText('AB')
+    await expect(fragment).toBeInTheDocument()
+  },
+}

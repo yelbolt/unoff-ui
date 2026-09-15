@@ -1,0 +1,98 @@
+{
+  "multipleSlider": {
+    "margin": {
+      "top": {
+        "$value": "{space.offset.1000}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.offset.200}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      }
+    },
+    "padding": {
+      "top": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.inset.800}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.none}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.inset.800}",
+        "$type": "dimension"
+      }
+    },
+    "height": {
+      "$value": "{control.size.300}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{radius.large}",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{color.background.secondary.default}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{color.border.secondary.default}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.thin}",
+        "$type": "dimension"
+      }
+    },
+    "progress": {
+      "color": {
+        "$value": "{color.background.brand.default}",
+        "$type": "color"
+      }
+    },
+    "status": {
+      "gap": {
+        "$value": "{space.gap.200}",
+        "$type": "dimension"
+      },
+      "margin": {
+        "top": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "right": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "bottom": {
+          "$value": "{space.none}",
+          "$type": "dimension"
+        },
+        "left": {
+          "$value": "{space.offset.200}",
+          "$type": "dimension"
+        }
+      },
+      "height": {
+        "$value": "{control.size.400}",
+        "$type": "dimension"
+      }
+    }
+  }
+}

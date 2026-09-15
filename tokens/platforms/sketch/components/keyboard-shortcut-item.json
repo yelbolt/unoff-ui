@@ -2,28 +2,28 @@
   "keyboardShortcutItem": {
     "padding": {
       "top": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.small}",
+        "$value": "{space.inset.600}",
         "$type": "dimension"
       }
     },
     "gap": {
-      "$value": "{size.pos.xxsmall}",
+      "$value": "{space.gap.200}",
       "$type": "dimension"
     },
     "minHeight": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.size.800}",
       "$type": "dimension"
     },
     "background": {
@@ -34,37 +34,37 @@
     },
     "key": {
       "radius": {
-        "$value": "{border.radius.xxlarge}",
+        "$value": "{radius.xxlarge}",
         "$type": "dimension"
       },
       "padding": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxsmall}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         }
       },
       "minWidth": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{control.size.200}",
         "$type": "dimension"
       },
       "gap": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.gap.100}",
         "$type": "dimension"
       },
       "height": {
-        "$value": "{size.pos.small}",
+        "$value": "{control.size.600}",
         "$type": "dimension"
       },
       "background": {
@@ -75,11 +75,11 @@
       },
       "border": {
         "width": {
-          "$value": "{size.pos.unit}",
+          "$value": "{stroke.width.thin}",
           "$type": "dimension"
         },
         "offset": {
-          "$value": "{size.neg.unit}",
+          "$value": "{stroke.offset.thin}",
           "$type": "dimension"
         },
         "color": {
@@ -91,19 +91,19 @@
     "separator": {
       "padding": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{space.inset.100}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{space.inset.100}",
           "$type": "dimension"
         }
       }

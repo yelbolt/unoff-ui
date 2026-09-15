@@ -3,10 +3,10 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --color-item-gap: var(--size-pos-xxsmall);
-  --color-item-height: var(--size-pos-medium);
-  --color-item-padding-bottom: var(--size-null);
-  --color-item-padding-left: var(--size-pos-small);
-  --color-item-padding-right: var(--size-pos-xsmall);
-  --color-item-padding-top: var(--size-null);
+  --color-item-gap: var(--space-gap-200);
+  --color-item-height: var(--control-size-800);
+  --color-item-padding-bottom: var(--space-none);
+  --color-item-padding-left: var(--space-inset-600);
+  --color-item-padding-right: var(--space-inset-400);
+  --color-item-padding-top: var(--space-none);
 }

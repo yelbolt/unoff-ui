@@ -122,7 +122,7 @@ const DraggableWindow = (props: DraggableWindowProps) => {
               action={onClose}
             />
           }
-          padding="0 var(--size-pos-xxsmall)"
+          padding="0 var(--scale-pos-xxsmall)"
           isCompact
           shouldReflow={false}
           clip={['LEFT']}

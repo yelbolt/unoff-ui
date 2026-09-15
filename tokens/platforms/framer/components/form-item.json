@@ -2,33 +2,33 @@
   "formItem": {
     "gap": {
       "default": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.gap.200}",
         "$type": "dimension"
       },
       "multiline": {
-        "$value": "{size.pos.xxxsmall}",
+        "$value": "{space.gap.100}",
         "$type": "dimension"
       }
     },
     "minHeight": {
-      "$value": "{size.pos.medium}",
+      "$value": "{control.size.800}",
       "$type": "dimension"
     },
     "padding": {
       "top": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{size.null}",
+        "$value": "{space.none}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{size.pos.xunit}",
+        "$value": "{space.inset.050}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{size.pos.xxsmall}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       }
     },
@@ -46,43 +46,43 @@
     },
     "label": {
       "width": {
-        "$value": "{size.pos.huge}",
+        "$value": "{control.size.2400}",
         "$type": "dimension"
       },
       "margin": {
         "default": {
           "top": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": "{space.offset.200}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           }
         },
         "multiline": {
           "top": {
-            "$value": "{size.pos.xxsmall}",
+            "$value": "{space.offset.200}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           }
         }
@@ -96,33 +96,33 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           }
         },
         "multiline": {
           "top": {
-            "$value": "{size.pos.xunit}",
+            "$value": "{space.offset.050}",
             "$type": "dimension"
           },
           "right": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "bottom": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           },
           "left": {
-            "$value": "{size.null}",
+            "$value": "{space.none}",
             "$type": "dimension"
           }
         }
@@ -131,19 +131,19 @@
     "helper": {
       "padding": {
         "top": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{space.inset.100}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{size.null}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{size.pos.xxxsmall}",
+          "$value": "{space.inset.100}",
           "$type": "dimension"
         }
       }

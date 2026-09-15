@@ -61,7 +61,9 @@ const Tabs = (props: TabsProps) => {
     action,
   } = props
 
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 1024
+  )
   const menuContainerId = useRef(
     `tabs-menu-${Math.random().toString(36).substr(2, 9)}`
   )
