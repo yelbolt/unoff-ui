@@ -286,7 +286,7 @@ output). Every theme's `terrazzo.components.js` reads this same manifest, so one
 
 ## Adding a New Terrazzo Config
 
-A new *theme-level* config (not a component) — e.g. adding a `mode`, `text`, `icon`, or `color`
+A new _theme-level_ config (not a component) — e.g. adding a `mode`, `text`, `icon`, or `color`
 build for a new platform — must:
 
 1. Import `tokensStudioCompat` (default), `cssTransform`, and optionally `preprocessTokens` from `../plugins/tokens-studio-compat.js`
