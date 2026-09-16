@@ -1,9 +1,6 @@
 {
   "figma": {
     "$type": "color",
-    "$extensions": {
-      "com.figma.scopes": ["ALL_SCOPES"]
-    },
     "color": {
       "bg": {
         "default": {

@@ -1,12 +1,6 @@
 {
-  "$extensions": {
-    "com.figma.modeName": "Framer Dark"
-  },
   "framer": {
     "$type": "color",
-    "$extensions": {
-      "com.figma.scopes": ["ALL_SCOPES"]
-    },
     "color": {
       "bg": {
         "default": {

@@ -1,12 +1,6 @@
 {
-  "$extensions": {
-    "com.figma.modeName": "Sketch Dark"
-  },
   "sketch": {
     "$type": "color",
-    "$extensions": {
-      "com.figma.scopes": ["ALL_SCOPES"]
-    },
     "color": {
       "accent": {
         "default": {

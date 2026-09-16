@@ -1833,9 +1833,6 @@
       }
     }
   },
-  "$extensions": {
-    "com.figma.modeName": "ISB Light"
-  },
   "motion": {
     "$description": "Semantic motion layer. Components never reach into the duration/easing/transform primitives directly — they go through these lanes so a mode can retime or immobilise the whole library.",
     "duration": {

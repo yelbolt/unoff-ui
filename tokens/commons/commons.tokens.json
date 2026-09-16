@@ -1,13 +1,7 @@
 {
-  "$extensions": {
-    "com.figma.modeName": "Default"
-  },
   "grey": {
     "$type": "color",
     "$description": "A comprehensive set of grey color values to ensure consistent color usage across all supported platforms. These values can be used for backgrounds, borders, text, that must be preserved whatever the enabled color mode.",
-    "$extensions": {
-      "com.figma.scopes": ["ALL_SCOPES"]
-    },
     "transparent": {
       "$value": "#00000000"
     },
@@ -48,9 +42,6 @@
   "alpha": {
     "$type": "number",
     "$description": "A comprehensive set of opacity values to ensure consistent transparency levels across all supported platforms. These values can be used for fills, strokes, effects, and other transparency needs.",
-    "$extensions": {
-      "com.figma.scopes": ["OPACITY"]
-    },
     "0": {
       "$value": 0
     },
@@ -119,9 +110,6 @@
     "radius": {
       "$type": "dimension",
       "$description": "A comprehensive set of radius values to ensure roundness across all supported platforms. These values can be used for border-radius, corner-radius, and other roundness needs.",
-      "$extensions": {
-        "com.figma.scopes": ["CORNER_RADIUS"]
-      },
       "null": {
         "$value": "0px"
       },
@@ -154,15 +142,6 @@
   "scale": {
     "$type": "dimension",
     "$description": "A comprehensive set of spacing/sizing values to ensure consistent layout and spacing across all supported platforms. These values can be used for margins, paddings, gaps, and other spacing needs.",
-    "$extensions": {
-      "com.figma.scopes": [
-        "WIDTH_HEIGHT",
-        "GAP",
-        "STROKE_FLOAT",
-        "EFFECT_FLOAT",
-        "OPACITY"
-      ]
-    },
     "null": {
       "$value": "0px"
     },
@@ -271,9 +250,6 @@
     "$description": "A comprehensive set of typography values to ensure consistent text styles across all supported platforms. These values can be used for font sizes, weights, line heights, and letter spacing.",
     "size": {
       "$type": "dimension",
-      "$extensions": {
-        "com.figma.scopes": ["FONT_SIZE"]
-      },
       "xxxsmall": {
         "$value": "9px"
       },
@@ -298,9 +274,6 @@
     },
     "weight": {
       "$type": "fontWeights",
-      "$extensions": {
-        "com.figma.scopes": ["FONT_STYLE"]
-      },
       "normal": {
         "$value": 400
       },
@@ -319,9 +292,6 @@
     },
     "lineHeight": {
       "$type": "number",
-      "$extensions": {
-        "com.figma.scopes": ["LINE_HEIGHT"]
-      },
       "default": {
         "$value": "16px"
       },
@@ -331,9 +301,6 @@
     },
     "letterSpacing": {
       "$type": "dimension",
-      "$extensions": {
-        "com.figma.scopes": ["LETTER_SPACING"]
-      },
       "neg": {
         "xlarge": {
           "$value": "-0.16px"
