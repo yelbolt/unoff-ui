@@ -5,6 +5,6 @@ const FAMILIES = ['isb', 'ntl', 'tcn', 'uicp', 'uics', 'uno', 'ylb']
 export default defineComponentsConfig({
   platform: 'yelbolt',
   modes: FAMILIES.flatMap((f) => [`${f}-light`, `${f}-dark`]),
-  extraTokens: ['./tokens/platforms/yelbolt/colors.json'],
+  extraTokens: ['./tokens/platforms/yelbolt/colors.tokens.json'],
   colorExcludes: ['color.**', ...FAMILIES.map((f) => `${f.toUpperCase()}.**`)],
 })

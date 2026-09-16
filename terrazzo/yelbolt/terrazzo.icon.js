@@ -3,7 +3,7 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Yelbolt Icons',
-  tokens: ['./tokens/platforms/yelbolt/icon.json'],
+  tokens: ['./tokens/platforms/yelbolt/icon.tokens.json'],
   outDir: './src/styles/icons/',
   plugins: [
     css({

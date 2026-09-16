@@ -56,10 +56,10 @@ export function defineComponentsConfig({
       (m) => `./tokens/platforms/${platform}/modes/${m}.tokens.json`
     ),
     ...extraTokens,
-    `./tokens/platforms/${platform}/text.json`,
-    `./tokens/platforms/${platform}/icon.json`,
+    `./tokens/platforms/${platform}/text.tokens.json`,
+    `./tokens/platforms/${platform}/icon.tokens.json`,
     ...COMPONENTS.map(
-      (c) => `./tokens/platforms/${platform}/components/${c.name}.json`
+      (c) => `./tokens/platforms/${platform}/components/${c.name}.tokens.json`
     ),
   ]
 

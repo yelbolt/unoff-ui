@@ -3,7 +3,7 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Sketch Icons',
-  tokens: ['./tokens/platforms/sketch/icon.json'],
+  tokens: ['./tokens/platforms/sketch/icon.tokens.json'],
   outDir: './src/styles/icons/',
   plugins: [
     css({

@@ -9,7 +9,7 @@ const tokenPaths = [
   './tokens/commons/commons.tokens.json',
   './tokens/platforms/penpot/modes/penpot-light.tokens.json',
   './tokens/platforms/penpot/modes/penpot-dark.tokens.json',
-  './tokens/platforms/penpot/text.json',
+  './tokens/platforms/penpot/text.tokens.json',
 ]
 
 export default defineConfig({

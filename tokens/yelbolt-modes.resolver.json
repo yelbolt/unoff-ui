@@ -11,7 +11,7 @@
       "description": "Yelbolt color primitives (shade ramps per family) plus the commons scale the dimension system draws from",
       "sources": [
         { "$ref": "./commons/commons.tokens.json" },
-        { "$ref": "./platforms/yelbolt/colors.json" }
+        { "$ref": "./platforms/yelbolt/colors.tokens.json" }
       ]
     }
   },

@@ -9,7 +9,7 @@ const tokenPaths = [
   './tokens/commons/commons.tokens.json',
   './tokens/platforms/framer/modes/framer-light.tokens.json',
   './tokens/platforms/framer/modes/framer-dark.tokens.json',
-  './tokens/platforms/framer/text.json',
+  './tokens/platforms/framer/text.tokens.json',
 ]
 
 export default defineConfig({

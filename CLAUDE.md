@@ -127,7 +127,7 @@ src/styles/tokens/modules/{theme}-types.module.scss
 and motion on `yelbolt`. `figma`, `penpot`, `sketch` and `framer` resolve their
 own colors directly into that layer at build time, so `modes` is their only
 token output. `yelbolt` additionally owns a primitive color palette
-(`platforms/yelbolt/colors.json`) that must survive as reusable `:root`
+(`platforms/yelbolt/colors.tokens.json`) that must survive as reusable `:root`
 variables, so it alone also builds a `color` layer:
 `terrazzo/yelbolt/terrazzo.color.js` → `src/styles/tokens/yelbolt-colors.scss`
 / `modules/yelbolt-colors.module.scss`. Keep that split when a future theme

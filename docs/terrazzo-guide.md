@@ -31,7 +31,7 @@ terrazzo/
   ├── sketch/                  # Configuration for Sketch theme (same 4-file shape as figma/)
   └── yelbolt/                 # Configuration for Yelbolt theme
       ├── terrazzo.color.js       # Primitive color ramps only (yelbolt-colors.scss) — yelbolt is the
-      │                           # only theme with its own primitive palette (colors.json), so it is
+      │                           # only theme with its own primitive palette (colors.tokens.json), so it is
       │                           # the only one with a standalone `color` build alongside `mode`
       ├── terrazzo.components.js  # Emits styles/yelbolt.scss for all 43 components (manifest-driven)
       ├── terrazzo.mode.js        # Semantic mode layer (color, dimension, motion), 14 family × light/dark permutations
@@ -68,7 +68,7 @@ tokens/
   │       └── commons.effect-dark.tokens.json
   └── platforms/
       ├── figma/
-      │   ├── text.json
+      │   ├── text.tokens.json
       │   ├── modes/
       │   │   ├── figma-light.tokens.json
       │   │   ├── figma-dark.tokens.json
@@ -79,8 +79,8 @@ tokens/
       ├── penpot/  …
       ├── sketch/  …
       └── yelbolt/
-          ├── colors.json          # Primitive brand ramps (YLB.*, NTL.*, …) — built by terrazzo.color.js only
-          ├── text.json
+          ├── colors.tokens.json   # Primitive brand ramps (YLB.*, NTL.*, …) — built by terrazzo.color.js only
+          ├── text.tokens.json
           ├── modes/                # 14 brand × light/dark mode files (color + dimension + motion)
           └── components/
               └── …
@@ -219,7 +219,7 @@ Available token types are:
 
 ### Update a Component After Modifying Tokens
 
-1. Modify the JSON file corresponding to the component (e.g., `tokens/platforms/sketch/components/button.json`)
+1. Modify the JSON file corresponding to the component (e.g., `tokens/platforms/sketch/components/button.tokens.json`)
 2. Run the command to regenerate the component's CSS files:
 
 ```bash
@@ -228,7 +228,7 @@ npm run scss:build theme=sketch component=button
 
 ### Update Base Tokens After Modifications
 
-1. Modify a base token file (e.g., `tokens/platforms/penpot/text.json`)
+1. Modify a base token file (e.g., `tokens/platforms/penpot/text.tokens.json`)
 2. Run the command to regenerate the token's CSS files:
 
 ```bash

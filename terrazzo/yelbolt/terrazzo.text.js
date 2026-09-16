@@ -21,8 +21,8 @@ const tokenPaths = [
   './tokens/platforms/yelbolt/modes/uno-dark.tokens.json',
   './tokens/platforms/yelbolt/modes/ylb-light.tokens.json',
   './tokens/platforms/yelbolt/modes/ylb-dark.tokens.json',
-  './tokens/platforms/yelbolt/colors.json',
-  './tokens/platforms/yelbolt/text.json',
+  './tokens/platforms/yelbolt/colors.tokens.json',
+  './tokens/platforms/yelbolt/text.tokens.json',
 ]
 
 export default defineConfig({

@@ -3,7 +3,7 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Penpot Icons',
-  tokens: ['./tokens/platforms/penpot/icon.json'],
+  tokens: ['./tokens/platforms/penpot/icon.tokens.json'],
   outDir: './src/styles/icons/',
   plugins: [
     css({

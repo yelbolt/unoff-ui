@@ -3,7 +3,7 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Framer Icons',
-  tokens: ['./tokens/platforms/framer/icon.json'],
+  tokens: ['./tokens/platforms/framer/icon.tokens.json'],
   outDir: './src/styles/icons/',
   plugins: [
     css({

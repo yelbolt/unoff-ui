@@ -298,11 +298,11 @@ async function createTerrazzoFiles(themeName) {
         content = replaceAllThemeNames(content, themeName)
 
         if (file === 'terrazzo.mode.js' || file === 'terrazzo.text.js')
-          if (!content.includes(`./tokens/platforms/${themeName}/icon.json`))
+          if (!content.includes(`./tokens/platforms/${themeName}/icon.tokens.json`))
             content = content.replace(
               /tokens: \[([\s\S]*?)\]/,
               (match, tokensContent) => {
-                return `tokens: [${tokensContent}${tokensContent.endsWith(',') ? '' : ','}\n    './tokens/platforms/${themeName}/icon.json',\n  ]`
+                return `tokens: [${tokensContent}${tokensContent.endsWith(',') ? '' : ','}\n    './tokens/platforms/${themeName}/icon.tokens.json',\n  ]`
               }
             )
 
@@ -644,12 +644,12 @@ async function copyIconsFromFigma(themeName) {
 }
 
 /**
- * Update icon paths in the icon.json file for the new theme
+ * Update icon paths in the icon.tokens.json file for the new theme
  * @param {string} themeName - The name of the theme
  * @returns {Promise<void>}
  */
 async function updateIconPaths(themeName) {
-  const iconJsonPath = path.join(TOKENS_PLATFORMS_DIR, themeName, 'icon.json')
+  const iconJsonPath = path.join(TOKENS_PLATFORMS_DIR, themeName, 'icon.tokens.json')
 
   try {
     if (!fs.existsSync(iconJsonPath)) {
@@ -671,7 +671,7 @@ async function updateIconPaths(themeName) {
 
     await writeFile(iconJsonPath, iconContent)
     log.success(
-      `Updated icon paths in ${log.highlight('icon.json')} for theme ${log.highlight(themeName)}`
+      `Updated icon paths in ${log.highlight('icon.tokens.json')} for theme ${log.highlight(themeName)}`
     )
   } catch (err) {
     const error = err instanceof Error ? err : new Error(String(err))
@@ -919,7 +919,7 @@ async function main() {
       `3. Customize the token JSON files in ${log.path(`tokens/platforms/${themeName}/`)}`
     )
     log.info(
-      `4. Customize the icons in ${log.path(`src/icons/${themeName}/`)} (copied from Figma theme, paths updated in icon.json)`
+      `4. Customize the icons in ${log.path(`src/icons/${themeName}/`)} (copied from Figma theme, paths updated in icon.tokens.json)`
     )
     log.info(
       `5. Run ${log.path(`npm run scss:build theme=${themeName}`)} to build the theme tokens`

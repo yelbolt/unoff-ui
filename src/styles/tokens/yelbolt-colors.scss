@@ -4,129 +4,129 @@
 
 :root {
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.02:1 (A) · APCA Lc 0.0 (avoid) */
-  --isb-1: rgb(100% 99.6% 83.9%);
+  --isb-1: rgb(100% 99.608% 83.922%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.42:1 (A) · APCA Lc 22.8 (non text) */
-  --isb-2: rgb(92.5% 83.5% 63.1%);
+  --isb-2: rgb(92.549% 83.529% 63.137%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.14:1 (A) · APCA Lc 46.3 (headlines) */
-  --isb-3: rgb(78.8% 67.8% 42.7%);
+  --isb-3: rgb(78.824% 67.843% 42.745%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.40:1 (A) · APCA Lc 66.3 (body text) */
-  --isb-4: rgb(65.1% 52.5% 22.7%);
+  --isb-4: rgb(65.098% 52.549% 22.745%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.63:1 (AA) · APCA Lc 82.6 (content text) */
-  --isb-5: rgb(50.6% 38.4% 2%);
+  --isb-5: rgb(50.588% 38.431% 1.9608%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 9.41:1 (AAA) · APCA Lc 95.1 (fluent text) */
-  --isb-6: rgb(35.7% 25.5% 0%);
+  --isb-6: rgb(35.686% 25.49% 0%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 14.83:1 (AAA) · APCA Lc 103.5 (fluent text) */
-  --isb-7: rgb(21.2% 13.7% 0%);
+  --isb-7: rgb(21.176% 13.725% 0%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.47:1 (AAA) · APCA Lc 106.6 (fluent text) */
-  --isb-8: rgb(7.8% 3.1% 0%);
+  --isb-8: rgb(7.8431% 3.1373% 0%);
   /* Source color */
-  --isb-source: rgb(97.6% 86.3% 52.5%);
+  --isb-source: rgb(97.647% 86.275% 52.549%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.00:1 (A) · APCA Lc 0.0 (avoid) */
-  --ntl-1: rgb(100% 100% 93.7%);
+  --ntl-1: rgb(100% 100% 93.725%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.6 (non text) */
-  --ntl-2: rgb(85.1% 85.1% 76.5%);
+  --ntl-2: rgb(85.098% 85.098% 76.471%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.13:1 (A) · APCA Lc 46.2 (headlines) */
-  --ntl-3: rgb(69.8% 69.8% 59.6%);
+  --ntl-3: rgb(69.804% 69.804% 59.608%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.36:1 (A) · APCA Lc 66.0 (body text) */
-  --ntl-4: rgb(55.3% 55.3% 43.5%);
+  --ntl-4: rgb(55.294% 55.294% 43.529%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.56:1 (AA) · APCA Lc 82.4 (content text) */
-  --ntl-5: rgb(41.2% 41.2% 29.8%);
+  --ntl-5: rgb(41.176% 41.176% 29.804%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 9.34:1 (AAA) · APCA Lc 95.1 (fluent text) */
-  --ntl-6: rgb(28.2% 27.8% 18.4%);
+  --ntl-6: rgb(28.235% 27.843% 18.431%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 14.74:1 (AAA) · APCA Lc 103.6 (fluent text) */
-  --ntl-7: rgb(15.7% 15.7% 8.6%);
+  --ntl-7: rgb(15.686% 15.686% 8.6275%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.37:1 (AAA) · APCA Lc 106.6 (fluent text) */
-  --ntl-8: rgb(4.7% 4.7% 1.2%);
+  --ntl-8: rgb(4.7059% 4.7059% 1.1765%);
   /* Source color */
-  --ntl-source: rgb(12.9% 12.5% 1.2%);
+  --ntl-source: rgb(12.941% 12.549% 1.1765%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid) */
-  --tcn-1: rgb(100% 92.5% 98.4%);
+  --tcn-1: rgb(100% 92.549% 98.431%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.54:1 (A) · APCA Lc 27.9 (non text) */
-  --tcn-2: rgb(100% 74.1% 82.4%);
+  --tcn-2: rgb(100% 74.118% 82.353%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.26:1 (A) · APCA Lc 48.7 (headlines) */
-  --tcn-3: rgb(92.9% 56.5% 66.7%);
+  --tcn-3: rgb(92.941% 56.471% 66.667%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.62:1 (A) · APCA Lc 68.3 (body text) */
-  --tcn-4: rgb(80% 39.2% 52.2%);
+  --tcn-4: rgb(80% 39.216% 52.157%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 6.02:1 (AA) · APCA Lc 84.0 (content text) */
-  --tcn-5: rgb(63.9% 24.7% 38%);
+  --tcn-5: rgb(63.922% 24.706% 38.039%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 9.98:1 (AAA) · APCA Lc 95.8 (fluent text) */
-  --tcn-6: rgb(46.3% 13.3% 25.5%);
+  --tcn-6: rgb(46.275% 13.333% 25.49%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 15.44:1 (AAA) · APCA Lc 103.5 (fluent text) */
-  --tcn-7: rgb(28.6% 3.1% 13.7%);
+  --tcn-7: rgb(28.627% 3.1373% 13.725%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.51:1 (AAA) · APCA Lc 106.4 (fluent text) */
-  --tcn-8: rgb(12.2% 0% 3.5%);
+  --tcn-8: rgb(12.157% 0% 3.5294%);
   /* Source color */
-  --tcn-source: rgb(97.6% 52.2% 65.9%);
+  --tcn-source: rgb(97.647% 52.157% 65.882%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.05:1 (A) · APCA Lc 0.0 (avoid) */
-  --uicp-1: rgb(85.9% 100% 100%);
+  --uicp-1: rgb(85.882% 100% 100%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.39:1 (A) · APCA Lc 21.6 (non text) */
-  --uicp-2: rgb(65.9% 89% 92.5%);
+  --uicp-2: rgb(65.882% 89.02% 92.549%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.09:1 (A) · APCA Lc 44.9 (spot text) */
-  --uicp-3: rgb(45.1% 74.5% 78.8%);
+  --uicp-3: rgb(45.098% 74.51% 78.824%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.5 (body text) */
-  --uicp-4: rgb(23.9% 60.4% 65.1%);
+  --uicp-4: rgb(23.922% 60.392% 65.098%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.37:1 (AA) · APCA Lc 80.9 (content text) */
-  --uicp-5: rgb(0% 45.9% 50.6%);
+  --uicp-5: rgb(0% 45.882% 50.588%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 8.90:1 (AAA) · APCA Lc 93.6 (fluent text) */
-  --uicp-6: rgb(0% 31.8% 35.7%);
+  --uicp-6: rgb(0% 31.765% 35.686%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 14.19:1 (AAA) · APCA Lc 102.8 (fluent text) */
-  --uicp-7: rgb(0% 18.4% 21.2%);
+  --uicp-7: rgb(0% 18.431% 21.176%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.10:1 (AAA) · APCA Lc 106.5 (fluent text) */
-  --uicp-8: rgb(0% 6.3% 8.2%);
+  --uicp-8: rgb(0% 6.2745% 8.2353%);
   /* Source color */
-  --uicp-source: rgb(53.3% 92.2% 97.6%);
+  --uicp-source: rgb(53.333% 92.157% 97.647%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid) */
-  --uics-1: rgb(85.5% 100% 87.8%);
+  --uics-1: rgb(85.49% 100% 87.843%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.37:1 (A) · APCA Lc 20.5 (non text) */
-  --uics-2: rgb(65.1% 92.2% 68.2%);
+  --uics-2: rgb(65.098% 92.157% 68.235%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.04:1 (A) · APCA Lc 43.7 (spot text) */
-  --uics-3: rgb(43.9% 78% 49.4%);
+  --uics-3: rgb(43.922% 78.039% 49.412%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.15:1 (A) · APCA Lc 63.0 (body text) */
-  --uics-4: rgb(21.6% 64.3% 31.4%);
+  --uics-4: rgb(21.569% 64.314% 31.373%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.16:1 (AA) · APCA Lc 79.6 (content text) */
-  --uics-5: rgb(0% 49.4% 16.5%);
+  --uics-5: rgb(0% 49.412% 16.471%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 8.63:1 (AAA) · APCA Lc 92.8 (fluent text) */
-  --uics-6: rgb(0% 34.5% 5.5%);
+  --uics-6: rgb(0% 34.51% 5.4902%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 13.90:1 (AAA) · APCA Lc 102.3 (fluent text) */
-  --uics-7: rgb(0% 20.4% 0%);
+  --uics-7: rgb(0% 20.392% 0%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.07:1 (AAA) · APCA Lc 106.4 (fluent text) */
-  --uics-8: rgb(0% 7.1% 0%);
+  --uics-8: rgb(0% 7.0588% 0%);
   /* Source color */
-  --uics-source: rgb(52.5% 97.6% 60%);
+  --uics-source: rgb(52.549% 97.647% 60%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid) */
-  --uno-1: rgb(97.3% 97.6% 100%);
+  --uno-1: rgb(97.255% 97.647% 100%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.49:1 (A) · APCA Lc 25.9 (non text) */
-  --uno-2: rgb(81.2% 80.8% 100%);
+  --uno-2: rgb(81.176% 80.784% 100%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.21:1 (A) · APCA Lc 47.7 (headlines) */
-  --uno-3: rgb(65.5% 64.3% 100%);
+  --uno-3: rgb(65.49% 64.314% 100%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.53:1 (A) · APCA Lc 67.7 (body text) */
-  --uno-4: rgb(51% 48.2% 88.2%);
+  --uno-4: rgb(50.98% 48.235% 88.235%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.87:1 (AA) · APCA Lc 83.7 (content text) */
-  --uno-5: rgb(37.6% 33.7% 72.5%);
+  --uno-5: rgb(37.647% 33.725% 72.549%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 9.80:1 (AAA) · APCA Lc 95.9 (fluent text) */
-  --uno-6: rgb(25.5% 21.2% 53.7%);
+  --uno-6: rgb(25.49% 21.176% 53.725%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 15.29:1 (AAA) · APCA Lc 103.8 (fluent text) */
-  --uno-7: rgb(14.1% 9.8% 34.5%);
+  --uno-7: rgb(14.118% 9.8039% 34.51%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.59:1 (AAA) · APCA Lc 106.5 (fluent text) */
-  --uno-8: rgb(3.9% 1.2% 16.1%);
+  --uno-8: rgb(3.9216% 1.1765% 16.078%);
   /* Source color */
-  --uno-source: rgb(56.1% 52.9% 96.9%);
+  --uno-source: rgb(56.078% 52.941% 96.863%);
   /* Shade/Tint color with 100.0% of lightness — WCAG 1.03:1 (A) · APCA Lc 0.0 (avoid) */
-  --ylb-1: rgb(100% 100% 69.8%);
+  --ylb-1: rgb(100% 100% 69.804%);
   /* Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.4 (non text) */
-  --ylb-2: rgb(91% 85.5% 42.4%);
+  --ylb-2: rgb(90.98% 85.49% 42.353%);
   /* Shade/Tint color with 75.7% of lightness — WCAG 2.11:1 (A) · APCA Lc 45.4 (headlines) */
-  --ylb-3: rgb(77.3% 70.2% 0%);
+  --ylb-3: rgb(77.255% 70.196% 0%);
   /* Shade/Tint color with 63.6% of lightness — WCAG 3.28:1 (A) · APCA Lc 64.9 (body text) */
-  --ylb-4: rgb(63.9% 54.9% 0%);
+  --ylb-4: rgb(63.922% 54.902% 0%);
   /* Shade/Tint color with 51.4% of lightness — WCAG 5.45:1 (AA) · APCA Lc 81.6 (content text) */
-  --ylb-5: rgb(49.8% 40% 0%);
+  --ylb-5: rgb(49.804% 40% 0%);
   /* Shade/Tint color with 39.3% of lightness — WCAG 9.20:1 (AAA) · APCA Lc 94.6 (fluent text) */
-  --ylb-6: rgb(34.9% 26.7% 0%);
+  --ylb-6: rgb(34.902% 26.667% 0%);
   /* Shade/Tint color with 27.1% of lightness — WCAG 14.63:1 (AAA) · APCA Lc 103.4 (fluent text) */
-  --ylb-7: rgb(20.8% 14.5% 0%);
+  --ylb-7: rgb(20.784% 14.51% 0%);
   /* Shade/Tint color with 15.0% of lightness — WCAG 19.39:1 (AAA) · APCA Lc 106.6 (fluent text) */
-  --ylb-8: rgb(7.8% 3.5% 0%);
+  --ylb-8: rgb(7.8431% 3.5294% 0%);
   /* Source color */
-  --ylb-source: rgb(100% 96.9% 0%);
+  --ylb-source: rgb(100% 96.863% 0%);
 }

@@ -9,7 +9,7 @@ const tokenPaths = [
   './tokens/commons/commons.tokens.json',
   './tokens/platforms/sketch/modes/sketch-light.tokens.json',
   './tokens/platforms/sketch/modes/sketch-dark.tokens.json',
-  './tokens/platforms/sketch/text.json',
+  './tokens/platforms/sketch/text.tokens.json',
 ]
 
 export default defineConfig({

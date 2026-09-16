@@ -8,11 +8,11 @@
 
 Colors have always had three layers. Dimensions had two.
 
-| Layer         | Colors                                              | Dimensions (before)                           |
-| ------------- | --------------------------------------------------- | --------------------------------------------- |
-| **Primitive** | `platforms/yelbolt/colors.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `scale.pos.*` |
-| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*` | — _missing_                                   |
-| **Component** | `platforms/yelbolt/components/*.json`               | `platforms/yelbolt/components/*.json`         |
+| Layer         | Colors                                                     | Dimensions (before)                           |
+| ------------- | ----------------------------------------------------------| ---------------------------------------------- |
+| **Primitive** | `platforms/yelbolt/colors.tokens.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `scale.pos.*`  |
+| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*`        | — _missing_                                    |
+| **Component** | `platforms/yelbolt/components/*.tokens.json`               | `platforms/yelbolt/components/*.tokens.json`  |
 
 Because the middle layer was missing, a component token reached straight into
 the primitive scale: `button.base.height` was literally `{scale.pos.small}`. That
@@ -53,7 +53,7 @@ and the value added is the **role split**, not a new size language.
 `dimension.text` exposes four parallel ladders rather than composed style
 bundles. Components pair sizes and tracking in combinations a bundle would
 flatten — `select` uses `lineHeight.default` with `letterSpacing.medium` — and
-`text.json` already owns the notion of a composed text style.
+`text.tokens.json` already owns the notion of a composed text style.
 
 ## What a mode can modulate
 
@@ -112,7 +112,7 @@ so the mode files can resolve `{scale.pos.*}` and friends:
   "primitives": {
     "sources": [
       { "$ref": "./commons/commons.tokens.json" },
-      { "$ref": "./platforms/yelbolt/colors.json" }
+      { "$ref": "./platforms/yelbolt/colors.tokens.json" }
     ]
   }
 }
@@ -125,7 +125,7 @@ declared once at `:root` by `terrazzo.color.js` → `yelbolt-colors.scss`, so
 re-emitting either inside all 14 mode blocks would bloat the output for no gain.
 
 `yelbolt` is the only theme with a standalone `terrazzo.color.js` — it is the
-one theme with its own primitive color palette (`platforms/yelbolt/colors.json`)
+one theme with its own primitive color palette (`platforms/yelbolt/colors.tokens.json`)
 that needs emitting as reusable `:root` variables. `figma`, `penpot`, `sketch`
 and `framer` resolve their colors directly into the mode layer at build time,
 so they have no separate primitive layer to name `color` and stay pure `mode`.
@@ -174,7 +174,7 @@ than this one.
    `elevation.**`.
 4. Add `'dimension.**'` to the `exclude` list of every **other** terrazzo config
    for that theme.
-5. Re-point the theme's component tokens and `text.json` off the primitives.
+5. Re-point the theme's component tokens and `text.tokens.json` off the primitives.
 6. Rebuild and run the invariant check above.
 
 Note that themes without a `modes/` folder have no mode layer to host the

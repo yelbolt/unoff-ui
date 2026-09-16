@@ -127,7 +127,7 @@ platform-namespaced one (e.g. `{figma.color.text}`). It also carries `transition
 [docs/motion-system.md](../../docs/motion-system.md)) — the other four themes only need a bare
 `transition`/`transform` resolving to `0ms`/`none` (except `motion.duration.control`, which stays
 at 200ms everywhere). Do not copy the figma/penpot/sketch/framer JSON verbatim into yelbolt's file —
-build it from `tokens/platforms/yelbolt/components/button.json` as the reference pattern instead.
+build it from `tokens/platforms/yelbolt/components/button.tokens.json` as the reference pattern instead.
 
 The figma/penpot/sketch/framer template below (DTCG format, nested objects mapping to the CSS
 variable naming convention):
@@ -229,7 +229,7 @@ Rules:
 - Use semantic token references from the platform namespace (e.g. `{figma.color.bg.brand}`) — never raw hex values.
 - All five interaction states must be present for every color property: `default`, `hover`, `pressed`, `focus`, `disabled`.
 - Non-colour properties (dimensions, strings) only need a single value unless they change per state.
-- Reference files: `tokens/platforms/figma/components/button.json`, `tokens/platforms/figma/components/chip.json` (figma/penpot/sketch/framer pattern); `tokens/platforms/yelbolt/components/button.json` (yelbolt pattern)
+- Reference files: `tokens/platforms/figma/components/button.tokens.json`, `tokens/platforms/figma/components/chip.tokens.json` (figma/penpot/sketch/framer pattern); `tokens/platforms/yelbolt/components/button.tokens.json` (yelbolt pattern)
 
 ### 2d — Register the component in the Terrazzo manifest
 
@@ -401,7 +401,7 @@ Report the outcome of both syncs alongside the rest of the creation summary.
 
 - Component example: `src/components/actions/button/Button.tsx`
 - SCSS token pattern: `src/components/actions/button/button.scss`
-- Component token JSON example: `tokens/platforms/figma/components/button.json` (figma/penpot/sketch/framer pattern), `tokens/platforms/yelbolt/components/button.json` (yelbolt pattern)
+- Component token JSON example: `tokens/platforms/figma/components/button.tokens.json` (figma/penpot/sketch/framer pattern), `tokens/platforms/yelbolt/components/button.tokens.json` (yelbolt pattern)
 - Terrazzo manifest entry: `terrazzo/components.manifest.js`
 - Story example: `src/stories/actions/Button.stories.ts`
 - MDX doc example: `src/stories/actions/Actions.mdx`

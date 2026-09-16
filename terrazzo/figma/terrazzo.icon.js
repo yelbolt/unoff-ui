@@ -3,7 +3,7 @@ import { defineConfig } from '@terrazzo/cli'
 
 export default defineConfig({
   name: 'Figma Icons',
-  tokens: ['./tokens/platforms/figma/icon.json'],
+  tokens: ['./tokens/platforms/figma/icon.tokens.json'],
   outDir: './src/styles/icons/',
   plugins: [
     css({

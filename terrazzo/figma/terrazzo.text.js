@@ -10,7 +10,7 @@ const tokenPaths = [
   './tokens/platforms/figma/modes/figma-light.tokens.json',
   './tokens/platforms/figma/modes/figma-dark.tokens.json',
   './tokens/platforms/figma/modes/figjam.tokens.json',
-  './tokens/platforms/figma/text.json',
+  './tokens/platforms/figma/text.tokens.json',
 ]
 
 export default defineConfig({

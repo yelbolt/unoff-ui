@@ -5,7 +5,7 @@
 
 ## The seven families
 
-`tokens/platforms/yelbolt/colors.json` defines seven color families, each an
+`tokens/platforms/yelbolt/colors.tokens.json` defines seven color families, each an
 8-step shade/tint ramp (`1` = lightest, `8` = darkest) around one hue:
 
 | Family | Hue                 |
