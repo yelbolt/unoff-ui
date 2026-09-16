@@ -2,11 +2,7 @@
   "YLB": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 1, 0.698],
-        "hex": "#ffffb2"
-      },
+      "$value": "#ffffb2",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.03:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -33,11 +29,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.91, 0.855, 0.424],
-        "hex": "#e8da6c"
-      },
+      "$value": "#e8da6c",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.4 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -64,11 +56,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.773, 0.702, 0],
-        "hex": "#c5b300"
-      },
+      "$value": "#c5b300",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.11:1 (A) · APCA Lc 45.4 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -95,11 +83,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.639, 0.549, 0],
-        "hex": "#a38c00"
-      },
+      "$value": "#a38c00",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.28:1 (A) · APCA Lc 64.9 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -126,11 +110,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.498, 0.4, 0],
-        "hex": "#7f6600"
-      },
+      "$value": "#7f6600",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.45:1 (AA) · APCA Lc 81.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -157,11 +137,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.349, 0.267, 0],
-        "hex": "#594400"
-      },
+      "$value": "#594400",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.20:1 (AAA) · APCA Lc 94.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -188,11 +164,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.208, 0.145, 0],
-        "hex": "#352500"
-      },
+      "$value": "#352500",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.63:1 (AAA) · APCA Lc 103.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -219,11 +191,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.078, 0.035, 0],
-        "hex": "#140900"
-      },
+      "$value": "#140900",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.39:1 (AAA) · APCA Lc 106.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -250,11 +218,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 0.969, 0],
-        "hex": "#fff700"
-      },
+      "$value": "#fff700",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -283,11 +247,7 @@
   "NTL": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 1, 0.937],
-        "hex": "#ffffef"
-      },
+      "$value": "#ffffef",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.00:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -314,11 +274,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.851, 0.851, 0.765],
-        "hex": "#d9d9c3"
-      },
+      "$value": "#d9d9c3",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.41:1 (A) · APCA Lc 22.6 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -345,11 +301,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.698, 0.698, 0.596],
-        "hex": "#b2b298"
-      },
+      "$value": "#b2b298",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.13:1 (A) · APCA Lc 46.2 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -376,11 +328,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.553, 0.553, 0.435],
-        "hex": "#8d8d6f"
-      },
+      "$value": "#8d8d6f",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.36:1 (A) · APCA Lc 66.0 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -407,11 +355,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.412, 0.412, 0.298],
-        "hex": "#69694c"
-      },
+      "$value": "#69694c",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.56:1 (AA) · APCA Lc 82.4 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -438,11 +382,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.282, 0.278, 0.184],
-        "hex": "#48472f"
-      },
+      "$value": "#48472f",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.34:1 (AAA) · APCA Lc 95.1 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -469,11 +409,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.157, 0.157, 0.086],
-        "hex": "#282816"
-      },
+      "$value": "#282816",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.74:1 (AAA) · APCA Lc 103.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -500,11 +436,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.047, 0.047, 0.012],
-        "hex": "#0c0c03"
-      },
+      "$value": "#0c0c03",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.37:1 (AAA) · APCA Lc 106.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -531,11 +463,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.129, 0.125, 0.012],
-        "hex": "#212003"
-      },
+      "$value": "#212003",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -564,11 +492,7 @@
   "ISB": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 0.996, 0.839],
-        "hex": "#fffed6"
-      },
+      "$value": "#fffed6",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.02:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -595,11 +519,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.925, 0.835, 0.631],
-        "hex": "#ecd5a1"
-      },
+      "$value": "#ecd5a1",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.42:1 (A) · APCA Lc 22.8 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -626,11 +546,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.788, 0.678, 0.427],
-        "hex": "#c9ad6d"
-      },
+      "$value": "#c9ad6d",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.14:1 (A) · APCA Lc 46.3 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -657,11 +573,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.651, 0.525, 0.227],
-        "hex": "#a6863a"
-      },
+      "$value": "#a6863a",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.40:1 (A) · APCA Lc 66.3 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -688,11 +600,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.506, 0.384, 0.02],
-        "hex": "#816205"
-      },
+      "$value": "#816205",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.63:1 (AA) · APCA Lc 82.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -719,11 +627,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.357, 0.255, 0],
-        "hex": "#5b4100"
-      },
+      "$value": "#5b4100",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.41:1 (AAA) · APCA Lc 95.1 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -750,11 +654,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.212, 0.137, 0],
-        "hex": "#362300"
-      },
+      "$value": "#362300",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.83:1 (AAA) · APCA Lc 103.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -781,11 +681,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.078, 0.031, 0],
-        "hex": "#140800"
-      },
+      "$value": "#140800",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.47:1 (AAA) · APCA Lc 106.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -812,11 +708,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.976, 0.863, 0.525],
-        "hex": "#f9dc86"
-      },
+      "$value": "#f9dc86",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -845,11 +737,7 @@
   "UICP": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.859, 1, 1],
-        "hex": "#dbffff"
-      },
+      "$value": "#dbffff",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.05:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -876,11 +764,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.659, 0.89, 0.925],
-        "hex": "#a8e3ec"
-      },
+      "$value": "#a8e3ec",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.39:1 (A) · APCA Lc 21.6 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -907,11 +791,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.451, 0.745, 0.788],
-        "hex": "#73bec9"
-      },
+      "$value": "#73bec9",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.09:1 (A) · APCA Lc 44.9 (spot text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -938,11 +818,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.239, 0.604, 0.651],
-        "hex": "#3d9aa6"
-      },
+      "$value": "#3d9aa6",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.25:1 (A) · APCA Lc 64.5 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -969,11 +845,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.459, 0.506],
-        "hex": "#007581"
-      },
+      "$value": "#007581",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.37:1 (AA) · APCA Lc 80.9 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1000,11 +872,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.318, 0.357],
-        "hex": "#00515b"
-      },
+      "$value": "#00515b",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 8.90:1 (AAA) · APCA Lc 93.6 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1031,11 +899,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.184, 0.212],
-        "hex": "#002f36"
-      },
+      "$value": "#002f36",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 14.19:1 (AAA) · APCA Lc 102.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1062,11 +926,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.063, 0.082],
-        "hex": "#001015"
-      },
+      "$value": "#001015",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.10:1 (AAA) · APCA Lc 106.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1093,11 +953,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.533, 0.922, 0.976],
-        "hex": "#88ebf9"
-      },
+      "$value": "#88ebf9",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1126,11 +982,7 @@
   "UICS": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.855, 1, 0.878],
-        "hex": "#daffe0"
-      },
+      "$value": "#daffe0",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.07:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1157,11 +1009,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.651, 0.922, 0.682],
-        "hex": "#a6ebae"
-      },
+      "$value": "#a6ebae",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.37:1 (A) · APCA Lc 20.5 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1188,11 +1036,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.439, 0.78, 0.494],
-        "hex": "#70c77e"
-      },
+      "$value": "#70c77e",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.04:1 (A) · APCA Lc 43.7 (spot text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1219,11 +1063,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.216, 0.643, 0.314],
-        "hex": "#37a450"
-      },
+      "$value": "#37a450",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.15:1 (A) · APCA Lc 63.0 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1250,11 +1090,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.494, 0.165],
-        "hex": "#007e2a"
-      },
+      "$value": "#007e2a",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.16:1 (AA) · APCA Lc 79.6 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1281,11 +1117,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.345, 0.055],
-        "hex": "#00580e"
-      },
+      "$value": "#00580e",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 8.63:1 (AAA) · APCA Lc 92.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1312,11 +1144,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.204, 0],
-        "hex": "#003400"
-      },
+      "$value": "#003400",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 13.90:1 (AAA) · APCA Lc 102.3 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1343,11 +1171,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0, 0.071, 0],
-        "hex": "#001200"
-      },
+      "$value": "#001200",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.07:1 (AAA) · APCA Lc 106.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1374,11 +1198,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.525, 0.976, 0.6],
-        "hex": "#86f999"
-      },
+      "$value": "#86f999",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1407,11 +1227,7 @@
   "TCN": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 0.925, 0.984],
-        "hex": "#ffecfb"
-      },
+      "$value": "#ffecfb",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.11:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1438,11 +1254,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [1, 0.741, 0.824],
-        "hex": "#ffbdd2"
-      },
+      "$value": "#ffbdd2",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.54:1 (A) · APCA Lc 27.9 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1469,11 +1281,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.929, 0.565, 0.667],
-        "hex": "#ed90aa"
-      },
+      "$value": "#ed90aa",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.26:1 (A) · APCA Lc 48.7 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1500,11 +1308,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.8, 0.392, 0.522],
-        "hex": "#cc6485"
-      },
+      "$value": "#cc6485",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.62:1 (A) · APCA Lc 68.3 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1531,11 +1335,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.639, 0.247, 0.38],
-        "hex": "#a33f61"
-      },
+      "$value": "#a33f61",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 6.02:1 (AA) · APCA Lc 84.0 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1562,11 +1362,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.463, 0.133, 0.255],
-        "hex": "#762241"
-      },
+      "$value": "#762241",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.98:1 (AAA) · APCA Lc 95.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1593,11 +1389,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.286, 0.031, 0.137],
-        "hex": "#490823"
-      },
+      "$value": "#490823",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 15.44:1 (AAA) · APCA Lc 103.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1624,11 +1416,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.122, 0, 0.035],
-        "hex": "#1f0009"
-      },
+      "$value": "#1f0009",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.51:1 (AAA) · APCA Lc 106.4 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1655,11 +1443,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.976, 0.522, 0.659],
-        "hex": "#f985a8"
-      },
+      "$value": "#f985a8",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1688,11 +1472,7 @@
   "UNO": {
     "1": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.973, 0.976, 1],
-        "hex": "#f8f9ff"
-      },
+      "$value": "#f8f9ff",
       "$description": "Shade/Tint color with 100.0% of lightness — WCAG 1.04:1 (A) · APCA Lc 0.0 (avoid)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1719,11 +1499,7 @@
     },
     "2": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.812, 0.808, 1],
-        "hex": "#cfceff"
-      },
+      "$value": "#cfceff",
       "$description": "Shade/Tint color with 87.9% of lightness — WCAG 1.49:1 (A) · APCA Lc 25.9 (non text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1750,11 +1526,7 @@
     },
     "3": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.655, 0.643, 1],
-        "hex": "#a7a4ff"
-      },
+      "$value": "#a7a4ff",
       "$description": "Shade/Tint color with 75.7% of lightness — WCAG 2.21:1 (A) · APCA Lc 47.7 (headlines)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1781,11 +1553,7 @@
     },
     "4": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.51, 0.482, 0.882],
-        "hex": "#827be1"
-      },
+      "$value": "#827be1",
       "$description": "Shade/Tint color with 63.6% of lightness — WCAG 3.53:1 (A) · APCA Lc 67.7 (body text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1812,11 +1580,7 @@
     },
     "5": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.376, 0.337, 0.725],
-        "hex": "#6056b9"
-      },
+      "$value": "#6056b9",
       "$description": "Shade/Tint color with 51.4% of lightness — WCAG 5.87:1 (AA) · APCA Lc 83.7 (content text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1843,11 +1607,7 @@
     },
     "6": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.255, 0.212, 0.537],
-        "hex": "#413689"
-      },
+      "$value": "#413689",
       "$description": "Shade/Tint color with 39.3% of lightness — WCAG 9.80:1 (AAA) · APCA Lc 95.9 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1874,11 +1634,7 @@
     },
     "7": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.141, 0.098, 0.345],
-        "hex": "#241958"
-      },
+      "$value": "#241958",
       "$description": "Shade/Tint color with 27.1% of lightness — WCAG 15.29:1 (AAA) · APCA Lc 103.8 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1905,11 +1661,7 @@
     },
     "8": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.039, 0.012, 0.161],
-        "hex": "#0a0329"
-      },
+      "$value": "#0a0329",
       "$description": "Shade/Tint color with 15.0% of lightness — WCAG 19.59:1 (AAA) · APCA Lc 106.5 (fluent text)",
       "$extensions": {
         "com.uicp.wcag": {
@@ -1936,11 +1688,7 @@
     },
     "source": {
       "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [0.561, 0.529, 0.969],
-        "hex": "#8f87f7"
-      },
+      "$value": "#8f87f7",
       "$description": "Source color",
       "$extensions": {
         "com.uicp.wcag": {
