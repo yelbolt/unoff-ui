@@ -54,7 +54,9 @@
     --card-border-width: var(--card-border-width-focus);
     --card-border-color: var(--card-border-color-focus);
     --card-border-offset: var(--card-border-offset-focus);
+  }
 
+  &:focus-within {
     .card__actions {
       visibility: visible;
     }
