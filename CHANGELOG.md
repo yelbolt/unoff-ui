@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.1] - 2026-09-17
+
+### Changed
+
+- **Token pipeline — `.tokens.json` naming convention**: component, mode, and icon/text token files across all five platforms were renamed to the `.tokens.json` extension (e.g. `accordion.json` → `accordion.tokens.json`), with every Terrazzo resolver, `tokens/$metadata.json`/`$themes.json`, and the docs referencing them (`CLAUDE.md`, `docs/terrazzo-guide.md`, `docs/dimension-system.md`, `docs/color-mode-gradation.md`) updated to match. Redundant per-file `extension` properties were also dropped from `commons` and per-theme mode token files, and the `yelbolt` color palette's value structure was simplified.
+
+### Fixed
+
+- **`Card` — keyboard focus stuck in a loop between the card and the action buttons**: `onBlur` unconditionally hid the `actions` overlay, unmounting its buttons the instant native focus started moving from the card to one of them; the browser then lost its focus target mid-transition and fell back to `<body>`, so the next Tab restarted from the top of the page and landed back on the same card instead of reaching the next element. `onBlur` now checks `relatedTarget` and only hides the overlay when focus is actually leaving the card. The `.card__actions` visibility rule in `card.scss` was also switched from `.card:focus` to `.card:focus-within`, since the exact-match selector stopped applying — and hid the already-focused button — as soon as focus moved off the card div itself.
+- **`Button` (`yelbolt`) — focus border offset**: `--button-primary-border-offset-focus` referenced `{stroke.width.thin}` instead of `{stroke.offset.thin}`, corrected in both the token file and the compiled SCSS.
+- **`Knob` (`yelbolt`) — tooltip too narrow**: `--knob-tooltip-min-width` increased from `control-size-800` to `control-size-900`.
+
 ## [1.26.0] - 2026-09-15
 
 ### Added
