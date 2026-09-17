@@ -192,7 +192,7 @@
         }
       },
       "minWidth": {
-        "$value": "{control.size.800}",
+        "$value": "{control.size.900}",
         "$type": "dimension"
       },
       "radius": {

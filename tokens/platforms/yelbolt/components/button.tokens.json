@@ -286,7 +286,7 @@
             "$type": "dimension"
           },
           "focus": {
-            "$value": "{stroke.offset.thin}",
+            "$value": "{stroke.width.thin}",
             "$type": "dimension"
           },
           "disabled": {

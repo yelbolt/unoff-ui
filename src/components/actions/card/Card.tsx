@@ -76,7 +76,10 @@ const Card = (props: CardProps) => {
       onMouseEnter={() => setActionsVisible(true)}
       onMouseLeave={() => setActionsVisible(false)}
       onFocus={() => setActionsVisible(true)}
-      onBlur={() => setActionsVisible(false)}
+      onBlur={(e) => {
+        if (e.currentTarget.contains(e.relatedTarget as Node)) return
+        setActionsVisible(false)
+      }}
       onKeyDown={(e) => {
         if (isFromActionControl(e.target)) return
         if (e.key === 'Enter' || e.key === ' ') action(e)
