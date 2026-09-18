@@ -71,10 +71,17 @@
     flex-direction: column;
 
     & > * {
-      flex: 1 !important;
-      width: 100% !important;
+      width: auto !important;
       min-width: unset !important;
       max-width: unset !important;
+    }
+
+    & > *:not(.drawer) {
+      flex: 1 !important;
+    }
+
+    & > .drawer {
+      flex: 0 1 auto;
     }
 
     & > div + div {
