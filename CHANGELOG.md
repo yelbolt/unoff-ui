@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.2] - 2026-09-18
+
+### Added
+
+- **`Layout` stories — `Drawer` inside a reflowing layout**: two new stories in `src/stories/slots/Layout.stories.tsx` cover a `Drawer` sitting among flexible and `FIXED` blocks. `WithDrawer` is resizable across the 460px breakpoint and flips the drawer from `HORIZONTAL`/`pin: LEFT` to `VERTICAL`/`pin: TOP` as the layout turns into a column — a swap the consumer has to make itself, since CSS can flip the layout's own axis but cannot retarget a `Drawer`'s inline `width` onto `height`. `WithDrawerReflowed` locks the same story to a 320px viewport so its `play` function can assert the reflow contract deterministically: the drawer keeps `flex-grow: 0` and its own inline height while the sibling blocks distribute the rest, and no child overflows the layout on the cross axis. Both remount the `Layout` on each orientation flip, since `Drawer` seeds its `drawerSize` state from `defaultSize` in its constructor only and never syncs it on prop change.
+
+### Fixed
+
+- **`Layout` — a `Drawer` stopped being resizable once the layout reflowed**: the `@media (width <= 460px)` block applied `flex: 1 !important` to every direct child, the drawer included. The `flex: 1` shorthand sets `flex-basis: 0`, which hands main-axis sizing to the flex algorithm and leaves the drawer's inline `height` inert — and since the declaration carried `!important`, no inline style could win it back, an important author declaration outranking inline styles regardless of specificity. The rule is now split by axis: `& > *:not(.drawer)` keeps `flex: 1 !important` so regular blocks still distribute the remaining space, while `& > .drawer` gets a plain `flex: 0 1 auto`. `flex-basis: auto` lets the drawer's own inline size drive it, and `flex-shrink: 1` still lets it yield when space runs short — unlike `flex: none`, which would refuse to shrink and spill into `.layout`'s `overflow: hidden`. Dropping `!important` also leaves the value overridable again.
+- **`Layout` — blocks overflowed horizontally once the layout reflowed**: the same media query forced `width: 100% !important` on every child. Nothing in the library resets `box-sizing`, so a `.layout__block` — which carries padding — resolved to 100% of the parent's content box _plus_ its own padding and spilled out, clipped by `.layout`'s `overflow: hidden`. It now uses `width: auto !important` and lets the parent's existing `align-items: stretch` do the filling: stretch sizing subtracts padding and border correctly whatever the box model, and `auto` still neutralises the widths authored for the row layout (a `Drawer`'s inline `width`, a block's `fixedWidth`) since the declaration keeps its `!important`.
+
 ## [1.26.1] - 2026-09-17
 
 ### Changed
