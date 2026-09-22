@@ -42,7 +42,7 @@ export const ThemeTool: React.FC = () => {
   const [globals, updateGlobals] = useGlobals()
   const [step, setStep] = React.useState<Step>('theme')
 
-  const theme = globals.themes as string | undefined
+  const theme = globals.theme as string | undefined
   const family = globals.family as string | undefined
   const mode = globals.mode as string | undefined
 
@@ -58,7 +58,7 @@ export const ThemeTool: React.FC = () => {
       active: value === theme,
       closesMenu: false,
       onClick: () => {
-        updateGlobals({ themes: value })
+        updateGlobals({ theme: value })
         setStep(config.families?.length ? 'family' : 'mode')
       },
     }))
