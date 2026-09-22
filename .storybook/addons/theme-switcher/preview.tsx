@@ -28,7 +28,7 @@ const withTheme: Decorator = (Story, context) => {
 }
 
 export const globalTypes: GlobalTypes = {
-  themes: {
+  theme: {
     defaultValue: 'figma',
   },
   family: {
