@@ -731,7 +731,7 @@
 
   &:disabled {
     --icon-button-base-background-color: var(
-      --icon-button-background-color-disabled
+      --icon-button-default-background-color-disabled
     );
     --icon-button-base-border-color: var(
       --icon-button-default-border-color-disabled
