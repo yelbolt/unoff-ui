@@ -5,15 +5,15 @@ import { buildDataMode, BACKGROUND_MAP } from './theme-config'
 
 const withTheme: Decorator = (Story, context) => {
   React.useEffect(() => {
-    const { themes, family, mode } = context.globals
+    const { theme, family, mode } = context.globals
 
-    if (!themes || !mode) {
+    if (!theme || !mode) {
       return
     }
 
-    document.documentElement.setAttribute('data-theme', themes)
+    document.documentElement.setAttribute('data-theme', theme)
 
-    const dataMode = buildDataMode(themes, family, mode)
+    const dataMode = buildDataMode(theme, family, mode)
     document.documentElement.setAttribute('data-mode', dataMode)
 
     const bgValue = BACKGROUND_MAP[dataMode]
@@ -22,7 +22,7 @@ const withTheme: Decorator = (Story, context) => {
     if (context.globals.backgrounds) {
       context.globals.backgrounds.value = bgValue
     }
-  }, [context.globals.themes, context.globals.family, context.globals.mode])
+  }, [context.globals.theme, context.globals.family, context.globals.mode])
 
   return <Story />
 }
