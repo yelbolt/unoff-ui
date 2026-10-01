@@ -10520,7 +10520,7 @@
       "platforms/yelbolt/modes/isb-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:21",
+    "$figmaModeId": "4301:0",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -12725,7 +12725,7 @@
       "platforms/yelbolt/modes/uicp-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:22",
+    "$figmaModeId": "4301:1",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -13166,7 +13166,7 @@
       "commons/commons.tokens": "source"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:23",
+    "$figmaModeId": "4302:7",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -13607,7 +13607,7 @@
       "platforms/yelbolt/modes/uics-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:24",
+    "$figmaModeId": "4301:3",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -14048,7 +14048,7 @@
       "platforms/yelbolt/modes/uno-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:25",
+    "$figmaModeId": "4302:8",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -14489,7 +14489,7 @@
       "platforms/yelbolt/modes/uno-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:26",
+    "$figmaModeId": "4301:4",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -14930,7 +14930,7 @@
       "platforms/yelbolt/modes/uno-dark.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:27",
+    "$figmaModeId": "4302:9",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -15371,7 +15371,7 @@
       "platforms/yelbolt/modes/ylb-light.tokens": "enabled"
     },
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:28",
+    "$figmaModeId": "4301:5",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
@@ -15813,7 +15813,7 @@
     },
     "group": "Yelbolt Modes",
     "$figmaCollectionId": "VariableCollectionId:4027:74222",
-    "$figmaModeId": "4027:29",
+    "$figmaModeId": "4302:10",
     "$figmaVariableReferences": {
       "space.none": "76ccc90c5ef58021c6658b20b829ba7f785efe65",
       "space.inset.100": "f56454bf848bddb99652cb91c33bd9fbb8da62ea",
