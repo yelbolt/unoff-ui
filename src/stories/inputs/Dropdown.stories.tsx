@@ -1,9 +1,106 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, within, waitFor, fireEvent } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
-import * as ListStories from '@stories/lists/ActionsList.stories'
 import figma from '@figma/code-connect'
 import Dropdown from '@components/inputs/dropdown/Dropdown'
+
+type Options = React.ComponentProps<typeof Dropdown>['options']
+type Handler = (
+  e:
+    | React.MouseEvent<HTMLLIElement, MouseEvent>
+    | React.KeyboardEvent<HTMLLIElement>
+) => void
+
+const option = (n: number | string, action: Handler = fn()) => ({
+  label: `Option ${n}`,
+  value: `OPTION_${n}`,
+  type: 'OPTION' as const,
+  action,
+})
+
+const buildOptions = (action: Handler = fn()): Options => [
+  option(1, action),
+  {
+    label: 'Option 2',
+    value: 'OPTION_2',
+    type: 'GROUP',
+    children: [option('2.1', action), option('2.2', action)],
+  },
+  option(3, action),
+  { type: 'SEPARATOR' },
+  { label: 'Title', type: 'TITLE' },
+  option(4, action),
+]
+
+const buildManyOptions = (action: Handler = fn()): Options => [
+  option(1, action),
+  option(2, action),
+  option(3, action),
+  { type: 'SEPARATOR' },
+  { label: 'Title', type: 'TITLE' },
+  option(4, action),
+  option(5, action),
+  option(6, action),
+  option(7, action),
+  { type: 'SEPARATOR' },
+  { label: 'Title', type: 'TITLE' },
+  option(8, action),
+  option(9, action),
+]
+
+const buildFruits = (action: Handler = fn()): Options =>
+  ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig'].map((label) => ({
+    label,
+    value: label.toUpperCase(),
+    type: 'OPTION' as const,
+    action,
+  }))
+
+const buildMultipleOptions = (action: Handler = fn()): Options => [
+  { label: 'Any', value: 'ANY', type: 'OPTION', action },
+  option(1, action),
+  option(2, action),
+  option(3, action),
+  option(4, action),
+]
+
+// Keeps `selected` in sync with the chosen option, like a consumer would.
+const renderWithSelection =
+  (build: (action: Handler) => Options): Story['render'] =>
+  (args) => {
+    const [argsState, updateArgs] = useArgs<{ selected: string }>()
+
+    const onChange: Handler = (e) => {
+      updateArgs({
+        selected: (e.target as HTMLElement).dataset.value,
+      })
+    }
+
+    return (
+      <Dropdown
+        {...args}
+        options={build(onChange)}
+        selected={argsState.selected}
+      />
+    )
+  }
+
+const openDropdown = async (canvasElement: HTMLElement) => {
+  const dropdownButton = within(canvasElement).getByRole('combobox')
+
+  await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
+  fireEvent.mouseDown(dropdownButton)
+
+  await waitFor(
+    () => expect(dropdownButton).toHaveAttribute('aria-expanded', 'true'),
+    { timeout: 1000 }
+  )
+  await waitFor(
+    () =>
+      expect(document.querySelector('.select-menu__menu')).toBeInTheDocument(),
+    { timeout: 2000 }
+  )
+}
 
 const meta = {
   title: 'Components/Inputs/Dropdown',
@@ -24,9 +121,17 @@ const meta = {
     },
   },
   args: {
+    id: 'dropdown',
+    alignment: 'LEFT',
+    pin: 'NONE',
+    isNew: false,
+    isBlocked: false,
+    isDisabled: false,
     onBlock: fn(),
   },
   argTypes: {
+    options: { control: 'object' },
+    containerId: { control: false },
     onBlock: { control: false },
   },
 } satisfies Meta<typeof Dropdown>
@@ -34,122 +139,19 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const selectedOptions: Array<string> = ['ANY']
-
-export const SingleSelection: Story = {
+export const Default: Story = {
   args: {
-    id: 'dropdown-button',
-    options: { ...ListStories.FourOptionsList.args.options },
+    options: buildOptions(),
     selected: 'OPTION_1',
-    alignment: 'LEFT',
-    pin: 'NONE',
-    helper: {
-      label: 'Select an option',
-    },
-    isNew: false,
-    isBlocked: false,
-    isDisabled: false,
+    helper: { label: 'Select an option' },
   },
-  argTypes: {
-    containerId: { control: false },
-  },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      selected: string
-    }>()
-
-    const onChange = (
-      e:
-        | React.MouseEvent<HTMLLIElement, MouseEvent>
-        | React.KeyboardEvent<HTMLLIElement>
-    ) => {
-      updateArgs({
-        selected: (e.target as HTMLInputElement).dataset.value,
-      })
-    }
-
-    return (
-      <Dropdown
-        {...args}
-        options={[
-          {
-            label: 'Option 1',
-            value: 'OPTION_1',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 2',
-            value: 'OPTION_2',
-            type: 'GROUP',
-            children: [
-              {
-                label: 'Option 2.1',
-                value: 'OPTION_2.1',
-                type: 'OPTION',
-                action: onChange,
-              },
-              {
-                label: 'Option 2.2',
-                value: 'OPTION_2.2',
-                type: 'OPTION',
-                action: onChange,
-              },
-            ],
-          },
-          {
-            label: 'Option 3',
-            value: 'OPTION_3',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            type: 'SEPARATOR',
-          },
-          {
-            label: 'Title',
-            type: 'TITLE',
-          },
-          {
-            label: 'Option 4',
-            value: 'OPTION_4',
-            type: 'OPTION',
-            action: onChange,
-          },
-        ]}
-        selected={argsState.selected}
-      />
-    )
-  },
+  render: renderWithSelection(buildOptions),
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const dropdownButton = canvas.getByRole('combobox')
-    await expect(dropdownButton).toBeInTheDocument()
-    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
-
-    fireEvent.mouseDown(dropdownButton)
-
-    await waitFor(
-      () => {
-        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
-      },
-      { timeout: 1000 }
-    )
-
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    await waitFor(
-      async () => {
-        const menu = document.querySelector('.select-menu__menu')
-        await expect(menu).toBeInTheDocument()
-      },
-      { timeout: 2000 }
-    )
+    await openDropdown(canvasElement)
   },
 }
 
-export const ManyOptionsSelection: Story = {
+export const ManyOptions: Story = {
   decorators: [
     (Story) => (
       <div
@@ -167,399 +169,84 @@ export const ManyOptionsSelection: Story = {
     ),
   ],
   args: {
-    id: 'dropdown-button',
-    options: { ...ListStories.FourOptionsList.args.options },
+    options: buildManyOptions(),
     selected: 'OPTION_1',
-    alignment: 'LEFT',
-    pin: 'NONE',
-    helper: {
-      label: 'Select an option',
-    },
-    isNew: false,
-    isBlocked: false,
-    isDisabled: false,
+    helper: { label: 'Select an option' },
     containerId: 'dropdown-container',
   },
-  argTypes: {
-    containerId: { control: false },
-  },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      selected: string
-    }>()
-
-    const onChange = (
-      e:
-        | React.MouseEvent<HTMLLIElement, MouseEvent>
-        | React.KeyboardEvent<HTMLLIElement>
-    ) => {
-      updateArgs({
-        selected: (e.target as HTMLInputElement).dataset.value,
-      })
-    }
-
-    return (
-      <Dropdown
-        {...args}
-        options={[
-          {
-            label: 'Option 1',
-            value: 'OPTION_1',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 2',
-            value: 'OPTION_2',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 3',
-            value: 'OPTION_3',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            type: 'SEPARATOR',
-          },
-          {
-            label: 'Title',
-            type: 'TITLE',
-          },
-          {
-            label: 'Option 4',
-            value: 'OPTION_4',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 5',
-            value: 'OPTION_5',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 6',
-            value: 'OPTION_6',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 7',
-            value: 'OPTION_7',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            type: 'SEPARATOR',
-          },
-          {
-            label: 'Title',
-            type: 'TITLE',
-          },
-          {
-            label: 'Option 8',
-            value: 'OPTION_8',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 9',
-            value: 'OPTION_9',
-            type: 'OPTION',
-            action: onChange,
-          },
-        ]}
-        selected={argsState.selected}
-      />
-    )
-  },
+  render: renderWithSelection(buildManyOptions),
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const dropdownButton = canvas.getByRole('combobox')
-    await expect(dropdownButton).toBeInTheDocument()
-    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
-
-    fireEvent.mouseDown(dropdownButton)
-
-    await waitFor(
-      () => {
-        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
-      },
-      { timeout: 1000 }
-    )
-
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    await waitFor(
-      async () => {
-        const menu = document.querySelector('.select-menu__menu')
-        await expect(menu).toBeInTheDocument()
-      },
-      { timeout: 2000 }
-    )
+    await openDropdown(canvasElement)
   },
 }
 
-export const SearchableDropdown: Story = {
+export const Searchable: Story = {
   args: {
     id: 'searchable-dropdown',
-    options: [
-      {
-        label: 'Apple',
-        value: 'APPLE',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Banana',
-        value: 'BANANA',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Cherry',
-        value: 'CHERRY',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Date',
-        value: 'DATE',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Elderberry',
-        value: 'ELDERBERRY',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Fig',
-        value: 'FIG',
-        type: 'OPTION',
-        action: fn(),
-      },
-    ],
+    options: buildFruits(),
     selected: 'APPLE',
-    alignment: 'LEFT',
-    pin: 'NONE',
     canBeSearched: true,
     searchLabel: 'Search fruits…',
-    isNew: false,
-    isBlocked: false,
-    isDisabled: false,
   },
   argTypes: {
-    containerId: { control: false },
+    helper: { control: false },
   },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      selected: string
-    }>()
-
-    const onChange = (
-      e:
-        | React.MouseEvent<HTMLLIElement, MouseEvent>
-        | React.KeyboardEvent<HTMLLIElement>
-    ) => {
-      updateArgs({
-        selected: (e.target as HTMLInputElement).dataset.value,
-      })
-    }
-
-    return (
-      <Dropdown
-        {...args}
-        options={[
-          {
-            label: 'Apple',
-            value: 'APPLE',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Banana',
-            value: 'BANANA',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Cherry',
-            value: 'CHERRY',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Date',
-            value: 'DATE',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Elderberry',
-            value: 'ELDERBERRY',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Fig',
-            value: 'FIG',
-            type: 'OPTION',
-            action: onChange,
-          },
-        ]}
-        selected={argsState.selected}
-      />
-    )
-  },
+  render: renderWithSelection(buildFruits),
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
+    await openDropdown(canvasElement)
 
-    const dropdownButton = canvas.getByRole('combobox')
-    await expect(dropdownButton).toBeInTheDocument()
+    const searchInput = document.querySelector(
+      '.select-menu__search .input__field'
+    ) as HTMLInputElement
+    await expect(searchInput).toBeInTheDocument()
 
-    fireEvent.mouseDown(dropdownButton)
+    fireEvent.change(searchInput, { target: { value: 'ban' } })
 
-    await waitFor(
-      () => {
-        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
-      },
-      { timeout: 1000 }
-    )
-
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    await waitFor(
-      async () => {
-        const searchInput = document.querySelector(
-          '.select-menu__search .input__field'
-        ) as HTMLInputElement
-        await expect(searchInput).toBeInTheDocument()
-
-        fireEvent.change(searchInput, { target: { value: 'a' } })
-
-        const banana = document.querySelector('[data-value="BANANA"]')
-        await expect(banana).toBeInTheDocument()
-      },
-      { timeout: 2000 }
+    await waitFor(() =>
+      expect(
+        document.querySelector('[data-value="BANANA"]')
+      ).toBeInTheDocument()
     )
   },
 }
 
-export const MultipleSelection: Story = {
+export const Multiple: Story = {
   args: {
-    id: 'dropdown-button',
-    options: { ...ListStories.FourOptionsList.args.options },
+    options: buildMultipleOptions(),
     selected: 'ANY',
-    alignment: 'LEFT',
-    pin: 'NONE',
-    helper: {
-      label: 'Select several options',
-    },
-    isNew: false,
-    isDisabled: false,
+    helper: { label: 'Select several options' },
   },
   argTypes: {
-    containerId: { control: false },
+    isBlocked: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      selected: string
-    }>()
+    const [argsState, updateArgs] = useArgs<{ selected: string }>()
+    // The selection lives in the `selected` arg, so it stays editable from the
+    // Controls panel (and no framework hook is needed next to useArgs).
+    const picked = argsState.selected.split(', ')
 
-    const onChange = (
-      e:
-        | React.MouseEvent<HTMLLIElement, MouseEvent>
-        | React.KeyboardEvent<HTMLLIElement>
-    ) => {
-      const value = (e.target as HTMLInputElement).dataset.value ?? ''
+    const onChange: Handler = (e) => {
+      const value = (e.target as HTMLElement).dataset.value ?? ''
+      let next: Array<string>
 
-      if (value === 'ANY') {
-        selectedOptions.length = 0
-        selectedOptions.push(value ?? '')
-      }
-      if (selectedOptions.includes(value))
-        selectedOptions.splice(selectedOptions.indexOf(value), 1)
-      else {
-        if (selectedOptions.includes('ANY'))
-          selectedOptions.splice(selectedOptions.indexOf('ANY'), 1)
-        selectedOptions.push(value ?? '')
-      }
+      if (value === 'ANY') next = ['ANY']
+      else if (picked.includes(value)) next = picked.filter((v) => v !== value)
+      else next = [...picked.filter((v) => v !== 'ANY'), value]
 
-      if (selectedOptions.length === 0) selectedOptions.push('ANY')
+      if (next.length === 0) next = ['ANY']
 
-      updateArgs({
-        selected: selectedOptions.join(', '),
-      })
+      updateArgs({ selected: next.join(', ') })
     }
 
     return (
       <Dropdown
         {...args}
-        options={[
-          {
-            label: 'Any',
-            value: 'ANY',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 1',
-            value: 'OPTION_1',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 2',
-            value: 'OPTION_2',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 3',
-            value: 'OPTION_3',
-            type: 'OPTION',
-            action: onChange,
-          },
-          {
-            label: 'Option 4',
-            value: 'OPTION_4',
-            type: 'OPTION',
-            action: onChange,
-          },
-        ]}
+        options={buildMultipleOptions(onChange)}
         selected={argsState.selected}
       />
     )
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const dropdownButton = canvas.getByRole('combobox')
-    await expect(dropdownButton).toBeInTheDocument()
-    await expect(dropdownButton).toHaveAttribute('aria-expanded', 'false')
-
-    fireEvent.mouseDown(dropdownButton)
-
-    await waitFor(
-      () => {
-        expect(dropdownButton).toHaveAttribute('aria-expanded', 'true')
-      },
-      { timeout: 1000 }
-    )
-
-    await new Promise((resolve) => setTimeout(resolve, 100))
-
-    await waitFor(
-      async () => {
-        const menu = document.querySelector('.select-menu__menu')
-        await expect(menu).toBeInTheDocument()
-      },
-      { timeout: 2000 }
-    )
+    await openDropdown(canvasElement)
   },
 }

@@ -1,13 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn, expect, within, fireEvent } from 'storybook/test'
-import { useArgs } from 'storybook/preview-api'
-import * as InputStory from '@stories/inputs/Input.stories'
-import * as TitleStory from '@stories/assets/SectionTitle.stories'
+import { fn, expect, within, fireEvent, waitFor } from 'storybook/test'
+import { useEffect, useState } from 'react'
+import { iconList } from '@tps/icon.types'
 import Input from '@components/inputs/input/Input'
 import Button from '@components/actions/button/Button'
 import Accordion from '@components/actions/accordion/Accordion'
-
-const mock = fn()
 
 const meta = {
   title: 'Components/Actions/Accordion',
@@ -15,80 +12,88 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof Accordion>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const ExpandCollapseInput: Story = {
   args: {
-    ...TitleStory.TitleWithHelper.args,
-    helper:
-      typeof TitleStory.TitleWithHelper.args?.helper === 'string'
-        ? TitleStory.TitleWithHelper.args.helper
-        : undefined,
+    label: 'Section title',
+    indicator: 7,
+    helper: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     icon: 'plus',
     isExpanded: false,
     isBlocked: false,
     isNew: false,
     children: (
       <Input
-        {...InputStory.ShortText.args}
-        isAutoFocus={true}
+        type="TEXT"
+        value="Some content"
+        feature="EDIT_CONTENT"
       />
     ),
-    onAdd: mock,
-    onEmpty: mock,
+    onAdd: fn(),
+    onEmpty: fn(),
     onBlock: fn(),
   },
   argTypes: {
-    ...TitleStory.TitleWithHelper.argTypes,
+    icon: { control: 'select', options: iconList },
+    collapseIcon: { control: 'select', options: iconList },
+    indicator: { control: 'text' },
     children: { control: false },
     onAdd: { control: false },
     onEmpty: { control: false },
     onBlock: { control: false },
   },
+  // Toggles `isExpanded` the way a consumer would from onAdd / onEmpty, while
+  // still following the `isExpanded` control.
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      isExpanded: boolean
-    }>()
+    const [isExpanded, setExpanded] = useState(args.isExpanded)
 
-    const onChange = () => {
-      updateArgs({
-        isExpanded: !argsState.isExpanded,
-      })
+    useEffect(() => setExpanded(args.isExpanded), [args.isExpanded])
+
+    const onToggle = (
+      e: Parameters<typeof args.onAdd>[0] & Parameters<typeof args.onEmpty>[0]
+    ) => {
+      setExpanded(!isExpanded)
+      if (isExpanded) args.onEmpty(e)
+      else args.onAdd(e)
     }
 
     return (
       <Accordion
         {...args}
-        isExpanded={argsState.isExpanded}
-        onAdd={onChange}
-        onEmpty={onChange}
+        isExpanded={isExpanded}
+        onAdd={onToggle}
+        onEmpty={onToggle}
       />
     )
   },
-  play: async ({ canvasElement }) => {
+} satisfies Meta<typeof Accordion>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  argTypes: {
+    actions: { control: false },
+    collapseIcon: { control: false },
+  },
+  play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
-    const accordionButton = canvas.getByRole('button')
-    await expect(accordionButton).toBeInTheDocument()
+    await expect(canvas.queryByRole('region')).not.toBeInTheDocument()
 
-    fireEvent.mouseDown(accordionButton)
+    fireEvent.mouseDown(canvas.getByRole('button'))
+    await waitFor(() => expect(canvas.getByRole('region')).toBeInTheDocument())
+    await expect(args.onAdd).toHaveBeenCalledTimes(1)
 
-    await new Promise((resolve) => setTimeout(resolve, 300))
-
-    fireEvent.mouseDown(accordionButton)
+    fireEvent.mouseDown(canvas.getAllByRole('button')[0])
+    await waitFor(() =>
+      expect(canvas.queryByRole('region')).not.toBeInTheDocument()
+    )
+    await expect(args.onEmpty).toHaveBeenCalledTimes(1)
   },
 }
 
-const onDuplicate = fn()
-
-export const WithActionsAndCollapseIcon: Story = {
+export const WithActions: Story = {
   args: {
-    ...ExpandCollapseInput.args,
     label: 'Accordion with actions',
-    icon: 'plus',
     collapseIcon: 'caret-up',
     isExpanded: true,
     actions: (
@@ -97,31 +102,27 @@ export const WithActionsAndCollapseIcon: Story = {
           type="icon"
           icon="copy"
           helper={{ label: 'Duplicate' }}
-          action={onDuplicate}
+          action={fn()}
         />
         <Button
           type="icon"
           icon="trash"
           helper={{ label: 'Delete' }}
-          action={mock}
+          action={fn()}
         />
       </>
     ),
   },
   argTypes: {
-    ...ExpandCollapseInput.argTypes,
     actions: { control: false },
   },
-  render: ExpandCollapseInput.render,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    const actionButtons = canvas.getAllByRole('button')
-    await expect(actionButtons).toHaveLength(3)
-
-    const duplicate = actionButtons[0]
-    await expect(duplicate).toBeInTheDocument()
-    await fireEvent.mouseDown(duplicate)
-    await expect(onDuplicate).toHaveBeenCalledTimes(1)
+    // Toggle + the two action buttons
+    await expect(canvas.getAllByRole('button')).toHaveLength(3)
+    await expect(
+      canvas.getByRole('button', { name: 'Duplicate' })
+    ).toBeInTheDocument()
   },
 }

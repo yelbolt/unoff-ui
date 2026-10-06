@@ -8,7 +8,7 @@ interface SelectedColor {
   position: number
 }
 
-interface DefaultData {
+export interface DefaultData {
   id: string
 }
 

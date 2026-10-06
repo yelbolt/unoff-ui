@@ -9,46 +9,16 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  args: {
+    direction: 'HORIZONTAL',
+    isFlex: false,
+    action: fn(),
+  },
   argTypes: {
     tabs: {
       control: 'object',
     },
-  },
-} satisfies Meta<typeof Tabs>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const ThreeTabs: Story = {
-  args: {
-    tabs: [
-      {
-        label: 'Section 1',
-        id: 'SECTION_1',
-        isUpdated: false,
-      },
-      {
-        label: 'Section 2',
-        id: 'SECTION_2',
-        isUpdated: false,
-      },
-      {
-        label: 'Section 3',
-        id: 'SECTION_3',
-        isUpdated: false,
-      },
-    ],
-    active: 'SECTION_1',
-    direction: 'HORIZONTAL',
-    isFlex: false,
-    maxVisibleTabs: 2,
-    action: fn(),
-  },
-  argTypes: {
-    active: {
-      control: 'select',
-      options: ['SECTION_1', 'SECTION_2', 'SECTION_3'],
-    },
+    action: { control: false },
   },
   render: (args) => {
     const [argsState, updateArgs] = useArgs<{
@@ -70,6 +40,39 @@ export const ThreeTabs: Story = {
       />
     )
   },
+} satisfies Meta<typeof Tabs>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {
+    tabs: [
+      {
+        label: 'Section 1',
+        id: 'SECTION_1',
+        isUpdated: false,
+      },
+      {
+        label: 'Section 2',
+        id: 'SECTION_2',
+        isUpdated: false,
+      },
+      {
+        label: 'Section 3',
+        id: 'SECTION_3',
+        isUpdated: false,
+      },
+    ],
+    active: 'SECTION_1',
+    maxVisibleTabs: 2,
+  },
+  argTypes: {
+    active: {
+      control: 'select',
+      options: ['SECTION_1', 'SECTION_2', 'SECTION_3'],
+    },
+  },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
@@ -87,7 +90,7 @@ export const ThreeTabs: Story = {
   },
 }
 
-export const FiveTabs: Story = {
+export const ManyTabs: Story = {
   args: {
     tabs: [
       {
@@ -126,10 +129,7 @@ export const FiveTabs: Story = {
       },
     ],
     active: 'SECTION_1',
-    direction: 'HORIZONTAL',
-    isFlex: false,
     maxVisibleTabs: 3,
-    action: fn(),
   },
   argTypes: {
     active: {
@@ -142,26 +142,6 @@ export const FiveTabs: Story = {
         'SECTION_5',
       ],
     },
-  },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      active: string
-    }>()
-
-    const onChange = (e: React.MouseEvent & React.KeyboardEvent) => {
-      updateArgs({
-        active: (e.currentTarget as HTMLElement).dataset.feature,
-      })
-      args.action(e)
-    }
-
-    return (
-      <Tabs
-        {...args}
-        active={argsState.active}
-        action={onChange}
-      />
-    )
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)

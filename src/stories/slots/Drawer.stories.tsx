@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { useArgs } from 'storybook/internal/preview-api'
-import { useRef } from 'react'
+import { fn, expect, within } from 'storybook/test'
+import { useArgs, useRef } from 'storybook/preview-api'
 import Drawer from '@components/slots/drawer/Drawer'
 import Button from '@components/actions/button/Button'
 
@@ -10,54 +10,40 @@ const meta = {
   parameters: {
     layout: 'fullscreen',
   },
+  args: {
+    id: 'simple-drawer',
+    direction: 'VERTICAL',
+    pin: 'BOTTOM',
+    border: ['TOP'],
+    defaultSize: { value: 100, unit: 'PIXEL' },
+    maxSize: { value: 300, unit: 'PIXEL' },
+    minSize: { value: 40, unit: 'PIXEL' },
+    isScrolling: false,
+    onExpand: fn(),
+    onCollapse: fn(),
+  },
+  argTypes: {
+    children: { control: false },
+    border: { control: false },
+    onExpand: { control: false },
+    onCollapse: { control: false },
+  },
 } satisfies Meta<typeof Drawer>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  args: {
-    id: 'simple-drawer',
-    direction: 'VERTICAL',
-    pin: 'BOTTOM',
-    border: ['TOP'],
-    defaultSize: {
-      value: 100,
-      unit: 'PIXEL',
-    },
-    maxSize: {
-      value: 300,
-      unit: 'PIXEL',
-    },
-    minSize: {
-      value: 40,
-      unit: 'PIXEL',
-    },
-  },
   render: (args) => {
-    const drawerRef = useRef<Drawer>(null)
-    const [argsState, updateArgs] = useArgs<{
-      isCollapsed: boolean
-    }>()
+    const drawerRef = useRef<Drawer | null>(null)
+    const [argsState, updateArgs] = useArgs<{ isCollapsed: boolean }>()
 
     const toggleDrawer = () => {
-      if (drawerRef.current && argsState.isCollapsed)
-        drawerRef.current.expandDrawer()
-      else if (drawerRef.current && !argsState.isCollapsed)
-        drawerRef.current.collapseDrawer()
+      if (argsState.isCollapsed) drawerRef.current?.expandDrawer()
+      else drawerRef.current?.collapseDrawer()
     }
 
-    const onExpand = () => {
-      updateArgs({
-        isCollapsed: false,
-      })
-    }
-
-    const onCollapse = () => {
-      updateArgs({
-        isCollapsed: true,
-      })
-    }
+    const borderBySide = { TOP: 'BOTTOM', RIGHT: 'LEFT' } as const
 
     return (
       <div
@@ -73,24 +59,34 @@ export const Default: Story = {
         <Drawer
           ref={drawerRef}
           {...args}
-          children={
-            <Button
-              type="icon"
-              icon={argsState.isCollapsed ? 'upward' : 'downward'}
-              action={toggleDrawer}
-            />
-          }
           border={[
-            args.pin === 'TOP'
-              ? 'BOTTOM'
-              : args.pin === 'RIGHT'
-                ? 'LEFT'
-                : 'TOP',
+            borderBySide[args.pin as keyof typeof borderBySide] ?? args.pin,
           ]}
-          onExpand={onExpand}
-          onCollapse={onCollapse}
-        />
+          onExpand={() => {
+            updateArgs({ isCollapsed: false })
+            args.onExpand?.()
+          }}
+          onCollapse={() => {
+            updateArgs({ isCollapsed: true })
+            args.onCollapse?.()
+          }}
+        >
+          <Button
+            type="icon"
+            icon={argsState.isCollapsed ? 'upward' : 'downward'}
+            helper={{ label: 'Toggle the drawer' }}
+            action={toggleDrawer}
+          />
+        </Drawer>
       </div>
     )
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await expect(canvas.getByRole('separator')).toBeInTheDocument()
+    await expect(
+      canvas.getByRole('button', { name: /Toggle the drawer/i })
+    ).toBeInTheDocument()
   },
 }

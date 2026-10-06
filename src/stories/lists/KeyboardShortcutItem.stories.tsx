@@ -8,12 +8,20 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    shortcuts: { control: 'object' },
+  },
+  render: (args) => (
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+      <KeyboardShortcutItem {...args} />
+    </ul>
+  ),
 } satisfies Meta<typeof KeyboardShortcutItem>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const SingleKey: Story = {
+export const Default: Story = {
   args: {
     label: 'Save',
     shortcuts: [['↩ Enter']],
@@ -22,19 +30,15 @@ export const SingleKey: Story = {
   argTypes: {
     separator: { control: false },
   },
-  render: (args) => (
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-      <KeyboardShortcutItem {...args} />
-    </ul>
-  ),
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const label = canvas.getByText(args.label)
-    await expect(label).toBeInTheDocument()
+
+    await expect(canvas.getByText(args.label)).toBeInTheDocument()
+    await expect(canvas.getByText('↩ Enter')).toBeInTheDocument()
   },
 }
 
-export const ComboKeys: Story = {
+export const Combo: Story = {
   args: {
     label: 'Select previous',
     shortcuts: [['⇧', '⇥ Tab']],
@@ -43,49 +47,27 @@ export const ComboKeys: Story = {
   argTypes: {
     separator: { control: false },
   },
-  render: (args) => (
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-      <KeyboardShortcutItem {...args} />
-    </ul>
-  ),
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
-    const label = canvas.getByText(args.label)
-    await expect(label).toBeInTheDocument()
-
-    const shift = canvas.getByText('⇧')
-    await expect(shift).toBeInTheDocument()
-
-    const tab = canvas.getByText('⇥ Tab')
-    await expect(tab).toBeInTheDocument()
+    await expect(canvas.getByText(args.label)).toBeInTheDocument()
+    await expect(canvas.getByText('⇧')).toBeInTheDocument()
+    await expect(canvas.getByText('⇥ Tab')).toBeInTheDocument()
   },
 }
 
-export const SeveralComboKeys: Story = {
+export const MultipleCombos: Story = {
   args: {
     label: 'Select previous',
     shortcuts: [['⇧', '⇥ Tab'], ['⇥ Tab']],
     separator: 'or',
   },
-  render: (args) => (
-    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-      <KeyboardShortcutItem {...args} />
-    </ul>
-  ),
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
-    const label = canvas.getByText(args.label)
-    await expect(label).toBeInTheDocument()
-
-    const separator = canvas.getByText('or')
-    await expect(separator).toBeInTheDocument()
-
-    const tabKeys = canvas.getAllByText('⇥ Tab')
-    await expect(tabKeys.length).toBe(2)
-
-    const shift = canvas.getByText('⇧')
-    await expect(shift).toBeInTheDocument()
+    await expect(canvas.getByText(args.label)).toBeInTheDocument()
+    await expect(canvas.getByText('or')).toBeInTheDocument()
+    await expect(canvas.getAllByText('⇥ Tab')).toHaveLength(2)
+    await expect(canvas.getByText('⇧')).toBeInTheDocument()
   },
 }

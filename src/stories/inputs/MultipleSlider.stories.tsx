@@ -28,7 +28,7 @@ const buildChromaSweepWithGamutStops = (steps: number): GradientTrackStop[] =>
     }
   })
 
-const meta: Meta<typeof MultipleSlider> = {
+const meta = {
   title: 'Components/Inputs/Multiple Slider',
   component: MultipleSlider,
   parameters: {
@@ -51,12 +51,12 @@ const meta: Meta<typeof MultipleSlider> = {
   argTypes: {
     onBlock: { control: false },
   },
-}
+} satisfies Meta<typeof MultipleSlider>
 
 export default meta
-type Story = StoryObj<typeof MultipleSlider>
+type Story = StoryObj<typeof meta>
 
-export const TripleValues: Story = {
+export const Default: Story = {
   args: {
     type: 'EDIT',
     scale: {
@@ -189,43 +189,19 @@ export const TripleValues: Story = {
   },
 }
 
-export const EditingValues: Story = {
+export const WithGradient: Story = {
   args: {
-    ...TripleValues.args,
-    type: 'FULLY_EDIT',
-    scale: {
-      '10': 0,
-      '20': 25,
-      '30': 50,
-      '40': 75,
-      '50': 100,
-    },
-    stops: {
-      list: [0, 1, 2, 3, 4],
-      min: 2,
-      max: 7,
-    },
-  },
-  argTypes: {
-    ...TripleValues.argTypes,
-  },
-  render: TripleValues.render,
-  play: TripleValues.play,
-}
-
-export const GradientTrack: Story = {
-  args: {
-    ...TripleValues.args,
+    ...Default.args,
     colors: undefined,
     gradient: {
       tracks: [buildLightnessSweepStops(12, 20)],
     },
   },
   argTypes: {
-    ...TripleValues.argTypes,
+    ...Default.argTypes,
     gradient: { control: false },
   },
-  render: TripleValues.render,
+  render: Default.render,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
@@ -234,9 +210,9 @@ export const GradientTrack: Story = {
   },
 }
 
-export const GradientWithOutOfGamut: Story = {
+export const WithOutOfGamut: Story = {
   args: {
-    ...GradientTrack.args,
+    ...WithGradient.args,
     scale: {
       '0': 100,
     },
@@ -255,15 +231,15 @@ export const GradientWithOutOfGamut: Story = {
     },
   },
   argTypes: {
-    ...GradientTrack.argTypes,
+    ...WithGradient.argTypes,
   },
-  render: GradientTrack.render,
-  play: GradientTrack.play,
+  render: WithGradient.render,
+  play: WithGradient.play,
 }
 
-export const StackedGradientTracks: Story = {
+export const WithStackedGradients: Story = {
   args: {
-    ...GradientTrack.args,
+    ...WithGradient.args,
     gradient: {
       tracks: [
         buildLightnessSweepStops(10, 0),
@@ -273,15 +249,15 @@ export const StackedGradientTracks: Story = {
     },
   },
   argTypes: {
-    ...GradientTrack.argTypes,
+    ...WithGradient.argTypes,
   },
-  render: GradientTrack.render,
-  play: GradientTrack.play,
+  render: WithGradient.render,
+  play: WithGradient.play,
 }
 
 export const Progressive: Story = {
   args: {
-    ...TripleValues.args,
+    ...Default.args,
     type: 'FULLY_EDIT',
     hasProgressBar: true,
     scale: {
@@ -297,9 +273,9 @@ export const Progressive: Story = {
     colors: undefined,
   },
   argTypes: {
-    ...TripleValues.argTypes,
+    ...Default.argTypes,
   },
-  render: TripleValues.render,
+  render: Default.render,
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 

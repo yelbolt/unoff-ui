@@ -236,7 +236,7 @@ export const WithDrawer: Story = {
   },
 }
 
-export const WithDrawerReflowed: Story = {
+export const Reflowed: Story = {
   ...WithDrawer,
   globals: {
     viewport: { value: 'iphone5', isRotated: false },

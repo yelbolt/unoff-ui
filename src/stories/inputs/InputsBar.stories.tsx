@@ -49,7 +49,7 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const ColorParameters: Story = {
+export const Default: Story = {
   args: {
     label: 'HSL',
     children: Inputs(),

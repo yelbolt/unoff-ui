@@ -5,7 +5,7 @@ import Chip from '@components/tags/chip/Chip'
 import Thumbnail from '@components/assets/thumbnail/Thumbnail'
 import './card.scss'
 
-interface CardProps {
+export interface CardProps {
   /**
    * Image source URL for the card thumbnail
    */
