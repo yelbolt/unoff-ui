@@ -28,6 +28,12 @@
         "$type": "color"
       }
     },
+    "actions": {
+      "gap": {
+        "$value": "{space.gap.200}",
+        "$type": "dimension"
+      }
+    },
     "row": {
       "gap": {
         "$value": "{space.none}",

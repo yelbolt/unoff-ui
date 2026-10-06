@@ -4,6 +4,7 @@ import { useArgs } from 'storybook/preview-api'
 import * as InputStory from '@stories/inputs/Input.stories'
 import * as TitleStory from '@stories/assets/SectionTitle.stories'
 import Input from '@components/inputs/input/Input'
+import Button from '@components/actions/button/Button'
 import Accordion from '@components/actions/accordion/Accordion'
 
 const mock = fn()
@@ -78,5 +79,49 @@ export const ExpandCollapseInput: Story = {
     await new Promise((resolve) => setTimeout(resolve, 300))
 
     fireEvent.mouseDown(accordionButton)
+  },
+}
+
+const onDuplicate = fn()
+
+export const WithActionsAndCollapseIcon: Story = {
+  args: {
+    ...ExpandCollapseInput.args,
+    label: 'Accordion with actions',
+    icon: 'plus',
+    collapseIcon: 'caret-up',
+    isExpanded: true,
+    actions: (
+      <>
+        <Button
+          type="icon"
+          icon="copy"
+          helper={{ label: 'Duplicate' }}
+          action={onDuplicate}
+        />
+        <Button
+          type="icon"
+          icon="trash"
+          helper={{ label: 'Delete' }}
+          action={mock}
+        />
+      </>
+    ),
+  },
+  argTypes: {
+    ...ExpandCollapseInput.argTypes,
+    actions: { control: false },
+  },
+  render: ExpandCollapseInput.render,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    const actionButtons = canvas.getAllByRole('button')
+    await expect(actionButtons).toHaveLength(3)
+
+    const duplicate = actionButtons[0]
+    await expect(duplicate).toBeInTheDocument()
+    await fireEvent.mouseDown(duplicate)
+    await expect(onDuplicate).toHaveBeenCalledTimes(1)
   },
 }

@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="sketch"] {
+  --accordion-actions-gap: var(--space-gap-200);
   --accordion-border-color: var(--grey-transparent);
   --accordion-border-width: var(--stroke-width-none);
   --accordion-icon-color-default: var(--sketch-color-foreground-secondary);

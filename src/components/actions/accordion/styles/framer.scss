@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
+  --accordion-actions-gap: var(--space-gap-200);
   --accordion-border-color: var(--framer-color-divider);
   --accordion-border-width: var(--stroke-width-thin);
   --accordion-icon-color-default: var(--framer-color-text-default);

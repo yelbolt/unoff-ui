@@ -20,6 +20,16 @@ export interface AccordionProps {
    */
   icon?: IconList
   /**
+   * Icon to display in the collapse button
+   * @default 'minus'
+   */
+  collapseIcon?: IconList
+  /**
+   * Slot for extra action buttons, displayed before the collapse button
+   * and revealed on hover / keyboard focus
+   */
+  actions?: React.ReactNode
+  /**
    * Helper text displayed near the title
    */
   helper?: string
@@ -75,6 +85,8 @@ const Accordion = (props: AccordionProps) => {
     label,
     indicator,
     icon = 'plus',
+    collapseIcon = 'minus',
+    actions,
     helper,
     helpers,
     isExpanded,
@@ -131,10 +143,19 @@ const Accordion = (props: AccordionProps) => {
           className="accordion__row__right"
           role="group"
         >
+          {actions && (
+            <div
+              className="accordion__row__actions"
+              role="group"
+              onMouseDown={(e) => e.stopPropagation()}
+            >
+              {actions}
+            </div>
+          )}
           {isExpanded ? (
             <Button
               type="icon"
-              icon="minus"
+              icon={collapseIcon}
               iconClassName="accordion__row__icon"
               helper={
                 helpers?.empty !== undefined
