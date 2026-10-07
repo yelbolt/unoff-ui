@@ -298,7 +298,11 @@ async function createTerrazzoFiles(themeName) {
         content = replaceAllThemeNames(content, themeName)
 
         if (file === 'terrazzo.mode.js' || file === 'terrazzo.text.js')
-          if (!content.includes(`./tokens/platforms/${themeName}/icon.tokens.json`))
+          if (
+            !content.includes(
+              `./tokens/platforms/${themeName}/icon.tokens.json`
+            )
+          )
             content = content.replace(
               /tokens: \[([\s\S]*?)\]/,
               (match, tokensContent) => {
@@ -649,7 +653,11 @@ async function copyIconsFromFigma(themeName) {
  * @returns {Promise<void>}
  */
 async function updateIconPaths(themeName) {
-  const iconJsonPath = path.join(TOKENS_PLATFORMS_DIR, themeName, 'icon.tokens.json')
+  const iconJsonPath = path.join(
+    TOKENS_PLATFORMS_DIR,
+    themeName,
+    'icon.tokens.json'
+  )
 
   try {
     if (!fs.existsSync(iconJsonPath)) {

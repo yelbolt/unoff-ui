@@ -58,7 +58,9 @@
         { "$ref": "./platforms/figma/components/icon.tokens.json" },
         { "$ref": "./platforms/figma/components/input.tokens.json" },
         { "$ref": "./platforms/figma/components/inputs-bar.tokens.json" },
-        { "$ref": "./platforms/figma/components/keyboard-shortcut-item.tokens.json" },
+        {
+          "$ref": "./platforms/figma/components/keyboard-shortcut-item.tokens.json"
+        },
         { "$ref": "./platforms/figma/components/knob.tokens.json" },
         { "$ref": "./platforms/figma/components/layout.tokens.json" },
         { "$ref": "./platforms/figma/components/list.tokens.json" },
@@ -105,7 +107,9 @@
         { "$ref": "./platforms/penpot/components/consent.tokens.json" },
         { "$ref": "./platforms/penpot/components/dialog.tokens.json" },
         { "$ref": "./platforms/penpot/components/draggable-item.tokens.json" },
-        { "$ref": "./platforms/penpot/components/draggable-window.tokens.json" },
+        {
+          "$ref": "./platforms/penpot/components/draggable-window.tokens.json"
+        },
         { "$ref": "./platforms/penpot/components/drawer.tokens.json" },
         { "$ref": "./platforms/penpot/components/dropdown.tokens.json" },
         { "$ref": "./platforms/penpot/components/dropzone.tokens.json" },
@@ -114,7 +118,9 @@
         { "$ref": "./platforms/penpot/components/icon.tokens.json" },
         { "$ref": "./platforms/penpot/components/input.tokens.json" },
         { "$ref": "./platforms/penpot/components/inputs-bar.tokens.json" },
-        { "$ref": "./platforms/penpot/components/keyboard-shortcut-item.tokens.json" },
+        {
+          "$ref": "./platforms/penpot/components/keyboard-shortcut-item.tokens.json"
+        },
         { "$ref": "./platforms/penpot/components/knob.tokens.json" },
         { "$ref": "./platforms/penpot/components/layout.tokens.json" },
         { "$ref": "./platforms/penpot/components/list.tokens.json" },
@@ -127,7 +133,9 @@
         { "$ref": "./platforms/penpot/components/section-title.tokens.json" },
         { "$ref": "./platforms/penpot/components/section.tokens.json" },
         { "$ref": "./platforms/penpot/components/select.tokens.json" },
-        { "$ref": "./platforms/penpot/components/semantic-message.tokens.json" },
+        {
+          "$ref": "./platforms/penpot/components/semantic-message.tokens.json"
+        },
         { "$ref": "./platforms/penpot/components/simple-item.tokens.json" },
         { "$ref": "./platforms/penpot/components/simple-slider.tokens.json" },
         { "$ref": "./platforms/penpot/components/sortable-list.tokens.json" },
@@ -161,7 +169,9 @@
         { "$ref": "./platforms/sketch/components/consent.tokens.json" },
         { "$ref": "./platforms/sketch/components/dialog.tokens.json" },
         { "$ref": "./platforms/sketch/components/draggable-item.tokens.json" },
-        { "$ref": "./platforms/sketch/components/draggable-window.tokens.json" },
+        {
+          "$ref": "./platforms/sketch/components/draggable-window.tokens.json"
+        },
         { "$ref": "./platforms/sketch/components/drawer.tokens.json" },
         { "$ref": "./platforms/sketch/components/dropdown.tokens.json" },
         { "$ref": "./platforms/sketch/components/dropzone.tokens.json" },
@@ -170,7 +180,9 @@
         { "$ref": "./platforms/sketch/components/icon.tokens.json" },
         { "$ref": "./platforms/sketch/components/input.tokens.json" },
         { "$ref": "./platforms/sketch/components/inputs-bar.tokens.json" },
-        { "$ref": "./platforms/sketch/components/keyboard-shortcut-item.tokens.json" },
+        {
+          "$ref": "./platforms/sketch/components/keyboard-shortcut-item.tokens.json"
+        },
         { "$ref": "./platforms/sketch/components/knob.tokens.json" },
         { "$ref": "./platforms/sketch/components/layout.tokens.json" },
         { "$ref": "./platforms/sketch/components/list.tokens.json" },
@@ -183,7 +195,9 @@
         { "$ref": "./platforms/sketch/components/section-title.tokens.json" },
         { "$ref": "./platforms/sketch/components/section.tokens.json" },
         { "$ref": "./platforms/sketch/components/select.tokens.json" },
-        { "$ref": "./platforms/sketch/components/semantic-message.tokens.json" },
+        {
+          "$ref": "./platforms/sketch/components/semantic-message.tokens.json"
+        },
         { "$ref": "./platforms/sketch/components/simple-item.tokens.json" },
         { "$ref": "./platforms/sketch/components/simple-slider.tokens.json" },
         { "$ref": "./platforms/sketch/components/sortable-list.tokens.json" },
@@ -217,7 +231,9 @@
         { "$ref": "./platforms/framer/components/consent.tokens.json" },
         { "$ref": "./platforms/framer/components/dialog.tokens.json" },
         { "$ref": "./platforms/framer/components/draggable-item.tokens.json" },
-        { "$ref": "./platforms/framer/components/draggable-window.tokens.json" },
+        {
+          "$ref": "./platforms/framer/components/draggable-window.tokens.json"
+        },
         { "$ref": "./platforms/framer/components/drawer.tokens.json" },
         { "$ref": "./platforms/framer/components/dropdown.tokens.json" },
         { "$ref": "./platforms/framer/components/dropzone.tokens.json" },
@@ -226,7 +242,9 @@
         { "$ref": "./platforms/framer/components/icon.tokens.json" },
         { "$ref": "./platforms/framer/components/input.tokens.json" },
         { "$ref": "./platforms/framer/components/inputs-bar.tokens.json" },
-        { "$ref": "./platforms/framer/components/keyboard-shortcut-item.tokens.json" },
+        {
+          "$ref": "./platforms/framer/components/keyboard-shortcut-item.tokens.json"
+        },
         { "$ref": "./platforms/framer/components/knob.tokens.json" },
         { "$ref": "./platforms/framer/components/layout.tokens.json" },
         { "$ref": "./platforms/framer/components/list.tokens.json" },
@@ -239,7 +257,9 @@
         { "$ref": "./platforms/framer/components/section-title.tokens.json" },
         { "$ref": "./platforms/framer/components/section.tokens.json" },
         { "$ref": "./platforms/framer/components/select.tokens.json" },
-        { "$ref": "./platforms/framer/components/semantic-message.tokens.json" },
+        {
+          "$ref": "./platforms/framer/components/semantic-message.tokens.json"
+        },
         { "$ref": "./platforms/framer/components/simple-item.tokens.json" },
         { "$ref": "./platforms/framer/components/simple-slider.tokens.json" },
         { "$ref": "./platforms/framer/components/sortable-list.tokens.json" },
