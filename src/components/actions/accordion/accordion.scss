@@ -57,6 +57,12 @@
     align-items: center;
   }
 
+  &__row__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--accordion-actions-gap);
+  }
+
   &--expanded &__row {
     --section-title-text-color: var(--accordion-text-color-expanded);
     --text-color-primary: var(--accordion-text-color-expanded);

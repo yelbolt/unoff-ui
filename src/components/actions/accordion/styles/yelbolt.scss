@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
+  --accordion-actions-gap: var(--space-gap-200);
   --accordion-border-color: var(--color-border-primary-default);
   --accordion-border-width: var(--stroke-width-thin);
   --accordion-icon-color-default: var(--color-icon-tertiary-default);

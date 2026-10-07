@@ -5,15 +5,22 @@ import Button from '@components/actions/button/Button'
 
 const icons = [...iconList]
 
-const mock = fn()
-
-const meta: Meta<typeof Button> = {
+const meta = {
   title: 'Components/Actions/Button',
   component: Button,
   parameters: {
     layout: 'centered',
   },
-  args: { isAutofocus: false, action: mock, onBlock: fn() },
+  args: {
+    size: 'default',
+    isAutofocus: false,
+    isLoading: false,
+    isBlocked: false,
+    isDisabled: false,
+    isNew: false,
+    action: fn(),
+    onBlock: fn(),
+  },
   argTypes: {
     action: { control: false },
     onBlock: { control: false },
@@ -26,18 +33,13 @@ type Story = StoryObj<typeof meta>
 export const Primary: Story = {
   args: {
     type: 'primary',
-    size: 'default',
     label: 'Primary action button',
-    preview: {
-      image: 'https://placehold.co/96x96',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
     feature: 'PRIMARY_ACTION',
     hasMultipleActions: false,
-    isLoading: false,
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
+    preview: {
+      image: 'https://placehold.co/96x96',
+      text: 'Shown on the chip when the button is blocked.',
+    },
   },
   argTypes: {
     type: { control: false },
@@ -64,14 +66,9 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     type: 'secondary',
-    size: 'default',
     label: 'Secondary action button',
     feature: 'SECONDARY_ACTION',
     hasMultipleActions: false,
-    isLoading: false,
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
   },
   argTypes: {
     type: { control: false },
@@ -91,7 +88,7 @@ export const Secondary: Story = {
 
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
-    await expect(args.action).toHaveBeenCalled()
+    await expect(args.action).toHaveBeenCalledTimes(1)
   },
 }
 
@@ -101,11 +98,7 @@ export const Tertiary: Story = {
     label: 'Tertiary action button',
     feature: 'TERTIARY_ACTION',
     isLink: false,
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUjcmljayBhc3RsZXkgbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D',
-    isLoading: false,
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
+    url: 'https://example.com',
   },
   argTypes: {
     type: { control: false },
@@ -124,21 +117,16 @@ export const Tertiary: Story = {
 
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
-    await expect(args.action).toHaveBeenCalled()
+    await expect(args.action).toHaveBeenCalledTimes(1)
   },
 }
 
 export const Destructive: Story = {
   args: {
     type: 'destructive',
-    size: 'default',
     label: 'Destructive action button',
     feature: 'DESTRUCTIVE_ACTION',
     hasMultipleActions: false,
-    isLoading: false,
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
   },
   argTypes: {
     type: { control: false },
@@ -158,20 +146,16 @@ export const Destructive: Story = {
 
     await expect(button).toBeInTheDocument()
     await userEvent.click(button)
-    await expect(args.action).toHaveBeenCalled()
+    await expect(args.action).toHaveBeenCalledTimes(1)
   },
 }
 
 export const Alternative: Story = {
   args: {
     type: 'alternative',
-    size: 'default',
     icon: 'lock-on',
     label: 'Compact action button',
-    feature: 'ACTION',
-    isBlocked: false,
-    isDisabled: false,
-    isNew: false,
+    feature: 'ALTERNATIVE_ACTION',
   },
   argTypes: {
     type: { control: false },
@@ -192,29 +176,19 @@ export const Alternative: Story = {
     })
 
     await expect(button).toBeInTheDocument()
-
-    const icon = canvas.getByRole('img', { hidden: true })
-    await expect(icon).toBeInTheDocument()
-
+    await expect(canvas.getByRole('img', { hidden: true })).toBeInTheDocument()
     await userEvent.click(button)
-    await expect(args.action).toHaveBeenCalled()
+    await expect(args.action).toHaveBeenCalledTimes(1)
   },
 }
 
 export const Icon: Story = {
   args: {
     type: 'icon',
-    size: 'default',
     state: 'default',
     icon: 'adjust',
-    helper: {
-      label: 'Adjust the parameters',
-    },
-    feature: 'ACTION',
-    isLoading: false,
-    isDisabled: false,
-    isBlocked: false,
-    isNew: false,
+    helper: { label: 'Adjust the parameters' },
+    feature: 'ICON_ACTION',
   },
   argTypes: {
     type: { control: false },
@@ -226,21 +200,20 @@ export const Icon: Story = {
   },
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
-    const button = canvas.getByRole('button')
+    const button = canvas.getByRole('button', {
+      name: /Adjust the parameters/i,
+    })
 
     await expect(button).toBeInTheDocument()
-
-    const icon = canvas.getByRole('img', { hidden: true })
-    await expect(icon).toBeInTheDocument()
+    await expect(canvas.getByRole('img', { hidden: true })).toBeInTheDocument()
 
     await userEvent.hover(button)
-
     await expect(
       within(document.body).getByText('Adjust the parameters')
     ).toBeInTheDocument()
 
     await userEvent.unhover(button)
     await userEvent.click(button)
-    await expect(args.action).toHaveBeenCalled()
+    await expect(args.action).toHaveBeenCalledTimes(1)
   },
 }

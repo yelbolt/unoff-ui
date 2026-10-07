@@ -1,13 +1,29 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
+import { expect, within } from 'storybook/test'
 import { doClassnames } from '@unoff/utils'
 import texts from '@styles/texts/texts.module.scss'
 import Bar from '@components/slots/bar/Bar'
+
+const part = (content: string, isTruncated = false) => (
+  <div
+    className={doClassnames([
+      texts.type,
+      isTruncated && texts['type--truncated'],
+    ])}
+  >
+    {content}
+  </div>
+)
 
 const meta = {
   title: 'Patterns/Slots/Bar',
   component: Bar,
   parameters: {
     layout: 'fullscreen',
+  },
+  args: {
+    border: ['BOTTOM'],
+    isVertical: false,
   },
   argTypes: {
     leftPartSlot: { control: false },
@@ -17,82 +33,37 @@ const meta = {
 } satisfies Meta<typeof Bar>
 
 export default meta
-
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    leftPartSlot: <div className={doClassnames([texts.type])}>Left Part</div>,
-    soloPartSlot: undefined,
-    rightPartSlot: <div className={doClassnames([texts.type])}>Right Part</div>,
-    border: ['BOTTOM'],
-    isVertical: false,
+    leftPartSlot: part('Left Part'),
+    rightPartSlot: part('Right Part'),
+  },
+  argTypes: {
+    clip: { control: false },
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await expect(canvas.getByText('Left Part')).toBeInTheDocument()
+    await expect(canvas.getByText('Right Part')).toBeInTheDocument()
   },
 }
 
-export const TruncateLeft: Story = {
+export const Truncated: Story = {
   args: {
-    leftPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        This is a very long text that should be truncated to a single line in
-        the left part.
-      </div>
-    ),
-    rightPartSlot: <div className={doClassnames([texts.type])}>Right Part</div>,
-    clip: ['LEFT'],
-    border: ['BOTTOM'],
-    isVertical: false,
-  },
-}
-
-export const TruncateRight: Story = {
-  args: {
-    leftPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        Left Part
-      </div>
-    ),
-    rightPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        This is a long text in the right part that should be truncated.
-      </div>
-    ),
-    isInverted: true,
-    clip: ['RIGHT'],
-    border: ['BOTTOM'],
-    isVertical: false,
-  },
-}
-
-export const TruncateSolo: Story = {
-  args: {
-    leftPartSlot: undefined,
-    soloPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        Solo: very long text displayed in the center and truncated to a single
-        line.
-      </div>
-    ),
-    clip: ['SOLO'],
-    border: ['BOTTOM'],
-    isVertical: false,
-  },
-}
-
-export const TruncateBoth: Story = {
-  args: {
-    leftPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        Left: long text — should be truncated.
-      </div>
-    ),
-    rightPartSlot: (
-      <div className={doClassnames([texts.type, texts['type--truncated']])}>
-        Right: another long text — should also be truncated.
-      </div>
+    leftPartSlot: part('Left: long text — should be truncated.', true),
+    rightPartSlot: part(
+      'Right: another long text — should be truncated.',
+      true
     ),
     clip: ['LEFT', 'RIGHT'],
-    border: ['BOTTOM'],
-    isVertical: false,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await expect(canvas.getByText(/^Left: long text/)).toBeInTheDocument()
+    await expect(canvas.getByText(/^Right: another/)).toBeInTheDocument()
   },
 }

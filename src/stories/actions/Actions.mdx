@@ -20,6 +20,8 @@ An expandable/collapsible section that groups related content behind a labelled 
 - `indicator` shows a count next to the label (e.g. number of items inside).
 - `helper` adds an info tooltip on the section title for additional context.
 - Use `icon` to customise the add action icon (defaults to `plus`).
+- Use `collapseIcon` to customise the collapse action icon (defaults to `minus`).
+- `actions` is a slot for extra action buttons (spaced by `--accordion-actions-gap`), revealed on row hover or keyboard focus (tracked in component state, like `Card`), always visible while `isExpanded`, and placed before the collapse button.
 - `isBlocked` disables all interactions and shows a **Pro** badge; `isNew` shows a **New** badge instead.
 - `helpers.add` / `helpers.empty` provide tooltip labels for the action buttons.
 

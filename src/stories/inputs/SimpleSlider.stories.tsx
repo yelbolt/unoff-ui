@@ -31,7 +31,7 @@ const buildChromaSweepWithGamutStops = (
     }
   })
 
-const meta: Meta<typeof SimpleSlider> = {
+const meta = {
   title: 'Components/Inputs/Simple Slider',
   component: SimpleSlider,
   parameters: {
@@ -40,7 +40,6 @@ const meta: Meta<typeof SimpleSlider> = {
   decorators: [
     (Story) => (
       <div
-        id="dropdown-container"
         style={{
           width: '400px',
         }}
@@ -60,7 +59,7 @@ const meta: Meta<typeof SimpleSlider> = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const AgeSelect: Story = {
+export const Default: Story = {
   args: {
     id: 'age',
     label: 'Age',
@@ -120,7 +119,7 @@ export const AgeSelect: Story = {
   },
 }
 
-export const GradientTrack: Story = {
+export const WithGradient: Story = {
   args: {
     id: 'hue-shift',
     label: 'Hue shift',
@@ -144,7 +143,7 @@ export const GradientTrack: Story = {
     feature: { control: false },
     gradient: { control: false },
   },
-  render: AgeSelect.render,
+  render: Default.render,
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
@@ -153,9 +152,9 @@ export const GradientTrack: Story = {
   },
 }
 
-export const GradientWithOutOfGamut: Story = {
+export const WithOutOfGamut: Story = {
   args: {
-    ...GradientTrack.args,
+    ...WithGradient.args,
     id: 'chroma-shift',
     label: 'Chroma shift',
     value: 100,
@@ -167,15 +166,15 @@ export const GradientWithOutOfGamut: Story = {
     },
   },
   argTypes: {
-    ...GradientTrack.argTypes,
+    ...WithGradient.argTypes,
   },
-  render: AgeSelect.render,
-  play: GradientTrack.play,
+  render: Default.render,
+  play: WithGradient.play,
 }
 
-export const StackedGradientTracks: Story = {
+export const WithStackedGradients: Story = {
   args: {
-    ...GradientTrack.args,
+    ...WithGradient.args,
     id: 'palette-hue-shift',
     label: 'Hue shift (multiple source colors)',
     gradient: {
@@ -187,8 +186,8 @@ export const StackedGradientTracks: Story = {
     },
   },
   argTypes: {
-    ...GradientTrack.argTypes,
+    ...WithGradient.argTypes,
   },
-  render: AgeSelect.render,
-  play: GradientTrack.play,
+  render: Default.render,
+  play: WithGradient.play,
 }

@@ -3,6 +3,7 @@
  * ------------------------------------------- */
 
 :root[data-theme="figma"] {
+  --accordion-actions-gap: var(--space-gap-200);
   --accordion-border-color: var(--figma-color-border-disabled-default);
   --accordion-border-width: var(--stroke-width-thin);
   --accordion-icon-color-default: var(--figma-color-icon-secondary-default);

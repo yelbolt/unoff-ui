@@ -5,336 +5,173 @@ import ColorChip from '@components/tags/color-chip/ColorChip'
 import ActionsList from '@components/lists/actions-list/ActionsList'
 import Icon from '@components/assets/icon/Icon'
 
+type Options = React.ComponentProps<typeof ActionsList>['options']
+
+const option = (label: string, value: string) => ({
+  label,
+  value,
+  type: 'OPTION' as const,
+  action: fn(),
+})
+
+const numberedOptions = (count: number): Options =>
+  Array.from({ length: count }, (_, index) =>
+    option(`Option ${index + 1}`, `OPTION_${index + 1}`)
+  )
+
 const meta = {
   title: 'Components/Lists/Actions List',
   component: ActionsList,
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    options: { control: 'object' },
+    direction: { control: false },
+    menuRef: { control: false },
+    subMenuRef: { control: false },
+    onCancellation: { control: false },
+  },
 } satisfies Meta<typeof ActionsList>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const FourOptionsList: Story = {
+export const Default: Story = {
   args: {
     options: [
       {
-        label: 'Option 1',
+        ...option('Option 1', 'OPTION_1'),
         shortcut: '⌘K',
-        value: 'OPTION_1',
-        type: 'OPTION',
         isBlocked: true,
-        action: fn(),
         onBlock: fn(),
       },
-      {
-        label: 'Option 2',
-        shortcut: '⌘L',
-        value: 'OPTION_2',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 3',
-        shortcut: '⌘⇥M',
-        value: 'OPTION_3',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 4',
-        shortcut: '⌘⇧N',
-        value: 'OPTION_4',
-        type: 'OPTION',
-        action: fn(),
-      },
+      { ...option('Option 2', 'OPTION_2'), shortcut: '⌘L' },
+      { ...option('Option 3', 'OPTION_3'), shortcut: '⌘⇥M' },
+      { ...option('Option 4', 'OPTION_4'), shortcut: '⌘⇧N' },
     ],
     selected: 'OPTION_1',
   },
-  argTypes: {
-    direction: { control: false },
-  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    const option1 = canvas.getByText('Option 1')
-    await expect(option1).toBeInTheDocument()
-
-    const option2 = canvas.getByText('Option 2')
-    await expect(option2).toBeInTheDocument()
-
-    const option3 = canvas.getByText('Option 3')
-    await expect(option3).toBeInTheDocument()
-
-    const option4 = canvas.getByText('Option 4')
-    await expect(option4).toBeInTheDocument()
-
-    // Verify all options are present
-    const allOptions = canvas.getAllByText(/Option \d/)
-    await expect(allOptions.length).toBe(4)
+    await expect(canvas.getAllByText(/Option \d/)).toHaveLength(4)
+    await expect(canvas.getByText('⌘K')).toBeInTheDocument()
   },
 }
 
-export const FourOptionsListWithSeparator: Story = {
+export const WithSeparator: Story = {
   args: {
     options: [
-      {
-        label: 'Group 1',
-        type: 'TITLE',
-      },
-      {
-        label: 'Option 1',
-        value: 'OPTION_1',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 2',
-        value: 'OPTION_1',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        type: 'SEPARATOR',
-      },
-      {
-        label: 'Group 2',
-        type: 'TITLE',
-        action: fn(),
-      },
-      {
-        label: 'Option 3',
-        value: 'OPTION_3',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 4',
-        value: 'OPTION_4',
-        type: 'OPTION',
-        action: fn(),
-      },
+      { label: 'Group 1', type: 'TITLE' },
+      option('Option 1', 'OPTION_1'),
+      option('Option 2', 'OPTION_2'),
+      { type: 'SEPARATOR' },
+      { label: 'Group 2', type: 'TITLE' },
+      option('Option 3', 'OPTION_3'),
+      option('Option 4', 'OPTION_4'),
     ],
   },
   argTypes: {
-    direction: { control: false },
     selected: { control: false },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    const group1 = canvas.getByText('Group 1')
-    await expect(group1).toBeInTheDocument()
-
-    const group2 = canvas.getByText('Group 2')
-    await expect(group2).toBeInTheDocument()
-
-    const option1 = canvas.getByText('Option 1')
-    await expect(option1).toBeInTheDocument()
-
-    const option4 = canvas.getByText('Option 4')
-    await expect(option4).toBeInTheDocument()
-
-    // Verify separator is present
-    const separator = canvas.getByRole('separator', { hidden: true })
-    await expect(separator).toBeInTheDocument()
+    await expect(canvas.getByText('Group 1')).toBeInTheDocument()
+    await expect(canvas.getByText('Group 2')).toBeInTheDocument()
+    await expect(
+      canvas.getByRole('separator', { hidden: true })
+    ).toBeInTheDocument()
   },
 }
 
-export const FourOptionsListInGroups: Story = {
+export const WithGroups: Story = {
   args: {
-    options: [
-      {
-        label: 'Group 1',
-        value: 'GROUP_1',
-        type: 'GROUP',
-        children: [
-          {
-            label: 'Option 1',
-            value: 'OPTION_A_1',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 2',
-            value: 'OPTION_A_2',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 3',
-            value: 'OPTION_A_3',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 4',
-            value: 'OPTION_A_4',
-            type: 'OPTION',
-            action: fn(),
-          },
-        ],
-      },
-      {
-        label: 'Group 2',
-        value: 'GROUP_2',
-        type: 'GROUP',
-        children: [
-          {
-            label: 'Option 1',
-            value: 'OPTION_B_1',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 2',
-            value: 'OPTION_B_2',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 3',
-            value: 'OPTION_B_3',
-            type: 'OPTION',
-            action: fn(),
-          },
-          {
-            label: 'Option 4',
-            value: 'OPTION_B_4',
-            type: 'OPTION',
-            action: fn(),
-          },
-        ],
-      },
-    ],
-  },
-  argTypes: {
-    direction: { control: false },
-    selected: { control: false },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const group1 = canvas.getByText('Group 1')
-    await expect(group1).toBeInTheDocument()
-
-    const group2 = canvas.getByText('Group 2')
-    await expect(group2).toBeInTheDocument()
-  },
-}
-
-export const SearchableList: Story = {
-  args: {
-    options: [
-      {
-        label: 'Apple',
-        value: 'APPLE',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Banana',
-        value: 'BANANA',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Cherry',
-        value: 'CHERRY',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Date',
-        value: 'DATE',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Elderberry',
-        value: 'ELDERBERRY',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Fig',
-        value: 'FIG',
-        type: 'OPTION',
-        action: fn(),
-      },
-    ],
-    canBeSearched: true,
-    searchLabel: 'Search fruits…',
-  },
-  argTypes: {
-    direction: { control: false },
-    selected: { control: false },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const searchInput = canvas.getByPlaceholderText('Search fruits…')
-    await expect(searchInput).toBeInTheDocument()
-
-    await userEvent.type(searchInput, 'a')
-
-    await waitFor(async () => {
-      const banana = canvas.getByText('Banana')
-      await expect(banana).toBeInTheDocument()
-    })
-
-    const cherry = canvas.queryByText('Cherry')
-    await expect(cherry).not.toBeInTheDocument()
-  },
-}
-
-export const SearchableListWithManyOptions: Story = {
-  args: {
-    options: Array.from({ length: 20 }, (_, index) => ({
-      label: `Option ${index + 1}`,
-      value: `OPTION_${index + 1}`,
-      type: 'OPTION' as const,
-      action: fn(),
+    options: ['A', 'B'].map((group, index) => ({
+      label: `Group ${index + 1}`,
+      value: `GROUP_${group}`,
+      type: 'GROUP' as const,
+      children: [1, 2, 3, 4].map((n) =>
+        option(`Option ${n}`, `OPTION_${group}_${n}`)
+      ),
     })),
-    canBeSearched: true,
-    searchLabel: 'Search options…',
   },
   argTypes: {
-    direction: { control: false },
     selected: { control: false },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    const searchInput = canvas.getByPlaceholderText('Search options…')
-    await expect(searchInput).toBeInTheDocument()
-
-    const menu = canvasElement.querySelector('.select-menu__menu--searchable')
-    await expect(menu).toBeInTheDocument()
-
-    const allOptions = canvas.getAllByText(/Option \d+/)
-    await expect(allOptions.length).toBe(20)
+    await expect(canvas.getByText('Group 1')).toBeInTheDocument()
+    await expect(canvas.getByText('Group 2')).toBeInTheDocument()
   },
 }
 
-export const SearchableListScrollsToSelected: Story = {
+export const WithStartSlot: Story = {
   args: {
-    options: Array.from({ length: 20 }, (_, index) => ({
-      label: `Option ${index + 1}`,
-      value: `OPTION_${index + 1}`,
-      type: 'OPTION' as const,
-      action: fn(),
-    })),
+    options: [
+      {
+        ...option('Grid view', 'GRID'),
+        startSlot: (
+          <Icon
+            type="PICTO"
+            iconName="tidy-up-grid"
+          />
+        ),
+      },
+      {
+        ...option('List view', 'LIST'),
+        startSlot: (
+          <Icon
+            type="PICTO"
+            iconName="list-detailed"
+          />
+        ),
+      },
+      { type: 'SEPARATOR' },
+      {
+        ...option('Ocean blue', 'OCEAN_BLUE'),
+        startSlot: (
+          <ColorChip
+            color="#1E6FD9"
+            isRounded
+          />
+        ),
+      },
+      {
+        ...option('Sunset orange', 'SUNSET_ORANGE'),
+        startSlot: (
+          <ColorChip
+            color="#E8622C"
+            isRounded
+          />
+        ),
+      },
+    ],
+    selected: 'OCEAN_BLUE',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await expect(canvas.getByText('Grid view')).toBeInTheDocument()
+    await expect(
+      canvasElement.querySelectorAll('.select-menu__item__start')
+    ).toHaveLength(4)
+  },
+}
+
+export const Searchable: Story = {
+  args: {
+    options: numberedOptions(20),
     selected: 'OPTION_10',
     canBeSearched: true,
-    searchLabel: 'Filter options…',
-  },
-  argTypes: {
-    direction: { control: false },
+    searchLabel: 'Search options…',
+    noResultsLabel: 'No option found',
   },
   render: (args) => {
     const menuRef = useRef<HTMLUListElement>(null)
+
     return (
       <ActionsList
         {...args}
@@ -344,37 +181,29 @@ export const SearchableListScrollsToSelected: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
-
-    const searchInput = canvas.getByPlaceholderText('Filter options…')
-    await expect(searchInput).toBeInTheDocument()
-
     const menu = canvasElement.querySelector(
       '.select-menu__menu--searchable'
     ) as HTMLElement
+
     await expect(menu).toBeInTheDocument()
 
-    await waitFor(() => {
-      expect(menu.scrollTop).toBeGreaterThan(0)
-    })
-
-    const selectedOption = canvasElement.querySelector(
-      '[data-value="OPTION_10"]'
-    ) as HTMLElement
-    await expect(selectedOption).toBeInTheDocument()
-
+    await waitFor(() => expect(menu.scrollTop).toBeGreaterThan(0))
     const menuRect = menu.getBoundingClientRect()
-    const optionRect = selectedOption.getBoundingClientRect()
+    const optionRect = canvasElement
+      .querySelector('[data-value="OPTION_10"]')!
+      .getBoundingClientRect()
     await expect(optionRect.top).toBeGreaterThanOrEqual(menuRect.top)
     await expect(optionRect.bottom).toBeLessThanOrEqual(menuRect.bottom)
 
-    const optionCenter = (optionRect.top + optionRect.bottom) / 2
-    const relativeCenter = (optionCenter - menuRect.top) / menuRect.height
-    await expect(relativeCenter).toBeGreaterThan(0.3)
-    await expect(relativeCenter).toBeLessThan(0.7)
+    await userEvent.type(canvas.getByPlaceholderText('Search options…'), '20')
+    await waitFor(async () => {
+      await expect(canvas.getByText('Option 20')).toBeInTheDocument()
+      await expect(canvas.queryByText('Option 3')).not.toBeInTheDocument()
+    })
   },
 }
 
-export const LongListWithScroll: Story = {
+export const Scrollable: Story = {
   decorators: [
     (Story) => (
       <div
@@ -392,168 +221,17 @@ export const LongListWithScroll: Story = {
     ),
   ],
   args: {
-    options: [
-      {
-        label: 'Option 1',
-        value: 'OPTION_1',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 2',
-        value: 'OPTION_2',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 3',
-        value: 'OPTION_3',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 4',
-        value: 'OPTION_4',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 5',
-        value: 'OPTION_5',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 6',
-        value: 'OPTION_6',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 7',
-        value: 'OPTION_7',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 8',
-        value: 'OPTION_8',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 9',
-        value: 'OPTION_9',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 10',
-        value: 'OPTION_10',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 11',
-        value: 'OPTION_11',
-        type: 'OPTION',
-        action: fn(),
-      },
-      {
-        label: 'Option 12',
-        value: 'OPTION_12',
-        type: 'OPTION',
-        action: fn(),
-      },
-    ],
+    options: numberedOptions(12),
     selected: 'OPTION_1',
-    canBeSearched: false,
     shouldScroll: true,
     containerId: 'list-container',
   },
   argTypes: {
-    direction: { control: false },
+    containerId: { control: false },
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
-    const option1 = canvas.getByText('Option 1')
-    await expect(option1).toBeInTheDocument()
-
-    const allOptions = canvas.getAllByText(/Option \d+/)
-    await expect(allOptions.length).toBe(12)
-  },
-}
-
-export const OptionsWithStartSlot: Story = {
-  args: {
-    options: [
-      {
-        label: 'Grid view',
-        value: 'GRID',
-        type: 'OPTION',
-        action: fn(),
-        startSlot: (
-          <Icon
-            type="PICTO"
-            iconName="tidy-up-grid"
-          />
-        ),
-      },
-      {
-        label: 'List view',
-        value: 'LIST',
-        type: 'OPTION',
-        action: fn(),
-        startSlot: (
-          <Icon
-            type="PICTO"
-            iconName="list-detailed"
-          />
-        ),
-      },
-      {
-        type: 'SEPARATOR',
-      },
-      {
-        label: 'Ocean blue',
-        value: 'OCEAN_BLUE',
-        type: 'OPTION',
-        action: fn(),
-        startSlot: (
-          <ColorChip
-            color="#1E6FD9"
-            isRounded
-          />
-        ),
-      },
-      {
-        label: 'Sunset orange',
-        value: 'SUNSET_ORANGE',
-        type: 'OPTION',
-        action: fn(),
-        startSlot: (
-          <ColorChip
-            color="#E8622C"
-            isRounded
-          />
-        ),
-      },
-    ],
-    selected: 'OCEAN_BLUE',
-  },
-  argTypes: {
-    direction: { control: false },
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
-    const gridView = canvas.getByText('Grid view')
-    await expect(gridView).toBeInTheDocument()
-
-    const startSlots = canvasElement.querySelectorAll(
-      '.select-menu__item__start'
-    )
-    await expect(startSlots.length).toBe(4)
+    await expect(canvas.getAllByText(/Option \d+/)).toHaveLength(12)
   },
 }

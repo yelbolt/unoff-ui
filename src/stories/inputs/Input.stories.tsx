@@ -4,7 +4,7 @@ import { useArgs } from 'storybook/preview-api'
 import figma from '@figma/code-connect'
 import Input from '@components/inputs/input/Input'
 
-const meta: Meta<typeof Input> = {
+const meta = {
   title: 'Components/Inputs/Input',
   component: Input,
   parameters: {
@@ -33,12 +33,19 @@ const meta: Meta<typeof Input> = {
     onShift: fn(),
     onValid: fn(),
   },
+  argTypes: {
+    onChange: { control: false },
+    onFocus: { control: false },
+    onBlur: { control: false },
+    onShift: { control: false },
+    onValid: { control: false },
+  },
 } satisfies Meta<typeof Input>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const ColorPicker: Story = {
+export const Color: Story = {
   args: {
     id: 'specific-color-selection',
     type: 'COLOR',
@@ -111,7 +118,7 @@ export const ColorPicker: Story = {
   },
 }
 
-export const NumericStepper: Story = {
+export const Number: Story = {
   args: {
     id: 'specific-number-selection',
     type: 'NUMBER',
@@ -187,7 +194,7 @@ export const NumericStepper: Story = {
   },
 }
 
-export const ShortText: Story = {
+export const Text: Story = {
   args: {
     id: 'short-text-typing',
     type: 'TEXT',
@@ -317,7 +324,7 @@ export const LongText: Story = {
   },
 }
 
-export const CodeSnippet: Story = {
+export const Code: Story = {
   args: {
     id: 'code-snippet-dragging',
     type: 'CODE',

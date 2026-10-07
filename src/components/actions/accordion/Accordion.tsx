@@ -1,9 +1,11 @@
+import { useState } from 'react'
 import { doClassnames } from '@unoff/utils'
 import { IconList } from '@tps/icon.types'
 import Chip from '@components/tags/chip/Chip'
 import SectionTitle from '@components/assets/section-title/SectionTitle'
 import Button from '../button/Button'
 import './accordion.scss'
+import { layouts } from '../../..'
 
 export interface AccordionProps {
   /**
@@ -19,6 +21,16 @@ export interface AccordionProps {
    * @default 'plus'
    */
   icon?: IconList
+  /**
+   * Icon to display in the collapse button
+   * @default 'minus'
+   */
+  collapseIcon?: IconList
+  /**
+   * Slot for extra action buttons, displayed before the collapse button.
+   * Revealed on hover / keyboard focus, and always visible when expanded
+   */
+  actions?: React.ReactNode
   /**
    * Helper text displayed near the title
    */
@@ -71,10 +83,13 @@ export interface AccordionProps {
 }
 
 const Accordion = (props: AccordionProps) => {
+  const [isActionsVisible, setActionsVisible] = useState<boolean>(false)
   const {
     label,
     indicator,
     icon = 'plus',
+    collapseIcon = 'minus',
+    actions,
     helper,
     helpers,
     isExpanded,
@@ -85,6 +100,8 @@ const Accordion = (props: AccordionProps) => {
     onEmpty,
     onBlock,
   } = props
+
+  const areActionsShown = isExpanded || isActionsVisible
 
   const handleAdd = (
     event: React.MouseEvent<Element> | React.KeyboardEvent<Element>
@@ -116,7 +133,16 @@ const Accordion = (props: AccordionProps) => {
           onAdd(e as React.MouseEvent<HTMLDivElement, MouseEvent>)
       }}
     >
-      <div className="accordion__row">
+      <div
+        className="accordion__row"
+        onMouseEnter={() => setActionsVisible(true)}
+        onMouseLeave={() => setActionsVisible(false)}
+        onFocus={() => setActionsVisible(true)}
+        onBlur={(e) => {
+          if (e.currentTarget.contains(e.relatedTarget as Node)) return
+          setActionsVisible(false)
+        }}
+      >
         <div
           className="accordion__row__left"
           role="presentation"
@@ -131,37 +157,49 @@ const Accordion = (props: AccordionProps) => {
           className="accordion__row__right"
           role="group"
         >
-          {isExpanded ? (
-            <Button
-              type="icon"
-              icon="minus"
-              iconClassName="accordion__row__icon"
-              helper={
-                helpers?.empty !== undefined
-                  ? {
-                      label: helpers.empty,
-                    }
-                  : undefined
-              }
-              action={(e) => handleEmpty(e)}
-            />
-          ) : (
-            <Button
-              type="icon"
-              icon={icon}
-              iconClassName="accordion__row__icon"
-              helper={
-                helpers?.add !== undefined
-                  ? {
-                      label: helpers.add,
-                    }
-                  : undefined
-              }
-              isBlocked={isBlocked}
-              action={(e) => handleAdd(e)}
-            />
-          )}
-          {isNew && <Chip>{'New'}</Chip>}
+          <div className={layouts['snackbar--medium']}>
+            {actions && (
+              <div
+                className="accordion__row__actions"
+                role="group"
+                aria-hidden={!areActionsShown}
+                onMouseDown={(e) => e.stopPropagation()}
+              >
+                {areActionsShown && actions}
+              </div>
+            )}
+            {isExpanded ? (
+              <Button
+                type="icon"
+                icon={collapseIcon}
+                iconClassName="accordion__row__icon"
+                helper={
+                  helpers?.empty !== undefined
+                    ? {
+                        label: helpers.empty,
+                      }
+                    : undefined
+                }
+                action={(e) => handleEmpty(e)}
+              />
+            ) : (
+              <Button
+                type="icon"
+                icon={icon}
+                iconClassName="accordion__row__icon"
+                helper={
+                  helpers?.add !== undefined
+                    ? {
+                        label: helpers.add,
+                      }
+                    : undefined
+                }
+                isBlocked={isBlocked}
+                action={(e) => handleAdd(e)}
+              />
+            )}
+            {isNew && <Chip>{'New'}</Chip>}
+          </div>
         </div>
       </div>
       {isExpanded && (

@@ -1,10 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { fn, expect, userEvent, within, waitFor } from 'storybook/test'
-import { useArgs } from 'storybook/preview-api'
 import { ChangeEvent, useEffect, useState } from 'react'
 import Select from '@components/inputs/select/Select'
 
-const meta: Meta<typeof Select> = {
+const meta = {
   title: 'Components/Inputs/Select',
   component: Select,
   parameters: {
@@ -18,6 +17,27 @@ const meta: Meta<typeof Select> = {
 
 export default meta
 type Story = StoryObj<typeof meta>
+
+const renderToggle: Story['render'] = (args) => {
+  const [isChecked, setIsChecked] = useState(args.isChecked)
+
+  useEffect(() => {
+    setIsChecked(args.isChecked)
+  }, [args.isChecked])
+
+  const action = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(!isChecked)
+    args.action(e)
+  }
+
+  return (
+    <Select
+      {...args}
+      isChecked={isChecked}
+      action={action}
+    />
+  )
+}
 
 export const CheckBox: Story = {
   args: {
@@ -35,29 +55,7 @@ export const CheckBox: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
-    const [isChecked, setIsChecked] = useState(argsState.isChecked)
-
-    useEffect(() => {
-      setIsChecked(argsState.isChecked)
-    }, [argsState.isChecked])
-
-    const action = (e: ChangeEvent<HTMLInputElement>) => {
-      const next = !isChecked
-      setIsChecked(next)
-      updateArgs({ isChecked: next })
-      args.action(e)
-    }
-
-    return (
-      <Select
-        {...args}
-        isChecked={isChecked}
-        action={action}
-      />
-    )
-  },
+  render: renderToggle,
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
@@ -87,29 +85,7 @@ export const RadioButton: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
-    const [isChecked, setIsChecked] = useState(argsState.isChecked)
-
-    useEffect(() => {
-      setIsChecked(argsState.isChecked)
-    }, [argsState.isChecked])
-
-    const action = (e: ChangeEvent<HTMLInputElement>) => {
-      const next = !isChecked
-      setIsChecked(next)
-      updateArgs({ isChecked: next })
-      args.action(e)
-    }
-
-    return (
-      <Select
-        {...args}
-        isChecked={isChecked}
-        action={action}
-      />
-    )
-  },
+  render: renderToggle,
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
@@ -123,7 +99,7 @@ export const RadioButton: Story = {
   },
 }
 
-export const SwitchButton: Story = {
+export const Switch: Story = {
   args: {
     id: 'switch-input',
     type: 'SWITCH_BUTTON',
@@ -139,29 +115,7 @@ export const SwitchButton: Story = {
     type: { control: false },
     value: { control: false },
   },
-  render: (args) => {
-    const [argsState, updateArgs] = useArgs<{ isChecked: boolean }>()
-    const [isChecked, setIsChecked] = useState(argsState.isChecked)
-
-    useEffect(() => {
-      setIsChecked(argsState.isChecked)
-    }, [argsState.isChecked])
-
-    const action = (e: ChangeEvent<HTMLInputElement>) => {
-      const next = !isChecked
-      setIsChecked(next)
-      updateArgs({ isChecked: next })
-      args.action(e)
-    }
-
-    return (
-      <Select
-        {...args}
-        isChecked={isChecked}
-        action={action}
-      />
-    )
-  },
+  render: renderToggle,
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
@@ -175,7 +129,7 @@ export const SwitchButton: Story = {
   },
 }
 
-export const MultipleChoices: Story = {
+export const Multiple: Story = {
   args: {
     id: 'check-input',
     type: 'CHECK_BOX',
@@ -270,7 +224,7 @@ export const MultipleChoices: Story = {
   },
 }
 
-export const SingleChoice: Story = {
+export const Single: Story = {
   args: {
     id: 'radio-input',
     type: 'RADIO_BUTTON',

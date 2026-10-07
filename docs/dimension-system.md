@@ -8,11 +8,11 @@
 
 Colors have always had three layers. Dimensions had two.
 
-| Layer         | Colors                                                     | Dimensions (before)                           |
-| ------------- | ----------------------------------------------------------| ---------------------------------------------- |
-| **Primitive** | `platforms/yelbolt/colors.tokens.json` → `YLB.1…8`         | `commons/commons.tokens.json` → `scale.pos.*`  |
-| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*`        | — _missing_                                    |
-| **Component** | `platforms/yelbolt/components/*.tokens.json`               | `platforms/yelbolt/components/*.tokens.json`  |
+| Layer         | Colors                                              | Dimensions (before)                           |
+| ------------- | --------------------------------------------------- | --------------------------------------------- |
+| **Primitive** | `platforms/yelbolt/colors.tokens.json` → `YLB.1…8`  | `commons/commons.tokens.json` → `scale.pos.*` |
+| **System**    | `platforms/yelbolt/modes/*.tokens.json` → `color.*` | — _missing_                                   |
+| **Component** | `platforms/yelbolt/components/*.tokens.json`        | `platforms/yelbolt/components/*.tokens.json`  |
 
 Because the middle layer was missing, a component token reached straight into
 the primitive scale: `button.base.height` was literally `{scale.pos.small}`. That

@@ -8,18 +8,23 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  args: {
+    onRemoveColor: fn(),
+  },
+  argTypes: {
+    onRemoveColor: { control: false },
+  },
 } satisfies Meta<typeof ColorItem>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const ColorSample: Story = {
+export const Default: Story = {
   args: {
     name: 'Primary',
     hex: '#87ebe7',
     id: '29f6b9bd-d6c7-4c1f-87fa-ea5bcf7a074c',
     canBeRemoved: false,
-    onRemoveColor: fn(),
   },
   argTypes: {
     hex: { control: 'color' },
