@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.3] - 2026-10-07
+
+### Added
+
+- **`Accordion` — `actions` slot**: new optional `actions?: React.ReactNode` prop renders extra action buttons in the header row, before the add/collapse button. Their visibility is driven by a state in the component, the same way `Card` handles its `actions`: they appear when the row is hovered or focused (`onMouseEnter`/`onMouseLeave`, `onFocus`/`onBlur`, the latter checking `relatedTarget` so moving focus between the row's own buttons doesn't hide them) and stay visible while `isExpanded`. While hidden they are not mounted, and the container is `aria-hidden`. A `mousedown` inside the slot is stopped from bubbling, so using an action never toggles the accordion.
+- **`Accordion` — `--accordion-actions-gap` token**: new `accordion.actions.gap` component token (`{space.gap.100}`) spacing the buttons of the `actions` slot, added to all five platform themes (`figma`, `penpot`, `sketch`, `framer`, `yelbolt`) and compiled into each `styles/{theme}.scss`.
+- **`Accordion` — `collapseIcon` prop**: the icon of the collapse button, previously hardcoded to `minus`, can now be customised. Defaults to `'minus'`, so existing usages are unchanged.
+
+### Changed
+
+- **`Accordion` — header controls grouped**: the actions slot, the add/collapse button, and the `New` chip are now wrapped in a `snackbar--medium` layout group inside `accordion__row__right`.
+- **`Card` / `SortableList` — props types exported**: `CardProps` and `SortableList`'s `DefaultData` are now exported interfaces, so consumers and stories can type against them.
+
 ## [1.26.2] - 2026-09-18
 
 ### Added
