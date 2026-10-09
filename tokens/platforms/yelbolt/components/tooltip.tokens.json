@@ -36,13 +36,13 @@
     },
     "background": {
       "color": {
-        "$value": "{color.background.inverse.default}",
+        "$value": "{color.background.secondary.default}",
         "$type": "color"
       }
     },
     "border": {
       "color": {
-        "$value": "{color.border.inverse.default}",
+        "$value": "{color.border.secondary.default}",
         "$type": "color"
       },
       "width": {
@@ -56,7 +56,7 @@
     },
     "text": {
       "color": {
-        "$value": "{color.text.onInverse.default}",
+        "$value": "{color.text.onSecondary.default}",
         "$type": "color"
       },
       "transform": {
@@ -79,13 +79,13 @@
       },
       "background": {
         "color": {
-          "$value": "{color.background.inverse.default}",
+          "$value": "{color.background.secondary.default}",
           "$type": "color"
         }
       },
       "border": {
         "color": {
-          "$value": "{color.border.inverse.default}",
+          "$value": "{color.border.secondary.default}",
           "$type": "color"
         },
         "width": {
