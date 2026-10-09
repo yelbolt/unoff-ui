@@ -228,11 +228,11 @@
     },
     "toggle": {
       "height": {
-        "$value": "{control.size.300}",
+        "$value": "{control.size.400}",
         "$type": "dimension"
       },
       "width": {
-        "$value": "{control.size.600}",
+        "$value": "{control.size.800}",
         "$type": "dimension"
       },
       "radius": {
@@ -269,7 +269,7 @@
           },
           "checked": {
             "default": {
-              "$value": "{figma.color.bg.selected.strong}",
+              "$value": "{figma.color.border.brand.strong}",
               "$type": "color"
             },
             "disabled": {
@@ -363,11 +363,11 @@
       },
       "knob": {
         "height": {
-          "$value": "10px",
+          "$value": "{control.size.200}",
           "$type": "dimension"
         },
         "width": {
-          "$value": "10px",
+          "$value": "{control.size.300}",
           "$type": "dimension"
         },
         "radius": {
@@ -403,21 +403,21 @@
         "transform": {
           "default": {
             "translateX": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.100}",
               "$type": "dimension"
             },
             "translateY": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.100}",
               "$type": "dimension"
             }
           },
           "checked": {
             "translateX": {
-              "$value": "13px",
+              "$value": "{space.offset.400}",
               "$type": "dimension"
             },
             "translateY": {
-              "$value": "{space.offset.025}",
+              "$value": "{space.offset.100}",
               "$type": "dimension"
             }
           }
