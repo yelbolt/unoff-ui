@@ -32,7 +32,7 @@
     },
     "background": {
       "color": {
-        "$value": "{framer.color.bg.default}",
+        "$value": "{framer.color.bg.secondary}",
         "$type": "color"
       }
     },
@@ -66,7 +66,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           },
           "bottom": {
@@ -84,7 +84,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           },
           "bottom": {
@@ -102,7 +102,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           },
           "bottom": {
@@ -120,7 +120,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           },
           "bottom": {
@@ -148,11 +148,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.tint.default}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.tint.default}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "selected": {
@@ -160,11 +160,11 @@
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{framer.color.tint.default}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{framer.color.tint.default}",
+            "$value": "{framer.color.bg.tertiary}",
             "$type": "color"
           },
           "disabled": {
@@ -202,11 +202,11 @@
             "$type": "color"
           },
           "hover": {
-            "$value": "{framer.color.text.reversed}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "focus": {
-            "$value": "{framer.color.text.reversed}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "selected": {
@@ -214,11 +214,11 @@
             "$type": "color"
           },
           "selectedHover": {
-            "$value": "{framer.color.text.reversed}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "selectedFocus": {
-            "$value": "{framer.color.text.reversed}",
+            "$value": "{framer.color.text.default}",
             "$type": "color"
           },
           "disabled": {
@@ -253,7 +253,7 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg.default}",
+          "$value": "{framer.color.bg.secondary}",
           "$type": "color"
         }
       },
@@ -327,11 +327,11 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "selected": {
@@ -339,11 +339,11 @@
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.default}",
           "$type": "color"
         },
         "disabled": {
@@ -377,11 +377,11 @@
           "$type": "color"
         },
         "hover": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.tertiary}",
           "$type": "color"
         },
         "focus": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.tertiary}",
           "$type": "color"
         },
         "selected": {
@@ -389,11 +389,11 @@
           "$type": "color"
         },
         "selectedHover": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.tertiary}",
           "$type": "color"
         },
         "selectedFocus": {
-          "$value": "{framer.color.text.reversed}",
+          "$value": "{framer.color.text.tertiary}",
           "$type": "color"
         },
         "disabled": {

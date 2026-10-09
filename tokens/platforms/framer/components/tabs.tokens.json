@@ -12,7 +12,7 @@
     },
     "radius": {
       "default": {
-        "$value": "{radius.xlarge}",
+        "$value": "{radius.none}",
         "$type": "dimension"
       },
       "vertical": {
@@ -23,19 +23,19 @@
     "padding": {
       "default": {
         "top": {
-          "$value": "{space.inset.050}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{space.inset.050}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{space.inset.050}",
+          "$value": "{space.none}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{space.inset.050}",
+          "$value": "{space.none}",
           "$type": "dimension"
         }
       },
@@ -61,7 +61,7 @@
     "background": {
       "color": {
         "default": {
-          "$value": "{framer.color.bg.secondary}",
+          "$value": "{framer.color.bg.default}",
           "$type": "color"
         },
         "vertical": {
@@ -88,7 +88,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.300}",
             "$type": "dimension"
           },
           "bottom": {
@@ -96,7 +96,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.300}",
             "$type": "dimension"
           }
         },
@@ -106,7 +106,7 @@
             "$type": "dimension"
           },
           "right": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.300}",
             "$type": "dimension"
           },
           "bottom": {
@@ -114,7 +114,7 @@
             "$type": "dimension"
           },
           "left": {
-            "$value": "{space.inset.100}",
+            "$value": "{space.inset.200}",
             "$type": "dimension"
           }
         },
@@ -157,7 +157,7 @@
       },
       "radius": {
         "default": {
-          "$value": "{radius.large}",
+          "$value": "{radius.xlarge}",
           "$type": "dimension"
         },
         "alternative": {
@@ -190,7 +190,7 @@
             "$type": "color"
           },
           "active": {
-            "$value": "{framer.color.bg.default}",
+            "$value": "{framer.color.bg.secondary}",
             "$type": "color"
           },
           "alternative": {
@@ -374,7 +374,7 @@
             "$type": "fontWeights"
           },
           "active": {
-            "$value": "{type.weight.600}",
+            "$value": "{type.weight.500}",
             "$type": "fontWeights"
           },
           "alternative": {
