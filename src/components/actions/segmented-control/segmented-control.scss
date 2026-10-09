@@ -44,6 +44,7 @@
       var(--segmented-control-item-padding-left);
     min-width: var(--segmented-control-item-min-width);
     height: var(--segmented-control-item-height);
+    box-sizing: border-box;
     --icon-picto-color: var(--segmented-control-item-icon-color);
     --icon-letter-color: var(--segmented-control-item-icon-color);
 
