@@ -3,13 +3,13 @@
  * ------------------------------------------- */
 
 :root[data-theme="yelbolt"] {
-  --tooltip-arrow-background-color: var(--color-background-inverse-default);
-  --tooltip-arrow-border-color: var(--color-border-inverse-default);
+  --tooltip-arrow-background-color: var(--color-background-secondary-default);
+  --tooltip-arrow-border-color: var(--color-border-secondary-default);
   --tooltip-arrow-border-width: var(--stroke-width-thin);
   --tooltip-arrow-radius: var(--radius-none);
   --tooltip-arrow-size: var(--control-size-200);
-  --tooltip-background-color: var(--color-background-inverse-default);
-  --tooltip-border-color: var(--color-border-inverse-default);
+  --tooltip-background-color: var(--color-background-secondary-default);
+  --tooltip-border-color: var(--color-border-secondary-default);
   --tooltip-border-offset: var(--stroke-offset-thin);
   --tooltip-border-width: var(--stroke-width-thin);
   --tooltip-gap: var(--space-gap-200);
@@ -24,7 +24,7 @@
   --tooltip-padding-top: var(--space-inset-200);
   --tooltip-radius: var(--radius-xxlarge);
   --tooltip-shadow: var(--elevation-300-tooltip);
-  --tooltip-text-color: var(--color-text-on-inverse-default);
+  --tooltip-text-color: var(--color-text-on-secondary-default);
   --tooltip-text-transform: none;
   --tooltip-with-image-min-width: 248px;
   --tooltip-with-image-padding-bottom: var(--space-inset-100);

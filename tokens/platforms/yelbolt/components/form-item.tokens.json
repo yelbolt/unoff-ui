@@ -92,7 +92,7 @@
       "margin": {
         "default": {
           "top": {
-            "$value": "{space.offset.050}",
+            "$value": "{space.offset.100}",
             "$type": "dimension"
           },
           "right": {
@@ -110,7 +110,7 @@
         },
         "multiline": {
           "top": {
-            "$value": "{space.offset.050}",
+            "$value": "{space.offset.100}",
             "$type": "dimension"
           },
           "right": {

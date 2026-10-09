@@ -20,7 +20,7 @@
     },
     "background": {
       "color": {
-        "$value": "rgba(0, 0, 0, 0.5)",
+        "$value": "{shadow.color.black.alpha500}",
         "$type": "color"
       }
     },

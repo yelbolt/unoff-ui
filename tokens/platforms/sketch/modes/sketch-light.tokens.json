@@ -4,16 +4,16 @@
     "color": {
       "accent": {
         "default": {
-          "$value": "#F26726"
+          "$value": "#575FFF"
         },
         "primary": {
-          "$value": "#F26726"
+          "$value": "#575FFF"
         },
         "secondary": {
-          "$value": "#E36E3A"
+          "$value": "#798BFE"
         },
         "tertiary": {
-          "$value": "#F9C3AA"
+          "$value": "#B0BFFC"
         },
         "info": {
           "$value": "#84D7CF"
@@ -28,10 +28,10 @@
           "$value": "#CC0000"
         },
         "select": {
-          "$value": "#FFF1E8"
+          "$value": "#ECF0FF"
         },
         "disabled": {
-          "$value": "#FCE4D8"
+          "$value": "#DAE2FD"
         }
       },
       "background": {

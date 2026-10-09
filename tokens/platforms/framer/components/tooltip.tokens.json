@@ -18,25 +18,25 @@
     },
     "padding": {
       "top": {
-        "$value": "{space.inset.400}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       },
       "right": {
-        "$value": "{space.inset.400}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       },
       "bottom": {
-        "$value": "{space.inset.400}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       },
       "left": {
-        "$value": "{space.inset.400}",
+        "$value": "{space.inset.200}",
         "$type": "dimension"
       }
     },
     "background": {
       "color": {
-        "$value": "{framer.color.bg.default}",
+        "$value": "{framer.color.bg.secondary}",
         "$type": "color"
       }
     },
@@ -79,17 +79,17 @@
       },
       "background": {
         "color": {
-          "$value": "{framer.color.bg.default}",
+          "$value": "{grey.transparent}",
           "$type": "color"
         }
       },
       "border": {
         "color": {
-          "$value": "{framer.color.divider}",
+          "$value": "{grey.transparent}",
           "$type": "color"
         },
         "width": {
-          "$value": "{stroke.width.thin}",
+          "$value": "{stroke.width.none}",
           "$type": "dimension"
         }
       }
@@ -115,19 +115,19 @@
       },
       "padding": {
         "top": {
-          "$value": "{space.inset.400}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "right": {
-          "$value": "{space.inset.400}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "bottom": {
-          "$value": "{space.inset.400}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         },
         "left": {
-          "$value": "{space.inset.400}",
+          "$value": "{space.inset.200}",
           "$type": "dimension"
         }
       }

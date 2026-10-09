@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.4] - 2026-10-10
+
+### Changed
+
+- **`sketch` theme — accent palette**: the orange accent (`#F26726`) is replaced by `#575FFF`, and the rest of the `accent` ramp is derived from it keeping the same lightness and saturation relationships (computed in OKLCH). `default`/`primary` move to `#575FFF` in both modes; `secondary`, `tertiary`, `select` and `disabled` become `#4951D9` / `#272E5D` / `#050718` / `#22284A` in dark and `#798BFE` / `#B0BFFC` / `#ECF0FF` / `#DAE2FD` in light. In light mode `secondary` is deliberately lighter than `primary`, so the two stay distinguishable. Updated in both `sketch-{dark,light}.tokens.json`, the compiled `sketch-modes.scss`, and the `ColorsSketch.mdx` documentation.
+- **`Dialog` (`figma`, `framer`, `yelbolt`) — backdrop colour**: `dialog.background.color` now aliases `{shadow.color.black.alpha500}` instead of the hardcoded `rgba(0, 0, 0, 0.5)`. The rendered colour is unchanged.
+- **`Tooltip` (`yelbolt`) — secondary surface**: background, border, text and arrow tokens move from the `inverse` colour family to `secondary` / `on-secondary`, so the tooltip follows the mode's own gradation instead of inverting it.
+- **`Tooltip` / `ActionsList` / `Tabs` (`framer`) — surface and spacing alignment**: `Tooltip` is now on `bg.secondary` with a transparent border, no stroke, and `space.inset.200` padding. `ActionsList` is on `bg.secondary`, with `bg.tertiary` hover/focus rows and `text.default` / `text.tertiary` replacing the `reversed` text colour; its right padding goes from `inset.100` to `inset.200`. `Tabs` drops its container padding and radius, uses `bg.default` for the container and `bg.secondary` for the active tab, and widens tab padding to `inset.200`/`inset.300` with `radius.xlarge` tabs.
+- **`FormItem` — chip top margin**: `--form-item-chip-margin-{default,multiline}-top` goes from `space-offset-050` to `space-offset-100` on `figma`, `penpot` and `yelbolt`, so the chip lines up with the label.
+- **`Input` — vertical alignment**: the `.input` flex container is now `align-items: center` instead of `start`, centring the field with its adjacent controls.
+
+### Fixed
+
+- **`Select` (`figma`) — switch toggle proportions**: the toggle is resized to `control.size.400` × `control.size.800` (was `300` × `600`) and its knob to `control.size.200` × `control.size.300`, with the hardcoded `10px` / `13px` values replaced by `control` and `space.offset` tokens (`offset.100` rest position, `offset.400` checked travel). The checked border now uses `border.brand.strong` instead of `bg.selected.strong`.
+- **`Select` (`yelbolt`) — control height**: `--select-checkbox-height`, `--select-radio-height` and `--select-switch-height` go from `control-size-600` to `control-size-800`, matching the other controls of the theme.
+- **`SegmentedControl` — item sizing**: `box-sizing: border-box` added to the item so its border no longer inflates the `--segmented-control-item-height`.
+
+### Documentation
+
+- **`FormItem` stories**: the `children` control is now a select over `Text`, `Input`, `LongText`, `Number`, `Switch` and `Dropdown` contents, with a shared `id` / `label`, so each content type can be previewed inside a form item from the Storybook controls.
+
 ## [1.26.3] - 2026-10-07
 
 ### Added

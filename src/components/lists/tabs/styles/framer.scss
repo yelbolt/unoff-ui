@@ -3,21 +3,21 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --tabs-background-color-default: var(--framer-color-bg-secondary);
+  --tabs-background-color-default: var(--framer-color-bg-default);
   --tabs-background-color-vertical: var(--framer-color-bg-default);
   --tabs-gap-default: var(--space-none);
   --tabs-gap-vertical: var(--space-gap-100);
-  --tabs-padding-default-bottom: var(--space-inset-050);
-  --tabs-padding-default-left: var(--space-inset-050);
-  --tabs-padding-default-right: var(--space-inset-050);
-  --tabs-padding-default-top: var(--space-inset-050);
+  --tabs-padding-default-bottom: var(--space-none);
+  --tabs-padding-default-left: var(--space-none);
+  --tabs-padding-default-right: var(--space-none);
+  --tabs-padding-default-top: var(--space-none);
   --tabs-padding-vertical-bottom: var(--space-inset-400);
   --tabs-padding-vertical-left: var(--space-inset-400);
   --tabs-padding-vertical-right: var(--space-inset-400);
   --tabs-padding-vertical-top: var(--space-inset-400);
-  --tabs-radius-default: var(--radius-xlarge);
+  --tabs-radius-default: var(--radius-none);
   --tabs-radius-vertical: var(--radius-none);
-  --tabs-tab-background-color-active: var(--framer-color-bg-default);
+  --tabs-tab-background-color-active: var(--framer-color-bg-secondary);
   --tabs-tab-background-color-alternative: var(--framer-color-bg-default);
   --tabs-tab-background-color-alternative-active: var(--framer-color-bg-secondary);
   --tabs-tab-background-color-alternative-focus: var(--framer-color-bg-default);
@@ -91,15 +91,15 @@
   --tabs-tab-padding-alternative-with-icon-right: var(--space-inset-200);
   --tabs-tab-padding-alternative-with-icon-top: var(--space-none);
   --tabs-tab-padding-default-bottom: var(--space-none);
-  --tabs-tab-padding-default-left: var(--space-inset-100);
-  --tabs-tab-padding-default-right: var(--space-inset-100);
+  --tabs-tab-padding-default-left: var(--space-inset-300);
+  --tabs-tab-padding-default-right: var(--space-inset-300);
   --tabs-tab-padding-default-top: var(--space-none);
   --tabs-tab-padding-with-icon-bottom: var(--space-none);
-  --tabs-tab-padding-with-icon-left: var(--space-inset-100);
-  --tabs-tab-padding-with-icon-right: var(--space-inset-100);
+  --tabs-tab-padding-with-icon-left: var(--space-inset-200);
+  --tabs-tab-padding-with-icon-right: var(--space-inset-300);
   --tabs-tab-padding-with-icon-top: var(--space-none);
   --tabs-tab-radius-alternative: var(--radius-xlarge);
-  --tabs-tab-radius-default: var(--radius-large);
+  --tabs-tab-radius-default: var(--radius-xlarge);
   --tabs-tab-text-color-active: var(--framer-color-text-default);
   --tabs-tab-text-color-alternative: var(--framer-color-text-secondary);
   --tabs-tab-text-color-alternative-active: var(--framer-color-text-default);
@@ -112,7 +112,7 @@
   --tabs-tab-text-size-default: var(--type-size-02);
   --tabs-tab-text-transform-alternative: none;
   --tabs-tab-text-transform-default: none;
-  --tabs-tab-text-weight-active: var(--type-weight-600);
+  --tabs-tab-text-weight-active: var(--type-weight-500);
   --tabs-tab-text-weight-alternative: var(--type-weight-500);
   --tabs-tab-text-weight-alternative-active: var(--type-weight-500);
   --tabs-tab-text-weight-alternative-focus: var(--type-weight-500);

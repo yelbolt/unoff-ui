@@ -3,12 +3,12 @@
  * ------------------------------------------- */
 
 :root[data-theme="framer"] {
-  --tooltip-arrow-background-color: var(--framer-color-bg-default);
-  --tooltip-arrow-border-color: var(--framer-color-divider);
-  --tooltip-arrow-border-width: var(--stroke-width-thin);
+  --tooltip-arrow-background-color: var(--grey-transparent);
+  --tooltip-arrow-border-color: var(--grey-transparent);
+  --tooltip-arrow-border-width: var(--stroke-width-none);
   --tooltip-arrow-radius: var(--radius-none);
   --tooltip-arrow-size: var(--control-size-400);
-  --tooltip-background-color: var(--framer-color-bg-default);
+  --tooltip-background-color: var(--framer-color-bg-secondary);
   --tooltip-border-color: var(--grey-transparent);
   --tooltip-border-offset: var(--stroke-offset-none);
   --tooltip-border-width: var(--stroke-width-none);
@@ -18,17 +18,17 @@
   --tooltip-image-width: var(--control-size-2400);
   --tooltip-max-width: 248px;
   --tooltip-min-width: 200px;
-  --tooltip-padding-bottom: var(--space-inset-400);
-  --tooltip-padding-left: var(--space-inset-400);
-  --tooltip-padding-right: var(--space-inset-400);
-  --tooltip-padding-top: var(--space-inset-400);
+  --tooltip-padding-bottom: var(--space-inset-200);
+  --tooltip-padding-left: var(--space-inset-200);
+  --tooltip-padding-right: var(--space-inset-200);
+  --tooltip-padding-top: var(--space-inset-200);
   --tooltip-radius: var(--radius-xlarge);
   --tooltip-shadow: var(--elevation-300-tooltip);
   --tooltip-text-color: var(--framer-color-text-default);
   --tooltip-text-transform: none;
   --tooltip-with-image-min-width: 248px;
-  --tooltip-with-image-padding-bottom: var(--space-inset-400);
-  --tooltip-with-image-padding-left: var(--space-inset-400);
-  --tooltip-with-image-padding-right: var(--space-inset-400);
-  --tooltip-with-image-padding-top: var(--space-inset-400);
+  --tooltip-with-image-padding-bottom: var(--space-inset-200);
+  --tooltip-with-image-padding-left: var(--space-inset-200);
+  --tooltip-with-image-padding-right: var(--space-inset-200);
+  --tooltip-with-image-padding-top: var(--space-inset-200);
 }
