@@ -76,8 +76,9 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
  *     `--<component>-transition` shorthand referencing an undefined var, which
  *     invalidates the whole `transition` declaration at computed-value time.
  *     Load the resulting file INSTEAD of figma-modes.scss in the plugin so
- *     the platform's colors apply for all products (FigJam, Slides, Buzz…)
- *     regardless of data-mode.
+ *     the platform's colors apply for all products (FigJam, Slides, Buzz…).
+ *     Call it once per mode with that mode's selector to embed the modes while
+ *     keeping only the `-default` bridges; use ':root' for a mode-less block.
  *
  *     Usage:
  *       import tokensStudioCompat, { cssTransform, wrapPassthrough }
@@ -303,16 +304,33 @@ export const wrapFallbacks = (prepare) => (css) => {
  * @param {string[]} [options.keep] - Custom-property name prefixes to emit
  *   verbatim (value and all) rather than omit, for families the platform does
  *   not inject natively.
+ * @param {string[]} [options.native] - Prefixes of the custom properties the
+ *   platform injects itself (e.g. `--figma-color-`). When set, it replaces
+ *   `keep`: every non-default token is emitted verbatim (spacing, radius,
+ *   stroke, type, motion…) except those the platform already provides.
+ * @param {boolean} [options.values] - Embed the mode's own value as the
+ *   var() fallback: `--x-default: var(--x, rgb(…))` instead of `var(--x)`, so
+ *   the sheet still resolves when the platform injects nothing.
  * @returns {(css: string) => string}
  */
 export const wrapPassthrough =
-  (selector, { keep = [] } = {}) =>
+  (selector, { keep = [], values = false, native = null } = {}) =>
   (css) => {
     const lines = []
     for (const [, name, value] of css.matchAll(/(--[\w][\w-]*): ([^;]+);/g))
-      if (name.endsWith('-default'))
-        lines.push(`  ${name}: var(${name.slice(0, -'-default'.length)});`)
-      else if (keep.some((prefix) => name.startsWith(prefix)))
+      if (name.endsWith('-default')) {
+        const base = name.slice(0, -'-default'.length)
+        const foreign = native && !native.some((p) => name.startsWith(p))
+        lines.push(
+          values || foreign
+            ? `  ${name}: var(${base}, ${value});`
+            : `  ${name}: var(${base});`
+        )
+      } else if (
+        native
+          ? !native.some((prefix) => name.startsWith(prefix))
+          : keep.some((prefix) => name.startsWith(prefix))
+      )
         lines.push(`  ${name}: ${value};`)
     return `${selector} {\n${lines.join('\n')}\n}\n`
   }

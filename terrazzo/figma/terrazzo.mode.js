@@ -19,6 +19,10 @@ const COMMONS_TOKENS = [
   'transform.**',
 ]
 
+const PLUGIN_EXCLUDE = COMMONS_TOKENS
+
+const PLUGIN_NATIVE = ['--figma-color-']
+
 export default defineConfig({
   name: 'Figma Modes',
   tokens: ['./tokens/figma-modes.resolver.json'],
@@ -58,8 +62,24 @@ export default defineConfig({
       permutations: [
         {
           input: { mode: 'figmaLight' },
-          exclude: [...COMMONS_TOKENS, 'type.**', 'global.**'],
-          prepare: wrapPassthrough(':root', { keep: [] }),
+          exclude: PLUGIN_EXCLUDE,
+          prepare: wrapPassthrough(':root, [data-mode="figma-light"]', {
+            native: PLUGIN_NATIVE,
+          }),
+        },
+        {
+          input: { mode: 'figmaDark' },
+          exclude: PLUGIN_EXCLUDE,
+          prepare: wrapPassthrough('[data-mode="figma-dark"]', {
+            native: PLUGIN_NATIVE,
+          }),
+        },
+        {
+          input: { mode: 'figjam' },
+          exclude: PLUGIN_EXCLUDE,
+          prepare: wrapPassthrough('[data-mode="figjam"]', {
+            native: PLUGIN_NATIVE,
+          }),
         },
       ],
     }),
