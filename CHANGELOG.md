@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.26.5] - 2026-10-11
+
+### Changed
+
+- **`figma-plugin.scss` — modes embedded**: the plugin stylesheet is no longer a single unscoped `:root` block. It now carries one block per mode — `:root, [data-mode="figma-light"]`, `[data-mode="figma-dark"]` and `[data-mode="figjam"]` — so a plugin can set `data-mode` like in Storybook. `:root` stays on the light block so a plugin that never sets `data-mode` (FigJam, Slides, Buzz…) still resolves.
+- **`figma-plugin.scss` — non-colour tokens embedded**: spacing, radius, stroke, type, control, motion and global tokens (`--space-*`, `--radius-*`, `--stroke-*`, `--type-*`, `--control-*`, `--motion-*`, `--global-*`) are now emitted verbatim, as in `figma-modes.scss`. Colours keep only the `-default` bridges, `var(--figma-color-x)` with no fallback; the rest of `--figma-color-*` stays Figma-native and is omitted. Like `figma-modes.scss`, the file needs `commons.scss` loaded for the primitives it references.
+- **`wrapPassthrough` — `native` option**: new `native` option lists the prefixes the platform injects itself. When set, every other token is emitted verbatim instead of requiring an explicit `keep` list, and a `-default` token the platform does not provide (e.g. `--global-background-color-default`) keeps its value as the `var()` fallback instead of bridging to an undefined variable.
+
+### Documentation
+
+- **`terrazzo-guide.md`**: the `figma-plugin.scss` rows of the helpers and two-file-strategy tables describe the per-mode blocks and the embedded non-colour tokens.
+
 ## [1.26.4] - 2026-10-10
 
 ### Changed
