@@ -215,9 +215,19 @@ export default class ActionsList extends React.Component<
 
     if (!canBeSearched || !selected) return
 
-    setTimeout(() => {
+    let attempts = 0
+
+    const run = () => {
       const menuElement = menuRef?.current
       if (!menuElement) return
+
+      if (
+        menuElement.scrollHeight <= menuElement.clientHeight &&
+        attempts++ < 10
+      ) {
+        requestAnimationFrame(run)
+        return
+      }
 
       const firstSelectedValue = selected.split(', ')[0]
       const selectedElement = menuElement.querySelector(
@@ -247,7 +257,9 @@ export default class ActionsList extends React.Component<
         selectedElement.offsetHeight / 2
 
       menuElement.scrollTop = Math.max(targetScrollTop, 0)
-    }, 0)
+    }
+
+    setTimeout(run, 0)
   }
 
   focusFirstMenuItem = () => {

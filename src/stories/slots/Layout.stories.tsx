@@ -243,6 +243,7 @@ export const Reflowed: Story = {
   },
   parameters: {
     viewport: { options: INITIAL_VIEWPORTS },
+    chromatic: { viewports: [320] },
     docs: {
       description: {
         story:
@@ -253,19 +254,19 @@ export const Reflowed: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
 
+    await waitFor(() =>
+      expect(canvas.getByRole('separator')).toHaveAttribute(
+        'aria-orientation',
+        'vertical'
+      )
+    )
+
     const layout = canvasElement.querySelector<HTMLElement>('#drawer-layout')
     const drawer = canvasElement.querySelector<HTMLElement>('#reflow-drawer')
 
-    await waitFor(() => {
-      expect(layout).toBeInTheDocument()
-      expect(drawer).toBeInTheDocument()
-    })
+    expect(layout).toBeInTheDocument()
+    expect(drawer).toBeInTheDocument()
     if (!layout || !drawer) throw new Error('Layout or drawer did not render')
-
-    const separator = canvas.getByRole('separator')
-    await waitFor(() =>
-      expect(separator).toHaveAttribute('aria-orientation', 'vertical')
-    )
 
     expect(getComputedStyle(drawer).flexGrow).toBe('0')
     expect(drawer.style.height).toBe('160px')
