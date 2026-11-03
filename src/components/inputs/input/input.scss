@@ -55,71 +55,8 @@
     cursor: inherit;
     user-select: none;
 
-    &[type='color' i] {
-      position: absolute;
-      top: 50%;
-      left: var(--input-color-chip-left);
-      transform: translateY(-50%);
-      appearance: none;
-      opacity: var(--input-color-chip-opacity);
-      z-index: 1;
-      outline: none;
-      border: none;
-      background-color: transparent;
-      padding: 0;
-      width: var(--input-color-chip-width);
-      height: var(--input-color-chip-height);
-    }
-
-    &[type='color' i]::-webkit-color-swatch-wrapper {
-      padding: 0;
-    }
-
-    &[type='color' i]::-webkit-color-swatch {
-      box-shadow: var(--input-color-chip-border);
-      border: none;
-      border-radius: var(--input-color-chip-radius);
-
-      & {
-        --input-color-chip-border: var(--input-color-chip-border-default);
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      &[type='color' i] {
-        color-scheme: dark;
-      }
-    }
-
-    @media (prefers-color-scheme: light) {
-      &[type='color' i] {
-        color-scheme: light;
-      }
-    }
-
-    &[type='color' i] {
-      --input-color-chip-opacity: var(--input-color-chip-opacity-default);
-    }
-
-    &[type='color' i]:focus::-webkit-color-swatch {
-      --input-color-chip-border: var(--input-color-chip-border-focus);
-    }
-
-    &[type='color' i]:focus ~ .input__field {
-      --input-background-color: var(--input-background-color-focus);
-      --input-border-width: var(--input-border-width-focus);
-      --input-border-offset: var(--input-border-offset-focus);
-      --input-border-color: var(--input-border-color-focus);
-      --input-text-color: var(--input-text-color-focus);
-      --input-text-placeholder-color: var(--input-text-placeholder-color-focus);
-    }
-
     &[type='number'] {
       width: var(--input-number-width);
-    }
-
-    &[type='color'] ~ .input__field {
-      width: var(--input-color-width);
     }
 
     &[type='number']::-webkit-inner-spin-button {
@@ -128,6 +65,43 @@
 
     &[type='number'] {
       appearance: textfield;
+    }
+  }
+
+  &__color {
+    position: absolute;
+    top: 50%;
+    left: var(--input-color-chip-left);
+    transform: translateY(-50%);
+    appearance: none;
+    opacity: var(--input-color-chip-opacity-default);
+    z-index: 1;
+    cursor: inherit;
+    outline: none;
+    box-shadow: var(--input-color-chip-border-default);
+    border: none;
+    border-radius: var(--input-color-chip-radius);
+    padding: 0;
+    width: var(--input-color-chip-width);
+    height: var(--input-color-chip-height);
+
+    &:focus-visible,
+    &[aria-expanded='true'] {
+      box-shadow: var(--input-color-chip-border-focus);
+    }
+
+    &:focus-visible ~ .input__field,
+    &[aria-expanded='true'] ~ .input__field {
+      --input-background-color: var(--input-background-color-focus);
+      --input-border-width: var(--input-border-width-focus);
+      --input-border-offset: var(--input-border-offset-focus);
+      --input-border-color: var(--input-border-color-focus);
+      --input-text-color: var(--input-text-color-focus);
+      --input-text-placeholder-color: var(--input-text-placeholder-color-focus);
+    }
+
+    & ~ .input__field {
+      width: var(--input-color-width);
     }
   }
 
@@ -382,9 +356,8 @@
       --input-text-placeholder-color: var(--input-text-placeholder-color-hover);
     }
 
-    &:disabled[type='color' i] {
-      --input-color-chip-opacity: var(--input-color-chip-opacity-disabled);
-
+    &:disabled {
+      opacity: var(--input-color-chip-opacity-disabled);
       pointer-events: none;
     }
   }

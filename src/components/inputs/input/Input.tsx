@@ -1,8 +1,10 @@
+import { createPortal } from 'react-dom'
 import React from 'react'
 import { doClassnames } from '@unoff/utils'
 import Tooltip from '@components/tags/tooltip/Tooltip'
 import IconChip from '@components/tags/icon-chip/IconChip'
 import Chip from '@components/tags/chip/Chip'
+import ColorPicker from '@components/inputs/color-picker/ColorPicker'
 import Icon from '@components/assets/icon/Icon'
 import Button from '@components/actions/button/Button'
 import type { IconList } from '@tps/icon.types'
@@ -160,7 +162,8 @@ export interface InputProps {
    */
   onValid?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>
   /**
-   * Color picker handler (for COLOR type)
+   * Color picker handler (for COLOR type). Fires continuously while the
+   * color is dragged; `e.target.value` is a lowercase `#rrggbb` hex code.
    */
   onPick?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   /**
@@ -174,6 +177,8 @@ export interface InputState {
   lastValidValue: string
   lastValidColorValue: string
   colorValue: string
+  isPickerOpen: boolean
+  isPickerVisible: boolean
   isTooltipVisible: boolean
 }
 
@@ -181,6 +186,8 @@ export default class Input extends React.Component<InputProps, InputState> {
   inputRef: React.RefObject<HTMLInputElement>
   textareaRef: React.RefObject<HTMLTextAreaElement>
   wrapperRef: React.RefObject<HTMLDivElement>
+  swatchRef: React.RefObject<HTMLButtonElement>
+  pickerRef: React.RefObject<HTMLDivElement>
 
   static defaultProps: Partial<InputProps> = {
     icon: undefined,
@@ -205,11 +212,15 @@ export default class Input extends React.Component<InputProps, InputState> {
       lastValidValue: props.value,
       colorValue: props.value,
       lastValidColorValue: props.value,
+      isPickerOpen: false,
+      isPickerVisible: false,
       isTooltipVisible: false,
     }
     this.inputRef = React.createRef()
     this.textareaRef = React.createRef()
     this.wrapperRef = React.createRef()
+    this.swatchRef = React.createRef()
+    this.pickerRef = React.createRef()
   }
 
   // Lifecycle
@@ -227,6 +238,10 @@ export default class Input extends React.Component<InputProps, InputState> {
         if (this.inputRef.current) this.inputRef.current.focus()
         else if (this.textareaRef.current) this.textareaRef.current.focus()
       }, 1)
+  }
+
+  componentWillUnmount(): void {
+    this.removePickerListeners()
   }
 
   componentDidUpdate(prevProps: InputProps) {
@@ -248,18 +263,45 @@ export default class Input extends React.Component<InputProps, InputState> {
   }
 
   // Handlers
-  onPickColorValue = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  buildColorEvent = (element: HTMLElement | null, value: string) => {
+    const target = {
+      value,
+      id: element?.id,
+      closest: element?.closest?.bind(element),
+      getAttribute: element?.getAttribute?.bind(element),
+      querySelector: element?.querySelector?.bind(element),
+      querySelectorAll: element?.querySelectorAll?.bind(element),
+      matches: element?.matches?.bind(element),
+      contains: element?.contains?.bind(element),
+      classList: element?.classList,
+      dataset: element?.dataset,
+    }
+
+    return {
+      type: 'change',
+      target,
+      currentTarget: target,
+      preventDefault: () => undefined,
+      stopPropagation: () => undefined,
+      persist: () => undefined,
+    }
+  }
+
+  onPickColorValue = (value: string) => {
     const { onPick } = this.props
-    const value = e.target.value
 
     this.setState({
       inputValue: value,
       colorValue: value,
     })
 
-    if (onPick) onPick(e)
+    if (onPick)
+      onPick(
+        this.buildColorEvent(
+          this.swatchRef.current,
+          value
+        ) as unknown as React.ChangeEvent<HTMLInputElement>
+      )
   }
 
   onChangeColorValue = (
@@ -541,6 +583,128 @@ export default class Input extends React.Component<InputProps, InputState> {
     } else if (e.key === 'Escape') target.blur()
   }
 
+  openPicker = () => {
+    const { isDisabled, isBlocked } = this.props
+    const { isPickerOpen } = this.state
+
+    if (isDisabled || isBlocked || isPickerOpen) return
+
+    this.setState({ isPickerOpen: true, isTooltipVisible: false }, () => {
+      this.addPickerListeners()
+      this.positionPicker()
+      this.setState({ isPickerVisible: true }, () =>
+        this.pickerRef.current
+          ?.querySelector<HTMLElement>('[role="slider"]')
+          ?.focus()
+      )
+    })
+  }
+
+  closePicker = (shouldRestoreFocus = false) => {
+    const { isPickerOpen, colorValue } = this.state
+
+    if (!isPickerOpen) return
+
+    this.removePickerListeners()
+    this.setState({ isPickerOpen: false, isPickerVisible: false })
+
+    this.onBlur(
+      this.buildColorEvent(
+        this.swatchRef.current,
+        colorValue
+      ) as unknown as React.FocusEvent<HTMLInputElement>
+    )
+
+    if (shouldRestoreFocus) this.swatchRef.current?.focus()
+  }
+
+  positionPicker = () => {
+    const panel = this.pickerRef.current
+    const anchor = (
+      this.wrapperRef.current ?? this.swatchRef.current
+    )?.getBoundingClientRect()
+
+    if (!panel || !anchor) return
+
+    const margin = 8
+    const panelRect = panel.getBoundingClientRect()
+
+    let top = anchor.bottom + 4
+    if (top + panelRect.height > window.innerHeight - margin)
+      top = anchor.top - panelRect.height - 4
+    top = Math.max(
+      margin,
+      Math.min(top, window.innerHeight - panelRect.height - margin)
+    )
+
+    const left = Math.max(
+      margin,
+      Math.min(anchor.left, window.innerWidth - panelRect.width - margin)
+    )
+
+    panel.style.top = `${top}px`
+    panel.style.left = `${left}px`
+  }
+
+  addPickerListeners = () => {
+    document.addEventListener('pointerdown', this.onPointerDownOutside)
+    window.addEventListener('resize', this.positionPicker)
+    window.addEventListener('scroll', this.positionPicker, true)
+  }
+
+  removePickerListeners = () => {
+    document.removeEventListener('pointerdown', this.onPointerDownOutside)
+    window.removeEventListener('resize', this.positionPicker)
+    window.removeEventListener('scroll', this.positionPicker, true)
+  }
+
+  onPointerDownOutside = (e: PointerEvent) => {
+    const target = e.target as Node
+
+    if (
+      this.pickerRef.current?.contains(target) ||
+      this.swatchRef.current?.contains(target)
+    )
+      return
+
+    this.closePicker()
+  }
+
+  onTogglePicker = () => {
+    const { isPickerOpen } = this.state
+
+    if (isPickerOpen) this.closePicker()
+    else this.openPicker()
+  }
+
+  onKeyDownSwatch = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === 'Escape' && this.state.isPickerOpen) this.closePicker()
+  }
+
+  onKeyDownPicker = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation()
+      this.closePicker(true)
+      return
+    }
+
+    if (e.key !== 'Tab' || !this.pickerRef.current) return
+
+    const controls = Array.from(
+      this.pickerRef.current.querySelectorAll<HTMLElement>('[role="slider"]')
+    )
+    const first = controls[0]
+    const last = controls[controls.length - 1]
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last?.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first?.focus()
+    }
+  }
+
   doClear = () => this.setState({ inputValue: '' })
 
   onGrab = () => {
@@ -664,7 +828,13 @@ export default class Input extends React.Component<InputProps, InputState> {
 
   Color = () => {
     const { id, feature, helper, isBlocked, isDisabled } = this.props
-    const { inputValue, colorValue, isTooltipVisible } = this.state
+    const {
+      inputValue,
+      colorValue,
+      isPickerOpen,
+      isPickerVisible,
+      isTooltipVisible,
+    } = this.state
 
     return (
       <div
@@ -681,28 +851,29 @@ export default class Input extends React.Component<InputProps, InputState> {
           className="input__wrapper"
           ref={this.wrapperRef}
           onMouseEnter={() => {
-            if (helper !== undefined) this.setState({ isTooltipVisible: true })
+            if (helper !== undefined && !isPickerOpen)
+              this.setState({ isTooltipVisible: true })
           }}
           onMouseLeave={() => {
             if (helper !== undefined) this.setState({ isTooltipVisible: false })
           }}
         >
-          <input
-            id={id}
+          <button
+            type="button"
+            id={id !== undefined ? `${id}-swatch` : undefined}
             data-feature={feature}
-            type="color"
             className="input__color"
-            value={colorValue}
+            style={{ backgroundColor: colorValue }}
             disabled={isDisabled || isBlocked}
             aria-label="Color picker"
-            aria-disabled={isDisabled || isBlocked}
-            onChange={
-              !(isDisabled || isBlocked) ? this.onPickColorValue : undefined
+            aria-haspopup="dialog"
+            aria-expanded={isPickerOpen}
+            aria-controls={
+              isPickerOpen && id !== undefined ? `${id}-picker` : undefined
             }
-            onBlur={(e) => {
-              if (!(isDisabled || isBlocked)) this.onBlur(e)
-            }}
-            ref={this.inputRef}
+            onClick={this.onTogglePicker}
+            onKeyDown={this.onKeyDownSwatch}
+            ref={this.swatchRef}
           />
           <input
             role="textbox"
@@ -744,6 +915,27 @@ export default class Input extends React.Component<InputProps, InputState> {
             </Tooltip>
           )}
         </div>
+        {isPickerOpen &&
+          createPortal(
+            <div
+              style={{
+                position: 'fixed',
+                zIndex: 99,
+                top: 0,
+                left: 0,
+                visibility: isPickerVisible ? 'visible' : 'hidden',
+              }}
+              ref={this.pickerRef}
+              onKeyDown={this.onKeyDownPicker}
+            >
+              <ColorPicker
+                id={id !== undefined ? `${id}-picker` : undefined}
+                value={colorValue}
+                onChange={this.onPickColorValue}
+              />
+            </div>,
+            document.body
+          )}
         {this.Status()}
       </div>
     )

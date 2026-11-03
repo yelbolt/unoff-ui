@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.27.0] - 2026-11-03
+
+### Added
+
+- **`ColorPicker` — new component**: a themed colour picker panel (saturation / brightness area plus hue slider) built on [`react-colorful`](https://github.com/omgovich/react-colorful), now a runtime dependency. It renders identically on Chromium, WebKit and Gecko, unlike the native `<input type="color">` popup. Props: `value` (hex), `onChange` and `onChangeEnd` (both emit a lowercase `#rrggbb`), `label` (accessible name, defaults to `Color picker`), `isFlex` and `id`. Exported from `src/index.ts`, with its own `ColorPicker` stories and a section in `Inputs.mdx`.
+- **`ColorPicker` — `color-picker` component tokens**: new `colorPicker.*` token set on all five platform themes (`figma`, `penpot`, `sketch`, `framer`, `yelbolt`), registered in `terrazzo/components.manifest.js` and compiled into each `styles/{theme}.scss`. The surface (gap, radius, padding, width, background) mirrors `Card`; the edge (border) and elevation (shadow) come from `ActionsList`, since `Card` has neither and the panel floats. Area and hue sizes, radii, and the pointer's size, border, focus colour and shadow are tokens too — every `react-colorful` default is overridden through CSS variables, with no hardcoded value.
+
+### Changed
+
+- **`Input` (`type="COLOR"`) — custom picker instead of the native popup**: the invisible `<input type="color">` is replaced by a `<button>` swatch (`aria-haspopup="dialog"`, `aria-expanded`) that opens the `ColorPicker` in a portal, positioned under the field, flipped above when there is no room, and clamped to the viewport. It closes on `Escape` (focus returns to the swatch) or on a pointer press outside, and keeps `Tab` inside the panel while open.
+- **`Input` (`type="COLOR"`) — event contract**: `onPick` still fires continuously while the colour is dragged, with `e.target.value` as a `#rrggbb` code, but `e.target` is now the swatch button rather than a native colour input. `onBlur` fires once when the panel closes, and only if the colour changed, through the same commit path as leaving the hex field.
+- **`Input` — swatch styles**: the `input[type='color']` rules (webkit swatch pseudo-elements, `color-scheme`) are replaced by an `.input__color` button rule using the same `--input-color-chip-*` tokens. Hover, focus-visible, expanded and disabled states are unchanged visually.
+
+### Fixed
+
+- **`Input` (`type="COLOR"`) — duplicate `id` and `ref`**: the colour swatch and the hex field both carried `id={id}` and the same `inputRef`, so the second ref silently overwrote the first. The hex field keeps `id`; the swatch now uses `${id}-swatch`.
+- **`Knob` — `nested-interactive` violation**: while its value input is open, the knob wrapped a focusable `Input` inside `role="slider"`, which is not allowed. During editing it is now exposed as a `group` without `aria-value*` attributes, and goes back to `slider` when the input closes.
+- **`DraggableWindow` — `aria-dialog-name` violation**: the `role="dialog"` container had no accessible name. It now carries `aria-label={title}`.
+
+### Documentation
+
+- **`Inputs.mdx`**: new `Color Picker` section (usage and WCAG 2.2 notes), and the `Input` `COLOR` entry now describes the swatch opening the themed picker.
+- **`Input` stories**: the `Color` story opens the picker from the swatch, nudges the colour with the keyboard, closes it with `Escape` and checks the `onPick` / `onBlur` calls. `react-colorful` reads the legacy `keyCode`, which `user-event` leaves at `0`, so arrow keys are dispatched with `fireEvent`.
+
 ## [1.26.5] - 2026-10-11
 
 ### Changed

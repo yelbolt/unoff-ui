@@ -12,6 +12,11 @@ export const COMPONENTS = [
   { name: 'card', category: 'actions', include: ['card.**'] },
   { name: 'chip', category: 'tags', include: ['chip.**'] },
   { name: 'color-chip', category: 'tags', include: ['colorChip.**'] },
+  {
+    name: 'color-picker',
+    category: 'inputs',
+    include: ['colorPicker.**'],
+  },
   { name: 'color-item', category: 'lists', include: ['colorItem.**'] },
   { name: 'consent', category: 'dialogs', include: ['consent.**'] },
   { name: 'dialog', category: 'dialogs', include: ['dialog.**'] },

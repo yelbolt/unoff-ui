@@ -1,5 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { fn, expect, userEvent, within } from 'storybook/test'
+import {
+  fn,
+  expect,
+  fireEvent,
+  userEvent,
+  waitFor,
+  within,
+} from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
 import figma from '@figma/code-connect'
 import Input from '@components/inputs/input/Input'
@@ -51,6 +58,7 @@ export const Color: Story = {
     type: 'COLOR',
     value: '#87ebe7',
     feature: 'PICK_COLOR',
+    onPick: fn(),
     helper: {
       label: 'Pick a color',
     },
@@ -102,19 +110,39 @@ export const Color: Story = {
   play: async ({ canvasElement, args }) => {
     const canvas = within(canvasElement)
 
-    const colorInput = canvas.getByLabelText('Color picker')
-    await expect(colorInput).toBeInTheDocument()
-    await expect(colorInput).toHaveValue('#87ebe7')
+    const swatch = canvas.getByRole('button', { name: 'Color picker' })
+    await expect(swatch).toBeInTheDocument()
+    await expect(swatch).toHaveAttribute('aria-expanded', 'false')
+
+    // The picker panel is portalled to document.body
+    const body = within(canvasElement.ownerDocument.body)
+
+    await userEvent.click(swatch)
+    await expect(swatch).toHaveAttribute('aria-expanded', 'true')
+
+    const sliders = await body.findAllByRole('slider')
+    await expect(sliders).toHaveLength(2)
+
+    await expect(sliders[0]).toHaveFocus()
+    // react-colorful reads the legacy keyCode, which user-event leaves at 0
+    fireEvent.keyDown(sliders[0], { key: 'ArrowRight', keyCode: 39 })
+    await waitFor(() => expect(args.onPick).toHaveBeenCalled())
+
+    await userEvent.keyboard('{Escape}')
+    await waitFor(() => expect(body.queryAllByRole('slider')).toHaveLength(0))
+    await expect(swatch).toHaveAttribute('aria-expanded', 'false')
+    await expect(args.onBlur).toHaveBeenCalledTimes(1)
 
     const hexInput = canvas.getByLabelText('Hex color code')
     await expect(hexInput).toBeInTheDocument()
-    await expect(hexInput).toHaveValue('87EBE7')
 
     await userEvent.clear(hexInput)
     await userEvent.type(hexInput, 'FF5733')
+
     await userEvent.tab()
 
-    await expect(args.onBlur).toHaveBeenCalled()
+    await expect(hexInput).toHaveValue('FF5733')
+    await expect(args.onBlur).toHaveBeenCalledTimes(2)
   },
 }
 
