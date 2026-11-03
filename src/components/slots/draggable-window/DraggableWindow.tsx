@@ -101,6 +101,7 @@ const DraggableWindow = (props: DraggableWindowProps) => {
       ref={windowRef}
       role="dialog"
       aria-modal="true"
+      aria-label={title}
       aria-hidden={!isOpen}
     >
       <div

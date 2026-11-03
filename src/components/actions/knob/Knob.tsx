@@ -219,12 +219,22 @@ export default class Knob extends React.Component<KnobProps, KnobState> {
         }}
         data-id={id}
         data-value={value}
-        role="slider"
+        role={isStopInputOpen ? 'group' : 'slider'}
         aria-label={`${shortId} knob, value ${this.transformStopValue(value)}`}
-        aria-valuemin={min ? parseFloat(min) : undefined}
-        aria-valuemax={max ? parseFloat(max) : undefined}
-        aria-valuenow={typeof value === 'number' ? value : parseFloat(value)}
-        aria-valuetext={this.transformStopValue(value).toString()}
+        aria-valuemin={!isStopInputOpen && min ? parseFloat(min) : undefined}
+        aria-valuemax={!isStopInputOpen && max ? parseFloat(max) : undefined}
+        aria-valuenow={
+          !isStopInputOpen
+            ? typeof value === 'number'
+              ? value
+              : parseFloat(value)
+            : undefined
+        }
+        aria-valuetext={
+          !isStopInputOpen
+            ? this.transformStopValue(value).toString()
+            : undefined
+        }
         aria-disabled={isDisabled || isBlocked}
         tabIndex={!(isBlocked || isDisabled) ? 0 : -1}
         onKeyDown={(e) =>
