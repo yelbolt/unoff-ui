@@ -1,0 +1,112 @@
+{
+  "colorPicker": {
+    "gap": {
+      "$value": "{space.gap.200}",
+      "$type": "dimension"
+    },
+    "radius": {
+      "$value": "{radius.xlarge}",
+      "$type": "dimension"
+    },
+    "padding": {
+      "top": {
+        "$value": "{space.inset.200}",
+        "$type": "dimension"
+      },
+      "right": {
+        "$value": "{space.inset.200}",
+        "$type": "dimension"
+      },
+      "bottom": {
+        "$value": "{space.inset.200}",
+        "$type": "dimension"
+      },
+      "left": {
+        "$value": "{space.inset.200}",
+        "$type": "dimension"
+      }
+    },
+    "width": {
+      "$value": "200px",
+      "$type": "dimension"
+    },
+    "background": {
+      "color": {
+        "$value": "{framer.color.bg.default}",
+        "$type": "color"
+      }
+    },
+    "border": {
+      "color": {
+        "$value": "{grey.transparent}",
+        "$type": "color"
+      },
+      "width": {
+        "$value": "{stroke.width.none}",
+        "$type": "dimension"
+      },
+      "offset": {
+        "$value": "{stroke.offset.none}",
+        "$type": "dimension"
+      }
+    },
+    "shadow": {
+      "$value": "{elevation.400MenuPanel}",
+      "$type": "boxShadow"
+    },
+    "area": {
+      "height": {
+        "$value": "160px",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{radius.medium}",
+        "$type": "dimension"
+      }
+    },
+    "hue": {
+      "height": {
+        "$value": "{control.size.400}",
+        "$type": "dimension"
+      },
+      "radius": {
+        "$value": "{radius.medium}",
+        "$type": "dimension"
+      }
+    },
+    "pointer": {
+      "size": {
+        "$value": "{control.size.600}",
+        "$type": "dimension"
+      },
+      "border": {
+        "width": {
+          "$value": "{stroke.width.thick}",
+          "$type": "dimension"
+        },
+        "color": {
+          "default": {
+            "$value": "{grey.0}",
+            "$type": "color"
+          },
+          "focus": {
+            "$value": "{framer.color.tint.default}",
+            "$type": "color"
+          }
+        }
+      },
+      "shadow": {
+        "$value": "{elevation.100Shapes}",
+        "$type": "boxShadow"
+      }
+    },
+    "transition": {
+      "$value": {
+        "duration": "{motion.duration.fast}",
+        "delay": "{motion.duration.instant}",
+        "timingFunction": "{motion.easing.standard}"
+      },
+      "$type": "transition"
+    }
+  }
+}

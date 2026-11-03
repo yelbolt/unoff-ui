@@ -1,0 +1,71 @@
+@import 'styles/penpot';
+@import 'styles/sketch';
+@import 'styles/figma';
+@import 'styles/yelbolt';
+@import 'styles/framer';
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  transition:
+    background-color var(--color-picker-transition),
+    outline-color var(--color-picker-transition);
+  box-sizing: border-box;
+  outline: var(--color-picker-border-width) solid
+    var(--color-picker-border-color);
+  outline-offset: var(--color-picker-border-offset);
+  box-shadow: var(--color-picker-shadow);
+  border-radius: var(--color-picker-radius);
+  background-color: var(--color-picker-background-color);
+  padding: var(--color-picker-padding-top) var(--color-picker-padding-right)
+    var(--color-picker-padding-bottom) var(--color-picker-padding-left);
+  width: var(--color-picker-width);
+  user-select: none;
+
+  &--flex {
+    width: 100%;
+  }
+
+  & .react-colorful {
+    gap: var(--color-picker-gap);
+    width: 100%;
+    height: calc(
+      var(--color-picker-area-height) + var(--color-picker-gap) +
+        var(--color-picker-hue-height)
+    );
+  }
+
+  & .react-colorful__saturation {
+    border-radius: var(--color-picker-area-radius);
+  }
+
+  & .react-colorful__hue {
+    border-radius: var(--color-picker-hue-radius);
+    height: var(--color-picker-hue-height);
+  }
+
+  & .react-colorful__last-control {
+    border-radius: var(--color-picker-hue-radius);
+  }
+
+  & .react-colorful__interactive {
+    --color-picker-pointer-border-color: var(
+      --color-picker-pointer-border-color-default
+    );
+
+    &:focus-visible {
+      --color-picker-pointer-border-color: var(
+        --color-picker-pointer-border-color-focus
+      );
+    }
+  }
+
+  & .react-colorful__pointer {
+    transition: border-color var(--color-picker-transition);
+    box-shadow: var(--color-picker-pointer-shadow);
+    border: var(--color-picker-pointer-border-width) solid
+      var(--color-picker-pointer-border-color);
+    width: var(--color-picker-pointer-size);
+    height: var(--color-picker-pointer-size);
+  }
+}

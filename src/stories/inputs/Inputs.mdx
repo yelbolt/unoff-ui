@@ -9,6 +9,33 @@ Data entry components for text, numbers, files, selections, and range values.
 
 ---
 
+## Color Picker
+
+A themed, cross-browser color picker panel (saturation / brightness area and hue slider) that replaces the native `<input type="color">` popup, whose look differs between Chromium, WebKit and Gecko. Built on `react-colorful`; every visual value comes from the `color-picker` tokens.
+
+<DocTabs>
+<Tab label="Usage">
+
+- `Input` with `type="COLOR"` opens it from its swatch — use `ColorPicker` directly only to embed the panel inline (e.g. in a `Drawer` or `PopIn`).
+- `value` is a hex code (`#rrggbb` or `#rgb`); `onChange` always emits a lowercase `#rrggbb`.
+- `onChange` fires continuously while dragging — debounce expensive work, or use `onChangeEnd` to react once when the interaction is over.
+- `isFlex` makes the panel fill its container instead of using the fixed token width.
+- The panel surface reuses the `Card` geometry and background tokens, plus the `ActionsList` border and elevation so it reads as a floating layer on every platform theme.
+
+</Tab>
+<Tab label="Accessibility (WCAG 2.2)">
+
+- The panel is a `role="group"` named by `label` (default "Color picker"); the area and hue handles are `role="slider"` and fully keyboard-operable (SC 2.1.1).
+- Arrow keys move the handle by 1 step; `Shift` + arrow moves by 10 (SC 2.1.1).
+- When opened from `Input`, focus moves into the panel, `Tab` stays inside it, and `Escape` closes it and returns focus to the swatch (SC 2.4.3, 2.1.2).
+- The focused handle swaps its border to the theme focus color, with a visible indicator on every theme (SC 2.4.7, 1.4.11).
+- Always keep the hex field available next to the swatch: it is the precise, non-pointer alternative to dragging (SC 2.5.1).
+
+</Tab>
+</DocTabs>
+
+---
+
 ## Dropdown
 
 A compact selection control that opens a floating list. Used for choosing one option from a predefined set without consuming persistent space.
@@ -75,7 +102,7 @@ A versatile text / number / color input field. The core data entry component acr
 - **`TEXT`** — Single-line text: names, identifiers, short values
 - **`LONG_TEXT`** — Multi-line textarea: descriptions, notes
 - **`NUMBER`** — Numeric input with optional `min`, `max`, `step` constraints
-- **`COLOR`** — Hex color input with a color swatch preview
+- **`COLOR`** — Hex color input with a swatch that opens the themed `ColorPicker` panel (same look on every browser)
 
 - Pair with `FormItem` for labelled form layouts with validation messages.
 - `isFlex` makes the input expand to fill its container — use inside `InputsBar`.

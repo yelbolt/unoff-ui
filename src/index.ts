@@ -38,6 +38,7 @@ export { default as SemanticMessage } from '@components/dialogs/semantic-message
 export { default as Notification } from '@components/dialogs/notification/Notification'
 
 // Inputs
+export { default as ColorPicker } from '@components/inputs/color-picker/ColorPicker'
 export { default as Dropdown } from '@components/inputs/dropdown/Dropdown'
 export { default as Dropzone } from '@components/inputs/dropzone/Dropzone'
 export { default as Input } from '@components/inputs/input/Input'
