@@ -8,6 +8,7 @@ import {
   within,
 } from 'storybook/test'
 import { useArgs } from 'storybook/preview-api'
+import { useEffect, useState } from 'react'
 import figma from '@figma/code-connect'
 import Input from '@components/inputs/input/Input'
 
@@ -80,28 +81,24 @@ export const Color: Story = {
     step: { control: false },
   },
   render: (args) => {
-    const [argsState, updateArgs] = useArgs<{
-      value: string
-    }>()
+    const [value, setValue] = useState(args.value)
+
+    useEffect(() => setValue(args.value), [args.value])
 
     const onBlur = (e: React.ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        value: e?.target.value,
-      })
+      setValue(e?.target.value)
       args.onBlur?.(e)
     }
 
     const onPick = (e: React.ChangeEvent<HTMLInputElement>) => {
-      updateArgs({
-        value: e?.target.value,
-      })
+      setValue(e?.target.value)
       args.onPick?.(e)
     }
 
     return (
       <Input
         {...args}
-        value={argsState.value}
+        value={value}
         onBlur={onBlur}
         onPick={onPick}
       />
