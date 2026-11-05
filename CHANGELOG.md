@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.27.1] - 2026-11-05
+
+### Fixed
+
+- **`ActionsList` — `TITLE` and `SEPARATOR` inside a `GROUP` submenu**: the submenu only checked whether an item had active children, so any item without children was rendered as a selectable `OPTION`. A `TITLE` placed in a group's `children` showed up as a focusable, hoverable entry that closed the menu when clicked; a `SEPARATOR` became an empty option. The submenu now renders them through the same `MenuTitle` and `MenuSeparator` templates as the first level: a disabled, non-focusable label (`aria-disabled`, no `tabindex`, so keyboard navigation skips it) and an `<hr>` divider. `Dropdown` and `Menu` get the fix, since both render through `ActionsList`.
+
+### Documentation
+
+- **`Input` stories**: the `Color` story keeps the picked value in local state instead of writing it back through `useArgs`, and still follows the `value` control when it changes.
+
 ## [1.27.0] - 2026-11-03
 
 ### Added
