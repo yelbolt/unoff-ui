@@ -429,6 +429,10 @@ export default class ActionsList extends React.Component<
               (child) => child.isActive !== false
             )
 
+            if (isActive && option.type === 'SEPARATOR')
+              return this.MenuSeparator(index)
+            if (isActive && option.type === 'TITLE')
+              return this.MenuTitle(option, index)
             if (isActive && activeChildren.length > 0)
               return this.MenuGroup(
                 { ...option, isActive, isBlocked, isNew, children },
